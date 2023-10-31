@@ -11,12 +11,12 @@ namespace DAL
         static void WriteToScreen()
         { 
             //check conflict github side
+            //check pull code and update
         }
 
         static void Main()
         {
-            //check 
-            Console.ReadKey(); // dừng màn hình
+            Console.ReadKey(); // check
         }
     }
 }
