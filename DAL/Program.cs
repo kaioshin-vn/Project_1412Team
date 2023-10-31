@@ -10,6 +10,8 @@ namespace DAL
     {
         static void WriteToScreen()
         { // hàm không có tham số
+            //check 
+            //check part 2
         }
 
         static void Main()
