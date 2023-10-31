@@ -16,7 +16,7 @@ namespace DAL
 
         static void Main()
         {
-            Console.ReadKey(); // check
+            Console.ReadKey(); 
         }
     }
 }
