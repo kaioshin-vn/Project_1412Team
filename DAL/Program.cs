@@ -9,9 +9,8 @@ namespace DAL
     class Program
     {
         static void WriteToScreen()
-        { // hàm không có tham số
-            //check 
-            //check part 2
+        { 
+            //check conflict github side
         }
 
         static void Main()
