@@ -15,7 +15,7 @@ namespace DAL
 
         static void Main()
         {
-
+            //check 
             Console.ReadKey(); // dừng màn hình
         }
     }
