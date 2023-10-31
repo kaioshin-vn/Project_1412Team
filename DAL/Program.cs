@@ -10,8 +10,6 @@ namespace DAL
     {
         static void WriteToScreen()
         { // hàm không có tham số
-            Console.WriteLine("Ham khong co tham so");
-            Console.WriteLine( "Check" );
         }
 
         static void Main()
