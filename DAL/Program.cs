@@ -11,7 +11,8 @@ namespace DAL
         static void WriteToScreen()
         { 
             //check conflict github side
-            //check giap
+            //check tan
+
         }
 
         static void Main()
