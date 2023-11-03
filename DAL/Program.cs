@@ -11,7 +11,7 @@ namespace DAL
         static void WriteToScreen()
         { 
             //check conflict github side
-            //check tan
+            //check Phong Sugar
 
         }
 
