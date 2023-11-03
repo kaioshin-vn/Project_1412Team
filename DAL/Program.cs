@@ -13,6 +13,7 @@ namespace DAL
             //check conflict github side
             //check tan
             // check commit tho
+            // pull request check
         }
 
         static void Main()
