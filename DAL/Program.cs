@@ -12,8 +12,7 @@ namespace DAL
         { 
             //check conflict github side
             //check tan
-            //Nguyen
-
+            // check commit tho
         }
 
         static void Main()
