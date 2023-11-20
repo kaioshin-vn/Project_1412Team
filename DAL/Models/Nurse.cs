@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Doctor
+    public class Nurse
     {
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required, Range(0, 1)]
-        public  int Gender { get; set; } //giới tính
+        public int Gender { get; set; } // giới tính
         [Required, Phone]
         public string NumberPhone { get; set; }
         [Required]
@@ -21,13 +21,11 @@ namespace DAL.Models
         [Required]
         public string Password { get; set; }
         [Required]
-        public string Description { get; set; }
-        [Required]
-        public bool visible { get; set; } // ẩn hiện
+        public bool Visible { get; set; } // ẩn hiện
 
         // quan hệ
         public virtual Staff Staff { get; set; }
-        //public virtual StatusDoctor StatusdDoctor { get; set; }
         //public virtual MedicaBill MedicaBill { get; set; }
+        //public virtual Bill Bill { get; set; }
     }
 }

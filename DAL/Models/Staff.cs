@@ -15,10 +15,10 @@ namespace DAL.Models
         [Required]
         public string Posittion { get; set;}
         [Required]
-        public int Status { get; set;} // Trạng thái
+        public int Status { get; set;} // trạng thái
 
         // quan hệ
-        //public virtual Admin Admin { get; set; }
+        public virtual Admin Admin { get; set; }
         //public virtual Salary Salary { get; set; }
         public virtual TimeKeeping TimeKeeping { get; set; }
         public virtual Doctor Doctor { get; set; }

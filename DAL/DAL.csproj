@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="DBContext\" />
     <Folder Include="IRepositories\" />
-    <Folder Include="Models\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
