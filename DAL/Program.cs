@@ -11,8 +11,7 @@ namespace DAL
         static void WriteToScreen()
         { 
             //check conflict github side
-            //check Phong
-
+            //check Phongg
         }
 
         static void Main()
