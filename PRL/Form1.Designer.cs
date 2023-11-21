@@ -33,9 +33,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(356, 206);
+            button1.Location = new Point(587, 401);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(209, 52);
             button1.TabIndex = 0;
             button1.Text = "Check";
             button1.UseVisualStyleBackColor = true;
@@ -44,7 +44,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1458, 773);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
@@ -52,7 +52,6 @@
         }
 
         #endregion
-
         private Button button1;
     }
 }
