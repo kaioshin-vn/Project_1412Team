@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DBContext\" />
     <Folder Include="IRepositories\" />
     <Folder Include="Repositories\" />
   </ItemGroup>

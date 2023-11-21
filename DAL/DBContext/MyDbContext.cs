@@ -7,17 +7,17 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.FE
+namespace DAL.DBContext
 {
     public class MyDbContext : DbContext
     {
-        public MyDbContext(){}
-        public MyDbContext(DbContextOptions options) : base(options){}
+        public MyDbContext() { }
+        public MyDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Bill> Bills { get; set; }
         public DbSet<BillDetail> BillDetails { get; set; }
         public DbSet<Nurse> Nurses { get; set; }
-        public DbSet<Rate> Rates { get; set; } 
+        public DbSet<Rate> Rates { get; set; }
         public DbSet<HealtRecord> HealtRecords { get; set; }
         public DbSet<Service> Services { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
