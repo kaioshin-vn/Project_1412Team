@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DuAn1s": "Server=DESKTOP-O08I15N\\SQLEXPRESS01;Database=DuAn1;Trusted_Connection=True;"
+  }
+}
