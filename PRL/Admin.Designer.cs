@@ -276,7 +276,7 @@ namespace PRL
             Controls.Add(Navigation);
             Controls.Add(name_clinic);
             Name = "Admin";
-            Text = "Admin";
+            Text = "1412_Team";
             Load += Admin_Load;
             name_clinic.ResumeLayout(false);
             name_clinic.PerformLayout();

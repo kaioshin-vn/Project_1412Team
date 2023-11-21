@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,24 @@ namespace PRL
 {
     public partial class Admin : Form
     {
+        public Admin(Staff staff , Login login)
+        {
+            FormLogin = login;
+            user = staff;
+            InitializeComponent();
+        }
+
         public Admin()
         {
             InitializeComponent();
         }
 
+        Staff user;
+        Login FormLogin;
+
         private void Admin_Load(object sender, EventArgs e)
         {
-
-
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
