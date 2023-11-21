@@ -183,7 +183,7 @@ namespace PRL
             // 
             ThongKe.AutoSize = true;
             ThongKe.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            ThongKe.Image = Properties.Resources.icons8_bill_64;
+            ThongKe.Image = Properties.Resources.icons8_analyst_64;
             ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
             ThongKe.Location = new Point(52, 449);
             ThongKe.Name = "ThongKe";
