@@ -39,6 +39,10 @@ namespace PRL
             ThongBao = new Label();
             LoiChao = new Label();
             Content = new Panel();
+            Panel_KH = new Panel();
+            QLKh_ff = new Label();
+            Panel_NV = new Panel();
+            label4 = new Label();
             Nav_Option = new Panel();
             ThongKe = new Label();
             QL_LichKham = new Label();
@@ -49,42 +53,46 @@ namespace PRL
             QL_NV = new Label();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
+            Panel_KH.SuspendLayout();
+            Panel_NV.SuspendLayout();
             Nav_Option.SuspendLayout();
             SuspendLayout();
             // 
             // name_clinic
             // 
-            name_clinic.BackColor = Color.FromArgb(1, 210, 210);
+            name_clinic.BackColor = Color.LavenderBlush;
+            name_clinic.BorderStyle = BorderStyle.FixedSingle;
             name_clinic.Controls.Add(label1);
             name_clinic.Location = new Point(-5, -8);
             name_clinic.Name = "name_clinic";
-            name_clinic.Size = new Size(316, 65);
+            name_clinic.Size = new Size(284, 65);
             name_clinic.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Harlow Solid Italic", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.DarkRed;
+            label1.Font = new Font("Harlow Solid Italic", 19.8000011F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = Color.Crimson;
             label1.Location = new Point(52, 17);
             label1.Name = "label1";
-            label1.Size = new Size(148, 38);
+            label1.Size = new Size(189, 43);
             label1.TabIndex = 0;
-            label1.Text = "1412 Clinic";
+            label1.Text = "1412 Sugery";
             label1.Click += label1_Click;
             // 
             // Navigation
             // 
             Navigation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Navigation.BackColor = Color.FromArgb(128, 255, 230);
+            Navigation.BorderStyle = BorderStyle.FixedSingle;
             Navigation.Controls.Add(label3);
             Navigation.Controls.Add(label2);
             Navigation.Controls.Add(buttonCustom1);
             Navigation.Controls.Add(ThongBao);
             Navigation.Controls.Add(LoiChao);
-            Navigation.Location = new Point(279, -8);
+            Navigation.Location = new Point(276, -8);
             Navigation.Name = "Navigation";
-            Navigation.Size = new Size(1427, 65);
+            Navigation.Size = new Size(1430, 65);
             Navigation.TabIndex = 1;
             // 
             // label3
@@ -93,7 +101,7 @@ namespace PRL
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Tomato;
-            label3.Location = new Point(993, 24);
+            label3.Location = new Point(994, 24);
             label3.Name = "label3";
             label3.Size = new Size(84, 25);
             label3.TabIndex = 4;
@@ -105,7 +113,7 @@ namespace PRL
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Tomato;
-            label2.Location = new Point(869, 24);
+            label2.Location = new Point(870, 24);
             label2.Name = "label2";
             label2.Size = new Size(89, 25);
             label2.TabIndex = 3;
@@ -123,9 +131,9 @@ namespace PRL
             buttonCustom1.FlatStyle = FlatStyle.Flat;
             buttonCustom1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             buttonCustom1.ForeColor = Color.LightCoral;
-            buttonCustom1.Location = new Point(1233, 15);
+            buttonCustom1.Location = new Point(1234, 15);
             buttonCustom1.Name = "buttonCustom1";
-            buttonCustom1.Size = new Size(144, 43);
+            buttonCustom1.Size = new Size(144, 41);
             buttonCustom1.TabIndex = 2;
             buttonCustom1.Text = "Đăng Xuất";
             buttonCustom1.TextColor = Color.LightCoral;
@@ -137,7 +145,7 @@ namespace PRL
             ThongBao.AutoSize = true;
             ThongBao.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             ThongBao.ForeColor = Color.Tomato;
-            ThongBao.Location = new Point(1105, 23);
+            ThongBao.Location = new Point(1106, 23);
             ThongBao.Name = "ThongBao";
             ThongBao.Size = new Size(101, 25);
             ThongBao.TabIndex = 1;
@@ -157,16 +165,55 @@ namespace PRL
             // Content
             // 
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Content.BackColor = Color.FromArgb(1, 210, 210);
+            Content.BackColor = Color.LavenderBlush;
+            Content.BorderStyle = BorderStyle.FixedSingle;
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
             Content.Size = new Size(1395, 722);
             Content.TabIndex = 2;
             // 
+            // Panel_KH
+            // 
+            Panel_KH.Controls.Add(QLKh_ff);
+            Panel_KH.Location = new Point(35, 30);
+            Panel_KH.Name = "Panel_KH";
+            Panel_KH.Size = new Size(1345, 673);
+            Panel_KH.TabIndex = 0;
+            Panel_KH.Visible = false;
+            // 
+            // QLKh_ff
+            // 
+            QLKh_ff.AutoSize = true;
+            QLKh_ff.Location = new Point(434, 182);
+            QLKh_ff.Name = "QLKh_ff";
+            QLKh_ff.Size = new Size(86, 20);
+            QLKh_ff.TabIndex = 0;
+            QLKh_ff.Text = "Khách hàng";
+            // 
+            // Panel_NV
+            // 
+            Panel_NV.Controls.Add(label4);
+            Panel_NV.Location = new Point(35, 17);
+            Panel_NV.Name = "Panel_NV";
+            Panel_NV.Size = new Size(1332, 686);
+            Panel_NV.TabIndex = 0;
+            Panel_NV.Visible = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(575, 213);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 20);
+            label4.TabIndex = 9;
+            label4.Text = "Nhân viên";
+            label4.Click += label4_Click;
+            // 
             // Nav_Option
             // 
             Nav_Option.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             Nav_Option.BackColor = Color.FromArgb(128, 255, 230);
+            Nav_Option.BorderStyle = BorderStyle.FixedSingle;
             Nav_Option.Controls.Add(ThongKe);
             Nav_Option.Controls.Add(QL_LichKham);
             Nav_Option.Controls.Add(QL_Luong);
@@ -271,17 +318,22 @@ namespace PRL
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1668, 771);
+            Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
             Controls.Add(Navigation);
-            Controls.Add(name_clinic);
             Name = "Admin";
             Text = "1412_Team";
             Load += Admin_Load;
+            VisibleChanged += Admin_VisibleChanged;
             name_clinic.ResumeLayout(false);
             name_clinic.PerformLayout();
             Navigation.ResumeLayout(false);
             Navigation.PerformLayout();
+            Panel_KH.ResumeLayout(false);
+            Panel_KH.PerformLayout();
+            Panel_NV.ResumeLayout(false);
+            Panel_NV.PerformLayout();
             Nav_Option.ResumeLayout(false);
             Nav_Option.PerformLayout();
             ResumeLayout(false);
@@ -306,5 +358,9 @@ namespace PRL
         private Label LoiChao;
         private Label label2;
         private Label label3;
+        private Panel Panel_NV;
+        private Label label4;
+        private Panel Panel_KH;
+        private Label QLKh_ff;
     }
 }

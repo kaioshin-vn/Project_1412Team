@@ -13,7 +13,7 @@ namespace PRL
 {
     public partial class Admin : Form
     {
-        public Admin(Staff staff , Login login)
+        public Admin(Staff staff, Login login)
         {
             FormLogin = login;
             user = staff;
@@ -30,7 +30,7 @@ namespace PRL
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -45,6 +45,9 @@ namespace PRL
 
         private void label3_Click(object sender, EventArgs e)
         {
+            Content.Controls.Clear();
+            Panel_NV.Visible = true;
+            Content.Controls.Add(Panel_NV);
 
         }
 
@@ -59,6 +62,19 @@ namespace PRL
         }
 
         private void QL_KH_Click(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Panel_KH.Visible = true;
+            Content.Controls.Add(Panel_KH);
+
+        }
+
+        private void Admin_VisibleChanged(object sender, EventArgs e)
+        {
+            // FormLogin.Visible = false;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

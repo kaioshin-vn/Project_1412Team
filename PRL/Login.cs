@@ -20,6 +20,7 @@ namespace PRL
         }
 
         bool EyeStatus = true;
+        bool RememberStatus = false;
 
         private void Visible_Pass_Click(object sender, EventArgs e)
         {
@@ -40,6 +41,19 @@ namespace PRL
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
+            if (Password.Text == "")
+            {
+                errorProvider1.SetError(Password, "Không được bỏ trống mật khẩu!!!");
+                Btn_Login.Enabled = false;
+                Btn_Login.BackColor = Color.Gainsboro;
+
+            }
+            else
+            {
+                Btn_Login.Enabled = true;
+                Btn_Login.BackColor = Color.Cyan;
+                errorProvider1.Clear();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -47,11 +61,14 @@ namespace PRL
             if (!Regex.IsMatch(PhoneNumber.Text, "^0[0-9]{9}$"))
             {
                 errorProvider1.SetError(PhoneNumber, "Nhập đúng định dạng số điện thoại bro ơi !");
-                Btn_Login.Visible = false;
+                Btn_Login.Enabled = false;
+                Btn_Login.BackColor = Color.Gainsboro;
+
             }
             else
             {
-                Btn_Login.Visible = true;
+                Btn_Login.Enabled = true;
+                Btn_Login.BackColor = Color.Cyan;
                 errorProvider1.Clear();
             }
         }
@@ -81,10 +98,12 @@ namespace PRL
                     stream.Flush();
                 }
             }
+
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+            Btn_Login.Enabled = false;
             using (var fs = new FileStream("remember_account.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite))
             {
                 var data = new StreamReader(fs).ReadLine();
@@ -96,7 +115,11 @@ namespace PRL
                         var st = new Staff();
                         var form = new Admin(st, this);
                         form.Show();
-                        this.Visible = false;
+                        RememberStatus = true;
+                    }
+                    else
+                    {
+
                     }
                 }
 
@@ -105,7 +128,21 @@ namespace PRL
 
         private void Login_VisibleChanged(object sender, EventArgs e)
         {
-            this.Visible = false;
+            if (RememberStatus)
+            {
+                this.Visible = false;
+            }
+        }
+
+        private void Forget_Pass_Click(object sender, EventArgs e)
+        {
+            Lb_pass.Text = "Nhập họ tên ";
+            Password.PlaceholderText = "Họ và tên";
+            Btn_Login.Text = "Gửi yêu cầu";
+            Password.PasswordChar = '0';
+            Visible_Pass.Visible = false;
+            checkBox1.Visible = false;
+            Forget_Pass.Visible = false;
         }
     }
 }
