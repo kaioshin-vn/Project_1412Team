@@ -8,7 +8,7 @@ namespace DAL.Models
 {
     public class Statiscal
     {
-        Guid Id { get; set; }
-
+        public Guid Id { get; set; }
+        public string Note { get; set; }
     }
 }
