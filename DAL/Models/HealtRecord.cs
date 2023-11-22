@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    [Table("Hồ sơ")]
+    [Table("HoSo")]
     public class HealtRecord
     {
         //Thọ

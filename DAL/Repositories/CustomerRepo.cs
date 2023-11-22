@@ -18,7 +18,9 @@ namespace DAL.Repositories
         //}
         public List<Customer> GetAll()
         {
-            return _context.Customer.GetAll();
+            //return _context.Customer.GetAll();
+            throw new NotImplementedException();
+
         }
         public bool AddLichKham()
         {
