@@ -34,6 +34,9 @@ namespace PRL
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
@@ -43,18 +46,37 @@ namespace PRL
             ThongBao = new Label();
             LoiChao = new Label();
             Panel_KH = new Panel();
-            QLKh_ff = new Label();
+            bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
+            KH_RichTxt_MoTa = new ReaLTaiizor.Controls.CyberRichTextBox();
+            bigTextBox1 = new ReaLTaiizor.Controls.BigTextBox();
+            label4 = new Label();
+            KH_Btn_An = new ButtonCustom();
+            KH_Btn_Them = new ButtonCustom();
+            KH_GridView = new ReaLTaiizor.Controls.PoisonDataGridView();
+            cyberGroupBox2 = new ReaLTaiizor.Controls.CyberGroupBox();
+            KH_Txt_GioiTinh = new ReaLTaiizor.Controls.CyberRichTextBox();
+            KH_Txt_Sdt = new ReaLTaiizor.Controls.CyberRichTextBox();
+            KH_Txt_DiaChi = new ReaLTaiizor.Controls.CyberRichTextBox();
+            KH_Txt_HoTen = new ReaLTaiizor.Controls.CyberRichTextBox();
+            dungeonHeaderLabel5 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            dungeonHeaderLabel7 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            dungeonHeaderLabel8 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            dungeonHeaderLabel9 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            KH_Btn_Sua = new ButtonCustom();
             Panel_NV = new Panel();
-            cyberRichTextBox1 = new ReaLTaiizor.Controls.CyberRichTextBox();
-            buttonCustom4 = new ButtonCustom();
-            buttonCustom3 = new ButtonCustom();
-            buttonCustom2 = new ButtonCustom();
+            label6 = new Label();
+            NV_Btn_Update = new ButtonCustom();
+            bigTextBox2 = new ReaLTaiizor.Controls.BigTextBox();
+            NV_Btn_Them = new ButtonCustom();
+            label5 = new Label();
             NV_GridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
-            dungeonComboBox1 = new ReaLTaiizor.Controls.DungeonComboBox();
+            NV_combo_CaLam = new ReaLTaiizor.Controls.DungeonComboBox();
+            dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            NV_combo_ChucVu = new ReaLTaiizor.Controls.DungeonComboBox();
             dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            cyberRichTextBox5 = new ReaLTaiizor.Controls.CyberRichTextBox();
-            cyberRichTextBox4 = new ReaLTaiizor.Controls.CyberRichTextBox();
+            NV_Txt_Pass = new ReaLTaiizor.Controls.CyberRichTextBox();
+            NV_Txt_GioiTinh = new ReaLTaiizor.Controls.CyberRichTextBox();
             NV_Txt_Sdt = new ReaLTaiizor.Controls.CyberRichTextBox();
             NV_Txt_DiaChi = new ReaLTaiizor.Controls.CyberRichTextBox();
             NV_Text_HoTen = new ReaLTaiizor.Controls.CyberRichTextBox();
@@ -63,6 +85,8 @@ namespace PRL
             NV_Sdt = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             NV_DiaChi = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             NV_Ten = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            NV_Btn_An = new ButtonCustom();
+            NV_RichTxt_MoTa = new ReaLTaiizor.Controls.CyberRichTextBox();
             Nav_Option = new Panel();
             ThongKe = new Label();
             QL_LichKham = new Label();
@@ -72,10 +96,14 @@ namespace PRL
             QL_KH = new Label();
             QL_NV = new Label();
             Content = new Panel();
-            Elipse_GridView = new Bunifu.Framework.UI.BunifuElipse(components);
+            NV_Elipse_GridView = new Bunifu.Framework.UI.BunifuElipse(components);
+            bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
+            KH_Elipse_GrView = new Bunifu.Framework.UI.BunifuElipse(components);
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)KH_GridView).BeginInit();
+            cyberGroupBox2.SuspendLayout();
             Panel_NV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)NV_GridView).BeginInit();
             cyberGroupBox1.SuspendLayout();
@@ -117,7 +145,7 @@ namespace PRL
             Navigation.Controls.Add(LoiChao);
             Navigation.Location = new Point(276, -8);
             Navigation.Name = "Navigation";
-            Navigation.Size = new Size(1430, 65);
+            Navigation.Size = new Size(1436, 65);
             Navigation.TabIndex = 1;
             // 
             // label3
@@ -126,7 +154,7 @@ namespace PRL
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Tomato;
-            label3.Location = new Point(994, 24);
+            label3.Location = new Point(1047, 24);
             label3.Name = "label3";
             label3.Size = new Size(84, 25);
             label3.TabIndex = 4;
@@ -138,7 +166,7 @@ namespace PRL
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Tomato;
-            label2.Location = new Point(870, 24);
+            label2.Location = new Point(923, 24);
             label2.Name = "label2";
             label2.Size = new Size(89, 25);
             label2.TabIndex = 3;
@@ -156,7 +184,7 @@ namespace PRL
             buttonCustom1.FlatStyle = FlatStyle.Flat;
             buttonCustom1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             buttonCustom1.ForeColor = Color.LightCoral;
-            buttonCustom1.Location = new Point(1234, 15);
+            buttonCustom1.Location = new Point(1287, 15);
             buttonCustom1.Name = "buttonCustom1";
             buttonCustom1.Size = new Size(144, 41);
             buttonCustom1.TabIndex = 2;
@@ -170,7 +198,7 @@ namespace PRL
             ThongBao.AutoSize = true;
             ThongBao.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             ThongBao.ForeColor = Color.Tomato;
-            ThongBao.Location = new Point(1106, 23);
+            ThongBao.Location = new Point(1159, 23);
             ThongBao.Name = "ThongBao";
             ThongBao.Size = new Size(101, 25);
             ThongBao.TabIndex = 1;
@@ -189,119 +217,507 @@ namespace PRL
             // 
             // Panel_KH
             // 
-            Panel_KH.Controls.Add(QLKh_ff);
-            Panel_KH.Location = new Point(35, 30);
+            Panel_KH.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Panel_KH.Controls.Add(bigLabel1);
+            Panel_KH.Controls.Add(KH_RichTxt_MoTa);
+            Panel_KH.Controls.Add(bigTextBox1);
+            Panel_KH.Controls.Add(label4);
+            Panel_KH.Controls.Add(KH_Btn_An);
+            Panel_KH.Controls.Add(KH_Btn_Them);
+            Panel_KH.Controls.Add(KH_GridView);
+            Panel_KH.Controls.Add(cyberGroupBox2);
+            Panel_KH.Controls.Add(KH_Btn_Sua);
+            Panel_KH.Location = new Point(22, 6);
             Panel_KH.Name = "Panel_KH";
-            Panel_KH.Size = new Size(1345, 673);
+            Panel_KH.Size = new Size(1358, 697);
             Panel_KH.TabIndex = 0;
             Panel_KH.Visible = false;
             // 
-            // QLKh_ff
+            // bigLabel1
             // 
-            QLKh_ff.AutoSize = true;
-            QLKh_ff.Location = new Point(434, 182);
-            QLKh_ff.Name = "QLKh_ff";
-            QLKh_ff.Size = new Size(86, 20);
-            QLKh_ff.TabIndex = 0;
-            QLKh_ff.Text = "Khách hàng";
+            bigLabel1.AutoSize = true;
+            bigLabel1.BackColor = Color.Transparent;
+            bigLabel1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            bigLabel1.ForeColor = Color.DimGray;
+            bigLabel1.Location = new Point(38, 518);
+            bigLabel1.Name = "bigLabel1";
+            bigLabel1.Size = new Size(192, 38);
+            bigLabel1.TabIndex = 24;
+            bigLabel1.Text = "Lịch sử khám :";
+            // 
+            // KH_RichTxt_MoTa
+            // 
+            KH_RichTxt_MoTa.Alpha = 20;
+            KH_RichTxt_MoTa.BackColor = Color.Transparent;
+            KH_RichTxt_MoTa.Background_WidthPen = 8F;
+            KH_RichTxt_MoTa.BackgroundPen = true;
+            KH_RichTxt_MoTa.ColorBackground = Color.LightCoral;
+            KH_RichTxt_MoTa.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            KH_RichTxt_MoTa.ColorLighting = Color.FromArgb(29, 200, 238);
+            KH_RichTxt_MoTa.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            KH_RichTxt_MoTa.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            KH_RichTxt_MoTa.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            KH_RichTxt_MoTa.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            KH_RichTxt_MoTa.ForeColor = Color.FromArgb(245, 245, 245);
+            KH_RichTxt_MoTa.Lighting = false;
+            KH_RichTxt_MoTa.LinearGradientPen = false;
+            KH_RichTxt_MoTa.Location = new Point(38, 573);
+            KH_RichTxt_MoTa.Name = "KH_RichTxt_MoTa";
+            KH_RichTxt_MoTa.PenWidth = 15;
+            KH_RichTxt_MoTa.RGB = false;
+            KH_RichTxt_MoTa.Rounding = true;
+            KH_RichTxt_MoTa.RoundingInt = 60;
+            KH_RichTxt_MoTa.Size = new Size(691, 288);
+            KH_RichTxt_MoTa.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            KH_RichTxt_MoTa.TabIndex = 21;
+            KH_RichTxt_MoTa.Tag = "Cyber";
+            KH_RichTxt_MoTa.TextButton = "";
+            KH_RichTxt_MoTa.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            KH_RichTxt_MoTa.Timer_RGB = 300;
+            // 
+            // bigTextBox1
+            // 
+            bigTextBox1.BackColor = Color.Transparent;
+            bigTextBox1.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            bigTextBox1.ForeColor = Color.DimGray;
+            bigTextBox1.Image = null;
+            bigTextBox1.Location = new Point(38, 21);
+            bigTextBox1.MaxLength = 32767;
+            bigTextBox1.Multiline = false;
+            bigTextBox1.Name = "bigTextBox1";
+            bigTextBox1.ReadOnly = false;
+            bigTextBox1.Size = new Size(628, 46);
+            bigTextBox1.TabIndex = 11;
+            bigTextBox1.TextAlignment = HorizontalAlignment.Left;
+            bigTextBox1.UseSystemPasswordChar = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
+            label4.Location = new Point(656, 29);
+            label4.Name = "label4";
+            label4.Size = new Size(73, 38);
+            label4.TabIndex = 23;
+            label4.Text = "       ";
+            label4.Click += label4_Click_1;
+            // 
+            // KH_Btn_An
+            // 
+            KH_Btn_An.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            KH_Btn_An.BackColor = SystemColors.ActiveCaptionText;
+            KH_Btn_An.BackgroundColor = SystemColors.ActiveCaptionText;
+            KH_Btn_An.BorderColor = Color.Crimson;
+            KH_Btn_An.BorderRadius = 20;
+            KH_Btn_An.BorderSize = 2;
+            KH_Btn_An.FlatAppearance.BorderSize = 0;
+            KH_Btn_An.FlatStyle = FlatStyle.Flat;
+            KH_Btn_An.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            KH_Btn_An.ForeColor = Color.Red;
+            KH_Btn_An.Location = new Point(536, 644);
+            KH_Btn_An.Name = "KH_Btn_An";
+            KH_Btn_An.Size = new Size(156, 50);
+            KH_Btn_An.TabIndex = 20;
+            KH_Btn_An.Text = "Ẩn";
+            KH_Btn_An.TextColor = Color.Red;
+            KH_Btn_An.UseVisualStyleBackColor = false;
+            // 
+            // KH_Btn_Them
+            // 
+            KH_Btn_Them.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            KH_Btn_Them.BackColor = Color.MediumSpringGreen;
+            KH_Btn_Them.BackgroundColor = Color.MediumSpringGreen;
+            KH_Btn_Them.BorderColor = Color.DeepSkyBlue;
+            KH_Btn_Them.BorderRadius = 20;
+            KH_Btn_Them.BorderSize = 2;
+            KH_Btn_Them.FlatAppearance.BorderSize = 0;
+            KH_Btn_Them.FlatStyle = FlatStyle.Flat;
+            KH_Btn_Them.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            KH_Btn_Them.ForeColor = Color.White;
+            KH_Btn_Them.Location = new Point(50, 647);
+            KH_Btn_Them.Name = "KH_Btn_Them";
+            KH_Btn_Them.Size = new Size(156, 50);
+            KH_Btn_Them.TabIndex = 18;
+            KH_Btn_Them.Text = "Thêm";
+            KH_Btn_Them.TextColor = Color.White;
+            KH_Btn_Them.UseVisualStyleBackColor = false;
+            // 
+            // KH_GridView
+            // 
+            KH_GridView.AllowUserToResizeRows = false;
+            KH_GridView.BackgroundColor = Color.Pink;
+            KH_GridView.BorderStyle = BorderStyle.None;
+            KH_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            KH_GridView.DefaultCellStyle = dataGridViewCellStyle2;
+            KH_GridView.EnableHeadersVisualStyles = false;
+            KH_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            KH_GridView.GridColor = Color.FromArgb(255, 255, 255);
+            KH_GridView.Location = new Point(38, 76);
+            KH_GridView.Name = "KH_GridView";
+            KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            KH_GridView.RowHeadersWidth = 51;
+            KH_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            KH_GridView.RowTemplate.Height = 29;
+            KH_GridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            KH_GridView.Size = new Size(691, 431);
+            KH_GridView.TabIndex = 17;
+            // 
+            // cyberGroupBox2
+            // 
+            cyberGroupBox2.Alpha = 20;
+            cyberGroupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cyberGroupBox2.BackColor = Color.Transparent;
+            cyberGroupBox2.Background = true;
+            cyberGroupBox2.Background_WidthPen = 3F;
+            cyberGroupBox2.BackgroundPen = true;
+            cyberGroupBox2.ColorBackground = Color.FromArgb(192, 255, 255);
+            cyberGroupBox2.ColorBackground_1 = Color.FromArgb(128, 255, 255);
+            cyberGroupBox2.ColorBackground_2 = Color.Fuchsia;
+            cyberGroupBox2.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            cyberGroupBox2.ColorLighting = Color.FromArgb(29, 200, 238);
+            cyberGroupBox2.ColorPen_1 = Color.FromArgb(37, 52, 68);
+            cyberGroupBox2.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox2.Controls.Add(KH_Txt_GioiTinh);
+            cyberGroupBox2.Controls.Add(KH_Txt_Sdt);
+            cyberGroupBox2.Controls.Add(KH_Txt_DiaChi);
+            cyberGroupBox2.Controls.Add(KH_Txt_HoTen);
+            cyberGroupBox2.Controls.Add(dungeonHeaderLabel5);
+            cyberGroupBox2.Controls.Add(dungeonHeaderLabel7);
+            cyberGroupBox2.Controls.Add(dungeonHeaderLabel8);
+            cyberGroupBox2.Controls.Add(dungeonHeaderLabel9);
+            cyberGroupBox2.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            cyberGroupBox2.ForeColor = Color.FromArgb(245, 245, 245);
+            cyberGroupBox2.Lighting = false;
+            cyberGroupBox2.LinearGradient_Background = false;
+            cyberGroupBox2.LinearGradientPen = false;
+            cyberGroupBox2.Location = new Point(790, 8);
+            cyberGroupBox2.Name = "cyberGroupBox2";
+            cyberGroupBox2.PenWidth = 15;
+            cyberGroupBox2.RGB = false;
+            cyberGroupBox2.Rounding = true;
+            cyberGroupBox2.RoundingInt = 60;
+            cyberGroupBox2.Size = new Size(531, 680);
+            cyberGroupBox2.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            cyberGroupBox2.TabIndex = 16;
+            cyberGroupBox2.Tag = "Cyber";
+            cyberGroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            cyberGroupBox2.Timer_RGB = 300;
+            cyberGroupBox2.Load += cyberGroupBox2_Load;
+            // 
+            // KH_Txt_GioiTinh
+            // 
+            KH_Txt_GioiTinh.Alpha = 20;
+            KH_Txt_GioiTinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            KH_Txt_GioiTinh.BackColor = Color.Transparent;
+            KH_Txt_GioiTinh.Background_WidthPen = 3F;
+            KH_Txt_GioiTinh.BackgroundPen = true;
+            KH_Txt_GioiTinh.ColorBackground = Color.FromArgb(37, 72, 110);
+            KH_Txt_GioiTinh.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            KH_Txt_GioiTinh.ColorLighting = Color.FromArgb(29, 200, 238);
+            KH_Txt_GioiTinh.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            KH_Txt_GioiTinh.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            KH_Txt_GioiTinh.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            KH_Txt_GioiTinh.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            KH_Txt_GioiTinh.ForeColor = Color.FromArgb(245, 245, 245);
+            KH_Txt_GioiTinh.Lighting = false;
+            KH_Txt_GioiTinh.LinearGradientPen = false;
+            KH_Txt_GioiTinh.Location = new Point(214, 408);
+            KH_Txt_GioiTinh.Name = "KH_Txt_GioiTinh";
+            KH_Txt_GioiTinh.PenWidth = 15;
+            KH_Txt_GioiTinh.RGB = false;
+            KH_Txt_GioiTinh.Rounding = true;
+            KH_Txt_GioiTinh.RoundingInt = 60;
+            KH_Txt_GioiTinh.Size = new Size(287, 57);
+            KH_Txt_GioiTinh.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            KH_Txt_GioiTinh.TabIndex = 9;
+            KH_Txt_GioiTinh.Tag = "Cyber";
+            KH_Txt_GioiTinh.TextButton = "";
+            KH_Txt_GioiTinh.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            KH_Txt_GioiTinh.Timer_RGB = 300;
+            // 
+            // KH_Txt_Sdt
+            // 
+            KH_Txt_Sdt.Alpha = 20;
+            KH_Txt_Sdt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            KH_Txt_Sdt.BackColor = Color.Transparent;
+            KH_Txt_Sdt.Background_WidthPen = 3F;
+            KH_Txt_Sdt.BackgroundPen = true;
+            KH_Txt_Sdt.ColorBackground = Color.FromArgb(37, 72, 110);
+            KH_Txt_Sdt.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            KH_Txt_Sdt.ColorLighting = Color.FromArgb(29, 200, 238);
+            KH_Txt_Sdt.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            KH_Txt_Sdt.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            KH_Txt_Sdt.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            KH_Txt_Sdt.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            KH_Txt_Sdt.ForeColor = Color.FromArgb(245, 245, 245);
+            KH_Txt_Sdt.Lighting = false;
+            KH_Txt_Sdt.LinearGradientPen = false;
+            KH_Txt_Sdt.Location = new Point(214, 345);
+            KH_Txt_Sdt.Name = "KH_Txt_Sdt";
+            KH_Txt_Sdt.PenWidth = 15;
+            KH_Txt_Sdt.RGB = false;
+            KH_Txt_Sdt.Rounding = true;
+            KH_Txt_Sdt.RoundingInt = 60;
+            KH_Txt_Sdt.Size = new Size(287, 57);
+            KH_Txt_Sdt.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            KH_Txt_Sdt.TabIndex = 8;
+            KH_Txt_Sdt.Tag = "Cyber";
+            KH_Txt_Sdt.TextButton = "";
+            KH_Txt_Sdt.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            KH_Txt_Sdt.Timer_RGB = 300;
+            // 
+            // KH_Txt_DiaChi
+            // 
+            KH_Txt_DiaChi.Alpha = 20;
+            KH_Txt_DiaChi.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            KH_Txt_DiaChi.BackColor = Color.Transparent;
+            KH_Txt_DiaChi.Background_WidthPen = 3F;
+            KH_Txt_DiaChi.BackgroundPen = true;
+            KH_Txt_DiaChi.ColorBackground = Color.FromArgb(37, 72, 110);
+            KH_Txt_DiaChi.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            KH_Txt_DiaChi.ColorLighting = Color.FromArgb(29, 200, 238);
+            KH_Txt_DiaChi.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            KH_Txt_DiaChi.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            KH_Txt_DiaChi.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            KH_Txt_DiaChi.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            KH_Txt_DiaChi.ForeColor = Color.FromArgb(245, 245, 245);
+            KH_Txt_DiaChi.Lighting = false;
+            KH_Txt_DiaChi.LinearGradientPen = false;
+            KH_Txt_DiaChi.Location = new Point(214, 233);
+            KH_Txt_DiaChi.Name = "KH_Txt_DiaChi";
+            KH_Txt_DiaChi.PenWidth = 15;
+            KH_Txt_DiaChi.RGB = false;
+            KH_Txt_DiaChi.Rounding = true;
+            KH_Txt_DiaChi.RoundingInt = 60;
+            KH_Txt_DiaChi.Size = new Size(287, 104);
+            KH_Txt_DiaChi.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            KH_Txt_DiaChi.TabIndex = 7;
+            KH_Txt_DiaChi.Tag = "Cyber";
+            KH_Txt_DiaChi.TextButton = "";
+            KH_Txt_DiaChi.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            KH_Txt_DiaChi.Timer_RGB = 300;
+            // 
+            // KH_Txt_HoTen
+            // 
+            KH_Txt_HoTen.Alpha = 20;
+            KH_Txt_HoTen.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            KH_Txt_HoTen.BackColor = Color.Transparent;
+            KH_Txt_HoTen.Background_WidthPen = 3F;
+            KH_Txt_HoTen.BackgroundPen = true;
+            KH_Txt_HoTen.ColorBackground = Color.FromArgb(37, 72, 110);
+            KH_Txt_HoTen.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            KH_Txt_HoTen.ColorLighting = Color.FromArgb(29, 200, 238);
+            KH_Txt_HoTen.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            KH_Txt_HoTen.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            KH_Txt_HoTen.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            KH_Txt_HoTen.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            KH_Txt_HoTen.ForeColor = Color.FromArgb(245, 245, 245);
+            KH_Txt_HoTen.Lighting = false;
+            KH_Txt_HoTen.LinearGradientPen = false;
+            KH_Txt_HoTen.Location = new Point(214, 170);
+            KH_Txt_HoTen.Name = "KH_Txt_HoTen";
+            KH_Txt_HoTen.PenWidth = 15;
+            KH_Txt_HoTen.RGB = false;
+            KH_Txt_HoTen.Rounding = true;
+            KH_Txt_HoTen.RoundingInt = 60;
+            KH_Txt_HoTen.Size = new Size(287, 57);
+            KH_Txt_HoTen.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            KH_Txt_HoTen.TabIndex = 6;
+            KH_Txt_HoTen.Tag = "Cyber";
+            KH_Txt_HoTen.TextButton = "";
+            KH_Txt_HoTen.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            KH_Txt_HoTen.Timer_RGB = 300;
+            // 
+            // dungeonHeaderLabel5
+            // 
+            dungeonHeaderLabel5.AutoSize = true;
+            dungeonHeaderLabel5.BackColor = Color.Transparent;
+            dungeonHeaderLabel5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            dungeonHeaderLabel5.ForeColor = Color.FromArgb(76, 76, 77);
+            dungeonHeaderLabel5.Location = new Point(57, 420);
+            dungeonHeaderLabel5.Name = "dungeonHeaderLabel5";
+            dungeonHeaderLabel5.Size = new Size(98, 25);
+            dungeonHeaderLabel5.TabIndex = 4;
+            dungeonHeaderLabel5.Text = "Giới tính :";
+            // 
+            // dungeonHeaderLabel7
+            // 
+            dungeonHeaderLabel7.AutoSize = true;
+            dungeonHeaderLabel7.BackColor = Color.Transparent;
+            dungeonHeaderLabel7.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            dungeonHeaderLabel7.ForeColor = Color.FromArgb(76, 76, 77);
+            dungeonHeaderLabel7.Location = new Point(57, 358);
+            dungeonHeaderLabel7.Name = "dungeonHeaderLabel7";
+            dungeonHeaderLabel7.Size = new Size(139, 25);
+            dungeonHeaderLabel7.TabIndex = 2;
+            dungeonHeaderLabel7.Text = "Số điện thoại :";
+            // 
+            // dungeonHeaderLabel8
+            // 
+            dungeonHeaderLabel8.AutoSize = true;
+            dungeonHeaderLabel8.BackColor = Color.Transparent;
+            dungeonHeaderLabel8.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            dungeonHeaderLabel8.ForeColor = Color.FromArgb(76, 76, 77);
+            dungeonHeaderLabel8.Location = new Point(58, 249);
+            dungeonHeaderLabel8.Name = "dungeonHeaderLabel8";
+            dungeonHeaderLabel8.Size = new Size(84, 25);
+            dungeonHeaderLabel8.TabIndex = 1;
+            dungeonHeaderLabel8.Text = "Địa Chỉ :";
+            // 
+            // dungeonHeaderLabel9
+            // 
+            dungeonHeaderLabel9.AutoSize = true;
+            dungeonHeaderLabel9.BackColor = Color.Transparent;
+            dungeonHeaderLabel9.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            dungeonHeaderLabel9.ForeColor = Color.FromArgb(76, 76, 77);
+            dungeonHeaderLabel9.Location = new Point(58, 190);
+            dungeonHeaderLabel9.Name = "dungeonHeaderLabel9";
+            dungeonHeaderLabel9.Size = new Size(85, 25);
+            dungeonHeaderLabel9.TabIndex = 0;
+            dungeonHeaderLabel9.Text = "Họ Tên :";
+            // 
+            // KH_Btn_Sua
+            // 
+            KH_Btn_Sua.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            KH_Btn_Sua.BackColor = Color.DeepSkyBlue;
+            KH_Btn_Sua.BackgroundColor = Color.DeepSkyBlue;
+            KH_Btn_Sua.BorderColor = Color.Green;
+            KH_Btn_Sua.BorderRadius = 20;
+            KH_Btn_Sua.BorderSize = 2;
+            KH_Btn_Sua.FlatAppearance.BorderSize = 0;
+            KH_Btn_Sua.FlatStyle = FlatStyle.Flat;
+            KH_Btn_Sua.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            KH_Btn_Sua.ForeColor = Color.White;
+            KH_Btn_Sua.Location = new Point(299, 644);
+            KH_Btn_Sua.Name = "KH_Btn_Sua";
+            KH_Btn_Sua.Size = new Size(156, 50);
+            KH_Btn_Sua.TabIndex = 19;
+            KH_Btn_Sua.Text = "Sửa";
+            KH_Btn_Sua.TextColor = Color.White;
+            KH_Btn_Sua.UseVisualStyleBackColor = false;
             // 
             // Panel_NV
             // 
             Panel_NV.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Panel_NV.Controls.Add(cyberRichTextBox1);
-            Panel_NV.Controls.Add(buttonCustom4);
-            Panel_NV.Controls.Add(buttonCustom3);
-            Panel_NV.Controls.Add(buttonCustom2);
+            Panel_NV.Controls.Add(label6);
+            Panel_NV.Controls.Add(NV_Btn_Update);
+            Panel_NV.Controls.Add(bigTextBox2);
+            Panel_NV.Controls.Add(NV_Btn_Them);
+            Panel_NV.Controls.Add(label5);
             Panel_NV.Controls.Add(NV_GridView);
             Panel_NV.Controls.Add(cyberGroupBox1);
+            Panel_NV.Controls.Add(NV_Btn_An);
+            Panel_NV.Controls.Add(NV_RichTxt_MoTa);
             Panel_NV.Location = new Point(35, 17);
             Panel_NV.Name = "Panel_NV";
             Panel_NV.Size = new Size(1332, 686);
             Panel_NV.TabIndex = 0;
+            Panel_NV.Visible = false;
             // 
-            // cyberRichTextBox1
+            // label6
             // 
-            cyberRichTextBox1.Alpha = 20;
-            cyberRichTextBox1.BackColor = Color.Transparent;
-            cyberRichTextBox1.Background_WidthPen = 3F;
-            cyberRichTextBox1.BackgroundPen = true;
-            cyberRichTextBox1.ColorBackground = Color.White;
-            cyberRichTextBox1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox1.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox1.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox1.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            cyberRichTextBox1.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberRichTextBox1.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            cyberRichTextBox1.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberRichTextBox1.Lighting = false;
-            cyberRichTextBox1.LinearGradientPen = false;
-            cyberRichTextBox1.Location = new Point(37, 490);
-            cyberRichTextBox1.Name = "cyberRichTextBox1";
-            cyberRichTextBox1.PenWidth = 15;
-            cyberRichTextBox1.RGB = false;
-            cyberRichTextBox1.Rounding = true;
-            cyberRichTextBox1.RoundingInt = 60;
-            cyberRichTextBox1.Size = new Size(691, 125);
-            cyberRichTextBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberRichTextBox1.TabIndex = 15;
-            cyberRichTextBox1.Tag = "Cyber";
-            cyberRichTextBox1.TextButton = "";
-            cyberRichTextBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberRichTextBox1.Timer_RGB = 300;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlDarkDark;
+            label6.Location = new Point(37, 490);
+            label6.Name = "label6";
+            label6.Size = new Size(159, 28);
+            label6.TabIndex = 26;
+            label6.Text = "Thông tin thêm";
+            label6.Click += label6_Click;
             // 
-            // buttonCustom4
+            // NV_Btn_Update
             // 
-            buttonCustom4.BackColor = Color.MediumSlateBlue;
-            buttonCustom4.BackgroundColor = Color.MediumSlateBlue;
-            buttonCustom4.BorderColor = Color.PaleVioletRed;
-            buttonCustom4.BorderRadius = 20;
-            buttonCustom4.BorderSize = 2;
-            buttonCustom4.FlatAppearance.BorderSize = 0;
-            buttonCustom4.FlatStyle = FlatStyle.Flat;
-            buttonCustom4.ForeColor = Color.White;
-            buttonCustom4.Location = new Point(537, 621);
-            buttonCustom4.Name = "buttonCustom4";
-            buttonCustom4.Size = new Size(156, 50);
-            buttonCustom4.TabIndex = 14;
-            buttonCustom4.Text = "buttonCustom4";
-            buttonCustom4.TextColor = Color.White;
-            buttonCustom4.UseVisualStyleBackColor = false;
+            NV_Btn_Update.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            NV_Btn_Update.BackColor = Color.DeepSkyBlue;
+            NV_Btn_Update.BackgroundColor = Color.DeepSkyBlue;
+            NV_Btn_Update.BorderColor = Color.Green;
+            NV_Btn_Update.BorderRadius = 20;
+            NV_Btn_Update.BorderSize = 2;
+            NV_Btn_Update.FlatAppearance.BorderSize = 0;
+            NV_Btn_Update.FlatStyle = FlatStyle.Flat;
+            NV_Btn_Update.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            NV_Btn_Update.ForeColor = Color.White;
+            NV_Btn_Update.Location = new Point(304, 636);
+            NV_Btn_Update.Name = "NV_Btn_Update";
+            NV_Btn_Update.Size = new Size(156, 50);
+            NV_Btn_Update.TabIndex = 13;
+            NV_Btn_Update.Text = "Sửa";
+            NV_Btn_Update.TextColor = Color.White;
+            NV_Btn_Update.UseVisualStyleBackColor = false;
             // 
-            // buttonCustom3
+            // bigTextBox2
             // 
-            buttonCustom3.BackColor = Color.MediumSlateBlue;
-            buttonCustom3.BackgroundColor = Color.MediumSlateBlue;
-            buttonCustom3.BorderColor = Color.PaleVioletRed;
-            buttonCustom3.BorderRadius = 20;
-            buttonCustom3.BorderSize = 2;
-            buttonCustom3.FlatAppearance.BorderSize = 0;
-            buttonCustom3.FlatStyle = FlatStyle.Flat;
-            buttonCustom3.ForeColor = Color.White;
-            buttonCustom3.Location = new Point(290, 621);
-            buttonCustom3.Name = "buttonCustom3";
-            buttonCustom3.Size = new Size(156, 50);
-            buttonCustom3.TabIndex = 13;
-            buttonCustom3.Text = "buttonCustom3";
-            buttonCustom3.TextColor = Color.White;
-            buttonCustom3.UseVisualStyleBackColor = false;
+            bigTextBox2.BackColor = Color.Transparent;
+            bigTextBox2.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            bigTextBox2.ForeColor = Color.DimGray;
+            bigTextBox2.Image = null;
+            bigTextBox2.Location = new Point(39, 4);
+            bigTextBox2.MaxLength = 32767;
+            bigTextBox2.Multiline = false;
+            bigTextBox2.Name = "bigTextBox2";
+            bigTextBox2.ReadOnly = false;
+            bigTextBox2.Size = new Size(628, 46);
+            bigTextBox2.TabIndex = 24;
+            bigTextBox2.TextAlignment = HorizontalAlignment.Left;
+            bigTextBox2.UseSystemPasswordChar = false;
             // 
-            // buttonCustom2
+            // NV_Btn_Them
             // 
-            buttonCustom2.BackColor = Color.MediumSlateBlue;
-            buttonCustom2.BackgroundColor = Color.MediumSlateBlue;
-            buttonCustom2.BorderColor = Color.PaleVioletRed;
-            buttonCustom2.BorderRadius = 20;
-            buttonCustom2.BorderSize = 2;
-            buttonCustom2.FlatAppearance.BorderSize = 0;
-            buttonCustom2.FlatStyle = FlatStyle.Flat;
-            buttonCustom2.ForeColor = Color.White;
-            buttonCustom2.Location = new Point(49, 621);
-            buttonCustom2.Name = "buttonCustom2";
-            buttonCustom2.Size = new Size(156, 50);
-            buttonCustom2.TabIndex = 12;
-            buttonCustom2.Text = "buttonCustom2";
-            buttonCustom2.TextColor = Color.White;
-            buttonCustom2.UseVisualStyleBackColor = false;
+            NV_Btn_Them.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            NV_Btn_Them.BackColor = Color.MediumSpringGreen;
+            NV_Btn_Them.BackgroundColor = Color.MediumSpringGreen;
+            NV_Btn_Them.BorderColor = Color.DeepSkyBlue;
+            NV_Btn_Them.BorderRadius = 20;
+            NV_Btn_Them.BorderSize = 2;
+            NV_Btn_Them.FlatAppearance.BorderSize = 0;
+            NV_Btn_Them.FlatStyle = FlatStyle.Flat;
+            NV_Btn_Them.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            NV_Btn_Them.ForeColor = Color.White;
+            NV_Btn_Them.Location = new Point(70, 636);
+            NV_Btn_Them.Name = "NV_Btn_Them";
+            NV_Btn_Them.Size = new Size(156, 50);
+            NV_Btn_Them.TabIndex = 12;
+            NV_Btn_Them.Text = "Thêm";
+            NV_Btn_Them.TextColor = Color.White;
+            NV_Btn_Them.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
+            label5.Location = new Point(657, 12);
+            label5.Name = "label5";
+            label5.Size = new Size(73, 38);
+            label5.TabIndex = 25;
+            label5.Text = "       ";
             // 
             // NV_GridView
             // 
@@ -310,42 +726,42 @@ namespace PRL
             NV_GridView.BorderStyle = BorderStyle.None;
             NV_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             NV_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             NV_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            NV_GridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            NV_GridView.DefaultCellStyle = dataGridViewCellStyle5;
             NV_GridView.EnableHeadersVisualStyles = false;
             NV_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             NV_GridView.GridColor = Color.FromArgb(255, 255, 255);
-            NV_GridView.Location = new Point(37, 32);
+            NV_GridView.Location = new Point(37, 67);
             NV_GridView.Name = "NV_GridView";
             NV_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             NV_GridView.RowHeadersWidth = 51;
             NV_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             NV_GridView.RowTemplate.Height = 29;
             NV_GridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            NV_GridView.Size = new Size(691, 445);
+            NV_GridView.Size = new Size(691, 410);
             NV_GridView.TabIndex = 11;
             // 
             // cyberGroupBox1
@@ -363,10 +779,12 @@ namespace PRL
             cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
             cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
             cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox1.Controls.Add(dungeonComboBox1);
+            cyberGroupBox1.Controls.Add(NV_combo_CaLam);
+            cyberGroupBox1.Controls.Add(dungeonHeaderLabel2);
+            cyberGroupBox1.Controls.Add(NV_combo_ChucVu);
             cyberGroupBox1.Controls.Add(dungeonHeaderLabel1);
-            cyberGroupBox1.Controls.Add(cyberRichTextBox5);
-            cyberGroupBox1.Controls.Add(cyberRichTextBox4);
+            cyberGroupBox1.Controls.Add(NV_Txt_Pass);
+            cyberGroupBox1.Controls.Add(NV_Txt_GioiTinh);
             cyberGroupBox1.Controls.Add(NV_Txt_Sdt);
             cyberGroupBox1.Controls.Add(NV_Txt_DiaChi);
             cyberGroupBox1.Controls.Add(NV_Text_HoTen);
@@ -393,33 +811,73 @@ namespace PRL
             cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox1.Timer_RGB = 300;
             // 
-            // dungeonComboBox1
+            // NV_combo_CaLam
             // 
-            dungeonComboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dungeonComboBox1.BackColor = Color.FromArgb(246, 246, 246);
-            dungeonComboBox1.ColorA = Color.FromArgb(246, 132, 85);
-            dungeonComboBox1.ColorB = Color.FromArgb(231, 108, 57);
-            dungeonComboBox1.ColorC = Color.FromArgb(242, 241, 240);
-            dungeonComboBox1.ColorD = Color.FromArgb(253, 252, 252);
-            dungeonComboBox1.ColorE = Color.FromArgb(239, 237, 236);
-            dungeonComboBox1.ColorF = Color.FromArgb(180, 180, 180);
-            dungeonComboBox1.ColorG = Color.FromArgb(119, 119, 118);
-            dungeonComboBox1.ColorH = Color.FromArgb(224, 222, 220);
-            dungeonComboBox1.ColorI = Color.FromArgb(250, 249, 249);
-            dungeonComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            dungeonComboBox1.DropDownHeight = 100;
-            dungeonComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            dungeonComboBox1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dungeonComboBox1.ForeColor = Color.FromArgb(76, 76, 97);
-            dungeonComboBox1.FormattingEnabled = true;
-            dungeonComboBox1.HoverSelectionColor = Color.Empty;
-            dungeonComboBox1.IntegralHeight = false;
-            dungeonComboBox1.ItemHeight = 20;
-            dungeonComboBox1.Location = new Point(214, 486);
-            dungeonComboBox1.Name = "dungeonComboBox1";
-            dungeonComboBox1.Size = new Size(287, 26);
-            dungeonComboBox1.StartIndex = 0;
-            dungeonComboBox1.TabIndex = 13;
+            NV_combo_CaLam.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_combo_CaLam.BackColor = Color.FromArgb(246, 246, 246);
+            NV_combo_CaLam.ColorA = Color.FromArgb(246, 132, 85);
+            NV_combo_CaLam.ColorB = Color.FromArgb(231, 108, 57);
+            NV_combo_CaLam.ColorC = Color.FromArgb(242, 241, 240);
+            NV_combo_CaLam.ColorD = Color.FromArgb(253, 252, 252);
+            NV_combo_CaLam.ColorE = Color.FromArgb(239, 237, 236);
+            NV_combo_CaLam.ColorF = Color.FromArgb(180, 180, 180);
+            NV_combo_CaLam.ColorG = Color.FromArgb(119, 119, 118);
+            NV_combo_CaLam.ColorH = Color.FromArgb(224, 222, 220);
+            NV_combo_CaLam.ColorI = Color.FromArgb(250, 249, 249);
+            NV_combo_CaLam.DrawMode = DrawMode.OwnerDrawFixed;
+            NV_combo_CaLam.DropDownHeight = 100;
+            NV_combo_CaLam.DropDownStyle = ComboBoxStyle.DropDownList;
+            NV_combo_CaLam.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_combo_CaLam.ForeColor = Color.FromArgb(76, 76, 97);
+            NV_combo_CaLam.FormattingEnabled = true;
+            NV_combo_CaLam.HoverSelectionColor = Color.Empty;
+            NV_combo_CaLam.IntegralHeight = false;
+            NV_combo_CaLam.ItemHeight = 20;
+            NV_combo_CaLam.Location = new Point(214, 603);
+            NV_combo_CaLam.Name = "NV_combo_CaLam";
+            NV_combo_CaLam.Size = new Size(287, 26);
+            NV_combo_CaLam.StartIndex = 0;
+            NV_combo_CaLam.TabIndex = 15;
+            // 
+            // dungeonHeaderLabel2
+            // 
+            dungeonHeaderLabel2.AutoSize = true;
+            dungeonHeaderLabel2.BackColor = Color.Transparent;
+            dungeonHeaderLabel2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            dungeonHeaderLabel2.ForeColor = Color.FromArgb(76, 76, 77);
+            dungeonHeaderLabel2.Location = new Point(61, 603);
+            dungeonHeaderLabel2.Name = "dungeonHeaderLabel2";
+            dungeonHeaderLabel2.Size = new Size(120, 25);
+            dungeonHeaderLabel2.TabIndex = 14;
+            dungeonHeaderLabel2.Text = "Ca làm việc :";
+            // 
+            // NV_combo_ChucVu
+            // 
+            NV_combo_ChucVu.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_combo_ChucVu.BackColor = Color.FromArgb(246, 246, 246);
+            NV_combo_ChucVu.ColorA = Color.FromArgb(246, 132, 85);
+            NV_combo_ChucVu.ColorB = Color.FromArgb(231, 108, 57);
+            NV_combo_ChucVu.ColorC = Color.FromArgb(242, 241, 240);
+            NV_combo_ChucVu.ColorD = Color.FromArgb(253, 252, 252);
+            NV_combo_ChucVu.ColorE = Color.FromArgb(239, 237, 236);
+            NV_combo_ChucVu.ColorF = Color.FromArgb(180, 180, 180);
+            NV_combo_ChucVu.ColorG = Color.FromArgb(119, 119, 118);
+            NV_combo_ChucVu.ColorH = Color.FromArgb(224, 222, 220);
+            NV_combo_ChucVu.ColorI = Color.FromArgb(250, 249, 249);
+            NV_combo_ChucVu.DrawMode = DrawMode.OwnerDrawFixed;
+            NV_combo_ChucVu.DropDownHeight = 100;
+            NV_combo_ChucVu.DropDownStyle = ComboBoxStyle.DropDownList;
+            NV_combo_ChucVu.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_combo_ChucVu.ForeColor = Color.FromArgb(76, 76, 97);
+            NV_combo_ChucVu.FormattingEnabled = true;
+            NV_combo_ChucVu.HoverSelectionColor = Color.Empty;
+            NV_combo_ChucVu.IntegralHeight = false;
+            NV_combo_ChucVu.ItemHeight = 20;
+            NV_combo_ChucVu.Location = new Point(214, 486);
+            NV_combo_ChucVu.Name = "NV_combo_ChucVu";
+            NV_combo_ChucVu.Size = new Size(287, 26);
+            NV_combo_ChucVu.StartIndex = 0;
+            NV_combo_ChucVu.TabIndex = 13;
             // 
             // dungeonHeaderLabel1
             // 
@@ -433,68 +891,68 @@ namespace PRL
             dungeonHeaderLabel1.TabIndex = 12;
             dungeonHeaderLabel1.Text = "Mật khẩu : ";
             // 
-            // cyberRichTextBox5
+            // NV_Txt_Pass
             // 
-            cyberRichTextBox5.Alpha = 20;
-            cyberRichTextBox5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cyberRichTextBox5.BackColor = Color.Transparent;
-            cyberRichTextBox5.Background_WidthPen = 3F;
-            cyberRichTextBox5.BackgroundPen = true;
-            cyberRichTextBox5.ColorBackground = Color.FromArgb(37, 72, 110);
-            cyberRichTextBox5.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox5.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox5.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox5.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            cyberRichTextBox5.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberRichTextBox5.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            cyberRichTextBox5.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberRichTextBox5.Lighting = false;
-            cyberRichTextBox5.LinearGradientPen = false;
-            cyberRichTextBox5.Location = new Point(214, 527);
-            cyberRichTextBox5.Name = "cyberRichTextBox5";
-            cyberRichTextBox5.PenWidth = 15;
-            cyberRichTextBox5.RGB = false;
-            cyberRichTextBox5.Rounding = true;
-            cyberRichTextBox5.RoundingInt = 60;
-            cyberRichTextBox5.Size = new Size(287, 57);
-            cyberRichTextBox5.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberRichTextBox5.TabIndex = 10;
-            cyberRichTextBox5.Tag = "Cyber";
-            cyberRichTextBox5.TextButton = "";
-            cyberRichTextBox5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberRichTextBox5.Timer_RGB = 300;
-            cyberRichTextBox5.Load += cyberRichTextBox5_Load;
+            NV_Txt_Pass.Alpha = 20;
+            NV_Txt_Pass.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_Txt_Pass.BackColor = Color.Transparent;
+            NV_Txt_Pass.Background_WidthPen = 3F;
+            NV_Txt_Pass.BackgroundPen = true;
+            NV_Txt_Pass.ColorBackground = Color.FromArgb(37, 72, 110);
+            NV_Txt_Pass.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            NV_Txt_Pass.ColorLighting = Color.FromArgb(29, 200, 238);
+            NV_Txt_Pass.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            NV_Txt_Pass.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            NV_Txt_Pass.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            NV_Txt_Pass.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Txt_Pass.ForeColor = Color.FromArgb(245, 245, 245);
+            NV_Txt_Pass.Lighting = false;
+            NV_Txt_Pass.LinearGradientPen = false;
+            NV_Txt_Pass.Location = new Point(214, 527);
+            NV_Txt_Pass.Name = "NV_Txt_Pass";
+            NV_Txt_Pass.PenWidth = 15;
+            NV_Txt_Pass.RGB = false;
+            NV_Txt_Pass.Rounding = true;
+            NV_Txt_Pass.RoundingInt = 60;
+            NV_Txt_Pass.Size = new Size(287, 57);
+            NV_Txt_Pass.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            NV_Txt_Pass.TabIndex = 10;
+            NV_Txt_Pass.Tag = "Cyber";
+            NV_Txt_Pass.TextButton = "";
+            NV_Txt_Pass.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            NV_Txt_Pass.Timer_RGB = 300;
+            NV_Txt_Pass.Load += cyberRichTextBox5_Load;
             // 
-            // cyberRichTextBox4
+            // NV_Txt_GioiTinh
             // 
-            cyberRichTextBox4.Alpha = 20;
-            cyberRichTextBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cyberRichTextBox4.BackColor = Color.Transparent;
-            cyberRichTextBox4.Background_WidthPen = 3F;
-            cyberRichTextBox4.BackgroundPen = true;
-            cyberRichTextBox4.ColorBackground = Color.FromArgb(37, 72, 110);
-            cyberRichTextBox4.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox4.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox4.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox4.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            cyberRichTextBox4.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberRichTextBox4.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            cyberRichTextBox4.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberRichTextBox4.Lighting = false;
-            cyberRichTextBox4.LinearGradientPen = false;
-            cyberRichTextBox4.Location = new Point(214, 408);
-            cyberRichTextBox4.Name = "cyberRichTextBox4";
-            cyberRichTextBox4.PenWidth = 15;
-            cyberRichTextBox4.RGB = false;
-            cyberRichTextBox4.Rounding = true;
-            cyberRichTextBox4.RoundingInt = 60;
-            cyberRichTextBox4.Size = new Size(287, 57);
-            cyberRichTextBox4.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberRichTextBox4.TabIndex = 9;
-            cyberRichTextBox4.Tag = "Cyber";
-            cyberRichTextBox4.TextButton = "";
-            cyberRichTextBox4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberRichTextBox4.Timer_RGB = 300;
+            NV_Txt_GioiTinh.Alpha = 20;
+            NV_Txt_GioiTinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_Txt_GioiTinh.BackColor = Color.Transparent;
+            NV_Txt_GioiTinh.Background_WidthPen = 3F;
+            NV_Txt_GioiTinh.BackgroundPen = true;
+            NV_Txt_GioiTinh.ColorBackground = Color.FromArgb(37, 72, 110);
+            NV_Txt_GioiTinh.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            NV_Txt_GioiTinh.ColorLighting = Color.FromArgb(29, 200, 238);
+            NV_Txt_GioiTinh.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            NV_Txt_GioiTinh.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            NV_Txt_GioiTinh.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            NV_Txt_GioiTinh.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Txt_GioiTinh.ForeColor = Color.FromArgb(245, 245, 245);
+            NV_Txt_GioiTinh.Lighting = false;
+            NV_Txt_GioiTinh.LinearGradientPen = false;
+            NV_Txt_GioiTinh.Location = new Point(214, 408);
+            NV_Txt_GioiTinh.Name = "NV_Txt_GioiTinh";
+            NV_Txt_GioiTinh.PenWidth = 15;
+            NV_Txt_GioiTinh.RGB = false;
+            NV_Txt_GioiTinh.Rounding = true;
+            NV_Txt_GioiTinh.RoundingInt = 60;
+            NV_Txt_GioiTinh.Size = new Size(287, 57);
+            NV_Txt_GioiTinh.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            NV_Txt_GioiTinh.TabIndex = 9;
+            NV_Txt_GioiTinh.Tag = "Cyber";
+            NV_Txt_GioiTinh.TextButton = "";
+            NV_Txt_GioiTinh.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            NV_Txt_GioiTinh.Timer_RGB = 300;
             // 
             // NV_Txt_Sdt
             // 
@@ -509,7 +967,7 @@ namespace PRL
             NV_Txt_Sdt.ColorPen_1 = Color.FromArgb(29, 200, 238);
             NV_Txt_Sdt.ColorPen_2 = Color.FromArgb(37, 52, 68);
             NV_Txt_Sdt.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            NV_Txt_Sdt.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Txt_Sdt.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             NV_Txt_Sdt.ForeColor = Color.FromArgb(245, 245, 245);
             NV_Txt_Sdt.Lighting = false;
             NV_Txt_Sdt.LinearGradientPen = false;
@@ -540,7 +998,7 @@ namespace PRL
             NV_Txt_DiaChi.ColorPen_1 = Color.FromArgb(29, 200, 238);
             NV_Txt_DiaChi.ColorPen_2 = Color.FromArgb(37, 52, 68);
             NV_Txt_DiaChi.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            NV_Txt_DiaChi.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Txt_DiaChi.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             NV_Txt_DiaChi.ForeColor = Color.FromArgb(245, 245, 245);
             NV_Txt_DiaChi.Lighting = false;
             NV_Txt_DiaChi.LinearGradientPen = false;
@@ -571,7 +1029,7 @@ namespace PRL
             NV_Text_HoTen.ColorPen_1 = Color.FromArgb(29, 200, 238);
             NV_Text_HoTen.ColorPen_2 = Color.FromArgb(37, 52, 68);
             NV_Text_HoTen.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            NV_Text_HoTen.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Text_HoTen.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             NV_Text_HoTen.ForeColor = Color.FromArgb(245, 245, 245);
             NV_Text_HoTen.Lighting = false;
             NV_Text_HoTen.LinearGradientPen = false;
@@ -651,6 +1109,56 @@ namespace PRL
             NV_Ten.Text = "Họ Tên :";
             NV_Ten.Click += NV_Ten_Click;
             // 
+            // NV_Btn_An
+            // 
+            NV_Btn_An.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            NV_Btn_An.BackColor = SystemColors.ActiveCaptionText;
+            NV_Btn_An.BackgroundColor = SystemColors.ActiveCaptionText;
+            NV_Btn_An.BorderColor = Color.Crimson;
+            NV_Btn_An.BorderRadius = 20;
+            NV_Btn_An.BorderSize = 2;
+            NV_Btn_An.FlatAppearance.BorderSize = 0;
+            NV_Btn_An.FlatStyle = FlatStyle.Flat;
+            NV_Btn_An.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            NV_Btn_An.ForeColor = Color.Red;
+            NV_Btn_An.Location = new Point(535, 636);
+            NV_Btn_An.Name = "NV_Btn_An";
+            NV_Btn_An.Size = new Size(156, 50);
+            NV_Btn_An.TabIndex = 14;
+            NV_Btn_An.Text = "Ẩn";
+            NV_Btn_An.TextColor = Color.Red;
+            NV_Btn_An.UseVisualStyleBackColor = false;
+            // 
+            // NV_RichTxt_MoTa
+            // 
+            NV_RichTxt_MoTa.Alpha = 20;
+            NV_RichTxt_MoTa.BackColor = Color.Transparent;
+            NV_RichTxt_MoTa.Background_WidthPen = 3F;
+            NV_RichTxt_MoTa.BackgroundPen = true;
+            NV_RichTxt_MoTa.ColorBackground = Color.DeepSkyBlue;
+            NV_RichTxt_MoTa.ColorBackground_Pen = Color.MediumSpringGreen;
+            NV_RichTxt_MoTa.ColorLighting = Color.FromArgb(29, 200, 238);
+            NV_RichTxt_MoTa.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            NV_RichTxt_MoTa.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            NV_RichTxt_MoTa.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            NV_RichTxt_MoTa.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_RichTxt_MoTa.ForeColor = Color.FromArgb(245, 245, 245);
+            NV_RichTxt_MoTa.Lighting = false;
+            NV_RichTxt_MoTa.LinearGradientPen = false;
+            NV_RichTxt_MoTa.Location = new Point(37, 528);
+            NV_RichTxt_MoTa.Name = "NV_RichTxt_MoTa";
+            NV_RichTxt_MoTa.PenWidth = 15;
+            NV_RichTxt_MoTa.RGB = false;
+            NV_RichTxt_MoTa.Rounding = true;
+            NV_RichTxt_MoTa.RoundingInt = 60;
+            NV_RichTxt_MoTa.Size = new Size(691, 181);
+            NV_RichTxt_MoTa.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            NV_RichTxt_MoTa.TabIndex = 15;
+            NV_RichTxt_MoTa.Tag = "Cyber";
+            NV_RichTxt_MoTa.TextButton = "";
+            NV_RichTxt_MoTa.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            NV_RichTxt_MoTa.Timer_RGB = 300;
+            // 
             // Nav_Option
             // 
             Nav_Option.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
@@ -665,7 +1173,7 @@ namespace PRL
             Nav_Option.Controls.Add(QL_NV);
             Nav_Option.Location = new Point(-5, 56);
             Nav_Option.Name = "Nav_Option";
-            Nav_Option.Size = new Size(284, 745);
+            Nav_Option.Size = new Size(284, 727);
             Nav_Option.TabIndex = 1;
             // 
             // ThongKe
@@ -760,22 +1268,32 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_NV);
+            Content.Controls.Add(Panel_KH);
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
-            Content.Size = new Size(1395, 722);
+            Content.Size = new Size(1468, 738);
             Content.TabIndex = 2;
             // 
-            // Elipse_GridView
+            // NV_Elipse_GridView
             // 
-            Elipse_GridView.ElipseRadius = 10;
-            Elipse_GridView.TargetControl = NV_GridView;
+            NV_Elipse_GridView.ElipseRadius = 10;
+            NV_Elipse_GridView.TargetControl = NV_GridView;
+            // 
+            // bunifuElipse1
+            // 
+            bunifuElipse1.ElipseRadius = 10;
+            bunifuElipse1.TargetControl = NV_GridView;
+            // 
+            // KH_Elipse_GrView
+            // 
+            KH_Elipse_GrView.ElipseRadius = 10;
+            KH_Elipse_GrView.TargetControl = KH_GridView;
             // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1668, 771);
+            ClientSize = new Size(1706, 782);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
@@ -792,7 +1310,11 @@ namespace PRL
             Navigation.PerformLayout();
             Panel_KH.ResumeLayout(false);
             Panel_KH.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)KH_GridView).EndInit();
+            cyberGroupBox2.ResumeLayout(false);
+            cyberGroupBox2.PerformLayout();
             Panel_NV.ResumeLayout(false);
+            Panel_NV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NV_GridView).EndInit();
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
@@ -822,7 +1344,6 @@ namespace PRL
         private Label label3;
         private Panel Panel_NV;
         private Panel Panel_KH;
-        private Label QLKh_ff;
         private Panel Content;
         private ReaLTaiizor.Controls.PoisonDataGridView NV_GridView;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
@@ -831,17 +1352,41 @@ namespace PRL
         private ReaLTaiizor.Controls.DungeonHeaderLabel NV_Sdt;
         private ReaLTaiizor.Controls.DungeonHeaderLabel NV_DiaChi;
         private ReaLTaiizor.Controls.DungeonHeaderLabel NV_Ten;
-        private Bunifu.Framework.UI.BunifuElipse Elipse_GridView;
+        private Bunifu.Framework.UI.BunifuElipse NV_Elipse_GridView;
         private ReaLTaiizor.Controls.CyberRichTextBox NV_Text_HoTen;
-        private ReaLTaiizor.Controls.CyberRichTextBox cyberRichTextBox4;
+        private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_GioiTinh;
         private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_Sdt;
         private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_DiaChi;
-        private ReaLTaiizor.Controls.CyberRichTextBox cyberRichTextBox5;
-        private ButtonCustom buttonCustom4;
-        private ButtonCustom buttonCustom3;
-        private ButtonCustom buttonCustom2;
+        private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_Pass;
+        private ButtonCustom NV_Btn_An;
+        private ButtonCustom NV_Btn_Update;
+        private ButtonCustom NV_Btn_Them;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
-        private ReaLTaiizor.Controls.DungeonComboBox dungeonComboBox1;
-        private ReaLTaiizor.Controls.CyberRichTextBox cyberRichTextBox1;
+        private ReaLTaiizor.Controls.DungeonComboBox NV_combo_ChucVu;
+        private ReaLTaiizor.Controls.CyberRichTextBox NV_RichTxt_MoTa;
+        private ReaLTaiizor.Controls.DungeonComboBox NV_combo_CaLam;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel2;
+        private ReaLTaiizor.Controls.CyberRichTextBox KH_RichTxt_MoTa;
+        private ButtonCustom KH_Btn_An;
+        private ButtonCustom KH_Btn_Sua;
+        private ButtonCustom KH_Btn_Them;
+        private ReaLTaiizor.Controls.PoisonDataGridView KH_GridView;
+        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox2;
+        private ReaLTaiizor.Controls.CyberRichTextBox KH_Txt_GioiTinh;
+        private ReaLTaiizor.Controls.CyberRichTextBox KH_Txt_Sdt;
+        private ReaLTaiizor.Controls.CyberRichTextBox KH_Txt_DiaChi;
+        private ReaLTaiizor.Controls.CyberRichTextBox KH_Txt_HoTen;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel5;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel7;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel8;
+        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel9;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse KH_Elipse_GrView;
+        private Label label4;
+        private ReaLTaiizor.Controls.BigTextBox bigTextBox1;
+        private ReaLTaiizor.Controls.BigTextBox bigTextBox2;
+        private Label label5;
+        private ReaLTaiizor.Controls.BigLabel bigLabel1;
+        private Label label6;
     }
 }
