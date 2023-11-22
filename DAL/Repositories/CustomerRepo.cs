@@ -1,5 +1,6 @@
 ﻿using DAL.IRepositories;
 using DAL.Models;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
-    public class LichKhamRepo : ILichKhamRepo
+    public class CustomerRepo : ICustomerRepo
     {
-        public List<HealtRecord> GetAll()
+        //private DBContext _context;
+        //public CustomerRepo()
+        //{
+            
+        //}
+        public List<Customer> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Customer.GetAll();
         }
         public bool AddLichKham()
         {

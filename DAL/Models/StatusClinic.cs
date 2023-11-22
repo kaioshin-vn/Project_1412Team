@@ -15,6 +15,8 @@ namespace DAL.Models
         public Guid IdShift { get; set; }
         public virtual Shift Shift { get; set; }
         public Guid IdClinic { get; set; }
-        public virtual Clinic Clinic { get; set; }
+        public virtual ICollection<Clinic>? Clinics { get; set; }
+        public virtual ICollection<Shift>? Shifts { get; set; }
+
     }
 }

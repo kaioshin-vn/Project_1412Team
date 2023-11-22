@@ -12,6 +12,7 @@ namespace DAL.Models
         public Guid Id { get; set; }
         public int ShiftNumber { get; set; }
         public DateTime TimeStart { get; set; }
-        public virtual ICollection<Shift> Shifts { get; set; }
+        public virtual StatusClinic StatusClinic { get; set; }  
+        public virtual MedicalBill MedicalBill { get; set; }
     }
 }

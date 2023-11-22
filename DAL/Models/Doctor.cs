@@ -27,7 +27,7 @@ namespace DAL.Models
 
         // quan hệ
         public virtual Staff Staff { get; set; }
-        //public virtual StatusDoctor StatusdDoctor { get; set; }
-        //public virtual MedicaBill MedicaBill { get; set; }
+        public virtual StatusDoctor StatusdDoctor { get; set; }
+        public virtual MedicalBill MedicaBill { get; set; }
     }
 }

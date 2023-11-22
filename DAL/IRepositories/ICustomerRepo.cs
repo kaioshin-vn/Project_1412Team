@@ -9,9 +9,9 @@ using DAL.Models;
 
 namespace DAL.IRepositories
 {
-    public interface ILichKhamRepo
+    public interface ICustomerRepo
     {
-        public List<HealtRecord> GetAll();
+        public List<Customer> GetAll();
         public bool AddLichKham();
         public bool UpdateLichKham();
         public bool RemoveLichKham();

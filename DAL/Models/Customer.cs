@@ -10,14 +10,19 @@ namespace DAL.Models
     public class Customer
     {
         public Guid Id { get; set; }
+
         [StringLength(50)]
         public string Name { get; set; }
-        [StringLength(15)]
-        public string Phone { get; set; }
+        public int Phone { get; set; }
+
         [StringLength(100)]
         public string Address { get; set; }
+
+        public DateTime CreateDate { get; set; }
+
         [StringLength(5)]
         public int Sex { get; set; }
+        public string DichVu { get; set; }
         public bool Visible { get; set; }
 
         // quan hệ
@@ -25,6 +30,7 @@ namespace DAL.Models
 
         // Thọ
         public virtual Bill? Bills { get; set; }
+        public virtual MedicalBill? MedicalBill { get; set; }
 
     }
 }
