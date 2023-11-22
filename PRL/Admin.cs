@@ -30,7 +30,8 @@ namespace PRL
 
         private void Admin_Load(object sender, EventArgs e)
         {
-
+            Panel_KH.Visible = false;
+            Panel_NV.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -95,6 +96,26 @@ namespace PRL
         }
 
         private void cyberRichTextBox5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cyberRichTextBox2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cyberGroupBox2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
