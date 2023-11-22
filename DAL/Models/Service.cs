@@ -11,11 +11,14 @@ namespace DAL.Models
     [Table("Dịch vụ")]
     public class Service
     {
+        // Thọ
         [Key]
         public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
-        public string Descript { get; set; } // mô tả
+        public string? Descript { get; set; } // mô tả
         public int Price { get; set; } // giá
+        public virtual ICollection<MedicalBill>? MedicalBills { get; set; }
 
 
     }

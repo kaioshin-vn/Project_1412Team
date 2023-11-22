@@ -11,6 +11,7 @@ namespace DAL.Models
     [Table("Đánh giá")]
     public class Rate
     {
+        //Thọ
         [Key]
         public int Id { get; set; }
         [Required]
@@ -18,5 +19,6 @@ namespace DAL.Models
         public string Content { get; set; }
         public DateTime CreateDate { get; set; }
         //public IdMB 
+        public virtual ICollection<MedicalBill>? MedicalBills { get; set; }
     }
 }

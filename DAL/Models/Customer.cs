@@ -23,7 +23,9 @@ namespace DAL.Models
         // quan hệ
         public virtual ICollection<Bill> Bills { get; set; }
         //public virtual ICollection<MedicalBill> MedicalBills { get; set; }
-
+        
+        //Thọ
+        public virtual Bill Bill { get; set; }
 
     }
 }

@@ -10,6 +10,9 @@
 
   <ItemGroup>
     <Folder Include="Icon\" />
+    <Folder Include="BacSi\" />
+    <Folder Include="YTa\" />
+    <Folder Include="QuanTriVien\" />
   </ItemGroup>
 
   <ItemGroup>

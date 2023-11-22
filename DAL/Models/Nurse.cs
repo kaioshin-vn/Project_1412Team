@@ -30,5 +30,9 @@ namespace DAL.Models
         public virtual Staff Staff { get; set; }
         //public virtual MedicaBill MedicaBill { get; set; }
         //public virtual Bill Bill { get; set; }
+
+
+        //Thọ
+        public virtual Bill? Bill { get; set; }
     }
 }
