@@ -79,7 +79,24 @@ namespace PRL
 
         }
 
+        private void NV_ChucVu_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void NV_Pass_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NV_Ten_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cyberRichTextBox5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

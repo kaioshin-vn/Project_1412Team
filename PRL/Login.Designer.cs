@@ -43,6 +43,7 @@
             // 
             // PhoneNumber
             // 
+            PhoneNumber.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             PhoneNumber.Location = new Point(306, 168);
             PhoneNumber.Name = "PhoneNumber";
             PhoneNumber.PlaceholderText = "Số điện thoại";
@@ -52,6 +53,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.MediumBlue;
@@ -63,6 +65,7 @@
             // 
             // Lb_pass
             // 
+            Lb_pass.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Lb_pass.AutoSize = true;
             Lb_pass.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             Lb_pass.ForeColor = Color.MediumBlue;
@@ -74,6 +77,7 @@
             // 
             // Password
             // 
+            Password.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Password.Location = new Point(306, 221);
             Password.Name = "Password";
             Password.PasswordChar = '☢';
@@ -84,6 +88,7 @@
             // 
             // checkBox1
             // 
+            checkBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             checkBox1.Location = new Point(306, 282);
@@ -96,6 +101,7 @@
             // 
             // Visible_Pass
             // 
+            Visible_Pass.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Visible_Pass.AutoSize = true;
             Visible_Pass.Image = C_PRL.Properties.Resources.icons8_eye_open_35;
             Visible_Pass.Location = new Point(652, 228);
@@ -107,10 +113,11 @@
             // 
             // Forget_Pass
             // 
+            Forget_Pass.Anchor = AnchorStyles.Top;
             Forget_Pass.AutoSize = true;
             Forget_Pass.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             Forget_Pass.ForeColor = SystemColors.HotTrack;
-            Forget_Pass.Location = new Point(372, 421);
+            Forget_Pass.Location = new Point(378, 417);
             Forget_Pass.Name = "Forget_Pass";
             Forget_Pass.Size = new Size(137, 23);
             Forget_Pass.TabIndex = 6;
@@ -119,6 +126,7 @@
             // 
             // Btn_Login
             // 
+            Btn_Login.Anchor = AnchorStyles.Top;
             Btn_Login.BackColor = Color.Gainsboro;
             Btn_Login.BackgroundColor = Color.Gainsboro;
             Btn_Login.BorderColor = Color.HotPink;
@@ -158,6 +166,7 @@
             Controls.Add(PhoneNumber);
             Name = "Login";
             Text = "Login";
+            WindowState = FormWindowState.Maximized;
             Load += Login_Load;
             VisibleChanged += Login_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
