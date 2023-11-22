@@ -17,7 +17,7 @@ namespace DAL.Models
         [StringLength(100)]
         public string Address { get; set; }
         [StringLength(5)]
-        public string Sex { get; set; }
+        public int Sex { get; set; }
         public bool Visible { get; set; }
 
         // quan hệ

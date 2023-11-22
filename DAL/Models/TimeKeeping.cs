@@ -15,6 +15,6 @@ namespace DAL.Models
 
         // quan hệ
         public virtual Staff Staff { get; set; }
-        public int StaffId { get; set;}
+       
     }
 }
