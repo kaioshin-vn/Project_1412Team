@@ -22,13 +22,14 @@ namespace DAL.Models
         [Required]
         public string Address { get; set; }
         [Required]
-        public string Password { get; set; }
-        [Required]
         public bool Visible { get; set; } // ẩn hiện
 
         // quan hệ
         public virtual Staff Staff { get; set; }
         //public virtual MedicaBill MedicaBill { get; set; }
-        //public virtual Bill Bill { get; set; }
+
+        // Thọ
+        public virtual Bill? Bill { get; set; }
+
     }
 }

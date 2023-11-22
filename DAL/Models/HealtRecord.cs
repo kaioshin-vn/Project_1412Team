@@ -11,9 +11,12 @@ namespace DAL.Models
     [Table("Hồ sơ")]
     public class HealtRecord
     {
+        //Thọ
         [Key]
         public Guid Id { get; set; }
-        public string Result { get; set; } // kết quả
-        public string Notification { get; set; } 
+        public string? Result { get; set; } // kết quả
+        public string? Notification { get; set; } 
+        public virtual ICollection<MedicalBill>? MedicalBills { get; set; }
+
     }
 }

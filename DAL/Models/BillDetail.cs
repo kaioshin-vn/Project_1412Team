@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    [Table("Hóa đơn chi tiết")]
+    [Table("HoaDonChiTiet")]
     public class BillDetail
     {
+        // Thọ
         [Key]
         public Guid Id { get; set; }
         public Status Status { get; set; } // trạng thái
+        public virtual Bill? Bill { get; set; }
+        public virtual ICollection<MedicalBill> MedicalBills { get; set; }
     }
 }
