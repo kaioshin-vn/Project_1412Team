@@ -8,7 +8,6 @@ namespace DAL.Models
 {
     public class MedicalBill
     {
-
         public Guid Id { get; set; }
         public Guid IdDoctor { get; set; }
         public virtual Doctor Doctor { get; set; }
@@ -21,14 +20,10 @@ namespace DAL.Models
         public Guid IdClinic { get; set; }
         public virtual Clinic Clinic { get; set; }
         public Guid IdService { get; set; }
+        public virtual Service Service { get; set; }
         public Guid IdRate { get; set; }
+        public virtual Rate Rate { get; set; }
         public string Status { get; set; }
         public bool Visible { get; set; }
-
-        //Thọ
-        public virtual BillDetail? BillDetail { get; set; }
-        public virtual HealtRecord? HealtRecord { get; set; }
-        public virtual Rate? Rate { get; set; }    
-        public virtual Service? Service { get; set; }
     }
 }

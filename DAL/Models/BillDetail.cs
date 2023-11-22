@@ -12,11 +12,8 @@ namespace DAL.Models
     [Table("Hóa đơn chi tiết")]
     public class BillDetail
     {
-        //Thọ
         [Key]
         public int Id { get; set; }
         public Status Status { get; set; } // trạng thái
-        public virtual Bill Bill { get; set; }
-        public virtual ICollection<MedicalBill> MedicalBills { get; set; }
     }
 }

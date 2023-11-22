@@ -8,21 +8,15 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    [Table("HoaDon")]
+    [Table("Hóa đơn")]
     public class Bill
     {
-        //Thọ
         [Key]
         public int Id { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string TenKH { get; set; }
-        public DateTime NgayTao { get; set; }
-        public string? DichVu { get; set; }
-        public decimal? TongTien { get; set; }
-        public string? PaymentMethods { get; set; } // Phương thức thanh toán
-        public string? Note {  get; set; } // ghi chú
-        public virtual ICollection<BillDetail>? BillDetails { get; set; }
-        public virtual ICollection<Customer>? Customers { get; set; }
+        public string IdNurse { get; set; }
+        public string IdCustomer { get; set; }
+        public DateTime Date { get; set; }
+        public string PaymentMethods { get; set; } // Phương thức thanh toán
+        public string Note {  get; set; } // ghi chú
     }
 }
