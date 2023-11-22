@@ -13,9 +13,12 @@ namespace DAL.Models
         public int IndexDate { get; set; }
         public string Status { get; set; }
         public Guid IdShift { get; set; }
-        public virtual Shift Shift { get; set; }
         public Guid IdDoctor { get; set; }
         public virtual Doctor Doctor { get; set; }
         public DateTime Date { get; set; }
+
+        public virtual ICollection<Doctor>? Doctors { get; set; }
+        public virtual MedicalBill? MedicalBill { get; set; }
+        public virtual Shift? Shift { get; set; }
     }
 }

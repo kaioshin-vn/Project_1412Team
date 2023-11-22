@@ -10,6 +10,7 @@ namespace DAL.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<StatusClinic> StatusClinics { get; set; }
+
+        public virtual StatusClinic? StatusClinic { get; set; }
     }
 }

@@ -17,6 +17,6 @@ namespace DAL.Models
 
         // quan hệ
         public virtual Staff Staff { get; set; }
-        public virtual ICollection< Statiscal> Statiscals { get; set; }
+        public virtual ICollection< Statiscal>? Statiscals { get; set; }
     }
 }
