@@ -97,7 +97,7 @@
             // Visible_Pass
             // 
             Visible_Pass.AutoSize = true;
-            Visible_Pass.Image = Properties.Resources.icons8_eye_open_35;
+            Visible_Pass.Image = C_PRL.Properties.Resources.icons8_eye_open_35;
             Visible_Pass.Location = new Point(652, 228);
             Visible_Pass.Name = "Visible_Pass";
             Visible_Pass.Size = new Size(85, 20);

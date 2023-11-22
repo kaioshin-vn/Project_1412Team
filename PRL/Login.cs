@@ -27,13 +27,13 @@ namespace PRL
 
             if (EyeStatus)
             {
-                Visible_Pass.Image = Properties.Resources.icons8_closed_eye_35;
+                Visible_Pass.Image = C_PRL.Properties.Resources.icons8_closed_eye_35;
                 EyeStatus = false;
                 Password.PasswordChar = '\0';
             }
             else
             {
-                Visible_Pass.Image = Properties.Resources.icons8_eye_open_35;
+                Visible_Pass.Image = C_PRL.Properties.Resources.icons8_eye_open_35;
                 EyeStatus = true;
                 Password.PasswordChar = '☢';
             }
