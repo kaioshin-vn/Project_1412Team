@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,23 @@ namespace PRL
 {
     public partial class Admin : Form
     {
+        public Admin(Staff staff, Login login)
+        {
+            FormLogin = login;
+            user = staff;
+            InitializeComponent();
+        }
+
         public Admin()
         {
             InitializeComponent();
         }
 
+        Staff user;
+        Login FormLogin;
+
         private void Admin_Load(object sender, EventArgs e)
         {
-
 
         }
 
@@ -35,6 +45,9 @@ namespace PRL
 
         private void label3_Click(object sender, EventArgs e)
         {
+            Content.Controls.Clear();
+            Panel_NV.Visible = true;
+            Content.Controls.Add(Panel_NV);
 
         }
 
@@ -49,6 +62,19 @@ namespace PRL
         }
 
         private void QL_KH_Click(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Panel_KH.Visible = true;
+            Content.Controls.Add(Panel_KH);
+
+        }
+
+        private void Admin_VisibleChanged(object sender, EventArgs e)
+        {
+            // FormLogin.Visible = false;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
