@@ -10,7 +10,7 @@ namespace DAL.Models
     public class StatusDoctor
     {
         [Key]
-        public DateTime IndexDate { get; set; }
+        public int IndexDate { get; set; }
         public string Status { get; set; }
         public Guid IdShift { get; set; }
         public virtual Shift Shift { get; set; }

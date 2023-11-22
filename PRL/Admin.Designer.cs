@@ -30,6 +30,7 @@ namespace PRL
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
@@ -39,6 +40,12 @@ namespace PRL
             ThongBao = new Label();
             LoiChao = new Label();
             Content = new Panel();
+            bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            bunifuRange2 = new Bunifu.Framework.UI.BunifuRange();
+            bunifuTrackbar1 = new Bunifu.Framework.UI.BunifuTrackbar();
+            bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            bunifuRange1 = new Bunifu.Framework.UI.BunifuRange();
             Panel_KH = new Panel();
             QLKh_ff = new Label();
             Panel_NV = new Panel();
@@ -53,6 +60,8 @@ namespace PRL
             QL_NV = new Label();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
+            Content.SuspendLayout();
+            bunifuCards1.SuspendLayout();
             Panel_KH.SuspendLayout();
             Panel_NV.SuspendLayout();
             Nav_Option.SuspendLayout();
@@ -167,10 +176,122 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
+            Content.Controls.Add(bunifuCards1);
+            Content.Controls.Add(bunifuRange1);
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
             Content.Size = new Size(1395, 722);
             Content.TabIndex = 2;
+            // 
+            // bunifuCards1
+            // 
+            bunifuCards1.BackColor = Color.White;
+            bunifuCards1.BorderRadius = 5;
+            bunifuCards1.BottomSahddow = true;
+            bunifuCards1.BottomShadow = true;
+            bunifuCards1.color = Color.Tomato;
+            bunifuCards1.Controls.Add(bunifuRange2);
+            bunifuCards1.Controls.Add(bunifuTrackbar1);
+            bunifuCards1.Controls.Add(bunifuTileButton1);
+            bunifuCards1.Controls.Add(bunifuThinButton21);
+            bunifuCards1.IndicatorColor = Color.Tomato;
+            bunifuCards1.LeftSahddow = false;
+            bunifuCards1.LeftShadow = false;
+            bunifuCards1.Location = new Point(337, 129);
+            bunifuCards1.Name = "bunifuCards1";
+            bunifuCards1.RightSahddow = true;
+            bunifuCards1.RightShadow = true;
+            bunifuCards1.ShadowDepth = 20;
+            bunifuCards1.Size = new Size(756, 496);
+            bunifuCards1.TabIndex = 1;
+            // 
+            // bunifuRange2
+            // 
+            bunifuRange2.BackColor = Color.Transparent;
+            bunifuRange2.BackgroudColor = Color.DarkGray;
+            bunifuRange2.BorderRadius = 0;
+            bunifuRange2.IndicatorColor = Color.SeaGreen;
+            bunifuRange2.Location = new Point(53, 273);
+            bunifuRange2.Margin = new Padding(4, 5, 4, 5);
+            bunifuRange2.MaximumRange = 100;
+            bunifuRange2.Name = "bunifuRange2";
+            bunifuRange2.RangeMax = 48;
+            bunifuRange2.RangeMin = 0;
+            bunifuRange2.Size = new Size(691, 41);
+            bunifuRange2.TabIndex = 4;
+            // 
+            // bunifuTrackbar1
+            // 
+            bunifuTrackbar1.BackColor = Color.Transparent;
+            bunifuTrackbar1.BackgroudColor = Color.DarkGray;
+            bunifuTrackbar1.BorderRadius = 0;
+            bunifuTrackbar1.IndicatorColor = Color.SeaGreen;
+            bunifuTrackbar1.Location = new Point(289, 17);
+            bunifuTrackbar1.Margin = new Padding(4, 5, 4, 5);
+            bunifuTrackbar1.MaximumValue = 100;
+            bunifuTrackbar1.MinimumValue = 0;
+            bunifuTrackbar1.Name = "bunifuTrackbar1";
+            bunifuTrackbar1.Size = new Size(691, 41);
+            bunifuTrackbar1.SliderRadius = 0;
+            bunifuTrackbar1.TabIndex = 3;
+            bunifuTrackbar1.Value = 0;
+            // 
+            // bunifuTileButton1
+            // 
+            bunifuTileButton1.BackColor = Color.SeaGreen;
+            bunifuTileButton1.color = Color.SeaGreen;
+            bunifuTileButton1.colorActive = Color.MediumSeaGreen;
+            bunifuTileButton1.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bunifuTileButton1.ForeColor = Color.White;
+            bunifuTileButton1.Image = (Image)resources.GetObject("bunifuTileButton1.Image");
+            bunifuTileButton1.ImagePosition = 20;
+            bunifuTileButton1.ImageZoom = 50;
+            bunifuTileButton1.LabelPosition = 41;
+            bunifuTileButton1.LabelText = "Tile 1";
+            bunifuTileButton1.Location = new Point(168, 205);
+            bunifuTileButton1.Margin = new Padding(6);
+            bunifuTileButton1.Name = "bunifuTileButton1";
+            bunifuTileButton1.Size = new Size(339, 67);
+            bunifuTileButton1.TabIndex = 2;
+            // 
+            // bunifuThinButton21
+            // 
+            bunifuThinButton21.ActiveBorderThickness = 1;
+            bunifuThinButton21.ActiveCornerRadius = 20;
+            bunifuThinButton21.ActiveFillColor = Color.SeaGreen;
+            bunifuThinButton21.ActiveForecolor = Color.White;
+            bunifuThinButton21.ActiveLineColor = Color.SeaGreen;
+            bunifuThinButton21.BackColor = Color.White;
+            bunifuThinButton21.BackgroundImage = (Image)resources.GetObject("bunifuThinButton21.BackgroundImage");
+            bunifuThinButton21.ButtonText = "ThinButton";
+            bunifuThinButton21.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            bunifuThinButton21.ForeColor = Color.SeaGreen;
+            bunifuThinButton21.IdleBorderThickness = 1;
+            bunifuThinButton21.IdleCornerRadius = 20;
+            bunifuThinButton21.IdleFillColor = Color.White;
+            bunifuThinButton21.IdleForecolor = Color.SeaGreen;
+            bunifuThinButton21.IdleLineColor = Color.SeaGreen;
+            bunifuThinButton21.Location = new Point(64, 133);
+            bunifuThinButton21.Margin = new Padding(5);
+            bunifuThinButton21.Name = "bunifuThinButton21";
+            bunifuThinButton21.Size = new Size(226, 51);
+            bunifuThinButton21.TabIndex = 1;
+            bunifuThinButton21.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // bunifuRange1
+            // 
+            bunifuRange1.BackColor = Color.Transparent;
+            bunifuRange1.BackgroudColor = Color.DarkGray;
+            bunifuRange1.BorderRadius = 0;
+            bunifuRange1.IndicatorColor = Color.SeaGreen;
+            bunifuRange1.Location = new Point(165, 214);
+            bunifuRange1.Margin = new Padding(4, 5, 4, 5);
+            bunifuRange1.MaximumRange = 100;
+            bunifuRange1.Name = "bunifuRange1";
+            bunifuRange1.RangeMax = 48;
+            bunifuRange1.RangeMin = 0;
+            bunifuRange1.Size = new Size(691, 41);
+            bunifuRange1.TabIndex = 0;
             // 
             // Panel_KH
             // 
@@ -322,6 +443,7 @@ namespace PRL
             Controls.Add(Nav_Option);
             Controls.Add(Content);
             Controls.Add(Navigation);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Admin";
             Text = "1412_Team";
             Load += Admin_Load;
@@ -330,6 +452,8 @@ namespace PRL
             name_clinic.PerformLayout();
             Navigation.ResumeLayout(false);
             Navigation.PerformLayout();
+            Content.ResumeLayout(false);
+            bunifuCards1.ResumeLayout(false);
             Panel_KH.ResumeLayout(false);
             Panel_KH.PerformLayout();
             Panel_NV.ResumeLayout(false);
@@ -362,5 +486,11 @@ namespace PRL
         private Label label4;
         private Panel Panel_KH;
         private Label QLKh_ff;
+        private Bunifu.Framework.UI.BunifuRange bunifuRange1;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private Bunifu.Framework.UI.BunifuRange bunifuRange2;
+        private Bunifu.Framework.UI.BunifuTrackbar bunifuTrackbar1;
+        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }
