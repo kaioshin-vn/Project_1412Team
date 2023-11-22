@@ -15,5 +15,6 @@ namespace DAL.Models
         [Key]
         public int Id { get; set; }
         public Status Status { get; set; } // trạng thái
+        public virtual Bill Bill { get; set; }
     }
 }

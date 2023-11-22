@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,10 +14,13 @@ namespace DAL.Models
     {
         [Key]
         public int Id { get; set; }
-        public string IdNurse { get; set; }
-        public string IdCustomer { get; set; }
+        //public string IdNurse { get; set; }
+        //public string IdCustomer { get; set; }
         public DateTime Date { get; set; }
-        public string PaymentMethods { get; set; } // Phương thức thanh toán
-        public string Note {  get; set; } // ghi chú
+        [Required]
+        public PaymentMethods PaymentMethods { get; set; } // Phương thức thanh toán
+        public string? Note {  get; set; } // ghi chú
+        public virtual ICollection<BillDetail> BillDetails { get; set; }
+
     }
 }
