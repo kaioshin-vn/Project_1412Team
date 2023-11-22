@@ -1,4 +1,5 @@
 ﻿using DAL.IRepositories;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace DAL.Repositories
 {
     public class LichKhamRepo : ILichKhamRepo
     {
-        public List<LichKham> GetAll()
+        public List<HealtRecord> GetAll()
         {
             throw new NotImplementedException();
         }

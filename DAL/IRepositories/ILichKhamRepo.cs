@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace DAL.IRepositories
 {
     public interface ILichKhamRepo
     {
-        public List<LichKham> GetAll();
+        public List<HealtRecord> GetAll();
         public bool AddLichKham();
         public bool UpdateLichKham();
         public bool RemoveLichKham();
