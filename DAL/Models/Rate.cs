@@ -12,7 +12,7 @@ namespace DAL.Models
     public class Rate
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         [Required]
         [MaxLength(100)]
         public string Content { get; set; }
