@@ -13,7 +13,7 @@ namespace DAL.Models
     public class BillDetail
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public Status Status { get; set; } // trạng thái
     }
 }

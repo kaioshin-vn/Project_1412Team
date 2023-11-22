@@ -12,7 +12,7 @@ namespace DAL.Models
     public class Bill
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string IdNurse { get; set; }
         public string IdCustomer { get; set; }
         public DateTime Date { get; set; }

@@ -12,7 +12,7 @@ namespace DAL.Models
     public class HealtRecord
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Result { get; set; } // kết quả
         public string Notification { get; set; } 
     }
