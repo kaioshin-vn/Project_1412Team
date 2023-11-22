@@ -15,7 +15,6 @@ namespace DAL.Models
 
         // quan hệ
         public virtual Staff Staff { get; set; }
-        public virtual DateTime LastUpdateTime { get; set;}
        
     }
 }
