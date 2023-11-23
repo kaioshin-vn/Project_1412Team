@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    [Table("KhanhHang")]
+    [Table("KhachHang")]
     public class Customer
     {
         [Key]
@@ -25,7 +25,7 @@ namespace DAL.Models
 
         [StringLength(5)]
         public int Sex { get; set; }
-        public string DichVu { get; set; }
+        public string Service { get; set; }
         public bool Visible { get; set; }
 
         // quan hệ
