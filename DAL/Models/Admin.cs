@@ -19,6 +19,6 @@ namespace DAL.Models
         public bool Visible { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual Staff Staff { get; set; }
+        public virtual ICollection<Staff>? Staff { get; set; }
     }
 }

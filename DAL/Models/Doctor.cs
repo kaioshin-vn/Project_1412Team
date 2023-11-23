@@ -18,19 +18,19 @@ namespace DAL.Models
         [Required, Range(0, 1)]
         public  int Gender { get; set; } //giới tính
         [Required, Phone]
-        public string NumberPhone { get; set; }
+        public string? NumberPhone { get; set; }
         [Required]
-        public string Address { get; set; }
+        public string? Address { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string? Password { get; set; }
         [Required]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [Required]
         public bool visible { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual Staff Staff { get; set; }
-        public virtual StatusDoctor StatusdDoctor { get; set; }
-        public virtual MedicalBill MedicaBill { get; set; }
+        public virtual ICollection<Staff>? Staff { get; set; }
+        public virtual StatusDoctor? StatusdDoctor { get; set; }
+        public virtual MedicalBill? MedicaBill { get; set; }
     }
 }
