@@ -18,6 +18,6 @@ namespace DAL.Models
         public DateTime EndTime { get; set; }
 
         // quan hệ
-        public virtual Staff Staff { get; set; }
+        public virtual ICollection<Staff>? Staff { get; set; }
     }
 }
