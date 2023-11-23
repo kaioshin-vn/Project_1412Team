@@ -29,8 +29,8 @@ namespace DAL.Models
         public bool visible { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual Staff? Staff { get; set; }
-        public virtual StatusDoctor? StatusdDoctor { get; set; }
-        public virtual MedicalBill? MedicaBill { get; set; }
+        public virtual Staff Staff { get; set; }
+        public virtual StatusDoctor StatusdDoctor { get; set; }
+        public virtual MedicalBill MedicaBill { get; set; }
     }
 }
