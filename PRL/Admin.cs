@@ -119,5 +119,10 @@ namespace PRL
         {
 
         }
+
+        private void QL_Luong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
