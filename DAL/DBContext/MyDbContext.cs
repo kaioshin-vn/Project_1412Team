@@ -35,8 +35,8 @@ namespace DAL.DBContext
         public DbSet<TimeKeeping> TimeKeepings { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True");
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-O08I15N\SQLEXPRESS01;Initial Catalog=Duan1;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True;TrustServerCertificate=true");
+            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-O08I15N\SQLEXPRESS01;Initial Catalog=Duan1;Integrated Security=True");
         }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
