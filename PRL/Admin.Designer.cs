@@ -98,6 +98,7 @@ namespace PRL
             Content = new Panel();
             Panel_LK = new ReaLTaiizor.Controls.ParrotSlidingPanel();
             LK_GrBox_XemLichKham = new ReaLTaiizor.Controls.GroupBox();
+            poisonDateTime2 = new ReaLTaiizor.Controls.PoisonDateTime();
             poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
             label9 = new Label();
             label8 = new Label();
@@ -110,7 +111,6 @@ namespace PRL
             NV_Elipse_GridView = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             KH_Elipse_GrView = new Bunifu.Framework.UI.BunifuElipse(components);
-            poisonDateTime2 = new ReaLTaiizor.Controls.PoisonDateTime();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -134,6 +134,7 @@ namespace PRL
             name_clinic.Name = "name_clinic";
             name_clinic.Size = new Size(284, 65);
             name_clinic.TabIndex = 0;
+            name_clinic.Paint += name_clinic_Paint;
             // 
             // label1
             // 
@@ -1342,6 +1343,15 @@ namespace PRL
             LK_GrBox_XemLichKham.TabIndex = 5;
             LK_GrBox_XemLichKham.Text = "Xem Lịch Khám";
             // 
+            // poisonDateTime2
+            // 
+            poisonDateTime2.Format = DateTimePickerFormat.Short;
+            poisonDateTime2.Location = new Point(892, 60);
+            poisonDateTime2.MinimumSize = new Size(0, 30);
+            poisonDateTime2.Name = "poisonDateTime2";
+            poisonDateTime2.Size = new Size(102, 30);
+            poisonDateTime2.TabIndex = 30;
+            // 
             // poisonDateTime1
             // 
             poisonDateTime1.Format = DateTimePickerFormat.Short;
@@ -1464,15 +1474,6 @@ namespace PRL
             // 
             KH_Elipse_GrView.ElipseRadius = 10;
             KH_Elipse_GrView.TargetControl = KH_GridView;
-            // 
-            // poisonDateTime2
-            // 
-            poisonDateTime2.Format = DateTimePickerFormat.Short;
-            poisonDateTime2.Location = new Point(892, 60);
-            poisonDateTime2.MinimumSize = new Size(0, 30);
-            poisonDateTime2.Name = "poisonDateTime2";
-            poisonDateTime2.Size = new Size(102, 30);
-            poisonDateTime2.TabIndex = 30;
             // 
             // Admin
             // 

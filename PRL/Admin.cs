@@ -120,5 +120,10 @@ namespace PRL
         {
 
         }
+
+        private void name_clinic_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
