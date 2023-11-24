@@ -96,20 +96,32 @@ namespace PRL
             QL_KH = new Label();
             QL_NV = new Label();
             Content = new Panel();
-            Panel_LK = new ReaLTaiizor.Controls.ParrotSlidingPanel();
-            LK_GrBox_XemLichKham = new ReaLTaiizor.Controls.GroupBox();
-            poisonDateTime2 = new ReaLTaiizor.Controls.PoisonDateTime();
+            Panel_LK = new Panel();
+            spaceSeparatorHorizontal1 = new ReaLTaiizor.Controls.SpaceSeparatorHorizontal();
+            groupBox2 = new ReaLTaiizor.Controls.GroupBox();
             poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
-            label9 = new Label();
+            poisonDateTime2 = new ReaLTaiizor.Controls.PoisonDateTime();
+            label7 = new Label();
             label8 = new Label();
             bigTextBox3 = new ReaLTaiizor.Controls.BigTextBox();
-            label7 = new Label();
-            bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
-            bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
+            label9 = new Label();
             bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
+            bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
+            bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             NV_Elipse_GridView = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             KH_Elipse_GrView = new Bunifu.Framework.UI.BunifuElipse(components);
+            panel1 = new Panel();
+            groupBox1 = new ReaLTaiizor.Controls.GroupBox();
+            poisonDateTime3 = new ReaLTaiizor.Controls.PoisonDateTime();
+            poisonDateTime4 = new ReaLTaiizor.Controls.PoisonDateTime();
+            label10 = new Label();
+            label11 = new Label();
+            bigTextBox4 = new ReaLTaiizor.Controls.BigTextBox();
+            label12 = new Label();
+            bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
+            bigLabel6 = new ReaLTaiizor.Controls.BigLabel();
+            bigLabel7 = new ReaLTaiizor.Controls.BigLabel();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -121,7 +133,9 @@ namespace PRL
             Nav_Option.SuspendLayout();
             Content.SuspendLayout();
             Panel_LK.SuspendLayout();
-            LK_GrBox_XemLichKham.SuspendLayout();
+            groupBox2.SuspendLayout();
+            panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // name_clinic
@@ -1283,8 +1297,6 @@ namespace PRL
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
             Content.Controls.Add(Panel_LK);
-            Content.Controls.Add(Panel_NV);
-            Content.Controls.Add(Panel_KH);
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
             Content.Size = new Size(1768, 938);
@@ -1292,85 +1304,84 @@ namespace PRL
             // 
             // Panel_LK
             // 
-            Panel_LK.BottomLeft = Color.Cyan;
-            Panel_LK.BottomRight = Color.FromArgb(255, 192, 240);
-            Panel_LK.CollapseControl = null;
-            Panel_LK.Collapsed = true;
-            Panel_LK.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            Panel_LK.Controls.Add(LK_GrBox_XemLichKham);
-            Panel_LK.Controls.Add(bigLabel4);
-            Panel_LK.Controls.Add(bigLabel3);
+            Panel_LK.BackColor = Color.PapayaWhip;
+            Panel_LK.Controls.Add(spaceSeparatorHorizontal1);
+            Panel_LK.Controls.Add(groupBox2);
             Panel_LK.Controls.Add(bigLabel2);
-            Panel_LK.Dock = DockStyle.Left;
-            Panel_LK.HideControls = false;
-            Panel_LK.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            Panel_LK.Location = new Point(0, 0);
+            Panel_LK.Controls.Add(bigLabel3);
+            Panel_LK.Controls.Add(bigLabel4);
+            Panel_LK.Location = new Point(3, -1);
             Panel_LK.Name = "Panel_LK";
-            Panel_LK.PanelWidthCollapsed = 50;
-            Panel_LK.PanelWidthExpanded = 200;
-            Panel_LK.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            Panel_LK.PrimerColor = Color.White;
-            Panel_LK.Size = new Size(1902, 936);
-            Panel_LK.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            Panel_LK.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
-            Panel_LK.TabIndex = 4;
-            Panel_LK.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            Panel_LK.TopLeft = Color.Black;
-            Panel_LK.TopRight = Color.Black;
+            Panel_LK.Size = new Size(1518, 759);
+            Panel_LK.TabIndex = 0;
             // 
-            // LK_GrBox_XemLichKham
+            // spaceSeparatorHorizontal1
             // 
-            LK_GrBox_XemLichKham.BackColor = Color.Transparent;
-            LK_GrBox_XemLichKham.BackGColor = Color.PaleGreen;
-            LK_GrBox_XemLichKham.BaseColor = Color.Transparent;
-            LK_GrBox_XemLichKham.BorderColorG = Color.White;
-            LK_GrBox_XemLichKham.BorderColorH = Color.DarkGray;
-            LK_GrBox_XemLichKham.Controls.Add(poisonDateTime2);
-            LK_GrBox_XemLichKham.Controls.Add(poisonDateTime1);
-            LK_GrBox_XemLichKham.Controls.Add(label9);
-            LK_GrBox_XemLichKham.Controls.Add(label8);
-            LK_GrBox_XemLichKham.Controls.Add(bigTextBox3);
-            LK_GrBox_XemLichKham.Controls.Add(label7);
-            LK_GrBox_XemLichKham.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            LK_GrBox_XemLichKham.ForeColor = Color.Crimson;
-            LK_GrBox_XemLichKham.HeaderColor = Color.BlanchedAlmond;
-            LK_GrBox_XemLichKham.Location = new Point(361, 232);
-            LK_GrBox_XemLichKham.MinimumSize = new Size(136, 50);
-            LK_GrBox_XemLichKham.Name = "LK_GrBox_XemLichKham";
-            LK_GrBox_XemLichKham.Padding = new Padding(5, 28, 5, 5);
-            LK_GrBox_XemLichKham.Size = new Size(1126, 656);
-            LK_GrBox_XemLichKham.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            LK_GrBox_XemLichKham.TabIndex = 5;
-            LK_GrBox_XemLichKham.Text = "Xem Lịch Khám";
+            spaceSeparatorHorizontal1.Customization = "Kioq/yoqKv8jIyP/Kioq/w==";
+            spaceSeparatorHorizontal1.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            spaceSeparatorHorizontal1.Image = null;
+            spaceSeparatorHorizontal1.Location = new Point(385, 124);
+            spaceSeparatorHorizontal1.Name = "spaceSeparatorHorizontal1";
+            spaceSeparatorHorizontal1.NoRounding = false;
+            spaceSeparatorHorizontal1.Size = new Size(186, 4);
+            spaceSeparatorHorizontal1.TabIndex = 14;
+            spaceSeparatorHorizontal1.Text = "spaceSeparatorHorizontal1";
+            spaceSeparatorHorizontal1.Transparent = false;
             // 
-            // poisonDateTime2
+            // groupBox2
             // 
-            poisonDateTime2.Format = DateTimePickerFormat.Short;
-            poisonDateTime2.Location = new Point(892, 60);
-            poisonDateTime2.MinimumSize = new Size(0, 30);
-            poisonDateTime2.Name = "poisonDateTime2";
-            poisonDateTime2.Size = new Size(102, 30);
-            poisonDateTime2.TabIndex = 30;
+            groupBox2.Anchor = AnchorStyles.None;
+            groupBox2.BackColor = Color.Transparent;
+            groupBox2.BackGColor = Color.PaleGreen;
+            groupBox2.BaseColor = Color.Transparent;
+            groupBox2.BorderColorG = Color.White;
+            groupBox2.BorderColorH = Color.DarkGray;
+            groupBox2.Controls.Add(poisonDateTime1);
+            groupBox2.Controls.Add(poisonDateTime2);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(label8);
+            groupBox2.Controls.Add(bigTextBox3);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Font = new Font("Microsoft YaHei", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox2.ForeColor = Color.Crimson;
+            groupBox2.HeaderColor = Color.LightGoldenrodYellow;
+            groupBox2.Location = new Point(228, 197);
+            groupBox2.MinimumSize = new Size(136, 50);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(5, 28, 5, 5);
+            groupBox2.Size = new Size(1105, 530);
+            groupBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            groupBox2.TabIndex = 13;
+            groupBox2.Text = "Xem Lịch Khám";
             // 
             // poisonDateTime1
             // 
             poisonDateTime1.Format = DateTimePickerFormat.Short;
-            poisonDateTime1.Location = new Point(688, 64);
+            poisonDateTime1.Location = new Point(876, 64);
             poisonDateTime1.MinimumSize = new Size(0, 30);
             poisonDateTime1.Name = "poisonDateTime1";
             poisonDateTime1.Size = new Size(102, 30);
-            poisonDateTime1.TabIndex = 29;
+            poisonDateTime1.TabIndex = 30;
             // 
-            // label9
+            // poisonDateTime2
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.ActiveCaptionText;
-            label9.Location = new Point(803, 64);
-            label9.Name = "label9";
-            label9.Size = new Size(67, 29);
-            label9.TabIndex = 28;
-            label9.Text = "Đến :";
+            poisonDateTime2.Format = DateTimePickerFormat.Short;
+            poisonDateTime2.Location = new Point(688, 64);
+            poisonDateTime2.MinimumSize = new Size(0, 30);
+            poisonDateTime2.Name = "poisonDateTime2";
+            poisonDateTime2.Size = new Size(102, 30);
+            poisonDateTime2.TabIndex = 29;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(803, 64);
+            label7.Name = "label7";
+            label7.Size = new Size(67, 29);
+            label7.TabIndex = 28;
+            label7.Text = "Đến :";
             // 
             // label8
             // 
@@ -1399,40 +1410,16 @@ namespace PRL
             bigTextBox3.TextAlignment = HorizontalAlignment.Left;
             bigTextBox3.UseSystemPasswordChar = false;
             // 
-            // label7
+            // label9
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
-            label7.Location = new Point(466, 56);
-            label7.Name = "label7";
-            label7.Size = new Size(73, 38);
-            label7.TabIndex = 27;
-            label7.Text = "       ";
-            // 
-            // bigLabel4
-            // 
-            bigLabel4.AutoSize = true;
-            bigLabel4.BackColor = Color.Transparent;
-            bigLabel4.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            bigLabel4.ForeColor = Color.Crimson;
-            bigLabel4.Location = new Point(1031, 119);
-            bigLabel4.Name = "bigLabel4";
-            bigLabel4.Size = new Size(270, 32);
-            bigLabel4.TabIndex = 3;
-            bigLabel4.Text = "Sửa / Hủy Phiếu Khám";
-            // 
-            // bigLabel3
-            // 
-            bigLabel3.AutoSize = true;
-            bigLabel3.BackColor = Color.Transparent;
-            bigLabel3.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            bigLabel3.ForeColor = Color.Crimson;
-            bigLabel3.Location = new Point(771, 119);
-            bigLabel3.Name = "bigLabel3";
-            bigLabel3.Size = new Size(210, 32);
-            bigLabel3.TabIndex = 2;
-            bigLabel3.Text = "Thêm Phiếu Khám";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
+            label9.Location = new Point(466, 56);
+            label9.Name = "label9";
+            label9.Size = new Size(73, 38);
+            label9.TabIndex = 27;
+            label9.Text = "       ";
             // 
             // bigLabel2
             // 
@@ -1440,11 +1427,35 @@ namespace PRL
             bigLabel2.BackColor = Color.Transparent;
             bigLabel2.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             bigLabel2.ForeColor = Color.Crimson;
-            bigLabel2.Location = new Point(518, 122);
+            bigLabel2.Location = new Point(898, 84);
             bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new Size(185, 32);
-            bigLabel2.TabIndex = 1;
-            bigLabel2.Text = "Xem Lịch Khám";
+            bigLabel2.Size = new Size(270, 32);
+            bigLabel2.TabIndex = 12;
+            bigLabel2.Text = "Sửa / Hủy Phiếu Khám";
+            // 
+            // bigLabel3
+            // 
+            bigLabel3.AutoSize = true;
+            bigLabel3.BackColor = Color.Transparent;
+            bigLabel3.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel3.ForeColor = Color.Crimson;
+            bigLabel3.Location = new Point(638, 84);
+            bigLabel3.Name = "bigLabel3";
+            bigLabel3.Size = new Size(210, 32);
+            bigLabel3.TabIndex = 11;
+            bigLabel3.Text = "Thêm Phiếu Khám";
+            // 
+            // bigLabel4
+            // 
+            bigLabel4.AutoSize = true;
+            bigLabel4.BackColor = Color.Transparent;
+            bigLabel4.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel4.ForeColor = Color.Crimson;
+            bigLabel4.Location = new Point(385, 87);
+            bigLabel4.Name = "bigLabel4";
+            bigLabel4.Size = new Size(185, 32);
+            bigLabel4.TabIndex = 10;
+            bigLabel4.Text = "Xem Lịch Khám";
             // 
             // NV_Elipse_GridView
             // 
@@ -1461,11 +1472,151 @@ namespace PRL
             KH_Elipse_GrView.ElipseRadius = 10;
             KH_Elipse_GrView.TargetControl = KH_GridView;
             // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(bigLabel5);
+            panel1.Controls.Add(bigLabel6);
+            panel1.Controls.Add(bigLabel7);
+            panel1.Location = new Point(34, 21);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1444, 705);
+            panel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.Transparent;
+            groupBox1.BackGColor = Color.PaleGreen;
+            groupBox1.BaseColor = Color.Transparent;
+            groupBox1.BorderColorG = Color.White;
+            groupBox1.BorderColorH = Color.DarkGray;
+            groupBox1.Controls.Add(poisonDateTime3);
+            groupBox1.Controls.Add(poisonDateTime4);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(label11);
+            groupBox1.Controls.Add(bigTextBox4);
+            groupBox1.Controls.Add(label12);
+            groupBox1.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.ForeColor = Color.Crimson;
+            groupBox1.HeaderColor = Color.BlanchedAlmond;
+            groupBox1.Location = new Point(159, 168);
+            groupBox1.MinimumSize = new Size(136, 50);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(5, 28, 5, 5);
+            groupBox1.Size = new Size(1126, 656);
+            groupBox1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            groupBox1.TabIndex = 9;
+            groupBox1.Text = "Xem Lịch Khám";
+            // 
+            // poisonDateTime3
+            // 
+            poisonDateTime3.Format = DateTimePickerFormat.Short;
+            poisonDateTime3.Location = new Point(892, 60);
+            poisonDateTime3.MinimumSize = new Size(0, 30);
+            poisonDateTime3.Name = "poisonDateTime3";
+            poisonDateTime3.Size = new Size(102, 30);
+            poisonDateTime3.TabIndex = 30;
+            // 
+            // poisonDateTime4
+            // 
+            poisonDateTime4.Format = DateTimePickerFormat.Short;
+            poisonDateTime4.Location = new Point(688, 64);
+            poisonDateTime4.MinimumSize = new Size(0, 30);
+            poisonDateTime4.Name = "poisonDateTime4";
+            poisonDateTime4.Size = new Size(102, 30);
+            poisonDateTime4.TabIndex = 29;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.ActiveCaptionText;
+            label10.Location = new Point(803, 64);
+            label10.Name = "label10";
+            label10.Size = new Size(67, 29);
+            label10.TabIndex = 28;
+            label10.Text = "Đến :";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.ActiveCaptionText;
+            label11.Location = new Point(633, 64);
+            label11.Name = "label11";
+            label11.Size = new Size(57, 29);
+            label11.TabIndex = 28;
+            label11.Text = "Từ :";
+            // 
+            // bigTextBox4
+            // 
+            bigTextBox4.BackColor = Color.Transparent;
+            bigTextBox4.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            bigTextBox4.ForeColor = Color.DimGray;
+            bigTextBox4.Image = null;
+            bigTextBox4.Location = new Point(67, 48);
+            bigTextBox4.MaxLength = 32767;
+            bigTextBox4.Multiline = false;
+            bigTextBox4.Name = "bigTextBox4";
+            bigTextBox4.ReadOnly = false;
+            bigTextBox4.Size = new Size(378, 46);
+            bigTextBox4.TabIndex = 26;
+            bigTextBox4.TextAlignment = HorizontalAlignment.Left;
+            bigTextBox4.UseSystemPasswordChar = false;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
+            label12.Location = new Point(466, 56);
+            label12.Name = "label12";
+            label12.Size = new Size(73, 38);
+            label12.TabIndex = 27;
+            label12.Text = "       ";
+            // 
+            // bigLabel5
+            // 
+            bigLabel5.AutoSize = true;
+            bigLabel5.BackColor = Color.Transparent;
+            bigLabel5.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel5.ForeColor = Color.Crimson;
+            bigLabel5.Location = new Point(829, 55);
+            bigLabel5.Name = "bigLabel5";
+            bigLabel5.Size = new Size(270, 32);
+            bigLabel5.TabIndex = 8;
+            bigLabel5.Text = "Sửa / Hủy Phiếu Khám";
+            // 
+            // bigLabel6
+            // 
+            bigLabel6.AutoSize = true;
+            bigLabel6.BackColor = Color.Transparent;
+            bigLabel6.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel6.ForeColor = Color.Crimson;
+            bigLabel6.Location = new Point(569, 55);
+            bigLabel6.Name = "bigLabel6";
+            bigLabel6.Size = new Size(210, 32);
+            bigLabel6.TabIndex = 7;
+            bigLabel6.Text = "Thêm Phiếu Khám";
+            // 
+            // bigLabel7
+            // 
+            bigLabel7.AutoSize = true;
+            bigLabel7.BackColor = Color.Transparent;
+            bigLabel7.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel7.ForeColor = Color.Crimson;
+            bigLabel7.Location = new Point(316, 58);
+            bigLabel7.Name = "bigLabel7";
+            bigLabel7.Size = new Size(185, 32);
+            bigLabel7.TabIndex = 6;
+            bigLabel7.Text = "Xem Lịch Khám";
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1706, 782);
+            ClientSize = new Size(1906, 982);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
@@ -1495,8 +1646,12 @@ namespace PRL
             Content.ResumeLayout(false);
             Panel_LK.ResumeLayout(false);
             Panel_LK.PerformLayout();
-            LK_GrBox_XemLichKham.ResumeLayout(false);
-            LK_GrBox_XemLichKham.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1564,16 +1719,28 @@ namespace PRL
         private Label label5;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private Label label6;
-        private ReaLTaiizor.Controls.ParrotSlidingPanel Panel_LK;
-        private ReaLTaiizor.Controls.BigLabel bigLabel2;
-        private ReaLTaiizor.Controls.BigLabel bigLabel4;
-        private ReaLTaiizor.Controls.BigLabel bigLabel3;
-        private ReaLTaiizor.Controls.GroupBox LK_GrBox_XemLichKham;
-        private Label label9;
-        private Label label8;
-        private ReaLTaiizor.Controls.BigTextBox bigTextBox3;
-        private Label label7;
+        private Panel panel1;
+        private ReaLTaiizor.Controls.GroupBox groupBox1;
+        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime3;
+        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime4;
+        private Label label10;
+        private Label label11;
+        private ReaLTaiizor.Controls.BigTextBox bigTextBox4;
+        private Label label12;
+        private ReaLTaiizor.Controls.BigLabel bigLabel5;
+        private ReaLTaiizor.Controls.BigLabel bigLabel6;
+        private ReaLTaiizor.Controls.BigLabel bigLabel7;
+        private Panel Panel_LK;
+        private ReaLTaiizor.Controls.GroupBox groupBox2;
         private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
         private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime2;
+        private Label label7;
+        private Label label8;
+        private ReaLTaiizor.Controls.BigTextBox bigTextBox3;
+        private Label label9;
+        private ReaLTaiizor.Controls.BigLabel bigLabel2;
+        private ReaLTaiizor.Controls.BigLabel bigLabel3;
+        private ReaLTaiizor.Controls.BigLabel bigLabel4;
+        private ReaLTaiizor.Controls.SpaceSeparatorHorizontal spaceSeparatorHorizontal1;
     }
 }
