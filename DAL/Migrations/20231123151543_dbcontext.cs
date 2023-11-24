@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace A_DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class dbbcontext : Migration
+    public partial class dbcontext : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
