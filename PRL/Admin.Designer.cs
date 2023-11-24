@@ -104,7 +104,6 @@ namespace PRL
             label8 = new Label();
             bigTextBox3 = new ReaLTaiizor.Controls.BigTextBox();
             label7 = new Label();
-            spaceSeparatorHorizontal1 = new ReaLTaiizor.Controls.SpaceSeparatorHorizontal();
             bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
@@ -1284,6 +1283,8 @@ namespace PRL
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
             Content.Controls.Add(Panel_LK);
+            Content.Controls.Add(Panel_NV);
+            Content.Controls.Add(Panel_KH);
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
             Content.Size = new Size(1768, 938);
@@ -1297,7 +1298,6 @@ namespace PRL
             Panel_LK.Collapsed = true;
             Panel_LK.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             Panel_LK.Controls.Add(LK_GrBox_XemLichKham);
-            Panel_LK.Controls.Add(spaceSeparatorHorizontal1);
             Panel_LK.Controls.Add(bigLabel4);
             Panel_LK.Controls.Add(bigLabel3);
             Panel_LK.Controls.Add(bigLabel2);
@@ -1410,20 +1410,6 @@ namespace PRL
             label7.TabIndex = 27;
             label7.Text = "       ";
             // 
-            // spaceSeparatorHorizontal1
-            // 
-            spaceSeparatorHorizontal1.BackColor = Color.Fuchsia;
-            spaceSeparatorHorizontal1.Customization = "Kioq/yoqKv8jIyP/Kioq/w==";
-            spaceSeparatorHorizontal1.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            spaceSeparatorHorizontal1.Image = C_PRL.Properties.Resources.icons8_crowd_34;
-            spaceSeparatorHorizontal1.Location = new Point(518, 157);
-            spaceSeparatorHorizontal1.Name = "spaceSeparatorHorizontal1";
-            spaceSeparatorHorizontal1.NoRounding = false;
-            spaceSeparatorHorizontal1.Size = new Size(185, 4);
-            spaceSeparatorHorizontal1.TabIndex = 4;
-            spaceSeparatorHorizontal1.Text = "spaceSeparatorHorizontal1";
-            spaceSeparatorHorizontal1.Transparent = false;
-            // 
             // bigLabel4
             // 
             bigLabel4.AutoSize = true;
@@ -1479,7 +1465,7 @@ namespace PRL
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1906, 982);
+            ClientSize = new Size(1706, 782);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
@@ -1580,7 +1566,6 @@ namespace PRL
         private Label label6;
         private ReaLTaiizor.Controls.ParrotSlidingPanel Panel_LK;
         private ReaLTaiizor.Controls.BigLabel bigLabel2;
-        private ReaLTaiizor.Controls.SpaceSeparatorHorizontal spaceSeparatorHorizontal1;
         private ReaLTaiizor.Controls.BigLabel bigLabel4;
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
         private ReaLTaiizor.Controls.GroupBox LK_GrBox_XemLichKham;
