@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.Models
 {
+    [Table("KhachHang")]
     public class Customer
     {
+        [Key]
         public Guid Id { get; set; }
 
         [StringLength(50)]
@@ -22,7 +25,7 @@ namespace DAL.Models
 
         [StringLength(5)]
         public int Sex { get; set; }
-        public string DichVu { get; set; }
+        public string Service { get; set; }
         public bool Visible { get; set; }
 
         // quan hệ

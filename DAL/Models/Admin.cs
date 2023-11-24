@@ -9,6 +9,7 @@ namespace DAL.Models
 {
     public class Admin
     {
+        [Key]
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
@@ -18,6 +19,6 @@ namespace DAL.Models
         public bool Visible { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual Staff Staff { get; set; }
+        public virtual ICollection<Staff>? Staff { get; set; }
     }
 }
