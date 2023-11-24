@@ -31,12 +31,12 @@ namespace PRL
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
@@ -87,14 +87,6 @@ namespace PRL
             NV_Ten = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             NV_Btn_An = new ButtonCustom();
             NV_RichTxt_MoTa = new ReaLTaiizor.Controls.CyberRichTextBox();
-            Nav_Option = new Panel();
-            ThongKe = new Label();
-            QL_LichKham = new Label();
-            QL_Luong = new Label();
-            QL_DV = new Label();
-            ThanhToan = new Label();
-            QL_KH = new Label();
-            QL_NV = new Label();
             Content = new Panel();
             Panel_LK = new Panel();
             spaceSeparatorHorizontal1 = new ReaLTaiizor.Controls.SpaceSeparatorHorizontal();
@@ -122,6 +114,14 @@ namespace PRL
             bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel6 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel7 = new ReaLTaiizor.Controls.BigLabel();
+            QL_NV = new Label();
+            QL_KH = new Label();
+            ThanhToan = new Label();
+            QL_DV = new Label();
+            QL_Luong = new Label();
+            QL_LichKham = new Label();
+            ThongKe = new Label();
+            Nav_Option = new Panel();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -130,12 +130,12 @@ namespace PRL
             Panel_NV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)NV_GridView).BeginInit();
             cyberGroupBox1.SuspendLayout();
-            Nav_Option.SuspendLayout();
             Content.SuspendLayout();
             Panel_LK.SuspendLayout();
             groupBox2.SuspendLayout();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
+            Nav_Option.SuspendLayout();
             SuspendLayout();
             // 
             // name_clinic
@@ -143,9 +143,10 @@ namespace PRL
             name_clinic.BackColor = Color.LavenderBlush;
             name_clinic.BorderStyle = BorderStyle.FixedSingle;
             name_clinic.Controls.Add(label1);
-            name_clinic.Location = new Point(-5, -8);
+            name_clinic.Location = new Point(-4, -6);
+            name_clinic.Margin = new Padding(3, 2, 3, 2);
             name_clinic.Name = "name_clinic";
-            name_clinic.Size = new Size(284, 65);
+            name_clinic.Size = new Size(249, 49);
             name_clinic.TabIndex = 0;
             name_clinic.Paint += name_clinic_Paint;
             // 
@@ -154,9 +155,9 @@ namespace PRL
             label1.AutoSize = true;
             label1.Font = new Font("Harlow Solid Italic", 19.8000011F, FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.Crimson;
-            label1.Location = new Point(52, 17);
+            label1.Location = new Point(46, 13);
             label1.Name = "label1";
-            label1.Size = new Size(189, 43);
+            label1.Size = new Size(151, 34);
             label1.TabIndex = 0;
             label1.Text = "1412 Sugery";
             label1.Click += label1_Click;
@@ -171,9 +172,10 @@ namespace PRL
             Navigation.Controls.Add(buttonCustom1);
             Navigation.Controls.Add(ThongBao);
             Navigation.Controls.Add(LoiChao);
-            Navigation.Location = new Point(276, -8);
+            Navigation.Location = new Point(242, -6);
+            Navigation.Margin = new Padding(3, 2, 3, 2);
             Navigation.Name = "Navigation";
-            Navigation.Size = new Size(1436, 65);
+            Navigation.Size = new Size(1257, 49);
             Navigation.TabIndex = 1;
             // 
             // label3
@@ -182,9 +184,9 @@ namespace PRL
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Tomato;
-            label3.Location = new Point(1047, 24);
+            label3.Location = new Point(916, 18);
             label3.Name = "label3";
-            label3.Size = new Size(84, 25);
+            label3.Size = new Size(67, 20);
             label3.TabIndex = 4;
             label3.Text = "Trợ Giúp";
             // 
@@ -194,9 +196,9 @@ namespace PRL
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Tomato;
-            label2.Location = new Point(923, 24);
+            label2.Location = new Point(808, 18);
             label2.Name = "label2";
-            label2.Size = new Size(89, 25);
+            label2.Size = new Size(75, 20);
             label2.TabIndex = 3;
             label2.Text = "Tài khoản";
             // 
@@ -212,9 +214,10 @@ namespace PRL
             buttonCustom1.FlatStyle = FlatStyle.Flat;
             buttonCustom1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             buttonCustom1.ForeColor = Color.LightCoral;
-            buttonCustom1.Location = new Point(1287, 15);
+            buttonCustom1.Location = new Point(1126, 11);
+            buttonCustom1.Margin = new Padding(3, 2, 3, 2);
             buttonCustom1.Name = "buttonCustom1";
-            buttonCustom1.Size = new Size(144, 41);
+            buttonCustom1.Size = new Size(126, 31);
             buttonCustom1.TabIndex = 2;
             buttonCustom1.Text = "Đăng Xuất";
             buttonCustom1.TextColor = Color.LightCoral;
@@ -226,9 +229,9 @@ namespace PRL
             ThongBao.AutoSize = true;
             ThongBao.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             ThongBao.ForeColor = Color.Tomato;
-            ThongBao.Location = new Point(1159, 23);
+            ThongBao.Location = new Point(1014, 17);
             ThongBao.Name = "ThongBao";
-            ThongBao.Size = new Size(101, 25);
+            ThongBao.Size = new Size(83, 20);
             ThongBao.TabIndex = 1;
             ThongBao.Text = "Thông Báo";
             // 
@@ -237,9 +240,9 @@ namespace PRL
             LoiChao.AutoSize = true;
             LoiChao.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LoiChao.ForeColor = Color.Crimson;
-            LoiChao.Location = new Point(264, 22);
+            LoiChao.Location = new Point(231, 16);
             LoiChao.Name = "LoiChao";
-            LoiChao.Size = new Size(179, 29);
+            LoiChao.Size = new Size(140, 23);
             LoiChao.TabIndex = 0;
             LoiChao.Text = "Xin chào đại ca !";
             // 
@@ -269,7 +272,7 @@ namespace PRL
             bigLabel1.ForeColor = Color.DimGray;
             bigLabel1.Location = new Point(38, 518);
             bigLabel1.Name = "bigLabel1";
-            bigLabel1.Size = new Size(192, 38);
+            bigLabel1.Size = new Size(148, 30);
             bigLabel1.TabIndex = 24;
             bigLabel1.Text = "Lịch sử khám :";
             // 
@@ -314,7 +317,7 @@ namespace PRL
             bigTextBox1.Multiline = false;
             bigTextBox1.Name = "bigTextBox1";
             bigTextBox1.ReadOnly = false;
-            bigTextBox1.Size = new Size(628, 46);
+            bigTextBox1.Size = new Size(628, 41);
             bigTextBox1.TabIndex = 11;
             bigTextBox1.TextAlignment = HorizontalAlignment.Left;
             bigTextBox1.UseSystemPasswordChar = false;
@@ -326,7 +329,7 @@ namespace PRL
             label4.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
             label4.Location = new Point(656, 29);
             label4.Name = "label4";
-            label4.Size = new Size(73, 38);
+            label4.Size = new Size(55, 30);
             label4.TabIndex = 23;
             label4.Text = "       ";
             label4.Click += label4_Click_1;
@@ -378,37 +381,37 @@ namespace PRL
             KH_GridView.BorderStyle = BorderStyle.None;
             KH_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
+            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            KH_GridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle14.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
+            KH_GridView.DefaultCellStyle = dataGridViewCellStyle14;
             KH_GridView.EnableHeadersVisualStyles = false;
             KH_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             KH_GridView.GridColor = Color.FromArgb(255, 255, 255);
             KH_GridView.Location = new Point(38, 76);
             KH_GridView.Name = "KH_GridView";
             KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
+            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             KH_GridView.RowHeadersWidth = 51;
             KH_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             KH_GridView.RowTemplate.Height = 29;
@@ -590,7 +593,7 @@ namespace PRL
             dungeonHeaderLabel5.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel5.Location = new Point(57, 420);
             dungeonHeaderLabel5.Name = "dungeonHeaderLabel5";
-            dungeonHeaderLabel5.Size = new Size(98, 25);
+            dungeonHeaderLabel5.Size = new Size(77, 20);
             dungeonHeaderLabel5.TabIndex = 4;
             dungeonHeaderLabel5.Text = "Giới tính :";
             // 
@@ -602,7 +605,7 @@ namespace PRL
             dungeonHeaderLabel7.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel7.Location = new Point(57, 358);
             dungeonHeaderLabel7.Name = "dungeonHeaderLabel7";
-            dungeonHeaderLabel7.Size = new Size(139, 25);
+            dungeonHeaderLabel7.Size = new Size(108, 20);
             dungeonHeaderLabel7.TabIndex = 2;
             dungeonHeaderLabel7.Text = "Số điện thoại :";
             // 
@@ -614,7 +617,7 @@ namespace PRL
             dungeonHeaderLabel8.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel8.Location = new Point(58, 249);
             dungeonHeaderLabel8.Name = "dungeonHeaderLabel8";
-            dungeonHeaderLabel8.Size = new Size(84, 25);
+            dungeonHeaderLabel8.Size = new Size(66, 20);
             dungeonHeaderLabel8.TabIndex = 1;
             dungeonHeaderLabel8.Text = "Địa Chỉ :";
             // 
@@ -626,7 +629,7 @@ namespace PRL
             dungeonHeaderLabel9.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel9.Location = new Point(58, 190);
             dungeonHeaderLabel9.Name = "dungeonHeaderLabel9";
-            dungeonHeaderLabel9.Size = new Size(85, 25);
+            dungeonHeaderLabel9.Size = new Size(66, 20);
             dungeonHeaderLabel9.TabIndex = 0;
             dungeonHeaderLabel9.Text = "Họ Tên :";
             // 
@@ -675,7 +678,7 @@ namespace PRL
             label6.ForeColor = SystemColors.ControlDarkDark;
             label6.Location = new Point(37, 490);
             label6.Name = "label6";
-            label6.Size = new Size(159, 28);
+            label6.Size = new Size(128, 21);
             label6.TabIndex = 26;
             label6.Text = "Thông tin thêm";
             label6.Click += label6_Click;
@@ -711,7 +714,7 @@ namespace PRL
             bigTextBox2.Multiline = false;
             bigTextBox2.Name = "bigTextBox2";
             bigTextBox2.ReadOnly = false;
-            bigTextBox2.Size = new Size(628, 46);
+            bigTextBox2.Size = new Size(628, 41);
             bigTextBox2.TabIndex = 24;
             bigTextBox2.TextAlignment = HorizontalAlignment.Left;
             bigTextBox2.UseSystemPasswordChar = false;
@@ -743,7 +746,7 @@ namespace PRL
             label5.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
             label5.Location = new Point(657, 12);
             label5.Name = "label5";
-            label5.Size = new Size(73, 38);
+            label5.Size = new Size(55, 30);
             label5.TabIndex = 25;
             label5.Text = "       ";
             // 
@@ -754,37 +757,37 @@ namespace PRL
             NV_GridView.BorderStyle = BorderStyle.None;
             NV_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             NV_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle16.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle16.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle16.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
+            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             NV_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            NV_GridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle17.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle17.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle17.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
+            NV_GridView.DefaultCellStyle = dataGridViewCellStyle17;
             NV_GridView.EnableHeadersVisualStyles = false;
             NV_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             NV_GridView.GridColor = Color.FromArgb(255, 255, 255);
             NV_GridView.Location = new Point(37, 67);
             NV_GridView.Name = "NV_GridView";
             NV_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle18.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
+            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             NV_GridView.RowHeadersWidth = 51;
             NV_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             NV_GridView.RowTemplate.Height = 29;
@@ -875,7 +878,7 @@ namespace PRL
             dungeonHeaderLabel2.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel2.Location = new Point(61, 603);
             dungeonHeaderLabel2.Name = "dungeonHeaderLabel2";
-            dungeonHeaderLabel2.Size = new Size(120, 25);
+            dungeonHeaderLabel2.Size = new Size(95, 20);
             dungeonHeaderLabel2.TabIndex = 14;
             dungeonHeaderLabel2.Text = "Ca làm việc :";
             // 
@@ -915,7 +918,7 @@ namespace PRL
             dungeonHeaderLabel1.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel1.Location = new Point(61, 545);
             dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
-            dungeonHeaderLabel1.Size = new Size(111, 25);
+            dungeonHeaderLabel1.Size = new Size(87, 20);
             dungeonHeaderLabel1.TabIndex = 12;
             dungeonHeaderLabel1.Text = "Mật khẩu : ";
             // 
@@ -1083,7 +1086,7 @@ namespace PRL
             NV_GioiTinh.ForeColor = Color.FromArgb(76, 76, 77);
             NV_GioiTinh.Location = new Point(57, 420);
             NV_GioiTinh.Name = "NV_GioiTinh";
-            NV_GioiTinh.Size = new Size(98, 25);
+            NV_GioiTinh.Size = new Size(77, 20);
             NV_GioiTinh.TabIndex = 4;
             NV_GioiTinh.Text = "Giới tính :";
             // 
@@ -1095,7 +1098,7 @@ namespace PRL
             NV_ChucVu.ForeColor = Color.FromArgb(76, 76, 77);
             NV_ChucVu.Location = new Point(61, 487);
             NV_ChucVu.Name = "NV_ChucVu";
-            NV_ChucVu.Size = new Size(94, 25);
+            NV_ChucVu.Size = new Size(73, 20);
             NV_ChucVu.TabIndex = 3;
             NV_ChucVu.Text = "Chức vụ :";
             NV_ChucVu.Click += NV_ChucVu_Click;
@@ -1108,7 +1111,7 @@ namespace PRL
             NV_Sdt.ForeColor = Color.FromArgb(76, 76, 77);
             NV_Sdt.Location = new Point(57, 358);
             NV_Sdt.Name = "NV_Sdt";
-            NV_Sdt.Size = new Size(139, 25);
+            NV_Sdt.Size = new Size(108, 20);
             NV_Sdt.TabIndex = 2;
             NV_Sdt.Text = "Số điện thoại :";
             // 
@@ -1120,7 +1123,7 @@ namespace PRL
             NV_DiaChi.ForeColor = Color.FromArgb(76, 76, 77);
             NV_DiaChi.Location = new Point(58, 249);
             NV_DiaChi.Name = "NV_DiaChi";
-            NV_DiaChi.Size = new Size(84, 25);
+            NV_DiaChi.Size = new Size(66, 20);
             NV_DiaChi.TabIndex = 1;
             NV_DiaChi.Text = "Địa Chỉ :";
             // 
@@ -1132,7 +1135,7 @@ namespace PRL
             NV_Ten.ForeColor = Color.FromArgb(76, 76, 77);
             NV_Ten.Location = new Point(58, 190);
             NV_Ten.Name = "NV_Ten";
-            NV_Ten.Size = new Size(85, 25);
+            NV_Ten.Size = new Size(66, 20);
             NV_Ten.TabIndex = 0;
             NV_Ten.Text = "Họ Tên :";
             NV_Ten.Click += NV_Ten_Click;
@@ -1187,119 +1190,16 @@ namespace PRL
             NV_RichTxt_MoTa.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             NV_RichTxt_MoTa.Timer_RGB = 300;
             // 
-            // Nav_Option
-            // 
-            Nav_Option.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            Nav_Option.BackColor = Color.FromArgb(128, 255, 230);
-            Nav_Option.BorderStyle = BorderStyle.FixedSingle;
-            Nav_Option.Controls.Add(ThongKe);
-            Nav_Option.Controls.Add(QL_LichKham);
-            Nav_Option.Controls.Add(QL_Luong);
-            Nav_Option.Controls.Add(QL_DV);
-            Nav_Option.Controls.Add(ThanhToan);
-            Nav_Option.Controls.Add(QL_KH);
-            Nav_Option.Controls.Add(QL_NV);
-            Nav_Option.Location = new Point(-5, 56);
-            Nav_Option.Name = "Nav_Option";
-            Nav_Option.Size = new Size(284, 727);
-            Nav_Option.TabIndex = 1;
-            // 
-            // ThongKe
-            // 
-            ThongKe.AutoSize = true;
-            ThongKe.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            ThongKe.Image = C_PRL.Properties.Resources.icons8_analyst_64;
-            ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
-            ThongKe.Location = new Point(52, 449);
-            ThongKe.Name = "ThongKe";
-            ThongKe.Size = new Size(167, 32);
-            ThongKe.TabIndex = 8;
-            ThongKe.Text = "     Thống kê";
-            // 
-            // QL_LichKham
-            // 
-            QL_LichKham.AutoSize = true;
-            QL_LichKham.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_LichKham.Image = C_PRL.Properties.Resources.icons8_document_42;
-            QL_LichKham.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_LichKham.Location = new Point(43, 189);
-            QL_LichKham.Name = "QL_LichKham";
-            QL_LichKham.Size = new Size(220, 32);
-            QL_LichKham.TabIndex = 7;
-            QL_LichKham.Text = "     QL Lịch Khám";
-            QL_LichKham.Click += QL_LichKham_Click;
-            // 
-            // QL_Luong
-            // 
-            QL_Luong.AutoSize = true;
-            QL_Luong.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_Luong.Image = C_PRL.Properties.Resources.icons8_salary_80;
-            QL_Luong.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_Luong.Location = new Point(52, 369);
-            QL_Luong.Name = "QL_Luong";
-            QL_Luong.Size = new Size(183, 32);
-            QL_Luong.TabIndex = 4;
-            QL_Luong.Text = "     QL Lương ";
-            // 
-            // QL_DV
-            // 
-            QL_DV.AutoSize = true;
-            QL_DV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_DV.Image = C_PRL.Properties.Resources.icons8_service_341;
-            QL_DV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_DV.Location = new Point(51, 280);
-            QL_DV.Name = "QL_DV";
-            QL_DV.Size = new Size(196, 32);
-            QL_DV.TabIndex = 3;
-            QL_DV.Text = "     QL Dịch Vụ";
-            // 
-            // ThanhToan
-            // 
-            ThanhToan.AutoSize = true;
-            ThanhToan.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            ThanhToan.Image = C_PRL.Properties.Resources.icons8_bill_64;
-            ThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
-            ThanhToan.Location = new Point(43, 524);
-            ThanhToan.Name = "ThanhToan";
-            ThanhToan.Size = new Size(204, 32);
-            ThanhToan.TabIndex = 2;
-            ThanhToan.Text = "      Thanh Toán";
-            // 
-            // QL_KH
-            // 
-            QL_KH.AutoSize = true;
-            QL_KH.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_KH.Image = C_PRL.Properties.Resources.icons8_customer_43;
-            QL_KH.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_KH.Location = new Point(43, 97);
-            QL_KH.Name = "QL_KH";
-            QL_KH.Size = new Size(237, 32);
-            QL_KH.TabIndex = 1;
-            QL_KH.Text = "     QL Khách Hàng";
-            QL_KH.Click += QL_KH_Click;
-            // 
-            // QL_NV
-            // 
-            QL_NV.AutoSize = true;
-            QL_NV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_NV.Image = C_PRL.Properties.Resources.icons8_crowd_34;
-            QL_NV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_NV.Location = new Point(43, 17);
-            QL_NV.Name = "QL_NV";
-            QL_NV.Size = new Size(216, 32);
-            QL_NV.TabIndex = 0;
-            QL_NV.Text = "     QL Nhân viên";
-            QL_NV.Click += label3_Click;
-            // 
             // Content
             // 
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
             Content.Controls.Add(Panel_LK);
-            Content.Location = new Point(276, 56);
+            Content.Location = new Point(242, 42);
+            Content.Margin = new Padding(3, 2, 3, 2);
             Content.Name = "Content";
-            Content.Size = new Size(1768, 938);
+            Content.Size = new Size(1547, 704);
             Content.TabIndex = 2;
             // 
             // Panel_LK
@@ -1311,8 +1211,9 @@ namespace PRL
             Panel_LK.Controls.Add(bigLabel3);
             Panel_LK.Controls.Add(bigLabel4);
             Panel_LK.Location = new Point(3, -1);
+            Panel_LK.Margin = new Padding(3, 2, 3, 2);
             Panel_LK.Name = "Panel_LK";
-            Panel_LK.Size = new Size(1518, 759);
+            Panel_LK.Size = new Size(1328, 569);
             Panel_LK.TabIndex = 0;
             // 
             // spaceSeparatorHorizontal1
@@ -1321,6 +1222,7 @@ namespace PRL
             spaceSeparatorHorizontal1.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
             spaceSeparatorHorizontal1.Image = null;
             spaceSeparatorHorizontal1.Location = new Point(385, 124);
+            spaceSeparatorHorizontal1.Margin = new Padding(3, 2, 3, 2);
             spaceSeparatorHorizontal1.Name = "spaceSeparatorHorizontal1";
             spaceSeparatorHorizontal1.NoRounding = false;
             spaceSeparatorHorizontal1.Size = new Size(186, 4);
@@ -1345,11 +1247,12 @@ namespace PRL
             groupBox2.Font = new Font("Microsoft YaHei", 9F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox2.ForeColor = Color.Crimson;
             groupBox2.HeaderColor = Color.LightGoldenrodYellow;
-            groupBox2.Location = new Point(228, 197);
-            groupBox2.MinimumSize = new Size(136, 50);
+            groupBox2.Location = new Point(200, 148);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
+            groupBox2.MinimumSize = new Size(119, 38);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(5, 28, 5, 5);
-            groupBox2.Size = new Size(1105, 530);
+            groupBox2.Padding = new Padding(4, 21, 4, 4);
+            groupBox2.Size = new Size(967, 398);
             groupBox2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             groupBox2.TabIndex = 13;
             groupBox2.Text = "Xem Lịch Khám";
@@ -1357,19 +1260,21 @@ namespace PRL
             // poisonDateTime1
             // 
             poisonDateTime1.Format = DateTimePickerFormat.Short;
-            poisonDateTime1.Location = new Point(876, 64);
-            poisonDateTime1.MinimumSize = new Size(0, 30);
+            poisonDateTime1.Location = new Point(766, 48);
+            poisonDateTime1.Margin = new Padding(3, 2, 3, 2);
+            poisonDateTime1.MinimumSize = new Size(0, 29);
             poisonDateTime1.Name = "poisonDateTime1";
-            poisonDateTime1.Size = new Size(102, 30);
+            poisonDateTime1.Size = new Size(90, 30);
             poisonDateTime1.TabIndex = 30;
             // 
             // poisonDateTime2
             // 
             poisonDateTime2.Format = DateTimePickerFormat.Short;
-            poisonDateTime2.Location = new Point(688, 64);
-            poisonDateTime2.MinimumSize = new Size(0, 30);
+            poisonDateTime2.Location = new Point(602, 48);
+            poisonDateTime2.Margin = new Padding(3, 2, 3, 2);
+            poisonDateTime2.MinimumSize = new Size(0, 29);
             poisonDateTime2.Name = "poisonDateTime2";
-            poisonDateTime2.Size = new Size(102, 30);
+            poisonDateTime2.Size = new Size(90, 30);
             poisonDateTime2.TabIndex = 29;
             // 
             // label7
@@ -1377,9 +1282,9 @@ namespace PRL
             label7.AutoSize = true;
             label7.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(803, 64);
+            label7.Location = new Point(703, 48);
             label7.Name = "label7";
-            label7.Size = new Size(67, 29);
+            label7.Size = new Size(54, 23);
             label7.TabIndex = 28;
             label7.Text = "Đến :";
             // 
@@ -1388,9 +1293,9 @@ namespace PRL
             label8.AutoSize = true;
             label8.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = SystemColors.ActiveCaptionText;
-            label8.Location = new Point(633, 64);
+            label8.Location = new Point(554, 48);
             label8.Name = "label8";
-            label8.Size = new Size(57, 29);
+            label8.Size = new Size(45, 23);
             label8.TabIndex = 28;
             label8.Text = "Từ :";
             // 
@@ -1400,12 +1305,13 @@ namespace PRL
             bigTextBox3.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
             bigTextBox3.ForeColor = Color.DimGray;
             bigTextBox3.Image = null;
-            bigTextBox3.Location = new Point(67, 48);
+            bigTextBox3.Location = new Point(59, 36);
+            bigTextBox3.Margin = new Padding(3, 2, 3, 2);
             bigTextBox3.MaxLength = 32767;
             bigTextBox3.Multiline = false;
             bigTextBox3.Name = "bigTextBox3";
             bigTextBox3.ReadOnly = false;
-            bigTextBox3.Size = new Size(378, 46);
+            bigTextBox3.Size = new Size(331, 41);
             bigTextBox3.TabIndex = 26;
             bigTextBox3.TextAlignment = HorizontalAlignment.Left;
             bigTextBox3.UseSystemPasswordChar = false;
@@ -1415,9 +1321,9 @@ namespace PRL
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label9.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
-            label9.Location = new Point(466, 56);
+            label9.Location = new Point(408, 42);
             label9.Name = "label9";
-            label9.Size = new Size(73, 38);
+            label9.Size = new Size(55, 30);
             label9.TabIndex = 27;
             label9.Text = "       ";
             // 
@@ -1427,9 +1333,9 @@ namespace PRL
             bigLabel2.BackColor = Color.Transparent;
             bigLabel2.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             bigLabel2.ForeColor = Color.Crimson;
-            bigLabel2.Location = new Point(898, 84);
+            bigLabel2.Location = new Point(786, 63);
             bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new Size(270, 32);
+            bigLabel2.Size = new Size(225, 27);
             bigLabel2.TabIndex = 12;
             bigLabel2.Text = "Sửa / Hủy Phiếu Khám";
             // 
@@ -1439,9 +1345,9 @@ namespace PRL
             bigLabel3.BackColor = Color.Transparent;
             bigLabel3.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             bigLabel3.ForeColor = Color.Crimson;
-            bigLabel3.Location = new Point(638, 84);
+            bigLabel3.Location = new Point(558, 63);
             bigLabel3.Name = "bigLabel3";
-            bigLabel3.Size = new Size(210, 32);
+            bigLabel3.Size = new Size(175, 27);
             bigLabel3.TabIndex = 11;
             bigLabel3.Text = "Thêm Phiếu Khám";
             // 
@@ -1451,9 +1357,9 @@ namespace PRL
             bigLabel4.BackColor = Color.Transparent;
             bigLabel4.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             bigLabel4.ForeColor = Color.Crimson;
-            bigLabel4.Location = new Point(385, 87);
+            bigLabel4.Location = new Point(337, 65);
             bigLabel4.Name = "bigLabel4";
-            bigLabel4.Size = new Size(185, 32);
+            bigLabel4.Size = new Size(153, 27);
             bigLabel4.TabIndex = 10;
             bigLabel4.Text = "Xem Lịch Khám";
             // 
@@ -1534,7 +1440,7 @@ namespace PRL
             label10.ForeColor = SystemColors.ActiveCaptionText;
             label10.Location = new Point(803, 64);
             label10.Name = "label10";
-            label10.Size = new Size(67, 29);
+            label10.Size = new Size(54, 23);
             label10.TabIndex = 28;
             label10.Text = "Đến :";
             // 
@@ -1545,7 +1451,7 @@ namespace PRL
             label11.ForeColor = SystemColors.ActiveCaptionText;
             label11.Location = new Point(633, 64);
             label11.Name = "label11";
-            label11.Size = new Size(57, 29);
+            label11.Size = new Size(45, 23);
             label11.TabIndex = 28;
             label11.Text = "Từ :";
             // 
@@ -1560,7 +1466,7 @@ namespace PRL
             bigTextBox4.Multiline = false;
             bigTextBox4.Name = "bigTextBox4";
             bigTextBox4.ReadOnly = false;
-            bigTextBox4.Size = new Size(378, 46);
+            bigTextBox4.Size = new Size(378, 41);
             bigTextBox4.TabIndex = 26;
             bigTextBox4.TextAlignment = HorizontalAlignment.Left;
             bigTextBox4.UseSystemPasswordChar = false;
@@ -1572,7 +1478,7 @@ namespace PRL
             label12.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
             label12.Location = new Point(466, 56);
             label12.Name = "label12";
-            label12.Size = new Size(73, 38);
+            label12.Size = new Size(55, 30);
             label12.TabIndex = 27;
             label12.Text = "       ";
             // 
@@ -1584,7 +1490,7 @@ namespace PRL
             bigLabel5.ForeColor = Color.Crimson;
             bigLabel5.Location = new Point(829, 55);
             bigLabel5.Name = "bigLabel5";
-            bigLabel5.Size = new Size(270, 32);
+            bigLabel5.Size = new Size(225, 27);
             bigLabel5.TabIndex = 8;
             bigLabel5.Text = "Sửa / Hủy Phiếu Khám";
             // 
@@ -1596,7 +1502,7 @@ namespace PRL
             bigLabel6.ForeColor = Color.Crimson;
             bigLabel6.Location = new Point(569, 55);
             bigLabel6.Name = "bigLabel6";
-            bigLabel6.Size = new Size(210, 32);
+            bigLabel6.Size = new Size(175, 27);
             bigLabel6.TabIndex = 7;
             bigLabel6.Text = "Thêm Phiếu Khám";
             // 
@@ -1608,20 +1514,126 @@ namespace PRL
             bigLabel7.ForeColor = Color.Crimson;
             bigLabel7.Location = new Point(316, 58);
             bigLabel7.Name = "bigLabel7";
-            bigLabel7.Size = new Size(185, 32);
+            bigLabel7.Size = new Size(153, 27);
             bigLabel7.TabIndex = 6;
             bigLabel7.Text = "Xem Lịch Khám";
             // 
+            // QL_NV
+            // 
+            QL_NV.AutoSize = true;
+            QL_NV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_NV.Image = C_PRL.Properties.Resources.icons8_crowd_34;
+            QL_NV.ImageAlign = ContentAlignment.MiddleLeft;
+            QL_NV.Location = new Point(38, 13);
+            QL_NV.Name = "QL_NV";
+            QL_NV.Size = new Size(177, 27);
+            QL_NV.TabIndex = 0;
+            QL_NV.Text = "     QL Nhân viên";
+            QL_NV.Click += label3_Click;
+            // 
+            // QL_KH
+            // 
+            QL_KH.AutoSize = true;
+            QL_KH.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_KH.Image = C_PRL.Properties.Resources.icons8_customer_43;
+            QL_KH.ImageAlign = ContentAlignment.MiddleLeft;
+            QL_KH.Location = new Point(38, 73);
+            QL_KH.Name = "QL_KH";
+            QL_KH.Size = new Size(196, 27);
+            QL_KH.TabIndex = 1;
+            QL_KH.Text = "     QL Khách Hàng";
+            QL_KH.Click += QL_KH_Click;
+            // 
+            // ThanhToan
+            // 
+            ThanhToan.AutoSize = true;
+            ThanhToan.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ThanhToan.Image = C_PRL.Properties.Resources.icons8_bill_64;
+            ThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
+            ThanhToan.Location = new Point(38, 393);
+            ThanhToan.Name = "ThanhToan";
+            ThanhToan.Size = new Size(168, 27);
+            ThanhToan.TabIndex = 2;
+            ThanhToan.Text = "      Thanh Toán";
+            // 
+            // QL_DV
+            // 
+            QL_DV.AutoSize = true;
+            QL_DV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_DV.Image = C_PRL.Properties.Resources.icons8_service_341;
+            QL_DV.ImageAlign = ContentAlignment.MiddleLeft;
+            QL_DV.Location = new Point(45, 210);
+            QL_DV.Name = "QL_DV";
+            QL_DV.Size = new Size(160, 27);
+            QL_DV.TabIndex = 3;
+            QL_DV.Text = "     QL Dịch Vụ";
+            // 
+            // QL_Luong
+            // 
+            QL_Luong.AutoSize = true;
+            QL_Luong.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_Luong.Image = C_PRL.Properties.Resources.icons8_salary_80;
+            QL_Luong.ImageAlign = ContentAlignment.MiddleLeft;
+            QL_Luong.Location = new Point(46, 277);
+            QL_Luong.Name = "QL_Luong";
+            QL_Luong.Size = new Size(149, 27);
+            QL_Luong.TabIndex = 4;
+            QL_Luong.Text = "     QL Lương ";
+            // 
+            // QL_LichKham
+            // 
+            QL_LichKham.AutoSize = true;
+            QL_LichKham.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_LichKham.Image = C_PRL.Properties.Resources.icons8_document_42;
+            QL_LichKham.ImageAlign = ContentAlignment.MiddleLeft;
+            QL_LichKham.Location = new Point(38, 142);
+            QL_LichKham.Name = "QL_LichKham";
+            QL_LichKham.Size = new Size(180, 27);
+            QL_LichKham.TabIndex = 7;
+            QL_LichKham.Text = "     QL Lịch Khám";
+            QL_LichKham.Click += QL_LichKham_Click;
+            // 
+            // ThongKe
+            // 
+            ThongKe.AutoSize = true;
+            ThongKe.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            ThongKe.Image = C_PRL.Properties.Resources.icons8_analyst_64;
+            ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
+            ThongKe.Location = new Point(46, 337);
+            ThongKe.Name = "ThongKe";
+            ThongKe.Size = new Size(137, 27);
+            ThongKe.TabIndex = 8;
+            ThongKe.Text = "     Thống kê";
+            // 
+            // Nav_Option
+            // 
+            Nav_Option.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Nav_Option.BackColor = Color.FromArgb(128, 255, 230);
+            Nav_Option.BorderStyle = BorderStyle.FixedSingle;
+            Nav_Option.Controls.Add(ThongKe);
+            Nav_Option.Controls.Add(QL_LichKham);
+            Nav_Option.Controls.Add(QL_Luong);
+            Nav_Option.Controls.Add(QL_DV);
+            Nav_Option.Controls.Add(ThanhToan);
+            Nav_Option.Controls.Add(QL_KH);
+            Nav_Option.Controls.Add(QL_NV);
+            Nav_Option.Location = new Point(-4, 42);
+            Nav_Option.Margin = new Padding(3, 2, 3, 2);
+            Nav_Option.Name = "Nav_Option";
+            Nav_Option.Size = new Size(249, 546);
+            Nav_Option.TabIndex = 1;
+            // 
             // Admin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1906, 982);
+            ClientSize = new Size(1213, 591);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
             Controls.Add(Navigation);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Admin";
             Text = "1412_Team";
             WindowState = FormWindowState.Maximized;
@@ -1641,8 +1653,6 @@ namespace PRL
             ((System.ComponentModel.ISupportInitialize)NV_GridView).EndInit();
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
-            Nav_Option.ResumeLayout(false);
-            Nav_Option.PerformLayout();
             Content.ResumeLayout(false);
             Panel_LK.ResumeLayout(false);
             Panel_LK.PerformLayout();
@@ -1652,6 +1662,8 @@ namespace PRL
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            Nav_Option.ResumeLayout(false);
+            Nav_Option.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1660,14 +1672,6 @@ namespace PRL
         private Panel name_clinic;
         private Panel Navigation;
         private Label label1;
-        private Panel Nav_Option;
-        private Label QL_KH;
-        private Label QL_NV;
-        private Label QL_DV;
-        private Label QL_Luong;
-        private Label QL_LichKham;
-        private Label ThongKe;
-        private Label ThanhToan;
         private ButtonCustom buttonCustom1;
         private Label ThongBao;
         private Label LoiChao;
@@ -1742,5 +1746,13 @@ namespace PRL
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
         private ReaLTaiizor.Controls.BigLabel bigLabel4;
         private ReaLTaiizor.Controls.SpaceSeparatorHorizontal spaceSeparatorHorizontal1;
+        private Label QL_NV;
+        private Label QL_KH;
+        private Label ThanhToan;
+        private Label QL_DV;
+        private Label QL_Luong;
+        private Label QL_LichKham;
+        private Label ThongKe;
+        private Panel Nav_Option;
     }
 }
