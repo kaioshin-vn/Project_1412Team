@@ -30,8 +30,7 @@ namespace PRL
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            Panel_KH.Visible = false;
-            Panel_NV.Visible = false;
+            Content.Controls.Clear();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -59,7 +58,9 @@ namespace PRL
 
         private void QL_LichKham_Click(object sender, EventArgs e)
         {
-
+            Content.Controls.Clear();
+            Panel_LK.Visible = true;
+            Content.Controls.Add(Panel_LK);
         }
 
         private void QL_KH_Click(object sender, EventArgs e)

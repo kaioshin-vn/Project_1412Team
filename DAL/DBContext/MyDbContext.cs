@@ -20,6 +20,8 @@ namespace DAL.DBContext
         public DbSet<Rate> Rates { get; set; }
         public DbSet<HealtRecord> HealtRecords { get; set; }
         public DbSet<Service> Services { get; set; }
+
+        public DbSet<Customer> Customers { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True");

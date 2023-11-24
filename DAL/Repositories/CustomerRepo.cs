@@ -1,4 +1,5 @@
-﻿using DAL.IRepositories;
+﻿using DAL.DBContext;
+using DAL.IRepositories;
 using DAL.Models;
 using Microsoft.Identity.Client;
 using System;
@@ -11,14 +12,14 @@ namespace DAL.Repositories
 {
     public class CustomerRepo : ICustomerRepo
     {
-        //private DBContext _context;
+        private MyDbContext _context;
         //public CustomerRepo()
         //{
             
         //}
         public List<Customer> GetAll()
         {
-            return _context.Customer.GetAll();
+            return _context.Customers.ToList();
         }
         public bool AddLichKham()
         {

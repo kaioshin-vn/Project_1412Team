@@ -96,9 +96,21 @@ namespace PRL
             QL_KH = new Label();
             QL_NV = new Label();
             Content = new Panel();
+            Panel_LK = new ReaLTaiizor.Controls.ParrotSlidingPanel();
+            LK_GrBox_XemLichKham = new ReaLTaiizor.Controls.GroupBox();
+            poisonDateTime1 = new ReaLTaiizor.Controls.PoisonDateTime();
+            label9 = new Label();
+            label8 = new Label();
+            bigTextBox3 = new ReaLTaiizor.Controls.BigTextBox();
+            label7 = new Label();
+            spaceSeparatorHorizontal1 = new ReaLTaiizor.Controls.SpaceSeparatorHorizontal();
+            bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
+            bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
+            bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             NV_Elipse_GridView = new Bunifu.Framework.UI.BunifuElipse(components);
             bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(components);
             KH_Elipse_GrView = new Bunifu.Framework.UI.BunifuElipse(components);
+            poisonDateTime2 = new ReaLTaiizor.Controls.PoisonDateTime();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -109,6 +121,8 @@ namespace PRL
             cyberGroupBox1.SuspendLayout();
             Nav_Option.SuspendLayout();
             Content.SuspendLayout();
+            Panel_LK.SuspendLayout();
+            LK_GrBox_XemLichKham.SuspendLayout();
             SuspendLayout();
             // 
             // name_clinic
@@ -1268,11 +1282,173 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_KH);
+            Content.Controls.Add(Panel_LK);
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
-            Content.Size = new Size(1468, 738);
+            Content.Size = new Size(1768, 938);
             Content.TabIndex = 2;
+            // 
+            // Panel_LK
+            // 
+            Panel_LK.BottomLeft = Color.Cyan;
+            Panel_LK.BottomRight = Color.FromArgb(255, 192, 240);
+            Panel_LK.CollapseControl = null;
+            Panel_LK.Collapsed = true;
+            Panel_LK.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            Panel_LK.Controls.Add(LK_GrBox_XemLichKham);
+            Panel_LK.Controls.Add(spaceSeparatorHorizontal1);
+            Panel_LK.Controls.Add(bigLabel4);
+            Panel_LK.Controls.Add(bigLabel3);
+            Panel_LK.Controls.Add(bigLabel2);
+            Panel_LK.Dock = DockStyle.Left;
+            Panel_LK.HideControls = false;
+            Panel_LK.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            Panel_LK.Location = new Point(0, 0);
+            Panel_LK.Name = "Panel_LK";
+            Panel_LK.PanelWidthCollapsed = 50;
+            Panel_LK.PanelWidthExpanded = 200;
+            Panel_LK.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            Panel_LK.PrimerColor = Color.White;
+            Panel_LK.Size = new Size(1902, 936);
+            Panel_LK.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            Panel_LK.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
+            Panel_LK.TabIndex = 4;
+            Panel_LK.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            Panel_LK.TopLeft = Color.Black;
+            Panel_LK.TopRight = Color.Black;
+            // 
+            // LK_GrBox_XemLichKham
+            // 
+            LK_GrBox_XemLichKham.BackColor = Color.Transparent;
+            LK_GrBox_XemLichKham.BackGColor = Color.PaleGreen;
+            LK_GrBox_XemLichKham.BaseColor = Color.Transparent;
+            LK_GrBox_XemLichKham.BorderColorG = Color.White;
+            LK_GrBox_XemLichKham.BorderColorH = Color.DarkGray;
+            LK_GrBox_XemLichKham.Controls.Add(poisonDateTime2);
+            LK_GrBox_XemLichKham.Controls.Add(poisonDateTime1);
+            LK_GrBox_XemLichKham.Controls.Add(label9);
+            LK_GrBox_XemLichKham.Controls.Add(label8);
+            LK_GrBox_XemLichKham.Controls.Add(bigTextBox3);
+            LK_GrBox_XemLichKham.Controls.Add(label7);
+            LK_GrBox_XemLichKham.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            LK_GrBox_XemLichKham.ForeColor = Color.Crimson;
+            LK_GrBox_XemLichKham.HeaderColor = Color.BlanchedAlmond;
+            LK_GrBox_XemLichKham.Location = new Point(361, 232);
+            LK_GrBox_XemLichKham.MinimumSize = new Size(136, 50);
+            LK_GrBox_XemLichKham.Name = "LK_GrBox_XemLichKham";
+            LK_GrBox_XemLichKham.Padding = new Padding(5, 28, 5, 5);
+            LK_GrBox_XemLichKham.Size = new Size(1126, 656);
+            LK_GrBox_XemLichKham.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            LK_GrBox_XemLichKham.TabIndex = 5;
+            LK_GrBox_XemLichKham.Text = "Xem Lịch Khám";
+            // 
+            // poisonDateTime1
+            // 
+            poisonDateTime1.Format = DateTimePickerFormat.Short;
+            poisonDateTime1.Location = new Point(688, 64);
+            poisonDateTime1.MinimumSize = new Size(0, 30);
+            poisonDateTime1.Name = "poisonDateTime1";
+            poisonDateTime1.Size = new Size(102, 30);
+            poisonDateTime1.TabIndex = 29;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.ActiveCaptionText;
+            label9.Location = new Point(803, 64);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 29);
+            label9.TabIndex = 28;
+            label9.Text = "Đến :";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ActiveCaptionText;
+            label8.Location = new Point(633, 64);
+            label8.Name = "label8";
+            label8.Size = new Size(57, 29);
+            label8.TabIndex = 28;
+            label8.Text = "Từ :";
+            // 
+            // bigTextBox3
+            // 
+            bigTextBox3.BackColor = Color.Transparent;
+            bigTextBox3.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            bigTextBox3.ForeColor = Color.DimGray;
+            bigTextBox3.Image = null;
+            bigTextBox3.Location = new Point(67, 48);
+            bigTextBox3.MaxLength = 32767;
+            bigTextBox3.Multiline = false;
+            bigTextBox3.Name = "bigTextBox3";
+            bigTextBox3.ReadOnly = false;
+            bigTextBox3.Size = new Size(378, 46);
+            bigTextBox3.TabIndex = 26;
+            bigTextBox3.TextAlignment = HorizontalAlignment.Left;
+            bigTextBox3.UseSystemPasswordChar = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
+            label7.Location = new Point(466, 56);
+            label7.Name = "label7";
+            label7.Size = new Size(73, 38);
+            label7.TabIndex = 27;
+            label7.Text = "       ";
+            // 
+            // spaceSeparatorHorizontal1
+            // 
+            spaceSeparatorHorizontal1.BackColor = Color.Fuchsia;
+            spaceSeparatorHorizontal1.Customization = "Kioq/yoqKv8jIyP/Kioq/w==";
+            spaceSeparatorHorizontal1.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            spaceSeparatorHorizontal1.Image = C_PRL.Properties.Resources.icons8_crowd_34;
+            spaceSeparatorHorizontal1.Location = new Point(518, 157);
+            spaceSeparatorHorizontal1.Name = "spaceSeparatorHorizontal1";
+            spaceSeparatorHorizontal1.NoRounding = false;
+            spaceSeparatorHorizontal1.Size = new Size(185, 4);
+            spaceSeparatorHorizontal1.TabIndex = 4;
+            spaceSeparatorHorizontal1.Text = "spaceSeparatorHorizontal1";
+            spaceSeparatorHorizontal1.Transparent = false;
+            // 
+            // bigLabel4
+            // 
+            bigLabel4.AutoSize = true;
+            bigLabel4.BackColor = Color.Transparent;
+            bigLabel4.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel4.ForeColor = Color.Crimson;
+            bigLabel4.Location = new Point(1031, 119);
+            bigLabel4.Name = "bigLabel4";
+            bigLabel4.Size = new Size(270, 32);
+            bigLabel4.TabIndex = 3;
+            bigLabel4.Text = "Sửa / Hủy Phiếu Khám";
+            // 
+            // bigLabel3
+            // 
+            bigLabel3.AutoSize = true;
+            bigLabel3.BackColor = Color.Transparent;
+            bigLabel3.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel3.ForeColor = Color.Crimson;
+            bigLabel3.Location = new Point(771, 119);
+            bigLabel3.Name = "bigLabel3";
+            bigLabel3.Size = new Size(210, 32);
+            bigLabel3.TabIndex = 2;
+            bigLabel3.Text = "Thêm Phiếu Khám";
+            // 
+            // bigLabel2
+            // 
+            bigLabel2.AutoSize = true;
+            bigLabel2.BackColor = Color.Transparent;
+            bigLabel2.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bigLabel2.ForeColor = Color.Crimson;
+            bigLabel2.Location = new Point(518, 122);
+            bigLabel2.Name = "bigLabel2";
+            bigLabel2.Size = new Size(185, 32);
+            bigLabel2.TabIndex = 1;
+            bigLabel2.Text = "Xem Lịch Khám";
             // 
             // NV_Elipse_GridView
             // 
@@ -1289,11 +1465,20 @@ namespace PRL
             KH_Elipse_GrView.ElipseRadius = 10;
             KH_Elipse_GrView.TargetControl = KH_GridView;
             // 
+            // poisonDateTime2
+            // 
+            poisonDateTime2.Format = DateTimePickerFormat.Short;
+            poisonDateTime2.Location = new Point(892, 60);
+            poisonDateTime2.MinimumSize = new Size(0, 30);
+            poisonDateTime2.Name = "poisonDateTime2";
+            poisonDateTime2.Size = new Size(102, 30);
+            poisonDateTime2.TabIndex = 30;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1706, 782);
+            ClientSize = new Size(1906, 982);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
@@ -1321,6 +1506,10 @@ namespace PRL
             Nav_Option.ResumeLayout(false);
             Nav_Option.PerformLayout();
             Content.ResumeLayout(false);
+            Panel_LK.ResumeLayout(false);
+            Panel_LK.PerformLayout();
+            LK_GrBox_XemLichKham.ResumeLayout(false);
+            LK_GrBox_XemLichKham.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1388,5 +1577,17 @@ namespace PRL
         private Label label5;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private Label label6;
+        private ReaLTaiizor.Controls.ParrotSlidingPanel Panel_LK;
+        private ReaLTaiizor.Controls.BigLabel bigLabel2;
+        private ReaLTaiizor.Controls.SpaceSeparatorHorizontal spaceSeparatorHorizontal1;
+        private ReaLTaiizor.Controls.BigLabel bigLabel4;
+        private ReaLTaiizor.Controls.BigLabel bigLabel3;
+        private ReaLTaiizor.Controls.GroupBox LK_GrBox_XemLichKham;
+        private Label label9;
+        private Label label8;
+        private ReaLTaiizor.Controls.BigTextBox bigTextBox3;
+        private Label label7;
+        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime1;
+        private ReaLTaiizor.Controls.PoisonDateTime poisonDateTime2;
     }
 }
