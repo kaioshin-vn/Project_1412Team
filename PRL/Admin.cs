@@ -229,5 +229,15 @@ namespace PRL
         {
 
         }
+        private void QL_ThanhToan_Click(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Panel_TT.Visible = true;
+            Content.Controls.Add(Panel_TT);
+        }
+        private void poisonDataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
