@@ -126,11 +126,6 @@ namespace PRL
 
         }
 
-        private void Panel_LK_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void groupBox3_Click(object sender, EventArgs e)
         {
 
@@ -230,7 +225,14 @@ namespace PRL
             Content.Controls.Add(Panel_ThongKe);
         }
 
-        private void ThanhToan_Click(object sender, EventArgs e)
+        private void QL_ThanhToan_Click(object sender, EventArgs e)
+        {
+            //Content.Controls.Clear();
+            //Panel_TT.Visible = true;
+            //Content.Controls.Add(Panel_TT);
+        }
+
+        private void poisonDataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
