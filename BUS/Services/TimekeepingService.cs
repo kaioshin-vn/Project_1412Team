@@ -37,7 +37,7 @@ namespace B_BUS.Services
         }
         public string UpdateNVTime(TimeKeeping nvt)
         {
-            return "Để sau";
+            return "Để sau ok";
         }
         public string DeleteNVTime(TimeKeeping nvt)
         {
