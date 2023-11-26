@@ -103,6 +103,20 @@ namespace PRL
             this.QL_NV = (new global::System.Windows.Forms.Label());
             this.Content = (new global::System.Windows.Forms.Panel());
             this.Panel_ThongKe = (new global::System.Windows.Forms.SplitContainer());
+            this.ThongKe_Panel_DoanhThu = (new global::System.Windows.Forms.Panel());
+            this.thunderGroupBox2 = (new global::ReaLTaiizor.Controls.ThunderGroupBox());
+            this.tt = (new global::System.Windows.Forms.Label());
+            this.g = (new global::System.Windows.Forms.Label());
+            this.t = (new global::System.Windows.Forms.Label());
+            this.gt = (new global::System.Windows.Forms.Label());
+            this.bigLabel20 = (new global::ReaLTaiizor.Controls.BigLabel());
+            this.ThongKe_Panel_ChiTieu = (new global::System.Windows.Forms.Panel());
+            this.thunderGroupBox4 = (new global::ReaLTaiizor.Controls.ThunderGroupBox());
+            this.rr = (new global::System.Windows.Forms.Label());
+            this.rg = (new global::System.Windows.Forms.Label());
+            this.th = (new global::System.Windows.Forms.Label());
+            this.thy = (new global::System.Windows.Forms.Label());
+            this.bigLabel21 = (new global::ReaLTaiizor.Controls.BigLabel());
             this.Panel_L = (new global::System.Windows.Forms.Panel());
             this.bigLabel19 = (new global::ReaLTaiizor.Controls.BigLabel());
             this.dungeonHeaderLabel23 = (new global::ReaLTaiizor.Controls.DungeonHeaderLabel());
@@ -239,30 +253,6 @@ namespace PRL
             this.bunifuElipse2 = (new global::Bunifu.Framework.UI.BunifuElipse(this.components));
             this.LK_ElipseGrView_SuaHuyLich = (new global::Bunifu.Framework.UI.BunifuElipse(this.components));
             this.DV_ELipseRichtextBox_MoTa = (new global::Bunifu.Framework.UI.BunifuElipse(this.components));
-            this.bigLabel20 = (new global::ReaLTaiizor.Controls.BigLabel());
-            this.bigLabel21 = (new global::ReaLTaiizor.Controls.BigLabel());
-            this.ThongKe_Panel_DoanhThu = (new global::System.Windows.Forms.Panel());
-            this.ThongKe_Panel_ChiTieu = (new global::System.Windows.Forms.Panel());
-            this.thunderGroupBox2 = (new global::ReaLTaiizor.Controls.ThunderGroupBox());
-            this.label21 = (new global::System.Windows.Forms.Label());
-            this.label22 = (new global::System.Windows.Forms.Label());
-            this.label23 = (new global::System.Windows.Forms.Label());
-            this.label24 = (new global::System.Windows.Forms.Label());
-            this.thunderGroupBox3 = (new global::ReaLTaiizor.Controls.ThunderGroupBox());
-            this.label25 = (new global::System.Windows.Forms.Label());
-            this.label26 = (new global::System.Windows.Forms.Label());
-            this.label27 = (new global::System.Windows.Forms.Label());
-            this.label28 = (new global::System.Windows.Forms.Label());
-            this.thunderGroupBox4 = (new global::ReaLTaiizor.Controls.ThunderGroupBox());
-            this.label29 = (new global::System.Windows.Forms.Label());
-            this.label30 = (new global::System.Windows.Forms.Label());
-            this.label31 = (new global::System.Windows.Forms.Label());
-            this.label32 = (new global::System.Windows.Forms.Label());
-            this.thunderGroupBox5 = (new global::ReaLTaiizor.Controls.ThunderGroupBox());
-            this.label33 = (new global::System.Windows.Forms.Label());
-            this.label34 = (new global::System.Windows.Forms.Label());
-            this.label35 = (new global::System.Windows.Forms.Label());
-            this.label36 = (new global::System.Windows.Forms.Label());
             this.name_clinic.SuspendLayout();
             this.Navigation.SuspendLayout();
             this.Panel_KH.SuspendLayout();
@@ -277,6 +267,10 @@ namespace PRL
             this.Panel_ThongKe.Panel1.SuspendLayout();
             this.Panel_ThongKe.Panel2.SuspendLayout();
             this.Panel_ThongKe.SuspendLayout();
+            this.ThongKe_Panel_DoanhThu.SuspendLayout();
+            this.thunderGroupBox2.SuspendLayout();
+            this.ThongKe_Panel_ChiTieu.SuspendLayout();
+            this.thunderGroupBox4.SuspendLayout();
             this.Panel_L.SuspendLayout();
             this.cyberGroupBox3.SuspendLayout();
             this.Panel_DV.SuspendLayout();
@@ -292,12 +286,6 @@ namespace PRL
             ((global::System.ComponentModel.ISupportInitialize)(this.poisonDataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.ThongKe_Panel_DoanhThu.SuspendLayout();
-            this.ThongKe_Panel_ChiTieu.SuspendLayout();
-            this.thunderGroupBox2.SuspendLayout();
-            this.thunderGroupBox3.SuspendLayout();
-            this.thunderGroupBox4.SuspendLayout();
-            this.thunderGroupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // name_clinic
@@ -1504,6 +1492,165 @@ namespace PRL
             this.Panel_ThongKe.Size = (new global::System.Drawing.Size(1766, 906));
             this.Panel_ThongKe.SplitterDistance = (747);
             this.Panel_ThongKe.TabIndex = (0);
+            // 
+            // ThongKe_Panel_DoanhThu
+            // 
+            this.ThongKe_Panel_DoanhThu.Anchor = ((global::System.Windows.Forms.AnchorStyles)(((global::System.Windows.Forms.AnchorStyles.Top) | (global::System.Windows.Forms.AnchorStyles.Bottom)) | (global::System.Windows.Forms.AnchorStyles.Left)));
+            this.ThongKe_Panel_DoanhThu.AutoScroll = (true);
+            this.ThongKe_Panel_DoanhThu.Controls.Add(this.thunderGroupBox2);
+            this.ThongKe_Panel_DoanhThu.Location = (new global::System.Drawing.Point(47, 89));
+            this.ThongKe_Panel_DoanhThu.Name = ("ThongKe_Panel_DoanhThu");
+            this.ThongKe_Panel_DoanhThu.Size = (new global::System.Drawing.Size(651, 591));
+            this.ThongKe_Panel_DoanhThu.TabIndex = (1);
+            // 
+            // thunderGroupBox2
+            // 
+            this.thunderGroupBox2.BackColor = (global::System.Drawing.Color.Transparent);
+            this.thunderGroupBox2.BodyColorA = (global::System.Drawing.Color.MediumSpringGreen);
+            this.thunderGroupBox2.BodyColorB = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.thunderGroupBox2.BodyColorC = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(224)), (global::System.Int32)((global::System.Byte)(192))));
+            this.thunderGroupBox2.BodyColorD = (global::System.Drawing.Color.Cyan);
+            this.thunderGroupBox2.Controls.Add(this.tt);
+            this.thunderGroupBox2.Controls.Add(this.g);
+            this.thunderGroupBox2.Controls.Add(this.t);
+            this.thunderGroupBox2.Controls.Add(this.gt);
+            this.thunderGroupBox2.ForeColor = (global::System.Drawing.Color.Black);
+            this.thunderGroupBox2.Location = (new global::System.Drawing.Point(40, 33));
+            this.thunderGroupBox2.Name = ("thunderGroupBox2");
+            this.thunderGroupBox2.Size = (new global::System.Drawing.Size(576, 221));
+            this.thunderGroupBox2.TabIndex = (0);
+            this.thunderGroupBox2.Text = ("Hóa đơn 535325");
+            // 
+            // tt
+            // 
+            this.tt.AutoSize = (true);
+            this.tt.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.tt.Location = (new global::System.Drawing.Point(20, 115));
+            this.tt.Name = ("tt");
+            this.tt.Size = (new global::System.Drawing.Size(231, 20));
+            this.tt.TabIndex = (3);
+            this.tt.Text = ("Khách hàng : Nguyễn Sinh Cung");
+            // 
+            // g
+            // 
+            this.g.AutoSize = (true);
+            this.g.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.g.Location = (new global::System.Drawing.Point(20, 149));
+            this.g.Name = ("g");
+            this.g.Size = (new global::System.Drawing.Size(120, 20));
+            this.g.TabIndex = (2);
+            this.g.Text = ("Ghi Chú : Không");
+            // 
+            // t
+            // 
+            this.t.AutoSize = (true);
+            this.t.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.t.Location = (new global::System.Drawing.Point(20, 80));
+            this.t.Name = ("t");
+            this.t.Size = (new global::System.Drawing.Size(262, 20));
+            this.t.TabIndex = (1);
+            this.t.Text = ("Người thực hiện : Nguyễn Phú Trọng");
+            // 
+            // gt
+            // 
+            this.gt.AutoSize = (true);
+            this.gt.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.gt.Location = (new global::System.Drawing.Point(20, 46));
+            this.gt.Name = ("gt");
+            this.gt.Size = (new global::System.Drawing.Size(199, 20));
+            this.gt.TabIndex = (0);
+            this.gt.Text = ("Tổng giá trị : 1.000.000 VNĐ");
+            // 
+            // bigLabel20
+            // 
+            this.bigLabel20.AutoSize = (true);
+            this.bigLabel20.BackColor = (global::System.Drawing.Color.Transparent);
+            this.bigLabel20.Font = (new global::System.Drawing.Font("Segoe UI", 25F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.bigLabel20.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80))));
+            this.bigLabel20.Location = (new global::System.Drawing.Point(242, 19));
+            this.bigLabel20.Name = ("bigLabel20");
+            this.bigLabel20.Size = (new global::System.Drawing.Size(230, 57));
+            this.bigLabel20.TabIndex = (0);
+            this.bigLabel20.Text = ("Doanh Thu");
+            // 
+            // ThongKe_Panel_ChiTieu
+            // 
+            this.ThongKe_Panel_ChiTieu.Controls.Add(this.thunderGroupBox4);
+            this.ThongKe_Panel_ChiTieu.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.ThongKe_Panel_ChiTieu.Location = (new global::System.Drawing.Point(44, 89));
+            this.ThongKe_Panel_ChiTieu.Name = ("ThongKe_Panel_ChiTieu");
+            this.ThongKe_Panel_ChiTieu.Size = (new global::System.Drawing.Size(598, 591));
+            this.ThongKe_Panel_ChiTieu.TabIndex = (2);
+            // 
+            // thunderGroupBox4
+            // 
+            this.thunderGroupBox4.BackColor = (global::System.Drawing.Color.Transparent);
+            this.thunderGroupBox4.BodyColorA = (global::System.Drawing.Color.NavajoWhite);
+            this.thunderGroupBox4.BodyColorB = (global::System.Drawing.Color.DeepSkyBlue);
+            this.thunderGroupBox4.BodyColorC = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(192))));
+            this.thunderGroupBox4.BodyColorD = (global::System.Drawing.Color.PaleTurquoise);
+            this.thunderGroupBox4.Controls.Add(this.rr);
+            this.thunderGroupBox4.Controls.Add(this.rg);
+            this.thunderGroupBox4.Controls.Add(this.th);
+            this.thunderGroupBox4.Controls.Add(this.thy);
+            this.thunderGroupBox4.ForeColor = (global::System.Drawing.Color.Black);
+            this.thunderGroupBox4.Location = (new global::System.Drawing.Point(33, 33));
+            this.thunderGroupBox4.Name = ("thunderGroupBox4");
+            this.thunderGroupBox4.Size = (new global::System.Drawing.Size(539, 221));
+            this.thunderGroupBox4.TabIndex = (4);
+            this.thunderGroupBox4.Text = ("Mã 54646");
+            // 
+            // rr
+            // 
+            this.rr.AutoSize = (true);
+            this.rr.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.rr.Location = (new global::System.Drawing.Point(20, 115));
+            this.rr.Name = ("rr");
+            this.rr.Size = (new global::System.Drawing.Size(231, 20));
+            this.rr.TabIndex = (3);
+            this.rr.Text = ("Khách hàng : Nguyễn Sinh Cung");
+            // 
+            // rg
+            // 
+            this.rg.AutoSize = (true);
+            this.rg.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.rg.Location = (new global::System.Drawing.Point(20, 149));
+            this.rg.Name = ("rg");
+            this.rg.Size = (new global::System.Drawing.Size(120, 20));
+            this.rg.TabIndex = (2);
+            this.rg.Text = ("Ghi Chú : Không");
+            // 
+            // th
+            // 
+            this.th.AutoSize = (true);
+            this.th.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.th.Location = (new global::System.Drawing.Point(20, 80));
+            this.th.Name = ("th");
+            this.th.Size = (new global::System.Drawing.Size(262, 20));
+            this.th.TabIndex = (1);
+            this.th.Text = ("Người thực hiện : Nguyễn Phú Trọng");
+            // 
+            // thy
+            // 
+            this.thy.AutoSize = (true);
+            this.thy.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.thy.Location = (new global::System.Drawing.Point(20, 46));
+            this.thy.Name = ("thy");
+            this.thy.Size = (new global::System.Drawing.Size(199, 20));
+            this.thy.TabIndex = (0);
+            this.thy.Text = ("Tổng giá trị : 1.000.000 VNĐ");
+            // 
+            // bigLabel21
+            // 
+            this.bigLabel21.AutoSize = (true);
+            this.bigLabel21.BackColor = (global::System.Drawing.Color.Transparent);
+            this.bigLabel21.Font = (new global::System.Drawing.Font("Segoe UI", 25F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.bigLabel21.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80))));
+            this.bigLabel21.Location = (new global::System.Drawing.Point(274, 13));
+            this.bigLabel21.Name = ("bigLabel21");
+            this.bigLabel21.Size = (new global::System.Drawing.Size(175, 57));
+            this.bigLabel21.TabIndex = (1);
+            this.bigLabel21.Text = ("Chi Tiêu");
             // 
             // Panel_L
             // 
@@ -4094,283 +4241,6 @@ namespace PRL
             this.DV_ELipseRichtextBox_MoTa.ElipseRadius = (10);
             this.DV_ELipseRichtextBox_MoTa.TargetControl = (this.richTextBox1);
             // 
-            // bigLabel20
-            // 
-            this.bigLabel20.AutoSize = (true);
-            this.bigLabel20.BackColor = (global::System.Drawing.Color.Transparent);
-            this.bigLabel20.Font = (new global::System.Drawing.Font("Segoe UI", 25F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
-            this.bigLabel20.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80))));
-            this.bigLabel20.Location = (new global::System.Drawing.Point(242, 19));
-            this.bigLabel20.Name = ("bigLabel20");
-            this.bigLabel20.Size = (new global::System.Drawing.Size(230, 57));
-            this.bigLabel20.TabIndex = (0);
-            this.bigLabel20.Text = ("Doanh Thu");
-            // 
-            // bigLabel21
-            // 
-            this.bigLabel21.AutoSize = (true);
-            this.bigLabel21.BackColor = (global::System.Drawing.Color.Transparent);
-            this.bigLabel21.Font = (new global::System.Drawing.Font("Segoe UI", 25F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
-            this.bigLabel21.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80)), (global::System.Int32)((global::System.Byte)(80))));
-            this.bigLabel21.Location = (new global::System.Drawing.Point(274, 13));
-            this.bigLabel21.Name = ("bigLabel21");
-            this.bigLabel21.Size = (new global::System.Drawing.Size(175, 57));
-            this.bigLabel21.TabIndex = (1);
-            this.bigLabel21.Text = ("Chi Tiêu");
-            // 
-            // ThongKe_Panel_DoanhThu
-            // 
-            this.ThongKe_Panel_DoanhThu.Anchor = ((global::System.Windows.Forms.AnchorStyles)(((global::System.Windows.Forms.AnchorStyles.Top) | (global::System.Windows.Forms.AnchorStyles.Bottom)) | (global::System.Windows.Forms.AnchorStyles.Left)));
-            this.ThongKe_Panel_DoanhThu.AutoScroll = (true);
-            this.ThongKe_Panel_DoanhThu.Controls.Add(this.thunderGroupBox3);
-            this.ThongKe_Panel_DoanhThu.Controls.Add(this.thunderGroupBox2);
-            this.ThongKe_Panel_DoanhThu.Location = (new global::System.Drawing.Point(47, 89));
-            this.ThongKe_Panel_DoanhThu.Name = ("ThongKe_Panel_DoanhThu");
-            this.ThongKe_Panel_DoanhThu.Size = (new global::System.Drawing.Size(651, 591));
-            this.ThongKe_Panel_DoanhThu.TabIndex = (1);
-            // 
-            // ThongKe_Panel_ChiTieu
-            // 
-            this.ThongKe_Panel_ChiTieu.Controls.Add(this.thunderGroupBox5);
-            this.ThongKe_Panel_ChiTieu.Controls.Add(this.thunderGroupBox4);
-            this.ThongKe_Panel_ChiTieu.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.ThongKe_Panel_ChiTieu.Location = (new global::System.Drawing.Point(44, 89));
-            this.ThongKe_Panel_ChiTieu.Name = ("ThongKe_Panel_ChiTieu");
-            this.ThongKe_Panel_ChiTieu.Size = (new global::System.Drawing.Size(598, 591));
-            this.ThongKe_Panel_ChiTieu.TabIndex = (2);
-            // 
-            // thunderGroupBox2
-            // 
-            this.thunderGroupBox2.BackColor = (global::System.Drawing.Color.Transparent);
-            this.thunderGroupBox2.BodyColorA = (global::System.Drawing.Color.MediumSpringGreen);
-            this.thunderGroupBox2.BodyColorB = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
-            this.thunderGroupBox2.BodyColorC = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(224)), (global::System.Int32)((global::System.Byte)(192))));
-            this.thunderGroupBox2.BodyColorD = (global::System.Drawing.Color.Cyan);
-            this.thunderGroupBox2.Controls.Add(this.label24);
-            this.thunderGroupBox2.Controls.Add(this.label23);
-            this.thunderGroupBox2.Controls.Add(this.label22);
-            this.thunderGroupBox2.Controls.Add(this.label21);
-            this.thunderGroupBox2.ForeColor = (global::System.Drawing.Color.Black);
-            this.thunderGroupBox2.Location = (new global::System.Drawing.Point(40, 33));
-            this.thunderGroupBox2.Name = ("thunderGroupBox2");
-            this.thunderGroupBox2.Size = (new global::System.Drawing.Size(576, 221));
-            this.thunderGroupBox2.TabIndex = (0);
-            this.thunderGroupBox2.Text = ("Hóa đơn 535325");
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = (true);
-            this.label21.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label21.Location = (new global::System.Drawing.Point(20, 46));
-            this.label21.Name = ("label21");
-            this.label21.Size = (new global::System.Drawing.Size(199, 20));
-            this.label21.TabIndex = (0);
-            this.label21.Text = ("Tổng giá trị : 1.000.000 VNĐ");
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = (true);
-            this.label22.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label22.Location = (new global::System.Drawing.Point(20, 80));
-            this.label22.Name = ("label22");
-            this.label22.Size = (new global::System.Drawing.Size(262, 20));
-            this.label22.TabIndex = (1);
-            this.label22.Text = ("Người thực hiện : Nguyễn Phú Trọng");
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = (true);
-            this.label23.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label23.Location = (new global::System.Drawing.Point(20, 149));
-            this.label23.Name = ("label23");
-            this.label23.Size = (new global::System.Drawing.Size(120, 20));
-            this.label23.TabIndex = (2);
-            this.label23.Text = ("Ghi Chú : Không");
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = (true);
-            this.label24.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label24.Location = (new global::System.Drawing.Point(20, 115));
-            this.label24.Name = ("label24");
-            this.label24.Size = (new global::System.Drawing.Size(231, 20));
-            this.label24.TabIndex = (3);
-            this.label24.Text = ("Khách hàng : Nguyễn Sinh Cung");
-            // 
-            // thunderGroupBox3
-            // 
-            this.thunderGroupBox3.BackColor = (global::System.Drawing.Color.Transparent);
-            this.thunderGroupBox3.BodyColorA = (global::System.Drawing.Color.MediumSpringGreen);
-            this.thunderGroupBox3.BodyColorB = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
-            this.thunderGroupBox3.BodyColorC = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(224)), (global::System.Int32)((global::System.Byte)(192))));
-            this.thunderGroupBox3.BodyColorD = (global::System.Drawing.Color.Cyan);
-            this.thunderGroupBox3.Controls.Add(this.label25);
-            this.thunderGroupBox3.Controls.Add(this.label26);
-            this.thunderGroupBox3.Controls.Add(this.label27);
-            this.thunderGroupBox3.Controls.Add(this.label28);
-            this.thunderGroupBox3.ForeColor = (global::System.Drawing.Color.Black);
-            this.thunderGroupBox3.Location = (new global::System.Drawing.Point(40, 305));
-            this.thunderGroupBox3.Name = ("thunderGroupBox3");
-            this.thunderGroupBox3.Size = (new global::System.Drawing.Size(576, 221));
-            this.thunderGroupBox3.TabIndex = (4);
-            this.thunderGroupBox3.Text = ("Hóa đơn 535325");
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = (true);
-            this.label25.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label25.Location = (new global::System.Drawing.Point(20, 115));
-            this.label25.Name = ("label25");
-            this.label25.Size = (new global::System.Drawing.Size(231, 20));
-            this.label25.TabIndex = (3);
-            this.label25.Text = ("Khách hàng : Nguyễn Sinh Cung");
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = (true);
-            this.label26.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label26.Location = (new global::System.Drawing.Point(20, 149));
-            this.label26.Name = ("label26");
-            this.label26.Size = (new global::System.Drawing.Size(120, 20));
-            this.label26.TabIndex = (2);
-            this.label26.Text = ("Ghi Chú : Không");
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = (true);
-            this.label27.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label27.Location = (new global::System.Drawing.Point(20, 80));
-            this.label27.Name = ("label27");
-            this.label27.Size = (new global::System.Drawing.Size(262, 20));
-            this.label27.TabIndex = (1);
-            this.label27.Text = ("Người thực hiện : Nguyễn Phú Trọng");
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = (true);
-            this.label28.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label28.Location = (new global::System.Drawing.Point(20, 46));
-            this.label28.Name = ("label28");
-            this.label28.Size = (new global::System.Drawing.Size(199, 20));
-            this.label28.TabIndex = (0);
-            this.label28.Text = ("Tổng giá trị : 1.000.000 VNĐ");
-            // 
-            // thunderGroupBox4
-            // 
-            this.thunderGroupBox4.BackColor = (global::System.Drawing.Color.Transparent);
-            this.thunderGroupBox4.BodyColorA = (global::System.Drawing.Color.NavajoWhite);
-            this.thunderGroupBox4.BodyColorB = (global::System.Drawing.Color.DeepSkyBlue);
-            this.thunderGroupBox4.BodyColorC = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(192))));
-            this.thunderGroupBox4.BodyColorD = (global::System.Drawing.Color.PaleTurquoise);
-            this.thunderGroupBox4.Controls.Add(this.label29);
-            this.thunderGroupBox4.Controls.Add(this.label30);
-            this.thunderGroupBox4.Controls.Add(this.label31);
-            this.thunderGroupBox4.Controls.Add(this.label32);
-            this.thunderGroupBox4.ForeColor = (global::System.Drawing.Color.Black);
-            this.thunderGroupBox4.Location = (new global::System.Drawing.Point(33, 33));
-            this.thunderGroupBox4.Name = ("thunderGroupBox4");
-            this.thunderGroupBox4.Size = (new global::System.Drawing.Size(539, 221));
-            this.thunderGroupBox4.TabIndex = (4);
-            this.thunderGroupBox4.Text = ("Mã 54646");
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = (true);
-            this.label29.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label29.Location = (new global::System.Drawing.Point(20, 115));
-            this.label29.Name = ("label29");
-            this.label29.Size = (new global::System.Drawing.Size(231, 20));
-            this.label29.TabIndex = (3);
-            this.label29.Text = ("Khách hàng : Nguyễn Sinh Cung");
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = (true);
-            this.label30.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label30.Location = (new global::System.Drawing.Point(20, 149));
-            this.label30.Name = ("label30");
-            this.label30.Size = (new global::System.Drawing.Size(120, 20));
-            this.label30.TabIndex = (2);
-            this.label30.Text = ("Ghi Chú : Không");
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = (true);
-            this.label31.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label31.Location = (new global::System.Drawing.Point(20, 80));
-            this.label31.Name = ("label31");
-            this.label31.Size = (new global::System.Drawing.Size(262, 20));
-            this.label31.TabIndex = (1);
-            this.label31.Text = ("Người thực hiện : Nguyễn Phú Trọng");
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = (true);
-            this.label32.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label32.Location = (new global::System.Drawing.Point(20, 46));
-            this.label32.Name = ("label32");
-            this.label32.Size = (new global::System.Drawing.Size(199, 20));
-            this.label32.TabIndex = (0);
-            this.label32.Text = ("Tổng giá trị : 1.000.000 VNĐ");
-            // 
-            // thunderGroupBox5
-            // 
-            this.thunderGroupBox5.BackColor = (global::System.Drawing.Color.Transparent);
-            this.thunderGroupBox5.BodyColorA = (global::System.Drawing.Color.NavajoWhite);
-            this.thunderGroupBox5.BodyColorB = (global::System.Drawing.Color.DeepSkyBlue);
-            this.thunderGroupBox5.BodyColorC = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(192))));
-            this.thunderGroupBox5.BodyColorD = (global::System.Drawing.Color.PaleTurquoise);
-            this.thunderGroupBox5.Controls.Add(this.label33);
-            this.thunderGroupBox5.Controls.Add(this.label34);
-            this.thunderGroupBox5.Controls.Add(this.label35);
-            this.thunderGroupBox5.Controls.Add(this.label36);
-            this.thunderGroupBox5.ForeColor = (global::System.Drawing.Color.Black);
-            this.thunderGroupBox5.Location = (new global::System.Drawing.Point(33, 300));
-            this.thunderGroupBox5.Name = ("thunderGroupBox5");
-            this.thunderGroupBox5.Size = (new global::System.Drawing.Size(539, 221));
-            this.thunderGroupBox5.TabIndex = (5);
-            this.thunderGroupBox5.Text = ("Mã 54646");
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = (true);
-            this.label33.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label33.Location = (new global::System.Drawing.Point(20, 115));
-            this.label33.Name = ("label33");
-            this.label33.Size = (new global::System.Drawing.Size(231, 20));
-            this.label33.TabIndex = (3);
-            this.label33.Text = ("Khách hàng : Nguyễn Sinh Cung");
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = (true);
-            this.label34.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label34.Location = (new global::System.Drawing.Point(20, 149));
-            this.label34.Name = ("label34");
-            this.label34.Size = (new global::System.Drawing.Size(120, 20));
-            this.label34.TabIndex = (2);
-            this.label34.Text = ("Ghi Chú : Không");
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = (true);
-            this.label35.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label35.Location = (new global::System.Drawing.Point(20, 80));
-            this.label35.Name = ("label35");
-            this.label35.Size = (new global::System.Drawing.Size(262, 20));
-            this.label35.TabIndex = (1);
-            this.label35.Text = ("Người thực hiện : Nguyễn Phú Trọng");
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = (true);
-            this.label36.Font = (new global::System.Drawing.Font("Segoe UI Semibold", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
-            this.label36.Location = (new global::System.Drawing.Point(20, 46));
-            this.label36.Name = ("label36");
-            this.label36.Size = (new global::System.Drawing.Size(199, 20));
-            this.label36.TabIndex = (0);
-            this.label36.Text = ("Tổng giá trị : 1.000.000 VNĐ");
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = (new global::System.Drawing.SizeF(8F, 20F));
@@ -4409,6 +4279,12 @@ namespace PRL
             this.Panel_ThongKe.Panel2.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.Panel_ThongKe)).EndInit();
             this.Panel_ThongKe.ResumeLayout(false);
+            this.ThongKe_Panel_DoanhThu.ResumeLayout(false);
+            this.thunderGroupBox2.ResumeLayout(false);
+            this.thunderGroupBox2.PerformLayout();
+            this.ThongKe_Panel_ChiTieu.ResumeLayout(false);
+            this.thunderGroupBox4.ResumeLayout(false);
+            this.thunderGroupBox4.PerformLayout();
             this.Panel_L.ResumeLayout(false);
             this.Panel_L.PerformLayout();
             this.cyberGroupBox3.ResumeLayout(false);
@@ -4436,16 +4312,6 @@ namespace PRL
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.ThongKe_Panel_DoanhThu.ResumeLayout(false);
-            this.ThongKe_Panel_ChiTieu.ResumeLayout(false);
-            this.thunderGroupBox2.ResumeLayout(false);
-            this.thunderGroupBox2.PerformLayout();
-            this.thunderGroupBox3.ResumeLayout(false);
-            this.thunderGroupBox3.PerformLayout();
-            this.thunderGroupBox4.ResumeLayout(false);
-            this.thunderGroupBox4.PerformLayout();
-            this.thunderGroupBox5.ResumeLayout(false);
-            this.thunderGroupBox5.PerformLayout();
             this.ResumeLayout(false);
         }
 
@@ -4649,9 +4515,9 @@ namespace PRL
         private global::System.Windows.Forms.SplitContainer Panel_ThongKe;
         private global::System.Windows.Forms.Panel ThongKe_Panel_DoanhThu;
         private global::ReaLTaiizor.Controls.ThunderGroupBox thunderGroupBox2;
-        private global::System.Windows.Forms.Label label23;
-        private global::System.Windows.Forms.Label label22;
-        private global::System.Windows.Forms.Label label21;
+        private global::System.Windows.Forms.Label g;
+        private global::System.Windows.Forms.Label t;
+        private global::System.Windows.Forms.Label gt;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel20;
         private global::System.Windows.Forms.Panel ThongKe_Panel_ChiTieu;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel21;
@@ -4660,7 +4526,7 @@ namespace PRL
         private global::System.Windows.Forms.Label label26;
         private global::System.Windows.Forms.Label label27;
         private global::System.Windows.Forms.Label label28;
-        private global::System.Windows.Forms.Label label24;
+        private global::System.Windows.Forms.Label tt;
         private global::ReaLTaiizor.Controls.ThunderGroupBox thunderGroupBox5;
         private global::System.Windows.Forms.Label label33;
         private global::System.Windows.Forms.Label label34;
@@ -4670,6 +4536,6 @@ namespace PRL
         private global::System.Windows.Forms.Label label29;
         private global::System.Windows.Forms.Label label30;
         private global::System.Windows.Forms.Label label31;
-        private global::System.Windows.Forms.Label label32;
+        private global::System.Windows.Forms.Label thy;
     }
 }
