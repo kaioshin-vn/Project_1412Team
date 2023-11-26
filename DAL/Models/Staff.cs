@@ -13,10 +13,15 @@ namespace DAL.Models
     {
         [Key]
         public Guid Id { get; set; }
-        [Required, Phone]
+        [Required]
+        public string Name { get; set; }
+        public string ChucVu { get; set; }
+        public string Sex { get; set; }
         public string NumberPhone { get; set;}
+        public string Address {  get; set;}
         [Required]
         public string Posittion { get; set;}
+
         [Required]
         public int Status { get; set;} // trạng thái
 
