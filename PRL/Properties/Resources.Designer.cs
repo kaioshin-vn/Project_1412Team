@@ -83,6 +83,16 @@ namespace C_PRL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_closed_eye_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-closed-eye-35", resourceCulture);
@@ -146,6 +156,16 @@ namespace C_PRL.Properties {
         internal static System.Drawing.Bitmap icons8_eye_open_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-eye_open-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_filter_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-filter-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
