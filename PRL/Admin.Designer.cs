@@ -106,27 +106,28 @@ namespace PRL
             QL_NV = new Label();
             Content = new Panel();
             Panel_TT = new Panel();
-            buttonCustom15 = new ButtonCustom();
-            buttonCustom14 = new ButtonCustom();
+            TT_Btn_ThanhToan = new ButtonCustom();
+            TT_Btn_An = new ButtonCustom();
             TT_poisonDataGridView3 = new ReaLTaiizor.Controls.PoisonDataGridView();
-            buttonCustom13 = new ButtonCustom();
+            TT_Btn_Sua = new ButtonCustom();
             hopeGroupBox3 = new ReaLTaiizor.Controls.HopeGroupBox();
+            airSeparator2 = new ReaLTaiizor.Controls.AirSeparator();
             airSeparator1 = new ReaLTaiizor.Controls.AirSeparator();
-            textBox3 = new TextBox();
-            label33 = new Label();
-            label32 = new Label();
-            label31 = new Label();
+            txtChiPhiKhac = new TextBox();
+            label_b = new Label();
+            label32_ax = new Label();
+            label31_sv = new Label();
             panel2 = new Panel();
-            label22 = new Label();
-            label30 = new Label();
-            label29 = new Label();
-            label28 = new Label();
-            label27 = new Label();
-            label26 = new Label();
-            label25 = new Label();
-            label24 = new Label();
-            label23 = new Label();
-            label21 = new Label();
+            TT_Label_DVSD = new Label();
+            TT_Label_TongTien = new Label();
+            label29_az = new Label();
+            TT_Label_NguoiThanhToan = new Label();
+            label27_a = new Label();
+            TT_Label_ChiPhiKhac = new Label();
+            TT_Label_ThoiGian = new Label();
+            TT_Label_GhiChu = new Label();
+            TT_Label_GiaTien = new Label();
+            TT_Label_KhachHang = new Label();
             Panel_ThongKe = new SplitContainer();
             Panel_L = new Panel();
             bigLabel19 = new ReaLTaiizor.Controls.BigLabel();
@@ -265,7 +266,7 @@ namespace PRL
             LK_ElipseGrView_SuaHuyLich = new Bunifu.Framework.UI.BunifuElipse(components);
             DV_ELipseRichtextBox_MoTa = new Bunifu.Framework.UI.BunifuElipse(components);
             TT_ElipsGrid = new Bunifu.Framework.UI.BunifuElipse(components);
-            airSeparator2 = new ReaLTaiizor.Controls.AirSeparator();
+            txtGhiChu = new TextBox();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -1485,53 +1486,53 @@ namespace PRL
             // 
             // Panel_TT
             // 
-            Panel_TT.Controls.Add(buttonCustom15);
-            Panel_TT.Controls.Add(buttonCustom14);
+            Panel_TT.Controls.Add(TT_Btn_ThanhToan);
+            Panel_TT.Controls.Add(TT_Btn_An);
             Panel_TT.Controls.Add(TT_poisonDataGridView3);
-            Panel_TT.Controls.Add(buttonCustom13);
+            Panel_TT.Controls.Add(TT_Btn_Sua);
             Panel_TT.Controls.Add(hopeGroupBox3);
             Panel_TT.Location = new Point(25, 10);
             Panel_TT.Name = "Panel_TT";
             Panel_TT.Size = new Size(1606, 887);
             Panel_TT.TabIndex = 0;
             // 
-            // buttonCustom15
+            // TT_Btn_ThanhToan
             // 
-            buttonCustom15.BackColor = Color.MediumSlateBlue;
-            buttonCustom15.BackgroundColor = Color.MediumSlateBlue;
-            buttonCustom15.BorderColor = Color.PaleVioletRed;
-            buttonCustom15.BorderRadius = 20;
-            buttonCustom15.BorderSize = 0;
-            buttonCustom15.FlatAppearance.BorderSize = 0;
-            buttonCustom15.FlatStyle = FlatStyle.Flat;
-            buttonCustom15.ForeColor = Color.White;
-            buttonCustom15.IDSelected = null;
-            buttonCustom15.Location = new Point(911, 628);
-            buttonCustom15.Name = "buttonCustom15";
-            buttonCustom15.Size = new Size(188, 50);
-            buttonCustom15.TabIndex = 5;
-            buttonCustom15.Text = "buttonCustom15";
-            buttonCustom15.TextColor = Color.White;
-            buttonCustom15.UseVisualStyleBackColor = false;
+            TT_Btn_ThanhToan.BackColor = Color.MediumSlateBlue;
+            TT_Btn_ThanhToan.BackgroundColor = Color.MediumSlateBlue;
+            TT_Btn_ThanhToan.BorderColor = Color.PaleVioletRed;
+            TT_Btn_ThanhToan.BorderRadius = 20;
+            TT_Btn_ThanhToan.BorderSize = 0;
+            TT_Btn_ThanhToan.FlatAppearance.BorderSize = 0;
+            TT_Btn_ThanhToan.FlatStyle = FlatStyle.Flat;
+            TT_Btn_ThanhToan.ForeColor = Color.White;
+            TT_Btn_ThanhToan.IDSelected = null;
+            TT_Btn_ThanhToan.Location = new Point(987, 631);
+            TT_Btn_ThanhToan.Name = "TT_Btn_ThanhToan";
+            TT_Btn_ThanhToan.Size = new Size(188, 50);
+            TT_Btn_ThanhToan.TabIndex = 5;
+            TT_Btn_ThanhToan.Text = "Thanh toán";
+            TT_Btn_ThanhToan.TextColor = Color.White;
+            TT_Btn_ThanhToan.UseVisualStyleBackColor = false;
             // 
-            // buttonCustom14
+            // TT_Btn_An
             // 
-            buttonCustom14.BackColor = Color.MediumSlateBlue;
-            buttonCustom14.BackgroundColor = Color.MediumSlateBlue;
-            buttonCustom14.BorderColor = Color.PaleVioletRed;
-            buttonCustom14.BorderRadius = 20;
-            buttonCustom14.BorderSize = 0;
-            buttonCustom14.FlatAppearance.BorderSize = 0;
-            buttonCustom14.FlatStyle = FlatStyle.Flat;
-            buttonCustom14.ForeColor = Color.White;
-            buttonCustom14.IDSelected = null;
-            buttonCustom14.Location = new Point(506, 443);
-            buttonCustom14.Name = "buttonCustom14";
-            buttonCustom14.Size = new Size(188, 50);
-            buttonCustom14.TabIndex = 4;
-            buttonCustom14.Text = "buttonCustom14";
-            buttonCustom14.TextColor = Color.White;
-            buttonCustom14.UseVisualStyleBackColor = false;
+            TT_Btn_An.BackColor = Color.MediumSlateBlue;
+            TT_Btn_An.BackgroundColor = Color.MediumSlateBlue;
+            TT_Btn_An.BorderColor = Color.PaleVioletRed;
+            TT_Btn_An.BorderRadius = 20;
+            TT_Btn_An.BorderSize = 0;
+            TT_Btn_An.FlatAppearance.BorderSize = 0;
+            TT_Btn_An.FlatStyle = FlatStyle.Flat;
+            TT_Btn_An.ForeColor = Color.White;
+            TT_Btn_An.IDSelected = null;
+            TT_Btn_An.Location = new Point(730, 440);
+            TT_Btn_An.Name = "TT_Btn_An";
+            TT_Btn_An.Size = new Size(188, 50);
+            TT_Btn_An.TabIndex = 4;
+            TT_Btn_An.Text = "Ẩn";
+            TT_Btn_An.TextColor = Color.White;
+            TT_Btn_An.UseVisualStyleBackColor = false;
             // 
             // TT_poisonDataGridView3
             // 
@@ -1579,45 +1580,46 @@ namespace PRL
             TT_poisonDataGridView3.TabIndex = 3;
             TT_poisonDataGridView3.CellContentClick += poisonDataGridView3_CellContentClick;
             // 
-            // buttonCustom13
+            // TT_Btn_Sua
             // 
-            buttonCustom13.BackColor = Color.MediumSlateBlue;
-            buttonCustom13.BackgroundColor = Color.MediumSlateBlue;
-            buttonCustom13.BorderColor = Color.PaleVioletRed;
-            buttonCustom13.BorderRadius = 20;
-            buttonCustom13.BorderSize = 0;
-            buttonCustom13.FlatAppearance.BorderSize = 0;
-            buttonCustom13.FlatStyle = FlatStyle.Flat;
-            buttonCustom13.ForeColor = Color.White;
-            buttonCustom13.IDSelected = null;
-            buttonCustom13.Location = new Point(278, 440);
-            buttonCustom13.Name = "buttonCustom13";
-            buttonCustom13.Size = new Size(188, 50);
-            buttonCustom13.TabIndex = 2;
-            buttonCustom13.Text = "buttonCustom13";
-            buttonCustom13.TextColor = Color.White;
-            buttonCustom13.UseVisualStyleBackColor = false;
+            TT_Btn_Sua.BackColor = Color.MediumSlateBlue;
+            TT_Btn_Sua.BackgroundColor = Color.MediumSlateBlue;
+            TT_Btn_Sua.BorderColor = Color.PaleVioletRed;
+            TT_Btn_Sua.BorderRadius = 20;
+            TT_Btn_Sua.BorderSize = 0;
+            TT_Btn_Sua.FlatAppearance.BorderSize = 0;
+            TT_Btn_Sua.FlatStyle = FlatStyle.Flat;
+            TT_Btn_Sua.ForeColor = Color.White;
+            TT_Btn_Sua.IDSelected = null;
+            TT_Btn_Sua.Location = new Point(492, 441);
+            TT_Btn_Sua.Name = "TT_Btn_Sua";
+            TT_Btn_Sua.Size = new Size(188, 50);
+            TT_Btn_Sua.TabIndex = 2;
+            TT_Btn_Sua.Text = "Sửa";
+            TT_Btn_Sua.TextColor = Color.White;
+            TT_Btn_Sua.UseVisualStyleBackColor = false;
             // 
             // hopeGroupBox3
             // 
             hopeGroupBox3.BackColor = Color.White;
             hopeGroupBox3.BorderColor = Color.FromArgb(220, 223, 230);
+            hopeGroupBox3.Controls.Add(txtGhiChu);
             hopeGroupBox3.Controls.Add(airSeparator2);
             hopeGroupBox3.Controls.Add(airSeparator1);
-            hopeGroupBox3.Controls.Add(textBox3);
-            hopeGroupBox3.Controls.Add(label33);
-            hopeGroupBox3.Controls.Add(label32);
-            hopeGroupBox3.Controls.Add(label31);
+            hopeGroupBox3.Controls.Add(txtChiPhiKhac);
+            hopeGroupBox3.Controls.Add(label_b);
+            hopeGroupBox3.Controls.Add(label32_ax);
+            hopeGroupBox3.Controls.Add(label31_sv);
             hopeGroupBox3.Controls.Add(panel2);
-            hopeGroupBox3.Controls.Add(label30);
-            hopeGroupBox3.Controls.Add(label29);
-            hopeGroupBox3.Controls.Add(label28);
-            hopeGroupBox3.Controls.Add(label27);
-            hopeGroupBox3.Controls.Add(label26);
-            hopeGroupBox3.Controls.Add(label25);
-            hopeGroupBox3.Controls.Add(label24);
-            hopeGroupBox3.Controls.Add(label23);
-            hopeGroupBox3.Controls.Add(label21);
+            hopeGroupBox3.Controls.Add(TT_Label_TongTien);
+            hopeGroupBox3.Controls.Add(label29_az);
+            hopeGroupBox3.Controls.Add(TT_Label_NguoiThanhToan);
+            hopeGroupBox3.Controls.Add(label27_a);
+            hopeGroupBox3.Controls.Add(TT_Label_ChiPhiKhac);
+            hopeGroupBox3.Controls.Add(TT_Label_ThoiGian);
+            hopeGroupBox3.Controls.Add(TT_Label_GhiChu);
+            hopeGroupBox3.Controls.Add(TT_Label_GiaTien);
+            hopeGroupBox3.Controls.Add(TT_Label_KhachHang);
             hopeGroupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             hopeGroupBox3.ForeColor = Color.FromArgb(48, 49, 51);
             hopeGroupBox3.LineColor = Color.FromArgb(220, 223, 230);
@@ -1629,6 +1631,20 @@ namespace PRL
             hopeGroupBox3.TabStop = false;
             hopeGroupBox3.Text = "hopeGroupBox3";
             hopeGroupBox3.ThemeColor = Color.PapayaWhip;
+            // 
+            // airSeparator2
+            // 
+            airSeparator2.BackColor = Color.Black;
+            airSeparator2.Customization = "";
+            airSeparator2.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            airSeparator2.Image = null;
+            airSeparator2.Location = new Point(132, 303);
+            airSeparator2.Name = "airSeparator2";
+            airSeparator2.NoRounding = false;
+            airSeparator2.Size = new Size(327, 1);
+            airSeparator2.TabIndex = 27;
+            airSeparator2.Text = "airSeparator2";
+            airSeparator2.Transparent = false;
             // 
             // airSeparator1
             // 
@@ -1644,153 +1660,153 @@ namespace PRL
             airSeparator1.Text = "airSeparator1";
             airSeparator1.Transparent = false;
             // 
-            // textBox3
+            // txtChiPhiKhac
             // 
-            textBox3.BackColor = Color.PapayaWhip;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(161, 334);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(311, 27);
-            textBox3.TabIndex = 25;
+            txtChiPhiKhac.BackColor = Color.PapayaWhip;
+            txtChiPhiKhac.BorderStyle = BorderStyle.None;
+            txtChiPhiKhac.Location = new Point(161, 334);
+            txtChiPhiKhac.Name = "txtChiPhiKhac";
+            txtChiPhiKhac.Size = new Size(311, 27);
+            txtChiPhiKhac.TabIndex = 25;
             // 
-            // label33
+            // label_b
             // 
-            label33.AutoSize = true;
-            label33.BackColor = Color.PapayaWhip;
-            label33.Location = new Point(161, 219);
-            label33.Name = "label33";
-            label33.Size = new Size(76, 28);
-            label33.TabIndex = 20;
-            label33.Text = "label33";
+            label_b.AutoSize = true;
+            label_b.BackColor = Color.PapayaWhip;
+            label_b.Location = new Point(161, 219);
+            label_b.Name = "label_b";
+            label_b.Size = new Size(76, 28);
+            label_b.TabIndex = 20;
+            label_b.Text = "label33";
             // 
-            // label32
+            // label32_ax
             // 
-            label32.AutoSize = true;
-            label32.BackColor = Color.PapayaWhip;
-            label32.Location = new Point(161, 397);
-            label32.Name = "label32";
-            label32.Size = new Size(76, 28);
-            label32.TabIndex = 19;
-            label32.Text = "label32";
+            label32_ax.AutoSize = true;
+            label32_ax.BackColor = Color.PapayaWhip;
+            label32_ax.Location = new Point(161, 397);
+            label32_ax.Name = "label32_ax";
+            label32_ax.Size = new Size(76, 28);
+            label32_ax.TabIndex = 19;
+            label32_ax.Text = "label32";
             // 
-            // label31
+            // label31_sv
             // 
-            label31.AutoSize = true;
-            label31.BackColor = Color.PapayaWhip;
-            label31.Location = new Point(208, 508);
-            label31.Name = "label31";
-            label31.Size = new Size(76, 28);
-            label31.TabIndex = 18;
-            label31.Text = "label31";
+            label31_sv.AutoSize = true;
+            label31_sv.BackColor = Color.PapayaWhip;
+            label31_sv.Location = new Point(208, 508);
+            label31_sv.Name = "label31_sv";
+            label31_sv.Size = new Size(76, 28);
+            label31_sv.TabIndex = 18;
+            label31_sv.Text = "label31";
             // 
             // panel2
             // 
             panel2.BackColor = Color.PapayaWhip;
-            panel2.Controls.Add(label22);
+            panel2.Controls.Add(TT_Label_DVSD);
             panel2.Location = new Point(15, 83);
             panel2.Name = "panel2";
             panel2.Size = new Size(444, 120);
             panel2.TabIndex = 17;
             // 
-            // label22
+            // TT_Label_DVSD
             // 
-            label22.AutoSize = true;
-            label22.BackColor = Color.PapayaWhip;
-            label22.Location = new Point(3, 7);
-            label22.Name = "label22";
-            label22.Size = new Size(167, 28);
-            label22.TabIndex = 8;
-            label22.Text = "Dịch vụ sử dụng : ";
+            TT_Label_DVSD.AutoSize = true;
+            TT_Label_DVSD.BackColor = Color.PapayaWhip;
+            TT_Label_DVSD.Location = new Point(3, 7);
+            TT_Label_DVSD.Name = "TT_Label_DVSD";
+            TT_Label_DVSD.Size = new Size(167, 28);
+            TT_Label_DVSD.TabIndex = 8;
+            TT_Label_DVSD.Text = "Dịch vụ sử dụng : ";
             // 
-            // label30
+            // TT_Label_TongTien
             // 
-            label30.AutoSize = true;
-            label30.BackColor = Color.PapayaWhip;
-            label30.Location = new Point(15, 390);
-            label30.Name = "label30";
-            label30.Size = new Size(104, 28);
-            label30.TabIndex = 16;
-            label30.Text = "Tổng tiền :";
+            TT_Label_TongTien.AutoSize = true;
+            TT_Label_TongTien.BackColor = Color.PapayaWhip;
+            TT_Label_TongTien.Location = new Point(15, 390);
+            TT_Label_TongTien.Name = "TT_Label_TongTien";
+            TT_Label_TongTien.Size = new Size(104, 28);
+            TT_Label_TongTien.TabIndex = 16;
+            TT_Label_TongTien.Text = "Tổng tiền :";
             // 
-            // label29
+            // label29_az
             // 
-            label29.AutoSize = true;
-            label29.BackColor = Color.PapayaWhip;
-            label29.Location = new Point(227, 450);
-            label29.Name = "label29";
-            label29.Size = new Size(76, 28);
-            label29.TabIndex = 15;
-            label29.Text = "label29";
+            label29_az.AutoSize = true;
+            label29_az.BackColor = Color.PapayaWhip;
+            label29_az.Location = new Point(227, 450);
+            label29_az.Name = "label29_az";
+            label29_az.Size = new Size(76, 28);
+            label29_az.TabIndex = 15;
+            label29_az.Text = "label29";
             // 
-            // label28
+            // TT_Label_NguoiThanhToan
             // 
-            label28.AutoSize = true;
-            label28.BackColor = Color.PapayaWhip;
-            label28.Location = new Point(15, 504);
-            label28.Name = "label28";
-            label28.Size = new Size(177, 28);
-            label28.TabIndex = 14;
-            label28.Text = "Người thanh toán :";
+            TT_Label_NguoiThanhToan.AutoSize = true;
+            TT_Label_NguoiThanhToan.BackColor = Color.PapayaWhip;
+            TT_Label_NguoiThanhToan.Location = new Point(15, 504);
+            TT_Label_NguoiThanhToan.Name = "TT_Label_NguoiThanhToan";
+            TT_Label_NguoiThanhToan.Size = new Size(177, 28);
+            TT_Label_NguoiThanhToan.TabIndex = 14;
+            TT_Label_NguoiThanhToan.Text = "Người thanh toán :";
             // 
-            // label27
+            // label27_a
             // 
-            label27.AutoSize = true;
-            label27.BackColor = Color.PapayaWhip;
-            label27.Location = new Point(187, 33);
-            label27.Name = "label27";
-            label27.Size = new Size(76, 28);
-            label27.TabIndex = 13;
-            label27.Text = "label27";
+            label27_a.AutoSize = true;
+            label27_a.BackColor = Color.PapayaWhip;
+            label27_a.Location = new Point(187, 33);
+            label27_a.Name = "label27_a";
+            label27_a.Size = new Size(76, 28);
+            label27_a.TabIndex = 13;
+            label27_a.Text = "label27";
             // 
-            // label26
+            // TT_Label_ChiPhiKhac
             // 
-            label26.AutoSize = true;
-            label26.BackColor = Color.PapayaWhip;
-            label26.Location = new Point(15, 333);
-            label26.Name = "label26";
-            label26.Size = new Size(127, 28);
-            label26.TabIndex = 12;
-            label26.Text = "Chi phí khác :";
+            TT_Label_ChiPhiKhac.AutoSize = true;
+            TT_Label_ChiPhiKhac.BackColor = Color.PapayaWhip;
+            TT_Label_ChiPhiKhac.Location = new Point(15, 333);
+            TT_Label_ChiPhiKhac.Name = "TT_Label_ChiPhiKhac";
+            TT_Label_ChiPhiKhac.Size = new Size(127, 28);
+            TT_Label_ChiPhiKhac.TabIndex = 12;
+            TT_Label_ChiPhiKhac.Text = "Chi phí khác :";
             // 
-            // label25
+            // TT_Label_ThoiGian
             // 
-            label25.AutoSize = true;
-            label25.BackColor = Color.PapayaWhip;
-            label25.Location = new Point(15, 447);
-            label25.Name = "label25";
-            label25.Size = new Size(202, 28);
-            label25.TabIndex = 11;
-            label25.Text = "Thời gian thanh toán :";
+            TT_Label_ThoiGian.AutoSize = true;
+            TT_Label_ThoiGian.BackColor = Color.PapayaWhip;
+            TT_Label_ThoiGian.Location = new Point(15, 447);
+            TT_Label_ThoiGian.Name = "TT_Label_ThoiGian";
+            TT_Label_ThoiGian.Size = new Size(202, 28);
+            TT_Label_ThoiGian.TabIndex = 11;
+            TT_Label_ThoiGian.Text = "Thời gian thanh toán :";
             // 
-            // label24
+            // TT_Label_GhiChu
             // 
-            label24.AutoSize = true;
-            label24.BackColor = Color.PapayaWhip;
-            label24.Location = new Point(15, 276);
-            label24.Name = "label24";
-            label24.Size = new Size(87, 28);
-            label24.TabIndex = 10;
-            label24.Text = "Ghi chú :";
+            TT_Label_GhiChu.AutoSize = true;
+            TT_Label_GhiChu.BackColor = Color.PapayaWhip;
+            TT_Label_GhiChu.Location = new Point(15, 276);
+            TT_Label_GhiChu.Name = "TT_Label_GhiChu";
+            TT_Label_GhiChu.Size = new Size(87, 28);
+            TT_Label_GhiChu.TabIndex = 10;
+            TT_Label_GhiChu.Text = "Ghi chú :";
             // 
-            // label23
+            // TT_Label_GiaTien
             // 
-            label23.AutoSize = true;
-            label23.BackColor = Color.PapayaWhip;
-            label23.Location = new Point(15, 219);
-            label23.Name = "label23";
-            label23.Size = new Size(88, 28);
-            label23.TabIndex = 9;
-            label23.Text = "Giá tiền :";
+            TT_Label_GiaTien.AutoSize = true;
+            TT_Label_GiaTien.BackColor = Color.PapayaWhip;
+            TT_Label_GiaTien.Location = new Point(15, 219);
+            TT_Label_GiaTien.Name = "TT_Label_GiaTien";
+            TT_Label_GiaTien.Size = new Size(88, 28);
+            TT_Label_GiaTien.TabIndex = 9;
+            TT_Label_GiaTien.Text = "Giá tiền :";
             // 
-            // label21
+            // TT_Label_KhachHang
             // 
-            label21.AutoSize = true;
-            label21.BackColor = Color.PapayaWhip;
-            label21.Location = new Point(15, 32);
-            label21.Name = "label21";
-            label21.Size = new Size(155, 28);
-            label21.TabIndex = 5;
-            label21.Text = "Tên khách hàng :";
+            TT_Label_KhachHang.AutoSize = true;
+            TT_Label_KhachHang.BackColor = Color.PapayaWhip;
+            TT_Label_KhachHang.Location = new Point(15, 32);
+            TT_Label_KhachHang.Name = "TT_Label_KhachHang";
+            TT_Label_KhachHang.Size = new Size(155, 28);
+            TT_Label_KhachHang.TabIndex = 5;
+            TT_Label_KhachHang.Text = "Tên khách hàng :";
             // 
             // Panel_ThongKe
             // 
@@ -4399,19 +4415,14 @@ namespace PRL
             TT_ElipsGrid.ElipseRadius = 20;
             TT_ElipsGrid.TargetControl = TT_poisonDataGridView3;
             // 
-            // airSeparator2
+            // txtGhiChu
             // 
-            airSeparator2.BackColor = Color.Black;
-            airSeparator2.Customization = "";
-            airSeparator2.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            airSeparator2.Image = null;
-            airSeparator2.Location = new Point(132, 303);
-            airSeparator2.Name = "airSeparator2";
-            airSeparator2.NoRounding = false;
-            airSeparator2.Size = new Size(327, 1);
-            airSeparator2.TabIndex = 27;
-            airSeparator2.Text = "airSeparator2";
-            airSeparator2.Transparent = false;
+            txtGhiChu.BackColor = Color.PapayaWhip;
+            txtGhiChu.BorderStyle = BorderStyle.None;
+            txtGhiChu.Location = new Point(141, 275);
+            txtGhiChu.Name = "txtGhiChu";
+            txtGhiChu.Size = new Size(311, 27);
+            txtGhiChu.TabIndex = 28;
             // 
             // Admin
             // 
@@ -4684,26 +4695,27 @@ namespace PRL
         private Panel Panel_TT;
         private ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox3;
         private ReaLTaiizor.Controls.PoisonDataGridView TT_poisonDataGridView3;
-        private ButtonCustom buttonCustom13;
+        private ButtonCustom TT_Btn_Sua;
         private Bunifu.Framework.UI.BunifuElipse TT_ElipsGrid;
-        private Label label21;
-        private Label label25;
-        private Label label24;
-        private Label label23;
-        private Label label22;
-        private Label label28;
-        private Label label27;
-        private Label label26;
-        private ButtonCustom buttonCustom15;
-        private ButtonCustom buttonCustom14;
-        private Label label29;
-        private Label label30;
+        private Label TT_Label_KhachHang;
+        private Label TT_Label_ThoiGian;
+        private Label TT_Label_GhiChu;
+        private Label TT_Label_GiaTien;
+        private Label TT_Label_DVSD;
+        private Label TT_Label_NguoiThanhToan;
+        private Label label27_a;
+        private Label TT_Label_ChiPhiKhac;
+        private ButtonCustom TT_Btn_ThanhToan;
+        private ButtonCustom TT_Btn_An;
+        private Label label29_az;
+        private Label TT_Label_TongTien;
         private Panel panel2;
         private ReaLTaiizor.Controls.AirSeparator airSeparator1;
-        private TextBox textBox3;
-        private Label label33;
-        private Label label32;
-        private Label label31;
+        private TextBox txtChiPhiKhac;
+        private Label label_b;
+        private Label label32_ax;
+        private Label label31_sv;
         private ReaLTaiizor.Controls.AirSeparator airSeparator2;
+        private TextBox txtGhiChu;
     }
 }
