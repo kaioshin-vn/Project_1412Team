@@ -208,5 +208,31 @@ namespace PRL
         {
 
         }
+
+        private void buttonCustom12_Click_1(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Panel_L.Visible = true;
+            Content.Controls.Add(Panel_L);
+        }
+
+        private void bigLabel12_Click(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Panel_NV.Visible = true;
+            Content.Controls.Add(Panel_NV);
+        }
+
+        private void ThongKe_Click(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Panel_ThongKe.Visible = true;
+            Content.Controls.Add(Panel_ThongKe);
+        }
+
+        private void ThanhToan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
