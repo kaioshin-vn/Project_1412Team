@@ -47,7 +47,7 @@ namespace PRL
         {
             Content.Controls.Clear();
             Panel_NV.Visible = true;
-            Content.Controls.Add(Panel_NV);
+            Content.Controls.Add(Panel_TraKQ);
 
         }
 
