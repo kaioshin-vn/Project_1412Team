@@ -31,6 +31,8 @@ namespace PRL
         private void Admin_Load(object sender, EventArgs e)
         {
             Content.Controls.Clear();
+            Panel_ManHinhCho.Visible = true;
+            Content.Controls.Add(Panel_ManHinhCho);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -223,6 +225,7 @@ namespace PRL
             Content.Controls.Clear();
             Panel_ThongKe.Visible = true;
             Content.Controls.Add(Panel_ThongKe);
+            //checkedListBox1.
         }
 
         private void ThanhToan_Click(object sender, EventArgs e)
@@ -238,6 +241,42 @@ namespace PRL
         private void poisonDataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void bigLabel20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel_TK_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            Content.Controls.Clear();
+            Panel_TK.Visible = true;
+            Content.Controls.Add(Panel_TK);
+        }
+
+        private void ThongBao_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Cho phép đăng nhập?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Ok tài khoản đã được cho phép đăng nhập!!");
+            }
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hãy bắn 50k vào tài khoản 0978040960 MB Bank để được hỗ trợ bạn nhé !!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
