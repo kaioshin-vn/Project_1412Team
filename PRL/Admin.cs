@@ -13,7 +13,7 @@ namespace PRL
 {
     public partial class Admin : Form
     {
-        public Admin(Staff staff, Login login)
+        public Admin(NhanVien staff, Login login)
         {
             FormLogin = login;
             user = staff;
@@ -25,7 +25,7 @@ namespace PRL
             InitializeComponent();
         }
 
-        Staff user;
+        NhanVien user;
         Login FormLogin;
 
         private void Admin_Load(object sender, EventArgs e)
@@ -285,6 +285,11 @@ namespace PRL
         }
 
         private void txtGiaTien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nav_Option_Paint(object sender, PaintEventArgs e)
         {
 
         }

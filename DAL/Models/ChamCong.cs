@@ -8,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    [Table("HoSo")]
-    public class HealtRecord
+    [Table("ChamCong")]
+    public class ChamCong
     {
-        //Thọ
         [Key]
         public Guid Id { get; set; }
-        public string? Result { get; set; } // kết quả
-        public string? Notification { get; set; } 
-        public virtual ICollection<MedicalBill>? MedicalBills { get; set; }
-
+        [Required]
+        public string NameNV { get; set; }
+        public int NgayCong { get; set; }
+        public decimal Luong { get; set; }
+        // quan hệ
+        public virtual ICollection<NhanVien>? Staff { get; set; }
     }
 }

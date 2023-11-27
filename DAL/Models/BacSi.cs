@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("BacSi")]
-    public class Doctor
+    public class BacSi
     {
         [Key]
         public Guid Id { get; set; }
@@ -29,8 +29,8 @@ namespace DAL.Models
         public bool visible { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual ICollection<Staff>? Staff { get; set; }
-        public virtual StatusDoctor? StatusdDoctor { get; set; }
-        public virtual MedicalBill? MedicaBill { get; set; }
+        public virtual ICollection<NhanVien>? Staff { get; set; }
+        public virtual TrangThaiBacSi? StatusdDoctor { get; set; }
+        public virtual PhieuKham? MedicaBill { get; set; }
     }
 }

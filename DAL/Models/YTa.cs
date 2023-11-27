@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("YTa")]
-    public class Nurse
+    public class YTa
     {
         [Key]
         public Guid Id { get; set; }
@@ -25,11 +25,11 @@ namespace DAL.Models
         public bool Visible { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual Staff Staff { get; set; }
+        public virtual NhanVien Staff { get; set; }
         //public virtual MedicaBill MedicaBill { get; set; }
 
         // Thọ
-        public virtual Bill? Bill { get; set; }
+        public virtual HoaDon? Bill { get; set; }
 
     }
 }

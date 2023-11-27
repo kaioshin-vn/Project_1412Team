@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("KhachHang")]
-    public class Customer
+    public class KhachHang
     {
         [Key]
         public Guid Id { get; set; }
@@ -32,8 +32,8 @@ namespace DAL.Models
         //public virtual ICollection<MedicalBill> MedicalBills { get; set; }
 
         // Thọ
-        public virtual Bill? Bills { get; set; }
-        public virtual MedicalBill? MedicalBill { get; set; }
+        public virtual HoaDon? Bills { get; set; }
+        public virtual PhieuKham? MedicalBill { get; set; }
 
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("Luong")]
-    public class Salary
+    public class Luong
     {
         [Key]
         public Guid Id { get; set; }
@@ -20,7 +20,7 @@ namespace DAL.Models
 
 
         // quan hệ
-        public virtual Staff Staff { get; set; }
-        public virtual ICollection< Statiscal>? Statiscals { get; set; }
+        public virtual NhanVien Staff { get; set; }
+        public virtual ICollection< ThongKe>? Statiscals { get; set; }
     }
 }

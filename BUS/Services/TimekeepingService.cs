@@ -18,7 +18,7 @@ namespace B_BUS.Services
         {
             _repos = new TimekeepingRepo();
         }
-        public List<TimeKeeping> GetAll(string search)
+        public List<ChamCong> GetAll(string search)
         {
             if(search == null)
             {
@@ -27,7 +27,7 @@ namespace B_BUS.Services
             return _repos.GetAll().Where(x => x.NameNV.Trim().ToLower().Contains(search)).ToList();
         }
 
-        public string AddNVTime(TimeKeeping nvt)
+        public string AddNVTime(ChamCong nvt)
         {
             if (_repos.AddNVTime(nvt) == true)
             {
@@ -35,11 +35,11 @@ namespace B_BUS.Services
             }
             return "Thêm thất bại";
         }
-        public string UpdateNVTime(TimeKeeping nvt)
+        public string UpdateNVTime(ChamCong nvt)
         {
             return "Để sau";
         }
-        public string DeleteNVTime(TimeKeeping nvt)
+        public string DeleteNVTime(ChamCong nvt)
         {
             var clone = _repos.GetAll().FirstOrDefault(x => x.Id == nvt.Id);
             if (_repos.DeleteNVTime(clone) == true)

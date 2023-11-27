@@ -55,10 +55,10 @@ namespace PRL
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
-            label3 = new Label();
-            label2 = new Label();
-            buttonCustom1 = new ButtonCustom();
-            ThongBao = new Label();
+            QL_TroGiup = new Label();
+            QL_TaiKhoan = new Label();
+            QL_DangXuat = new ButtonCustom();
+            QL_ThongBao = new Label();
             LoiChao = new Label();
             Panel_KH = new Panel();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
@@ -80,18 +80,16 @@ namespace PRL
             KH_Btn_Sua = new ButtonCustom();
             Panel_NV = new Panel();
             label6 = new Label();
-            NV_Btn_Update = new ButtonCustom();
-            bigTextBox2 = new ReaLTaiizor.Controls.BigTextBox();
+            NV_Btn_Sua = new ButtonCustom();
+            NV_Txt_TimKiem = new ReaLTaiizor.Controls.BigTextBox();
             NV_Btn_Them = new ButtonCustom();
-            label5 = new Label();
-            cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
-            dungeonComboBox6 = new ReaLTaiizor.Controls.DungeonComboBox();
-            buttonCustom12 = new ButtonCustom();
-            NV_combo_CaLam = new ReaLTaiizor.Controls.DungeonComboBox();
-            dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            NV_Btn_TimKiem = new Label();
+            NV_GrBox = new ReaLTaiizor.Controls.CyberGroupBox();
+            NV_Combo_GioiTinh = new ReaLTaiizor.Controls.DungeonComboBox();
+            NV_Btn_XemLuong = new ButtonCustom();
             NV_combo_ChucVu = new ReaLTaiizor.Controls.DungeonComboBox();
             dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            NV_Txt_Pass = new ReaLTaiizor.Controls.CyberRichTextBox();
+            NV_Txt_MatKhau = new ReaLTaiizor.Controls.CyberRichTextBox();
             NV_Txt_Sdt = new ReaLTaiizor.Controls.CyberRichTextBox();
             NV_Txt_DiaChi = new ReaLTaiizor.Controls.CyberRichTextBox();
             NV_Text_HoTen = new ReaLTaiizor.Controls.CyberRichTextBox();
@@ -104,7 +102,7 @@ namespace PRL
             NV_Btn_An = new ButtonCustom();
             NV_RichTxt_MoTa = new ReaLTaiizor.Controls.CyberRichTextBox();
             Nav_Option = new Panel();
-            ThongKe = new Label();
+            QL_ThongKe = new Label();
             QL_LichKham = new Label();
             QL_DV = new Label();
             QL_ThanhToan = new Label();
@@ -116,22 +114,22 @@ namespace PRL
             TT_Btn_An = new ButtonCustom();
             TT_poisonDataGridView3 = new ReaLTaiizor.Controls.PoisonDataGridView();
             TT_Btn_Sua = new ButtonCustom();
-            hopeGroupBox3 = new ReaLTaiizor.Controls.HopeGroupBox();
-            txtNguoiTT = new TextBox();
-            txtThoiGianTT = new TextBox();
-            txtTongTien = new TextBox();
-            txtChiPhiKhac = new TextBox();
-            txtGhiChu = new TextBox();
+            TT_GrBox_ThanhToan = new ReaLTaiizor.Controls.HopeGroupBox();
+            TT_txt_NguoiTT = new TextBox();
+            TT_txt_ThoiGianTT = new TextBox();
+            TT_txt_TongTien = new TextBox();
+            TT_txt_ChiPhiKhac = new TextBox();
+            TT_txt_GhiChu = new TextBox();
             airSeparator9 = new ReaLTaiizor.Controls.AirSeparator();
             airSeparator8 = new ReaLTaiizor.Controls.AirSeparator();
             airSeparator7 = new ReaLTaiizor.Controls.AirSeparator();
             airSeparator6 = new ReaLTaiizor.Controls.AirSeparator();
             airSeparator5 = new ReaLTaiizor.Controls.AirSeparator();
-            txtGiaTien = new TextBox();
+            TT_txt_GiaTien = new TextBox();
             airSeparator2 = new ReaLTaiizor.Controls.AirSeparator();
             airSeparator1 = new ReaLTaiizor.Controls.AirSeparator();
-            txtTenKH = new TextBox();
-            panel2 = new Panel();
+            TT_txt_TenKH = new TextBox();
+            TT_Panel_DichVuSD = new Panel();
             TT_Label_DVSD = new Label();
             TT_Label_TongTien = new Label();
             TT_Label_NguoiThanhToan = new Label();
@@ -316,14 +314,14 @@ namespace PRL
             ((System.ComponentModel.ISupportInitialize)KH_GridView).BeginInit();
             cyberGroupBox2.SuspendLayout();
             Panel_NV.SuspendLayout();
-            cyberGroupBox1.SuspendLayout();
+            NV_GrBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)NV_GridView).BeginInit();
             Nav_Option.SuspendLayout();
             Content.SuspendLayout();
             Panel_TT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TT_poisonDataGridView3).BeginInit();
-            hopeGroupBox3.SuspendLayout();
-            panel2.SuspendLayout();
+            TT_GrBox_ThanhToan.SuspendLayout();
+            TT_Panel_DichVuSD.SuspendLayout();
             Panel_LK.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)poisonDataGridView1).BeginInit();
@@ -374,77 +372,77 @@ namespace PRL
             // Navigation
             // 
             Navigation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Navigation.BackColor = Color.FromArgb(128, 255, 230);
+            Navigation.BackColor = Color.FromArgb(128, 255, 255);
             Navigation.BorderStyle = BorderStyle.FixedSingle;
-            Navigation.Controls.Add(label3);
-            Navigation.Controls.Add(label2);
-            Navigation.Controls.Add(buttonCustom1);
-            Navigation.Controls.Add(ThongBao);
+            Navigation.Controls.Add(QL_TroGiup);
+            Navigation.Controls.Add(QL_TaiKhoan);
+            Navigation.Controls.Add(QL_DangXuat);
+            Navigation.Controls.Add(QL_ThongBao);
             Navigation.Controls.Add(LoiChao);
             Navigation.Location = new Point(276, -8);
             Navigation.Name = "Navigation";
             Navigation.Size = new Size(1449, 65);
             Navigation.TabIndex = 1;
             // 
-            // label3
+            // QL_TroGiup
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.Tomato;
-            label3.Location = new Point(1060, 24);
-            label3.Name = "label3";
-            label3.Size = new Size(84, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Trợ Giúp";
-            label3.Click += label3_Click_1;
+            QL_TroGiup.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            QL_TroGiup.AutoSize = true;
+            QL_TroGiup.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            QL_TroGiup.ForeColor = Color.Tomato;
+            QL_TroGiup.Location = new Point(1060, 24);
+            QL_TroGiup.Name = "QL_TroGiup";
+            QL_TroGiup.Size = new Size(84, 25);
+            QL_TroGiup.TabIndex = 4;
+            QL_TroGiup.Text = "Trợ Giúp";
+            QL_TroGiup.Click += label3_Click_1;
             // 
-            // label2
+            // QL_TaiKhoan
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.Tomato;
-            label2.Location = new Point(936, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 25);
-            label2.TabIndex = 3;
-            label2.Text = "Tài Khoản";
-            label2.Click += label2_Click_1;
+            QL_TaiKhoan.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            QL_TaiKhoan.AutoSize = true;
+            QL_TaiKhoan.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            QL_TaiKhoan.ForeColor = Color.Tomato;
+            QL_TaiKhoan.Location = new Point(936, 24);
+            QL_TaiKhoan.Name = "QL_TaiKhoan";
+            QL_TaiKhoan.Size = new Size(91, 25);
+            QL_TaiKhoan.TabIndex = 3;
+            QL_TaiKhoan.Text = "Tài Khoản";
+            QL_TaiKhoan.Click += label2_Click_1;
             // 
-            // buttonCustom1
+            // QL_DangXuat
             // 
-            buttonCustom1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonCustom1.BackColor = Color.LawnGreen;
-            buttonCustom1.BackgroundColor = Color.LawnGreen;
-            buttonCustom1.BorderColor = Color.PaleVioletRed;
-            buttonCustom1.BorderRadius = 20;
-            buttonCustom1.BorderSize = 2;
-            buttonCustom1.FlatAppearance.BorderSize = 0;
-            buttonCustom1.FlatStyle = FlatStyle.Flat;
-            buttonCustom1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom1.ForeColor = Color.LightCoral;
-            buttonCustom1.IDSelected = null;
-            buttonCustom1.Location = new Point(1293, 16);
-            buttonCustom1.Name = "buttonCustom1";
-            buttonCustom1.Size = new Size(127, 41);
-            buttonCustom1.TabIndex = 2;
-            buttonCustom1.Text = "Đăng Xuất";
-            buttonCustom1.TextColor = Color.LightCoral;
-            buttonCustom1.UseVisualStyleBackColor = false;
+            QL_DangXuat.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            QL_DangXuat.BackColor = Color.LawnGreen;
+            QL_DangXuat.BackgroundColor = Color.LawnGreen;
+            QL_DangXuat.BorderColor = Color.PaleVioletRed;
+            QL_DangXuat.BorderRadius = 20;
+            QL_DangXuat.BorderSize = 2;
+            QL_DangXuat.FlatAppearance.BorderSize = 0;
+            QL_DangXuat.FlatStyle = FlatStyle.Flat;
+            QL_DangXuat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            QL_DangXuat.ForeColor = Color.LightCoral;
+            QL_DangXuat.IDSelected = null;
+            QL_DangXuat.Location = new Point(1293, 16);
+            QL_DangXuat.Name = "QL_DangXuat";
+            QL_DangXuat.Size = new Size(127, 41);
+            QL_DangXuat.TabIndex = 2;
+            QL_DangXuat.Text = "Đăng Xuất";
+            QL_DangXuat.TextColor = Color.LightCoral;
+            QL_DangXuat.UseVisualStyleBackColor = false;
             // 
-            // ThongBao
+            // QL_ThongBao
             // 
-            ThongBao.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            ThongBao.AutoSize = true;
-            ThongBao.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            ThongBao.ForeColor = Color.Tomato;
-            ThongBao.Location = new Point(1172, 23);
-            ThongBao.Name = "ThongBao";
-            ThongBao.Size = new Size(101, 25);
-            ThongBao.TabIndex = 1;
-            ThongBao.Text = "Thông Báo";
-            ThongBao.Click += ThongBao_Click;
+            QL_ThongBao.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            QL_ThongBao.AutoSize = true;
+            QL_ThongBao.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            QL_ThongBao.ForeColor = Color.Tomato;
+            QL_ThongBao.Location = new Point(1172, 23);
+            QL_ThongBao.Name = "QL_ThongBao";
+            QL_ThongBao.Size = new Size(101, 25);
+            QL_ThongBao.TabIndex = 1;
+            QL_ThongBao.Text = "Thông Báo";
+            QL_ThongBao.Click += ThongBao_Click;
             // 
             // LoiChao
             // 
@@ -853,11 +851,11 @@ namespace PRL
             Panel_NV.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Panel_NV.BackColor = Color.FromArgb(192, 255, 255);
             Panel_NV.Controls.Add(label6);
-            Panel_NV.Controls.Add(NV_Btn_Update);
-            Panel_NV.Controls.Add(bigTextBox2);
+            Panel_NV.Controls.Add(NV_Btn_Sua);
+            Panel_NV.Controls.Add(NV_Txt_TimKiem);
             Panel_NV.Controls.Add(NV_Btn_Them);
-            Panel_NV.Controls.Add(label5);
-            Panel_NV.Controls.Add(cyberGroupBox1);
+            Panel_NV.Controls.Add(NV_Btn_TimKiem);
+            Panel_NV.Controls.Add(NV_GrBox);
             Panel_NV.Controls.Add(NV_GridView);
             Panel_NV.Controls.Add(NV_Btn_An);
             Panel_NV.Controls.Add(NV_RichTxt_MoTa);
@@ -879,42 +877,42 @@ namespace PRL
             label6.Text = "Thông tin thêm";
             label6.Click += label6_Click;
             // 
-            // NV_Btn_Update
+            // NV_Btn_Sua
             // 
-            NV_Btn_Update.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            NV_Btn_Update.BackColor = Color.DeepSkyBlue;
-            NV_Btn_Update.BackgroundColor = Color.DeepSkyBlue;
-            NV_Btn_Update.BorderColor = Color.Green;
-            NV_Btn_Update.BorderRadius = 20;
-            NV_Btn_Update.BorderSize = 2;
-            NV_Btn_Update.FlatAppearance.BorderSize = 0;
-            NV_Btn_Update.FlatStyle = FlatStyle.Flat;
-            NV_Btn_Update.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            NV_Btn_Update.ForeColor = Color.White;
-            NV_Btn_Update.IDSelected = null;
-            NV_Btn_Update.Location = new Point(304, 655);
-            NV_Btn_Update.Name = "NV_Btn_Update";
-            NV_Btn_Update.Size = new Size(156, 50);
-            NV_Btn_Update.TabIndex = 13;
-            NV_Btn_Update.Text = "Sửa";
-            NV_Btn_Update.TextColor = Color.White;
-            NV_Btn_Update.UseVisualStyleBackColor = false;
+            NV_Btn_Sua.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            NV_Btn_Sua.BackColor = Color.DeepSkyBlue;
+            NV_Btn_Sua.BackgroundColor = Color.DeepSkyBlue;
+            NV_Btn_Sua.BorderColor = Color.Green;
+            NV_Btn_Sua.BorderRadius = 20;
+            NV_Btn_Sua.BorderSize = 2;
+            NV_Btn_Sua.FlatAppearance.BorderSize = 0;
+            NV_Btn_Sua.FlatStyle = FlatStyle.Flat;
+            NV_Btn_Sua.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            NV_Btn_Sua.ForeColor = Color.White;
+            NV_Btn_Sua.IDSelected = null;
+            NV_Btn_Sua.Location = new Point(304, 655);
+            NV_Btn_Sua.Name = "NV_Btn_Sua";
+            NV_Btn_Sua.Size = new Size(156, 50);
+            NV_Btn_Sua.TabIndex = 13;
+            NV_Btn_Sua.Text = "Sửa";
+            NV_Btn_Sua.TextColor = Color.White;
+            NV_Btn_Sua.UseVisualStyleBackColor = false;
             // 
-            // bigTextBox2
+            // NV_Txt_TimKiem
             // 
-            bigTextBox2.BackColor = Color.Transparent;
-            bigTextBox2.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            bigTextBox2.ForeColor = Color.DimGray;
-            bigTextBox2.Image = null;
-            bigTextBox2.Location = new Point(39, 13);
-            bigTextBox2.MaxLength = 32767;
-            bigTextBox2.Multiline = false;
-            bigTextBox2.Name = "bigTextBox2";
-            bigTextBox2.ReadOnly = false;
-            bigTextBox2.Size = new Size(628, 46);
-            bigTextBox2.TabIndex = 24;
-            bigTextBox2.TextAlignment = HorizontalAlignment.Left;
-            bigTextBox2.UseSystemPasswordChar = false;
+            NV_Txt_TimKiem.BackColor = Color.Transparent;
+            NV_Txt_TimKiem.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Txt_TimKiem.ForeColor = Color.DimGray;
+            NV_Txt_TimKiem.Image = null;
+            NV_Txt_TimKiem.Location = new Point(39, 13);
+            NV_Txt_TimKiem.MaxLength = 32767;
+            NV_Txt_TimKiem.Multiline = false;
+            NV_Txt_TimKiem.Name = "NV_Txt_TimKiem";
+            NV_Txt_TimKiem.ReadOnly = false;
+            NV_Txt_TimKiem.Size = new Size(628, 46);
+            NV_Txt_TimKiem.TabIndex = 24;
+            NV_Txt_TimKiem.TextAlignment = HorizontalAlignment.Left;
+            NV_Txt_TimKiem.UseSystemPasswordChar = false;
             // 
             // NV_Btn_Them
             // 
@@ -937,154 +935,112 @@ namespace PRL
             NV_Btn_Them.TextColor = Color.White;
             NV_Btn_Them.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // NV_Btn_TimKiem
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
-            label5.Location = new Point(657, 21);
-            label5.Name = "label5";
-            label5.Size = new Size(73, 38);
-            label5.TabIndex = 25;
-            label5.Text = "       ";
+            NV_Btn_TimKiem.AutoSize = true;
+            NV_Btn_TimKiem.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Btn_TimKiem.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
+            NV_Btn_TimKiem.Location = new Point(664, 20);
+            NV_Btn_TimKiem.Name = "NV_Btn_TimKiem";
+            NV_Btn_TimKiem.Size = new Size(73, 38);
+            NV_Btn_TimKiem.TabIndex = 25;
+            NV_Btn_TimKiem.Text = "       ";
             // 
-            // cyberGroupBox1
+            // NV_GrBox
             // 
-            cyberGroupBox1.Alpha = 20;
-            cyberGroupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            cyberGroupBox1.BackColor = Color.Transparent;
-            cyberGroupBox1.Background = true;
-            cyberGroupBox1.Background_WidthPen = 3F;
-            cyberGroupBox1.BackgroundPen = true;
-            cyberGroupBox1.ColorBackground = Color.FromArgb(192, 255, 192);
-            cyberGroupBox1.ColorBackground_1 = Color.FromArgb(128, 255, 255);
-            cyberGroupBox1.ColorBackground_2 = Color.Fuchsia;
-            cyberGroupBox1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox1.Controls.Add(dungeonComboBox6);
-            cyberGroupBox1.Controls.Add(buttonCustom12);
-            cyberGroupBox1.Controls.Add(NV_combo_CaLam);
-            cyberGroupBox1.Controls.Add(dungeonHeaderLabel2);
-            cyberGroupBox1.Controls.Add(NV_combo_ChucVu);
-            cyberGroupBox1.Controls.Add(dungeonHeaderLabel1);
-            cyberGroupBox1.Controls.Add(NV_Txt_Pass);
-            cyberGroupBox1.Controls.Add(NV_Txt_Sdt);
-            cyberGroupBox1.Controls.Add(NV_Txt_DiaChi);
-            cyberGroupBox1.Controls.Add(NV_Text_HoTen);
-            cyberGroupBox1.Controls.Add(NV_GioiTinh);
-            cyberGroupBox1.Controls.Add(NV_ChucVu);
-            cyberGroupBox1.Controls.Add(NV_Sdt);
-            cyberGroupBox1.Controls.Add(NV_DiaChi);
-            cyberGroupBox1.Controls.Add(NV_Ten);
-            cyberGroupBox1.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberGroupBox1.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberGroupBox1.Lighting = false;
-            cyberGroupBox1.LinearGradient_Background = false;
-            cyberGroupBox1.LinearGradientPen = false;
-            cyberGroupBox1.Location = new Point(847, 21);
-            cyberGroupBox1.Name = "cyberGroupBox1";
-            cyberGroupBox1.PenWidth = 15;
-            cyberGroupBox1.RGB = false;
-            cyberGroupBox1.Rounding = true;
-            cyberGroupBox1.RoundingInt = 60;
-            cyberGroupBox1.Size = new Size(507, 688);
-            cyberGroupBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox1.TabIndex = 10;
-            cyberGroupBox1.Tag = "Cyber";
-            cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberGroupBox1.Timer_RGB = 300;
+            NV_GrBox.Alpha = 20;
+            NV_GrBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NV_GrBox.BackColor = Color.Transparent;
+            NV_GrBox.Background = true;
+            NV_GrBox.Background_WidthPen = 3F;
+            NV_GrBox.BackgroundPen = true;
+            NV_GrBox.ColorBackground = Color.FromArgb(192, 255, 192);
+            NV_GrBox.ColorBackground_1 = Color.FromArgb(128, 255, 255);
+            NV_GrBox.ColorBackground_2 = Color.Fuchsia;
+            NV_GrBox.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            NV_GrBox.ColorLighting = Color.FromArgb(29, 200, 238);
+            NV_GrBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
+            NV_GrBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            NV_GrBox.Controls.Add(NV_Combo_GioiTinh);
+            NV_GrBox.Controls.Add(NV_Btn_XemLuong);
+            NV_GrBox.Controls.Add(NV_combo_ChucVu);
+            NV_GrBox.Controls.Add(dungeonHeaderLabel1);
+            NV_GrBox.Controls.Add(NV_Txt_MatKhau);
+            NV_GrBox.Controls.Add(NV_Txt_Sdt);
+            NV_GrBox.Controls.Add(NV_Txt_DiaChi);
+            NV_GrBox.Controls.Add(NV_Text_HoTen);
+            NV_GrBox.Controls.Add(NV_GioiTinh);
+            NV_GrBox.Controls.Add(NV_ChucVu);
+            NV_GrBox.Controls.Add(NV_Sdt);
+            NV_GrBox.Controls.Add(NV_DiaChi);
+            NV_GrBox.Controls.Add(NV_Ten);
+            NV_GrBox.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            NV_GrBox.ForeColor = Color.FromArgb(245, 245, 245);
+            NV_GrBox.Lighting = false;
+            NV_GrBox.LinearGradient_Background = false;
+            NV_GrBox.LinearGradientPen = false;
+            NV_GrBox.Location = new Point(847, 21);
+            NV_GrBox.Name = "NV_GrBox";
+            NV_GrBox.PenWidth = 15;
+            NV_GrBox.RGB = false;
+            NV_GrBox.Rounding = true;
+            NV_GrBox.RoundingInt = 60;
+            NV_GrBox.Size = new Size(507, 688);
+            NV_GrBox.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            NV_GrBox.TabIndex = 10;
+            NV_GrBox.Tag = "Cyber";
+            NV_GrBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            NV_GrBox.Timer_RGB = 300;
             // 
-            // dungeonComboBox6
+            // NV_Combo_GioiTinh
             // 
-            dungeonComboBox6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dungeonComboBox6.BackColor = Color.FromArgb(246, 246, 246);
-            dungeonComboBox6.ColorA = Color.FromArgb(246, 132, 85);
-            dungeonComboBox6.ColorB = Color.FromArgb(231, 108, 57);
-            dungeonComboBox6.ColorC = Color.FromArgb(242, 241, 240);
-            dungeonComboBox6.ColorD = Color.FromArgb(253, 252, 252);
-            dungeonComboBox6.ColorE = Color.FromArgb(239, 237, 236);
-            dungeonComboBox6.ColorF = Color.FromArgb(180, 180, 180);
-            dungeonComboBox6.ColorG = Color.FromArgb(119, 119, 118);
-            dungeonComboBox6.ColorH = Color.FromArgb(224, 222, 220);
-            dungeonComboBox6.ColorI = Color.FromArgb(250, 249, 249);
-            dungeonComboBox6.DrawMode = DrawMode.OwnerDrawFixed;
-            dungeonComboBox6.DropDownHeight = 100;
-            dungeonComboBox6.DropDownStyle = ComboBoxStyle.DropDownList;
-            dungeonComboBox6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dungeonComboBox6.ForeColor = Color.FromArgb(76, 76, 97);
-            dungeonComboBox6.FormattingEnabled = true;
-            dungeonComboBox6.HoverSelectionColor = Color.Empty;
-            dungeonComboBox6.IntegralHeight = false;
-            dungeonComboBox6.ItemHeight = 20;
-            dungeonComboBox6.Location = new Point(214, 420);
-            dungeonComboBox6.Name = "dungeonComboBox6";
-            dungeonComboBox6.Size = new Size(170, 26);
-            dungeonComboBox6.StartIndex = 0;
-            dungeonComboBox6.TabIndex = 17;
+            NV_Combo_GioiTinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_Combo_GioiTinh.BackColor = Color.FromArgb(246, 246, 246);
+            NV_Combo_GioiTinh.ColorA = Color.FromArgb(246, 132, 85);
+            NV_Combo_GioiTinh.ColorB = Color.FromArgb(231, 108, 57);
+            NV_Combo_GioiTinh.ColorC = Color.FromArgb(242, 241, 240);
+            NV_Combo_GioiTinh.ColorD = Color.FromArgb(253, 252, 252);
+            NV_Combo_GioiTinh.ColorE = Color.FromArgb(239, 237, 236);
+            NV_Combo_GioiTinh.ColorF = Color.FromArgb(180, 180, 180);
+            NV_Combo_GioiTinh.ColorG = Color.FromArgb(119, 119, 118);
+            NV_Combo_GioiTinh.ColorH = Color.FromArgb(224, 222, 220);
+            NV_Combo_GioiTinh.ColorI = Color.FromArgb(250, 249, 249);
+            NV_Combo_GioiTinh.DrawMode = DrawMode.OwnerDrawFixed;
+            NV_Combo_GioiTinh.DropDownHeight = 100;
+            NV_Combo_GioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
+            NV_Combo_GioiTinh.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Combo_GioiTinh.ForeColor = Color.FromArgb(76, 76, 97);
+            NV_Combo_GioiTinh.FormattingEnabled = true;
+            NV_Combo_GioiTinh.HoverSelectionColor = Color.Empty;
+            NV_Combo_GioiTinh.IntegralHeight = false;
+            NV_Combo_GioiTinh.ItemHeight = 20;
+            NV_Combo_GioiTinh.Location = new Point(214, 420);
+            NV_Combo_GioiTinh.Name = "NV_Combo_GioiTinh";
+            NV_Combo_GioiTinh.Size = new Size(170, 26);
+            NV_Combo_GioiTinh.StartIndex = 0;
+            NV_Combo_GioiTinh.TabIndex = 17;
             // 
-            // buttonCustom12
+            // NV_Btn_XemLuong
             // 
-            buttonCustom12.Anchor = AnchorStyles.Top;
-            buttonCustom12.BackColor = Color.LavenderBlush;
-            buttonCustom12.BackgroundColor = Color.LavenderBlush;
-            buttonCustom12.BorderColor = Color.OrangeRed;
-            buttonCustom12.BorderRadius = 20;
-            buttonCustom12.BorderSize = 3;
-            buttonCustom12.FlatAppearance.BorderSize = 0;
-            buttonCustom12.FlatStyle = FlatStyle.Flat;
-            buttonCustom12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom12.ForeColor = Color.Red;
-            buttonCustom12.IDSelected = null;
-            buttonCustom12.Location = new Point(181, 73);
-            buttonCustom12.Name = "buttonCustom12";
-            buttonCustom12.Size = new Size(188, 50);
-            buttonCustom12.TabIndex = 16;
-            buttonCustom12.Text = "Xem Lương";
-            buttonCustom12.TextColor = Color.Red;
-            buttonCustom12.UseVisualStyleBackColor = false;
-            buttonCustom12.Click += buttonCustom12_Click_1;
-            // 
-            // NV_combo_CaLam
-            // 
-            NV_combo_CaLam.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NV_combo_CaLam.BackColor = Color.FromArgb(246, 246, 246);
-            NV_combo_CaLam.ColorA = Color.FromArgb(246, 132, 85);
-            NV_combo_CaLam.ColorB = Color.FromArgb(231, 108, 57);
-            NV_combo_CaLam.ColorC = Color.FromArgb(242, 241, 240);
-            NV_combo_CaLam.ColorD = Color.FromArgb(253, 252, 252);
-            NV_combo_CaLam.ColorE = Color.FromArgb(239, 237, 236);
-            NV_combo_CaLam.ColorF = Color.FromArgb(180, 180, 180);
-            NV_combo_CaLam.ColorG = Color.FromArgb(119, 119, 118);
-            NV_combo_CaLam.ColorH = Color.FromArgb(224, 222, 220);
-            NV_combo_CaLam.ColorI = Color.FromArgb(250, 249, 249);
-            NV_combo_CaLam.DrawMode = DrawMode.OwnerDrawFixed;
-            NV_combo_CaLam.DropDownHeight = 100;
-            NV_combo_CaLam.DropDownStyle = ComboBoxStyle.DropDownList;
-            NV_combo_CaLam.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            NV_combo_CaLam.ForeColor = Color.FromArgb(76, 76, 97);
-            NV_combo_CaLam.FormattingEnabled = true;
-            NV_combo_CaLam.HoverSelectionColor = Color.Empty;
-            NV_combo_CaLam.IntegralHeight = false;
-            NV_combo_CaLam.ItemHeight = 20;
-            NV_combo_CaLam.Location = new Point(214, 603);
-            NV_combo_CaLam.Name = "NV_combo_CaLam";
-            NV_combo_CaLam.Size = new Size(170, 26);
-            NV_combo_CaLam.StartIndex = 0;
-            NV_combo_CaLam.TabIndex = 15;
-            // 
-            // dungeonHeaderLabel2
-            // 
-            dungeonHeaderLabel2.AutoSize = true;
-            dungeonHeaderLabel2.BackColor = Color.Transparent;
-            dungeonHeaderLabel2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            dungeonHeaderLabel2.ForeColor = Color.FromArgb(76, 76, 77);
-            dungeonHeaderLabel2.Location = new Point(61, 603);
-            dungeonHeaderLabel2.Name = "dungeonHeaderLabel2";
-            dungeonHeaderLabel2.Size = new Size(120, 25);
-            dungeonHeaderLabel2.TabIndex = 14;
-            dungeonHeaderLabel2.Text = "Ca làm việc :";
+            NV_Btn_XemLuong.Anchor = AnchorStyles.Top;
+            NV_Btn_XemLuong.BackColor = Color.LavenderBlush;
+            NV_Btn_XemLuong.BackgroundColor = Color.LavenderBlush;
+            NV_Btn_XemLuong.BorderColor = Color.OrangeRed;
+            NV_Btn_XemLuong.BorderRadius = 20;
+            NV_Btn_XemLuong.BorderSize = 3;
+            NV_Btn_XemLuong.FlatAppearance.BorderSize = 0;
+            NV_Btn_XemLuong.FlatStyle = FlatStyle.Flat;
+            NV_Btn_XemLuong.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            NV_Btn_XemLuong.ForeColor = Color.Red;
+            NV_Btn_XemLuong.IDSelected = null;
+            NV_Btn_XemLuong.Location = new Point(181, 73);
+            NV_Btn_XemLuong.Name = "NV_Btn_XemLuong";
+            NV_Btn_XemLuong.Size = new Size(188, 50);
+            NV_Btn_XemLuong.TabIndex = 16;
+            NV_Btn_XemLuong.Text = "Xem Lương";
+            NV_Btn_XemLuong.TextColor = Color.Red;
+            NV_Btn_XemLuong.UseVisualStyleBackColor = false;
+            NV_Btn_XemLuong.Click += buttonCustom12_Click_1;
             // 
             // NV_combo_ChucVu
             // 
@@ -1126,37 +1082,37 @@ namespace PRL
             dungeonHeaderLabel1.TabIndex = 12;
             dungeonHeaderLabel1.Text = "Mật khẩu : ";
             // 
-            // NV_Txt_Pass
+            // NV_Txt_MatKhau
             // 
-            NV_Txt_Pass.Alpha = 20;
-            NV_Txt_Pass.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NV_Txt_Pass.BackColor = Color.Transparent;
-            NV_Txt_Pass.Background_WidthPen = 3F;
-            NV_Txt_Pass.BackgroundPen = true;
-            NV_Txt_Pass.ColorBackground = Color.FromArgb(37, 72, 110);
-            NV_Txt_Pass.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            NV_Txt_Pass.ColorLighting = Color.FromArgb(29, 200, 238);
-            NV_Txt_Pass.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            NV_Txt_Pass.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            NV_Txt_Pass.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            NV_Txt_Pass.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            NV_Txt_Pass.ForeColor = Color.FromArgb(245, 245, 245);
-            NV_Txt_Pass.Lighting = false;
-            NV_Txt_Pass.LinearGradientPen = false;
-            NV_Txt_Pass.Location = new Point(214, 527);
-            NV_Txt_Pass.Name = "NV_Txt_Pass";
-            NV_Txt_Pass.PenWidth = 15;
-            NV_Txt_Pass.RGB = false;
-            NV_Txt_Pass.Rounding = true;
-            NV_Txt_Pass.RoundingInt = 60;
-            NV_Txt_Pass.Size = new Size(170, 57);
-            NV_Txt_Pass.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            NV_Txt_Pass.TabIndex = 10;
-            NV_Txt_Pass.Tag = "Cyber";
-            NV_Txt_Pass.TextButton = "";
-            NV_Txt_Pass.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            NV_Txt_Pass.Timer_RGB = 300;
-            NV_Txt_Pass.Load += cyberRichTextBox5_Load;
+            NV_Txt_MatKhau.Alpha = 20;
+            NV_Txt_MatKhau.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_Txt_MatKhau.BackColor = Color.Transparent;
+            NV_Txt_MatKhau.Background_WidthPen = 3F;
+            NV_Txt_MatKhau.BackgroundPen = true;
+            NV_Txt_MatKhau.ColorBackground = Color.FromArgb(37, 72, 110);
+            NV_Txt_MatKhau.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            NV_Txt_MatKhau.ColorLighting = Color.FromArgb(29, 200, 238);
+            NV_Txt_MatKhau.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            NV_Txt_MatKhau.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            NV_Txt_MatKhau.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            NV_Txt_MatKhau.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            NV_Txt_MatKhau.ForeColor = Color.FromArgb(245, 245, 245);
+            NV_Txt_MatKhau.Lighting = false;
+            NV_Txt_MatKhau.LinearGradientPen = false;
+            NV_Txt_MatKhau.Location = new Point(214, 527);
+            NV_Txt_MatKhau.Name = "NV_Txt_MatKhau";
+            NV_Txt_MatKhau.PenWidth = 15;
+            NV_Txt_MatKhau.RGB = false;
+            NV_Txt_MatKhau.Rounding = true;
+            NV_Txt_MatKhau.RoundingInt = 60;
+            NV_Txt_MatKhau.Size = new Size(170, 57);
+            NV_Txt_MatKhau.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            NV_Txt_MatKhau.TabIndex = 10;
+            NV_Txt_MatKhau.Tag = "Cyber";
+            NV_Txt_MatKhau.TextButton = "";
+            NV_Txt_MatKhau.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            NV_Txt_MatKhau.Timer_RGB = 300;
+            NV_Txt_MatKhau.Load += cyberRichTextBox5_Load;
             // 
             // NV_Txt_Sdt
             // 
@@ -1412,9 +1368,9 @@ namespace PRL
             // Nav_Option
             // 
             Nav_Option.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            Nav_Option.BackColor = Color.FromArgb(128, 255, 230);
+            Nav_Option.BackColor = Color.FromArgb(128, 255, 255);
             Nav_Option.BorderStyle = BorderStyle.FixedSingle;
-            Nav_Option.Controls.Add(ThongKe);
+            Nav_Option.Controls.Add(QL_ThongKe);
             Nav_Option.Controls.Add(QL_LichKham);
             Nav_Option.Controls.Add(QL_DV);
             Nav_Option.Controls.Add(QL_ThanhToan);
@@ -1422,31 +1378,32 @@ namespace PRL
             Nav_Option.Controls.Add(QL_NV);
             Nav_Option.Location = new Point(-5, 56);
             Nav_Option.Name = "Nav_Option";
-            Nav_Option.Size = new Size(284, 727);
+            Nav_Option.Size = new Size(284, 898);
             Nav_Option.TabIndex = 1;
+            Nav_Option.Paint += Nav_Option_Paint;
             // 
-            // ThongKe
+            // QL_ThongKe
             // 
-            ThongKe.AutoSize = true;
-            ThongKe.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            ThongKe.Image = C_PRL.Properties.Resources.icons8_analyst_64;
-            ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
-            ThongKe.Location = new Point(50, 381);
-            ThongKe.Name = "ThongKe";
-            ThongKe.Size = new Size(167, 32);
-            ThongKe.TabIndex = 8;
-            ThongKe.Text = "     Thống kê";
-            ThongKe.Click += ThongKe_Click;
+            QL_ThongKe.AutoSize = true;
+            QL_ThongKe.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_ThongKe.Image = C_PRL.Properties.Resources.icons8_analyst_64;
+            QL_ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
+            QL_ThongKe.Location = new Point(20, 662);
+            QL_ThongKe.Name = "QL_ThongKe";
+            QL_ThongKe.Size = new Size(184, 36);
+            QL_ThongKe.TabIndex = 8;
+            QL_ThongKe.Text = "     Thống kê";
+            QL_ThongKe.Click += ThongKe_Click;
             // 
             // QL_LichKham
             // 
             QL_LichKham.AutoSize = true;
-            QL_LichKham.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_LichKham.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_LichKham.Image = C_PRL.Properties.Resources.icons8_document_42;
             QL_LichKham.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_LichKham.Location = new Point(43, 197);
+            QL_LichKham.Location = new Point(20, 372);
             QL_LichKham.Name = "QL_LichKham";
-            QL_LichKham.Size = new Size(220, 32);
+            QL_LichKham.Size = new Size(239, 36);
             QL_LichKham.TabIndex = 7;
             QL_LichKham.Text = "     QL Lịch Khám";
             QL_LichKham.Click += QL_LichKham_Click;
@@ -1454,12 +1411,12 @@ namespace PRL
             // QL_DV
             // 
             QL_DV.AutoSize = true;
-            QL_DV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_DV.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_DV.Image = C_PRL.Properties.Resources.icons8_service_341;
             QL_DV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_DV.Location = new Point(50, 288);
+            QL_DV.Location = new Point(14, 521);
             QL_DV.Name = "QL_DV";
-            QL_DV.Size = new Size(196, 32);
+            QL_DV.Size = new Size(216, 36);
             QL_DV.TabIndex = 3;
             QL_DV.Text = "     QL Dịch Vụ";
             QL_DV.Click += QL_DV_Click;
@@ -1467,12 +1424,12 @@ namespace PRL
             // QL_ThanhToan
             // 
             QL_ThanhToan.AutoSize = true;
-            QL_ThanhToan.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_ThanhToan.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_ThanhToan.Image = C_PRL.Properties.Resources.icons8_bill_64;
             QL_ThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_ThanhToan.Location = new Point(43, 473);
+            QL_ThanhToan.Location = new Point(18, 809);
             QL_ThanhToan.Name = "QL_ThanhToan";
-            QL_ThanhToan.Size = new Size(204, 32);
+            QL_ThanhToan.Size = new Size(221, 36);
             QL_ThanhToan.TabIndex = 2;
             QL_ThanhToan.Text = "      Thanh Toán";
             QL_ThanhToan.Click += QL_ThanhToan_Click;
@@ -1480,12 +1437,12 @@ namespace PRL
             // QL_KH
             // 
             QL_KH.AutoSize = true;
-            QL_KH.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_KH.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_KH.Image = C_PRL.Properties.Resources.icons8_customer_43;
             QL_KH.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_KH.Location = new Point(43, 105);
+            QL_KH.Location = new Point(20, 221);
             QL_KH.Name = "QL_KH";
-            QL_KH.Size = new Size(237, 32);
+            QL_KH.Size = new Size(257, 36);
             QL_KH.TabIndex = 1;
             QL_KH.Text = "     QL Khách Hàng";
             QL_KH.Click += QL_KH_Click;
@@ -1493,12 +1450,12 @@ namespace PRL
             // QL_NV
             // 
             QL_NV.AutoSize = true;
-            QL_NV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            QL_NV.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_NV.Image = C_PRL.Properties.Resources.icons8_crowd_34;
             QL_NV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_NV.Location = new Point(43, 17);
+            QL_NV.Location = new Point(27, 91);
             QL_NV.Name = "QL_NV";
-            QL_NV.Size = new Size(216, 32);
+            QL_NV.Size = new Size(235, 36);
             QL_NV.TabIndex = 0;
             QL_NV.Text = "     QL Nhân viên";
             QL_NV.Click += label3_Click;
@@ -1508,7 +1465,7 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_TT);
+            Content.Controls.Add(Panel_KH);
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
             Content.Size = new Size(1768, 908);
@@ -1520,7 +1477,7 @@ namespace PRL
             Panel_TT.Controls.Add(TT_Btn_An);
             Panel_TT.Controls.Add(TT_poisonDataGridView3);
             Panel_TT.Controls.Add(TT_Btn_Sua);
-            Panel_TT.Controls.Add(hopeGroupBox3);
+            Panel_TT.Controls.Add(TT_GrBox_ThanhToan);
             Panel_TT.Location = new Point(25, 10);
             Panel_TT.Name = "Panel_TT";
             Panel_TT.Size = new Size(1606, 887);
@@ -1629,89 +1586,89 @@ namespace PRL
             TT_Btn_Sua.TextColor = Color.White;
             TT_Btn_Sua.UseVisualStyleBackColor = false;
             // 
-            // hopeGroupBox3
+            // TT_GrBox_ThanhToan
             // 
-            hopeGroupBox3.BackColor = Color.White;
-            hopeGroupBox3.BorderColor = Color.FromArgb(220, 223, 230);
-            hopeGroupBox3.Controls.Add(txtNguoiTT);
-            hopeGroupBox3.Controls.Add(txtThoiGianTT);
-            hopeGroupBox3.Controls.Add(txtTongTien);
-            hopeGroupBox3.Controls.Add(txtChiPhiKhac);
-            hopeGroupBox3.Controls.Add(txtGhiChu);
-            hopeGroupBox3.Controls.Add(airSeparator9);
-            hopeGroupBox3.Controls.Add(airSeparator8);
-            hopeGroupBox3.Controls.Add(airSeparator7);
-            hopeGroupBox3.Controls.Add(airSeparator6);
-            hopeGroupBox3.Controls.Add(airSeparator5);
-            hopeGroupBox3.Controls.Add(txtGiaTien);
-            hopeGroupBox3.Controls.Add(airSeparator2);
-            hopeGroupBox3.Controls.Add(airSeparator1);
-            hopeGroupBox3.Controls.Add(txtTenKH);
-            hopeGroupBox3.Controls.Add(panel2);
-            hopeGroupBox3.Controls.Add(TT_Label_TongTien);
-            hopeGroupBox3.Controls.Add(TT_Label_NguoiThanhToan);
-            hopeGroupBox3.Controls.Add(label27_a);
-            hopeGroupBox3.Controls.Add(TT_Label_ChiPhiKhac);
-            hopeGroupBox3.Controls.Add(TT_Label_ThoiGian);
-            hopeGroupBox3.Controls.Add(TT_Label_GhiChu);
-            hopeGroupBox3.Controls.Add(TT_Label_GiaTien);
-            hopeGroupBox3.Controls.Add(TT_Label_KhachHang);
-            hopeGroupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            hopeGroupBox3.ForeColor = Color.FromArgb(48, 49, 51);
-            hopeGroupBox3.LineColor = Color.FromArgb(220, 223, 230);
-            hopeGroupBox3.Location = new Point(990, 16);
-            hopeGroupBox3.Name = "hopeGroupBox3";
-            hopeGroupBox3.ShowText = false;
-            hopeGroupBox3.Size = new Size(593, 656);
-            hopeGroupBox3.TabIndex = 1;
-            hopeGroupBox3.TabStop = false;
-            hopeGroupBox3.Text = "hopeGroupBox3";
-            hopeGroupBox3.ThemeColor = Color.PapayaWhip;
+            TT_GrBox_ThanhToan.BackColor = Color.White;
+            TT_GrBox_ThanhToan.BorderColor = Color.FromArgb(220, 223, 230);
+            TT_GrBox_ThanhToan.Controls.Add(TT_txt_NguoiTT);
+            TT_GrBox_ThanhToan.Controls.Add(TT_txt_ThoiGianTT);
+            TT_GrBox_ThanhToan.Controls.Add(TT_txt_TongTien);
+            TT_GrBox_ThanhToan.Controls.Add(TT_txt_ChiPhiKhac);
+            TT_GrBox_ThanhToan.Controls.Add(TT_txt_GhiChu);
+            TT_GrBox_ThanhToan.Controls.Add(airSeparator9);
+            TT_GrBox_ThanhToan.Controls.Add(airSeparator8);
+            TT_GrBox_ThanhToan.Controls.Add(airSeparator7);
+            TT_GrBox_ThanhToan.Controls.Add(airSeparator6);
+            TT_GrBox_ThanhToan.Controls.Add(airSeparator5);
+            TT_GrBox_ThanhToan.Controls.Add(TT_txt_GiaTien);
+            TT_GrBox_ThanhToan.Controls.Add(airSeparator2);
+            TT_GrBox_ThanhToan.Controls.Add(airSeparator1);
+            TT_GrBox_ThanhToan.Controls.Add(TT_txt_TenKH);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Panel_DichVuSD);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Label_TongTien);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Label_NguoiThanhToan);
+            TT_GrBox_ThanhToan.Controls.Add(label27_a);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Label_ChiPhiKhac);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Label_ThoiGian);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Label_GhiChu);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Label_GiaTien);
+            TT_GrBox_ThanhToan.Controls.Add(TT_Label_KhachHang);
+            TT_GrBox_ThanhToan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TT_GrBox_ThanhToan.ForeColor = Color.FromArgb(48, 49, 51);
+            TT_GrBox_ThanhToan.LineColor = Color.FromArgb(220, 223, 230);
+            TT_GrBox_ThanhToan.Location = new Point(990, 16);
+            TT_GrBox_ThanhToan.Name = "TT_GrBox_ThanhToan";
+            TT_GrBox_ThanhToan.ShowText = false;
+            TT_GrBox_ThanhToan.Size = new Size(593, 656);
+            TT_GrBox_ThanhToan.TabIndex = 1;
+            TT_GrBox_ThanhToan.TabStop = false;
+            TT_GrBox_ThanhToan.Text = "hopeGroupBox3";
+            TT_GrBox_ThanhToan.ThemeColor = Color.PapayaWhip;
             // 
-            // txtNguoiTT
+            // TT_txt_NguoiTT
             // 
-            txtNguoiTT.BackColor = Color.PapayaWhip;
-            txtNguoiTT.BorderStyle = BorderStyle.None;
-            txtNguoiTT.Location = new Point(206, 587);
-            txtNguoiTT.Name = "txtNguoiTT";
-            txtNguoiTT.Size = new Size(311, 27);
-            txtNguoiTT.TabIndex = 38;
+            TT_txt_NguoiTT.BackColor = Color.PapayaWhip;
+            TT_txt_NguoiTT.BorderStyle = BorderStyle.None;
+            TT_txt_NguoiTT.Location = new Point(206, 587);
+            TT_txt_NguoiTT.Name = "TT_txt_NguoiTT";
+            TT_txt_NguoiTT.Size = new Size(311, 27);
+            TT_txt_NguoiTT.TabIndex = 38;
             // 
-            // txtThoiGianTT
+            // TT_txt_ThoiGianTT
             // 
-            txtThoiGianTT.BackColor = Color.PapayaWhip;
-            txtThoiGianTT.BorderStyle = BorderStyle.None;
-            txtThoiGianTT.Location = new Point(239, 521);
-            txtThoiGianTT.Name = "txtThoiGianTT";
-            txtThoiGianTT.Size = new Size(311, 27);
-            txtThoiGianTT.TabIndex = 37;
+            TT_txt_ThoiGianTT.BackColor = Color.PapayaWhip;
+            TT_txt_ThoiGianTT.BorderStyle = BorderStyle.None;
+            TT_txt_ThoiGianTT.Location = new Point(239, 521);
+            TT_txt_ThoiGianTT.Name = "TT_txt_ThoiGianTT";
+            TT_txt_ThoiGianTT.Size = new Size(311, 27);
+            TT_txt_ThoiGianTT.TabIndex = 37;
             // 
-            // txtTongTien
+            // TT_txt_TongTien
             // 
-            txtTongTien.BackColor = Color.PapayaWhip;
-            txtTongTien.BorderStyle = BorderStyle.None;
-            txtTongTien.Location = new Point(138, 452);
-            txtTongTien.Name = "txtTongTien";
-            txtTongTien.Size = new Size(311, 27);
-            txtTongTien.TabIndex = 36;
+            TT_txt_TongTien.BackColor = Color.PapayaWhip;
+            TT_txt_TongTien.BorderStyle = BorderStyle.None;
+            TT_txt_TongTien.Location = new Point(138, 452);
+            TT_txt_TongTien.Name = "TT_txt_TongTien";
+            TT_txt_TongTien.Size = new Size(311, 27);
+            TT_txt_TongTien.TabIndex = 36;
             // 
-            // txtChiPhiKhac
+            // TT_txt_ChiPhiKhac
             // 
-            txtChiPhiKhac.BackColor = Color.PapayaWhip;
-            txtChiPhiKhac.BorderStyle = BorderStyle.None;
-            txtChiPhiKhac.Location = new Point(159, 372);
-            txtChiPhiKhac.Name = "txtChiPhiKhac";
-            txtChiPhiKhac.Size = new Size(311, 27);
-            txtChiPhiKhac.TabIndex = 35;
+            TT_txt_ChiPhiKhac.BackColor = Color.PapayaWhip;
+            TT_txt_ChiPhiKhac.BorderStyle = BorderStyle.None;
+            TT_txt_ChiPhiKhac.Location = new Point(159, 372);
+            TT_txt_ChiPhiKhac.Name = "TT_txt_ChiPhiKhac";
+            TT_txt_ChiPhiKhac.Size = new Size(311, 27);
+            TT_txt_ChiPhiKhac.TabIndex = 35;
             // 
-            // txtGhiChu
+            // TT_txt_GhiChu
             // 
-            txtGhiChu.BackColor = Color.PapayaWhip;
-            txtGhiChu.BorderStyle = BorderStyle.None;
-            txtGhiChu.Location = new Point(132, 296);
-            txtGhiChu.Name = "txtGhiChu";
-            txtGhiChu.Size = new Size(311, 27);
-            txtGhiChu.TabIndex = 34;
+            TT_txt_GhiChu.BackColor = Color.PapayaWhip;
+            TT_txt_GhiChu.BorderStyle = BorderStyle.None;
+            TT_txt_GhiChu.Location = new Point(132, 296);
+            TT_txt_GhiChu.Name = "TT_txt_GhiChu";
+            TT_txt_GhiChu.Size = new Size(311, 27);
+            TT_txt_GhiChu.TabIndex = 34;
             // 
             // airSeparator9
             // 
@@ -1783,15 +1740,15 @@ namespace PRL
             airSeparator5.Text = "airSeparator5";
             airSeparator5.Transparent = false;
             // 
-            // txtGiaTien
+            // TT_txt_GiaTien
             // 
-            txtGiaTien.BackColor = Color.PapayaWhip;
-            txtGiaTien.BorderStyle = BorderStyle.None;
-            txtGiaTien.Location = new Point(128, 222);
-            txtGiaTien.Name = "txtGiaTien";
-            txtGiaTien.Size = new Size(311, 27);
-            txtGiaTien.TabIndex = 28;
-            txtGiaTien.TextChanged += txtGiaTien_TextChanged;
+            TT_txt_GiaTien.BackColor = Color.PapayaWhip;
+            TT_txt_GiaTien.BorderStyle = BorderStyle.None;
+            TT_txt_GiaTien.Location = new Point(128, 222);
+            TT_txt_GiaTien.Name = "TT_txt_GiaTien";
+            TT_txt_GiaTien.Size = new Size(311, 27);
+            TT_txt_GiaTien.TabIndex = 28;
+            TT_txt_GiaTien.TextChanged += txtGiaTien_TextChanged;
             // 
             // airSeparator2
             // 
@@ -1821,23 +1778,23 @@ namespace PRL
             airSeparator1.Text = "airSeparator1";
             airSeparator1.Transparent = false;
             // 
-            // txtTenKH
+            // TT_txt_TenKH
             // 
-            txtTenKH.BackColor = Color.PapayaWhip;
-            txtTenKH.BorderStyle = BorderStyle.None;
-            txtTenKH.Location = new Point(192, 23);
-            txtTenKH.Name = "txtTenKH";
-            txtTenKH.Size = new Size(311, 27);
-            txtTenKH.TabIndex = 25;
+            TT_txt_TenKH.BackColor = Color.PapayaWhip;
+            TT_txt_TenKH.BorderStyle = BorderStyle.None;
+            TT_txt_TenKH.Location = new Point(192, 23);
+            TT_txt_TenKH.Name = "TT_txt_TenKH";
+            TT_txt_TenKH.Size = new Size(311, 27);
+            TT_txt_TenKH.TabIndex = 25;
             // 
-            // panel2
+            // TT_Panel_DichVuSD
             // 
-            panel2.BackColor = Color.PapayaWhip;
-            panel2.Controls.Add(TT_Label_DVSD);
-            panel2.Location = new Point(15, 83);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(502, 120);
-            panel2.TabIndex = 17;
+            TT_Panel_DichVuSD.BackColor = Color.PapayaWhip;
+            TT_Panel_DichVuSD.Controls.Add(TT_Label_DVSD);
+            TT_Panel_DichVuSD.Location = new Point(15, 83);
+            TT_Panel_DichVuSD.Name = "TT_Panel_DichVuSD";
+            TT_Panel_DichVuSD.Size = new Size(502, 120);
+            TT_Panel_DichVuSD.TabIndex = 17;
             // 
             // TT_Label_DVSD
             // 
@@ -5057,7 +5014,7 @@ namespace PRL
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 982);
+            ClientSize = new Size(1720, 782);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
@@ -5079,18 +5036,18 @@ namespace PRL
             cyberGroupBox2.PerformLayout();
             Panel_NV.ResumeLayout(false);
             Panel_NV.PerformLayout();
-            cyberGroupBox1.ResumeLayout(false);
-            cyberGroupBox1.PerformLayout();
+            NV_GrBox.ResumeLayout(false);
+            NV_GrBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)NV_GridView).EndInit();
             Nav_Option.ResumeLayout(false);
             Nav_Option.PerformLayout();
             Content.ResumeLayout(false);
             Panel_TT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)TT_poisonDataGridView3).EndInit();
-            hopeGroupBox3.ResumeLayout(false);
-            hopeGroupBox3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            TT_GrBox_ThanhToan.ResumeLayout(false);
+            TT_GrBox_ThanhToan.PerformLayout();
+            TT_Panel_DichVuSD.ResumeLayout(false);
+            TT_Panel_DichVuSD.PerformLayout();
             Panel_LK.ResumeLayout(false);
             Panel_LK.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -5141,18 +5098,18 @@ namespace PRL
         private Label QL_NV;
         private Label QL_DV;
         private Label QL_LichKham;
-        private Label ThongKe;
+        private Label QL_ThongKe;
         private Label QL_ThanhToan;
-        private ButtonCustom buttonCustom1;
-        private Label ThongBao;
+        private ButtonCustom QL_DangXuat;
+        private Label QL_ThongBao;
         private Label LoiChao;
-        private Label label2;
-        private Label label3;
+        private Label QL_TaiKhoan;
+        private Label QL_TroGiup;
         private Panel Panel_NV;
         private Panel Panel_KH;
         private Panel Content;
         private ReaLTaiizor.Controls.PoisonDataGridView NV_GridView;
-        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
+        private ReaLTaiizor.Controls.CyberGroupBox NV_GrBox;
         private ReaLTaiizor.Controls.DungeonHeaderLabel NV_GioiTinh;
         private ReaLTaiizor.Controls.DungeonHeaderLabel NV_ChucVu;
         private ReaLTaiizor.Controls.DungeonHeaderLabel NV_Sdt;
@@ -5162,15 +5119,13 @@ namespace PRL
         private ReaLTaiizor.Controls.CyberRichTextBox NV_Text_HoTen;
         private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_Sdt;
         private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_DiaChi;
-        private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_Pass;
+        private ReaLTaiizor.Controls.CyberRichTextBox NV_Txt_MatKhau;
         private ButtonCustom NV_Btn_An;
-        private ButtonCustom NV_Btn_Update;
+        private ButtonCustom NV_Btn_Sua;
         private ButtonCustom NV_Btn_Them;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
         private ReaLTaiizor.Controls.DungeonComboBox NV_combo_ChucVu;
         private ReaLTaiizor.Controls.CyberRichTextBox NV_RichTxt_MoTa;
-        private ReaLTaiizor.Controls.DungeonComboBox NV_combo_CaLam;
-        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel2;
         private ReaLTaiizor.Controls.CyberRichTextBox KH_RichTxt_MoTa;
         private ButtonCustom KH_Btn_An;
         private ButtonCustom KH_Btn_Sua;
@@ -5188,8 +5143,8 @@ namespace PRL
         private Bunifu.Framework.UI.BunifuElipse KH_Elipse_GrView;
         private Label label4;
         private ReaLTaiizor.Controls.BigTextBox bigTextBox1;
-        private ReaLTaiizor.Controls.BigTextBox bigTextBox2;
-        private Label label5;
+        private ReaLTaiizor.Controls.BigTextBox NV_Txt_TimKiem;
+        private Label NV_Btn_TimKiem;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private Label label6;
         private Panel panel1;
@@ -5325,10 +5280,10 @@ namespace PRL
         private global::ReaLTaiizor.Controls.BigLabel bigLabel19;
         private global::PRL.Tool.ButtonCustom L_Btn_OK;
         private global::PRL.Tool.ButtonCustom buttonCustom11;
-        private global::PRL.Tool.ButtonCustom buttonCustom12;
+        private global::PRL.Tool.ButtonCustom NV_Btn_XemLuong;
         private global::System.Windows.Forms.SplitContainer Panel_ThongKe;
         private Panel Panel_TT;
-        private ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox3;
+        private ReaLTaiizor.Controls.HopeGroupBox TT_GrBox_ThanhToan;
         private ReaLTaiizor.Controls.PoisonDataGridView TT_poisonDataGridView3;
         private ButtonCustom TT_Btn_Sua;
         private Bunifu.Framework.UI.BunifuElipse TT_ElipsGrid;
@@ -5343,11 +5298,11 @@ namespace PRL
         private ButtonCustom TT_Btn_ThanhToan;
         private ButtonCustom TT_Btn_An;
         private Label TT_Label_TongTien;
-        private Panel panel2;
+        private Panel TT_Panel_DichVuSD;
         private ReaLTaiizor.Controls.AirSeparator airSeparator1;
-        private TextBox txtTenKH;
+        private TextBox TT_txt_TenKH;
         private ReaLTaiizor.Controls.AirSeparator airSeparator2;
-        private TextBox txtGiaTien;
+        private TextBox TT_txt_GiaTien;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel20;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel21;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel22;
@@ -5379,17 +5334,17 @@ namespace PRL
         private global::ReaLTaiizor.Controls.BigLabel bigLabel34;
         private global::PRL.Tool.ButtonCustom buttonCustom14;
         private global::ReaLTaiizor.Controls.AloneComboBox aloneComboBox1;
-        private global::ReaLTaiizor.Controls.DungeonComboBox dungeonComboBox6;
+        private global::ReaLTaiizor.Controls.DungeonComboBox NV_Combo_GioiTinh;
         private global::System.Windows.Forms.Panel Panel_ManHinhCho;
         private ReaLTaiizor.Controls.AirSeparator airSeparator8;
         private ReaLTaiizor.Controls.AirSeparator airSeparator7;
         private ReaLTaiizor.Controls.AirSeparator airSeparator6;
         private ReaLTaiizor.Controls.AirSeparator airSeparator5;
         private ReaLTaiizor.Controls.AirSeparator airSeparator9;
-        private TextBox txtNguoiTT;
-        private TextBox txtThoiGianTT;
-        private TextBox txtTongTien;
-        private TextBox txtChiPhiKhac;
-        private TextBox txtGhiChu;
+        private TextBox TT_txt_NguoiTT;
+        private TextBox TT_txt_ThoiGianTT;
+        private TextBox TT_txt_TongTien;
+        private TextBox TT_txt_ChiPhiKhac;
+        private TextBox TT_txt_GhiChu;
     }
 }

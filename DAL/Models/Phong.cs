@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("Phong")]
-    public class Clinic
+    public class Phong
     {
         [Key]
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
 
-        public virtual StatusClinic? StatusClinic { get; set; }
+        public virtual TrangThaiPhong? StatusClinic { get; set; }
     }
 }

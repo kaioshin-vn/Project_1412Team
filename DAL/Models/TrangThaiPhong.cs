@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("TrangThaiPhongKham")]
-    public class StatusClinic
+    public class TrangThaiPhong
     {
         [Key]
         public int IndexDate { get; set; }
         public string Status { get; set; }
         public Guid IdShift { get; set; }
         public Guid IdClinic { get; set; }
-        public virtual ICollection<Clinic>? Clinics { get; set; }
-        public virtual ICollection<Shift>? Shifts { get; set; }
+        public virtual ICollection<Phong>? Clinics { get; set; }
+        public virtual ICollection<CaKham>? Shifts { get; set; }
 
     }
 }

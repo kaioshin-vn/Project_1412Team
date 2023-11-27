@@ -10,9 +10,9 @@ namespace B_BUS.IServices
     public interface ITimekeepingService
     {
        
-        public List<TimeKeeping> GetAll(string search);
-        public string AddNVTime(TimeKeeping nvt);
-        public string UpdateNVTime(TimeKeeping nvt);
-        public string DeleteNVTime(TimeKeeping nvt);
+        public List<ChamCong> GetAll(string search);
+        public string AddNVTime(ChamCong nvt);
+        public string UpdateNVTime(ChamCong nvt);
+        public string DeleteNVTime(ChamCong nvt);
     }
 }

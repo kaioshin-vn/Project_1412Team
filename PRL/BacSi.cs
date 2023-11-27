@@ -15,7 +15,7 @@ namespace PRL
     public partial class BacSi : Form
     {
         private TimekeepingService _timekeepsv;
-        public BacSi(Staff staff, Login login)
+        public BacSi(NhanVien staff, Login login)
         {
             FormLogin = login;
             user = staff;
@@ -28,7 +28,7 @@ namespace PRL
             InitializeComponent();
         }
 
-        Staff user;
+        NhanVien user;
         Login FormLogin;
 
         private void Admin_Load(object sender, EventArgs e)

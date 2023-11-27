@@ -18,24 +18,24 @@ namespace A_DAL.Repositories
             _dbContext = new MyDbContext();
         }
 
-        public List<TimeKeeping> GetAll()
+        public List<ChamCong> GetAll()
         {
             return _dbContext.TimeKeepings.ToList();
         }
-        public bool AddNVTime(TimeKeeping nvt)
+        public bool AddNVTime(ChamCong nvt)
         {
             _dbContext.Add(nvt);
             _dbContext.SaveChanges();
             return true;
         }
 
-        public bool UpdateNVTime(TimeKeeping nvt)
+        public bool UpdateNVTime(ChamCong nvt)
         {
             _dbContext.Update(nvt);
             _dbContext.SaveChanges();
             return true;
         }
-        public bool DeleteNVTime(TimeKeeping nvt)
+        public bool DeleteNVTime(ChamCong nvt)
         {
             _dbContext.Remove(nvt);
             _dbContext.SaveChanges();

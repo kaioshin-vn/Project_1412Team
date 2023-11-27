@@ -17,7 +17,7 @@ namespace DAL.Repositories
         //{
             
         //}
-        public List<Customer> GetAll()
+        public List<KhachHang> GetAll()
         {
             return _context.Customers.ToList();
         }

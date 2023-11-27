@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("TrangThaiBacSi")]
-    public class StatusDoctor
+    public class TrangThaiBacSi
     {
         [Key]
         public int IndexDate { get; set; }
@@ -18,8 +18,8 @@ namespace DAL.Models
         public Guid IdDoctor { get; set; }
         public DateTime Date { get; set; }
 
-        public virtual ICollection<Doctor>? Doctors { get; set; }
-        public virtual MedicalBill? MedicalBill { get; set; }
-        public virtual Shift? Shift { get; set; }
+        public virtual ICollection<BacSi>? Doctors { get; set; }
+        public virtual PhieuKham? MedicalBill { get; set; }
+        public virtual CaKham? Shift { get; set; }
     }
 }

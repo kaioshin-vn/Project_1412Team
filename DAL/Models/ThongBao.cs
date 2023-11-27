@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -9,17 +8,15 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    [Table("DanhGia")]
-    public class Rate
+    [Table("ThongBao")]
+    public  class ThongBao
     {
-        // Thọ
         [Key]
         public Guid Id { get; set; }
-        [Required]
-        [MaxLength(100)]
         public string Content { get; set; }
-        public DateTime CreateDate { get; set; }
-        //public IdMB 
-        public virtual ICollection<MedicalBill>? MedicalBills { get; set; }
+        public bool Visible { get; set; }
+
+        // quan hệ
+        public virtual NhanVien Staff { get; set; }
     }
 }

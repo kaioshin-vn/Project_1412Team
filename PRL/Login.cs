@@ -112,7 +112,7 @@ namespace PRL
                     var processData = data.Split('|');
                     if (processData[2] == "true")
                     {
-                        var st = new Staff();
+                        var st = new NhanVien();
                         var form = new Admin(st, this);
                         form.Show();
                         RememberStatus = true;

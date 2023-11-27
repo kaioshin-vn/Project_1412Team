@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("HoaDon")]
-    public class Bill
+    public class HoaDon
     {
         // Thọ
         [Key]
@@ -23,8 +23,8 @@ namespace DAL.Models
         public decimal? TongTien { get; set; }
         public string? PaymentMethods { get; set; } // Phương thức thanh toán
         public string? Note {  get; set; } // ghi chú
-        public virtual ICollection<BillDetail>? BillDetails { get; set; }
-        public virtual ICollection<Customer>? Customers { get; set; }
-        public virtual ICollection<Nurse>? Nurses { get; set; }
+        public virtual ICollection<HoaDonChiTiet>? BillDetails { get; set; }
+        public virtual ICollection<KhachHang>? Customers { get; set; }
+        public virtual ICollection<YTa>? Nurses { get; set; }
     }
 }
