@@ -13,10 +13,10 @@ namespace DAL.Models
     {
         [Key]
         public Guid Id { get; set; }
-        public Guid IdStaff { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-
+        [Required]
+        public string NameNV { get; set; }
+        public int NgayCong { get; set; }
+        public decimal Luong { get; set; }
         // quan hệ
         public virtual ICollection<Staff>? Staff { get; set; }
     }

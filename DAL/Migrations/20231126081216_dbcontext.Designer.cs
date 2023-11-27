@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A_DAL.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20231123151543_dbcontext")]
+    [Migration("20231126081216_dbcontext")]
     partial class dbcontext
     {
         /// <inheritdoc />
@@ -436,17 +436,33 @@ namespace A_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid?>("AdminId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("ChucVu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid?>("DoctorId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumberPhone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Posittion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sex")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -560,14 +576,15 @@ namespace A_DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime2");
+                    b.Property<decimal>("Luong")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid>("IdStaff")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("NameNV")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("NgayCong")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

@@ -31,6 +31,8 @@ namespace PRL.Tool
             }
         }
 
+        public string IDSelected { get; set; }
+
         [Category("Custom Props")]
         public int BorderRadius
         {
