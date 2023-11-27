@@ -11,10 +11,13 @@ namespace DAL
         static void WriteToScreen()
         { 
             //check conflict github side
-            //check Phong
+            //check Phong 
             //giap
             //giapdd
             //tant5tuu
+            //fvfv
+            //quan dfef
+
         }
 
         static void Main()
