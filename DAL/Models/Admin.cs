@@ -12,13 +12,11 @@ namespace DAL.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
-        public string HoTen { get; set; }
+        public string Name { get; set; }
         [Required]
-        public string MatKhau {  get; set; }
+        public string Passwprd {  get; set; }
         [Required]
-        public string DiaChi { get; set; }
-        [Required]
-        public bool HienThi { get; set; } // ẩn hiện
+        public bool Visible { get; set; } // ẩn hiện
 
         // quan hệ
         public virtual ICollection<Staff>? Staff { get; set; }
