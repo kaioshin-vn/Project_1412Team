@@ -127,17 +127,26 @@
   <data name="icons8-service-341" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-service-34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-customer-43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\icons8-customer-43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-analyst-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-analyst-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-salary-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\icons8-salary-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-closed-eye-35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-closed-eye-35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Custom-Icon-Design-Pretty-Office-9-Edit-validated.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Custom-Icon-Design-Pretty-Office-9-Edit-validated.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-document-42" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-document-42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jeno-Cyber-Game-Cover-51-Hard-Reset-Extended-Version1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jeno-Cyber-Game-Cover-51-Hard-Reset-Extended-Version.321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-crowd-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-crowd-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +154,11 @@
   <data name="icons8-eye_open-35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-eye_open-35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-customer-43" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\icons8-customer-43.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Jeno-Cyber-Game-Cover-51-Hard-Reset-Extended-Version.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jeno-Cyber-Game-Cover-51-Hard-Reset-Extended-Version.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jeno-Cyber-Game-Cover-49-Hard-Reset.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jeno-Cyber-Game-Cover-49-Hard-Reset.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-document-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-document-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,16 +166,28 @@
   <data name="icons8-crowd-34" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-crowd-34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-cancel-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-cancel-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-service-34" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-service-34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3261126766" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\3261126766.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ampeross-Qetto-2-Add-contact.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ampeross-Qetto-2-Add-contact.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-salary-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\icons8-salary-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-magnifying-glass-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\icons8-magnifying-glass-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3261126766" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\3261126766.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Custom-Icon-Design-Pretty-Office-9-Delete-file.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Custom-Icon-Design-Pretty-Office-9-Delete-file.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

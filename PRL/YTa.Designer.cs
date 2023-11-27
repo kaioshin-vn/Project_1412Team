@@ -31,12 +31,12 @@ namespace PRL
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
@@ -90,13 +90,16 @@ namespace PRL
             Content = new Panel();
             Panel_ChamCong = new Panel();
             groupBox3 = new GroupBox();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            label21 = new Label();
             textBox6 = new TextBox();
             textBox5 = new TextBox();
             Nu = new RadioButton();
             Nam = new RadioButton();
             label20 = new Label();
             label19 = new Label();
-            textBox4 = new TextBox();
+            Search = new TextBox();
             Chucvu = new TextBox();
             Ten = new TextBox();
             label18 = new Label();
@@ -105,7 +108,7 @@ namespace PRL
             label15 = new Label();
             label14 = new Label();
             label13 = new Label();
-            button1 = new Button();
+            btn_reset = new Button();
             btn_xoa = new Button();
             btn_sua = new Button();
             btn_them = new Button();
@@ -148,9 +151,6 @@ namespace PRL
             Nav_Option = new Panel();
             Panel_thanhtoan = new Panel();
             buttonCustom2 = new ButtonCustom();
-            label21 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -414,37 +414,37 @@ namespace PRL
             KH_GridView.BorderStyle = BorderStyle.None;
             KH_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle14.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
-            KH_GridView.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            KH_GridView.DefaultCellStyle = dataGridViewCellStyle2;
             KH_GridView.EnableHeadersVisualStyles = false;
             KH_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             KH_GridView.GridColor = Color.FromArgb(255, 255, 255);
             KH_GridView.Location = new Point(38, 76);
             KH_GridView.Name = "KH_GridView";
             KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle15.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
-            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             KH_GridView.RowHeadersWidth = 51;
             KH_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             KH_GridView.RowTemplate.Height = 29;
@@ -791,37 +791,37 @@ namespace PRL
             NV_GridView.BorderStyle = BorderStyle.None;
             NV_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             NV_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle16.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle16.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle16.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle16.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
-            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             NV_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle17.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle17.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle17.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
-            NV_GridView.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            NV_GridView.DefaultCellStyle = dataGridViewCellStyle5;
             NV_GridView.EnableHeadersVisualStyles = false;
             NV_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             NV_GridView.GridColor = Color.FromArgb(255, 255, 255);
             NV_GridView.Location = new Point(37, 67);
             NV_GridView.Name = "NV_GridView";
             NV_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle18.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
-            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             NV_GridView.RowHeadersWidth = 51;
             NV_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             NV_GridView.RowTemplate.Height = 29;
@@ -1237,7 +1237,7 @@ namespace PRL
             // Panel_ChamCong
             // 
             Panel_ChamCong.Controls.Add(groupBox3);
-            Panel_ChamCong.Controls.Add(button1);
+            Panel_ChamCong.Controls.Add(btn_reset);
             Panel_ChamCong.Controls.Add(btn_xoa);
             Panel_ChamCong.Controls.Add(btn_sua);
             Panel_ChamCong.Controls.Add(btn_them);
@@ -1260,7 +1260,7 @@ namespace PRL
             groupBox3.Controls.Add(Nam);
             groupBox3.Controls.Add(label20);
             groupBox3.Controls.Add(label19);
-            groupBox3.Controls.Add(textBox4);
+            groupBox3.Controls.Add(Search);
             groupBox3.Controls.Add(Chucvu);
             groupBox3.Controls.Add(Ten);
             groupBox3.Controls.Add(label18);
@@ -1275,6 +1275,29 @@ namespace PRL
             groupBox3.TabIndex = 7;
             groupBox3.TabStop = false;
             groupBox3.Text = "Nhập thông tin ";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(113, 162);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(214, 23);
+            dateTimePicker2.TabIndex = 18;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(488, 43);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(223, 23);
+            dateTimePicker1.TabIndex = 17;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(397, 46);
+            label21.Name = "label21";
+            label21.Size = new Size(78, 15);
+            label21.TabIndex = 16;
+            label21.Text = "Ngày bắt đầu";
             // 
             // textBox6
             // 
@@ -1330,12 +1353,12 @@ namespace PRL
             label19.TabIndex = 10;
             label19.Text = "Tìm kiếm";
             // 
-            // textBox4
+            // Search
             // 
-            textBox4.Location = new Point(252, 200);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(357, 23);
-            textBox4.TabIndex = 9;
+            Search.Location = new Point(252, 200);
+            Search.Name = "Search";
+            Search.Size = new Size(357, 23);
+            Search.TabIndex = 9;
             // 
             // Chucvu
             // 
@@ -1405,41 +1428,66 @@ namespace PRL
             label13.TabIndex = 0;
             label13.Text = "Tên";
             // 
-            // button1
+            // btn_reset
             // 
-            button1.Location = new Point(186, 266);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 41);
-            button1.TabIndex = 6;
-            button1.Text = "Reset";
-            button1.UseVisualStyleBackColor = true;
+            btn_reset.BackColor = Color.Khaki;
+            btn_reset.Enabled = false;
+            btn_reset.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_reset.Image = C_PRL.Properties.Resources.Jeno_Cyber_Game_Cover_49_Hard_Reset_48;
+            btn_reset.ImageAlign = ContentAlignment.MiddleRight;
+            btn_reset.Location = new Point(186, 261);
+            btn_reset.Name = "btn_reset";
+            btn_reset.Padding = new Padding(10, 0, 3, 0);
+            btn_reset.Size = new Size(120, 51);
+            btn_reset.TabIndex = 6;
+            btn_reset.Text = "Reset";
+            btn_reset.TextAlign = ContentAlignment.MiddleLeft;
+            btn_reset.UseVisualStyleBackColor = false;
             // 
             // btn_xoa
             // 
-            btn_xoa.Location = new Point(659, 266);
+            btn_xoa.BackColor = Color.Khaki;
+            btn_xoa.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_xoa.Image = C_PRL.Properties.Resources.Custom_Icon_Design_Pretty_Office_9_Delete_file_48;
+            btn_xoa.ImageAlign = ContentAlignment.MiddleRight;
+            btn_xoa.Location = new Point(659, 261);
             btn_xoa.Name = "btn_xoa";
-            btn_xoa.Size = new Size(107, 41);
+            btn_xoa.Padding = new Padding(10, 0, 10, 0);
+            btn_xoa.Size = new Size(124, 54);
             btn_xoa.TabIndex = 5;
             btn_xoa.Text = "Xóa";
-            btn_xoa.UseVisualStyleBackColor = true;
+            btn_xoa.TextAlign = ContentAlignment.MiddleLeft;
+            btn_xoa.UseVisualStyleBackColor = false;
             // 
             // btn_sua
             // 
-            btn_sua.Location = new Point(501, 266);
+            btn_sua.BackColor = Color.Khaki;
+            btn_sua.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_sua.Image = C_PRL.Properties.Resources.Custom_Icon_Design_Pretty_Office_9_Edit_validated_48;
+            btn_sua.ImageAlign = ContentAlignment.MiddleRight;
+            btn_sua.Location = new Point(501, 261);
             btn_sua.Name = "btn_sua";
-            btn_sua.Size = new Size(107, 41);
+            btn_sua.Padding = new Padding(10, 0, 10, 0);
+            btn_sua.Size = new Size(124, 54);
             btn_sua.TabIndex = 4;
             btn_sua.Text = "Sửa";
-            btn_sua.UseVisualStyleBackColor = true;
+            btn_sua.TextAlign = ContentAlignment.MiddleLeft;
+            btn_sua.UseVisualStyleBackColor = false;
             // 
             // btn_them
             // 
-            btn_them.Location = new Point(348, 266);
+            btn_them.BackColor = Color.Khaki;
+            btn_them.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_them.Image = C_PRL.Properties.Resources.Ampeross_Qetto_2_Add_contact_48;
+            btn_them.ImageAlign = ContentAlignment.MiddleRight;
+            btn_them.Location = new Point(348, 261);
             btn_them.Name = "btn_them";
-            btn_them.Size = new Size(107, 41);
+            btn_them.Padding = new Padding(5, 0, 5, 0);
+            btn_them.Size = new Size(126, 54);
             btn_them.TabIndex = 3;
             btn_them.Text = "Thêm";
-            btn_them.UseVisualStyleBackColor = true;
+            btn_them.TextAlign = ContentAlignment.MiddleLeft;
+            btn_them.UseVisualStyleBackColor = false;
             // 
             // Export
             // 
@@ -1940,29 +1988,6 @@ namespace PRL
             buttonCustom2.TextColor = Color.White;
             buttonCustom2.UseVisualStyleBackColor = false;
             // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new Point(397, 46);
-            label21.Name = "label21";
-            label21.Size = new Size(78, 15);
-            label21.TabIndex = 16;
-            label21.Text = "Ngày bắt đầu";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(488, 43);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(223, 23);
-            dateTimePicker1.TabIndex = 17;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new Point(113, 162);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(214, 23);
-            dateTimePicker2.TabIndex = 18;
-            // 
             // YTa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2108,7 +2133,7 @@ namespace PRL
         private Button btn_them;
         private Button btn_xoa;
         private Button btn_sua;
-        private Button button1;
+        private Button btn_reset;
         private GroupBox groupBox3;
         private TextBox Ten;
         private Label label18;
@@ -2117,7 +2142,7 @@ namespace PRL
         private Label label15;
         private Label label14;
         private Label label13;
-        private TextBox textBox4;
+        private TextBox Search;
         private TextBox Chucvu;
         private Label label19;
         private RadioButton Nu;
