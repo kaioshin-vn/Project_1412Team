@@ -373,18 +373,18 @@ namespace PRL
             // 
             // Navigation
             // 
-            Navigation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Navigation.BackColor = Color.FromArgb(128, 255, 230);
-            Navigation.BorderStyle = BorderStyle.FixedSingle;
-            Navigation.Controls.Add(label3);
-            Navigation.Controls.Add(label2);
-            Navigation.Controls.Add(buttonCustom1);
-            Navigation.Controls.Add(ThongBao);
-            Navigation.Controls.Add(LoiChao);
-            Navigation.Location = new Point(276, -8);
-            Navigation.Name = "Navigation";
-            Navigation.Size = new Size(1449, 65);
-            Navigation.TabIndex = 1;
+            this.Navigation.Anchor = ((global::System.Windows.Forms.AnchorStyles)(((global::System.Windows.Forms.AnchorStyles.Top) | (global::System.Windows.Forms.AnchorStyles.Left)) | (global::System.Windows.Forms.AnchorStyles.Right)));
+            this.Navigation.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(128)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(230))));
+            this.Navigation.BorderStyle = (global::System.Windows.Forms.BorderStyle.FixedSingle);
+            this.Navigation.Controls.Add(this.label3);
+            this.Navigation.Controls.Add(this.label2);
+            this.Navigation.Controls.Add(this.buttonCustom1);
+            this.Navigation.Controls.Add(this.ThongBao);
+            this.Navigation.Controls.Add(this.LoiChao);
+            this.Navigation.Location = (new global::System.Drawing.Point(276, -8));
+            this.Navigation.Name = ("Navigation");
+            this.Navigation.Size = (new global::System.Drawing.Size(1449, 65));
+            this.Navigation.TabIndex = (1);
             // 
             // label3
             // 
@@ -589,48 +589,48 @@ namespace PRL
             // 
             // KH_GridView
             // 
-            KH_GridView.AllowUserToResizeRows = false;
-            KH_GridView.BackgroundColor = Color.Pink;
-            KH_GridView.BorderStyle = BorderStyle.None;
-            KH_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle22.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle22.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle22.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle22.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.True;
-            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
-            KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle23.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle23.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle23.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle23.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
-            KH_GridView.DefaultCellStyle = dataGridViewCellStyle23;
-            KH_GridView.EnableHeadersVisualStyles = false;
-            KH_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            KH_GridView.GridColor = Color.FromArgb(255, 255, 255);
-            KH_GridView.Location = new Point(38, 76);
-            KH_GridView.Name = "KH_GridView";
-            KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle24.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle24.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle24.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle24.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
-            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            KH_GridView.RowHeadersWidth = 51;
-            KH_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            KH_GridView.RowTemplate.Height = 29;
-            KH_GridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            KH_GridView.Size = new Size(691, 431);
-            KH_GridView.TabIndex = 17;
+            this.KH_GridView.AllowUserToResizeRows = (false);
+            this.KH_GridView.BackgroundColor = (global::System.Drawing.Color.Pink);
+            this.KH_GridView.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.KH_GridView.CellBorderStyle = (global::System.Windows.Forms.DataGridViewCellBorderStyle.None);
+            this.KH_GridView.ColumnHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle1.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle1.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle1.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle1.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle1.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle1.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle1.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.KH_GridView.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle1);
+            this.KH_GridView.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            dataGridViewCellStyle2.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle2.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle2.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle2.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136))));
+            dataGridViewCellStyle2.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle2.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle2.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.KH_GridView.DefaultCellStyle = (dataGridViewCellStyle2);
+            this.KH_GridView.EnableHeadersVisualStyles = (false);
+            this.KH_GridView.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            this.KH_GridView.GridColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.KH_GridView.Location = (new global::System.Drawing.Point(38, 76));
+            this.KH_GridView.Name = ("KH_GridView");
+            this.KH_GridView.RowHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle3.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle3.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle3.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle3.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle3.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle3.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle3.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.KH_GridView.RowHeadersDefaultCellStyle = (dataGridViewCellStyle3);
+            this.KH_GridView.RowHeadersWidth = (51);
+            this.KH_GridView.RowHeadersWidthSizeMode = (global::System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing);
+            this.KH_GridView.RowTemplate.Height = (29);
+            this.KH_GridView.SelectionMode = (global::System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect);
+            this.KH_GridView.Size = (new global::System.Drawing.Size(691, 431));
+            this.KH_GridView.TabIndex = (17);
             // 
             // cyberGroupBox2
             // 
@@ -1315,48 +1315,48 @@ namespace PRL
             // 
             // NV_GridView
             // 
-            NV_GridView.AllowUserToResizeRows = false;
-            NV_GridView.BackgroundColor = Color.Pink;
-            NV_GridView.BorderStyle = BorderStyle.None;
-            NV_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            NV_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle25.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle25.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle25.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle25.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle25.WrapMode = DataGridViewTriState.True;
-            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            NV_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle26.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle26.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle26.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.False;
-            NV_GridView.DefaultCellStyle = dataGridViewCellStyle26;
-            NV_GridView.EnableHeadersVisualStyles = false;
-            NV_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            NV_GridView.GridColor = Color.FromArgb(255, 255, 255);
-            NV_GridView.Location = new Point(37, 67);
-            NV_GridView.Name = "NV_GridView";
-            NV_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle27.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle27.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle27.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.True;
-            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            NV_GridView.RowHeadersWidth = 51;
-            NV_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            NV_GridView.RowTemplate.Height = 29;
-            NV_GridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            NV_GridView.Size = new Size(691, 410);
-            NV_GridView.TabIndex = 11;
+            this.NV_GridView.AllowUserToResizeRows = (false);
+            this.NV_GridView.BackgroundColor = (global::System.Drawing.Color.Pink);
+            this.NV_GridView.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.NV_GridView.CellBorderStyle = (global::System.Windows.Forms.DataGridViewCellBorderStyle.None);
+            this.NV_GridView.ColumnHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle4.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle4.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle4.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle4.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle4.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle4.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle4.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.NV_GridView.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle4);
+            this.NV_GridView.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            dataGridViewCellStyle5.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle5.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle5.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle5.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136))));
+            dataGridViewCellStyle5.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle5.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle5.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.NV_GridView.DefaultCellStyle = (dataGridViewCellStyle5);
+            this.NV_GridView.EnableHeadersVisualStyles = (false);
+            this.NV_GridView.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            this.NV_GridView.GridColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.NV_GridView.Location = (new global::System.Drawing.Point(37, 67));
+            this.NV_GridView.Name = ("NV_GridView");
+            this.NV_GridView.RowHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle6.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle6.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle6.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle6.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle6.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle6.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle6.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.NV_GridView.RowHeadersDefaultCellStyle = (dataGridViewCellStyle6);
+            this.NV_GridView.RowHeadersWidth = (51);
+            this.NV_GridView.RowHeadersWidthSizeMode = (global::System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing);
+            this.NV_GridView.RowTemplate.Height = (29);
+            this.NV_GridView.SelectionMode = (global::System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect);
+            this.NV_GridView.Size = (new global::System.Drawing.Size(691, 410));
+            this.NV_GridView.TabIndex = (11);
             // 
             // NV_Btn_An
             // 
@@ -1411,108 +1411,114 @@ namespace PRL
             // 
             // Nav_Option
             // 
-            Nav_Option.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            Nav_Option.BackColor = Color.FromArgb(128, 255, 230);
-            Nav_Option.BorderStyle = BorderStyle.FixedSingle;
-            Nav_Option.Controls.Add(ThongKe);
-            Nav_Option.Controls.Add(QL_LichKham);
-            Nav_Option.Controls.Add(QL_DV);
-            Nav_Option.Controls.Add(QL_ThanhToan);
-            Nav_Option.Controls.Add(QL_KH);
-            Nav_Option.Controls.Add(QL_NV);
-            Nav_Option.Location = new Point(-5, 56);
-            Nav_Option.Name = "Nav_Option";
-            Nav_Option.Size = new Size(284, 727);
-            Nav_Option.TabIndex = 1;
+            this.Nav_Option.Anchor = ((global::System.Windows.Forms.AnchorStyles)(((global::System.Windows.Forms.AnchorStyles.Top) | (global::System.Windows.Forms.AnchorStyles.Bottom)) | (global::System.Windows.Forms.AnchorStyles.Left)));
+            this.Nav_Option.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(128)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(230))));
+            this.Nav_Option.BorderStyle = (global::System.Windows.Forms.BorderStyle.FixedSingle);
+            this.Nav_Option.Controls.Add(this.ThongKe);
+            this.Nav_Option.Controls.Add(this.QL_LichKham);
+            this.Nav_Option.Controls.Add(this.QL_DV);
+            this.Nav_Option.Controls.Add(this.QL_ThanhToan);
+            this.Nav_Option.Controls.Add(this.QL_KH);
+            this.Nav_Option.Controls.Add(this.QL_NV);
+            this.Nav_Option.Location = (new global::System.Drawing.Point(-5, 56));
+            this.Nav_Option.Name = ("Nav_Option");
+            this.Nav_Option.Size = (new global::System.Drawing.Size(284, 727));
+            this.Nav_Option.TabIndex = (1);
             // 
             // ThongKe
             // 
-            ThongKe.AutoSize = true;
-            ThongKe.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            ThongKe.Image = C_PRL.Properties.Resources.icons8_analyst_64;
-            ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
-            ThongKe.Location = new Point(50, 381);
-            ThongKe.Name = "ThongKe";
-            ThongKe.Size = new Size(167, 32);
-            ThongKe.TabIndex = 8;
-            ThongKe.Text = "     Thống kê";
-            ThongKe.Click += ThongKe_Click;
+            this.ThongKe.AutoSize = (true);
+            this.ThongKe.Font = (new global::System.Drawing.Font("Comic Sans MS", 13.8F, (global::System.Drawing.FontStyle)((global::System.Drawing.FontStyle.Bold) | (global::System.Drawing.FontStyle.Italic)), global::System.Drawing.GraphicsUnit.Point));
+            this.ThongKe.Image = (global::C_PRL.Properties.Resources.icons8_analyst_64);
+            this.ThongKe.ImageAlign = (global::System.Drawing.ContentAlignment.MiddleLeft);
+            this.ThongKe.Location = (new global::System.Drawing.Point(50, 381));
+            this.ThongKe.Name = ("ThongKe");
+            this.ThongKe.Size = (new global::System.Drawing.Size(167, 32));
+            this.ThongKe.TabIndex = (8);
+            this.ThongKe.Text = ("     Thống kê");
+            this.ThongKe.Click += (this.ThongKe_Click);
             // 
             // QL_LichKham
             // 
-            QL_LichKham.AutoSize = true;
-            QL_LichKham.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_LichKham.Image = C_PRL.Properties.Resources.icons8_document_42;
-            QL_LichKham.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_LichKham.Location = new Point(43, 197);
-            QL_LichKham.Name = "QL_LichKham";
-            QL_LichKham.Size = new Size(220, 32);
-            QL_LichKham.TabIndex = 7;
-            QL_LichKham.Text = "     QL Lịch Khám";
-            QL_LichKham.Click += QL_LichKham_Click;
+            this.QL_LichKham.AutoSize = (true);
+            this.QL_LichKham.Font = (new global::System.Drawing.Font("Comic Sans MS", 13.8F, (global::System.Drawing.FontStyle)((global::System.Drawing.FontStyle.Bold) | (global::System.Drawing.FontStyle.Italic)), global::System.Drawing.GraphicsUnit.Point));
+            this.QL_LichKham.Image = (global::C_PRL.Properties.Resources.icons8_document_42);
+            this.QL_LichKham.ImageAlign = (global::System.Drawing.ContentAlignment.MiddleLeft);
+            this.QL_LichKham.Location = (new global::System.Drawing.Point(43, 197));
+            this.QL_LichKham.Name = ("QL_LichKham");
+            this.QL_LichKham.Size = (new global::System.Drawing.Size(220, 32));
+            this.QL_LichKham.TabIndex = (7);
+            this.QL_LichKham.Text = ("     QL Lịch Khám");
+            this.QL_LichKham.Click += (this.QL_LichKham_Click);
             // 
             // QL_DV
             // 
-            QL_DV.AutoSize = true;
-            QL_DV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_DV.Image = C_PRL.Properties.Resources.icons8_service_341;
-            QL_DV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_DV.Location = new Point(50, 288);
-            QL_DV.Name = "QL_DV";
-            QL_DV.Size = new Size(196, 32);
-            QL_DV.TabIndex = 3;
-            QL_DV.Text = "     QL Dịch Vụ";
-            QL_DV.Click += QL_DV_Click;
+            this.QL_DV.AutoSize = (true);
+            this.QL_DV.Font = (new global::System.Drawing.Font("Comic Sans MS", 13.8F, (global::System.Drawing.FontStyle)((global::System.Drawing.FontStyle.Bold) | (global::System.Drawing.FontStyle.Italic)), global::System.Drawing.GraphicsUnit.Point));
+            this.QL_DV.Image = (global::C_PRL.Properties.Resources.icons8_service_341);
+            this.QL_DV.ImageAlign = (global::System.Drawing.ContentAlignment.MiddleLeft);
+            this.QL_DV.Location = (new global::System.Drawing.Point(50, 288));
+            this.QL_DV.Name = ("QL_DV");
+            this.QL_DV.Size = (new global::System.Drawing.Size(196, 32));
+            this.QL_DV.TabIndex = (3);
+            this.QL_DV.Text = ("     QL Dịch Vụ");
+            this.QL_DV.Click += (this.QL_DV_Click);
             // 
             // QL_ThanhToan
             // 
-            QL_ThanhToan.AutoSize = true;
-            QL_ThanhToan.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_ThanhToan.Image = C_PRL.Properties.Resources.icons8_bill_64;
-            QL_ThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_ThanhToan.Location = new Point(43, 473);
-            QL_ThanhToan.Name = "QL_ThanhToan";
-            QL_ThanhToan.Size = new Size(204, 32);
-            QL_ThanhToan.TabIndex = 2;
-            QL_ThanhToan.Text = "      Thanh Toán";
-            QL_ThanhToan.Click += QL_ThanhToan_Click;
+            this.QL_ThanhToan.AutoSize = (true);
+            this.QL_ThanhToan.Font = (new global::System.Drawing.Font("Comic Sans MS", 13.8F, (global::System.Drawing.FontStyle)((global::System.Drawing.FontStyle.Bold) | (global::System.Drawing.FontStyle.Italic)), global::System.Drawing.GraphicsUnit.Point));
+            this.QL_ThanhToan.Image = (global::C_PRL.Properties.Resources.icons8_bill_64);
+            this.QL_ThanhToan.ImageAlign = (global::System.Drawing.ContentAlignment.MiddleLeft);
+            this.QL_ThanhToan.Location = (new global::System.Drawing.Point(43, 473));
+            this.QL_ThanhToan.Name = ("QL_ThanhToan");
+            this.QL_ThanhToan.Size = (new global::System.Drawing.Size(204, 32));
+            this.QL_ThanhToan.TabIndex = (2);
+            this.QL_ThanhToan.Text = ("      Thanh Toán");
+            this.QL_ThanhToan.Click += (this.QL_ThanhToan_Click);
             // 
             // QL_KH
             // 
-            QL_KH.AutoSize = true;
-            QL_KH.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_KH.Image = C_PRL.Properties.Resources.icons8_customer_43;
-            QL_KH.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_KH.Location = new Point(43, 105);
-            QL_KH.Name = "QL_KH";
-            QL_KH.Size = new Size(237, 32);
-            QL_KH.TabIndex = 1;
-            QL_KH.Text = "     QL Khách Hàng";
-            QL_KH.Click += QL_KH_Click;
+            this.QL_KH.AutoSize = (true);
+            this.QL_KH.Font = (new global::System.Drawing.Font("Comic Sans MS", 13.8F, (global::System.Drawing.FontStyle)((global::System.Drawing.FontStyle.Bold) | (global::System.Drawing.FontStyle.Italic)), global::System.Drawing.GraphicsUnit.Point));
+            this.QL_KH.Image = (global::C_PRL.Properties.Resources.icons8_customer_43);
+            this.QL_KH.ImageAlign = (global::System.Drawing.ContentAlignment.MiddleLeft);
+            this.QL_KH.Location = (new global::System.Drawing.Point(43, 105));
+            this.QL_KH.Name = ("QL_KH");
+            this.QL_KH.Size = (new global::System.Drawing.Size(237, 32));
+            this.QL_KH.TabIndex = (1);
+            this.QL_KH.Text = ("     QL Khách Hàng");
+            this.QL_KH.Click += (this.QL_KH_Click);
             // 
             // QL_NV
             // 
-            QL_NV.AutoSize = true;
-            QL_NV.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            QL_NV.Image = C_PRL.Properties.Resources.icons8_crowd_34;
-            QL_NV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_NV.Location = new Point(43, 17);
-            QL_NV.Name = "QL_NV";
-            QL_NV.Size = new Size(216, 32);
-            QL_NV.TabIndex = 0;
-            QL_NV.Text = "     QL Nhân viên";
-            QL_NV.Click += label3_Click;
+            this.QL_NV.AutoSize = (true);
+            this.QL_NV.Font = (new global::System.Drawing.Font("Comic Sans MS", 13.8F, (global::System.Drawing.FontStyle)((global::System.Drawing.FontStyle.Bold) | (global::System.Drawing.FontStyle.Italic)), global::System.Drawing.GraphicsUnit.Point));
+            this.QL_NV.Image = (global::C_PRL.Properties.Resources.icons8_crowd_34);
+            this.QL_NV.ImageAlign = (global::System.Drawing.ContentAlignment.MiddleLeft);
+            this.QL_NV.Location = (new global::System.Drawing.Point(43, 17));
+            this.QL_NV.Name = ("QL_NV");
+            this.QL_NV.Size = (new global::System.Drawing.Size(216, 32));
+            this.QL_NV.TabIndex = (0);
+            this.QL_NV.Text = ("     QL Nhân viên");
+            this.QL_NV.Click += (this.label3_Click);
             // 
             // Content
             // 
-            Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Content.BackColor = Color.LavenderBlush;
-            Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_TT);
-            Content.Location = new Point(276, 56);
-            Content.Name = "Content";
-            Content.Size = new Size(1768, 908);
-            Content.TabIndex = 2;
+            this.Content.Anchor = ((global::System.Windows.Forms.AnchorStyles)((((global::System.Windows.Forms.AnchorStyles.Top) | (global::System.Windows.Forms.AnchorStyles.Bottom)) | (global::System.Windows.Forms.AnchorStyles.Left)) | (global::System.Windows.Forms.AnchorStyles.Right)));
+            this.Content.BackColor = (global::System.Drawing.Color.LavenderBlush);
+            this.Content.BorderStyle = (global::System.Windows.Forms.BorderStyle.FixedSingle);
+            this.Content.Controls.Add(this.Panel_ManHinhCho);
+            this.Content.Controls.Add(this.Panel_LK);
+            this.Content.Controls.Add(this.Panel_NV);
+            this.Content.Controls.Add(this.Panel_KH);
+            this.Content.Controls.Add(this.Panel_L);
+            this.Content.Controls.Add(this.Panel_ThongKe);
+            this.Content.Controls.Add(this.Panel_TK);
+            this.Content.Location = (new global::System.Drawing.Point(276, 56));
+            this.Content.Name = ("Content");
+            this.Content.Size = (new global::System.Drawing.Size(1768, 908));
+            this.Content.TabIndex = (2);
             // 
             // Panel_TT
             // 
@@ -1982,48 +1988,48 @@ namespace PRL
             // 
             // poisonDataGridView1
             // 
-            poisonDataGridView1.AllowUserToResizeRows = false;
-            poisonDataGridView1.BackgroundColor = Color.FromArgb(192, 255, 255);
-            poisonDataGridView1.BorderStyle = BorderStyle.None;
-            poisonDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            poisonDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle31.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle31.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle31.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle31.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle31.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle31.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
-            poisonDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle32.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle32.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle32.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle32.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle32.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle32.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle32;
-            poisonDataGridView1.EnableHeadersVisualStyles = false;
-            poisonDataGridView1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            poisonDataGridView1.GridColor = Color.FromArgb(255, 255, 255);
-            poisonDataGridView1.Location = new Point(67, 151);
-            poisonDataGridView1.Name = "poisonDataGridView1";
-            poisonDataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle33.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle33.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle33.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle33.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle33.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
-            poisonDataGridView1.RowHeadersWidth = 51;
-            poisonDataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            poisonDataGridView1.RowTemplate.Height = 29;
-            poisonDataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            poisonDataGridView1.Size = new Size(993, 550);
-            poisonDataGridView1.TabIndex = 32;
+            this.poisonDataGridView1.AllowUserToResizeRows = (false);
+            this.poisonDataGridView1.BackgroundColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.poisonDataGridView1.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.poisonDataGridView1.CellBorderStyle = (global::System.Windows.Forms.DataGridViewCellBorderStyle.None);
+            this.poisonDataGridView1.ColumnHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle7.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle7.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle7.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle7.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle7.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle7.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle7.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView1.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle7);
+            this.poisonDataGridView1.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            dataGridViewCellStyle8.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle8.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle8.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle8.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136))));
+            dataGridViewCellStyle8.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle8.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle8.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.poisonDataGridView1.DefaultCellStyle = (dataGridViewCellStyle8);
+            this.poisonDataGridView1.EnableHeadersVisualStyles = (false);
+            this.poisonDataGridView1.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            this.poisonDataGridView1.GridColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.poisonDataGridView1.Location = (new global::System.Drawing.Point(67, 151));
+            this.poisonDataGridView1.Name = ("poisonDataGridView1");
+            this.poisonDataGridView1.RowHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle9.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle9.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle9.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle9.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle9.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle9.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle9.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView1.RowHeadersDefaultCellStyle = (dataGridViewCellStyle9);
+            this.poisonDataGridView1.RowHeadersWidth = (51);
+            this.poisonDataGridView1.RowHeadersWidthSizeMode = (global::System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing);
+            this.poisonDataGridView1.RowTemplate.Height = (29);
+            this.poisonDataGridView1.SelectionMode = (global::System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect);
+            this.poisonDataGridView1.Size = (new global::System.Drawing.Size(993, 550));
+            this.poisonDataGridView1.TabIndex = (32);
             // 
             // label13
             // 
@@ -2496,48 +2502,48 @@ namespace PRL
             // 
             // poisonDataGridView3
             // 
-            poisonDataGridView3.AllowUserToResizeRows = false;
-            poisonDataGridView3.BackgroundColor = Color.Aquamarine;
-            poisonDataGridView3.BorderStyle = BorderStyle.None;
-            poisonDataGridView3.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            poisonDataGridView3.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle34.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle34.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle34.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle34.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle34.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
-            poisonDataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle35.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle35.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle35.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle35.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle35.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView3.DefaultCellStyle = dataGridViewCellStyle35;
-            poisonDataGridView3.EnableHeadersVisualStyles = false;
-            poisonDataGridView3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            poisonDataGridView3.GridColor = Color.FromArgb(255, 255, 255);
-            poisonDataGridView3.Location = new Point(50, 532);
-            poisonDataGridView3.Name = "poisonDataGridView3";
-            poisonDataGridView3.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle36.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle36.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle36.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle36.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle36.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle36.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
-            poisonDataGridView3.RowHeadersWidth = 51;
-            poisonDataGridView3.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            poisonDataGridView3.RowTemplate.Height = 29;
-            poisonDataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            poisonDataGridView3.Size = new Size(719, 323);
-            poisonDataGridView3.TabIndex = 15;
+            this.poisonDataGridView3.AllowUserToResizeRows = (false);
+            this.poisonDataGridView3.BackgroundColor = (global::System.Drawing.Color.Aquamarine);
+            this.poisonDataGridView3.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.poisonDataGridView3.CellBorderStyle = (global::System.Windows.Forms.DataGridViewCellBorderStyle.None);
+            this.poisonDataGridView3.ColumnHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle10.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle10.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle10.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle10.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle10.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle10.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle10.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView3.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle10);
+            this.poisonDataGridView3.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            dataGridViewCellStyle11.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle11.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle11.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle11.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136))));
+            dataGridViewCellStyle11.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle11.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle11.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.poisonDataGridView3.DefaultCellStyle = (dataGridViewCellStyle11);
+            this.poisonDataGridView3.EnableHeadersVisualStyles = (false);
+            this.poisonDataGridView3.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            this.poisonDataGridView3.GridColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.poisonDataGridView3.Location = (new global::System.Drawing.Point(50, 532));
+            this.poisonDataGridView3.Name = ("poisonDataGridView3");
+            this.poisonDataGridView3.RowHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle12.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle12.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle12.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle12.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle12.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle12.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle12.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView3.RowHeadersDefaultCellStyle = (dataGridViewCellStyle12);
+            this.poisonDataGridView3.RowHeadersWidth = (51);
+            this.poisonDataGridView3.RowHeadersWidthSizeMode = (global::System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing);
+            this.poisonDataGridView3.RowTemplate.Height = (29);
+            this.poisonDataGridView3.SelectionMode = (global::System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect);
+            this.poisonDataGridView3.Size = (new global::System.Drawing.Size(719, 323));
+            this.poisonDataGridView3.TabIndex = (15);
             // 
             // bigLabel23
             // 
@@ -2681,48 +2687,48 @@ namespace PRL
             // 
             // poisonDataGridView4
             // 
-            poisonDataGridView4.AllowUserToResizeRows = false;
-            poisonDataGridView4.BackgroundColor = Color.FromArgb(192, 255, 192);
-            poisonDataGridView4.BorderStyle = BorderStyle.None;
-            poisonDataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            poisonDataGridView4.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle37.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle37.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle37.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle37.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle37.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle37.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
-            poisonDataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle38.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle38.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle38.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle38.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle38.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle38.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView4.DefaultCellStyle = dataGridViewCellStyle38;
-            poisonDataGridView4.EnableHeadersVisualStyles = false;
-            poisonDataGridView4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            poisonDataGridView4.GridColor = Color.FromArgb(192, 255, 192);
-            poisonDataGridView4.Location = new Point(47, 538);
-            poisonDataGridView4.Name = "poisonDataGridView4";
-            poisonDataGridView4.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle39.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle39.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle39.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle39.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle39.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle39.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
-            poisonDataGridView4.RowHeadersWidth = 51;
-            poisonDataGridView4.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            poisonDataGridView4.RowTemplate.Height = 29;
-            poisonDataGridView4.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            poisonDataGridView4.Size = new Size(711, 323);
-            poisonDataGridView4.TabIndex = 16;
+            this.poisonDataGridView4.AllowUserToResizeRows = (false);
+            this.poisonDataGridView4.BackgroundColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(192))));
+            this.poisonDataGridView4.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.poisonDataGridView4.CellBorderStyle = (global::System.Windows.Forms.DataGridViewCellBorderStyle.None);
+            this.poisonDataGridView4.ColumnHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle13.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle13.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle13.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle13.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle13.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle13.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle13.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView4.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle13);
+            this.poisonDataGridView4.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            dataGridViewCellStyle14.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle14.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle14.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle14.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136))));
+            dataGridViewCellStyle14.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle14.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle14.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.poisonDataGridView4.DefaultCellStyle = (dataGridViewCellStyle14);
+            this.poisonDataGridView4.EnableHeadersVisualStyles = (false);
+            this.poisonDataGridView4.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            this.poisonDataGridView4.GridColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(192))));
+            this.poisonDataGridView4.Location = (new global::System.Drawing.Point(47, 538));
+            this.poisonDataGridView4.Name = ("poisonDataGridView4");
+            this.poisonDataGridView4.RowHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle15.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle15.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle15.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle15.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle15.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle15.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle15.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView4.RowHeadersDefaultCellStyle = (dataGridViewCellStyle15);
+            this.poisonDataGridView4.RowHeadersWidth = (51);
+            this.poisonDataGridView4.RowHeadersWidthSizeMode = (global::System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing);
+            this.poisonDataGridView4.RowTemplate.Height = (29);
+            this.poisonDataGridView4.SelectionMode = (global::System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect);
+            this.poisonDataGridView4.Size = (new global::System.Drawing.Size(711, 323));
+            this.poisonDataGridView4.TabIndex = (16);
             // 
             // bigLabel27
             // 
@@ -2974,6 +2980,339 @@ namespace PRL
             bigLabel28.Size = new Size(320, 57);
             bigLabel28.TabIndex = 0;
             bigLabel28.Text = "Đặng Đình Giáp";
+            // 
+            // Panel_TT
+            // 
+            this.Panel_TT.Controls.Add(this.TT_Btn_ThanhToan);
+            this.Panel_TT.Controls.Add(this.TT_Btn_An);
+            this.Panel_TT.Controls.Add(this.TT_poisonDataGridView3);
+            this.Panel_TT.Controls.Add(this.TT_Btn_Sua);
+            this.Panel_TT.Controls.Add(this.hopeGroupBox3);
+            this.Panel_TT.Location = (new global::System.Drawing.Point(25, 10));
+            this.Panel_TT.Name = ("Panel_TT");
+            this.Panel_TT.Size = (new global::System.Drawing.Size(1606, 887));
+            this.Panel_TT.TabIndex = (0);
+            // 
+            // TT_Btn_ThanhToan
+            // 
+            this.TT_Btn_ThanhToan.BackColor = (global::System.Drawing.Color.MediumSlateBlue);
+            this.TT_Btn_ThanhToan.BackgroundColor = (global::System.Drawing.Color.MediumSlateBlue);
+            this.TT_Btn_ThanhToan.BorderColor = (global::System.Drawing.Color.PaleVioletRed);
+            this.TT_Btn_ThanhToan.BorderRadius = (20);
+            this.TT_Btn_ThanhToan.BorderSize = (0);
+            this.TT_Btn_ThanhToan.FlatAppearance.BorderSize = (0);
+            this.TT_Btn_ThanhToan.FlatStyle = (global::System.Windows.Forms.FlatStyle.Flat);
+            this.TT_Btn_ThanhToan.ForeColor = (global::System.Drawing.Color.White);
+            this.TT_Btn_ThanhToan.IDSelected = (null);
+            this.TT_Btn_ThanhToan.Location = (new global::System.Drawing.Point(987, 631));
+            this.TT_Btn_ThanhToan.Name = ("TT_Btn_ThanhToan");
+            this.TT_Btn_ThanhToan.Size = (new global::System.Drawing.Size(188, 50));
+            this.TT_Btn_ThanhToan.TabIndex = (5);
+            this.TT_Btn_ThanhToan.Text = ("Thanh toán");
+            this.TT_Btn_ThanhToan.TextColor = (global::System.Drawing.Color.White);
+            this.TT_Btn_ThanhToan.UseVisualStyleBackColor = (false);
+            // 
+            // TT_Btn_An
+            // 
+            this.TT_Btn_An.BackColor = (global::System.Drawing.Color.MediumSlateBlue);
+            this.TT_Btn_An.BackgroundColor = (global::System.Drawing.Color.MediumSlateBlue);
+            this.TT_Btn_An.BorderColor = (global::System.Drawing.Color.PaleVioletRed);
+            this.TT_Btn_An.BorderRadius = (20);
+            this.TT_Btn_An.BorderSize = (0);
+            this.TT_Btn_An.FlatAppearance.BorderSize = (0);
+            this.TT_Btn_An.FlatStyle = (global::System.Windows.Forms.FlatStyle.Flat);
+            this.TT_Btn_An.ForeColor = (global::System.Drawing.Color.White);
+            this.TT_Btn_An.IDSelected = (null);
+            this.TT_Btn_An.Location = (new global::System.Drawing.Point(730, 440));
+            this.TT_Btn_An.Name = ("TT_Btn_An");
+            this.TT_Btn_An.Size = (new global::System.Drawing.Size(188, 50));
+            this.TT_Btn_An.TabIndex = (4);
+            this.TT_Btn_An.Text = ("Ẩn");
+            this.TT_Btn_An.TextColor = (global::System.Drawing.Color.White);
+            this.TT_Btn_An.UseVisualStyleBackColor = (false);
+            // 
+            // TT_poisonDataGridView3
+            // 
+            this.TT_poisonDataGridView3.AllowUserToResizeRows = (false);
+            this.TT_poisonDataGridView3.BackgroundColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(192)), (global::System.Int32)((global::System.Byte)(128))));
+            this.TT_poisonDataGridView3.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.TT_poisonDataGridView3.CellBorderStyle = (global::System.Windows.Forms.DataGridViewCellBorderStyle.None);
+            this.TT_poisonDataGridView3.ColumnHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle16.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle16.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle16.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle16.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle16.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle16.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle16.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.TT_poisonDataGridView3.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle16);
+            this.TT_poisonDataGridView3.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            dataGridViewCellStyle17.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle17.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle17.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle17.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136))));
+            dataGridViewCellStyle17.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle17.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle17.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.TT_poisonDataGridView3.DefaultCellStyle = (dataGridViewCellStyle17);
+            this.TT_poisonDataGridView3.EnableHeadersVisualStyles = (false);
+            this.TT_poisonDataGridView3.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            this.TT_poisonDataGridView3.GridColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.TT_poisonDataGridView3.Location = (new global::System.Drawing.Point(54, 37));
+            this.TT_poisonDataGridView3.Name = ("TT_poisonDataGridView3");
+            this.TT_poisonDataGridView3.RowHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle18.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle18.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle18.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle18.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle18.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle18.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle18.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.TT_poisonDataGridView3.RowHeadersDefaultCellStyle = (dataGridViewCellStyle18);
+            this.TT_poisonDataGridView3.RowHeadersWidth = (51);
+            this.TT_poisonDataGridView3.RowHeadersWidthSizeMode = (global::System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing);
+            this.TT_poisonDataGridView3.RowTemplate.Height = (29);
+            this.TT_poisonDataGridView3.SelectionMode = (global::System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect);
+            this.TT_poisonDataGridView3.Size = (new global::System.Drawing.Size(866, 368));
+            this.TT_poisonDataGridView3.TabIndex = (3);
+            this.TT_poisonDataGridView3.CellContentClick += (this.poisonDataGridView3_CellContentClick);
+            // 
+            // TT_Btn_Sua
+            // 
+            this.TT_Btn_Sua.BackColor = (global::System.Drawing.Color.MediumSlateBlue);
+            this.TT_Btn_Sua.BackgroundColor = (global::System.Drawing.Color.MediumSlateBlue);
+            this.TT_Btn_Sua.BorderColor = (global::System.Drawing.Color.PaleVioletRed);
+            this.TT_Btn_Sua.BorderRadius = (20);
+            this.TT_Btn_Sua.BorderSize = (0);
+            this.TT_Btn_Sua.FlatAppearance.BorderSize = (0);
+            this.TT_Btn_Sua.FlatStyle = (global::System.Windows.Forms.FlatStyle.Flat);
+            this.TT_Btn_Sua.ForeColor = (global::System.Drawing.Color.White);
+            this.TT_Btn_Sua.IDSelected = (null);
+            this.TT_Btn_Sua.Location = (new global::System.Drawing.Point(492, 441));
+            this.TT_Btn_Sua.Name = ("TT_Btn_Sua");
+            this.TT_Btn_Sua.Size = (new global::System.Drawing.Size(188, 50));
+            this.TT_Btn_Sua.TabIndex = (2);
+            this.TT_Btn_Sua.Text = ("Sửa");
+            this.TT_Btn_Sua.TextColor = (global::System.Drawing.Color.White);
+            this.TT_Btn_Sua.UseVisualStyleBackColor = (false);
+            // 
+            // hopeGroupBox3
+            // 
+            this.hopeGroupBox3.BackColor = (global::System.Drawing.Color.White);
+            this.hopeGroupBox3.BorderColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(220)), (global::System.Int32)((global::System.Byte)(223)), (global::System.Int32)((global::System.Byte)(230))));
+            this.hopeGroupBox3.Controls.Add(this.txtGhiChu);
+            this.hopeGroupBox3.Controls.Add(this.airSeparator2);
+            this.hopeGroupBox3.Controls.Add(this.airSeparator1);
+            this.hopeGroupBox3.Controls.Add(this.txtChiPhiKhac);
+            this.hopeGroupBox3.Controls.Add(this.label_b);
+            this.hopeGroupBox3.Controls.Add(this.label32_ax);
+            this.hopeGroupBox3.Controls.Add(this.label31_sv);
+            this.hopeGroupBox3.Controls.Add(this.panel2);
+            this.hopeGroupBox3.Controls.Add(this.TT_Label_TongTien);
+            this.hopeGroupBox3.Controls.Add(this.label29_az);
+            this.hopeGroupBox3.Controls.Add(this.TT_Label_NguoiThanhToan);
+            this.hopeGroupBox3.Controls.Add(this.label27_a);
+            this.hopeGroupBox3.Controls.Add(this.TT_Label_ChiPhiKhac);
+            this.hopeGroupBox3.Controls.Add(this.TT_Label_ThoiGian);
+            this.hopeGroupBox3.Controls.Add(this.TT_Label_GhiChu);
+            this.hopeGroupBox3.Controls.Add(this.TT_Label_GiaTien);
+            this.hopeGroupBox3.Controls.Add(this.TT_Label_KhachHang);
+            this.hopeGroupBox3.Font = (new global::System.Drawing.Font("Segoe UI", 12F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.hopeGroupBox3.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(48)), (global::System.Int32)((global::System.Byte)(49)), (global::System.Int32)((global::System.Byte)(51))));
+            this.hopeGroupBox3.LineColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(220)), (global::System.Int32)((global::System.Byte)(223)), (global::System.Int32)((global::System.Byte)(230))));
+            this.hopeGroupBox3.Location = (new global::System.Drawing.Point(990, 16));
+            this.hopeGroupBox3.Name = ("hopeGroupBox3");
+            this.hopeGroupBox3.ShowText = (false);
+            this.hopeGroupBox3.Size = (new global::System.Drawing.Size(593, 576));
+            this.hopeGroupBox3.TabIndex = (1);
+            this.hopeGroupBox3.TabStop = (false);
+            this.hopeGroupBox3.Text = ("hopeGroupBox3");
+            this.hopeGroupBox3.ThemeColor = (global::System.Drawing.Color.PapayaWhip);
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.txtGhiChu.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.txtGhiChu.Location = (new global::System.Drawing.Point(141, 275));
+            this.txtGhiChu.Name = ("txtGhiChu");
+            this.txtGhiChu.Size = (new global::System.Drawing.Size(311, 27));
+            this.txtGhiChu.TabIndex = (28);
+            // 
+            // airSeparator2
+            // 
+            this.airSeparator2.BackColor = (global::System.Drawing.Color.Black);
+            this.airSeparator2.Customization = ("");
+            this.airSeparator2.Font = (new global::System.Drawing.Font("Verdana", 8F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.airSeparator2.Image = (null);
+            this.airSeparator2.Location = (new global::System.Drawing.Point(132, 303));
+            this.airSeparator2.Name = ("airSeparator2");
+            this.airSeparator2.NoRounding = (false);
+            this.airSeparator2.Size = (new global::System.Drawing.Size(327, 1));
+            this.airSeparator2.TabIndex = (27);
+            this.airSeparator2.Text = ("airSeparator2");
+            this.airSeparator2.Transparent = (false);
+            // 
+            // airSeparator1
+            // 
+            this.airSeparator1.BackColor = (global::System.Drawing.Color.Black);
+            this.airSeparator1.Customization = ("");
+            this.airSeparator1.Font = (new global::System.Drawing.Font("Verdana", 8F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.airSeparator1.Image = (null);
+            this.airSeparator1.Location = (new global::System.Drawing.Point(157, 361));
+            this.airSeparator1.Name = ("airSeparator1");
+            this.airSeparator1.NoRounding = (false);
+            this.airSeparator1.Size = (new global::System.Drawing.Size(327, 1));
+            this.airSeparator1.TabIndex = (26);
+            this.airSeparator1.Text = ("airSeparator1");
+            this.airSeparator1.Transparent = (false);
+            // 
+            // txtChiPhiKhac
+            // 
+            this.txtChiPhiKhac.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.txtChiPhiKhac.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.txtChiPhiKhac.Location = (new global::System.Drawing.Point(161, 334));
+            this.txtChiPhiKhac.Name = ("txtChiPhiKhac");
+            this.txtChiPhiKhac.Size = (new global::System.Drawing.Size(311, 27));
+            this.txtChiPhiKhac.TabIndex = (25);
+            // 
+            // label_b
+            // 
+            this.label_b.AutoSize = (true);
+            this.label_b.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.label_b.Location = (new global::System.Drawing.Point(161, 219));
+            this.label_b.Name = ("label_b");
+            this.label_b.Size = (new global::System.Drawing.Size(76, 28));
+            this.label_b.TabIndex = (20);
+            this.label_b.Text = ("label33");
+            // 
+            // label32_ax
+            // 
+            this.label32_ax.AutoSize = (true);
+            this.label32_ax.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.label32_ax.Location = (new global::System.Drawing.Point(161, 397));
+            this.label32_ax.Name = ("label32_ax");
+            this.label32_ax.Size = (new global::System.Drawing.Size(76, 28));
+            this.label32_ax.TabIndex = (19);
+            this.label32_ax.Text = ("label32");
+            // 
+            // label31_sv
+            // 
+            this.label31_sv.AutoSize = (true);
+            this.label31_sv.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.label31_sv.Location = (new global::System.Drawing.Point(208, 508));
+            this.label31_sv.Name = ("label31_sv");
+            this.label31_sv.Size = (new global::System.Drawing.Size(76, 28));
+            this.label31_sv.TabIndex = (18);
+            this.label31_sv.Text = ("label31");
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.panel2.Controls.Add(this.TT_Label_DVSD);
+            this.panel2.Location = (new global::System.Drawing.Point(15, 83));
+            this.panel2.Name = ("panel2");
+            this.panel2.Size = (new global::System.Drawing.Size(502, 120));
+            this.panel2.TabIndex = (17);
+            // 
+            // TT_Label_DVSD
+            // 
+            this.TT_Label_DVSD.AutoSize = (true);
+            this.TT_Label_DVSD.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_DVSD.Location = (new global::System.Drawing.Point(3, 7));
+            this.TT_Label_DVSD.Name = ("TT_Label_DVSD");
+            this.TT_Label_DVSD.Size = (new global::System.Drawing.Size(167, 28));
+            this.TT_Label_DVSD.TabIndex = (8);
+            this.TT_Label_DVSD.Text = ("Dịch vụ sử dụng : ");
+            // 
+            // TT_Label_TongTien
+            // 
+            this.TT_Label_TongTien.AutoSize = (true);
+            this.TT_Label_TongTien.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_TongTien.Location = (new global::System.Drawing.Point(15, 390));
+            this.TT_Label_TongTien.Name = ("TT_Label_TongTien");
+            this.TT_Label_TongTien.Size = (new global::System.Drawing.Size(104, 28));
+            this.TT_Label_TongTien.TabIndex = (16);
+            this.TT_Label_TongTien.Text = ("Tổng tiền :");
+            // 
+            // label29_az
+            // 
+            this.label29_az.AutoSize = (true);
+            this.label29_az.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.label29_az.Location = (new global::System.Drawing.Point(227, 450));
+            this.label29_az.Name = ("label29_az");
+            this.label29_az.Size = (new global::System.Drawing.Size(76, 28));
+            this.label29_az.TabIndex = (15);
+            this.label29_az.Text = ("label29");
+            // 
+            // TT_Label_NguoiThanhToan
+            // 
+            this.TT_Label_NguoiThanhToan.AutoSize = (true);
+            this.TT_Label_NguoiThanhToan.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_NguoiThanhToan.Location = (new global::System.Drawing.Point(15, 504));
+            this.TT_Label_NguoiThanhToan.Name = ("TT_Label_NguoiThanhToan");
+            this.TT_Label_NguoiThanhToan.Size = (new global::System.Drawing.Size(177, 28));
+            this.TT_Label_NguoiThanhToan.TabIndex = (14);
+            this.TT_Label_NguoiThanhToan.Text = ("Người thanh toán :");
+            // 
+            // label27_a
+            // 
+            this.label27_a.AutoSize = (true);
+            this.label27_a.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.label27_a.Location = (new global::System.Drawing.Point(187, 33));
+            this.label27_a.Name = ("label27_a");
+            this.label27_a.Size = (new global::System.Drawing.Size(76, 28));
+            this.label27_a.TabIndex = (13);
+            this.label27_a.Text = ("label27");
+            // 
+            // TT_Label_ChiPhiKhac
+            // 
+            this.TT_Label_ChiPhiKhac.AutoSize = (true);
+            this.TT_Label_ChiPhiKhac.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_ChiPhiKhac.Location = (new global::System.Drawing.Point(15, 333));
+            this.TT_Label_ChiPhiKhac.Name = ("TT_Label_ChiPhiKhac");
+            this.TT_Label_ChiPhiKhac.Size = (new global::System.Drawing.Size(127, 28));
+            this.TT_Label_ChiPhiKhac.TabIndex = (12);
+            this.TT_Label_ChiPhiKhac.Text = ("Chi phí khác :");
+            // 
+            // TT_Label_ThoiGian
+            // 
+            this.TT_Label_ThoiGian.AutoSize = (true);
+            this.TT_Label_ThoiGian.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_ThoiGian.Location = (new global::System.Drawing.Point(15, 447));
+            this.TT_Label_ThoiGian.Name = ("TT_Label_ThoiGian");
+            this.TT_Label_ThoiGian.Size = (new global::System.Drawing.Size(202, 28));
+            this.TT_Label_ThoiGian.TabIndex = (11);
+            this.TT_Label_ThoiGian.Text = ("Thời gian thanh toán :");
+            // 
+            // TT_Label_GhiChu
+            // 
+            this.TT_Label_GhiChu.AutoSize = (true);
+            this.TT_Label_GhiChu.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_GhiChu.Location = (new global::System.Drawing.Point(15, 276));
+            this.TT_Label_GhiChu.Name = ("TT_Label_GhiChu");
+            this.TT_Label_GhiChu.Size = (new global::System.Drawing.Size(87, 28));
+            this.TT_Label_GhiChu.TabIndex = (10);
+            this.TT_Label_GhiChu.Text = ("Ghi chú :");
+            // 
+            // TT_Label_GiaTien
+            // 
+            this.TT_Label_GiaTien.AutoSize = (true);
+            this.TT_Label_GiaTien.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_GiaTien.Location = (new global::System.Drawing.Point(15, 219));
+            this.TT_Label_GiaTien.Name = ("TT_Label_GiaTien");
+            this.TT_Label_GiaTien.Size = (new global::System.Drawing.Size(88, 28));
+            this.TT_Label_GiaTien.TabIndex = (9);
+            this.TT_Label_GiaTien.Text = ("Giá tiền :");
+            // 
+            // TT_Label_KhachHang
+            // 
+            this.TT_Label_KhachHang.AutoSize = (true);
+            this.TT_Label_KhachHang.BackColor = (global::System.Drawing.Color.PapayaWhip);
+            this.TT_Label_KhachHang.Location = (new global::System.Drawing.Point(15, 32));
+            this.TT_Label_KhachHang.Name = ("TT_Label_KhachHang");
+            this.TT_Label_KhachHang.Size = (new global::System.Drawing.Size(155, 28));
+            this.TT_Label_KhachHang.TabIndex = (5);
+            this.TT_Label_KhachHang.Text = ("Tên khách hàng :");
             // 
             // Panel_DV
             // 
@@ -4742,48 +5081,48 @@ namespace PRL
             // 
             // poisonDataGridView2
             // 
-            poisonDataGridView2.AllowUserToResizeRows = false;
-            poisonDataGridView2.BackgroundColor = Color.DeepSkyBlue;
-            poisonDataGridView2.BorderStyle = BorderStyle.None;
-            poisonDataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            poisonDataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle40.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle40.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle40.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle40.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle40.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle40.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
-            poisonDataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle41.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle41.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle41.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle41.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle41.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle41.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView2.DefaultCellStyle = dataGridViewCellStyle41;
-            poisonDataGridView2.EnableHeadersVisualStyles = false;
-            poisonDataGridView2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            poisonDataGridView2.GridColor = Color.FromArgb(255, 255, 255);
-            poisonDataGridView2.Location = new Point(36, 182);
-            poisonDataGridView2.Name = "poisonDataGridView2";
-            poisonDataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle42.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle42.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle42.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle42.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle42.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle42.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
-            poisonDataGridView2.RowHeadersWidth = 51;
-            poisonDataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            poisonDataGridView2.RowTemplate.Height = 29;
-            poisonDataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            poisonDataGridView2.Size = new Size(605, 478);
-            poisonDataGridView2.TabIndex = 32;
+            this.poisonDataGridView2.AllowUserToResizeRows = (false);
+            this.poisonDataGridView2.BackgroundColor = (global::System.Drawing.Color.DeepSkyBlue);
+            this.poisonDataGridView2.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.poisonDataGridView2.CellBorderStyle = (global::System.Windows.Forms.DataGridViewCellBorderStyle.None);
+            this.poisonDataGridView2.ColumnHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle19.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle19.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle19.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle19.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle19.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle19.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle19.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView2.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle19);
+            this.poisonDataGridView2.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            dataGridViewCellStyle20.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle20.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle20.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle20.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136)), (global::System.Int32)((global::System.Byte)(136))));
+            dataGridViewCellStyle20.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle20.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle20.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.poisonDataGridView2.DefaultCellStyle = (dataGridViewCellStyle20);
+            this.poisonDataGridView2.EnableHeadersVisualStyles = (false);
+            this.poisonDataGridView2.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            this.poisonDataGridView2.GridColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            this.poisonDataGridView2.Location = (new global::System.Drawing.Point(36, 182));
+            this.poisonDataGridView2.Name = ("poisonDataGridView2");
+            this.poisonDataGridView2.RowHeadersBorderStyle = (global::System.Windows.Forms.DataGridViewHeaderBorderStyle.None);
+            dataGridViewCellStyle21.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle21.BackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(174)), (global::System.Int32)((global::System.Byte)(219))));
+            dataGridViewCellStyle21.Font = (new global::System.Drawing.Font("Segoe UI", 11F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Pixel));
+            dataGridViewCellStyle21.ForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255)), (global::System.Int32)((global::System.Byte)(255))));
+            dataGridViewCellStyle21.SelectionBackColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(0)), (global::System.Int32)((global::System.Byte)(198)), (global::System.Int32)((global::System.Byte)(247))));
+            dataGridViewCellStyle21.SelectionForeColor = (global::System.Drawing.Color.FromArgb((global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17)), (global::System.Int32)((global::System.Byte)(17))));
+            dataGridViewCellStyle21.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.poisonDataGridView2.RowHeadersDefaultCellStyle = (dataGridViewCellStyle21);
+            this.poisonDataGridView2.RowHeadersWidth = (51);
+            this.poisonDataGridView2.RowHeadersWidthSizeMode = (global::System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing);
+            this.poisonDataGridView2.RowTemplate.Height = (29);
+            this.poisonDataGridView2.SelectionMode = (global::System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect);
+            this.poisonDataGridView2.Size = (new global::System.Drawing.Size(605, 478));
+            this.poisonDataGridView2.TabIndex = (32);
             // 
             // label14
             // 
@@ -5055,80 +5394,80 @@ namespace PRL
             // 
             // Admin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 982);
-            Controls.Add(name_clinic);
-            Controls.Add(Nav_Option);
-            Controls.Add(Content);
-            Controls.Add(Navigation);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "Admin";
-            Text = "1412_Team";
-            WindowState = FormWindowState.Maximized;
-            Load += Admin_Load;
-            VisibleChanged += Admin_VisibleChanged;
-            name_clinic.ResumeLayout(false);
-            name_clinic.PerformLayout();
-            Navigation.ResumeLayout(false);
-            Navigation.PerformLayout();
-            Panel_KH.ResumeLayout(false);
-            Panel_KH.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)KH_GridView).EndInit();
-            cyberGroupBox2.ResumeLayout(false);
-            cyberGroupBox2.PerformLayout();
-            Panel_NV.ResumeLayout(false);
-            Panel_NV.PerformLayout();
-            cyberGroupBox1.ResumeLayout(false);
-            cyberGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)NV_GridView).EndInit();
-            Nav_Option.ResumeLayout(false);
-            Nav_Option.PerformLayout();
-            Content.ResumeLayout(false);
-            Panel_TT.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)TT_poisonDataGridView3).EndInit();
-            hopeGroupBox3.ResumeLayout(false);
-            hopeGroupBox3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            Panel_LK.ResumeLayout(false);
-            Panel_LK.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)poisonDataGridView1).EndInit();
-            Panel_L.ResumeLayout(false);
-            Panel_L.PerformLayout();
-            cyberGroupBox3.ResumeLayout(false);
-            cyberGroupBox3.PerformLayout();
-            Panel_ThongKe.Panel1.ResumeLayout(false);
-            Panel_ThongKe.Panel1.PerformLayout();
-            Panel_ThongKe.Panel2.ResumeLayout(false);
-            Panel_ThongKe.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Panel_ThongKe).EndInit();
-            Panel_ThongKe.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)poisonDataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)poisonDataGridView4).EndInit();
-            Panel_TK.ResumeLayout(false);
-            Panel_TK.PerformLayout();
-            Panel_DV.ResumeLayout(false);
-            Panel_DV.PerformLayout();
-            thunderGroupBox1.ResumeLayout(false);
-            thunderGroupBox1.PerformLayout();
-            DV_Panel_HienThiDV.ResumeLayout(false);
-            hopeGroupBox2.ResumeLayout(false);
-            hopeGroupBox2.PerformLayout();
-            hopeGroupBox1.ResumeLayout(false);
-            hopeGroupBox1.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)poisonDataGridView2).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = (new global::System.Drawing.SizeF(8F, 20F));
+            this.AutoScaleMode = (global::System.Windows.Forms.AutoScaleMode.Font);
+            this.ClientSize = (new global::System.Drawing.Size(1720, 782));
+            this.Controls.Add(this.name_clinic);
+            this.Controls.Add(this.Nav_Option);
+            this.Controls.Add(this.Content);
+            this.Controls.Add(this.Navigation);
+            this.FormBorderStyle = (global::System.Windows.Forms.FormBorderStyle.None);
+            this.Name = ("Admin");
+            this.Text = ("1412_Team");
+            this.WindowState = (global::System.Windows.Forms.FormWindowState.Maximized);
+            this.Load += (this.Admin_Load);
+            this.VisibleChanged += (this.Admin_VisibleChanged);
+            this.name_clinic.ResumeLayout(false);
+            this.name_clinic.PerformLayout();
+            this.Navigation.ResumeLayout(false);
+            this.Navigation.PerformLayout();
+            this.Panel_KH.ResumeLayout(false);
+            this.Panel_KH.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.KH_GridView)).EndInit();
+            this.cyberGroupBox2.ResumeLayout(false);
+            this.cyberGroupBox2.PerformLayout();
+            this.Panel_NV.ResumeLayout(false);
+            this.Panel_NV.PerformLayout();
+            this.cyberGroupBox1.ResumeLayout(false);
+            this.cyberGroupBox1.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.NV_GridView)).EndInit();
+            this.Nav_Option.ResumeLayout(false);
+            this.Nav_Option.PerformLayout();
+            this.Content.ResumeLayout(false);
+            this.Panel_LK.ResumeLayout(false);
+            this.Panel_LK.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.poisonDataGridView1)).EndInit();
+            this.Panel_L.ResumeLayout(false);
+            this.Panel_L.PerformLayout();
+            this.cyberGroupBox3.ResumeLayout(false);
+            this.cyberGroupBox3.PerformLayout();
+            this.Panel_ThongKe.Panel1.ResumeLayout(false);
+            this.Panel_ThongKe.Panel1.PerformLayout();
+            this.Panel_ThongKe.Panel2.ResumeLayout(false);
+            this.Panel_ThongKe.Panel2.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.Panel_ThongKe)).EndInit();
+            this.Panel_ThongKe.ResumeLayout(false);
+            ((global::System.ComponentModel.ISupportInitialize)(this.poisonDataGridView3)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.poisonDataGridView4)).EndInit();
+            this.Panel_TK.ResumeLayout(false);
+            this.Panel_TK.PerformLayout();
+            this.Panel_TT.ResumeLayout(false);
+            ((global::System.ComponentModel.ISupportInitialize)(this.TT_poisonDataGridView3)).EndInit();
+            this.hopeGroupBox3.ResumeLayout(false);
+            this.hopeGroupBox3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.Panel_DV.ResumeLayout(false);
+            this.Panel_DV.PerformLayout();
+            this.thunderGroupBox1.ResumeLayout(false);
+            this.thunderGroupBox1.PerformLayout();
+            this.DV_Panel_HienThiDV.ResumeLayout(false);
+            this.hopeGroupBox2.ResumeLayout(false);
+            this.hopeGroupBox2.PerformLayout();
+            this.hopeGroupBox1.ResumeLayout(false);
+            this.hopeGroupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.poisonDataGridView2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
         }
 
         #endregion
