@@ -2,7 +2,7 @@
 
 namespace PRL
 {
-    partial class BacSi
+    partial class YTa
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,12 @@ namespace PRL
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
@@ -89,6 +89,26 @@ namespace PRL
             NV_RichTxt_MoTa = new ReaLTaiizor.Controls.CyberRichTextBox();
             Content = new Panel();
             Panel_ChamCong = new Panel();
+            groupBox3 = new GroupBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            Nu = new RadioButton();
+            Nam = new RadioButton();
+            label20 = new Label();
+            label19 = new Label();
+            textBox4 = new TextBox();
+            Chucvu = new TextBox();
+            Ten = new TextBox();
+            label18 = new Label();
+            label17 = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            button1 = new Button();
+            btn_xoa = new Button();
+            btn_sua = new Button();
+            btn_them = new Button();
             Export = new ButtonCustom();
             Import = new ButtonCustom();
             dataGridView = new DataGridView();
@@ -128,6 +148,9 @@ namespace PRL
             Nav_Option = new Panel();
             Panel_thanhtoan = new Panel();
             buttonCustom2 = new ButtonCustom();
+            label21 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -138,6 +161,7 @@ namespace PRL
             cyberGroupBox1.SuspendLayout();
             Content.SuspendLayout();
             Panel_ChamCong.SuspendLayout();
+            groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             Panel_LK.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -390,37 +414,37 @@ namespace PRL
             KH_GridView.BorderStyle = BorderStyle.None;
             KH_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
+            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            KH_GridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle14.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
+            KH_GridView.DefaultCellStyle = dataGridViewCellStyle14;
             KH_GridView.EnableHeadersVisualStyles = false;
             KH_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             KH_GridView.GridColor = Color.FromArgb(255, 255, 255);
             KH_GridView.Location = new Point(38, 76);
             KH_GridView.Name = "KH_GridView";
             KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
+            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             KH_GridView.RowHeadersWidth = 51;
             KH_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             KH_GridView.RowTemplate.Height = 29;
@@ -767,37 +791,37 @@ namespace PRL
             NV_GridView.BorderStyle = BorderStyle.None;
             NV_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             NV_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle16.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle16.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle16.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
+            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             NV_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            NV_GridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle17.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle17.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle17.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
+            NV_GridView.DefaultCellStyle = dataGridViewCellStyle17;
             NV_GridView.EnableHeadersVisualStyles = false;
             NV_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             NV_GridView.GridColor = Color.FromArgb(255, 255, 255);
             NV_GridView.Location = new Point(37, 67);
             NV_GridView.Name = "NV_GridView";
             NV_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle18.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
+            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             NV_GridView.RowHeadersWidth = 51;
             NV_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             NV_GridView.RowTemplate.Height = 29;
@@ -1212,6 +1236,11 @@ namespace PRL
             // 
             // Panel_ChamCong
             // 
+            Panel_ChamCong.Controls.Add(groupBox3);
+            Panel_ChamCong.Controls.Add(button1);
+            Panel_ChamCong.Controls.Add(btn_xoa);
+            Panel_ChamCong.Controls.Add(btn_sua);
+            Panel_ChamCong.Controls.Add(btn_them);
             Panel_ChamCong.Controls.Add(Export);
             Panel_ChamCong.Controls.Add(Import);
             Panel_ChamCong.Controls.Add(dataGridView);
@@ -1219,6 +1248,198 @@ namespace PRL
             Panel_ChamCong.Name = "Panel_ChamCong";
             Panel_ChamCong.Size = new Size(1144, 745);
             Panel_ChamCong.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(dateTimePicker2);
+            groupBox3.Controls.Add(dateTimePicker1);
+            groupBox3.Controls.Add(label21);
+            groupBox3.Controls.Add(textBox6);
+            groupBox3.Controls.Add(textBox5);
+            groupBox3.Controls.Add(Nu);
+            groupBox3.Controls.Add(Nam);
+            groupBox3.Controls.Add(label20);
+            groupBox3.Controls.Add(label19);
+            groupBox3.Controls.Add(textBox4);
+            groupBox3.Controls.Add(Chucvu);
+            groupBox3.Controls.Add(Ten);
+            groupBox3.Controls.Add(label18);
+            groupBox3.Controls.Add(label17);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Controls.Add(label14);
+            groupBox3.Controls.Add(label13);
+            groupBox3.Location = new Point(90, 16);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(741, 244);
+            groupBox3.TabIndex = 7;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Nhập thông tin ";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(485, 127);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(190, 23);
+            textBox6.TabIndex = 15;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(485, 81);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(190, 23);
+            textBox5.TabIndex = 14;
+            // 
+            // Nu
+            // 
+            Nu.AutoSize = true;
+            Nu.Location = new Point(258, 126);
+            Nu.Name = "Nu";
+            Nu.Size = new Size(41, 19);
+            Nu.TabIndex = 13;
+            Nu.TabStop = true;
+            Nu.Text = "Nữ";
+            Nu.UseVisualStyleBackColor = true;
+            // 
+            // Nam
+            // 
+            Nam.AutoSize = true;
+            Nam.Location = new Point(152, 127);
+            Nam.Name = "Nam";
+            Nam.Size = new Size(51, 19);
+            Nam.TabIndex = 12;
+            Nam.TabStop = true;
+            Nam.Text = "Nam";
+            Nam.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(46, 127);
+            label20.Name = "label20";
+            label20.Size = new Size(52, 15);
+            label20.TabIndex = 11;
+            label20.Text = "Giới tính";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(179, 206);
+            label19.Name = "label19";
+            label19.Size = new Size(56, 15);
+            label19.TabIndex = 10;
+            label19.Text = "Tìm kiếm";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(252, 200);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(357, 23);
+            textBox4.TabIndex = 9;
+            // 
+            // Chucvu
+            // 
+            Chucvu.Location = new Point(113, 83);
+            Chucvu.Name = "Chucvu";
+            Chucvu.Size = new Size(249, 23);
+            Chucvu.TabIndex = 7;
+            // 
+            // Ten
+            // 
+            Ten.Location = new Point(113, 43);
+            Ten.Name = "Ten";
+            Ten.Size = new Size(249, 23);
+            Ten.TabIndex = 6;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(397, 129);
+            label18.Name = "label18";
+            label18.Size = new Size(41, 15);
+            label18.TabIndex = 5;
+            label18.Text = "Lương";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(397, 89);
+            label17.Name = "label17";
+            label17.Size = new Size(65, 15);
+            label17.TabIndex = 4;
+            label17.Text = "Ngày công";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(39, 183);
+            label16.Name = "label16";
+            label16.Size = new Size(0, 15);
+            label16.TabIndex = 3;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(46, 168);
+            label15.Name = "label15";
+            label15.Size = new Size(60, 15);
+            label15.TabIndex = 2;
+            label15.Text = "Ngày sinh";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(48, 89);
+            label14.Name = "label14";
+            label14.Size = new Size(51, 15);
+            label14.TabIndex = 1;
+            label14.Text = "Chức vụ";
+            label14.Click += label14_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(56, 48);
+            label13.Name = "label13";
+            label13.Size = new Size(25, 15);
+            label13.TabIndex = 0;
+            label13.Text = "Tên";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(186, 266);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 41);
+            button1.TabIndex = 6;
+            button1.Text = "Reset";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // btn_xoa
+            // 
+            btn_xoa.Location = new Point(659, 266);
+            btn_xoa.Name = "btn_xoa";
+            btn_xoa.Size = new Size(107, 41);
+            btn_xoa.TabIndex = 5;
+            btn_xoa.Text = "Xóa";
+            btn_xoa.UseVisualStyleBackColor = true;
+            // 
+            // btn_sua
+            // 
+            btn_sua.Location = new Point(501, 266);
+            btn_sua.Name = "btn_sua";
+            btn_sua.Size = new Size(107, 41);
+            btn_sua.TabIndex = 4;
+            btn_sua.Text = "Sửa";
+            btn_sua.UseVisualStyleBackColor = true;
+            // 
+            // btn_them
+            // 
+            btn_them.Location = new Point(348, 266);
+            btn_them.Name = "btn_them";
+            btn_them.Size = new Size(107, 41);
+            btn_them.TabIndex = 3;
+            btn_them.Text = "Thêm";
+            btn_them.UseVisualStyleBackColor = true;
             // 
             // Export
             // 
@@ -1231,7 +1452,7 @@ namespace PRL
             Export.FlatStyle = FlatStyle.Flat;
             Export.ForeColor = Color.White;
             Export.IDSelected = null;
-            Export.Location = new Point(284, 28);
+            Export.Location = new Point(854, 261);
             Export.Name = "Export";
             Export.Size = new Size(175, 51);
             Export.TabIndex = 2;
@@ -1250,7 +1471,7 @@ namespace PRL
             Import.FlatStyle = FlatStyle.Flat;
             Import.ForeColor = Color.White;
             Import.IDSelected = null;
-            Import.Location = new Point(38, 28);
+            Import.Location = new Point(854, 181);
             Import.Name = "Import";
             Import.Size = new Size(175, 51);
             Import.TabIndex = 1;
@@ -1263,10 +1484,10 @@ namespace PRL
             // 
             dataGridView.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(3, 108);
+            dataGridView.Location = new Point(90, 321);
             dataGridView.Name = "dataGridView";
             dataGridView.RowTemplate.Height = 25;
-            dataGridView.Size = new Size(1141, 504);
+            dataGridView.Size = new Size(939, 369);
             dataGridView.TabIndex = 0;
             // 
             // Panel_LK
@@ -1719,7 +1940,30 @@ namespace PRL
             buttonCustom2.TextColor = Color.White;
             buttonCustom2.UseVisualStyleBackColor = false;
             // 
-            // BacSi
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(397, 46);
+            label21.Name = "label21";
+            label21.Size = new Size(78, 15);
+            label21.TabIndex = 16;
+            label21.Text = "Ngày bắt đầu";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(488, 43);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(223, 23);
+            dateTimePicker1.TabIndex = 17;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(113, 162);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(214, 23);
+            dateTimePicker2.TabIndex = 18;
+            // 
+            // YTa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -1730,7 +1974,7 @@ namespace PRL
             Controls.Add(Navigation);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "BacSi";
+            Name = "YTa";
             Text = "1412_Team";
             WindowState = FormWindowState.Maximized;
             Load += Admin_Load;
@@ -1751,6 +1995,8 @@ namespace PRL
             cyberGroupBox1.PerformLayout();
             Content.ResumeLayout(false);
             Panel_ChamCong.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             Panel_LK.ResumeLayout(false);
             Panel_LK.PerformLayout();
@@ -1859,5 +2105,28 @@ namespace PRL
         private ButtonCustom Import;
         private DataGridView dataGridView;
         private ButtonCustom Export;
+        private Button btn_them;
+        private Button btn_xoa;
+        private Button btn_sua;
+        private Button button1;
+        private GroupBox groupBox3;
+        private TextBox Ten;
+        private Label label18;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private Label label13;
+        private TextBox textBox4;
+        private TextBox Chucvu;
+        private Label label19;
+        private RadioButton Nu;
+        private RadioButton Nam;
+        private Label label20;
+        private TextBox textBox6;
+        private TextBox textBox5;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker1;
+        private Label label21;
     }
 }

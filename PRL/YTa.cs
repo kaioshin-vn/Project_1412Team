@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace PRL
 {
-    public partial class BacSi : Form
+    public partial class YTa : Form
     {
         private TimekeepingService _timekeepsv;
-        public BacSi(Staff staff, Login login)
+        public YTa(Staff staff, Login login)
         {
             FormLogin = login;
             user = staff;
@@ -23,7 +23,7 @@ namespace PRL
             _timekeepsv = new TimekeepingService();
         }
 
-        public BacSi()
+        public YTa()
         {
             InitializeComponent();
         }
@@ -79,6 +79,11 @@ namespace PRL
             Content.Controls.Clear();
             Panel_ChamCong.Visible = true;
             Content.Controls.Add(Panel_ChamCong);
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
