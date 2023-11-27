@@ -278,5 +278,15 @@ namespace PRL
         {
             MessageBox.Show("Hãy bắn 50k vào tài khoản 0978040960 MB Bank để được hỗ trợ bạn nhé !!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        private void TT_Label_ThoiGian_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGiaTien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
