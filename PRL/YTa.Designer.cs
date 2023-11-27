@@ -2,7 +2,7 @@
 
 namespace PRL
 {
-    partial class BacSi
+    partial class YTa
     {
         /// <summary>
         /// Required designer variable.
@@ -89,6 +89,29 @@ namespace PRL
             NV_RichTxt_MoTa = new ReaLTaiizor.Controls.CyberRichTextBox();
             Content = new Panel();
             Panel_ChamCong = new Panel();
+            groupBox3 = new GroupBox();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            label21 = new Label();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            Nu = new RadioButton();
+            Nam = new RadioButton();
+            label20 = new Label();
+            label19 = new Label();
+            Search = new TextBox();
+            Chucvu = new TextBox();
+            Ten = new TextBox();
+            label18 = new Label();
+            label17 = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            btn_reset = new Button();
+            btn_xoa = new Button();
+            btn_sua = new Button();
+            btn_them = new Button();
             Export = new ButtonCustom();
             Import = new ButtonCustom();
             dataGridView = new DataGridView();
@@ -138,6 +161,7 @@ namespace PRL
             cyberGroupBox1.SuspendLayout();
             Content.SuspendLayout();
             Panel_ChamCong.SuspendLayout();
+            groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             Panel_LK.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -1212,6 +1236,11 @@ namespace PRL
             // 
             // Panel_ChamCong
             // 
+            Panel_ChamCong.Controls.Add(groupBox3);
+            Panel_ChamCong.Controls.Add(btn_reset);
+            Panel_ChamCong.Controls.Add(btn_xoa);
+            Panel_ChamCong.Controls.Add(btn_sua);
+            Panel_ChamCong.Controls.Add(btn_them);
             Panel_ChamCong.Controls.Add(Export);
             Panel_ChamCong.Controls.Add(Import);
             Panel_ChamCong.Controls.Add(dataGridView);
@@ -1219,6 +1248,246 @@ namespace PRL
             Panel_ChamCong.Name = "Panel_ChamCong";
             Panel_ChamCong.Size = new Size(1144, 745);
             Panel_ChamCong.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(dateTimePicker2);
+            groupBox3.Controls.Add(dateTimePicker1);
+            groupBox3.Controls.Add(label21);
+            groupBox3.Controls.Add(textBox6);
+            groupBox3.Controls.Add(textBox5);
+            groupBox3.Controls.Add(Nu);
+            groupBox3.Controls.Add(Nam);
+            groupBox3.Controls.Add(label20);
+            groupBox3.Controls.Add(label19);
+            groupBox3.Controls.Add(Search);
+            groupBox3.Controls.Add(Chucvu);
+            groupBox3.Controls.Add(Ten);
+            groupBox3.Controls.Add(label18);
+            groupBox3.Controls.Add(label17);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Controls.Add(label14);
+            groupBox3.Controls.Add(label13);
+            groupBox3.Location = new Point(90, 16);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(741, 244);
+            groupBox3.TabIndex = 7;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Nhập thông tin ";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(113, 162);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(214, 23);
+            dateTimePicker2.TabIndex = 18;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(488, 43);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(223, 23);
+            dateTimePicker1.TabIndex = 17;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(397, 46);
+            label21.Name = "label21";
+            label21.Size = new Size(78, 15);
+            label21.TabIndex = 16;
+            label21.Text = "Ngày bắt đầu";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(485, 127);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(190, 23);
+            textBox6.TabIndex = 15;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(485, 81);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(190, 23);
+            textBox5.TabIndex = 14;
+            // 
+            // Nu
+            // 
+            Nu.AutoSize = true;
+            Nu.Location = new Point(258, 126);
+            Nu.Name = "Nu";
+            Nu.Size = new Size(41, 19);
+            Nu.TabIndex = 13;
+            Nu.TabStop = true;
+            Nu.Text = "Nữ";
+            Nu.UseVisualStyleBackColor = true;
+            // 
+            // Nam
+            // 
+            Nam.AutoSize = true;
+            Nam.Location = new Point(152, 127);
+            Nam.Name = "Nam";
+            Nam.Size = new Size(51, 19);
+            Nam.TabIndex = 12;
+            Nam.TabStop = true;
+            Nam.Text = "Nam";
+            Nam.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(46, 127);
+            label20.Name = "label20";
+            label20.Size = new Size(52, 15);
+            label20.TabIndex = 11;
+            label20.Text = "Giới tính";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(179, 206);
+            label19.Name = "label19";
+            label19.Size = new Size(56, 15);
+            label19.TabIndex = 10;
+            label19.Text = "Tìm kiếm";
+            // 
+            // Search
+            // 
+            Search.Location = new Point(252, 200);
+            Search.Name = "Search";
+            Search.Size = new Size(357, 23);
+            Search.TabIndex = 9;
+            // 
+            // Chucvu
+            // 
+            Chucvu.Location = new Point(113, 83);
+            Chucvu.Name = "Chucvu";
+            Chucvu.Size = new Size(249, 23);
+            Chucvu.TabIndex = 7;
+            // 
+            // Ten
+            // 
+            Ten.Location = new Point(113, 43);
+            Ten.Name = "Ten";
+            Ten.Size = new Size(249, 23);
+            Ten.TabIndex = 6;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(397, 129);
+            label18.Name = "label18";
+            label18.Size = new Size(41, 15);
+            label18.TabIndex = 5;
+            label18.Text = "Lương";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(397, 89);
+            label17.Name = "label17";
+            label17.Size = new Size(65, 15);
+            label17.TabIndex = 4;
+            label17.Text = "Ngày công";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(39, 183);
+            label16.Name = "label16";
+            label16.Size = new Size(0, 15);
+            label16.TabIndex = 3;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(46, 168);
+            label15.Name = "label15";
+            label15.Size = new Size(60, 15);
+            label15.TabIndex = 2;
+            label15.Text = "Ngày sinh";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(48, 89);
+            label14.Name = "label14";
+            label14.Size = new Size(51, 15);
+            label14.TabIndex = 1;
+            label14.Text = "Chức vụ";
+            label14.Click += label14_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(56, 48);
+            label13.Name = "label13";
+            label13.Size = new Size(25, 15);
+            label13.TabIndex = 0;
+            label13.Text = "Tên";
+            // 
+            // btn_reset
+            // 
+            btn_reset.BackColor = Color.Khaki;
+            btn_reset.Enabled = false;
+            btn_reset.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_reset.Image = C_PRL.Properties.Resources.Jeno_Cyber_Game_Cover_49_Hard_Reset_48;
+            btn_reset.ImageAlign = ContentAlignment.MiddleRight;
+            btn_reset.Location = new Point(186, 261);
+            btn_reset.Name = "btn_reset";
+            btn_reset.Padding = new Padding(10, 0, 3, 0);
+            btn_reset.Size = new Size(120, 51);
+            btn_reset.TabIndex = 6;
+            btn_reset.Text = "Reset";
+            btn_reset.TextAlign = ContentAlignment.MiddleLeft;
+            btn_reset.UseVisualStyleBackColor = false;
+            // 
+            // btn_xoa
+            // 
+            btn_xoa.BackColor = Color.Khaki;
+            btn_xoa.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_xoa.Image = C_PRL.Properties.Resources.Custom_Icon_Design_Pretty_Office_9_Delete_file_48;
+            btn_xoa.ImageAlign = ContentAlignment.MiddleRight;
+            btn_xoa.Location = new Point(659, 261);
+            btn_xoa.Name = "btn_xoa";
+            btn_xoa.Padding = new Padding(10, 0, 10, 0);
+            btn_xoa.Size = new Size(124, 54);
+            btn_xoa.TabIndex = 5;
+            btn_xoa.Text = "Xóa";
+            btn_xoa.TextAlign = ContentAlignment.MiddleLeft;
+            btn_xoa.UseVisualStyleBackColor = false;
+            // 
+            // btn_sua
+            // 
+            btn_sua.BackColor = Color.Khaki;
+            btn_sua.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_sua.Image = C_PRL.Properties.Resources.Custom_Icon_Design_Pretty_Office_9_Edit_validated_48;
+            btn_sua.ImageAlign = ContentAlignment.MiddleRight;
+            btn_sua.Location = new Point(501, 261);
+            btn_sua.Name = "btn_sua";
+            btn_sua.Padding = new Padding(10, 0, 10, 0);
+            btn_sua.Size = new Size(124, 54);
+            btn_sua.TabIndex = 4;
+            btn_sua.Text = "Sửa";
+            btn_sua.TextAlign = ContentAlignment.MiddleLeft;
+            btn_sua.UseVisualStyleBackColor = false;
+            // 
+            // btn_them
+            // 
+            btn_them.BackColor = Color.Khaki;
+            btn_them.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_them.Image = C_PRL.Properties.Resources.Ampeross_Qetto_2_Add_contact_48;
+            btn_them.ImageAlign = ContentAlignment.MiddleRight;
+            btn_them.Location = new Point(348, 261);
+            btn_them.Name = "btn_them";
+            btn_them.Padding = new Padding(5, 0, 5, 0);
+            btn_them.Size = new Size(126, 54);
+            btn_them.TabIndex = 3;
+            btn_them.Text = "Thêm";
+            btn_them.TextAlign = ContentAlignment.MiddleLeft;
+            btn_them.UseVisualStyleBackColor = false;
             // 
             // Export
             // 
@@ -1231,7 +1500,7 @@ namespace PRL
             Export.FlatStyle = FlatStyle.Flat;
             Export.ForeColor = Color.White;
             Export.IDSelected = null;
-            Export.Location = new Point(284, 28);
+            Export.Location = new Point(854, 261);
             Export.Name = "Export";
             Export.Size = new Size(175, 51);
             Export.TabIndex = 2;
@@ -1250,7 +1519,7 @@ namespace PRL
             Import.FlatStyle = FlatStyle.Flat;
             Import.ForeColor = Color.White;
             Import.IDSelected = null;
-            Import.Location = new Point(38, 28);
+            Import.Location = new Point(854, 181);
             Import.Name = "Import";
             Import.Size = new Size(175, 51);
             Import.TabIndex = 1;
@@ -1263,10 +1532,10 @@ namespace PRL
             // 
             dataGridView.BackgroundColor = SystemColors.ActiveCaption;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(3, 108);
+            dataGridView.Location = new Point(90, 321);
             dataGridView.Name = "dataGridView";
             dataGridView.RowTemplate.Height = 25;
-            dataGridView.Size = new Size(1141, 504);
+            dataGridView.Size = new Size(939, 369);
             dataGridView.TabIndex = 0;
             // 
             // Panel_LK
@@ -1719,7 +1988,7 @@ namespace PRL
             buttonCustom2.TextColor = Color.White;
             buttonCustom2.UseVisualStyleBackColor = false;
             // 
-            // BacSi
+            // YTa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -1730,7 +1999,7 @@ namespace PRL
             Controls.Add(Navigation);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "BacSi";
+            Name = "YTa";
             Text = "1412_Team";
             WindowState = FormWindowState.Maximized;
             Load += Admin_Load;
@@ -1751,6 +2020,8 @@ namespace PRL
             cyberGroupBox1.PerformLayout();
             Content.ResumeLayout(false);
             Panel_ChamCong.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             Panel_LK.ResumeLayout(false);
             Panel_LK.PerformLayout();
@@ -1859,5 +2130,28 @@ namespace PRL
         private ButtonCustom Import;
         private DataGridView dataGridView;
         private ButtonCustom Export;
+        private Button btn_them;
+        private Button btn_xoa;
+        private Button btn_sua;
+        private Button btn_reset;
+        private GroupBox groupBox3;
+        private TextBox Ten;
+        private Label label18;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private Label label13;
+        private TextBox Search;
+        private TextBox Chucvu;
+        private Label label19;
+        private RadioButton Nu;
+        private RadioButton Nam;
+        private Label label20;
+        private TextBox textBox6;
+        private TextBox textBox5;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker1;
+        private Label label21;
     }
 }
