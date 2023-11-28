@@ -38,7 +38,7 @@ namespace DAL.DBContext
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True");
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Duan1;Integrated Security=True ; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1_C#;Integrated Security=True ; TrustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
