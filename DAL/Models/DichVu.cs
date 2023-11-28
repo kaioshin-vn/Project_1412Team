@@ -13,10 +13,15 @@ namespace DAL.Models
     {
         //Thọ
         [Key]
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Descript { get; set; } // mô tả
-        public int Price { get; set; } // giá
+        public Guid IdDichVu { get; set; }
+        [Required]
+        public string Ten { get; set; }
+        [Required]
+        public string MoTa { get; set; } // mô tả
+        [Required]
+        public int Gia { get; set; } // giá
+
+        public bool? HienThi { get; set; } 
 
         public virtual ICollection<PhieuKham>? MedicalBills { get; set; }
 

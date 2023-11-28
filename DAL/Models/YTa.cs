@@ -12,24 +12,20 @@ namespace DAL.Models
     public class YTa
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid IdYTa { get; set; }
         [Required]
-        public string Name { get; set; }
-        [Required, Range(0, 1)]
-        public int Gender { get; set; } // giới tính
-        [Required, Phone]
-        public string NumberPhone { get; set; }
+        public string? DiaChi { get; set; }
         [Required]
-        public string Address { get; set; }
+        DateTime? NgaySinh { get; set; }
         [Required]
-        public bool Visible { get; set; } // ẩn hiện
+        public bool GioiTinh { get; set; }
+        public bool? HienThi { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual NhanVien Staff { get; set; }
-        //public virtual MedicaBill MedicaBill { get; set; }
+        [ForeignKey("IdYTa")]
+        public virtual NhanVien? NhanVien { get; set; }
 
-        // Thọ
-        public virtual HoaDon? Bill { get; set; }
+        public virtual ICollection<PhieuKham>? PhieuKham { get; set; }
 
     }
 }

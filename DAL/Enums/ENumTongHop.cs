@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace DAL.Enums
 {
-    public enum Statis
+
+    
+    public enum LoaiNhanVien
     {
-        Bill,
-        Salary,
-        other
+        Admin,
+        BacSi,
+        YTa
     }
+
+
 }

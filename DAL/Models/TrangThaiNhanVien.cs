@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    [Table("ChamCong")]
-    public class ChamCong
+    [Table("TrangThaiNhanVien")]
+    public class TrangThaiNhanVien
     {
         [Key]
+        public int IdNgay { get; set; }
+        public bool? TrangThai { get; set; }
+        public Guid IdCaKham { get; set; }
         public Guid IdNhanVien { get; set; }
-        public DateTime? ThoiGianBatDau {  get; set; }
-        public DateTime? ThoiGianKetThuc {  get; set; }
-
-        public bool? TrangThaiCham { get; set; }
-        // quan hệ
+        public DateTime Ngay { get; set; }
+        public virtual ICollection< PhieuKham>? PhieuKham { get; set; }
         [ForeignKey("IdNhanVien")]
         public virtual NhanVien? NhanVien { get; set; }
-        //public virtual ICollection<Luong>? Luong { get; set; }
+        [ForeignKey("IdCaKham")]
+        public virtual CaKham? Shift { get; set; }
     }
 }

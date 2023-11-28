@@ -22,14 +22,21 @@ namespace PRL
 
         public Admin()
         {
+            user = new NhanVien();
+            FormLogin = new Login();
             InitializeComponent();
         }
 
-        NhanVien user;
+        /// Thuộc tính thêm vào
+        NhanVien user  ;
         Login FormLogin;
+        bool DV_Status_Btn_OK = false;
+        ///
+
 
         private void Admin_Load(object sender, EventArgs e)
         {
+           // Panel_DV.Visible = false;
             Content.Controls.Clear();
             Panel_ManHinhCho.Visible = true;
             Content.Controls.Add(Panel_ManHinhCho);
@@ -76,6 +83,7 @@ namespace PRL
         private void Admin_VisibleChanged(object sender, EventArgs e)
         {
             // FormLogin.Visible = false;
+         //   Panel_DV.Visible = false;
         }
 
         private void label4_Click(object sender, EventArgs e)

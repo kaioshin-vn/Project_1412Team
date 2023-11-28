@@ -12,11 +12,15 @@ namespace DAL.Models
     public  class ThongBao
     {
         [Key]
-        public Guid Id { get; set; }
-        public string Content { get; set; }
-        public bool Visible { get; set; }
+        public Guid IdThongBao { get; set; }
+        public string? TinNhan { get; set; }
+        public bool? TrangThai { get; set; }
+        public bool? ChapNhan { get; set; }
+
+        public Guid IdNguoiGui { get; set; }
 
         // quan hệ
-        public virtual NhanVien Staff { get; set; }
+        [ForeignKey("IdNguoiGui")]
+        public virtual NhanVien? Staff { get; set; }
     }
 }

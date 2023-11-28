@@ -12,15 +12,16 @@ namespace DAL.Models
     public class Luong
     {
         [Key]
-        public Guid Id { get; set; }
-        public bool Status { get; set; }
-        public double Bonus { get; set; }
-        public DateTime Time { get; set; }
-        public int AmountShifts { get; set; }
-
+        public Guid IdLuong { get; set; }
+        public bool? TrangThai { get; set; }
+        public int? Thuong { get; set; }
+        public int? Thang { get; set; }
+        public int? SoCong { get; set; }
+        public Guid IdNhanVien { get; set; }
 
         // quan hệ
-        public virtual NhanVien Staff { get; set; }
-        public virtual ICollection< ThongKe>? Statiscals { get; set; }
+        [ForeignKey("IdNhanVien")]
+        public virtual NhanVien? NhanVien { get; set; }
+        public virtual ICollection< ThongKe>? ThongKe { get; set; }
     }
 }

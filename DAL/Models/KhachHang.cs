@@ -12,28 +12,29 @@ namespace DAL.Models
     public class KhachHang
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid IdKhachHang { get; set; }
 
-        [StringLength(50)]
-        public string Name { get; set; }
-        public int Phone { get; set; }
+        [Required]
+        public string? Ten { get; set; }
 
-        [StringLength(100)]
-        public string Address { get; set; }
+        [Required]
+        [MaxLength(15)]
+        public string? SoDienThoai { get; set; }
 
-        public DateTime CreateDate { get; set; }
-
-        [StringLength(5)]
-        public int Sex { get; set; }
-        public string Service { get; set; }
-        public bool Visible { get; set; }
+        [Required]
+        public string? DiaChi { get; set; }
+        [Required]
+        DateTime? NgaySinh { get; set; }
+        [Required]
+        public bool GioiTinh { get; set; }
+        public bool? HienThi { get; set; } // ẩn hiện
 
         // quan hệ
         //public virtual ICollection<MedicalBill> MedicalBills { get; set; }
 
         // Thọ
-        public virtual HoaDon? Bills { get; set; }
-        public virtual PhieuKham? MedicalBill { get; set; }
+        
+        public virtual ICollection<PhieuKham>? MedicalBill { get; set; }
 
     }
 }

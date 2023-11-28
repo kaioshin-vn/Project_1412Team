@@ -14,8 +14,9 @@ namespace DAL.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string? Ten { get; set; }
 
-        public virtual TrangThaiPhong? StatusClinic { get; set; }
+        public virtual ICollection<TrangThaiPhong>? TrangThaiPhongs { get; set; }
+        public virtual ICollection<PhieuKham>? PhieuKhams { get; set; }
     }
 }

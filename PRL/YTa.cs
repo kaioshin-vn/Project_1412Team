@@ -1,4 +1,4 @@
-﻿using B_BUS.Services;
+﻿
 using DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -14,13 +14,13 @@ namespace PRL
 {
     public partial class YTa : Form
     {
-        private TimekeepingService _timekeepsv;
-        public BacSi(Staff staff, Login login)
+       // private TimekeepingService _timekeepsv;
+        public YTa(NhanVien staff, Login login)
         {
             FormLogin = login;
             user = staff;
             InitializeComponent();
-            _timekeepsv = new TimekeepingService();
+            //_timekeepsv = new TimekeepingService();
         }
 
         public YTa()

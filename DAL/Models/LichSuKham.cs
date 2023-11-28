@@ -13,10 +13,13 @@ namespace DAL.Models
     {
         //Thọ
         [Key]
-        public Guid Id { get; set; }
-        public string? Result { get; set; } // kết quả
-        public string? Notification { get; set; } 
-        public virtual ICollection<PhieuKham>? MedicalBills { get; set; }
+        public Guid IdPhieuKham { get; set; }
+        [Required]
+        public string? KetQua { get; set; } // kết quả
+        public string? GhiChu { get; set; }
+        [ForeignKey("IdPhieuKham")] 
+        
+        public virtual PhieuKham? MedicalBills { get; set; }
 
     }
 }

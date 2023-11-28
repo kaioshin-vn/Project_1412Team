@@ -13,18 +13,16 @@ namespace DAL.Models
     {
         // Thọ
         [Key]
-        public Guid Id { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string TenKH { get; set; }
-        public string DichVu { get; set; }
+        public Guid IdHoaDon { get; set; }
+        public Guid? IdNhanVien { get; set; }
+        public DateTime? ThoiGian {  get; set; } 
 
-        public DateTime NgayTao { get; set; }
-        public decimal? TongTien { get; set; }
-        public string? PaymentMethods { get; set; } // Phương thức thanh toán
-        public string? Note {  get; set; } // ghi chú
-        public virtual ICollection<HoaDonChiTiet>? BillDetails { get; set; }
-        public virtual ICollection<KhachHang>? Customers { get; set; }
-        public virtual ICollection<YTa>? Nurses { get; set; }
+        public string? GhiChu { get; set; }
+
+        public bool? HienThi {  get; set; }
+        public virtual ICollection<ThongKe>? ThongKe { get; set; }
+        public virtual ICollection<HoaDonChiTiet>? HoaDonChiTiet { get; set; }
+        [ForeignKey("IdNhanVien")]
+        public virtual NhanVien? NV { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,15 +11,18 @@ namespace DAL.Models
     public class Admin
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid IdAdmin { get; set; }
+
         [Required]
-        public string Name { get; set; }
+        public string? DiaChi { get; set; }
         [Required]
-        public string Passwprd {  get; set; }
+        DateTime? NgaySinh { get; set; }
         [Required]
-        public bool Visible { get; set; } // ẩn hiện
+        public bool GioiTinh { get; set; }
+        public bool? HienThi { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual ICollection<NhanVien>? Staff { get; set; }
+        [ForeignKey("IdAdmin")]
+        public virtual NhanVien? NhanVien { get; set; }
     }
 }

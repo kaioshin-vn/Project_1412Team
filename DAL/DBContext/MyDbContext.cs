@@ -2,8 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,16 +33,31 @@ namespace DAL.DBContext
         public DbSet<NhanVien> Staffs { get; set; }
         public DbSet<ThongKe> Statiscals { get; set; }
         public DbSet<TrangThaiPhong> StatusClinics { get; set; }
-        public DbSet<TrangThaiBacSi> StatusDoctors { get; set; }
+        public DbSet<TrangThaiNhanVien> StatusDoctors { get; set; }
         public DbSet<ChamCong> TimeKeepings { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True");
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-O08I15N\SQLEXPRESS01;Initial Catalog=Duan1;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Duan1;Integrated Security=True ; TrustServerCertificate=true");
         }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        //}S
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TrangThaiNhanVien>()
+           .Property(p => p.IdNgay)
+           .ValueGeneratedOnAdd()
+           .UseIdentityColumn();
+
+            modelBuilder.Entity<TrangThaiPhong>()
+           .Property(p => p.IdNgay)
+           .ValueGeneratedOnAdd()
+           .UseIdentityColumn();
+
+            modelBuilder.Entity<NhanVien>(entity =>
+            {
+                entity.HasIndex(e => e.SoDienThoai).IsUnique();
+            });
+
+        }
     }
 }

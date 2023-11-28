@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,14 +14,20 @@ namespace DAL.Models
     public class ThongKe
     {
         [Key]
-        public Guid Id { get; set; }
-        public Statis Type { get; set; }
-        public string Note { get; set; }
+        public Guid IdThongKe { get; set; }
+        public bool LoaiThongKe { get; set; }
+        public string? GhiChu { get; set; }
+       
+        public Guid? IdHoaDon { get; set; }
+
+        public Guid? IdLuong { get; set; }
 
 
         // quan hệ
-        public virtual HoaDon Bill { get; set; }
-        public virtual Luong Salary { get; set; }
+        [ForeignKey("IdHoaDon")]
+        public virtual HoaDon? HoaDon { get; set; }
+        [ForeignKey("IdLuong")]
+        public virtual Luong? Luong { get; set; }
 
     }
 }

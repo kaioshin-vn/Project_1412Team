@@ -12,25 +12,19 @@ namespace DAL.Models
     public class BacSi
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid IdBacSi { get; set; }
         [Required]
-        public string Name { get; set; }
-        [Required, Range(0, 1)]
-        public  int Gender { get; set; } //giới tính
-        [Required, Phone]
-        public string? NumberPhone { get; set; }
+        public string? DiaChi { get; set; }
         [Required]
-        public string? Address { get; set; }
+        DateTime? NgaySinh { get; set; }
         [Required]
-        public string? Password { get; set; }
-        [Required]
-        public string? Description { get; set; }
-        [Required]
-        public bool visible { get; set; } // ẩn hiện
+        public bool GioiTinh { get; set; }
+        public bool? HienThi { get; set; } // ẩn hiện
 
         // quan hệ
-        public virtual ICollection<NhanVien>? Staff { get; set; }
-        public virtual TrangThaiBacSi? StatusdDoctor { get; set; }
-        public virtual PhieuKham? MedicaBill { get; set; }
+       [ForeignKey("IdBacSi")]
+        public virtual NhanVien? NhanVien { get; set; }
+      
+        public virtual ICollection< PhieuKham>? PhieuKham { get; set; }
     }
 }

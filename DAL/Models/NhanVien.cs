@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,26 +13,29 @@ namespace DAL.Models
     public class NhanVien
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid IdNhanVien { get; set; }
         [Required]
-        public string Name { get; set; }
-        public string ChucVu { get; set; }
-        public string Sex { get; set; }
-        public string NumberPhone { get; set;}
-        public string Address {  get; set;}
+        [MaxLength(15)]
+        public string? SoDienThoai { get; set;}
         [Required]
-        public string Posittion { get; set;}
+        public LoaiNhanVien VaiTro { get; set;}
+        [Required]
+        public string? Ten { get; set; }
+
+        public bool? TrangThai { get; set;} // trạng thái
 
         [Required]
-        public int Status { get; set;} // trạng thái
+        public string? MatKhau { get; set; }
 
         // quan hệ
+
         public virtual Admin? Admin { get; set; }
 
-        //public virtual Salary Salary { get; set; }
-        public virtual ChamCong? TimeKeeping { get; set; }
-        public virtual BacSi? Doctor { get; set; }
-        //public virtual Nurse Nurse { get; set; }
-        //public virtual Notice Notice { get; set; }
+        public virtual ICollection<HoaDon>? HoaDon { get; set; }
+        public virtual ChamCong? ChamCong { get; set; }
+        public virtual BacSi? BacSi { get; set; }
+        public virtual YTa? YTa { get; set; }
+        public virtual ICollection<ThongBao>? ThongBao { get; set; }
+        public virtual ICollection<TrangThaiNhanVien>? TrangThaiNhanVien { get; set; }
     }
 }

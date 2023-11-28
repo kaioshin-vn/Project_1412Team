@@ -13,10 +13,10 @@ namespace DAL.Models
     public class CaKham
     {
         [Key]
-        public Guid Id { get; set; }
-        public int ShiftNumber { get; set; }
-        public DateTime TimeStart { get; set; }
-        public virtual TrangThaiPhong? StatusClinic { get; set; }  
-        public virtual PhieuKham? MedicalBill { get; set; }
+        public Guid IdCaKham { get; set; }
+        public int STTCaKham { get; set; }
+        public virtual ICollection< TrangThaiPhong>? TrangThaiPhong { get; set; }  
+        public virtual ICollection< TrangThaiNhanVien>? TrangThaiNhanVien { get; set; }
+        public virtual ICollection< PhieuKham>? PhieuKham { get; set; }
     }
 }

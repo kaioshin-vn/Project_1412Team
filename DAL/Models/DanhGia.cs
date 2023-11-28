@@ -14,12 +14,15 @@ namespace DAL.Models
     {
         // Thọ
         [Key]
-        public Guid Id { get; set; }
+        public Guid IdDanhGia { get; set; }
         [Required]
-        [MaxLength(100)]
-        public string Content { get; set; }
-        public DateTime CreateDate { get; set; }
-        //public IdMB 
-        public virtual ICollection<PhieuKham>? MedicalBills { get; set; }
+        public string? NoiDung { get; set; }
+        public Guid IdPhieuKham { get; set; }
+        public DateTime NgayTao { get; set; }
+
+        public bool? HienThi {  get; set; }
+
+        [ForeignKey("IdPhieuKham")]
+        public virtual PhieuKham? PhieuKham { get; set; }
     }
 }
