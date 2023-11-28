@@ -1,4 +1,5 @@
-﻿using DAL.Models;
+﻿using A_DAL.Models;
+using DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace DAL.DBContext
         public DbSet<TrangThaiPhong> TrangThaiPhongs { get; set; }
         public DbSet<TrangThaiNhanVien> TrangThaiNhanViens { get; set; }
         public DbSet<ChamCong> ChamCongs { get; set; }
+        public DbSet<GiamGia> GiamGias { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True");
