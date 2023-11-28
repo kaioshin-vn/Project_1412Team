@@ -30,7 +30,7 @@ namespace PRL
         /// Thuộc tính thêm vào
         NhanVien user  ;
         Login FormLogin;
-        bool DV_Status_Btn_OK = false;
+        bool DV_Status_Btn_OKThem = false;
         ///
 
 
@@ -160,29 +160,29 @@ namespace PRL
 
         private void bunifuRange1_RangeChanged(object sender, EventArgs e)
         {
-            DV_Label_PhanTram.Text = $"{100 - bunifuRange1.RangeMin} %";
+            DV_Label_PhanTram.Text = $"{100 - DV_.RangeMin} %";
         }
 
         private void buttonCustom7_Click(object sender, EventArgs e)
         {
             thunderGroupBox1.Visible = false;
-            DV_Btn_OK.Visible = true;
-            bunifuRange1.Visible = true;
+            DV_Btn_OKGiamGia.Visible = true;
+            DV_.Visible = true;
             DV_Label_PhanTram.Visible = true;
         }
 
         private void buttonCustom9_Click(object sender, EventArgs e)
         {
-            DV_Btn_OK.Visible = false;
-            bunifuRange1.Visible = false;
+            DV_Btn_OKGiamGia.Visible = false;
+            DV_.Visible = false;
             DV_Label_PhanTram.Visible = false;
             thunderGroupBox1.Visible = true;
         }
 
         private void buttonCustom5_Click(object sender, EventArgs e)
         {
-            DV_Btn_OK.Visible = false;
-            bunifuRange1.Visible = false;
+            DV_Btn_OKGiamGia.Visible = false;
+            DV_.Visible = false;
             DV_Label_PhanTram.Visible = false;
             thunderGroupBox1.Visible = true;
             for (int i = 0; i < 1500; i += 40)
