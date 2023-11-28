@@ -31,30 +31,30 @@ namespace PRL
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle29 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle30 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle31 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle32 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle33 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle34 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle35 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle36 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle37 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle38 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle39 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle40 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle41 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle42 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle43 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle44 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle45 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle46 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle47 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle48 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
@@ -117,31 +117,34 @@ namespace PRL
             QL_NV = new Label();
             Content = new Panel();
             Panel_DV = new Panel();
+            DV_Btn_DungGiamGia = new ButtonCustom();
+            DV_Btn_OkThem = new ButtonCustom();
+            DV_Btn_OKSua = new ButtonCustom();
             DV_Label_PhanTram = new ReaLTaiizor.Controls.BigLabel();
-            buttonCustom9 = new ButtonCustom();
+            DV_Btn_Them = new ButtonCustom();
             DV_Btn_OKGiamGia = new ButtonCustom();
-            DV_ = new Bunifu.Framework.UI.BunifuRange();
-            thunderGroupBox1 = new ReaLTaiizor.Controls.ThunderGroupBox();
-            richTextBox1 = new RichTextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            DV_Range_GiamGia = new Bunifu.Framework.UI.BunifuRange();
+            DV_GrBox = new ReaLTaiizor.Controls.ThunderGroupBox();
+            DV_Txt_MoTa = new RichTextBox();
+            DV_Txt_Gia = new TextBox();
+            DV_Txt_TenDichVu = new TextBox();
             label20 = new Label();
             label19 = new Label();
             label18 = new Label();
-            buttonCustom7 = new ButtonCustom();
+            DV_Btn_GiamGia = new ButtonCustom();
             DV_Panel_HienThiDV = new Panel();
-            hopeGroupBox2 = new ReaLTaiizor.Controls.HopeGroupBox();
-            buttonCustom8 = new ButtonCustom();
-            buttonCustom10 = new ButtonCustom();
+            DV_GrBoxDV2 = new ReaLTaiizor.Controls.HopeGroupBox();
+            DV_BtnAn2 = new ButtonCustom();
+            DV_BtnSua2 = new ButtonCustom();
             cyberRichTextBox17 = new ReaLTaiizor.Controls.CyberRichTextBox();
-            bigLabel10 = new ReaLTaiizor.Controls.BigLabel();
-            bigLabel11 = new ReaLTaiizor.Controls.BigLabel();
-            hopeGroupBox1 = new ReaLTaiizor.Controls.HopeGroupBox();
-            buttonCustom6 = new ButtonCustom();
-            buttonCustom5 = new ButtonCustom();
-            cyberRichTextBox9 = new ReaLTaiizor.Controls.CyberRichTextBox();
-            bigLabel8 = new ReaLTaiizor.Controls.BigLabel();
-            bigLabel9 = new ReaLTaiizor.Controls.BigLabel();
+            DV_LabelTenDichVu2 = new ReaLTaiizor.Controls.BigLabel();
+            DV_LabelGia2 = new ReaLTaiizor.Controls.BigLabel();
+            DV_GrBoxDV1 = new ReaLTaiizor.Controls.HopeGroupBox();
+            DV_BtnAn1 = new ButtonCustom();
+            DV_BtnSua1 = new ButtonCustom();
+            DV_TxtMoTa1 = new ReaLTaiizor.Controls.CyberRichTextBox();
+            DV_LabelTenDichVu1 = new ReaLTaiizor.Controls.BigLabel();
+            DV_LabelGia1 = new ReaLTaiizor.Controls.BigLabel();
             Panel_ThongKe = new SplitContainer();
             ThongKe_GrView_DoanhThu = new ReaLTaiizor.Controls.PoisonDataGridView();
             bigLabel23 = new ReaLTaiizor.Controls.BigLabel();
@@ -320,7 +323,6 @@ namespace PRL
             ThongKe_Elipse = new Bunifu.Framework.UI.BunifuElipse(components);
             ThongKe_ElispeGrView_ChiTieu = new Bunifu.Framework.UI.BunifuElipse(components);
             TT_ElipseGrView_DaThanhToan = new Bunifu.Framework.UI.BunifuElipse(components);
-            DV_Btn_OKSua = new ButtonCustom();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -332,10 +334,10 @@ namespace PRL
             Nav_Option.SuspendLayout();
             Content.SuspendLayout();
             Panel_DV.SuspendLayout();
-            thunderGroupBox1.SuspendLayout();
+            DV_GrBox.SuspendLayout();
             DV_Panel_HienThiDV.SuspendLayout();
-            hopeGroupBox2.SuspendLayout();
-            hopeGroupBox1.SuspendLayout();
+            DV_GrBoxDV2.SuspendLayout();
+            DV_GrBoxDV1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Panel_ThongKe).BeginInit();
             Panel_ThongKe.Panel1.SuspendLayout();
             Panel_ThongKe.Panel2.SuspendLayout();
@@ -369,7 +371,6 @@ namespace PRL
             name_clinic.Name = "name_clinic";
             name_clinic.Size = new Size(284, 65);
             name_clinic.TabIndex = 0;
-            name_clinic.Paint += name_clinic_Paint;
             // 
             // label1
             // 
@@ -409,7 +410,7 @@ namespace PRL
             QL_TroGiup.Size = new Size(84, 25);
             QL_TroGiup.TabIndex = 4;
             QL_TroGiup.Text = "Trợ Giúp";
-            QL_TroGiup.Click += label3_Click_1;
+            QL_TroGiup.Click += QL_TroGiup_Click;
             // 
             // QL_TaiKhoan
             // 
@@ -422,7 +423,7 @@ namespace PRL
             QL_TaiKhoan.Size = new Size(91, 25);
             QL_TaiKhoan.TabIndex = 3;
             QL_TaiKhoan.Text = "Tài Khoản";
-            QL_TaiKhoan.Click += label2_Click_1;
+            QL_TaiKhoan.Click += QL_TaiKhoan_Click;
             // 
             // QL_DangXuat
             // 
@@ -535,7 +536,6 @@ namespace PRL
             KH_Btn_TimKiem.Size = new Size(73, 38);
             KH_Btn_TimKiem.TabIndex = 23;
             KH_Btn_TimKiem.Text = "       ";
-            KH_Btn_TimKiem.Click += label4_Click_1;
             // 
             // KH_Btn_An
             // 
@@ -586,37 +586,37 @@ namespace PRL
             KH_GridView.BorderStyle = BorderStyle.None;
             KH_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle25.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle25.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle25.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle25.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle25.WrapMode = DataGridViewTriState.True;
-            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle26.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle26.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle26.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.False;
-            KH_GridView.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            KH_GridView.DefaultCellStyle = dataGridViewCellStyle2;
             KH_GridView.EnableHeadersVisualStyles = false;
             KH_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             KH_GridView.GridColor = Color.FromArgb(255, 255, 255);
             KH_GridView.Location = new Point(38, 76);
             KH_GridView.Name = "KH_GridView";
             KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle27.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle27.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle27.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.True;
-            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             KH_GridView.RowHeadersWidth = 51;
             KH_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             KH_GridView.RowTemplate.Height = 29;
@@ -666,7 +666,6 @@ namespace PRL
             KH_Grbox.Tag = "Cyber";
             KH_Grbox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             KH_Grbox.Timer_RGB = 300;
-            KH_Grbox.Load += cyberGroupBox2_Load;
             // 
             // KH_Combo_NgaySinh
             // 
@@ -895,7 +894,6 @@ namespace PRL
             label6.Size = new Size(159, 28);
             label6.TabIndex = 26;
             label6.Text = "Thông tin thêm";
-            label6.Click += label6_Click;
             // 
             // NV_Btn_Sua
             // 
@@ -1102,7 +1100,7 @@ namespace PRL
             NV_Btn_XemLuong.Text = "Xem Lương";
             NV_Btn_XemLuong.TextColor = Color.Red;
             NV_Btn_XemLuong.UseVisualStyleBackColor = false;
-            NV_Btn_XemLuong.Click += buttonCustom12_Click_1;
+            NV_Btn_XemLuong.Click += NV_Btn_XemLuong_Click;
             // 
             // NV_combo_ChucVu
             // 
@@ -1174,7 +1172,6 @@ namespace PRL
             NV_Txt_MatKhau.TextButton = "";
             NV_Txt_MatKhau.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             NV_Txt_MatKhau.Timer_RGB = 300;
-            NV_Txt_MatKhau.Load += cyberRichTextBox5_Load;
             // 
             // NV_Txt_Sdt
             // 
@@ -1338,37 +1335,37 @@ namespace PRL
             NV_GridView.BorderStyle = BorderStyle.None;
             NV_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             NV_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle28.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle28.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle28.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle28.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle28.WrapMode = DataGridViewTriState.True;
-            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             NV_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle29.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle29.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle29.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle29.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle29.WrapMode = DataGridViewTriState.False;
-            NV_GridView.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            NV_GridView.DefaultCellStyle = dataGridViewCellStyle5;
             NV_GridView.EnableHeadersVisualStyles = false;
             NV_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             NV_GridView.GridColor = Color.FromArgb(255, 255, 255);
             NV_GridView.Location = new Point(37, 67);
             NV_GridView.Name = "NV_GridView";
             NV_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle30.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle30.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle30.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle30.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle30.WrapMode = DataGridViewTriState.True;
-            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             NV_GridView.RowHeadersWidth = 51;
             NV_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             NV_GridView.RowTemplate.Height = 29;
@@ -1442,7 +1439,6 @@ namespace PRL
             Nav_Option.Name = "Nav_Option";
             Nav_Option.Size = new Size(284, 898);
             Nav_Option.TabIndex = 1;
-            Nav_Option.Paint += Nav_Option_Paint;
             // 
             // QL_ThongKe
             // 
@@ -1520,7 +1516,7 @@ namespace PRL
             QL_NV.Size = new Size(235, 36);
             QL_NV.TabIndex = 0;
             QL_NV.Text = "     QL Nhân viên";
-            QL_NV.Click += label3_Click;
+            QL_NV.Click += QL_NV_Click;
             // 
             // Content
             // 
@@ -1536,18 +1532,82 @@ namespace PRL
             // Panel_DV
             // 
             Panel_DV.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Panel_DV.Controls.Add(DV_Btn_DungGiamGia);
+            Panel_DV.Controls.Add(DV_Btn_OkThem);
             Panel_DV.Controls.Add(DV_Btn_OKSua);
             Panel_DV.Controls.Add(DV_Label_PhanTram);
-            Panel_DV.Controls.Add(buttonCustom9);
+            Panel_DV.Controls.Add(DV_Btn_Them);
             Panel_DV.Controls.Add(DV_Btn_OKGiamGia);
-            Panel_DV.Controls.Add(DV_);
-            Panel_DV.Controls.Add(thunderGroupBox1);
-            Panel_DV.Controls.Add(buttonCustom7);
+            Panel_DV.Controls.Add(DV_Range_GiamGia);
+            Panel_DV.Controls.Add(DV_GrBox);
+            Panel_DV.Controls.Add(DV_Btn_GiamGia);
             Panel_DV.Controls.Add(DV_Panel_HienThiDV);
             Panel_DV.Location = new Point(2, -4);
             Panel_DV.Name = "Panel_DV";
             Panel_DV.Size = new Size(1442, 760);
             Panel_DV.TabIndex = 0;
+            // 
+            // DV_Btn_DungGiamGia
+            // 
+            DV_Btn_DungGiamGia.BackColor = Color.Red;
+            DV_Btn_DungGiamGia.BackgroundColor = Color.Red;
+            DV_Btn_DungGiamGia.BorderColor = Color.White;
+            DV_Btn_DungGiamGia.BorderRadius = 20;
+            DV_Btn_DungGiamGia.BorderSize = 3;
+            DV_Btn_DungGiamGia.FlatAppearance.BorderSize = 0;
+            DV_Btn_DungGiamGia.FlatStyle = FlatStyle.Flat;
+            DV_Btn_DungGiamGia.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_Btn_DungGiamGia.ForeColor = Color.White;
+            DV_Btn_DungGiamGia.IDSelected = null;
+            DV_Btn_DungGiamGia.Location = new Point(75, 23);
+            DV_Btn_DungGiamGia.Name = "DV_Btn_DungGiamGia";
+            DV_Btn_DungGiamGia.Size = new Size(185, 69);
+            DV_Btn_DungGiamGia.TabIndex = 10;
+            DV_Btn_DungGiamGia.Text = "Dừng giảm giá";
+            DV_Btn_DungGiamGia.TextColor = Color.White;
+            DV_Btn_DungGiamGia.UseVisualStyleBackColor = false;
+            // 
+            // DV_Btn_OkThem
+            // 
+            DV_Btn_OkThem.BackColor = Color.DeepSkyBlue;
+            DV_Btn_OkThem.BackgroundColor = Color.DeepSkyBlue;
+            DV_Btn_OkThem.BorderColor = Color.White;
+            DV_Btn_OkThem.BorderRadius = 20;
+            DV_Btn_OkThem.BorderSize = 3;
+            DV_Btn_OkThem.FlatAppearance.BorderSize = 0;
+            DV_Btn_OkThem.FlatStyle = FlatStyle.Flat;
+            DV_Btn_OkThem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_Btn_OkThem.ForeColor = Color.White;
+            DV_Btn_OkThem.IDSelected = null;
+            DV_Btn_OkThem.Location = new Point(104, 170);
+            DV_Btn_OkThem.Name = "DV_Btn_OkThem";
+            DV_Btn_OkThem.Size = new Size(154, 56);
+            DV_Btn_OkThem.TabIndex = 9;
+            DV_Btn_OkThem.Text = "OK";
+            DV_Btn_OkThem.TextColor = Color.White;
+            DV_Btn_OkThem.UseVisualStyleBackColor = false;
+            DV_Btn_OkThem.Visible = false;
+            // 
+            // DV_Btn_OKSua
+            // 
+            DV_Btn_OKSua.BackColor = Color.DeepSkyBlue;
+            DV_Btn_OKSua.BackgroundColor = Color.DeepSkyBlue;
+            DV_Btn_OKSua.BorderColor = Color.White;
+            DV_Btn_OKSua.BorderRadius = 20;
+            DV_Btn_OKSua.BorderSize = 3;
+            DV_Btn_OKSua.FlatAppearance.BorderSize = 0;
+            DV_Btn_OKSua.FlatStyle = FlatStyle.Flat;
+            DV_Btn_OKSua.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_Btn_OKSua.ForeColor = Color.White;
+            DV_Btn_OKSua.IDSelected = null;
+            DV_Btn_OKSua.Location = new Point(264, 176);
+            DV_Btn_OKSua.Name = "DV_Btn_OKSua";
+            DV_Btn_OKSua.Size = new Size(154, 56);
+            DV_Btn_OKSua.TabIndex = 8;
+            DV_Btn_OKSua.Text = "OK";
+            DV_Btn_OKSua.TextColor = Color.White;
+            DV_Btn_OKSua.UseVisualStyleBackColor = false;
+            DV_Btn_OKSua.Visible = false;
             // 
             // DV_Label_PhanTram
             // 
@@ -1562,26 +1622,26 @@ namespace PRL
             DV_Label_PhanTram.Text = "100%";
             DV_Label_PhanTram.Visible = false;
             // 
-            // buttonCustom9
+            // DV_Btn_Them
             // 
-            buttonCustom9.BackColor = Color.DarkOrange;
-            buttonCustom9.BackgroundColor = Color.DarkOrange;
-            buttonCustom9.BorderColor = Color.White;
-            buttonCustom9.BorderRadius = 20;
-            buttonCustom9.BorderSize = 3;
-            buttonCustom9.FlatAppearance.BorderSize = 0;
-            buttonCustom9.FlatStyle = FlatStyle.Flat;
-            buttonCustom9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom9.ForeColor = Color.White;
-            buttonCustom9.IDSelected = null;
-            buttonCustom9.Location = new Point(264, 97);
-            buttonCustom9.Name = "buttonCustom9";
-            buttonCustom9.Size = new Size(154, 56);
-            buttonCustom9.TabIndex = 6;
-            buttonCustom9.Text = "Thêm";
-            buttonCustom9.TextColor = Color.White;
-            buttonCustom9.UseVisualStyleBackColor = false;
-            buttonCustom9.Click += buttonCustom9_Click;
+            DV_Btn_Them.BackColor = Color.DarkOrange;
+            DV_Btn_Them.BackgroundColor = Color.DarkOrange;
+            DV_Btn_Them.BorderColor = Color.White;
+            DV_Btn_Them.BorderRadius = 20;
+            DV_Btn_Them.BorderSize = 3;
+            DV_Btn_Them.FlatAppearance.BorderSize = 0;
+            DV_Btn_Them.FlatStyle = FlatStyle.Flat;
+            DV_Btn_Them.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_Btn_Them.ForeColor = Color.White;
+            DV_Btn_Them.IDSelected = null;
+            DV_Btn_Them.Location = new Point(264, 97);
+            DV_Btn_Them.Name = "DV_Btn_Them";
+            DV_Btn_Them.Size = new Size(154, 56);
+            DV_Btn_Them.TabIndex = 6;
+            DV_Btn_Them.Text = "Thêm";
+            DV_Btn_Them.TextColor = Color.White;
+            DV_Btn_Them.UseVisualStyleBackColor = false;
+            DV_Btn_Them.Click += DV_Btn_Them_Click;
             // 
             // DV_Btn_OKGiamGia
             // 
@@ -1604,67 +1664,67 @@ namespace PRL
             DV_Btn_OKGiamGia.UseVisualStyleBackColor = false;
             DV_Btn_OKGiamGia.Visible = false;
             // 
-            // DV_
+            // DV_Range_GiamGia
             // 
-            DV_.BackColor = Color.Transparent;
-            DV_.BackgroudColor = Color.Silver;
-            DV_.BorderRadius = 6;
-            DV_.IndicatorColor = Color.SpringGreen;
-            DV_.Location = new Point(571, 25);
-            DV_.Margin = new Padding(4, 5, 4, 5);
-            DV_.MaximumRange = 100;
-            DV_.Name = "DV_";
-            DV_.RangeMax = 100;
-            DV_.RangeMin = 0;
-            DV_.Size = new Size(534, 41);
-            DV_.TabIndex = 1;
-            DV_.Visible = false;
-            DV_.RangeChanged += bunifuRange1_RangeChanged;
+            DV_Range_GiamGia.BackColor = Color.Transparent;
+            DV_Range_GiamGia.BackgroudColor = Color.Silver;
+            DV_Range_GiamGia.BorderRadius = 6;
+            DV_Range_GiamGia.IndicatorColor = Color.SpringGreen;
+            DV_Range_GiamGia.Location = new Point(571, 25);
+            DV_Range_GiamGia.Margin = new Padding(4, 5, 4, 5);
+            DV_Range_GiamGia.MaximumRange = 100;
+            DV_Range_GiamGia.Name = "DV_Range_GiamGia";
+            DV_Range_GiamGia.RangeMax = 100;
+            DV_Range_GiamGia.RangeMin = 0;
+            DV_Range_GiamGia.Size = new Size(534, 41);
+            DV_Range_GiamGia.TabIndex = 1;
+            DV_Range_GiamGia.Visible = false;
+            DV_Range_GiamGia.RangeChanged += bunifuRange1_RangeChanged;
             // 
-            // thunderGroupBox1
+            // DV_GrBox
             // 
-            thunderGroupBox1.BackColor = Color.Transparent;
-            thunderGroupBox1.BodyColorA = Color.FromArgb(255, 255, 192);
-            thunderGroupBox1.BodyColorB = Color.FromArgb(128, 255, 255);
-            thunderGroupBox1.BodyColorC = Color.FromArgb(128, 255, 255);
-            thunderGroupBox1.BodyColorD = Color.FromArgb(192, 255, 192);
-            thunderGroupBox1.Controls.Add(richTextBox1);
-            thunderGroupBox1.Controls.Add(textBox2);
-            thunderGroupBox1.Controls.Add(textBox1);
-            thunderGroupBox1.Controls.Add(label20);
-            thunderGroupBox1.Controls.Add(label19);
-            thunderGroupBox1.Controls.Add(label18);
-            thunderGroupBox1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            thunderGroupBox1.ForeColor = Color.Black;
-            thunderGroupBox1.Location = new Point(485, 20);
-            thunderGroupBox1.Name = "thunderGroupBox1";
-            thunderGroupBox1.Size = new Size(864, 217);
-            thunderGroupBox1.TabIndex = 7;
-            thunderGroupBox1.Text = "Sửa";
-            thunderGroupBox1.Visible = false;
+            DV_GrBox.BackColor = Color.Transparent;
+            DV_GrBox.BodyColorA = Color.FromArgb(255, 255, 192);
+            DV_GrBox.BodyColorB = Color.FromArgb(128, 255, 255);
+            DV_GrBox.BodyColorC = Color.FromArgb(128, 255, 255);
+            DV_GrBox.BodyColorD = Color.FromArgb(192, 255, 192);
+            DV_GrBox.Controls.Add(DV_Txt_MoTa);
+            DV_GrBox.Controls.Add(DV_Txt_Gia);
+            DV_GrBox.Controls.Add(DV_Txt_TenDichVu);
+            DV_GrBox.Controls.Add(label20);
+            DV_GrBox.Controls.Add(label19);
+            DV_GrBox.Controls.Add(label18);
+            DV_GrBox.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_GrBox.ForeColor = Color.Black;
+            DV_GrBox.Location = new Point(485, 20);
+            DV_GrBox.Name = "DV_GrBox";
+            DV_GrBox.Size = new Size(864, 217);
+            DV_GrBox.TabIndex = 7;
+            DV_GrBox.Text = "Sửa";
+            DV_GrBox.Visible = false;
             // 
-            // richTextBox1
+            // DV_Txt_MoTa
             // 
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Location = new Point(167, 118);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(656, 86);
-            richTextBox1.TabIndex = 5;
-            richTextBox1.Text = "";
+            DV_Txt_MoTa.BorderStyle = BorderStyle.None;
+            DV_Txt_MoTa.Location = new Point(167, 118);
+            DV_Txt_MoTa.Name = "DV_Txt_MoTa";
+            DV_Txt_MoTa.Size = new Size(656, 86);
+            DV_Txt_MoTa.TabIndex = 5;
+            DV_Txt_MoTa.Text = "";
             // 
-            // textBox2
+            // DV_Txt_Gia
             // 
-            textBox2.Location = new Point(167, 81);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(656, 25);
-            textBox2.TabIndex = 4;
+            DV_Txt_Gia.Location = new Point(167, 81);
+            DV_Txt_Gia.Name = "DV_Txt_Gia";
+            DV_Txt_Gia.Size = new Size(656, 25);
+            DV_Txt_Gia.TabIndex = 4;
             // 
-            // textBox1
+            // DV_Txt_TenDichVu
             // 
-            textBox1.Location = new Point(167, 42);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(656, 25);
-            textBox1.TabIndex = 3;
+            DV_Txt_TenDichVu.Location = new Point(167, 42);
+            DV_Txt_TenDichVu.Name = "DV_Txt_TenDichVu";
+            DV_Txt_TenDichVu.Size = new Size(656, 25);
+            DV_Txt_TenDichVu.TabIndex = 3;
             // 
             // label20
             // 
@@ -1699,96 +1759,96 @@ namespace PRL
             label18.TabIndex = 0;
             label18.Text = "Tên dịch vụ :";
             // 
-            // buttonCustom7
+            // DV_Btn_GiamGia
             // 
-            buttonCustom7.BackColor = Color.Red;
-            buttonCustom7.BackgroundColor = Color.Red;
-            buttonCustom7.BorderColor = Color.White;
-            buttonCustom7.BorderRadius = 20;
-            buttonCustom7.BorderSize = 3;
-            buttonCustom7.FlatAppearance.BorderSize = 0;
-            buttonCustom7.FlatStyle = FlatStyle.Flat;
-            buttonCustom7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom7.ForeColor = Color.White;
-            buttonCustom7.IDSelected = null;
-            buttonCustom7.Location = new Point(264, 14);
-            buttonCustom7.Name = "buttonCustom7";
-            buttonCustom7.Size = new Size(154, 56);
-            buttonCustom7.TabIndex = 5;
-            buttonCustom7.Text = "Giảm giá";
-            buttonCustom7.TextColor = Color.White;
-            buttonCustom7.UseVisualStyleBackColor = false;
-            buttonCustom7.Click += buttonCustom7_Click;
+            DV_Btn_GiamGia.BackColor = Color.Red;
+            DV_Btn_GiamGia.BackgroundColor = Color.Red;
+            DV_Btn_GiamGia.BorderColor = Color.White;
+            DV_Btn_GiamGia.BorderRadius = 20;
+            DV_Btn_GiamGia.BorderSize = 3;
+            DV_Btn_GiamGia.FlatAppearance.BorderSize = 0;
+            DV_Btn_GiamGia.FlatStyle = FlatStyle.Flat;
+            DV_Btn_GiamGia.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_Btn_GiamGia.ForeColor = Color.White;
+            DV_Btn_GiamGia.IDSelected = null;
+            DV_Btn_GiamGia.Location = new Point(264, 14);
+            DV_Btn_GiamGia.Name = "DV_Btn_GiamGia";
+            DV_Btn_GiamGia.Size = new Size(154, 56);
+            DV_Btn_GiamGia.TabIndex = 5;
+            DV_Btn_GiamGia.Text = "Giảm giá";
+            DV_Btn_GiamGia.TextColor = Color.White;
+            DV_Btn_GiamGia.UseVisualStyleBackColor = false;
+            DV_Btn_GiamGia.Click += DV_Btn_GiamGia_Click;
             // 
             // DV_Panel_HienThiDV
             // 
             DV_Panel_HienThiDV.AutoScroll = true;
-            DV_Panel_HienThiDV.Controls.Add(hopeGroupBox2);
-            DV_Panel_HienThiDV.Controls.Add(hopeGroupBox1);
+            DV_Panel_HienThiDV.Controls.Add(DV_GrBoxDV2);
+            DV_Panel_HienThiDV.Controls.Add(DV_GrBoxDV1);
             DV_Panel_HienThiDV.Location = new Point(238, 253);
             DV_Panel_HienThiDV.Name = "DV_Panel_HienThiDV";
             DV_Panel_HienThiDV.Size = new Size(1200, 582);
             DV_Panel_HienThiDV.TabIndex = 0;
             // 
-            // hopeGroupBox2
+            // DV_GrBoxDV2
             // 
-            hopeGroupBox2.BorderColor = Color.FromArgb(220, 223, 230);
-            hopeGroupBox2.Controls.Add(buttonCustom8);
-            hopeGroupBox2.Controls.Add(buttonCustom10);
-            hopeGroupBox2.Controls.Add(cyberRichTextBox17);
-            hopeGroupBox2.Controls.Add(bigLabel10);
-            hopeGroupBox2.Controls.Add(bigLabel11);
-            hopeGroupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            hopeGroupBox2.ForeColor = Color.FromArgb(48, 49, 51);
-            hopeGroupBox2.LineColor = Color.FromArgb(220, 223, 230);
-            hopeGroupBox2.Location = new Point(3, 384);
-            hopeGroupBox2.Name = "hopeGroupBox2";
-            hopeGroupBox2.ShowText = false;
-            hopeGroupBox2.Size = new Size(1108, 254);
-            hopeGroupBox2.TabIndex = 5;
-            hopeGroupBox2.TabStop = false;
-            hopeGroupBox2.Text = "hopeGroupBox2";
-            hopeGroupBox2.ThemeColor = Color.FromArgb(128, 255, 255);
+            DV_GrBoxDV2.BorderColor = Color.FromArgb(220, 223, 230);
+            DV_GrBoxDV2.Controls.Add(DV_BtnAn2);
+            DV_GrBoxDV2.Controls.Add(DV_BtnSua2);
+            DV_GrBoxDV2.Controls.Add(cyberRichTextBox17);
+            DV_GrBoxDV2.Controls.Add(DV_LabelTenDichVu2);
+            DV_GrBoxDV2.Controls.Add(DV_LabelGia2);
+            DV_GrBoxDV2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DV_GrBoxDV2.ForeColor = Color.FromArgb(48, 49, 51);
+            DV_GrBoxDV2.LineColor = Color.FromArgb(220, 223, 230);
+            DV_GrBoxDV2.Location = new Point(3, 374);
+            DV_GrBoxDV2.Name = "DV_GrBoxDV2";
+            DV_GrBoxDV2.ShowText = false;
+            DV_GrBoxDV2.Size = new Size(1108, 254);
+            DV_GrBoxDV2.TabIndex = 5;
+            DV_GrBoxDV2.TabStop = false;
+            DV_GrBoxDV2.Text = "hopeGroupBox2";
+            DV_GrBoxDV2.ThemeColor = Color.FromArgb(128, 255, 255);
             // 
-            // buttonCustom8
+            // DV_BtnAn2
             // 
-            buttonCustom8.BackColor = Color.MidnightBlue;
-            buttonCustom8.BackgroundColor = Color.MidnightBlue;
-            buttonCustom8.BorderColor = Color.DeepPink;
-            buttonCustom8.BorderRadius = 20;
-            buttonCustom8.BorderSize = 2;
-            buttonCustom8.FlatAppearance.BorderSize = 0;
-            buttonCustom8.FlatStyle = FlatStyle.Flat;
-            buttonCustom8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom8.ForeColor = Color.Red;
-            buttonCustom8.IDSelected = null;
-            buttonCustom8.Location = new Point(929, 167);
-            buttonCustom8.Name = "buttonCustom8";
-            buttonCustom8.Size = new Size(154, 56);
-            buttonCustom8.TabIndex = 4;
-            buttonCustom8.Text = "Ẩn";
-            buttonCustom8.TextColor = Color.Red;
-            buttonCustom8.UseVisualStyleBackColor = false;
+            DV_BtnAn2.BackColor = Color.MidnightBlue;
+            DV_BtnAn2.BackgroundColor = Color.MidnightBlue;
+            DV_BtnAn2.BorderColor = Color.DeepPink;
+            DV_BtnAn2.BorderRadius = 20;
+            DV_BtnAn2.BorderSize = 2;
+            DV_BtnAn2.FlatAppearance.BorderSize = 0;
+            DV_BtnAn2.FlatStyle = FlatStyle.Flat;
+            DV_BtnAn2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_BtnAn2.ForeColor = Color.Red;
+            DV_BtnAn2.IDSelected = null;
+            DV_BtnAn2.Location = new Point(929, 167);
+            DV_BtnAn2.Name = "DV_BtnAn2";
+            DV_BtnAn2.Size = new Size(154, 56);
+            DV_BtnAn2.TabIndex = 4;
+            DV_BtnAn2.Text = "Ẩn";
+            DV_BtnAn2.TextColor = Color.Red;
+            DV_BtnAn2.UseVisualStyleBackColor = false;
             // 
-            // buttonCustom10
+            // DV_BtnSua2
             // 
-            buttonCustom10.BackColor = Color.Chartreuse;
-            buttonCustom10.BackgroundColor = Color.Chartreuse;
-            buttonCustom10.BorderColor = Color.Transparent;
-            buttonCustom10.BorderRadius = 20;
-            buttonCustom10.BorderSize = 4;
-            buttonCustom10.FlatAppearance.BorderSize = 0;
-            buttonCustom10.FlatStyle = FlatStyle.Flat;
-            buttonCustom10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom10.ForeColor = Color.LightYellow;
-            buttonCustom10.IDSelected = null;
-            buttonCustom10.Location = new Point(929, 74);
-            buttonCustom10.Name = "buttonCustom10";
-            buttonCustom10.Size = new Size(154, 56);
-            buttonCustom10.TabIndex = 3;
-            buttonCustom10.Text = "Sửa";
-            buttonCustom10.TextColor = Color.LightYellow;
-            buttonCustom10.UseVisualStyleBackColor = false;
+            DV_BtnSua2.BackColor = Color.Chartreuse;
+            DV_BtnSua2.BackgroundColor = Color.Chartreuse;
+            DV_BtnSua2.BorderColor = Color.Transparent;
+            DV_BtnSua2.BorderRadius = 20;
+            DV_BtnSua2.BorderSize = 4;
+            DV_BtnSua2.FlatAppearance.BorderSize = 0;
+            DV_BtnSua2.FlatStyle = FlatStyle.Flat;
+            DV_BtnSua2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_BtnSua2.ForeColor = Color.LightYellow;
+            DV_BtnSua2.IDSelected = null;
+            DV_BtnSua2.Location = new Point(929, 74);
+            DV_BtnSua2.Name = "DV_BtnSua2";
+            DV_BtnSua2.Size = new Size(154, 56);
+            DV_BtnSua2.TabIndex = 3;
+            DV_BtnSua2.Text = "Sửa";
+            DV_BtnSua2.TextColor = Color.LightYellow;
+            DV_BtnSua2.UseVisualStyleBackColor = false;
             // 
             // cyberRichTextBox17
             // 
@@ -1819,144 +1879,143 @@ namespace PRL
             cyberRichTextBox17.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberRichTextBox17.Timer_RGB = 300;
             // 
-            // bigLabel10
+            // DV_LabelTenDichVu2
             // 
-            bigLabel10.AutoSize = true;
-            bigLabel10.BackColor = Color.Transparent;
-            bigLabel10.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            bigLabel10.ForeColor = Color.FromArgb(80, 80, 80);
-            bigLabel10.Location = new Point(20, 12);
-            bigLabel10.Name = "bigLabel10";
-            bigLabel10.Size = new Size(135, 38);
-            bigLabel10.TabIndex = 0;
-            bigLabel10.Text = "Khám lợi";
+            DV_LabelTenDichVu2.AutoSize = true;
+            DV_LabelTenDichVu2.BackColor = Color.Transparent;
+            DV_LabelTenDichVu2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_LabelTenDichVu2.ForeColor = Color.FromArgb(80, 80, 80);
+            DV_LabelTenDichVu2.Location = new Point(20, 12);
+            DV_LabelTenDichVu2.Name = "DV_LabelTenDichVu2";
+            DV_LabelTenDichVu2.Size = new Size(135, 38);
+            DV_LabelTenDichVu2.TabIndex = 0;
+            DV_LabelTenDichVu2.Text = "Khám lợi";
             // 
-            // bigLabel11
+            // DV_LabelGia2
             // 
-            bigLabel11.AutoSize = true;
-            bigLabel11.BackColor = Color.Transparent;
-            bigLabel11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            bigLabel11.ForeColor = Color.FromArgb(80, 80, 80);
-            bigLabel11.Location = new Point(23, 58);
-            bigLabel11.Name = "bigLabel11";
-            bigLabel11.Size = new Size(171, 28);
-            bigLabel11.TabIndex = 1;
-            bigLabel11.Text = "Giá : 150.000 VNĐ";
+            DV_LabelGia2.AutoSize = true;
+            DV_LabelGia2.BackColor = Color.Transparent;
+            DV_LabelGia2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DV_LabelGia2.ForeColor = Color.FromArgb(80, 80, 80);
+            DV_LabelGia2.Location = new Point(23, 58);
+            DV_LabelGia2.Name = "DV_LabelGia2";
+            DV_LabelGia2.Size = new Size(171, 28);
+            DV_LabelGia2.TabIndex = 1;
+            DV_LabelGia2.Text = "Giá : 150.000 VNĐ";
             // 
-            // hopeGroupBox1
+            // DV_GrBoxDV1
             // 
-            hopeGroupBox1.BorderColor = Color.FromArgb(220, 223, 230);
-            hopeGroupBox1.Controls.Add(buttonCustom6);
-            hopeGroupBox1.Controls.Add(buttonCustom5);
-            hopeGroupBox1.Controls.Add(cyberRichTextBox9);
-            hopeGroupBox1.Controls.Add(bigLabel8);
-            hopeGroupBox1.Controls.Add(bigLabel9);
-            hopeGroupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            hopeGroupBox1.ForeColor = Color.FromArgb(48, 49, 51);
-            hopeGroupBox1.LineColor = Color.FromArgb(220, 223, 230);
-            hopeGroupBox1.Location = new Point(3, 22);
-            hopeGroupBox1.Name = "hopeGroupBox1";
-            hopeGroupBox1.ShowText = false;
-            hopeGroupBox1.Size = new Size(1108, 254);
-            hopeGroupBox1.TabIndex = 2;
-            hopeGroupBox1.TabStop = false;
-            hopeGroupBox1.Text = "hopeGroupBox1";
-            hopeGroupBox1.ThemeColor = Color.FromArgb(128, 255, 255);
+            DV_GrBoxDV1.BorderColor = Color.FromArgb(220, 223, 230);
+            DV_GrBoxDV1.Controls.Add(DV_BtnAn1);
+            DV_GrBoxDV1.Controls.Add(DV_BtnSua1);
+            DV_GrBoxDV1.Controls.Add(DV_TxtMoTa1);
+            DV_GrBoxDV1.Controls.Add(DV_LabelTenDichVu1);
+            DV_GrBoxDV1.Controls.Add(DV_LabelGia1);
+            DV_GrBoxDV1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DV_GrBoxDV1.ForeColor = Color.FromArgb(48, 49, 51);
+            DV_GrBoxDV1.LineColor = Color.FromArgb(220, 223, 230);
+            DV_GrBoxDV1.Location = new Point(3, 22);
+            DV_GrBoxDV1.Name = "DV_GrBoxDV1";
+            DV_GrBoxDV1.ShowText = false;
+            DV_GrBoxDV1.Size = new Size(1108, 254);
+            DV_GrBoxDV1.TabIndex = 2;
+            DV_GrBoxDV1.TabStop = false;
+            DV_GrBoxDV1.Text = "hopeGroupBox1";
+            DV_GrBoxDV1.ThemeColor = Color.FromArgb(128, 255, 255);
             // 
-            // buttonCustom6
+            // DV_BtnAn1
             // 
-            buttonCustom6.BackColor = Color.MidnightBlue;
-            buttonCustom6.BackgroundColor = Color.MidnightBlue;
-            buttonCustom6.BorderColor = Color.DeepPink;
-            buttonCustom6.BorderRadius = 20;
-            buttonCustom6.BorderSize = 2;
-            buttonCustom6.FlatAppearance.BorderSize = 0;
-            buttonCustom6.FlatStyle = FlatStyle.Flat;
-            buttonCustom6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom6.ForeColor = Color.Red;
-            buttonCustom6.IDSelected = null;
-            buttonCustom6.Location = new Point(929, 167);
-            buttonCustom6.Name = "buttonCustom6";
-            buttonCustom6.Size = new Size(154, 56);
-            buttonCustom6.TabIndex = 4;
-            buttonCustom6.Text = "Ẩn";
-            buttonCustom6.TextColor = Color.Red;
-            buttonCustom6.UseVisualStyleBackColor = false;
-            buttonCustom6.Click += buttonCustom6_Click;
+            DV_BtnAn1.BackColor = Color.MidnightBlue;
+            DV_BtnAn1.BackgroundColor = Color.MidnightBlue;
+            DV_BtnAn1.BorderColor = Color.DeepPink;
+            DV_BtnAn1.BorderRadius = 20;
+            DV_BtnAn1.BorderSize = 2;
+            DV_BtnAn1.FlatAppearance.BorderSize = 0;
+            DV_BtnAn1.FlatStyle = FlatStyle.Flat;
+            DV_BtnAn1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_BtnAn1.ForeColor = Color.Red;
+            DV_BtnAn1.IDSelected = null;
+            DV_BtnAn1.Location = new Point(929, 167);
+            DV_BtnAn1.Name = "DV_BtnAn1";
+            DV_BtnAn1.Size = new Size(154, 56);
+            DV_BtnAn1.TabIndex = 4;
+            DV_BtnAn1.Text = "Ẩn";
+            DV_BtnAn1.TextColor = Color.Red;
+            DV_BtnAn1.UseVisualStyleBackColor = false;
             // 
-            // buttonCustom5
+            // DV_BtnSua1
             // 
-            buttonCustom5.BackColor = Color.Chartreuse;
-            buttonCustom5.BackgroundColor = Color.Chartreuse;
-            buttonCustom5.BorderColor = Color.Transparent;
-            buttonCustom5.BorderRadius = 20;
-            buttonCustom5.BorderSize = 4;
-            buttonCustom5.FlatAppearance.BorderSize = 0;
-            buttonCustom5.FlatStyle = FlatStyle.Flat;
-            buttonCustom5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom5.ForeColor = Color.LightYellow;
-            buttonCustom5.IDSelected = null;
-            buttonCustom5.Location = new Point(929, 74);
-            buttonCustom5.Name = "buttonCustom5";
-            buttonCustom5.Size = new Size(154, 56);
-            buttonCustom5.TabIndex = 3;
-            buttonCustom5.Text = "Sửa";
-            buttonCustom5.TextColor = Color.LightYellow;
-            buttonCustom5.UseVisualStyleBackColor = false;
-            buttonCustom5.Click += buttonCustom5_Click;
+            DV_BtnSua1.BackColor = Color.Chartreuse;
+            DV_BtnSua1.BackgroundColor = Color.Chartreuse;
+            DV_BtnSua1.BorderColor = Color.Transparent;
+            DV_BtnSua1.BorderRadius = 20;
+            DV_BtnSua1.BorderSize = 4;
+            DV_BtnSua1.FlatAppearance.BorderSize = 0;
+            DV_BtnSua1.FlatStyle = FlatStyle.Flat;
+            DV_BtnSua1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_BtnSua1.ForeColor = Color.LightYellow;
+            DV_BtnSua1.IDSelected = null;
+            DV_BtnSua1.Location = new Point(929, 74);
+            DV_BtnSua1.Name = "DV_BtnSua1";
+            DV_BtnSua1.Size = new Size(154, 56);
+            DV_BtnSua1.TabIndex = 3;
+            DV_BtnSua1.Text = "Sửa";
+            DV_BtnSua1.TextColor = Color.LightYellow;
+            DV_BtnSua1.UseVisualStyleBackColor = false;
+            DV_BtnSua1.Click += DV_BtnSua1_Click;
             // 
-            // cyberRichTextBox9
+            // DV_TxtMoTa1
             // 
-            cyberRichTextBox9.Alpha = 20;
-            cyberRichTextBox9.BackColor = Color.Transparent;
-            cyberRichTextBox9.Background_WidthPen = 3F;
-            cyberRichTextBox9.BackgroundPen = true;
-            cyberRichTextBox9.ColorBackground = Color.FromArgb(255, 192, 192);
-            cyberRichTextBox9.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox9.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox9.ColorPen_1 = Color.FromArgb(29, 200, 238);
-            cyberRichTextBox9.ColorPen_2 = Color.FromArgb(37, 52, 68);
-            cyberRichTextBox9.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberRichTextBox9.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            cyberRichTextBox9.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberRichTextBox9.Lighting = false;
-            cyberRichTextBox9.LinearGradientPen = false;
-            cyberRichTextBox9.Location = new Point(23, 89);
-            cyberRichTextBox9.Name = "cyberRichTextBox9";
-            cyberRichTextBox9.PenWidth = 15;
-            cyberRichTextBox9.RGB = false;
-            cyberRichTextBox9.Rounding = true;
-            cyberRichTextBox9.RoundingInt = 60;
-            cyberRichTextBox9.Size = new Size(877, 136);
-            cyberRichTextBox9.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberRichTextBox9.TabIndex = 2;
-            cyberRichTextBox9.Tag = "Cyber";
-            cyberRichTextBox9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberRichTextBox9.Timer_RGB = 300;
+            DV_TxtMoTa1.Alpha = 20;
+            DV_TxtMoTa1.BackColor = Color.Transparent;
+            DV_TxtMoTa1.Background_WidthPen = 3F;
+            DV_TxtMoTa1.BackgroundPen = true;
+            DV_TxtMoTa1.ColorBackground = Color.FromArgb(255, 192, 192);
+            DV_TxtMoTa1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            DV_TxtMoTa1.ColorLighting = Color.FromArgb(29, 200, 238);
+            DV_TxtMoTa1.ColorPen_1 = Color.FromArgb(29, 200, 238);
+            DV_TxtMoTa1.ColorPen_2 = Color.FromArgb(37, 52, 68);
+            DV_TxtMoTa1.CyberRichTextBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            DV_TxtMoTa1.Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            DV_TxtMoTa1.ForeColor = Color.FromArgb(245, 245, 245);
+            DV_TxtMoTa1.Lighting = false;
+            DV_TxtMoTa1.LinearGradientPen = false;
+            DV_TxtMoTa1.Location = new Point(23, 89);
+            DV_TxtMoTa1.Name = "DV_TxtMoTa1";
+            DV_TxtMoTa1.PenWidth = 15;
+            DV_TxtMoTa1.RGB = false;
+            DV_TxtMoTa1.Rounding = true;
+            DV_TxtMoTa1.RoundingInt = 60;
+            DV_TxtMoTa1.Size = new Size(877, 136);
+            DV_TxtMoTa1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            DV_TxtMoTa1.TabIndex = 2;
+            DV_TxtMoTa1.Tag = "Cyber";
+            DV_TxtMoTa1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            DV_TxtMoTa1.Timer_RGB = 300;
             // 
-            // bigLabel8
+            // DV_LabelTenDichVu1
             // 
-            bigLabel8.AutoSize = true;
-            bigLabel8.BackColor = Color.Transparent;
-            bigLabel8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            bigLabel8.ForeColor = Color.FromArgb(80, 80, 80);
-            bigLabel8.Location = new Point(20, 12);
-            bigLabel8.Name = "bigLabel8";
-            bigLabel8.Size = new Size(135, 38);
-            bigLabel8.TabIndex = 0;
-            bigLabel8.Text = "Khám lợi";
+            DV_LabelTenDichVu1.AutoSize = true;
+            DV_LabelTenDichVu1.BackColor = Color.Transparent;
+            DV_LabelTenDichVu1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            DV_LabelTenDichVu1.ForeColor = Color.FromArgb(80, 80, 80);
+            DV_LabelTenDichVu1.Location = new Point(20, 12);
+            DV_LabelTenDichVu1.Name = "DV_LabelTenDichVu1";
+            DV_LabelTenDichVu1.Size = new Size(135, 38);
+            DV_LabelTenDichVu1.TabIndex = 0;
+            DV_LabelTenDichVu1.Text = "Khám lợi";
             // 
-            // bigLabel9
+            // DV_LabelGia1
             // 
-            bigLabel9.AutoSize = true;
-            bigLabel9.BackColor = Color.Transparent;
-            bigLabel9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            bigLabel9.ForeColor = Color.FromArgb(80, 80, 80);
-            bigLabel9.Location = new Point(23, 58);
-            bigLabel9.Name = "bigLabel9";
-            bigLabel9.Size = new Size(171, 28);
-            bigLabel9.TabIndex = 1;
-            bigLabel9.Text = "Giá : 150.000 VNĐ";
+            DV_LabelGia1.AutoSize = true;
+            DV_LabelGia1.BackColor = Color.Transparent;
+            DV_LabelGia1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            DV_LabelGia1.ForeColor = Color.FromArgb(80, 80, 80);
+            DV_LabelGia1.Location = new Point(23, 58);
+            DV_LabelGia1.Name = "DV_LabelGia1";
+            DV_LabelGia1.Size = new Size(171, 28);
+            DV_LabelGia1.TabIndex = 1;
+            DV_LabelGia1.Text = "Giá : 150.000 VNĐ";
             // 
             // Panel_ThongKe
             // 
@@ -1996,37 +2055,37 @@ namespace PRL
             ThongKe_GrView_DoanhThu.BorderStyle = BorderStyle.None;
             ThongKe_GrView_DoanhThu.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ThongKe_GrView_DoanhThu.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle31.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle31.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle31.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle31.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle31.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle31.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_DoanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_DoanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             ThongKe_GrView_DoanhThu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle32.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle32.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle32.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle32.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle32.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle32.WrapMode = DataGridViewTriState.False;
-            ThongKe_GrView_DoanhThu.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            ThongKe_GrView_DoanhThu.DefaultCellStyle = dataGridViewCellStyle8;
             ThongKe_GrView_DoanhThu.EnableHeadersVisualStyles = false;
             ThongKe_GrView_DoanhThu.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             ThongKe_GrView_DoanhThu.GridColor = Color.FromArgb(255, 255, 255);
             ThongKe_GrView_DoanhThu.Location = new Point(50, 532);
             ThongKe_GrView_DoanhThu.Name = "ThongKe_GrView_DoanhThu";
             ThongKe_GrView_DoanhThu.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle33.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle33.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle33.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle33.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle33.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle33.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_DoanhThu.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_DoanhThu.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             ThongKe_GrView_DoanhThu.RowHeadersWidth = 51;
             ThongKe_GrView_DoanhThu.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             ThongKe_GrView_DoanhThu.RowTemplate.Height = 29;
@@ -2172,7 +2231,7 @@ namespace PRL
             bigLabel20.Size = new Size(230, 57);
             bigLabel20.TabIndex = 1;
             bigLabel20.Text = "Doanh Thu";
-            bigLabel20.Click += bigLabel20_Click;
+
             // 
             // ThongKe_GrView_ChiTieu
             // 
@@ -2181,37 +2240,37 @@ namespace PRL
             ThongKe_GrView_ChiTieu.BorderStyle = BorderStyle.None;
             ThongKe_GrView_ChiTieu.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ThongKe_GrView_ChiTieu.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle34.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle34.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle34.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle34.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle34.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_ChiTieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_ChiTieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             ThongKe_GrView_ChiTieu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle35.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle35.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle35.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle35.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle35.WrapMode = DataGridViewTriState.False;
-            ThongKe_GrView_ChiTieu.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle11.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            ThongKe_GrView_ChiTieu.DefaultCellStyle = dataGridViewCellStyle11;
             ThongKe_GrView_ChiTieu.EnableHeadersVisualStyles = false;
             ThongKe_GrView_ChiTieu.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             ThongKe_GrView_ChiTieu.GridColor = Color.FromArgb(192, 255, 192);
             ThongKe_GrView_ChiTieu.Location = new Point(47, 538);
             ThongKe_GrView_ChiTieu.Name = "ThongKe_GrView_ChiTieu";
             ThongKe_GrView_ChiTieu.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle36.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle36.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle36.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle36.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle36.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle36.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_ChiTieu.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_ChiTieu.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             ThongKe_GrView_ChiTieu.RowHeadersWidth = 51;
             ThongKe_GrView_ChiTieu.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             ThongKe_GrView_ChiTieu.RowTemplate.Height = 29;
@@ -2323,37 +2382,37 @@ namespace PRL
             poisonDataGridView5.BorderStyle = BorderStyle.None;
             poisonDataGridView5.CellBorderStyle = DataGridViewCellBorderStyle.None;
             poisonDataGridView5.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle37.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle37.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle37.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle37.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle37.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle37.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             poisonDataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle38.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle38.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle38.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle38.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle38.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle38.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView5.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle14.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
+            poisonDataGridView5.DefaultCellStyle = dataGridViewCellStyle14;
             poisonDataGridView5.EnableHeadersVisualStyles = false;
             poisonDataGridView5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             poisonDataGridView5.GridColor = Color.FromArgb(255, 255, 255);
             poisonDataGridView5.Location = new Point(54, 548);
             poisonDataGridView5.Name = "poisonDataGridView5";
             poisonDataGridView5.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle39.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle39.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle39.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle39.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle39.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle39.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             poisonDataGridView5.RowHeadersWidth = 51;
             poisonDataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             poisonDataGridView5.RowTemplate.Height = 29;
@@ -2425,44 +2484,43 @@ namespace PRL
             TT_poisonDataGridView3.BorderStyle = BorderStyle.None;
             TT_poisonDataGridView3.CellBorderStyle = DataGridViewCellBorderStyle.None;
             TT_poisonDataGridView3.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle40.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle40.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle40.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle40.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle40.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle40.WrapMode = DataGridViewTriState.True;
-            TT_poisonDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle16.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle16.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle16.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
+            TT_poisonDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             TT_poisonDataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle41.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle41.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle41.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle41.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle41.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle41.WrapMode = DataGridViewTriState.False;
-            TT_poisonDataGridView3.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle17.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle17.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle17.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
+            TT_poisonDataGridView3.DefaultCellStyle = dataGridViewCellStyle17;
             TT_poisonDataGridView3.EnableHeadersVisualStyles = false;
             TT_poisonDataGridView3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             TT_poisonDataGridView3.GridColor = Color.FromArgb(255, 255, 255);
             TT_poisonDataGridView3.Location = new Point(54, 76);
             TT_poisonDataGridView3.Name = "TT_poisonDataGridView3";
             TT_poisonDataGridView3.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle42.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle42.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle42.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle42.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle42.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle42.WrapMode = DataGridViewTriState.True;
-            TT_poisonDataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle18.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
+            TT_poisonDataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             TT_poisonDataGridView3.RowHeadersWidth = 51;
             TT_poisonDataGridView3.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             TT_poisonDataGridView3.RowTemplate.Height = 29;
             TT_poisonDataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             TT_poisonDataGridView3.Size = new Size(866, 368);
             TT_poisonDataGridView3.TabIndex = 3;
-            TT_poisonDataGridView3.CellContentClick += poisonDataGridView3_CellContentClick;
             // 
             // TT_Btn_Sua
             // 
@@ -2690,7 +2748,6 @@ namespace PRL
             TT_txt_GiaTien.Name = "TT_txt_GiaTien";
             TT_txt_GiaTien.Size = new Size(311, 27);
             TT_txt_GiaTien.TabIndex = 28;
-            TT_txt_GiaTien.TextChanged += txtGiaTien_TextChanged;
             // 
             // airSeparator2
             // 
@@ -2787,7 +2844,6 @@ namespace PRL
             TT_Label_ThoiGian.Size = new Size(202, 28);
             TT_Label_ThoiGian.TabIndex = 11;
             TT_Label_ThoiGian.Text = "Thời gian thanh toán :";
-            TT_Label_ThoiGian.Click += TT_Label_ThoiGian_Click;
             // 
             // TT_Label_GhiChu
             // 
@@ -2877,37 +2933,37 @@ namespace PRL
             poisonDataGridView1.BorderStyle = BorderStyle.None;
             poisonDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             poisonDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle43.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle43.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle43.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle43.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle43.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle43.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle19.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle19.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle19.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle19.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             poisonDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle44.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle44.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle44.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle44.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle44.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle44.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle20.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle20.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle20.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
+            poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
             poisonDataGridView1.EnableHeadersVisualStyles = false;
             poisonDataGridView1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             poisonDataGridView1.GridColor = Color.FromArgb(255, 255, 255);
             poisonDataGridView1.Location = new Point(67, 151);
             poisonDataGridView1.Name = "poisonDataGridView1";
             poisonDataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle45.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle45.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle45.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle45.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle45.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle45.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle45.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle21.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle21.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle21.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle21.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             poisonDataGridView1.RowHeadersWidth = 51;
             poisonDataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             poisonDataGridView1.RowTemplate.Height = 29;
@@ -3161,7 +3217,7 @@ namespace PRL
             bigLabel12.Size = new Size(85, 57);
             bigLabel12.TabIndex = 1;
             bigLabel12.Text = "     ";
-            bigLabel12.Click += bigLabel12_Click;
+
             // 
             // cyberGroupBox3
             // 
@@ -3224,7 +3280,6 @@ namespace PRL
             L_Btn_OK.Text = "OK";
             L_Btn_OK.TextColor = Color.White;
             L_Btn_OK.UseVisualStyleBackColor = false;
-            L_Btn_OK.Click += buttonCustom12_Click;
             // 
             // buttonCustom11
             // 
@@ -3339,7 +3394,6 @@ namespace PRL
             bigLabel14.Size = new Size(241, 41);
             bigLabel14.TabIndex = 1;
             bigLabel14.Text = "Đặng Đình Giáp";
-            bigLabel14.Click += bigLabel14_Click;
             // 
             // bigLabel13
             // 
@@ -3375,7 +3429,7 @@ namespace PRL
             Panel_TK.Size = new Size(1763, 906);
             Panel_TK.TabIndex = 0;
             Panel_TK.Visible = false;
-            Panel_TK.Paint += Panel_TK_Paint;
+
             // 
             // buttonCustom14
             // 
@@ -3610,7 +3664,6 @@ namespace PRL
             groupBox4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             groupBox4.TabIndex = 16;
             groupBox4.Text = "Thêm Phiếu Khám";
-            groupBox4.Click += groupBox4_Click;
             // 
             // buttonCustom4
             // 
@@ -4241,7 +4294,6 @@ namespace PRL
             groupBox3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             groupBox3.TabIndex = 15;
             groupBox3.Text = "Sửa/Hủy Phiếu Khám";
-            groupBox3.Click += groupBox3_Click;
             // 
             // skyComboBox15
             // 
@@ -4906,37 +4958,37 @@ namespace PRL
             poisonDataGridView2.BorderStyle = BorderStyle.None;
             poisonDataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.None;
             poisonDataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle46.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle46.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle46.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle46.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle46.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle46.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle46.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle22.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle22.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle22.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle22.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             poisonDataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle47.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle47.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle47.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle47.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle47.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle47.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView2.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle23.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle23.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle23.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle23.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
+            poisonDataGridView2.DefaultCellStyle = dataGridViewCellStyle23;
             poisonDataGridView2.EnableHeadersVisualStyles = false;
             poisonDataGridView2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             poisonDataGridView2.GridColor = Color.FromArgb(255, 255, 255);
             poisonDataGridView2.Location = new Point(36, 182);
             poisonDataGridView2.Name = "poisonDataGridView2";
             poisonDataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle48.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle48.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle48.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle48.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle48.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle48.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle24.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle24.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle24.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle24.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             poisonDataGridView2.RowHeadersWidth = 51;
             poisonDataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             poisonDataGridView2.RowTemplate.Height = 29;
@@ -5195,7 +5247,7 @@ namespace PRL
             // DV_ELipseRichtextBox_MoTa
             // 
             DV_ELipseRichtextBox_MoTa.ElipseRadius = 10;
-            DV_ELipseRichtextBox_MoTa.TargetControl = richTextBox1;
+            DV_ELipseRichtextBox_MoTa.TargetControl = DV_Txt_MoTa;
             // 
             // TT_ElipsGrid_ChuaThanhToan
             // 
@@ -5217,32 +5269,11 @@ namespace PRL
             TT_ElipseGrView_DaThanhToan.ElipseRadius = 15;
             TT_ElipseGrView_DaThanhToan.TargetControl = poisonDataGridView5;
             // 
-            // DV_Btn_OKSua
-            // 
-            DV_Btn_OKSua.BackColor = Color.DeepSkyBlue;
-            DV_Btn_OKSua.BackgroundColor = Color.DeepSkyBlue;
-            DV_Btn_OKSua.BorderColor = Color.White;
-            DV_Btn_OKSua.BorderRadius = 20;
-            DV_Btn_OKSua.BorderSize = 3;
-            DV_Btn_OKSua.FlatAppearance.BorderSize = 0;
-            DV_Btn_OKSua.FlatStyle = FlatStyle.Flat;
-            DV_Btn_OKSua.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            DV_Btn_OKSua.ForeColor = Color.White;
-            DV_Btn_OKSua.IDSelected = null;
-            DV_Btn_OKSua.Location = new Point(264, 176);
-            DV_Btn_OKSua.Name = "DV_Btn_OKSua";
-            DV_Btn_OKSua.Size = new Size(154, 56);
-            DV_Btn_OKSua.TabIndex = 8;
-            DV_Btn_OKSua.Text = "OK";
-            DV_Btn_OKSua.TextColor = Color.White;
-            DV_Btn_OKSua.UseVisualStyleBackColor = false;
-            DV_Btn_OKSua.Visible = false;
-            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1720, 782);
+            ClientSize = new Size(1920, 982);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
@@ -5272,13 +5303,13 @@ namespace PRL
             Content.ResumeLayout(false);
             Panel_DV.ResumeLayout(false);
             Panel_DV.PerformLayout();
-            thunderGroupBox1.ResumeLayout(false);
-            thunderGroupBox1.PerformLayout();
+            DV_GrBox.ResumeLayout(false);
+            DV_GrBox.PerformLayout();
             DV_Panel_HienThiDV.ResumeLayout(false);
-            hopeGroupBox2.ResumeLayout(false);
-            hopeGroupBox2.PerformLayout();
-            hopeGroupBox1.ResumeLayout(false);
-            hopeGroupBox1.PerformLayout();
+            DV_GrBoxDV2.ResumeLayout(false);
+            DV_GrBoxDV2.PerformLayout();
+            DV_GrBoxDV1.ResumeLayout(false);
+            DV_GrBoxDV1.PerformLayout();
             Panel_ThongKe.Panel1.ResumeLayout(false);
             Panel_ThongKe.Panel1.PerformLayout();
             Panel_ThongKe.Panel2.ResumeLayout(false);
@@ -5465,31 +5496,31 @@ namespace PRL
         private global::PRL.Tool.ButtonCustom buttonCustom4;
         private global::System.Windows.Forms.Panel Panel_DV;
         private global::System.Windows.Forms.Panel DV_Panel_HienThiDV;
-        private global::ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox1;
-        private global::ReaLTaiizor.Controls.BigLabel bigLabel9;
-        private global::PRL.Tool.ButtonCustom buttonCustom6;
-        private global::PRL.Tool.ButtonCustom buttonCustom5;
-        private global::ReaLTaiizor.Controls.CyberRichTextBox cyberRichTextBox9;
-        private global::ReaLTaiizor.Controls.BigLabel bigLabel8;
-        private global::PRL.Tool.ButtonCustom buttonCustom7;
-        private global::Bunifu.Framework.UI.BunifuRange DV_;
-        private global::PRL.Tool.ButtonCustom buttonCustom9;
+        private global::ReaLTaiizor.Controls.HopeGroupBox DV_GrBoxDV1;
+        private global::ReaLTaiizor.Controls.BigLabel DV_LabelGia1;
+        private global::PRL.Tool.ButtonCustom DV_BtnAn1;
+        private global::PRL.Tool.ButtonCustom DV_BtnSua1;
+        private global::ReaLTaiizor.Controls.CyberRichTextBox DV_TxtMoTa1;
+        private global::ReaLTaiizor.Controls.BigLabel DV_LabelTenDichVu1;
+        private global::PRL.Tool.ButtonCustom DV_Btn_GiamGia;
+        private global::Bunifu.Framework.UI.BunifuRange DV_Range_GiamGia;
+        private global::PRL.Tool.ButtonCustom DV_Btn_Them;
         private global::PRL.Tool.ButtonCustom DV_Btn_OKGiamGia;
-        private global::ReaLTaiizor.Controls.ThunderGroupBox thunderGroupBox1;
-        private global::System.Windows.Forms.RichTextBox richTextBox1;
-        private global::System.Windows.Forms.TextBox textBox2;
-        private global::System.Windows.Forms.TextBox textBox1;
+        private global::ReaLTaiizor.Controls.ThunderGroupBox DV_GrBox;
+        private global::System.Windows.Forms.RichTextBox DV_Txt_MoTa;
+        private global::System.Windows.Forms.TextBox DV_Txt_Gia;
+        private global::System.Windows.Forms.TextBox DV_Txt_TenDichVu;
         private global::System.Windows.Forms.Label label20;
         private global::System.Windows.Forms.Label label19;
         private global::System.Windows.Forms.Label label18;
         private global::Bunifu.Framework.UI.BunifuElipse DV_ELipseRichtextBox_MoTa;
         private global::ReaLTaiizor.Controls.BigLabel DV_Label_PhanTram;
-        private global::ReaLTaiizor.Controls.HopeGroupBox hopeGroupBox2;
-        private global::PRL.Tool.ButtonCustom buttonCustom8;
-        private global::PRL.Tool.ButtonCustom buttonCustom10;
+        private global::ReaLTaiizor.Controls.HopeGroupBox DV_GrBoxDV2;
+        private global::PRL.Tool.ButtonCustom DV_BtnAn2;
+        private global::PRL.Tool.ButtonCustom DV_BtnSua2;
         private global::ReaLTaiizor.Controls.CyberRichTextBox cyberRichTextBox17;
-        private global::ReaLTaiizor.Controls.BigLabel bigLabel10;
-        private global::ReaLTaiizor.Controls.BigLabel bigLabel11;
+        private global::ReaLTaiizor.Controls.BigLabel DV_LabelTenDichVu2;
+        private global::ReaLTaiizor.Controls.BigLabel DV_LabelGia2;
         private global::System.Windows.Forms.Panel Panel_L;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel12;
         private global::ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox3;
@@ -5586,5 +5617,7 @@ namespace PRL
         private ReaLTaiizor.Controls.AloneComboBox KH_Combo_NgaySinh;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel26;
         private ButtonCustom DV_Btn_OKSua;
+        private ButtonCustom DV_Btn_OkThem;
+        private ButtonCustom DV_Btn_DungGiamGia;
     }
 }
