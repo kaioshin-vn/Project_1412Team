@@ -16,7 +16,6 @@ namespace A_DAL.Repositories
         MyDbContext dbcontext = new MyDbContext();
         public AdminRepository()
         {
-            GetAdmins();
         }
         public bool Create(Admin adm)
         {

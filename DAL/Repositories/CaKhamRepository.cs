@@ -15,7 +15,6 @@ namespace A_DAL.Repositories
 
         public CaKhamRepository()
         {
-            GetCaKhams();
         }
         public bool Create(CaKham caKham)
         {

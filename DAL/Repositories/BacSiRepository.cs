@@ -16,7 +16,6 @@ namespace A_DAL.Repositories
 
         public BacSiRepository()
         {
-            GetBacSis();
         }
         public bool Create(BacSi bs)
         {

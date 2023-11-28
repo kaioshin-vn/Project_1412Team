@@ -15,7 +15,6 @@ namespace A_DAL.Repositories
 
         public DanhGiaRepository()
         {
-            GetDanhGias();
         }
         public bool Create(DanhGia danhGia)
         {

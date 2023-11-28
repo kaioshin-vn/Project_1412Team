@@ -15,7 +15,6 @@ namespace A_DAL.Repositories
 
         public ChamCongRepository()
         {
-            GetChamCongs();
         }
         public bool Create(ChamCong chamCong)
         {
