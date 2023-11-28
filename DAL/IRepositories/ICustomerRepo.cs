@@ -11,7 +11,7 @@ namespace DAL.IRepositories
 {
     public interface ICustomerRepo
     {
-        public List<Customer> GetAll();
+        public List<KhachHang> GetAll();
         public bool AddLichKham();
         public bool UpdateLichKham();
         public bool RemoveLichKham();

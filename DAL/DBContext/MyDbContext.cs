@@ -2,8 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,32 +17,47 @@ namespace DAL.DBContext
         public MyDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<Bill> Bills { get; set; }
-        public DbSet<BillDetail> BillDetails { get; set; }
-        public DbSet<Rate> Rates { get; set; }
-        public DbSet<HealtRecord> HealtRecords { get; set; }
-        public DbSet<Service> Services { get; set; }
-        public DbSet<Clinic> Clinics { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Doctor> Doctors { get; set; }
-        public DbSet<MedicalBill> MedicalBills { get; set; }
-        public DbSet<Notice> Notices { get; set; }
-        public DbSet<Nurse> Nurses { get; set; }
-        public DbSet<Salary> Salaries { get; set; }
-        public DbSet<Shift> Shifts { get; set; }
-        public DbSet<Staff> Staffs { get; set; }
-        public DbSet<Statiscal> Statiscals { get; set; }
-        public DbSet<StatusClinic> StatusClinics { get; set; }
-        public DbSet<StatusDoctor> StatusDoctors { get; set; }
-        public DbSet<TimeKeeping> TimeKeepings { get; set; }
+        public DbSet<HoaDon> Bills { get; set; }
+        public DbSet<HoaDonChiTiet> BillDetails { get; set; }
+        public DbSet<DanhGia> Rates { get; set; }
+        public DbSet<LichSuKham> HealtRecords { get; set; }
+        public DbSet<DichVu> Services { get; set; }
+        public DbSet<Phong> Clinics { get; set; }
+        public DbSet<KhachHang> Customers { get; set; }
+        public DbSet<BacSi> Doctors { get; set; }
+        public DbSet<PhieuKham> MedicalBills { get; set; }
+        public DbSet<ThongBao> Notices { get; set; }
+        public DbSet<YTa> Nurses { get; set; }
+        public DbSet<Luong> Salaries { get; set; }
+        public DbSet<CaKham> Shifts { get; set; }
+        public DbSet<NhanVien> Staffs { get; set; }
+        public DbSet<ThongKe> Statiscals { get; set; }
+        public DbSet<TrangThaiPhong> StatusClinics { get; set; }
+        public DbSet<TrangThaiNhanVien> StatusDoctors { get; set; }
+        public DbSet<ChamCong> TimeKeepings { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True");
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-O08I15N\SQLEXPRESS01;Initial Catalog=Duan1;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Duan1;Integrated Security=True ; TrustServerCertificate=true");
         }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        //}S
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TrangThaiNhanVien>()
+           .Property(p => p.IdNgay)
+           .ValueGeneratedOnAdd()
+           .UseIdentityColumn();
+
+            modelBuilder.Entity<TrangThaiPhong>()
+           .Property(p => p.IdNgay)
+           .ValueGeneratedOnAdd()
+           .UseIdentityColumn();
+
+            modelBuilder.Entity<NhanVien>(entity =>
+            {
+                entity.HasIndex(e => e.SoDienThoai).IsUnique();
+            });
+
+        }
     }
 }

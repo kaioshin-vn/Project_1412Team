@@ -10,9 +10,9 @@ namespace A_DAL.IRepositories
 {
     public interface ITimekeepingRepo
     {
-        public List<TimeKeeping> GetAll();
-        public bool AddNVTime(TimeKeeping nvt);
-        public bool UpdateNVTime(TimeKeeping nvt);
-        public bool DeleteNVTime(TimeKeeping nvt);
+        public List<ChamCong> GetAll();
+        public bool AddNVTime(ChamCong nvt);
+        public bool UpdateNVTime(ChamCong nvt);
+        public bool DeleteNVTime(ChamCong nvt);
     }
 }

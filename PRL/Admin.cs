@@ -13,7 +13,7 @@ namespace PRL
 {
     public partial class Admin : Form
     {
-        public Admin(Staff staff, Login login)
+        public Admin(NhanVien staff, Login login)
         {
             FormLogin = login;
             user = staff;
@@ -22,14 +22,21 @@ namespace PRL
 
         public Admin()
         {
+            user = new NhanVien();
+            FormLogin = new Login();
             InitializeComponent();
         }
 
-        Staff user;
+        /// Thuộc tính thêm vào
+        NhanVien user  ;
         Login FormLogin;
+        bool DV_Status_Btn_OK = false;
+        ///
+
 
         private void Admin_Load(object sender, EventArgs e)
         {
+           // Panel_DV.Visible = false;
             Content.Controls.Clear();
             Panel_ManHinhCho.Visible = true;
             Content.Controls.Add(Panel_ManHinhCho);
@@ -76,6 +83,7 @@ namespace PRL
         private void Admin_VisibleChanged(object sender, EventArgs e)
         {
             // FormLogin.Visible = false;
+         //   Panel_DV.Visible = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -277,6 +285,21 @@ namespace PRL
         private void label3_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Hãy bắn 50k vào tài khoản 0978040960 MB Bank để được hỗ trợ bạn nhé !!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void TT_Label_ThoiGian_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGiaTien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nav_Option_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

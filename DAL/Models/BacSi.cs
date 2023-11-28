@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Admin
+    [Table("BacSi")]
+    public class BacSi
     {
         [Key]
-        public Guid IdAdmin { get; set; }
-
+        public Guid IdBacSi { get; set; }
         [Required]
         public string? DiaChi { get; set; }
         [Required]
@@ -22,7 +22,9 @@ namespace DAL.Models
         public bool? HienThi { get; set; } // ẩn hiện
 
         // quan hệ
-        [ForeignKey("IdAdmin")]
+       [ForeignKey("IdBacSi")]
         public virtual NhanVien? NhanVien { get; set; }
+      
+        public virtual ICollection< PhieuKham>? PhieuKham { get; set; }
     }
 }

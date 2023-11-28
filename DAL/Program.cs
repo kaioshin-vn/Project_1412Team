@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.DBContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,14 +12,20 @@ namespace DAL
         static void WriteToScreen()
         { 
             //check conflict github side
-            //check Phong
+            //check Phong 
             //giap
             //giapdd
-            //tant5t
+            //tant5tuu
+            //fvfv
+            //quan dfef
+
         }
 
         static void Main()
         {
+            var db = new MyDbContext();
+            db.Database.EnsureCreated();
+            Console.WriteLine("Tc");
             Console.ReadKey(); 
         }
     }
