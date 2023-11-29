@@ -1,5 +1,4 @@
 ﻿using A_DAL.IRepositories;
-using A_DAL.Migrations;
 using DAL.DBContext;
 using DAL.Models;
 using Microsoft.EntityFrameworkCore;
