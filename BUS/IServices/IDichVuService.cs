@@ -10,7 +10,7 @@ namespace B_BUS.IServices
     public interface IDichVuService
     {
         public List<DichVu> GetAllDichVu(string search);
-        public bool AdđichVu(DichVu dv);
+        public bool AddDichVu(DichVu dv);
         public bool UpdateDichVu(DichVu dv);
         public bool DeleteDichVu(DichVu dv);
     }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace B_BUS.Services
 {
-    public class QuanLyBacSiService : IQuanLyBacSiService
+    public class BacSiService : IQuanLyBacSiService
     {
         BacSiRepository _BacSiRepository = new BacSiRepository();
 

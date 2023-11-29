@@ -12,7 +12,7 @@ namespace B_BUS.Services
 {
     public class LuongSer : ILuongSer
     {
-        private readonly ILuongRepo _luongRepo;
+        private readonly ILuongRepo _luongRepo = new LuongRepo();
         public LuongSer()
         {
             _luongRepo = new LuongRepo();

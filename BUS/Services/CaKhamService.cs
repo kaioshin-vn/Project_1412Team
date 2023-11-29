@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace B_BUS.Services
 {
-    public class QuanLyCaKhamService : IQuanLyCaKhamService
+    public class CaKhamService : IQuanLyCaKhamService
     {
         CaKhamRepository _caKhamRepository = new CaKhamRepository();
         public bool Create(CaKham caKham)

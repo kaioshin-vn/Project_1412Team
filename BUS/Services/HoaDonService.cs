@@ -11,7 +11,7 @@ namespace B_BUS.Services
 {
     public class HoaDonService : IHoaDonService
     {
-        private readonly HoaDonRepository _repo;
+        private readonly HoaDonRepository _repo = new HoaDonRepository();
         public List<HoaDon> GetAllHoaDon()
         {
             return _repo.GetAllHoaDon();
@@ -35,11 +35,7 @@ namespace B_BUS.Services
        
         public bool UpdateHoaDon(HoaDon hd)
         {
-            var clone  = _repo.GetAllHoaDon().FirstOrDefault(x => x.IdHoaDon == hd.IdHoaDon);
-            clone.ThoiGian = hd.ThoiGian;
-            clone.GhiChu = hd.GhiChu;
-            clone.HienThi = hd.HienThi;
-            if (_repo.UpdateHoaDon(clone) == true)
+            if (_repo.UpdateHoaDon(hd) == true)
             {
                 return true;
             }

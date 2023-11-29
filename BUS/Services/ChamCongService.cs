@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace B_BUS.Services
 {
-    public class QuanLyChamCongService : IQuanLyChamCongService
+    public class ChamCongService : IQuanLyChamCongService
     {
         ChamCongRepository _chamCongRepository = new ChamCongRepository();
 

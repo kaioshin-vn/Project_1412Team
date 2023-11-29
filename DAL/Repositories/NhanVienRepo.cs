@@ -35,14 +35,8 @@ namespace A_DAL.Repositories
 
         public bool UpdateNhanVien(NhanVien nv)
         {
-            var nhanVien = _dbContext.NhanViens.FirstOrDefault(x => x.IdNhanVien == nv.IdNhanVien);
 
-            nhanVien.SoDienThoai = nv.SoDienThoai;
-            nhanVien.Ten = nv.Ten;
-            nhanVien.TrangThai = nv.TrangThai;
-            nhanVien.MatKhau = nv.MatKhau;
-
-            _dbContext.NhanViens.Update(nhanVien);
+            _dbContext.NhanViens.Update(nv);
             _dbContext.SaveChanges();
             return true;
         }

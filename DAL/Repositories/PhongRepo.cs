@@ -35,11 +35,7 @@ namespace A_DAL.Repositories
 
         public bool UpdatePhong(Phong p)
         {
-            var phong = _dbContext.Phongs.FirstOrDefault(x => x.Id == p.Id);
-
-            phong.Ten = p.Ten;
-
-            _dbContext.Phongs.Update(phong);
+            _dbContext.Phongs.Update(p);
             _dbContext.SaveChanges();
             return true;
         }

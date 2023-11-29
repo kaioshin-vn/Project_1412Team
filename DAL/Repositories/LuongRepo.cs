@@ -36,14 +36,7 @@ namespace A_DAL.Repositories
 
         public bool UpdateLuong(Luong l)
         {
-            var luong = _dbContext.Luongs.FirstOrDefault(x => x.IdLuong == l.IdLuong);
-
-            luong.TrangThai = l.TrangThai;
-            luong.Thuong = l.Thuong;
-            luong.Thang = l.Thang;
-            luong.SoCong = l.SoCong;
-
-            _dbContext.Luongs.Update(luong);
+            _dbContext.Luongs.Update(l);
             _dbContext.SaveChanges();
             return true;
         }

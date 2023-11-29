@@ -12,7 +12,7 @@ namespace B_BUS.Services
     public class HoaDonChiTietService : IHoaDonChiTietService
     {
 
-        private readonly HoaDonChiTietRepo _repo;
+        private readonly HoaDonChiTietRepo _repo = new HoaDonChiTietRepo();
         public List<HoaDonChiTiet> GetAllHDCT()
         {
             return _repo.GetAllHDCT();
@@ -20,7 +20,7 @@ namespace B_BUS.Services
 
         public HoaDonChiTiet FindHoaDonCT(Guid id)
         {
-            return _repo.GetAllHDCT().FirstOrDefault(x => x.IdHoaDonCT == id);
+            return _repo.GetAllHDCT().FirstOrDefault(x => x.IdHoaDon == id);
         }
 
         public bool AddHDCT(HoaDonChiTiet hdct)
@@ -35,9 +35,7 @@ namespace B_BUS.Services
 
         public bool UpdateHDCT(HoaDonChiTiet hdct)
         {
-            var clone = _repo.GetAllHDCT().FirstOrDefault(x => x.IdHoaDonCT == hdct.IdHoaDonCT);
-            clone.TrangThai = hdct.TrangThai;
-            if (_repo.UpdateHDCT(clone) == true)
+            if (_repo.UpdateHDCT(hdct) == true)
             {
                 return true;
             }

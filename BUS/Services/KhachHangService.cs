@@ -12,7 +12,7 @@ namespace B_BUS.Services
 {
     public class KhachHangService : IKhachHangService
     {
-        private readonly KhachHangRepository _repo;
+        private readonly KhachHangRepository _repo = new KhachHangRepository();
         public List<KhachHang> GetAllKhachHang(string search)
         {
             if (search == null)
@@ -36,14 +36,7 @@ namespace B_BUS.Services
         }
         public bool UpdateKhachHang(KhachHang kh)
         {
-            var clone = _repo.GetAllKhachHang().FirstOrDefault(x => x.IdKhachHang == kh.IdKhachHang);
-            clone.Ten = kh.Ten;
-            clone.GioiTinh = kh.GioiTinh;
-            clone.NgaySinh = kh.NgaySinh;
-            clone.DiaChi = kh.DiaChi;
-            clone.SoDienThoai = kh.SoDienThoai;
-            clone.HienThi = kh.HienThi;
-            if (_repo.UpdateKhachHang(clone)==true)
+            if (_repo.UpdateKhachHang(kh)==true)
             {
                 return true;
             }

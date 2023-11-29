@@ -35,14 +35,8 @@ namespace A_DAL.Repositories
         }
 
         public bool UpdateThongBao(ThongBao tb)
-        {
-            var thongBao = _dbContext.ThongBaos.FirstOrDefault(x => x.IdThongBao == tb.IdThongBao);
-
-            thongBao.TinNhan = tb.TinNhan;
-            thongBao.TrangThai = tb.TrangThai;
-            thongBao.ChapNhan = tb.ChapNhan;
-
-            _dbContext.ThongBaos.Update(thongBao);
+        { 
+            _dbContext.ThongBaos.Update(tb);
             _dbContext.SaveChanges();
             return true;
         }

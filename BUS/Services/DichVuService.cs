@@ -12,7 +12,9 @@ namespace B_BUS.Services
     public class DichVuService : IDichVuService
     {
         private readonly DichVuRepository _repo;
-        public DichVuService() { }
+        public DichVuService() {
+            _repo = new DichVuRepository();
+        }
         public List<DichVu> GetAllDichVu(string search)
         {
             if (search == null)
@@ -21,7 +23,7 @@ namespace B_BUS.Services
             }
             return _repo.GetAllDichVu().Where(x => x.Ten.Trim().ToLower().Contains(search)).ToList();
         }
-        public bool AdđichVu(DichVu dv)
+        public bool AddDichVu(DichVu dv)
         {
             if (_repo.AddDichVu(dv) != null)
             {
@@ -32,12 +34,8 @@ namespace B_BUS.Services
 
         public bool UpdateDichVu(DichVu dv)
         {
-            var clone = _repo.GetAllDichVu().FirstOrDefault(x => x.IdDichVu == dv.IdDichVu);
-            clone.Ten = dv.Ten;
-            clone.MoTa = dv.MoTa;
-            clone.Gia = dv.Gia;
-            clone.HienThi = dv.HienThi;
-            if (_repo.UpdateDichVu(clone) == true)
+            
+            if (_repo.UpdateDichVu(dv) == true)
             {
                 return true;
             }

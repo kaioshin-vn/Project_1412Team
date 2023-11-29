@@ -36,12 +36,7 @@ namespace A_DAL.Repositories
 
         public bool UpdatePhieuKham(PhieuKham pk)
         {
-            var phieuKham = _dbContext.PhieuKhams.FirstOrDefault(x => x.IdPhieuKham == pk.IdPhieuKham);
-
-            phieuKham.TrangThai = pk.TrangThai;
-            phieuKham.HienThi = pk.HienThi;
-
-            _dbContext.PhieuKhams.Update(phieuKham);
+            _dbContext.PhieuKhams.Update(pk);
             _dbContext.SaveChanges();
             return true;
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace B_BUS.Services
 {
-    public class QuanLyDanhGiaService : IQuanLyDanhGiaService
+    public class DanhGiaService : IQuanLyDanhGiaService
     {
         DanhGiaRepository _danhGiaRepository = new DanhGiaRepository();
         public bool Create(DanhGia danhGia)

@@ -11,7 +11,7 @@ namespace B_BUS.Services
 {
     public class LichSuKhamService : ILichSuKhamService
     {
-        private readonly LichSuKhamRepository _repo;
+        private readonly LichSuKhamRepository _repo = new LichSuKhamRepository();
         public List<LichSuKham> GetAllLichSuKham(string search)
         {
             if (search == null)
@@ -36,10 +36,7 @@ namespace B_BUS.Services
 
         public bool UpdatelichSuKham(LichSuKham lsk)
         {
-            var clone = _repo.GetAllLichSuKham().FirstOrDefault(x => x.IdPhieuKham == lsk.IdPhieuKham);
-            clone.KetQua = lsk.KetQua;
-            clone.GhiChu = lsk.GhiChu;
-            if (_repo.UpdatelichSuKham(clone) == true)
+            if (_repo.UpdatelichSuKham(lsk) == true)
             {
                 return true;
             }
