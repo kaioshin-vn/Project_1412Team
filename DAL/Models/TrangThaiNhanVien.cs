@@ -21,6 +21,6 @@ namespace DAL.Models
         [ForeignKey("IdNhanVien")]
         public virtual NhanVien? NhanVien { get; set; }
         [ForeignKey("IdCaKham")]
-        public virtual CaKham? Shift { get; set; }
+        public virtual CaKham? CaKham { get; set; }
     }
 }

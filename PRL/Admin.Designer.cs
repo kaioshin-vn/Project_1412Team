@@ -64,7 +64,6 @@ namespace PRL
             QL_ThongBao = new Label();
             LoiChao = new Label();
             Panel_KH = new Panel();
-            KH_RichTxt_LSKham = new RichTextBox();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             KH_Txt_TimKiem = new ReaLTaiizor.Controls.BigTextBox();
             KH_Btn_TimKiem = new Label();
@@ -83,6 +82,7 @@ namespace PRL
             dungeonHeaderLabel8 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             dungeonHeaderLabel9 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             KH_Btn_Sua = new ButtonCustom();
+            KH_RichTxt_LSKham = new RichTextBox();
             Panel_NV = new Panel();
             label6 = new Label();
             NV_Btn_Sua = new ButtonCustom();
@@ -323,7 +323,6 @@ namespace PRL
             ThongKe_Elipse = new Bunifu.Framework.UI.BunifuElipse(components);
             ThongKe_ElispeGrView_ChiTieu = new Bunifu.Framework.UI.BunifuElipse(components);
             TT_ElipseGrView_DaThanhToan = new Bunifu.Framework.UI.BunifuElipse(components);
-            KH_DateTime_NgaySinh = new ReaLTaiizor.Controls.PoisonDateTime();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -477,7 +476,6 @@ namespace PRL
             // Panel_KH
             // 
             Panel_KH.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Panel_KH.Controls.Add(KH_RichTxt_LSKham);
             Panel_KH.Controls.Add(bigLabel1);
             Panel_KH.Controls.Add(KH_Txt_TimKiem);
             Panel_KH.Controls.Add(KH_Btn_TimKiem);
@@ -486,21 +484,12 @@ namespace PRL
             Panel_KH.Controls.Add(KH_GridView);
             Panel_KH.Controls.Add(KH_Grbox);
             Panel_KH.Controls.Add(KH_Btn_Sua);
+            Panel_KH.Controls.Add(KH_RichTxt_LSKham);
             Panel_KH.Location = new Point(22, 6);
             Panel_KH.Name = "Panel_KH";
             Panel_KH.Size = new Size(1358, 697);
             Panel_KH.TabIndex = 0;
             Panel_KH.Visible = false;
-            // 
-            // KH_RichTxt_LSKham
-            // 
-            KH_RichTxt_LSKham.BackColor = SystemColors.Window;
-            KH_RichTxt_LSKham.BorderStyle = BorderStyle.FixedSingle;
-            KH_RichTxt_LSKham.Location = new Point(38, 566);
-            KH_RichTxt_LSKham.Name = "KH_RichTxt_LSKham";
-            KH_RichTxt_LSKham.Size = new Size(684, 331);
-            KH_RichTxt_LSKham.TabIndex = 25;
-            KH_RichTxt_LSKham.Text = "";
             // 
             // bigLabel1
             // 
@@ -561,6 +550,7 @@ namespace PRL
             KH_Btn_An.Text = "Ẩn";
             KH_Btn_An.TextColor = Color.Red;
             KH_Btn_An.UseVisualStyleBackColor = false;
+            KH_Btn_An.Click += KH_Btn_An_Click;
             // 
             // KH_Btn_Them
             // 
@@ -582,6 +572,7 @@ namespace PRL
             KH_Btn_Them.Text = "Thêm";
             KH_Btn_Them.TextColor = Color.White;
             KH_Btn_Them.UseVisualStyleBackColor = false;
+            KH_Btn_Them.Click += KH_Btn_Them_Click;
             // 
             // KH_GridView
             // 
@@ -627,6 +618,7 @@ namespace PRL
             KH_GridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             KH_GridView.Size = new Size(691, 431);
             KH_GridView.TabIndex = 17;
+            KH_GridView.CellClick += KH_GridView_CellClick;
             // 
             // KH_Grbox
             // 
@@ -865,6 +857,17 @@ namespace PRL
             KH_Btn_Sua.Text = "Sửa";
             KH_Btn_Sua.TextColor = Color.White;
             KH_Btn_Sua.UseVisualStyleBackColor = false;
+            KH_Btn_Sua.Click += KH_Btn_Sua_Click;
+            // 
+            // KH_RichTxt_LSKham
+            // 
+            KH_RichTxt_LSKham.BackColor = SystemColors.Window;
+            KH_RichTxt_LSKham.BorderStyle = BorderStyle.FixedSingle;
+            KH_RichTxt_LSKham.Location = new Point(38, 566);
+            KH_RichTxt_LSKham.Name = "KH_RichTxt_LSKham";
+            KH_RichTxt_LSKham.Size = new Size(684, 331);
+            KH_RichTxt_LSKham.TabIndex = 25;
+            KH_RichTxt_LSKham.Text = "";
             // 
             // Panel_NV
             // 
@@ -5277,15 +5280,6 @@ namespace PRL
             TT_ElipseGrView_DaThanhToan.ElipseRadius = 15;
             TT_ElipseGrView_DaThanhToan.TargetControl = poisonDataGridView5;
             // 
-            // KH_DateTime_NgaySinh
-            // 
-            KH_DateTime_NgaySinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            KH_DateTime_NgaySinh.Location = new Point(222, 475);
-            KH_DateTime_NgaySinh.MinimumSize = new Size(0, 30);
-            KH_DateTime_NgaySinh.Name = "KH_DateTime_NgaySinh";
-            KH_DateTime_NgaySinh.Size = new Size(171, 30);
-            KH_DateTime_NgaySinh.TabIndex = 11;
-            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -5511,35 +5505,35 @@ namespace PRL
         private global::ReaLTaiizor.Controls.SkyComboBox skyComboBox15;
         private global::ReaLTaiizor.Controls.CyberRichTextBox cyberRichTextBox1;
         private global::ReaLTaiizor.Controls.DungeonRichTextBox dungeonRichTextBox1;
-        private global::PRL.Tool.ButtonCustom buttonCustom4;
-        private global::System.Windows.Forms.Panel Panel_DV;
-        private global::System.Windows.Forms.Panel DV_Panel_HienThiDV;
+        private ButtonCustom buttonCustom4;
+        private Panel Panel_DV;
+        private Panel DV_Panel_HienThiDV;
         private global::ReaLTaiizor.Controls.HopeGroupBox DV_GrBoxDV1;
         private global::ReaLTaiizor.Controls.BigLabel DV_LabelGia1;
-        private global::PRL.Tool.ButtonCustom DV_BtnAn1;
-        private global::PRL.Tool.ButtonCustom DV_BtnSua1;
+        private ButtonCustom DV_BtnAn1;
+        private ButtonCustom DV_BtnSua1;
         private global::ReaLTaiizor.Controls.CyberRichTextBox DV_TxtMoTa1;
         private global::ReaLTaiizor.Controls.BigLabel DV_LabelTenDichVu1;
-        private global::PRL.Tool.ButtonCustom DV_Btn_GiamGia;
+        private ButtonCustom DV_Btn_GiamGia;
         private global::Bunifu.Framework.UI.BunifuRange DV_Range_GiamGia;
-        private global::PRL.Tool.ButtonCustom DV_Btn_Them;
-        private global::PRL.Tool.ButtonCustom DV_Btn_OKGiamGia;
+        private ButtonCustom DV_Btn_Them;
+        private ButtonCustom DV_Btn_OKGiamGia;
         private global::ReaLTaiizor.Controls.ThunderGroupBox DV_GrBox;
-        private global::System.Windows.Forms.RichTextBox DV_Txt_MoTa;
-        private global::System.Windows.Forms.TextBox DV_Txt_Gia;
-        private global::System.Windows.Forms.TextBox DV_Txt_TenDichVu;
-        private global::System.Windows.Forms.Label label20;
-        private global::System.Windows.Forms.Label label19;
-        private global::System.Windows.Forms.Label label18;
+        private RichTextBox DV_Txt_MoTa;
+        private TextBox DV_Txt_Gia;
+        private TextBox DV_Txt_TenDichVu;
+        private Label label20;
+        private Label label19;
+        private Label label18;
         private global::Bunifu.Framework.UI.BunifuElipse DV_ELipseRichtextBox_MoTa;
         private global::ReaLTaiizor.Controls.BigLabel DV_Label_PhanTram;
         private global::ReaLTaiizor.Controls.HopeGroupBox DV_GrBoxDV2;
-        private global::PRL.Tool.ButtonCustom DV_BtnAn2;
-        private global::PRL.Tool.ButtonCustom DV_BtnSua2;
+        private ButtonCustom DV_BtnAn2;
+        private ButtonCustom DV_BtnSua2;
         private global::ReaLTaiizor.Controls.CyberRichTextBox cyberRichTextBox17;
         private global::ReaLTaiizor.Controls.BigLabel DV_LabelTenDichVu2;
         private global::ReaLTaiizor.Controls.BigLabel DV_LabelGia2;
-        private global::System.Windows.Forms.Panel Panel_L;
+        private Panel Panel_L;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel12;
         private global::ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox3;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel14;
@@ -5555,10 +5549,10 @@ namespace PRL
         private global::ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel23;
         private global::ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel15;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel19;
-        private global::PRL.Tool.ButtonCustom L_Btn_OK;
-        private global::PRL.Tool.ButtonCustom buttonCustom11;
-        private global::PRL.Tool.ButtonCustom NV_Btn_XemLuong;
-        private global::System.Windows.Forms.SplitContainer Panel_ThongKe;
+        private ButtonCustom L_Btn_OK;
+        private ButtonCustom buttonCustom11;
+        private ButtonCustom NV_Btn_XemLuong;
+        private SplitContainer Panel_ThongKe;
         private Panel Panel_TT;
         private ReaLTaiizor.Controls.HopeGroupBox TT_GrBox_ThanhToan;
         private ReaLTaiizor.Controls.PoisonDataGridView TT_poisonDataGridView3;
@@ -5595,7 +5589,7 @@ namespace PRL
         private global::ReaLTaiizor.Controls.BigLabel bigLabel27;
         private global::Bunifu.Framework.UI.BunifuElipse ThongKe_Elipse;
         private global::Bunifu.Framework.UI.BunifuElipse ThongKe_ElispeGrView_ChiTieu;
-        private global::System.Windows.Forms.Panel Panel_TK;
+        private Panel Panel_TK;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel32;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel31;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel30;
@@ -5604,14 +5598,14 @@ namespace PRL
         private global::ReaLTaiizor.Controls.AirSeparator airSeparator4;
         private global::ReaLTaiizor.Controls.AirSeparator airSeparator3;
         private global::ReaLTaiizor.Controls.DungeonComboBox dungeonComboBox5;
-        private global::System.Windows.Forms.TextBox textBox4;
-        private global::System.Windows.Forms.TextBox textBox3;
-        private global::PRL.Tool.ButtonCustom buttonCustom13;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private ButtonCustom buttonCustom13;
         private global::ReaLTaiizor.Controls.BigLabel bigLabel34;
-        private global::PRL.Tool.ButtonCustom buttonCustom14;
+        private ButtonCustom buttonCustom14;
         private global::ReaLTaiizor.Controls.AloneComboBox KH_Combo_GioiTinh;
         private global::ReaLTaiizor.Controls.DungeonComboBox NV_Combo_GioiTinh;
-        private global::System.Windows.Forms.Panel Panel_ManHinhCho;
+        private Panel Panel_ManHinhCho;
         private ReaLTaiizor.Controls.AirSeparator airSeparator8;
         private ReaLTaiizor.Controls.AirSeparator airSeparator7;
         private ReaLTaiizor.Controls.AirSeparator airSeparator6;
