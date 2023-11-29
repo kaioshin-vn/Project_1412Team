@@ -1,5 +1,4 @@
 ﻿using A_DAL.IRepositories;
-using A_DAL.Migrations;
 using DAL.DBContext;
 using DAL.Models;
 using System;
@@ -35,6 +34,11 @@ namespace A_DAL.Repositories
             _dbContext.DichVus.Update(dv);
             _dbContext.SaveChanges();
             return true;
+        }
+
+        public DichVu FindDichVu(Guid id)
+        {
+            return _dbContext.DichVus.FirstOrDefault(a => a.IdDichVu == id);
         }
         public bool DeleteDichVu(DichVu dv)
         {
