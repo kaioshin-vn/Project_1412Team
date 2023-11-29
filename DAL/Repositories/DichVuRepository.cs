@@ -36,6 +36,11 @@ namespace A_DAL.Repositories
             _dbContext.SaveChanges();
             return true;
         }
+
+        public DichVu FindDichVu(Guid id)
+        {
+            return _dbContext.DichVus.FirstOrDefault(a => a.IdDichVu == id);
+        }
         public bool DeleteDichVu(DichVu dv)
         {
             _dbContext.DichVus.Remove(dv);
