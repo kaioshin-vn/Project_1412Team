@@ -31,30 +31,30 @@ namespace PRL
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle49 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle50 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle51 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle52 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle53 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle54 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle55 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle56 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle57 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle58 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle59 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle60 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle61 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle62 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle63 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle64 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle65 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle66 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle67 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle68 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle69 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle70 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle71 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle72 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
             name_clinic = new Panel();
             label1 = new Label();
             Navigation = new Panel();
@@ -367,10 +367,9 @@ namespace PRL
             name_clinic.BackColor = Color.LavenderBlush;
             name_clinic.BorderStyle = BorderStyle.FixedSingle;
             name_clinic.Controls.Add(label1);
-            name_clinic.Location = new Point(-4, -6);
-            name_clinic.Margin = new Padding(3, 2, 3, 2);
+            name_clinic.Location = new Point(-5, -8);
             name_clinic.Name = "name_clinic";
-            name_clinic.Size = new Size(249, 49);
+            name_clinic.Size = new Size(284, 65);
             name_clinic.TabIndex = 0;
             // 
             // label1
@@ -378,9 +377,9 @@ namespace PRL
             label1.AutoSize = true;
             label1.Font = new Font("Harlow Solid Italic", 19.8000011F, FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.Crimson;
-            label1.Location = new Point(46, 13);
+            label1.Location = new Point(53, 17);
             label1.Name = "label1";
-            label1.Size = new Size(151, 34);
+            label1.Size = new Size(189, 43);
             label1.TabIndex = 0;
             label1.Text = "1412 Sugery";
             label1.Click += label1_Click;
@@ -395,10 +394,9 @@ namespace PRL
             Navigation.Controls.Add(QL_DangXuat);
             Navigation.Controls.Add(QL_ThongBao);
             Navigation.Controls.Add(LoiChao);
-            Navigation.Location = new Point(242, -6);
-            Navigation.Margin = new Padding(3, 2, 3, 2);
+            Navigation.Location = new Point(277, -8);
             Navigation.Name = "Navigation";
-            Navigation.Size = new Size(1268, 49);
+            Navigation.Size = new Size(1450, 65);
             Navigation.TabIndex = 1;
             // 
             // QL_TroGiup
@@ -407,9 +405,9 @@ namespace PRL
             QL_TroGiup.AutoSize = true;
             QL_TroGiup.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             QL_TroGiup.ForeColor = Color.Tomato;
-            QL_TroGiup.Location = new Point(928, 18);
+            QL_TroGiup.Location = new Point(1062, 24);
             QL_TroGiup.Name = "QL_TroGiup";
-            QL_TroGiup.Size = new Size(67, 20);
+            QL_TroGiup.Size = new Size(84, 25);
             QL_TroGiup.TabIndex = 4;
             QL_TroGiup.Text = "Trợ Giúp";
             QL_TroGiup.Click += QL_TroGiup_Click;
@@ -420,9 +418,9 @@ namespace PRL
             QL_TaiKhoan.AutoSize = true;
             QL_TaiKhoan.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             QL_TaiKhoan.ForeColor = Color.Tomato;
-            QL_TaiKhoan.Location = new Point(819, 18);
+            QL_TaiKhoan.Location = new Point(937, 24);
             QL_TaiKhoan.Name = "QL_TaiKhoan";
-            QL_TaiKhoan.Size = new Size(76, 20);
+            QL_TaiKhoan.Size = new Size(91, 25);
             QL_TaiKhoan.TabIndex = 3;
             QL_TaiKhoan.Text = "Tài Khoản";
             QL_TaiKhoan.Click += QL_TaiKhoan_Click;
@@ -440,10 +438,9 @@ namespace PRL
             QL_DangXuat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             QL_DangXuat.ForeColor = Color.LightCoral;
             QL_DangXuat.IDSelected = null;
-            QL_DangXuat.Location = new Point(1131, 12);
-            QL_DangXuat.Margin = new Padding(3, 2, 3, 2);
+            QL_DangXuat.Location = new Point(1294, 16);
             QL_DangXuat.Name = "QL_DangXuat";
-            QL_DangXuat.Size = new Size(111, 31);
+            QL_DangXuat.Size = new Size(127, 41);
             QL_DangXuat.TabIndex = 2;
             QL_DangXuat.Text = "Đăng Xuất";
             QL_DangXuat.TextColor = Color.LightCoral;
@@ -455,9 +452,9 @@ namespace PRL
             QL_ThongBao.AutoSize = true;
             QL_ThongBao.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             QL_ThongBao.ForeColor = Color.Tomato;
-            QL_ThongBao.Location = new Point(1026, 17);
+            QL_ThongBao.Location = new Point(1174, 23);
             QL_ThongBao.Name = "QL_ThongBao";
-            QL_ThongBao.Size = new Size(83, 20);
+            QL_ThongBao.Size = new Size(101, 25);
             QL_ThongBao.TabIndex = 1;
             QL_ThongBao.Text = "Thông Báo";
             QL_ThongBao.Click += ThongBao_Click;
@@ -467,9 +464,9 @@ namespace PRL
             LoiChao.AutoSize = true;
             LoiChao.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LoiChao.ForeColor = Color.Crimson;
-            LoiChao.Location = new Point(231, 16);
+            LoiChao.Location = new Point(264, 21);
             LoiChao.Name = "LoiChao";
-            LoiChao.Size = new Size(140, 23);
+            LoiChao.Size = new Size(179, 29);
             LoiChao.TabIndex = 0;
             LoiChao.Text = "Xin chào đại ca !";
             // 
@@ -499,7 +496,7 @@ namespace PRL
             bigLabel1.ForeColor = Color.DimGray;
             bigLabel1.Location = new Point(38, 518);
             bigLabel1.Name = "bigLabel1";
-            bigLabel1.Size = new Size(148, 30);
+            bigLabel1.Size = new Size(192, 38);
             bigLabel1.TabIndex = 24;
             bigLabel1.Text = "Lịch sử khám :";
             // 
@@ -514,7 +511,7 @@ namespace PRL
             KH_Txt_TimKiem.Multiline = false;
             KH_Txt_TimKiem.Name = "KH_Txt_TimKiem";
             KH_Txt_TimKiem.ReadOnly = false;
-            KH_Txt_TimKiem.Size = new Size(628, 41);
+            KH_Txt_TimKiem.Size = new Size(628, 46);
             KH_Txt_TimKiem.TabIndex = 11;
             KH_Txt_TimKiem.TextAlignment = HorizontalAlignment.Left;
             KH_Txt_TimKiem.UseSystemPasswordChar = false;
@@ -526,7 +523,7 @@ namespace PRL
             KH_Btn_TimKiem.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
             KH_Btn_TimKiem.Location = new Point(670, 26);
             KH_Btn_TimKiem.Name = "KH_Btn_TimKiem";
-            KH_Btn_TimKiem.Size = new Size(55, 30);
+            KH_Btn_TimKiem.Size = new Size(73, 38);
             KH_Btn_TimKiem.TabIndex = 23;
             KH_Btn_TimKiem.Text = "       ";
             // 
@@ -581,37 +578,37 @@ namespace PRL
             KH_GridView.BorderStyle = BorderStyle.None;
             KH_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle49.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle49.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle49.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle49.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle49.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle49.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle49.WrapMode = DataGridViewTriState.True;
-            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle50.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle50.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle50.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle50.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle50.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle50.WrapMode = DataGridViewTriState.False;
-            KH_GridView.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            KH_GridView.DefaultCellStyle = dataGridViewCellStyle2;
             KH_GridView.EnableHeadersVisualStyles = false;
             KH_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             KH_GridView.GridColor = Color.FromArgb(255, 255, 255);
             KH_GridView.Location = new Point(38, 76);
             KH_GridView.Name = "KH_GridView";
             KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle51.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle51.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle51.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle51.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle51.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle51.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle51.WrapMode = DataGridViewTriState.True;
-            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             KH_GridView.RowHeadersWidth = 51;
             KH_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             KH_GridView.RowTemplate.Height = 29;
@@ -680,7 +677,7 @@ namespace PRL
             dungeonHeaderLabel26.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel26.Location = new Point(57, 475);
             dungeonHeaderLabel26.Name = "dungeonHeaderLabel26";
-            dungeonHeaderLabel26.Size = new Size(88, 20);
+            dungeonHeaderLabel26.Size = new Size(113, 25);
             dungeonHeaderLabel26.TabIndex = 10;
             dungeonHeaderLabel26.Text = "Ngày Sinh :";
             // 
@@ -797,7 +794,7 @@ namespace PRL
             dungeonHeaderLabel5.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel5.Location = new Point(57, 420);
             dungeonHeaderLabel5.Name = "dungeonHeaderLabel5";
-            dungeonHeaderLabel5.Size = new Size(80, 20);
+            dungeonHeaderLabel5.Size = new Size(102, 25);
             dungeonHeaderLabel5.TabIndex = 4;
             dungeonHeaderLabel5.Text = "Giới Tính :";
             // 
@@ -809,7 +806,7 @@ namespace PRL
             dungeonHeaderLabel7.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel7.Location = new Point(57, 358);
             dungeonHeaderLabel7.Name = "dungeonHeaderLabel7";
-            dungeonHeaderLabel7.Size = new Size(113, 20);
+            dungeonHeaderLabel7.Size = new Size(145, 25);
             dungeonHeaderLabel7.TabIndex = 2;
             dungeonHeaderLabel7.Text = "Số Điện Thoại :";
             // 
@@ -821,7 +818,7 @@ namespace PRL
             dungeonHeaderLabel8.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel8.Location = new Point(58, 249);
             dungeonHeaderLabel8.Name = "dungeonHeaderLabel8";
-            dungeonHeaderLabel8.Size = new Size(66, 20);
+            dungeonHeaderLabel8.Size = new Size(84, 25);
             dungeonHeaderLabel8.TabIndex = 1;
             dungeonHeaderLabel8.Text = "Địa Chỉ :";
             // 
@@ -833,7 +830,7 @@ namespace PRL
             dungeonHeaderLabel9.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel9.Location = new Point(58, 190);
             dungeonHeaderLabel9.Name = "dungeonHeaderLabel9";
-            dungeonHeaderLabel9.Size = new Size(66, 20);
+            dungeonHeaderLabel9.Size = new Size(85, 25);
             dungeonHeaderLabel9.TabIndex = 0;
             dungeonHeaderLabel9.Text = "Họ Tên :";
             // 
@@ -882,10 +879,9 @@ namespace PRL
             Panel_NV.Controls.Add(NV_GridView);
             Panel_NV.Controls.Add(NV_Btn_An);
             Panel_NV.Controls.Add(NV_RichTxt_MoTa);
-            Panel_NV.Location = new Point(2, -3);
-            Panel_NV.Margin = new Padding(3, 2, 3, 2);
+            Panel_NV.Location = new Point(-1, -1);
             Panel_NV.Name = "Panel_NV";
-            Panel_NV.Size = new Size(1520, 570);
+            Panel_NV.Size = new Size(1450, 914);
             Panel_NV.TabIndex = 0;
             Panel_NV.Visible = false;
             // 
@@ -894,9 +890,9 @@ namespace PRL
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.ControlDarkDark;
-            label6.Location = new Point(32, 368);
+            label6.Location = new Point(37, 491);
             label6.Name = "label6";
-            label6.Size = new Size(128, 21);
+            label6.Size = new Size(159, 28);
             label6.TabIndex = 26;
             label6.Text = "Thông tin thêm";
             // 
@@ -913,10 +909,9 @@ namespace PRL
             NV_Btn_Sua.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             NV_Btn_Sua.ForeColor = Color.White;
             NV_Btn_Sua.IDSelected = null;
-            NV_Btn_Sua.Location = new Point(266, 491);
-            NV_Btn_Sua.Margin = new Padding(3, 2, 3, 2);
+            NV_Btn_Sua.Location = new Point(357, 646);
             NV_Btn_Sua.Name = "NV_Btn_Sua";
-            NV_Btn_Sua.Size = new Size(136, 38);
+            NV_Btn_Sua.Size = new Size(155, 51);
             NV_Btn_Sua.TabIndex = 13;
             NV_Btn_Sua.Text = "Sửa";
             NV_Btn_Sua.TextColor = Color.White;
@@ -929,17 +924,18 @@ namespace PRL
             NV_Txt_TimKiem.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
             NV_Txt_TimKiem.ForeColor = Color.DimGray;
             NV_Txt_TimKiem.Image = null;
-            NV_Txt_TimKiem.Location = new Point(34, 10);
-            NV_Txt_TimKiem.Margin = new Padding(3, 2, 3, 2);
+            NV_Txt_TimKiem.Location = new Point(39, 13);
             NV_Txt_TimKiem.MaxLength = 32767;
             NV_Txt_TimKiem.Multiline = false;
             NV_Txt_TimKiem.Name = "NV_Txt_TimKiem";
             NV_Txt_TimKiem.ReadOnly = false;
-            NV_Txt_TimKiem.Size = new Size(621, 41);
+            NV_Txt_TimKiem.Size = new Size(710, 46);
             NV_Txt_TimKiem.TabIndex = 24;
+            NV_Txt_TimKiem.Text = "Nhập tên nhân viên để tìm kiếm";
             NV_Txt_TimKiem.TextAlignment = HorizontalAlignment.Left;
             NV_Txt_TimKiem.UseSystemPasswordChar = false;
             NV_Txt_TimKiem.TextChanged += NV_Txt_TimKiem_TextChanged;
+            NV_Txt_TimKiem.Click += NV_Txt_TimKiem_Click;
             // 
             // NV_Btn_Them
             // 
@@ -954,10 +950,9 @@ namespace PRL
             NV_Btn_Them.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             NV_Btn_Them.ForeColor = Color.White;
             NV_Btn_Them.IDSelected = null;
-            NV_Btn_Them.Location = new Point(61, 491);
-            NV_Btn_Them.Margin = new Padding(3, 2, 3, 2);
+            NV_Btn_Them.Location = new Point(117, 646);
             NV_Btn_Them.Name = "NV_Btn_Them";
-            NV_Btn_Them.Size = new Size(136, 38);
+            NV_Btn_Them.Size = new Size(155, 51);
             NV_Btn_Them.TabIndex = 12;
             NV_Btn_Them.Text = "Thêm";
             NV_Btn_Them.TextColor = Color.White;
@@ -969,16 +964,17 @@ namespace PRL
             NV_Btn_TimKiem.AutoSize = true;
             NV_Btn_TimKiem.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             NV_Btn_TimKiem.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
-            NV_Btn_TimKiem.Location = new Point(658, 15);
+            NV_Btn_TimKiem.Location = new Point(752, 20);
             NV_Btn_TimKiem.Name = "NV_Btn_TimKiem";
-            NV_Btn_TimKiem.Size = new Size(55, 30);
+            NV_Btn_TimKiem.Size = new Size(73, 38);
             NV_Btn_TimKiem.TabIndex = 25;
             NV_Btn_TimKiem.Text = "       ";
+            NV_Btn_TimKiem.Click += NV_Btn_TimKiem_Click;
             // 
             // NV_GrBox
             // 
             NV_GrBox.Alpha = 20;
-            NV_GrBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NV_GrBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             NV_GrBox.BackColor = Color.Transparent;
             NV_GrBox.Background = true;
             NV_GrBox.Background_WidthPen = 3F;
@@ -1010,14 +1006,13 @@ namespace PRL
             NV_GrBox.Lighting = false;
             NV_GrBox.LinearGradient_Background = false;
             NV_GrBox.LinearGradientPen = false;
-            NV_GrBox.Location = new Point(741, 16);
-            NV_GrBox.Margin = new Padding(3, 2, 3, 2);
+            NV_GrBox.Location = new Point(899, 43);
             NV_GrBox.Name = "NV_GrBox";
             NV_GrBox.PenWidth = 15;
             NV_GrBox.RGB = false;
             NV_GrBox.Rounding = true;
             NV_GrBox.RoundingInt = 60;
-            NV_GrBox.Size = new Size(902, 516);
+            NV_GrBox.Size = new Size(599, 640);
             NV_GrBox.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             NV_GrBox.TabIndex = 10;
             NV_GrBox.Tag = "Cyber";
@@ -1027,11 +1022,10 @@ namespace PRL
             // NV_DateTime_NgaySinh
             // 
             NV_DateTime_NgaySinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NV_DateTime_NgaySinh.Location = new Point(187, 403);
-            NV_DateTime_NgaySinh.Margin = new Padding(3, 2, 3, 2);
-            NV_DateTime_NgaySinh.MinimumSize = new Size(0, 29);
+            NV_DateTime_NgaySinh.Location = new Point(214, 537);
+            NV_DateTime_NgaySinh.MinimumSize = new Size(0, 30);
             NV_DateTime_NgaySinh.Name = "NV_DateTime_NgaySinh";
-            NV_DateTime_NgaySinh.Size = new Size(149, 29);
+            NV_DateTime_NgaySinh.Size = new Size(299, 30);
             NV_DateTime_NgaySinh.TabIndex = 19;
             // 
             // dungeonHeaderLabel2
@@ -1040,9 +1034,9 @@ namespace PRL
             dungeonHeaderLabel2.BackColor = Color.Transparent;
             dungeonHeaderLabel2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             dungeonHeaderLabel2.ForeColor = Color.FromArgb(76, 76, 77);
-            dungeonHeaderLabel2.Location = new Point(53, 404);
+            dungeonHeaderLabel2.Location = new Point(61, 539);
             dungeonHeaderLabel2.Name = "dungeonHeaderLabel2";
-            dungeonHeaderLabel2.Size = new Size(88, 20);
+            dungeonHeaderLabel2.Size = new Size(113, 25);
             dungeonHeaderLabel2.TabIndex = 18;
             dungeonHeaderLabel2.Text = "Ngày Sinh :";
             // 
@@ -1069,10 +1063,9 @@ namespace PRL
             NV_Combo_GioiTinh.IntegralHeight = false;
             NV_Combo_GioiTinh.ItemHeight = 20;
             NV_Combo_GioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
-            NV_Combo_GioiTinh.Location = new Point(189, 315);
-            NV_Combo_GioiTinh.Margin = new Padding(3, 2, 3, 2);
+            NV_Combo_GioiTinh.Location = new Point(216, 420);
             NV_Combo_GioiTinh.Name = "NV_Combo_GioiTinh";
-            NV_Combo_GioiTinh.Size = new Size(149, 26);
+            NV_Combo_GioiTinh.Size = new Size(299, 26);
             NV_Combo_GioiTinh.StartIndex = 0;
             NV_Combo_GioiTinh.TabIndex = 17;
             // 
@@ -1089,10 +1082,9 @@ namespace PRL
             NV_Btn_XemLuong.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             NV_Btn_XemLuong.ForeColor = Color.Red;
             NV_Btn_XemLuong.IDSelected = null;
-            NV_Btn_XemLuong.Location = new Point(158, 55);
-            NV_Btn_XemLuong.Margin = new Padding(3, 2, 3, 2);
+            NV_Btn_XemLuong.Location = new Point(213, 73);
             NV_Btn_XemLuong.Name = "NV_Btn_XemLuong";
-            NV_Btn_XemLuong.Size = new Size(164, 38);
+            NV_Btn_XemLuong.Size = new Size(187, 51);
             NV_Btn_XemLuong.TabIndex = 16;
             NV_Btn_XemLuong.Text = "Xem Lương";
             NV_Btn_XemLuong.TextColor = Color.Red;
@@ -1122,10 +1114,9 @@ namespace PRL
             NV_combo_ChucVu.IntegralHeight = false;
             NV_combo_ChucVu.ItemHeight = 20;
             NV_combo_ChucVu.Items.AddRange(new object[] { "Bác Sĩ", "Y Tá" });
-            NV_combo_ChucVu.Location = new Point(187, 364);
-            NV_combo_ChucVu.Margin = new Padding(3, 2, 3, 2);
+            NV_combo_ChucVu.Location = new Point(214, 485);
             NV_combo_ChucVu.Name = "NV_combo_ChucVu";
-            NV_combo_ChucVu.Size = new Size(149, 26);
+            NV_combo_ChucVu.Size = new Size(299, 26);
             NV_combo_ChucVu.StartIndex = 0;
             NV_combo_ChucVu.TabIndex = 13;
             // 
@@ -1135,9 +1126,9 @@ namespace PRL
             dungeonHeaderLabel1.BackColor = Color.Transparent;
             dungeonHeaderLabel1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             dungeonHeaderLabel1.ForeColor = Color.FromArgb(76, 76, 77);
-            dungeonHeaderLabel1.Location = new Point(53, 452);
+            dungeonHeaderLabel1.Location = new Point(61, 603);
             dungeonHeaderLabel1.Name = "dungeonHeaderLabel1";
-            dungeonHeaderLabel1.Size = new Size(89, 20);
+            dungeonHeaderLabel1.Size = new Size(112, 25);
             dungeonHeaderLabel1.TabIndex = 12;
             dungeonHeaderLabel1.Text = "Mật Khẩu : ";
             // 
@@ -1158,14 +1149,13 @@ namespace PRL
             NV_Txt_MatKhau.ForeColor = Color.FromArgb(245, 245, 245);
             NV_Txt_MatKhau.Lighting = false;
             NV_Txt_MatKhau.LinearGradientPen = false;
-            NV_Txt_MatKhau.Location = new Point(187, 438);
-            NV_Txt_MatKhau.Margin = new Padding(3, 2, 3, 2);
+            NV_Txt_MatKhau.Location = new Point(214, 584);
             NV_Txt_MatKhau.Name = "NV_Txt_MatKhau";
             NV_Txt_MatKhau.PenWidth = 15;
             NV_Txt_MatKhau.RGB = false;
             NV_Txt_MatKhau.Rounding = true;
             NV_Txt_MatKhau.RoundingInt = 60;
-            NV_Txt_MatKhau.Size = new Size(149, 43);
+            NV_Txt_MatKhau.Size = new Size(299, 57);
             NV_Txt_MatKhau.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             NV_Txt_MatKhau.TabIndex = 10;
             NV_Txt_MatKhau.Tag = "Cyber";
@@ -1190,14 +1180,13 @@ namespace PRL
             NV_Txt_Sdt.ForeColor = Color.Black;
             NV_Txt_Sdt.Lighting = false;
             NV_Txt_Sdt.LinearGradientPen = false;
-            NV_Txt_Sdt.Location = new Point(189, 259);
-            NV_Txt_Sdt.Margin = new Padding(3, 2, 3, 2);
+            NV_Txt_Sdt.Location = new Point(216, 345);
             NV_Txt_Sdt.Name = "NV_Txt_Sdt";
             NV_Txt_Sdt.PenWidth = 15;
             NV_Txt_Sdt.RGB = false;
             NV_Txt_Sdt.Rounding = true;
             NV_Txt_Sdt.RoundingInt = 60;
-            NV_Txt_Sdt.Size = new Size(149, 43);
+            NV_Txt_Sdt.Size = new Size(299, 57);
             NV_Txt_Sdt.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             NV_Txt_Sdt.TabIndex = 8;
             NV_Txt_Sdt.Tag = "Cyber";
@@ -1222,14 +1211,13 @@ namespace PRL
             NV_Txt_DiaChi.ForeColor = Color.Black;
             NV_Txt_DiaChi.Lighting = false;
             NV_Txt_DiaChi.LinearGradientPen = false;
-            NV_Txt_DiaChi.Location = new Point(189, 175);
-            NV_Txt_DiaChi.Margin = new Padding(3, 2, 3, 2);
+            NV_Txt_DiaChi.Location = new Point(216, 233);
             NV_Txt_DiaChi.Name = "NV_Txt_DiaChi";
             NV_Txt_DiaChi.PenWidth = 15;
             NV_Txt_DiaChi.RGB = false;
             NV_Txt_DiaChi.Rounding = true;
             NV_Txt_DiaChi.RoundingInt = 60;
-            NV_Txt_DiaChi.Size = new Size(149, 78);
+            NV_Txt_DiaChi.Size = new Size(299, 104);
             NV_Txt_DiaChi.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             NV_Txt_DiaChi.TabIndex = 7;
             NV_Txt_DiaChi.Tag = "Cyber";
@@ -1254,14 +1242,13 @@ namespace PRL
             NV_Text_HoTen.ForeColor = Color.Black;
             NV_Text_HoTen.Lighting = false;
             NV_Text_HoTen.LinearGradientPen = false;
-            NV_Text_HoTen.Location = new Point(189, 128);
-            NV_Text_HoTen.Margin = new Padding(3, 2, 3, 2);
+            NV_Text_HoTen.Location = new Point(216, 171);
             NV_Text_HoTen.Name = "NV_Text_HoTen";
             NV_Text_HoTen.PenWidth = 15;
             NV_Text_HoTen.RGB = false;
             NV_Text_HoTen.Rounding = true;
             NV_Text_HoTen.RoundingInt = 60;
-            NV_Text_HoTen.Size = new Size(149, 43);
+            NV_Text_HoTen.Size = new Size(299, 57);
             NV_Text_HoTen.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             NV_Text_HoTen.TabIndex = 6;
             NV_Text_HoTen.Tag = "Cyber";
@@ -1275,9 +1262,9 @@ namespace PRL
             NV_GioiTinh.BackColor = Color.Transparent;
             NV_GioiTinh.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             NV_GioiTinh.ForeColor = Color.FromArgb(76, 76, 77);
-            NV_GioiTinh.Location = new Point(52, 315);
+            NV_GioiTinh.Location = new Point(59, 420);
             NV_GioiTinh.Name = "NV_GioiTinh";
-            NV_GioiTinh.Size = new Size(80, 20);
+            NV_GioiTinh.Size = new Size(102, 25);
             NV_GioiTinh.TabIndex = 4;
             NV_GioiTinh.Text = "Giới Tính :";
             // 
@@ -1287,9 +1274,9 @@ namespace PRL
             NV_ChucVu.BackColor = Color.Transparent;
             NV_ChucVu.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             NV_ChucVu.ForeColor = Color.FromArgb(76, 76, 77);
-            NV_ChucVu.Location = new Point(53, 365);
+            NV_ChucVu.Location = new Point(61, 487);
             NV_ChucVu.Name = "NV_ChucVu";
-            NV_ChucVu.Size = new Size(75, 20);
+            NV_ChucVu.Size = new Size(97, 25);
             NV_ChucVu.TabIndex = 3;
             NV_ChucVu.Text = "Chức Vụ :";
             NV_ChucVu.Click += NV_ChucVu_Click;
@@ -1300,9 +1287,9 @@ namespace PRL
             NV_Sdt.BackColor = Color.Transparent;
             NV_Sdt.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             NV_Sdt.ForeColor = Color.FromArgb(76, 76, 77);
-            NV_Sdt.Location = new Point(52, 268);
+            NV_Sdt.Location = new Point(59, 357);
             NV_Sdt.Name = "NV_Sdt";
-            NV_Sdt.Size = new Size(113, 20);
+            NV_Sdt.Size = new Size(145, 25);
             NV_Sdt.TabIndex = 2;
             NV_Sdt.Text = "Số Điện Thoại :";
             // 
@@ -1312,9 +1299,9 @@ namespace PRL
             NV_DiaChi.BackColor = Color.Transparent;
             NV_DiaChi.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             NV_DiaChi.ForeColor = Color.FromArgb(76, 76, 77);
-            NV_DiaChi.Location = new Point(52, 187);
+            NV_DiaChi.Location = new Point(59, 249);
             NV_DiaChi.Name = "NV_DiaChi";
-            NV_DiaChi.Size = new Size(66, 20);
+            NV_DiaChi.Size = new Size(84, 25);
             NV_DiaChi.TabIndex = 1;
             NV_DiaChi.Text = "Địa Chỉ :";
             // 
@@ -1324,9 +1311,9 @@ namespace PRL
             NV_Ten.BackColor = Color.Transparent;
             NV_Ten.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             NV_Ten.ForeColor = Color.FromArgb(76, 76, 77);
-            NV_Ten.Location = new Point(52, 142);
+            NV_Ten.Location = new Point(59, 189);
             NV_Ten.Name = "NV_Ten";
-            NV_Ten.Size = new Size(66, 20);
+            NV_Ten.Size = new Size(85, 25);
             NV_Ten.TabIndex = 0;
             NV_Ten.Text = "Họ Tên :";
             NV_Ten.Click += NV_Ten_Click;
@@ -1338,43 +1325,42 @@ namespace PRL
             NV_GridView.BorderStyle = BorderStyle.None;
             NV_GridView.CellBorderStyle = DataGridViewCellBorderStyle.None;
             NV_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle52.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle52.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle52.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle52.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle52.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle52.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle52.WrapMode = DataGridViewTriState.True;
-            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            NV_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             NV_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle53.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle53.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle53.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle53.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle53.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle53.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle53.WrapMode = DataGridViewTriState.False;
-            NV_GridView.DefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            NV_GridView.DefaultCellStyle = dataGridViewCellStyle5;
             NV_GridView.EnableHeadersVisualStyles = false;
             NV_GridView.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             NV_GridView.GridColor = Color.FromArgb(255, 255, 255);
-            NV_GridView.Location = new Point(32, 50);
-            NV_GridView.Margin = new Padding(3, 2, 3, 2);
+            NV_GridView.Location = new Point(37, 67);
             NV_GridView.Name = "NV_GridView";
             NV_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle54.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle54.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle54.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle54.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle54.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle54.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle54.WrapMode = DataGridViewTriState.True;
-            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            NV_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             NV_GridView.RowHeadersWidth = 51;
             NV_GridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             NV_GridView.RowTemplate.Height = 29;
             NV_GridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            NV_GridView.Size = new Size(682, 308);
+            NV_GridView.Size = new Size(779, 411);
             NV_GridView.TabIndex = 11;
             NV_GridView.CellClick += NV_GridView_CellClick;
             // 
@@ -1391,14 +1377,14 @@ namespace PRL
             NV_Btn_An.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             NV_Btn_An.ForeColor = Color.Red;
             NV_Btn_An.IDSelected = null;
-            NV_Btn_An.Location = new Point(468, 491);
-            NV_Btn_An.Margin = new Padding(3, 2, 3, 2);
+            NV_Btn_An.Location = new Point(583, 646);
             NV_Btn_An.Name = "NV_Btn_An";
-            NV_Btn_An.Size = new Size(136, 38);
+            NV_Btn_An.Size = new Size(155, 51);
             NV_Btn_An.TabIndex = 14;
             NV_Btn_An.Text = "Ẩn";
             NV_Btn_An.TextColor = Color.Red;
             NV_Btn_An.UseVisualStyleBackColor = false;
+            NV_Btn_An.Click += NV_Btn_An_Click;
             // 
             // NV_RichTxt_MoTa
             // 
@@ -1416,14 +1402,13 @@ namespace PRL
             NV_RichTxt_MoTa.ForeColor = Color.FromArgb(245, 245, 245);
             NV_RichTxt_MoTa.Lighting = false;
             NV_RichTxt_MoTa.LinearGradientPen = false;
-            NV_RichTxt_MoTa.Location = new Point(32, 396);
-            NV_RichTxt_MoTa.Margin = new Padding(3, 2, 3, 2);
+            NV_RichTxt_MoTa.Location = new Point(37, 528);
             NV_RichTxt_MoTa.Name = "NV_RichTxt_MoTa";
             NV_RichTxt_MoTa.PenWidth = 15;
             NV_RichTxt_MoTa.RGB = false;
             NV_RichTxt_MoTa.Rounding = true;
             NV_RichTxt_MoTa.RoundingInt = 60;
-            NV_RichTxt_MoTa.Size = new Size(605, 136);
+            NV_RichTxt_MoTa.Size = new Size(784, 216);
             NV_RichTxt_MoTa.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             NV_RichTxt_MoTa.TabIndex = 15;
             NV_RichTxt_MoTa.Tag = "Cyber";
@@ -1442,10 +1427,9 @@ namespace PRL
             Nav_Option.Controls.Add(QL_ThanhToan);
             Nav_Option.Controls.Add(QL_KH);
             Nav_Option.Controls.Add(QL_NV);
-            Nav_Option.Location = new Point(-4, 42);
-            Nav_Option.Margin = new Padding(3, 2, 3, 2);
+            Nav_Option.Location = new Point(-5, 56);
             Nav_Option.Name = "Nav_Option";
-            Nav_Option.Size = new Size(249, 674);
+            Nav_Option.Size = new Size(284, 898);
             Nav_Option.TabIndex = 1;
             // 
             // QL_ThongKe
@@ -1454,9 +1438,9 @@ namespace PRL
             QL_ThongKe.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_ThongKe.Image = C_PRL.Properties.Resources.icons8_analyst_64;
             QL_ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_ThongKe.Location = new Point(18, 496);
+            QL_ThongKe.Location = new Point(21, 661);
             QL_ThongKe.Name = "QL_ThongKe";
-            QL_ThongKe.Size = new Size(148, 29);
+            QL_ThongKe.Size = new Size(184, 36);
             QL_ThongKe.TabIndex = 8;
             QL_ThongKe.Text = "     Thống kê";
             QL_ThongKe.Click += ThongKe_Click;
@@ -1467,9 +1451,9 @@ namespace PRL
             QL_LichKham.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_LichKham.Image = C_PRL.Properties.Resources.icons8_document_42;
             QL_LichKham.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_LichKham.Location = new Point(18, 279);
+            QL_LichKham.Location = new Point(21, 372);
             QL_LichKham.Name = "QL_LichKham";
-            QL_LichKham.Size = new Size(194, 29);
+            QL_LichKham.Size = new Size(239, 36);
             QL_LichKham.TabIndex = 7;
             QL_LichKham.Text = "     QL Lịch Khám";
             QL_LichKham.Click += QL_LichKham_Click;
@@ -1480,9 +1464,9 @@ namespace PRL
             QL_DV.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_DV.Image = C_PRL.Properties.Resources.icons8_service_341;
             QL_DV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_DV.Location = new Point(12, 391);
+            QL_DV.Location = new Point(14, 521);
             QL_DV.Name = "QL_DV";
-            QL_DV.Size = new Size(172, 29);
+            QL_DV.Size = new Size(216, 36);
             QL_DV.TabIndex = 3;
             QL_DV.Text = "     QL Dịch Vụ";
             QL_DV.Click += QL_DV_Click;
@@ -1493,9 +1477,9 @@ namespace PRL
             QL_ThanhToan.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_ThanhToan.Image = C_PRL.Properties.Resources.icons8_bill_64;
             QL_ThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_ThanhToan.Location = new Point(16, 607);
+            QL_ThanhToan.Location = new Point(18, 809);
             QL_ThanhToan.Name = "QL_ThanhToan";
-            QL_ThanhToan.Size = new Size(181, 29);
+            QL_ThanhToan.Size = new Size(221, 36);
             QL_ThanhToan.TabIndex = 2;
             QL_ThanhToan.Text = "      Thanh Toán";
             QL_ThanhToan.Click += QL_ThanhToan_Click;
@@ -1506,9 +1490,9 @@ namespace PRL
             QL_KH.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_KH.Image = C_PRL.Properties.Resources.icons8_customer_43;
             QL_KH.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_KH.Location = new Point(18, 166);
+            QL_KH.Location = new Point(21, 221);
             QL_KH.Name = "QL_KH";
-            QL_KH.Size = new Size(209, 29);
+            QL_KH.Size = new Size(257, 36);
             QL_KH.TabIndex = 1;
             QL_KH.Text = "     QL Khách Hàng";
             QL_KH.Click += QL_KH_Click;
@@ -1519,9 +1503,9 @@ namespace PRL
             QL_NV.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_NV.Image = C_PRL.Properties.Resources.icons8_crowd_34;
             QL_NV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_NV.Location = new Point(24, 68);
+            QL_NV.Location = new Point(27, 91);
             QL_NV.Name = "QL_NV";
-            QL_NV.Size = new Size(191, 29);
+            QL_NV.Size = new Size(235, 36);
             QL_NV.TabIndex = 0;
             QL_NV.Text = "     QL Nhân viên";
             QL_NV.Click += QL_NV_Click;
@@ -1531,10 +1515,11 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_DV);
-            Content.Location = new Point(276, 56);
+            Content.Controls.Add(Panel_NV);
+            Content.Location = new Point(277, 56);
+            Content.Margin = new Padding(3, 4, 3, 4);
             Content.Name = "Content";
-            Content.Size = new Size(1547, 682);
+            Content.Size = new Size(1766, 928);
             Content.TabIndex = 2;
             // 
             // Panel_DV
@@ -1628,7 +1613,7 @@ namespace PRL
             DV_Label_PhanTram.ForeColor = Color.FromArgb(80, 80, 80);
             DV_Label_PhanTram.Location = new Point(781, 92);
             DV_Label_PhanTram.Name = "DV_Label_PhanTram";
-            DV_Label_PhanTram.Size = new Size(50, 21);
+            DV_Label_PhanTram.Size = new Size(61, 28);
             DV_Label_PhanTram.TabIndex = 7;
             DV_Label_PhanTram.Text = "100%";
             DV_Label_PhanTram.Visible = false;
@@ -1688,7 +1673,7 @@ namespace PRL
             DV_Range_GiamGia.Name = "DV_Range_GiamGia";
             DV_Range_GiamGia.RangeMax = 100;
             DV_Range_GiamGia.RangeMin = 0;
-            DV_Range_GiamGia.Size = new Size(534, 33);
+            DV_Range_GiamGia.Size = new Size(534, 41);
             DV_Range_GiamGia.TabIndex = 1;
             DV_Range_GiamGia.Visible = false;
             DV_Range_GiamGia.RangeChanged += bunifuRange1_RangeChanged;
@@ -1728,14 +1713,14 @@ namespace PRL
             // 
             DV_Txt_Gia.Location = new Point(167, 81);
             DV_Txt_Gia.Name = "DV_Txt_Gia";
-            DV_Txt_Gia.Size = new Size(656, 21);
+            DV_Txt_Gia.Size = new Size(656, 25);
             DV_Txt_Gia.TabIndex = 4;
             // 
             // DV_Txt_TenDichVu
             // 
             DV_Txt_TenDichVu.Location = new Point(167, 42);
             DV_Txt_TenDichVu.Name = "DV_Txt_TenDichVu";
-            DV_Txt_TenDichVu.Size = new Size(656, 21);
+            DV_Txt_TenDichVu.Size = new Size(656, 25);
             DV_Txt_TenDichVu.TabIndex = 3;
             // 
             // label20
@@ -1745,7 +1730,7 @@ namespace PRL
             label20.ForeColor = Color.DimGray;
             label20.Location = new Point(19, 77);
             label20.Name = "label20";
-            label20.Size = new Size(39, 19);
+            label20.Size = new Size(46, 23);
             label20.TabIndex = 2;
             label20.Text = "Giá :";
             // 
@@ -1756,7 +1741,7 @@ namespace PRL
             label19.ForeColor = Color.DimGray;
             label19.Location = new Point(20, 112);
             label19.Name = "label19";
-            label19.Size = new Size(56, 19);
+            label19.Size = new Size(67, 23);
             label19.TabIndex = 1;
             label19.Text = "Mô tả :";
             // 
@@ -1767,7 +1752,7 @@ namespace PRL
             label18.ForeColor = Color.DimGray;
             label18.Location = new Point(18, 42);
             label18.Name = "label18";
-            label18.Size = new Size(92, 19);
+            label18.Size = new Size(110, 23);
             label18.TabIndex = 0;
             label18.Text = "Tên dịch vụ :";
             // 
@@ -1900,7 +1885,7 @@ namespace PRL
             DV_LabelTenDichVu2.ForeColor = Color.FromArgb(80, 80, 80);
             DV_LabelTenDichVu2.Location = new Point(20, 12);
             DV_LabelTenDichVu2.Name = "DV_LabelTenDichVu2";
-            DV_LabelTenDichVu2.Size = new Size(104, 30);
+            DV_LabelTenDichVu2.Size = new Size(135, 38);
             DV_LabelTenDichVu2.TabIndex = 0;
             DV_LabelTenDichVu2.Text = "Khám lợi";
             // 
@@ -1912,7 +1897,7 @@ namespace PRL
             DV_LabelGia2.ForeColor = Color.FromArgb(80, 80, 80);
             DV_LabelGia2.Location = new Point(23, 58);
             DV_LabelGia2.Name = "DV_LabelGia2";
-            DV_LabelGia2.Size = new Size(138, 21);
+            DV_LabelGia2.Size = new Size(171, 28);
             DV_LabelGia2.TabIndex = 1;
             DV_LabelGia2.Text = "Giá : 150.000 VNĐ";
             // 
@@ -2015,7 +2000,7 @@ namespace PRL
             DV_LabelTenDichVu1.ForeColor = Color.FromArgb(80, 80, 80);
             DV_LabelTenDichVu1.Location = new Point(20, 12);
             DV_LabelTenDichVu1.Name = "DV_LabelTenDichVu1";
-            DV_LabelTenDichVu1.Size = new Size(104, 30);
+            DV_LabelTenDichVu1.Size = new Size(135, 38);
             DV_LabelTenDichVu1.TabIndex = 0;
             DV_LabelTenDichVu1.Text = "Khám lợi";
             // 
@@ -2027,7 +2012,7 @@ namespace PRL
             DV_LabelGia1.ForeColor = Color.FromArgb(80, 80, 80);
             DV_LabelGia1.Location = new Point(23, 58);
             DV_LabelGia1.Name = "DV_LabelGia1";
-            DV_LabelGia1.Size = new Size(138, 21);
+            DV_LabelGia1.Size = new Size(171, 28);
             DV_LabelGia1.TabIndex = 1;
             DV_LabelGia1.Text = "Giá : 150.000 VNĐ";
             // 
@@ -2069,37 +2054,37 @@ namespace PRL
             ThongKe_GrView_DoanhThu.BorderStyle = BorderStyle.None;
             ThongKe_GrView_DoanhThu.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ThongKe_GrView_DoanhThu.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle55.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle55.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle55.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle55.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle55.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle55.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle55.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_DoanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_DoanhThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             ThongKe_GrView_DoanhThu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle56.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle56.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle56.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle56.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle56.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle56.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle56.WrapMode = DataGridViewTriState.False;
-            ThongKe_GrView_DoanhThu.DefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            ThongKe_GrView_DoanhThu.DefaultCellStyle = dataGridViewCellStyle8;
             ThongKe_GrView_DoanhThu.EnableHeadersVisualStyles = false;
             ThongKe_GrView_DoanhThu.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             ThongKe_GrView_DoanhThu.GridColor = Color.FromArgb(255, 255, 255);
             ThongKe_GrView_DoanhThu.Location = new Point(50, 532);
             ThongKe_GrView_DoanhThu.Name = "ThongKe_GrView_DoanhThu";
             ThongKe_GrView_DoanhThu.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle57.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle57.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle57.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle57.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle57.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle57.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle57.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_DoanhThu.RowHeadersDefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_DoanhThu.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             ThongKe_GrView_DoanhThu.RowHeadersWidth = 51;
             ThongKe_GrView_DoanhThu.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             ThongKe_GrView_DoanhThu.RowTemplate.Height = 29;
@@ -2115,7 +2100,7 @@ namespace PRL
             bigLabel23.ForeColor = Color.Black;
             bigLabel23.Location = new Point(36, 473);
             bigLabel23.Name = "bigLabel23";
-            bigLabel23.Size = new Size(87, 25);
+            bigLabel23.Size = new Size(104, 31);
             bigLabel23.TabIndex = 14;
             bigLabel23.Text = "Chi Tiết :";
             // 
@@ -2127,7 +2112,7 @@ namespace PRL
             ThongKe_Txt_Lai.ForeColor = Color.FromArgb(80, 80, 80);
             ThongKe_Txt_Lai.Location = new Point(95, 381);
             ThongKe_Txt_Lai.Name = "ThongKe_Txt_Lai";
-            ThongKe_Txt_Lai.Size = new Size(323, 46);
+            ThongKe_Txt_Lai.Size = new Size(409, 57);
             ThongKe_Txt_Lai.TabIndex = 13;
             ThongKe_Txt_Lai.Text = "Lãi : 67.500.000 VNĐ";
             // 
@@ -2139,7 +2124,7 @@ namespace PRL
             ThongKe_Txt_TongDoanhThu.ForeColor = Color.FromArgb(80, 80, 80);
             ThongKe_Txt_TongDoanhThu.Location = new Point(95, 263);
             ThongKe_Txt_TongDoanhThu.Name = "ThongKe_Txt_TongDoanhThu";
-            ThongKe_Txt_TongDoanhThu.Size = new Size(442, 46);
+            ThongKe_Txt_TongDoanhThu.Size = new Size(559, 57);
             ThongKe_Txt_TongDoanhThu.TabIndex = 12;
             ThongKe_Txt_TongDoanhThu.Text = "Tổng Thu : 153.500.000 VNĐ";
             // 
@@ -2152,7 +2137,7 @@ namespace PRL
             ThongKe_Btn_Loc.Image = C_PRL.Properties.Resources.icons8_filter_40;
             ThongKe_Btn_Loc.Location = new Point(597, 25);
             ThongKe_Btn_Loc.Name = "ThongKe_Btn_Loc";
-            ThongKe_Btn_Loc.Size = new Size(65, 46);
+            ThongKe_Btn_Loc.Size = new Size(85, 57);
             ThongKe_Btn_Loc.TabIndex = 11;
             ThongKe_Btn_Loc.Text = "     ";
             // 
@@ -2164,7 +2149,7 @@ namespace PRL
             dungeonHeaderLabel24.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel24.Location = new Point(350, 47);
             dungeonHeaderLabel24.Name = "dungeonHeaderLabel24";
-            dungeonHeaderLabel24.Size = new Size(43, 20);
+            dungeonHeaderLabel24.Size = new Size(54, 25);
             dungeonHeaderLabel24.TabIndex = 10;
             dungeonHeaderLabel24.Text = "Năm";
             // 
@@ -2176,7 +2161,7 @@ namespace PRL
             dungeonHeaderLabel25.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel25.Location = new Point(64, 47);
             dungeonHeaderLabel25.Name = "dungeonHeaderLabel25";
-            dungeonHeaderLabel25.Size = new Size(53, 20);
+            dungeonHeaderLabel25.Size = new Size(68, 25);
             dungeonHeaderLabel25.TabIndex = 9;
             dungeonHeaderLabel25.Text = "Tháng";
             // 
@@ -2242,7 +2227,7 @@ namespace PRL
             bigLabel20.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel20.Location = new Point(237, 128);
             bigLabel20.Name = "bigLabel20";
-            bigLabel20.Size = new Size(184, 46);
+            bigLabel20.Size = new Size(230, 57);
             bigLabel20.TabIndex = 1;
             bigLabel20.Text = "Doanh Thu";
             // 
@@ -2253,37 +2238,37 @@ namespace PRL
             ThongKe_GrView_ChiTieu.BorderStyle = BorderStyle.None;
             ThongKe_GrView_ChiTieu.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ThongKe_GrView_ChiTieu.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle58.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle58.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle58.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle58.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle58.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle58.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle58.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_ChiTieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_ChiTieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             ThongKe_GrView_ChiTieu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle59.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle59.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle59.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle59.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle59.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle59.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle59.WrapMode = DataGridViewTriState.False;
-            ThongKe_GrView_ChiTieu.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle11.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            ThongKe_GrView_ChiTieu.DefaultCellStyle = dataGridViewCellStyle11;
             ThongKe_GrView_ChiTieu.EnableHeadersVisualStyles = false;
             ThongKe_GrView_ChiTieu.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             ThongKe_GrView_ChiTieu.GridColor = Color.FromArgb(192, 255, 192);
             ThongKe_GrView_ChiTieu.Location = new Point(47, 538);
             ThongKe_GrView_ChiTieu.Name = "ThongKe_GrView_ChiTieu";
             ThongKe_GrView_ChiTieu.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle60.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle60.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle60.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle60.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle60.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle60.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle60.WrapMode = DataGridViewTriState.True;
-            ThongKe_GrView_ChiTieu.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            ThongKe_GrView_ChiTieu.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             ThongKe_GrView_ChiTieu.RowHeadersWidth = 51;
             ThongKe_GrView_ChiTieu.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             ThongKe_GrView_ChiTieu.RowTemplate.Height = 29;
@@ -2299,7 +2284,7 @@ namespace PRL
             bigLabel27.ForeColor = Color.Black;
             bigLabel27.Location = new Point(50, 479);
             bigLabel27.Name = "bigLabel27";
-            bigLabel27.Size = new Size(87, 25);
+            bigLabel27.Size = new Size(104, 31);
             bigLabel27.TabIndex = 15;
             bigLabel27.Text = "Chi Tiết :";
             // 
@@ -2311,7 +2296,7 @@ namespace PRL
             ThongKe_Txt_TongChiTieu.ForeColor = Color.FromArgb(80, 80, 80);
             ThongKe_Txt_TongChiTieu.Location = new Point(143, 263);
             ThongKe_Txt_TongChiTieu.Name = "ThongKe_Txt_TongChiTieu";
-            ThongKe_Txt_TongChiTieu.Size = new Size(416, 46);
+            ThongKe_Txt_TongChiTieu.Size = new Size(526, 57);
             ThongKe_Txt_TongChiTieu.TabIndex = 13;
             ThongKe_Txt_TongChiTieu.Text = "Tổng Chi : 85.000.000 VNĐ";
             // 
@@ -2323,7 +2308,7 @@ namespace PRL
             bigLabel21.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel21.Location = new Point(315, 128);
             bigLabel21.Name = "bigLabel21";
-            bigLabel21.Size = new Size(140, 46);
+            bigLabel21.Size = new Size(175, 57);
             bigLabel21.TabIndex = 2;
             bigLabel21.Text = "Chi Tiêu";
             // 
@@ -2352,7 +2337,7 @@ namespace PRL
             bigLabel35.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel35.Location = new Point(65, 488);
             bigLabel35.Name = "bigLabel35";
-            bigLabel35.Size = new Size(175, 32);
+            bigLabel35.Size = new Size(215, 41);
             bigLabel35.TabIndex = 10;
             bigLabel35.Text = "Đã Thanh Toán";
             // 
@@ -2364,7 +2349,7 @@ namespace PRL
             bigLabel33.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel33.Location = new Point(54, 14);
             bigLabel33.Name = "bigLabel33";
-            bigLabel33.Size = new Size(201, 32);
+            bigLabel33.Size = new Size(248, 41);
             bigLabel33.TabIndex = 9;
             bigLabel33.Text = "Chưa Thanh Toán";
             // 
@@ -2395,37 +2380,37 @@ namespace PRL
             poisonDataGridView5.BorderStyle = BorderStyle.None;
             poisonDataGridView5.CellBorderStyle = DataGridViewCellBorderStyle.None;
             poisonDataGridView5.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle61.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle61.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle61.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle61.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle61.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle61.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle61.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             poisonDataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle62.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle62.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle62.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle62.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle62.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle62.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle62.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView5.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle14.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
+            poisonDataGridView5.DefaultCellStyle = dataGridViewCellStyle14;
             poisonDataGridView5.EnableHeadersVisualStyles = false;
             poisonDataGridView5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             poisonDataGridView5.GridColor = Color.FromArgb(255, 255, 255);
             poisonDataGridView5.Location = new Point(54, 548);
             poisonDataGridView5.Name = "poisonDataGridView5";
             poisonDataGridView5.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle63.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle63.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle63.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle63.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle63.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle63.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle63.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle15.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             poisonDataGridView5.RowHeadersWidth = 51;
             poisonDataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             poisonDataGridView5.RowTemplate.Height = 29;
@@ -2497,37 +2482,37 @@ namespace PRL
             TT_poisonDataGridView3.BorderStyle = BorderStyle.None;
             TT_poisonDataGridView3.CellBorderStyle = DataGridViewCellBorderStyle.None;
             TT_poisonDataGridView3.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle64.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle64.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle64.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle64.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle64.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle64.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle64.WrapMode = DataGridViewTriState.True;
-            TT_poisonDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle16.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle16.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle16.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
+            TT_poisonDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             TT_poisonDataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle65.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle65.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle65.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle65.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle65.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle65.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle65.WrapMode = DataGridViewTriState.False;
-            TT_poisonDataGridView3.DefaultCellStyle = dataGridViewCellStyle65;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle17.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle17.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle17.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
+            TT_poisonDataGridView3.DefaultCellStyle = dataGridViewCellStyle17;
             TT_poisonDataGridView3.EnableHeadersVisualStyles = false;
             TT_poisonDataGridView3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             TT_poisonDataGridView3.GridColor = Color.FromArgb(255, 255, 255);
             TT_poisonDataGridView3.Location = new Point(54, 76);
             TT_poisonDataGridView3.Name = "TT_poisonDataGridView3";
             TT_poisonDataGridView3.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle66.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle66.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle66.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle66.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle66.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle66.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle66.WrapMode = DataGridViewTriState.True;
-            TT_poisonDataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle66;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle18.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle18.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
+            TT_poisonDataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             TT_poisonDataGridView3.RowHeadersWidth = 51;
             TT_poisonDataGridView3.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             TT_poisonDataGridView3.RowTemplate.Height = 29;
@@ -2653,7 +2638,7 @@ namespace PRL
             TT_txt_ThoiGianTT.BorderStyle = BorderStyle.None;
             TT_txt_ThoiGianTT.Location = new Point(239, 521);
             TT_txt_ThoiGianTT.Name = "TT_txt_ThoiGianTT";
-            TT_txt_ThoiGianTT.Size = new Size(311, 22);
+            TT_txt_ThoiGianTT.Size = new Size(311, 27);
             TT_txt_ThoiGianTT.TabIndex = 37;
             // 
             // TT_txt_TongTien
@@ -2662,7 +2647,7 @@ namespace PRL
             TT_txt_TongTien.BorderStyle = BorderStyle.None;
             TT_txt_TongTien.Location = new Point(138, 452);
             TT_txt_TongTien.Name = "TT_txt_TongTien";
-            TT_txt_TongTien.Size = new Size(311, 22);
+            TT_txt_TongTien.Size = new Size(311, 27);
             TT_txt_TongTien.TabIndex = 36;
             // 
             // TT_txt_ChiPhiKhac
@@ -2671,7 +2656,7 @@ namespace PRL
             TT_txt_ChiPhiKhac.BorderStyle = BorderStyle.None;
             TT_txt_ChiPhiKhac.Location = new Point(159, 372);
             TT_txt_ChiPhiKhac.Name = "TT_txt_ChiPhiKhac";
-            TT_txt_ChiPhiKhac.Size = new Size(311, 22);
+            TT_txt_ChiPhiKhac.Size = new Size(311, 27);
             TT_txt_ChiPhiKhac.TabIndex = 35;
             // 
             // TT_txt_GhiChu
@@ -2680,7 +2665,7 @@ namespace PRL
             TT_txt_GhiChu.BorderStyle = BorderStyle.None;
             TT_txt_GhiChu.Location = new Point(132, 296);
             TT_txt_GhiChu.Name = "TT_txt_GhiChu";
-            TT_txt_GhiChu.Size = new Size(311, 22);
+            TT_txt_GhiChu.Size = new Size(311, 27);
             TT_txt_GhiChu.TabIndex = 34;
             // 
             // airSeparator9
@@ -2759,7 +2744,7 @@ namespace PRL
             TT_txt_GiaTien.BorderStyle = BorderStyle.None;
             TT_txt_GiaTien.Location = new Point(128, 222);
             TT_txt_GiaTien.Name = "TT_txt_GiaTien";
-            TT_txt_GiaTien.Size = new Size(311, 22);
+            TT_txt_GiaTien.Size = new Size(311, 27);
             TT_txt_GiaTien.TabIndex = 28;
             // 
             // airSeparator2
@@ -2805,7 +2790,7 @@ namespace PRL
             TT_Label_DVSD.BackColor = Color.PapayaWhip;
             TT_Label_DVSD.Location = new Point(3, 7);
             TT_Label_DVSD.Name = "TT_Label_DVSD";
-            TT_Label_DVSD.Size = new Size(133, 21);
+            TT_Label_DVSD.Size = new Size(167, 28);
             TT_Label_DVSD.TabIndex = 8;
             TT_Label_DVSD.Text = "Dịch vụ sử dụng : ";
             // 
@@ -2815,7 +2800,7 @@ namespace PRL
             TT_Label_TongTien.BackColor = Color.PapayaWhip;
             TT_Label_TongTien.Location = new Point(18, 455);
             TT_Label_TongTien.Name = "TT_Label_TongTien";
-            TT_Label_TongTien.Size = new Size(82, 21);
+            TT_Label_TongTien.Size = new Size(104, 28);
             TT_Label_TongTien.TabIndex = 16;
             TT_Label_TongTien.Text = "Tổng tiền :";
             // 
@@ -2825,7 +2810,7 @@ namespace PRL
             TT_Label_NguoiThanhToan.BackColor = Color.PapayaWhip;
             TT_Label_NguoiThanhToan.Location = new Point(15, 588);
             TT_Label_NguoiThanhToan.Name = "TT_Label_NguoiThanhToan";
-            TT_Label_NguoiThanhToan.Size = new Size(140, 21);
+            TT_Label_NguoiThanhToan.Size = new Size(177, 28);
             TT_Label_NguoiThanhToan.TabIndex = 14;
             TT_Label_NguoiThanhToan.Text = "Người thanh toán :";
             // 
@@ -2835,7 +2820,7 @@ namespace PRL
             label27_a.BackColor = Color.PapayaWhip;
             label27_a.Location = new Point(197, 21);
             label27_a.Name = "label27_a";
-            label27_a.Size = new Size(0, 21);
+            label27_a.Size = new Size(0, 28);
             label27_a.TabIndex = 13;
             // 
             // TT_Label_ChiPhiKhac
@@ -2844,7 +2829,7 @@ namespace PRL
             TT_Label_ChiPhiKhac.BackColor = Color.PapayaWhip;
             TT_Label_ChiPhiKhac.Location = new Point(15, 374);
             TT_Label_ChiPhiKhac.Name = "TT_Label_ChiPhiKhac";
-            TT_Label_ChiPhiKhac.Size = new Size(102, 21);
+            TT_Label_ChiPhiKhac.Size = new Size(127, 28);
             TT_Label_ChiPhiKhac.TabIndex = 12;
             TT_Label_ChiPhiKhac.Text = "Chi phí khác :";
             // 
@@ -2854,7 +2839,7 @@ namespace PRL
             TT_Label_ThoiGian.BackColor = Color.PapayaWhip;
             TT_Label_ThoiGian.Location = new Point(15, 524);
             TT_Label_ThoiGian.Name = "TT_Label_ThoiGian";
-            TT_Label_ThoiGian.Size = new Size(161, 21);
+            TT_Label_ThoiGian.Size = new Size(202, 28);
             TT_Label_ThoiGian.TabIndex = 11;
             TT_Label_ThoiGian.Text = "Thời gian thanh toán :";
             // 
@@ -2864,7 +2849,7 @@ namespace PRL
             TT_Label_GhiChu.BackColor = Color.PapayaWhip;
             TT_Label_GhiChu.Location = new Point(15, 300);
             TT_Label_GhiChu.Name = "TT_Label_GhiChu";
-            TT_Label_GhiChu.Size = new Size(70, 21);
+            TT_Label_GhiChu.Size = new Size(87, 28);
             TT_Label_GhiChu.TabIndex = 10;
             TT_Label_GhiChu.Text = "Ghi chú :";
             // 
@@ -2874,7 +2859,7 @@ namespace PRL
             TT_Label_GiaTien.BackColor = Color.PapayaWhip;
             TT_Label_GiaTien.Location = new Point(15, 224);
             TT_Label_GiaTien.Name = "TT_Label_GiaTien";
-            TT_Label_GiaTien.Size = new Size(70, 21);
+            TT_Label_GiaTien.Size = new Size(88, 28);
             TT_Label_GiaTien.TabIndex = 9;
             TT_Label_GiaTien.Text = "Giá tiền :";
             // 
@@ -2884,7 +2869,7 @@ namespace PRL
             TT_Label_KhachHang.BackColor = Color.PapayaWhip;
             TT_Label_KhachHang.Location = new Point(15, 32);
             TT_Label_KhachHang.Name = "TT_Label_KhachHang";
-            TT_Label_KhachHang.Size = new Size(124, 21);
+            TT_Label_KhachHang.Size = new Size(155, 28);
             TT_Label_KhachHang.TabIndex = 5;
             TT_Label_KhachHang.Text = "Tên khách hàng :";
             // 
@@ -2946,37 +2931,37 @@ namespace PRL
             poisonDataGridView1.BorderStyle = BorderStyle.None;
             poisonDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             poisonDataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle67.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle67.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle67.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle67.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle67.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle67.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle67.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle67;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle19.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle19.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle19.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle19.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             poisonDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle68.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle68.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle68.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle68.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle68.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle68.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle68.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle68;
+            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle20.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle20.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle20.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
+            poisonDataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
             poisonDataGridView1.EnableHeadersVisualStyles = false;
             poisonDataGridView1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             poisonDataGridView1.GridColor = Color.FromArgb(255, 255, 255);
             poisonDataGridView1.Location = new Point(67, 151);
             poisonDataGridView1.Name = "poisonDataGridView1";
             poisonDataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle69.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle69.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle69.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle69.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle69.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle69.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle69.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle69;
+            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle21.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle21.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle21.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle21.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             poisonDataGridView1.RowHeadersWidth = 51;
             poisonDataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             poisonDataGridView1.RowTemplate.Height = 29;
@@ -2991,7 +2976,7 @@ namespace PRL
             label13.Image = C_PRL.Properties.Resources.icons8_filter_40;
             label13.Location = new Point(987, 58);
             label13.Name = "label13";
-            label13.Size = new Size(62, 30);
+            label13.Size = new Size(73, 37);
             label13.TabIndex = 31;
             label13.Text = "       ";
             // 
@@ -3020,7 +3005,7 @@ namespace PRL
             label7.ForeColor = SystemColors.ActiveCaptionText;
             label7.Location = new Point(803, 64);
             label7.Name = "label7";
-            label7.Size = new Size(54, 23);
+            label7.Size = new Size(67, 29);
             label7.TabIndex = 28;
             label7.Text = "Đến :";
             // 
@@ -3031,7 +3016,7 @@ namespace PRL
             label8.ForeColor = SystemColors.ActiveCaptionText;
             label8.Location = new Point(633, 64);
             label8.Name = "label8";
-            label8.Size = new Size(45, 23);
+            label8.Size = new Size(57, 29);
             label8.TabIndex = 28;
             label8.Text = "Từ :";
             // 
@@ -3046,7 +3031,7 @@ namespace PRL
             bigTextBox3.Multiline = false;
             bigTextBox3.Name = "bigTextBox3";
             bigTextBox3.ReadOnly = false;
-            bigTextBox3.Size = new Size(378, 41);
+            bigTextBox3.Size = new Size(378, 46);
             bigTextBox3.TabIndex = 26;
             bigTextBox3.TextAlignment = HorizontalAlignment.Left;
             bigTextBox3.UseSystemPasswordChar = false;
@@ -3058,7 +3043,7 @@ namespace PRL
             label9.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
             label9.Location = new Point(466, 56);
             label9.Name = "label9";
-            label9.Size = new Size(55, 30);
+            label9.Size = new Size(73, 38);
             label9.TabIndex = 27;
             label9.Text = "       ";
             // 
@@ -3083,7 +3068,7 @@ namespace PRL
             bigLabel2.ForeColor = Color.Crimson;
             bigLabel2.Location = new Point(898, 84);
             bigLabel2.Name = "bigLabel2";
-            bigLabel2.Size = new Size(225, 27);
+            bigLabel2.Size = new Size(270, 32);
             bigLabel2.TabIndex = 12;
             bigLabel2.Text = "Sửa / Hủy Phiếu Khám";
             // 
@@ -3095,7 +3080,7 @@ namespace PRL
             bigLabel3.ForeColor = Color.Crimson;
             bigLabel3.Location = new Point(638, 84);
             bigLabel3.Name = "bigLabel3";
-            bigLabel3.Size = new Size(175, 27);
+            bigLabel3.Size = new Size(210, 32);
             bigLabel3.TabIndex = 11;
             bigLabel3.Text = "Thêm Phiếu Khám";
             // 
@@ -3107,7 +3092,7 @@ namespace PRL
             bigLabel4.ForeColor = Color.Crimson;
             bigLabel4.Location = new Point(385, 87);
             bigLabel4.Name = "bigLabel4";
-            bigLabel4.Size = new Size(153, 27);
+            bigLabel4.Size = new Size(185, 32);
             bigLabel4.TabIndex = 10;
             bigLabel4.Text = "Xem Lịch Khám";
             // 
@@ -3136,7 +3121,7 @@ namespace PRL
             bigLabel19.Image = C_PRL.Properties.Resources.icons8_filter_40;
             bigLabel19.Location = new Point(1086, 26);
             bigLabel19.Name = "bigLabel19";
-            bigLabel19.Size = new Size(65, 46);
+            bigLabel19.Size = new Size(85, 57);
             bigLabel19.TabIndex = 6;
             bigLabel19.Text = "     ";
             // 
@@ -3148,7 +3133,7 @@ namespace PRL
             dungeonHeaderLabel23.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel23.Location = new Point(839, 48);
             dungeonHeaderLabel23.Name = "dungeonHeaderLabel23";
-            dungeonHeaderLabel23.Size = new Size(43, 20);
+            dungeonHeaderLabel23.Size = new Size(54, 25);
             dungeonHeaderLabel23.TabIndex = 5;
             dungeonHeaderLabel23.Text = "Năm";
             // 
@@ -3160,7 +3145,7 @@ namespace PRL
             dungeonHeaderLabel15.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel15.Location = new Point(553, 48);
             dungeonHeaderLabel15.Name = "dungeonHeaderLabel15";
-            dungeonHeaderLabel15.Size = new Size(53, 20);
+            dungeonHeaderLabel15.Size = new Size(68, 25);
             dungeonHeaderLabel15.TabIndex = 4;
             dungeonHeaderLabel15.Text = "Tháng";
             // 
@@ -3227,7 +3212,7 @@ namespace PRL
             bigLabel12.Image = C_PRL.Properties.Resources.icons8_cancel_48;
             bigLabel12.Location = new Point(38, 26);
             bigLabel12.Name = "bigLabel12";
-            bigLabel12.Size = new Size(65, 46);
+            bigLabel12.Size = new Size(85, 57);
             bigLabel12.TabIndex = 1;
             bigLabel12.Text = "     ";
             // 
@@ -3324,7 +3309,7 @@ namespace PRL
             bigTextBox7.Multiline = false;
             bigTextBox7.Name = "bigTextBox7";
             bigTextBox7.ReadOnly = false;
-            bigTextBox7.Size = new Size(264, 41);
+            bigTextBox7.Size = new Size(264, 46);
             bigTextBox7.TabIndex = 7;
             bigTextBox7.Text = "bigTextBox7";
             bigTextBox7.TextAlignment = HorizontalAlignment.Left;
@@ -3341,7 +3326,7 @@ namespace PRL
             bigTextBox6.Multiline = false;
             bigTextBox6.Name = "bigTextBox6";
             bigTextBox6.ReadOnly = false;
-            bigTextBox6.Size = new Size(264, 41);
+            bigTextBox6.Size = new Size(264, 46);
             bigTextBox6.TabIndex = 6;
             bigTextBox6.Text = "bigTextBox6";
             bigTextBox6.TextAlignment = HorizontalAlignment.Left;
@@ -3355,7 +3340,7 @@ namespace PRL
             bigLabel18.ForeColor = Color.DimGray;
             bigLabel18.Location = new Point(433, 520);
             bigLabel18.Name = "bigLabel18";
-            bigLabel18.Size = new Size(200, 32);
+            bigLabel18.Size = new Size(244, 41);
             bigLabel18.TabIndex = 5;
             bigLabel18.Text = "15.000.000 VNĐ";
             // 
@@ -3367,7 +3352,7 @@ namespace PRL
             bigLabel17.ForeColor = Color.DimGray;
             bigLabel17.Location = new Point(150, 520);
             bigLabel17.Name = "bigLabel17";
-            bigLabel17.Size = new Size(231, 32);
+            bigLabel17.Size = new Size(283, 41);
             bigLabel17.TabIndex = 4;
             bigLabel17.Text = "Tổng ( Gồm thuế) :";
             // 
@@ -3379,7 +3364,7 @@ namespace PRL
             bigLabel16.ForeColor = Color.DimGray;
             bigLabel16.Location = new Point(144, 399);
             bigLabel16.Name = "bigLabel16";
-            bigLabel16.Size = new Size(117, 32);
+            bigLabel16.Size = new Size(146, 41);
             bigLabel16.TabIndex = 3;
             bigLabel16.Text = "Thưởng :";
             // 
@@ -3391,7 +3376,7 @@ namespace PRL
             bigLabel15.ForeColor = Color.DimGray;
             bigLabel15.Location = new Point(144, 278);
             bigLabel15.Name = "bigLabel15";
-            bigLabel15.Size = new Size(123, 32);
+            bigLabel15.Size = new Size(151, 41);
             bigLabel15.TabIndex = 2;
             bigLabel15.Text = "Số Công :";
             // 
@@ -3403,7 +3388,7 @@ namespace PRL
             bigLabel14.ForeColor = Color.DimGray;
             bigLabel14.Location = new Point(433, 169);
             bigLabel14.Name = "bigLabel14";
-            bigLabel14.Size = new Size(195, 32);
+            bigLabel14.Size = new Size(241, 41);
             bigLabel14.TabIndex = 1;
             bigLabel14.Text = "Đặng Đình Giáp";
             // 
@@ -3415,7 +3400,7 @@ namespace PRL
             bigLabel13.ForeColor = Color.DimGray;
             bigLabel13.Location = new Point(144, 166);
             bigLabel13.Name = "bigLabel13";
-            bigLabel13.Size = new Size(194, 32);
+            bigLabel13.Size = new Size(238, 41);
             bigLabel13.TabIndex = 0;
             bigLabel13.Text = "Tên Nhân Viên :";
             // 
@@ -3490,7 +3475,7 @@ namespace PRL
             bigLabel34.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel34.Location = new Point(410, 272);
             bigLabel34.Name = "bigLabel34";
-            bigLabel34.Size = new Size(67, 25);
+            bigLabel34.Size = new Size(82, 31);
             bigLabel34.TabIndex = 15;
             bigLabel34.Text = "Admin";
             // 
@@ -3557,7 +3542,7 @@ namespace PRL
             textBox4.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.Location = new Point(405, 399);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(413, 25);
+            textBox4.Size = new Size(413, 31);
             textBox4.TabIndex = 11;
             textBox4.Text = "50 Trần Bình , Cầu Giấy";
             // 
@@ -3569,7 +3554,7 @@ namespace PRL
             textBox3.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.Location = new Point(484, 337);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(413, 25);
+            textBox3.Size = new Size(413, 31);
             textBox3.TabIndex = 10;
             textBox3.Text = "0978040960";
             // 
@@ -3581,7 +3566,7 @@ namespace PRL
             bigLabel32.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel32.Location = new Point(286, 338);
             bigLabel32.Name = "bigLabel32";
-            bigLabel32.Size = new Size(145, 25);
+            bigLabel32.Size = new Size(175, 31);
             bigLabel32.TabIndex = 4;
             bigLabel32.Text = "Số Điện Thoại :";
             // 
@@ -3593,7 +3578,7 @@ namespace PRL
             bigLabel31.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel31.Location = new Point(286, 400);
             bigLabel31.Name = "bigLabel31";
-            bigLabel31.Size = new Size(84, 25);
+            bigLabel31.Size = new Size(103, 31);
             bigLabel31.TabIndex = 3;
             bigLabel31.Text = "Địa Chỉ :";
             // 
@@ -3605,7 +3590,7 @@ namespace PRL
             bigLabel30.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel30.Location = new Point(285, 465);
             bigLabel30.Name = "bigLabel30";
-            bigLabel30.Size = new Size(102, 25);
+            bigLabel30.Size = new Size(124, 31);
             bigLabel30.TabIndex = 2;
             bigLabel30.Text = "Giới Tính :";
             // 
@@ -3617,7 +3602,7 @@ namespace PRL
             bigLabel29.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel29.Location = new Point(286, 272);
             bigLabel29.Name = "bigLabel29";
-            bigLabel29.Size = new Size(97, 25);
+            bigLabel29.Size = new Size(115, 31);
             bigLabel29.TabIndex = 1;
             bigLabel29.Text = "Chức Vụ :";
             // 
@@ -3629,7 +3614,7 @@ namespace PRL
             bigLabel28.ForeColor = Color.FromArgb(80, 80, 80);
             bigLabel28.Location = new Point(668, 134);
             bigLabel28.Name = "bigLabel28";
-            bigLabel28.Size = new Size(256, 46);
+            bigLabel28.Size = new Size(320, 57);
             bigLabel28.TabIndex = 0;
             bigLabel28.Text = "Đặng Đình Giáp";
             // 
@@ -3990,7 +3975,7 @@ namespace PRL
             dungeonHeaderLabel16.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel16.Location = new Point(66, 514);
             dungeonHeaderLabel16.Name = "dungeonHeaderLabel16";
-            dungeonHeaderLabel16.Size = new Size(62, 20);
+            dungeonHeaderLabel16.Size = new Size(81, 25);
             dungeonHeaderLabel16.TabIndex = 45;
             dungeonHeaderLabel16.Text = "Phòng :";
             // 
@@ -4064,7 +4049,7 @@ namespace PRL
             dungeonHeaderLabel17.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel17.Location = new Point(66, 451);
             dungeonHeaderLabel17.Name = "dungeonHeaderLabel17";
-            dungeonHeaderLabel17.Size = new Size(41, 20);
+            dungeonHeaderLabel17.Size = new Size(53, 25);
             dungeonHeaderLabel17.TabIndex = 42;
             dungeonHeaderLabel17.Text = "Giờ :";
             // 
@@ -4076,7 +4061,7 @@ namespace PRL
             dungeonHeaderLabel18.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel18.Location = new Point(66, 389);
             dungeonHeaderLabel18.Name = "dungeonHeaderLabel18";
-            dungeonHeaderLabel18.Size = new Size(54, 20);
+            dungeonHeaderLabel18.Size = new Size(69, 25);
             dungeonHeaderLabel18.TabIndex = 41;
             dungeonHeaderLabel18.Text = "Ngày :";
             // 
@@ -4150,7 +4135,7 @@ namespace PRL
             dungeonHeaderLabel19.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel19.Location = new Point(66, 326);
             dungeonHeaderLabel19.Name = "dungeonHeaderLabel19";
-            dungeonHeaderLabel19.Size = new Size(69, 20);
+            dungeonHeaderLabel19.Size = new Size(88, 25);
             dungeonHeaderLabel19.TabIndex = 38;
             dungeonHeaderLabel19.Text = "Dịch vụ :";
             // 
@@ -4162,7 +4147,7 @@ namespace PRL
             dungeonHeaderLabel20.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel20.Location = new Point(66, 264);
             dungeonHeaderLabel20.Name = "dungeonHeaderLabel20";
-            dungeonHeaderLabel20.Size = new Size(44, 20);
+            dungeonHeaderLabel20.Size = new Size(56, 25);
             dungeonHeaderLabel20.TabIndex = 37;
             dungeonHeaderLabel20.Text = "Y tá :";
             // 
@@ -4236,7 +4221,7 @@ namespace PRL
             dungeonHeaderLabel21.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel21.Location = new Point(66, 197);
             dungeonHeaderLabel21.Name = "dungeonHeaderLabel21";
-            dungeonHeaderLabel21.Size = new Size(99, 20);
+            dungeonHeaderLabel21.Size = new Size(125, 25);
             dungeonHeaderLabel21.TabIndex = 34;
             dungeonHeaderLabel21.Text = "Khách hàng :";
             // 
@@ -4248,7 +4233,7 @@ namespace PRL
             dungeonHeaderLabel22.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel22.Location = new Point(66, 135);
             dungeonHeaderLabel22.Name = "dungeonHeaderLabel22";
-            dungeonHeaderLabel22.Size = new Size(57, 20);
+            dungeonHeaderLabel22.Size = new Size(71, 25);
             dungeonHeaderLabel22.TabIndex = 33;
             dungeonHeaderLabel22.Text = "Bác sĩ :";
             // 
@@ -4617,7 +4602,7 @@ namespace PRL
             dungeonHeaderLabel3.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel3.Location = new Point(671, 624);
             dungeonHeaderLabel3.Name = "dungeonHeaderLabel3";
-            dungeonHeaderLabel3.Size = new Size(88, 20);
+            dungeonHeaderLabel3.Size = new Size(112, 25);
             dungeonHeaderLabel3.TabIndex = 72;
             dungeonHeaderLabel3.Text = "Trạng thái :";
             // 
@@ -4660,7 +4645,7 @@ namespace PRL
             dungeonHeaderLabel4.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel4.Location = new Point(669, 561);
             dungeonHeaderLabel4.Name = "dungeonHeaderLabel4";
-            dungeonHeaderLabel4.Size = new Size(62, 20);
+            dungeonHeaderLabel4.Size = new Size(81, 25);
             dungeonHeaderLabel4.TabIndex = 70;
             dungeonHeaderLabel4.Text = "Phòng :";
             // 
@@ -4734,7 +4719,7 @@ namespace PRL
             dungeonHeaderLabel6.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel6.Location = new Point(669, 498);
             dungeonHeaderLabel6.Name = "dungeonHeaderLabel6";
-            dungeonHeaderLabel6.Size = new Size(41, 20);
+            dungeonHeaderLabel6.Size = new Size(53, 25);
             dungeonHeaderLabel6.TabIndex = 67;
             dungeonHeaderLabel6.Text = "Giờ :";
             // 
@@ -4746,7 +4731,7 @@ namespace PRL
             dungeonHeaderLabel10.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel10.Location = new Point(669, 436);
             dungeonHeaderLabel10.Name = "dungeonHeaderLabel10";
-            dungeonHeaderLabel10.Size = new Size(54, 20);
+            dungeonHeaderLabel10.Size = new Size(69, 25);
             dungeonHeaderLabel10.TabIndex = 66;
             dungeonHeaderLabel10.Text = "Ngày :";
             // 
@@ -4820,7 +4805,7 @@ namespace PRL
             dungeonHeaderLabel11.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel11.Location = new Point(669, 373);
             dungeonHeaderLabel11.Name = "dungeonHeaderLabel11";
-            dungeonHeaderLabel11.Size = new Size(69, 20);
+            dungeonHeaderLabel11.Size = new Size(88, 25);
             dungeonHeaderLabel11.TabIndex = 63;
             dungeonHeaderLabel11.Text = "Dịch vụ :";
             // 
@@ -4832,7 +4817,7 @@ namespace PRL
             dungeonHeaderLabel12.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel12.Location = new Point(669, 311);
             dungeonHeaderLabel12.Name = "dungeonHeaderLabel12";
-            dungeonHeaderLabel12.Size = new Size(44, 20);
+            dungeonHeaderLabel12.Size = new Size(56, 25);
             dungeonHeaderLabel12.TabIndex = 62;
             dungeonHeaderLabel12.Text = "Y tá :";
             // 
@@ -4906,7 +4891,7 @@ namespace PRL
             dungeonHeaderLabel13.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel13.Location = new Point(669, 244);
             dungeonHeaderLabel13.Name = "dungeonHeaderLabel13";
-            dungeonHeaderLabel13.Size = new Size(99, 20);
+            dungeonHeaderLabel13.Size = new Size(125, 25);
             dungeonHeaderLabel13.TabIndex = 59;
             dungeonHeaderLabel13.Text = "Khách hàng :";
             // 
@@ -4918,7 +4903,7 @@ namespace PRL
             dungeonHeaderLabel14.ForeColor = Color.FromArgb(76, 76, 77);
             dungeonHeaderLabel14.Location = new Point(669, 182);
             dungeonHeaderLabel14.Name = "dungeonHeaderLabel14";
-            dungeonHeaderLabel14.Size = new Size(57, 20);
+            dungeonHeaderLabel14.Size = new Size(71, 25);
             dungeonHeaderLabel14.TabIndex = 58;
             dungeonHeaderLabel14.Text = "Bác sĩ :";
             // 
@@ -4969,37 +4954,37 @@ namespace PRL
             poisonDataGridView2.BorderStyle = BorderStyle.None;
             poisonDataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.None;
             poisonDataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle70.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle70.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle70.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle70.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle70.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle70.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle70.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle70;
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle22.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle22.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle22.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle22.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             poisonDataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle71.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle71.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle71.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle71.ForeColor = Color.FromArgb(136, 136, 136);
-            dataGridViewCellStyle71.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle71.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle71.WrapMode = DataGridViewTriState.False;
-            poisonDataGridView2.DefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle23.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle23.ForeColor = Color.FromArgb(136, 136, 136);
+            dataGridViewCellStyle23.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle23.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
+            poisonDataGridView2.DefaultCellStyle = dataGridViewCellStyle23;
             poisonDataGridView2.EnableHeadersVisualStyles = false;
             poisonDataGridView2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
             poisonDataGridView2.GridColor = Color.FromArgb(255, 255, 255);
             poisonDataGridView2.Location = new Point(36, 182);
             poisonDataGridView2.Name = "poisonDataGridView2";
             poisonDataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle72.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle72.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle72.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dataGridViewCellStyle72.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle72.SelectionBackColor = Color.FromArgb(0, 198, 247);
-            dataGridViewCellStyle72.SelectionForeColor = Color.FromArgb(17, 17, 17);
-            dataGridViewCellStyle72.WrapMode = DataGridViewTriState.True;
-            poisonDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle72;
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle24.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle24.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridViewCellStyle24.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle24.SelectionForeColor = Color.FromArgb(17, 17, 17);
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
+            poisonDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             poisonDataGridView2.RowHeadersWidth = 51;
             poisonDataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             poisonDataGridView2.RowTemplate.Height = 29;
@@ -5014,7 +4999,7 @@ namespace PRL
             label14.Image = C_PRL.Properties.Resources.icons8_filter_40;
             label14.Location = new Point(987, 58);
             label14.Name = "label14";
-            label14.Size = new Size(62, 30);
+            label14.Size = new Size(73, 37);
             label14.TabIndex = 31;
             label14.Text = "       ";
             // 
@@ -5043,7 +5028,7 @@ namespace PRL
             label15.ForeColor = SystemColors.ActiveCaptionText;
             label15.Location = new Point(803, 64);
             label15.Name = "label15";
-            label15.Size = new Size(54, 23);
+            label15.Size = new Size(67, 29);
             label15.TabIndex = 28;
             label15.Text = "Đến :";
             // 
@@ -5054,7 +5039,7 @@ namespace PRL
             label16.ForeColor = SystemColors.ActiveCaptionText;
             label16.Location = new Point(633, 64);
             label16.Name = "label16";
-            label16.Size = new Size(45, 23);
+            label16.Size = new Size(57, 29);
             label16.TabIndex = 28;
             label16.Text = "Từ :";
             // 
@@ -5069,7 +5054,7 @@ namespace PRL
             bigTextBox5.Multiline = false;
             bigTextBox5.Name = "bigTextBox5";
             bigTextBox5.ReadOnly = false;
-            bigTextBox5.Size = new Size(378, 41);
+            bigTextBox5.Size = new Size(378, 46);
             bigTextBox5.TabIndex = 26;
             bigTextBox5.TextAlignment = HorizontalAlignment.Left;
             bigTextBox5.UseSystemPasswordChar = false;
@@ -5081,7 +5066,7 @@ namespace PRL
             label17.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
             label17.Location = new Point(466, 56);
             label17.Name = "label17";
-            label17.Size = new Size(55, 30);
+            label17.Size = new Size(73, 38);
             label17.TabIndex = 27;
             label17.Text = "       ";
             // 
@@ -5162,7 +5147,7 @@ namespace PRL
             label10.ForeColor = SystemColors.ActiveCaptionText;
             label10.Location = new Point(803, 64);
             label10.Name = "label10";
-            label10.Size = new Size(54, 23);
+            label10.Size = new Size(67, 29);
             label10.TabIndex = 28;
             label10.Text = "Đến :";
             // 
@@ -5173,7 +5158,7 @@ namespace PRL
             label11.ForeColor = SystemColors.ActiveCaptionText;
             label11.Location = new Point(633, 64);
             label11.Name = "label11";
-            label11.Size = new Size(45, 23);
+            label11.Size = new Size(57, 29);
             label11.TabIndex = 28;
             label11.Text = "Từ :";
             // 
@@ -5188,7 +5173,7 @@ namespace PRL
             bigTextBox4.Multiline = false;
             bigTextBox4.Name = "bigTextBox4";
             bigTextBox4.ReadOnly = false;
-            bigTextBox4.Size = new Size(378, 41);
+            bigTextBox4.Size = new Size(378, 46);
             bigTextBox4.TabIndex = 26;
             bigTextBox4.TextAlignment = HorizontalAlignment.Left;
             bigTextBox4.UseSystemPasswordChar = false;
@@ -5200,7 +5185,7 @@ namespace PRL
             label12.Image = C_PRL.Properties.Resources.icons8_magnifying_glass_40;
             label12.Location = new Point(466, 56);
             label12.Name = "label12";
-            label12.Size = new Size(55, 30);
+            label12.Size = new Size(73, 38);
             label12.TabIndex = 27;
             label12.Text = "       ";
             // 
@@ -5212,7 +5197,7 @@ namespace PRL
             bigLabel5.ForeColor = Color.Crimson;
             bigLabel5.Location = new Point(829, 55);
             bigLabel5.Name = "bigLabel5";
-            bigLabel5.Size = new Size(225, 27);
+            bigLabel5.Size = new Size(270, 32);
             bigLabel5.TabIndex = 8;
             bigLabel5.Text = "Sửa / Hủy Phiếu Khám";
             // 
@@ -5224,7 +5209,7 @@ namespace PRL
             bigLabel6.ForeColor = Color.Crimson;
             bigLabel6.Location = new Point(569, 55);
             bigLabel6.Name = "bigLabel6";
-            bigLabel6.Size = new Size(175, 27);
+            bigLabel6.Size = new Size(210, 32);
             bigLabel6.TabIndex = 7;
             bigLabel6.Text = "Thêm Phiếu Khám";
             // 
@@ -5236,7 +5221,7 @@ namespace PRL
             bigLabel7.ForeColor = Color.Crimson;
             bigLabel7.Location = new Point(316, 58);
             bigLabel7.Name = "bigLabel7";
-            bigLabel7.Size = new Size(153, 27);
+            bigLabel7.Size = new Size(185, 32);
             bigLabel7.TabIndex = 6;
             bigLabel7.Text = "Xem Lịch Khám";
             // 
@@ -5282,15 +5267,14 @@ namespace PRL
             // 
             // Admin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1720, 782);
+            ClientSize = new Size(1722, 783);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);
             Controls.Add(Navigation);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Admin";
             Text = "1412_Team";
             WindowState = FormWindowState.Maximized;

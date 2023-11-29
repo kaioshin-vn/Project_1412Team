@@ -38,7 +38,7 @@ namespace B_BUS.Services
 
         public List<NhanVien> GetAllNhanVien()
         {
-            throw new NotImplementedException();
+            return _nvRepo.GetAllNhanVien();
         }
 
         public bool UpdateNhanVien(NhanVien nv)

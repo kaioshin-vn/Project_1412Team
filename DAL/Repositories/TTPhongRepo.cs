@@ -15,6 +15,7 @@ namespace A_DAL.Repositories
 
         public TTPhongRepo()
         {
+            
         }
 
         public TTPhongRepo(MyDbContext context)

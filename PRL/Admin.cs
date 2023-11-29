@@ -1,6 +1,7 @@
 ﻿using A_DAL.Repositories;
 using B_BUS.Services;
 using DAL.DBContext;
+using DAL.Enums;
 using DAL.Models;
 using PRL.Tool;
 using ReaLTaiizor.Controls;
@@ -30,7 +31,7 @@ namespace PRL
             user = staff;
             InitializeComponent();
             _dbcontext = new MyDbContext();
-            
+
         }
 
         public Admin()
@@ -261,7 +262,7 @@ namespace PRL
             var allDichVu = dichVuService.GetAllDichVu();
             foreach (var item in allDichVu)
             {
-                item.Gia = Math.Round( item.Gia / 100 * (100 - phanTramGiamGia));
+                item.Gia = Math.Round(item.Gia / 100 * (100 - phanTramGiamGia));
                 db.Update(item);
                 db.SaveChanges();
             }
@@ -549,39 +550,76 @@ namespace PRL
 
         private void DV_Btn_DungGiamGia_Click(object sender, EventArgs e)
         {
-            MyDbContext myDbContext = new MyDbContext();
-            var obj = myDbContext.GiamGias.FirstOrDefault(a => a.id == 1);
-            if (obj != null)
+            if (DialogResult.Yes == MessageBox.Show($"Bạn chắc chắn muốn dừng giảm giá?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
-                foreach (var item in myDbContext.DichVus.ToList())
+                MyDbContext myDbContext = new MyDbContext();
+                var obj = myDbContext.GiamGias.FirstOrDefault(a => a.id == 1);
+                if (obj != null)
                 {
-                    var phanTram = 100- obj.PhanTramGiamGia;
-                    item.Gia =Math.Round( (item.Gia / Convert.ToDouble( phanTram) * 100));
+                    foreach (var item in myDbContext.DichVus.ToList())
+                    {
+                        var phanTram = 100 - obj.PhanTramGiamGia;
+                        item.Gia = Math.Round((item.Gia / Convert.ToDouble(phanTram) * 100));
+                    }
+                    obj.TrangThai = false;
+                    myDbContext.SaveChanges();
                 }
-                obj.TrangThai = false;
-                myDbContext.SaveChanges();
+                MessageBox.Show($"Đã dừng giảm giá", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DV_Btn_GiamGia.Visible = true;
+                Giap_LoadDichVu();
             }
-            MessageBox.Show($"Đã dừng giảm giá", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DV_Btn_GiamGia.Visible = true;
-            Giap_LoadDichVu();
+
         }
 
         private void NV_Btn_Them_Click(object sender, EventArgs e)
         {
             var nv = new NhanVien();
-            nv.Ten = NV_Text_HoTen.Text;
-            nv.DiaChi = NV_Txt_DiaChi.Text;
-            nv.SoDienThoai = NV_Txt_Sdt.Text;
-            nv.GioiTinh = NV_Combo_GioiTinh.SelectedItem.ToString();
-            nv.ChucVu = NV_combo_ChucVu.SelectedItem.ToString();
-            var option = MessageBox.Show("Xác nhận có muốn thêm!", "Thông báo!", MessageBoxButtons.YesNoCancel);
-            if (option == DialogResult.Yes)
+            nv.Ten = NV_Text_HoTen.TextButton;
+            nv.DiaChi = NV_Txt_DiaChi.TextButton;
+            nv.SoDienThoai = NV_Txt_Sdt.TextButton;
+            nv.MatKhau = NV_Txt_MatKhau.TextButton;
+            var gioiTinh = false;
+            if (NV_Combo_GioiTinh.Text == "Nam")
             {
-                Tho_nvService.AddNhanVien(nv);
-                MessageBox.Show("Thêm thành công!", "Thông báo!");
-                LoadDataNV();
+                gioiTinh = true;
             }
-            MessageBox.Show("Thêm thất bại!", "Thông báo!");
+            nv.GioiTinh = gioiTinh;
+            var chucVu = LoaiNhanVien.BacSi;
+            if (NV_combo_ChucVu.Text == "Y Tá")
+            {
+                chucVu = LoaiNhanVien.YTa;
+            }
+            nv.ChucVu = chucVu;
+            nv.HienThi = true;
+            nv.NgaySinh = NV_DateTime_NgaySinh.Value;
+            if (Giap_CheckTrong(NV_Text_HoTen.TextButton) || Giap_CheckTrong(NV_Txt_DiaChi.TextButton) || Giap_CheckTrong(NV_Txt_Sdt.TextButton) || Giap_CheckTrong(NV_Txt_MatKhau.TextButton))
+            {
+
+                MessageBox.Show($"Không được bỏ trống các ô thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Regex.IsMatch(NV_Txt_Sdt.TextButton, "^0[0-9]{9}$"))
+            {
+                MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (Tho_nvService.GetAllNhanVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton))
+            {
+                MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var option = MessageBox.Show("Xác nhận có muốn thêm!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+                if (option == DialogResult.Yes)
+                {
+                    Tho_nvService.AddNhanVien(nv);
+                    MessageBox.Show($"Đã thêm thành công dịch vụ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataNV();
+                }
+            }
+
+
+
+
+
         }
         private void LoadDataNV()
         {
@@ -596,38 +634,64 @@ namespace PRL
             NV_GridView.Columns[6].Name = "Chức Vụ";
             NV_GridView.Columns[7].Name = "Ngày Sinh";
             NV_GridView.Columns[8].Name = "Password";
-            NV_GridView.Columns[1].Visible = true;
-            NV_GridView.Columns[8].Visible = true;
-            
-            foreach (var item in Tho_nvService.GetAllNhanVien(null))
-            {
-                NV_GridView.Rows.Add(stt++, item.IdNhanVien, item.Ten,item.DiaChi,item.SoDienThoai, item.ChucVu,item.ChucVu, item.NgaySinh,item.MatKhau);
-            }
+            NV_GridView.Columns[1].Visible = false;
+            NV_GridView.Columns[8].Visible = false;
+
+
             NV_GridView.Rows.Clear();
+
+            foreach (var item in Tho_nvService.GetAllNhanVien().Where(a => a.HienThi == true))
+            {
+                var ChucVu = "Bác Sĩ";
+                if (item.ChucVu == LoaiNhanVien.BacSi)
+                {
+                    ChucVu = "Y Tá";
+                }
+                var gioiTinh = "Nam";
+                if (item.GioiTinh == false)
+                {
+                    gioiTinh = "Nữ";
+                }
+                NV_GridView.Rows.Add(stt++, item.IdNhanVien, item.Ten, item.DiaChi, item.SoDienThoai, gioiTinh, ChucVu, item.NgaySinh.Value.ToString("dd/MM/yyyy"), item.MatKhau);
+            }
+
+
         }
 
         private void NV_Txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
-            string search = NV_Txt_TimKiem.Text;
-            Tho_nvService.GetAllNhanVien(search);
-            LoadDataNV();
+            
         }
 
         private void NV_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 && e.RowIndex > NV_GridView.Rows.Count)
+            if (e.RowIndex < 0 || e.RowIndex > NV_GridView.Rows.Count)
             {
                 return;
             }
             int rowIndex = e.RowIndex;
+            if (NV_GridView.Rows[rowIndex].Cells[1].Value == null)
+            {
+                return;
+            }
             iWhenClick = Guid.Parse(NV_GridView.Rows[rowIndex].Cells[1].Value.ToString());
-            var clone = Tho_nvService.GetAllNhanVien(null).FirstOrDefault(x => x.IdNhanVien == iWhenClick);
+            var clone = Tho_nvService.GetAllNhanVien().FirstOrDefault(x => x.IdNhanVien == iWhenClick);
+            NhanVienDuocChon = clone;
             NV_Text_HoTen.TextButton = clone.Ten;
             NV_Txt_DiaChi.TextButton = clone.DiaChi;
-            NV_Sdt.Text = clone.SoDienThoai;
-            NV_Combo_GioiTinh.Text = clone.GioiTinh.ToString();
-            NV_combo_ChucVu.Text = clone.ChucVu.ToString();
-            NV_DateTime_NgaySinh.Text = clone.NgaySinh.ToString();
+            NV_Txt_Sdt.TextButton = clone.SoDienThoai;
+            NV_Txt_MatKhau.TextButton = clone.MatKhau;
+            NV_Combo_GioiTinh.Text = "Nữ";
+            if (clone.GioiTinh == true)
+            {
+                NV_Combo_GioiTinh.Text = "Nam";
+            }
+            NV_combo_ChucVu.Text = "Bác Sĩ";
+            if (clone.ChucVu == LoaiNhanVien.YTa)
+            {
+                NV_combo_ChucVu.Text = "Y Tá";
+            }
+            NV_DateTime_NgaySinh.Value = clone.NgaySinh.Value;
 
         }
 
@@ -638,21 +702,56 @@ namespace PRL
         //}
         private void NV_Btn_Sua_Click(object sender, EventArgs e)
         {
-            var nv = new NhanVien();
-            nv.IdNhanVien = iWhenClick;
-            nv.Ten = NV_Text_HoTen.Text;
-            nv.DiaChi = NV_Txt_DiaChi.Text;
-            nv.SoDienThoai = NV_Txt_Sdt.Text;
-            nv.GioiTinh = NV_Combo_GioiTinh.SelectedItem.ToString();
-            nv.ChucVu = NV_combo_ChucVu.SelectedItem.ToString();
-            var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
-            if (option == DialogResult.Yes)
+            var nv = NhanVienDuocChon;
+            if (nv != null)
             {
-                Tho_nvService.UpdateNhanVien(nv);
-                MessageBox.Show("Sửa thành công!","Thông báo!");
-                LoadDataNV();
+                nv.IdNhanVien = iWhenClick;
+                nv.Ten = NV_Text_HoTen.TextButton;
+                nv.DiaChi = NV_Txt_DiaChi.TextButton;
+                nv.SoDienThoai = NV_Txt_Sdt.TextButton;
+                nv.MatKhau = NV_Txt_MatKhau.TextButton;
+                var gioiTinh = false;
+                if (NV_Combo_GioiTinh.Text == "Nam")
+                {
+                    gioiTinh = true;
+                }
+                nv.GioiTinh = gioiTinh;
+                var chucVu = LoaiNhanVien.BacSi;
+                if (NV_combo_ChucVu.Text == "Y Tá")
+                {
+                    chucVu = LoaiNhanVien.YTa;
+                }
+                nv.ChucVu = chucVu;
+                nv.HienThi = true;
+                nv.NgaySinh = NV_DateTime_NgaySinh.Value;
+                if (Giap_CheckTrong(NV_Text_HoTen.TextButton) || Giap_CheckTrong(NV_Txt_DiaChi.TextButton) || Giap_CheckTrong(NV_Txt_Sdt.TextButton) || Giap_CheckTrong(NV_Txt_MatKhau.TextButton))
+                {
+                    MessageBox.Show($"Không được bỏ trống các ô thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!Regex.IsMatch(NV_Txt_Sdt.TextButton, "^0[0-9]{9}$"))
+                {
+                    MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Tho_nvService.GetAllNhanVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton && nv.SoDienThoai != a.SoDienThoai))
+                {
+                    MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+                    if (option == DialogResult.Yes)
+                    {
+                        Tho_nvService.UpdateNhanVien(nv);
+                        MessageBox.Show($"Đã sửa thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadDataNV();
+                    }
+                }
             }
-            MessageBox.Show("Sửa thất bại!", "Thông báo!");
+            else
+            {
+                MessageBox.Show($"Chưa chọn nhân viên !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
 
         private void KH_Btn_Them_Click(object sender, EventArgs e)
@@ -668,6 +767,66 @@ namespace PRL
         private void KH_Btn_An_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void NV_Btn_An_Click(object sender, EventArgs e)
+        {
+            var nv = NhanVienDuocChon;
+            if (nv != null)
+            {
+                var option = MessageBox.Show("Xác nhận có muốn ẩn!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+                if (option == DialogResult.Yes)
+                {
+                    nv.HienThi = false;
+                    Tho_nvService.UpdateNhanVien(nv);
+                    MessageBox.Show($"Đã ẩn thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataNV();
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Chưa chọn nhân viên !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void NV_Txt_TimKiem_Click(object sender, EventArgs e)
+        {
+            NV_Txt_TimKiem.Text = "";
+        }
+
+        private void NV_Btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            int stt = 1;
+            NV_GridView.ColumnCount = 9;
+            NV_GridView.Columns[0].Name = "STT";
+            NV_GridView.Columns[1].Name = "ID";
+            NV_GridView.Columns[2].Name = "Họ Tên";
+            NV_GridView.Columns[3].Name = "Địa Chỉ";
+            NV_GridView.Columns[4].Name = "SDT";
+            NV_GridView.Columns[5].Name = "Giới Tính";
+            NV_GridView.Columns[6].Name = "Chức Vụ";
+            NV_GridView.Columns[7].Name = "Ngày Sinh";
+            NV_GridView.Columns[8].Name = "Password";
+            NV_GridView.Columns[1].Visible = false;
+            NV_GridView.Columns[8].Visible = false;
+
+
+            NV_GridView.Rows.Clear();
+
+            foreach (var item in Tho_nvService.GetAllNhanVien().Where(a => a.HienThi == true && a.Ten.ToLower().Contains(NV_Txt_TimKiem.Text.ToLower()))) 
+            {
+                var ChucVu = "Bác Sĩ";
+                if (item.ChucVu == LoaiNhanVien.BacSi)
+                {
+                    ChucVu = "Y Tá";
+                }
+                var gioiTinh = "Nam";
+                if (item.GioiTinh == false)
+                {
+                    gioiTinh = "Nữ";
+                }
+                NV_GridView.Rows.Add(stt++, item.IdNhanVien, item.Ten, item.DiaChi, item.SoDienThoai, gioiTinh, ChucVu, item.NgaySinh.Value.ToString("dd/MM/yyyy"), item.MatKhau);
+            }
         }
     }
 }
