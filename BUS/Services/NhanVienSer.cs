@@ -27,9 +27,13 @@ namespace B_BUS.Services
             return _nvRepo.FindNhanVienId(id);
         }
 
-        public List<NhanVien> GetAllNhanVien()
+        public List<NhanVien> GetAllNhanVien(string search)
         {
-            return _nvRepo.GetAllNhanVien().ToList();
+            if(search == null)
+            {
+                return _nvRepo.GetAllNhanVien().ToList();
+            }
+            return _nvRepo.GetAllNhanVien().Where(x => x.Ten.Trim().ToLower().Contains(search) || x.SoDienThoai.Trim().Contains(search)).ToList();
         }
 
         public bool UpdateNhanVien(NhanVien nv)
