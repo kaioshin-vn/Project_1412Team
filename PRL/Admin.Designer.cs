@@ -1537,7 +1537,6 @@ namespace PRL
             // Panel_DV
             // 
             Panel_DV.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Panel_DV.Controls.Add(comboBox1);
             Panel_DV.Controls.Add(DV_Btn_DungGiamGia);
             Panel_DV.Controls.Add(DV_Btn_OkThem);
             Panel_DV.Controls.Add(DV_Btn_OKSua);

@@ -36,6 +36,11 @@ namespace B_BUS.Services
             return _nvRepo.GetAllNhanVien().Where(x => x.Ten.Trim().ToLower().Contains(search) || x.SoDienThoai.Trim().Contains(search)).ToList();
         }
 
+        public List<NhanVien> GetAllNhanVien()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool UpdateNhanVien(NhanVien nv)
         {
             var clone = _nvRepo.GetAllNhanVien().FirstOrDefault(x => x.IdNhanVien == nv.IdNhanVien);
