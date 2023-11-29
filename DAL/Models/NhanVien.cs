@@ -24,11 +24,10 @@ namespace DAL.Models
         [Required]
         public DateTime? NgaySinh { get; set; }
         [Required]
-        public bool GioiTinh { get; set; }
+        public string? GioiTinh { get; set; }
         public bool? HienThi { get; set; } // ẩn hiện
-        
         [Required]
-        public LoaiNhanVien ChucVu { get; set;}
+        public string ChucVu { get; set;}
         public bool? TrangThai { get; set;} // trạng thái
 
         [Required]
