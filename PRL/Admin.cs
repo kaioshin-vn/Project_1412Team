@@ -18,6 +18,12 @@ namespace PRL
     {
         private readonly NhanVienSer Tho_nvService = new NhanVienSer();
         private readonly MyDbContext _dbcontext;
+        private readonly LuongSer Quan_lSer = new LuongSer();
+        private readonly NhanVienSer Quan_nvSer = new NhanVienSer();
+        private readonly HoaDonService Quan_hdSer = new HoaDonService();
+        private readonly HoaDonChiTietService Quan_hdctSer = new HoaDonChiTietService();
+        private readonly KhachHangService Quan_khSer = new KhachHangService();
+        private readonly PhieuKhamSer Quan_pkSer = new PhieuKhamSer();
         private Guid iWhenClick;
         public Admin(NhanVien staff, Login login)
         {
@@ -25,7 +31,7 @@ namespace PRL
             user = staff;
             InitializeComponent();
             _dbcontext = new MyDbContext();
-            
+
         }
 
         public Admin()
@@ -33,6 +39,9 @@ namespace PRL
             user = new NhanVien();
             FormLogin = new Login();
             InitializeComponent();
+            cmbDate();
+            LoadChiTieu();
+            LoadDoanhThu();
         }
 
         /// Thuộc tính thêm vào
@@ -225,10 +234,10 @@ namespace PRL
             NV_GridView.Columns[8].Name = "Password";
             NV_GridView.Columns[1].Visible = true;
             NV_GridView.Columns[8].Visible = true;
-            
+
             foreach (var item in Tho_nvService.GetAllNhanVien(null))
             {
-                NV_GridView.Rows.Add(stt++, item.IdNhanVien, item.Ten,item.DiaChi,item.SoDienThoai, item.ChucVu,item.ChucVu, item.NgaySinh,item.MatKhau);
+                NV_GridView.Rows.Add(stt++, item.IdNhanVien, item.Ten, item.DiaChi, item.SoDienThoai, item.ChucVu, item.ChucVu, item.NgaySinh, item.MatKhau);
             }
             NV_GridView.Rows.Clear();
         }
@@ -276,10 +285,69 @@ namespace PRL
             if (option == DialogResult.Yes)
             {
                 Tho_nvService.UpdateNhanVien(nv);
-                MessageBox.Show("Sửa thành công!","Thông báo!");
+                MessageBox.Show("Sửa thành công!", "Thông báo!");
                 LoadDataNV();
             }
             MessageBox.Show("Sửa thất bại!", "Thông báo!");
+        }
+        public void LoadChiTieu()
+        {
+            int stt = 1;
+            ThongKe_GrView_ChiTieu.ColumnCount = 6;
+            ThongKe_GrView_ChiTieu.Columns[0].Name = "STT";
+            ThongKe_GrView_ChiTieu.Columns[1].Name = "Tên Nhân Viên";
+            ThongKe_GrView_ChiTieu.Columns[2].Name = "Chức Vụ";
+            ThongKe_GrView_ChiTieu.Columns[3].Name = "Số Ca";
+            ThongKe_GrView_ChiTieu.Columns[4].Name = "Lương";
+            ThongKe_GrView_ChiTieu.Columns[1].Visible = true;
+            ThongKe_GrView_ChiTieu.Columns[5].Visible = true;
+
+            foreach (var item in Quan_lSer.GetAllLuong())
+            {
+                ThongKe_GrView_ChiTieu.Rows.Add(stt++, (item.NhanVien).Ten, (item.NhanVien).ChucVu, item.SoCong, (item.SoCong) * 300000);
+            }
+            ThongKe_GrView_ChiTieu.Rows.Clear();
+        }
+        public void LoadDoanhThu()
+        {
+            int stt = 1;
+            ThongKe_GrView_DoanhThu.ColumnCount = 5;
+            ThongKe_GrView_DoanhThu.Columns[0].Name = "STT";
+            ThongKe_GrView_DoanhThu.Columns[1].Name = "Tên Khách Hàng";
+            ThongKe_GrView_DoanhThu.Columns[2].Name = "Giá";
+            ThongKe_GrView_DoanhThu.Columns[3].Visible = true;
+            ThongKe_GrView_DoanhThu.Columns[4].Visible = true;
+
+            foreach (var item in Quan_pkSer.GetAllPhieuKham())
+            {
+                ThongKe_GrView_DoanhThu.Rows.Add(stt++, ((item.IdKhachHang).Equals(Name)), (item.Service).Gia);
+            }
+            ThongKe_GrView_DoanhThu.Rows.Clear();
+        }
+        public void cmbDate()
+        {
+            ThongKe_Combo_LocNam.DataSource = new List<string>
+            {
+                "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"
+            };
+            ThongKe_Combo_LocThang.DataSource = new List<string>
+            {
+                "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
+            };
+        }
+        public void TinhToanLai()
+        {
+            
+        }
+
+        private void ThongKe_GrView_ChiTieu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ThongKe_Btn_Loc_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
