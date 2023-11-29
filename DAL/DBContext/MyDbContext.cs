@@ -37,7 +37,7 @@ namespace DAL.DBContext
         public DbSet<GiamGia> GiamGias { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-O08I15N\SQLEXPRESS01;Initial Catalog=DuAn1;Integrated Security=True;TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1_C#;Integrated Security=True;TrustServerCertificate=true");
             //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1_C#;Integrated Security=True ; TrustServerCertificate=true");
         }
 
