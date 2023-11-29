@@ -25,7 +25,7 @@ namespace B_BUS.Services
         }
         public bool AddDichVu(DichVu dv)
         {
-            if (_repo.AddDichVu(dv))
+            if (_repo.AddDichVu(dv) != null)
             {
                 return true;
             }
@@ -44,12 +44,9 @@ namespace B_BUS.Services
         public bool DeleteDichVu(DichVu dv)
         {
             var clone = _repo.GetAllDichVu().FirstOrDefault(x => x.IdDichVu == dv.IdDichVu);
-            if (clone !=null)
+            if (_repo.DeleteDichVu(clone) == true)
             {
-                if (_repo.DeleteDichVu(clone) == true)
-                {
-                    return true;
-                }
+                return true;
             }
             return false;
 

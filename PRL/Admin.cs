@@ -23,15 +23,18 @@ namespace PRL
     {
         KhachHangService phong_khachhangsv = new KhachHangService();
         private readonly NhanVienSer Tho_nvService = new NhanVienSer();
-        private readonly MyDbContext _dbcontext;
+        private readonly LuongSer Quan_lSer = new LuongSer();
+        private readonly NhanVienSer Quan_nvSer = new NhanVienSer();
+        private readonly HoaDonService Quan_hdSer = new HoaDonService();
+        private readonly HoaDonChiTietService Quan_hdctSer = new HoaDonChiTietService();
+        private readonly KhachHangService Quan_khSer = new KhachHangService();
+        private readonly PhieuKhamSer Quan_pkSer = new PhieuKhamSer();
         private Guid iWhenClick;
         public Admin(NhanVien staff, Login login)
         {
             FormLogin = login;
             user = staff;
             InitializeComponent();
-            _dbcontext = new MyDbContext();
-
         }
 
         public Admin()
@@ -39,6 +42,9 @@ namespace PRL
             user = new NhanVien();
             FormLogin = new Login();
             InitializeComponent();
+            //cmbDate();
+            //LoadChiTieu();
+            //LoadDoanhThu();
         }
 
         /// Thuộc tính thêm vào
@@ -56,35 +62,7 @@ namespace PRL
         CaKham? CaKhamDuocChon = null;
         KhachHang? KhachHangDuocChon = null;
         ///
-        public void PHONG_LoadDataKH(List<KhachHang> data)
-        {
-            KH_GridView.Rows.Clear();
-            int stt = 1;
-            KH_GridView.ColumnCount = 7;
-            KH_GridView.Columns[0].Name = "STT";
-            KH_GridView.Columns[1].Name = "Họ tên";
-            KH_GridView.Columns[2].Name = "Địa chỉ";
-            KH_GridView.Columns[3].Name = "Số điện thoại";
-            KH_GridView.Columns[4].Name = "Giới tính";
-            KH_GridView.Columns[5].Name = "Ngày sinh";
-            KH_GridView.Columns[6].Name = "Id";
-            KH_GridView.Columns[6].Visible = false;
-            foreach (var item in data)
-            {
-                KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, item.GioiTinh, item.NgaySinh, item.IdKhachHang);
-            }
-        }
-        private void KH_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            var selectedKH = KH_GridView.Rows[index];
-            KH_Txt_HoTen.Text = selectedKH.Cells[1].Value.ToString();
-            KH_Txt_DiaChi.Text = selectedKH.Cells[2].Value.ToString();
-            KH_Txt_Sdt.Text = selectedKH.Cells[3].Value.ToString();
-            KH_Combo_GioiTinh.Text = selectedKH.Cells[4].Value.ToString();
-            KH_DateTime_NgaySinh.Text = selectedKH.Cells[5].Value.ToString();
-            var kh = phong_khachhangsv.FindKhachHang(selectedKH.Cells[6].Value.ToString());
-        }
+        
         private void Admin_Load(object sender, EventArgs e)
         {
             // Panel_DV.Visible = false;
@@ -753,18 +731,130 @@ namespace PRL
             }
 
         }
-
+        public void PHONG_LoadDataKH()
+        {
+            KH_GridView.Rows.Clear();
+            int stt = 1;
+            KH_GridView.ColumnCount = 7;
+            KH_GridView.Columns[0].Name = "STT";
+            KH_GridView.Columns[1].Name = "Họ tên";
+            KH_GridView.Columns[2].Name = "Địa chỉ";
+            KH_GridView.Columns[3].Name = "Số điện thoại";
+            KH_GridView.Columns[4].Name = "Giới tính";
+            KH_GridView.Columns[5].Name = "Ngày sinh";
+            KH_GridView.Columns[6].Name = "Id";
+            KH_GridView.Columns[6].Visible = false;
+            foreach (var item in phong_khachhangsv.GetAllKhachHang(null))
+            {
+                KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, item.GioiTinh, item.NgaySinh, item.IdKhachHang);
+            }
+        }
+        private void KH_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 && e.RowIndex > KH_GridView.Rows.Count)
+            {
+                return;
+            }
+            int index = e.RowIndex;
+            var selectedKH = KH_GridView.Rows[index];
+            KH_Txt_HoTen.Text = selectedKH.Cells[1].Value.ToString();
+            KH_Txt_DiaChi.Text = selectedKH.Cells[2].Value.ToString();
+            KH_Txt_Sdt.Text = selectedKH.Cells[3].Value.ToString();
+            KH_Combo_GioiTinh.Text = selectedKH.Cells[4].Value.ToString();
+            KH_DateTime_NgaySinh.Text = selectedKH.Cells[5].Value.ToString();
+            var kh = phong_khachhangsv.FindKhachHang(selectedKH.Cells[6].Value.ToString());
+        }
         private void KH_Btn_Them_Click(object sender, EventArgs e)
         {
-
+            var kh = new KhachHang();
+            kh.Ten = KH_Txt_HoTen.Text;
+            kh.DiaChi = KH_Txt_DiaChi.Text;
+            kh.SoDienThoai = KH_Txt_Sdt.Text;
+            //kh.GioiTinh = KH_Combo_GioiTinh.SelectedItem.ToString();
+            kh.NgaySinh = DateTime.Parse(KH_DateTime_NgaySinh.Text);
+            var option = MessageBox.Show("Xác nhận có muốn thêm!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                phong_khachhangsv.AddKhachHang(kh);
+                MessageBox.Show("Thêm thành công!", "Thông báo!");
+                PHONG_LoadDataKH();
+            }
+            MessageBox.Show("Thêm thất bại!", "Thông báo!");
         }
 
         private void KH_Btn_Sua_Click(object sender, EventArgs e)
         {
+            var kh = new KhachHang();
+            kh.Ten = KH_Txt_HoTen.Text;
+            kh.DiaChi = KH_Txt_DiaChi.Text;
+            kh.SoDienThoai = KH_Txt_Sdt.Text;
+            //kh.GioiTinh = KH_Combo_GioiTinh.SelectedItem.ToString();
+            kh.NgaySinh = DateTime.Parse(KH_DateTime_NgaySinh.Text);
+            var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                phong_khachhangsv.UpdateKhachHang(kh);
+                MessageBox.Show("Sửa thành công!", "Thông báo!");
+                PHONG_LoadDataKH();
+            }
+            MessageBox.Show("Sửa thất bại!", "Thông báo!");
+        }
+        public void LoadChiTieu()
+        {
+            int stt = 1;
+            ThongKe_GrView_ChiTieu.ColumnCount = 6;
+            ThongKe_GrView_ChiTieu.Columns[0].Name = "STT";
+            ThongKe_GrView_ChiTieu.Columns[1].Name = "Tên Nhân Viên";
+            ThongKe_GrView_ChiTieu.Columns[2].Name = "Chức Vụ";
+            ThongKe_GrView_ChiTieu.Columns[3].Name = "Số Ca";
+            ThongKe_GrView_ChiTieu.Columns[4].Name = "Lương";
+            ThongKe_GrView_ChiTieu.Columns[1].Visible = true;
+            ThongKe_GrView_ChiTieu.Columns[5].Visible = true;
+
+            foreach (var item in Quan_lSer.GetAllLuong())
+            {
+                ThongKe_GrView_ChiTieu.Rows.Add(stt++, (item.NhanVien).Ten, (item.NhanVien).ChucVu, item.SoCong, (item.SoCong) * 300000);
+            }
+            ThongKe_GrView_ChiTieu.Rows.Clear();
+        }
+        public void LoadDoanhThu()
+        {
+            int stt = 1;
+            ThongKe_GrView_DoanhThu.ColumnCount = 5;
+            ThongKe_GrView_DoanhThu.Columns[0].Name = "STT";
+            ThongKe_GrView_DoanhThu.Columns[1].Name = "Tên Khách Hàng";
+            ThongKe_GrView_DoanhThu.Columns[2].Name = "Giá";
+            ThongKe_GrView_DoanhThu.Columns[3].Visible = true;
+            ThongKe_GrView_DoanhThu.Columns[4].Visible = true;
+
+            foreach (var item in Quan_pkSer.GetAllPhieuKham())
+            {
+                ThongKe_GrView_DoanhThu.Rows.Add(stt++, ((item.IdKhachHang).Equals(Name)), (item.Service).Gia);
+            }
+            ThongKe_GrView_DoanhThu.Rows.Clear();
+        }
+        public void cmbDate()
+        {
+            ThongKe_Combo_LocNam.DataSource = new List<string>
+            {
+                "2018", "2019", "2020", "2021", "2022", "2023"
+            };
+            ThongKe_Combo_LocThang.DataSource = new List<string>
+            {
+                "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
+            };
+        }
+        public void TinhToanLai()
+        {
+            
+        }
+
+        private void ThongKe_GrView_ChiTieu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-        private void KH_Btn_An_Click(object sender, EventArgs e)
+        private void ThongKe_Btn_Loc_Click(object sender, EventArgs e)
         {
 
         }

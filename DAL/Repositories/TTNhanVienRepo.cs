@@ -57,7 +57,7 @@ namespace A_DAL.Repositories
                 updateTTNhanVien.Ngay = trangThaiNhanVien.Ngay;
                 updateTTNhanVien.PhieuKham = trangThaiNhanVien.PhieuKham;
                 updateTTNhanVien.NhanVien = trangThaiNhanVien.NhanVien;
-                updateTTNhanVien.CaKham = trangThaiNhanVien.CaKham;
+                //updateTTNhanVien.CaKham = trangThaiNhanVien.CaKham;
                 _context.TrangThaiNhanViens.Update(updateTTNhanVien);
                 _context.SaveChanges();
                 return true;
