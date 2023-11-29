@@ -72,7 +72,6 @@ namespace PRL
             KH_Btn_Them = new ButtonCustom();
             KH_GridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             KH_Grbox = new ReaLTaiizor.Controls.CyberGroupBox();
-            KH_Combo_NgaySinh = new ReaLTaiizor.Controls.AloneComboBox();
             dungeonHeaderLabel26 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             KH_Combo_GioiTinh = new ReaLTaiizor.Controls.AloneComboBox();
             KH_Txt_Sdt = new ReaLTaiizor.Controls.CyberRichTextBox();
@@ -90,7 +89,7 @@ namespace PRL
             NV_Btn_Them = new ButtonCustom();
             NV_Btn_TimKiem = new Label();
             NV_GrBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            NV_Combo_NgaySinh = new ReaLTaiizor.Controls.DungeonComboBox();
+            NV_DateTime_NgaySinh = new ReaLTaiizor.Controls.PoisonDateTime();
             dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             NV_Combo_GioiTinh = new ReaLTaiizor.Controls.DungeonComboBox();
             NV_Btn_XemLuong = new ButtonCustom();
@@ -323,6 +322,7 @@ namespace PRL
             ThongKe_Elipse = new Bunifu.Framework.UI.BunifuElipse(components);
             ThongKe_ElispeGrView_ChiTieu = new Bunifu.Framework.UI.BunifuElipse(components);
             TT_ElipseGrView_DaThanhToan = new Bunifu.Framework.UI.BunifuElipse(components);
+            KH_DateTime_NgaySinh = new ReaLTaiizor.Controls.PoisonDateTime();
             name_clinic.SuspendLayout();
             Navigation.SuspendLayout();
             Panel_KH.SuspendLayout();
@@ -639,7 +639,7 @@ namespace PRL
             KH_Grbox.ColorLighting = Color.FromArgb(29, 200, 238);
             KH_Grbox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             KH_Grbox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            KH_Grbox.Controls.Add(KH_Combo_NgaySinh);
+            KH_Grbox.Controls.Add(KH_DateTime_NgaySinh);
             KH_Grbox.Controls.Add(dungeonHeaderLabel26);
             KH_Grbox.Controls.Add(KH_Combo_GioiTinh);
             KH_Grbox.Controls.Add(KH_Txt_Sdt);
@@ -666,18 +666,6 @@ namespace PRL
             KH_Grbox.Tag = "Cyber";
             KH_Grbox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             KH_Grbox.Timer_RGB = 300;
-            // 
-            // KH_Combo_NgaySinh
-            // 
-            KH_Combo_NgaySinh.DrawMode = DrawMode.OwnerDrawFixed;
-            KH_Combo_NgaySinh.DropDownStyle = ComboBoxStyle.DropDownList;
-            KH_Combo_NgaySinh.EnabledCalc = true;
-            KH_Combo_NgaySinh.FormattingEnabled = true;
-            KH_Combo_NgaySinh.ItemHeight = 20;
-            KH_Combo_NgaySinh.Location = new Point(222, 471);
-            KH_Combo_NgaySinh.Name = "KH_Combo_NgaySinh";
-            KH_Combo_NgaySinh.Size = new Size(171, 26);
-            KH_Combo_NgaySinh.TabIndex = 11;
             // 
             // dungeonHeaderLabel26
             // 
@@ -979,7 +967,7 @@ namespace PRL
             NV_GrBox.ColorLighting = Color.FromArgb(29, 200, 238);
             NV_GrBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             NV_GrBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            NV_GrBox.Controls.Add(NV_Combo_NgaySinh);
+            NV_GrBox.Controls.Add(NV_DateTime_NgaySinh);
             NV_GrBox.Controls.Add(dungeonHeaderLabel2);
             NV_GrBox.Controls.Add(NV_Combo_GioiTinh);
             NV_GrBox.Controls.Add(NV_Btn_XemLuong);
@@ -1012,33 +1000,14 @@ namespace PRL
             NV_GrBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             NV_GrBox.Timer_RGB = 300;
             // 
-            // NV_Combo_NgaySinh
+            // NV_DateTime_NgaySinh
             // 
-            NV_Combo_NgaySinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NV_Combo_NgaySinh.BackColor = Color.FromArgb(246, 246, 246);
-            NV_Combo_NgaySinh.ColorA = Color.FromArgb(246, 132, 85);
-            NV_Combo_NgaySinh.ColorB = Color.FromArgb(231, 108, 57);
-            NV_Combo_NgaySinh.ColorC = Color.FromArgb(242, 241, 240);
-            NV_Combo_NgaySinh.ColorD = Color.FromArgb(253, 252, 252);
-            NV_Combo_NgaySinh.ColorE = Color.FromArgb(239, 237, 236);
-            NV_Combo_NgaySinh.ColorF = Color.FromArgb(180, 180, 180);
-            NV_Combo_NgaySinh.ColorG = Color.FromArgb(119, 119, 118);
-            NV_Combo_NgaySinh.ColorH = Color.FromArgb(224, 222, 220);
-            NV_Combo_NgaySinh.ColorI = Color.FromArgb(250, 249, 249);
-            NV_Combo_NgaySinh.DrawMode = DrawMode.OwnerDrawFixed;
-            NV_Combo_NgaySinh.DropDownHeight = 100;
-            NV_Combo_NgaySinh.DropDownStyle = ComboBoxStyle.DropDownList;
-            NV_Combo_NgaySinh.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            NV_Combo_NgaySinh.ForeColor = Color.FromArgb(76, 76, 97);
-            NV_Combo_NgaySinh.FormattingEnabled = true;
-            NV_Combo_NgaySinh.HoverSelectionColor = Color.Empty;
-            NV_Combo_NgaySinh.IntegralHeight = false;
-            NV_Combo_NgaySinh.ItemHeight = 20;
-            NV_Combo_NgaySinh.Location = new Point(214, 538);
-            NV_Combo_NgaySinh.Name = "NV_Combo_NgaySinh";
-            NV_Combo_NgaySinh.Size = new Size(170, 26);
-            NV_Combo_NgaySinh.StartIndex = 0;
-            NV_Combo_NgaySinh.TabIndex = 19;
+            NV_DateTime_NgaySinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_DateTime_NgaySinh.Location = new Point(214, 537);
+            NV_DateTime_NgaySinh.MinimumSize = new Size(0, 30);
+            NV_DateTime_NgaySinh.Name = "NV_DateTime_NgaySinh";
+            NV_DateTime_NgaySinh.Size = new Size(170, 30);
+            NV_DateTime_NgaySinh.TabIndex = 19;
             // 
             // dungeonHeaderLabel2
             // 
@@ -1523,7 +1492,7 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_DV);
+            Content.Controls.Add(Panel_KH);
             Content.Location = new Point(276, 56);
             Content.Name = "Content";
             Content.Size = new Size(1768, 908);
@@ -2231,7 +2200,6 @@ namespace PRL
             bigLabel20.Size = new Size(230, 57);
             bigLabel20.TabIndex = 1;
             bigLabel20.Text = "Doanh Thu";
-
             // 
             // ThongKe_GrView_ChiTieu
             // 
@@ -3217,7 +3185,6 @@ namespace PRL
             bigLabel12.Size = new Size(85, 57);
             bigLabel12.TabIndex = 1;
             bigLabel12.Text = "     ";
-
             // 
             // cyberGroupBox3
             // 
@@ -3429,7 +3396,6 @@ namespace PRL
             Panel_TK.Size = new Size(1763, 906);
             Panel_TK.TabIndex = 0;
             Panel_TK.Visible = false;
-
             // 
             // buttonCustom14
             // 
@@ -5269,6 +5235,15 @@ namespace PRL
             TT_ElipseGrView_DaThanhToan.ElipseRadius = 15;
             TT_ElipseGrView_DaThanhToan.TargetControl = poisonDataGridView5;
             // 
+            // KH_DateTime_NgaySinh
+            // 
+            KH_DateTime_NgaySinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            KH_DateTime_NgaySinh.Location = new Point(222, 475);
+            KH_DateTime_NgaySinh.MinimumSize = new Size(0, 30);
+            KH_DateTime_NgaySinh.Name = "KH_DateTime_NgaySinh";
+            KH_DateTime_NgaySinh.Size = new Size(171, 30);
+            KH_DateTime_NgaySinh.TabIndex = 11;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -5611,13 +5586,13 @@ namespace PRL
         private Bunifu.Framework.UI.BunifuElipse TT_ElipseGrView_DaThanhToan;
         private ReaLTaiizor.Controls.DungeonComboBox TT_Combo_TenNguoiThanhToan;
         private ReaLTaiizor.Controls.DungeonComboBox TT_Combo_TenKhachHang;
-        private ReaLTaiizor.Controls.DungeonComboBox NV_Combo_NgaySinh;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel2;
         private RichTextBox KH_RichTxt_LSKham;
-        private ReaLTaiizor.Controls.AloneComboBox KH_Combo_NgaySinh;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel26;
         private ButtonCustom DV_Btn_OKSua;
         private ButtonCustom DV_Btn_OkThem;
         private ButtonCustom DV_Btn_DungGiamGia;
+        private ReaLTaiizor.Controls.PoisonDateTime NV_DateTime_NgaySinh;
+        private ReaLTaiizor.Controls.PoisonDateTime KH_DateTime_NgaySinh;
     }
 }
