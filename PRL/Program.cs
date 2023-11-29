@@ -1,3 +1,5 @@
+using C_PRL;
+
 namespace PRL
 {
     internal static class Program

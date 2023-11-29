@@ -1,4 +1,4 @@
-﻿using A_DAL.Repositories;
+﻿using DAL.DBContext;
 using DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -10,34 +10,25 @@ namespace B_BUS.Services
 {
     public class ThongKeService
     {
-        ThongKeRepo _repo = new ThongKeRepo();
-        public ThongKeService() { }
-        public List<ThongKe> GetThongKes()
+        MyDbContext _dbContext = new MyDbContext();
+
+        public bool AddThongKe(ThongKe thongKe)
         {
-            return _repo.GetThongKe().ToList();
+            _dbContext.ThongKes.Add(thongKe);
+            return _dbContext.SaveChanges()    > 0;
         }
-        public bool AddThongKe(bool loaiTK, string ghiChu, Guid idHoaDon, Guid idLuong)
+        public bool UpdateThongKe(ThongKe thongKe)
         {
-            var thongke = new ThongKe()
-            {
-                LoaiThongKe = loaiTK,
-                GhiChu = ghiChu,
-                IdHoaDon = idHoaDon,
-                IdLuong = idLuong
-            };
-            return _repo.AddThongKe(thongke);
+            _dbContext.ThongKes.Update(thongKe);
+            return _dbContext.SaveChanges()>0;
         }
-        public bool UpdateThongKe(Guid idTK, bool loaiTK, string ghiChu, Guid idHoaDon, Guid idLuong)
+        public ThongKe FindThongKe(Guid id)
         {
-            var thongke = new ThongKe()
-            {
-                IdThongKe = idTK,
-                LoaiThongKe = loaiTK,
-                GhiChu = ghiChu,
-                IdHoaDon = idHoaDon,
-                IdLuong = idLuong
-            };
-            return _repo.UpdateThongKe(thongke);
+            return _dbContext.ThongKes.FirstOrDefault(a  => a.IdThongKe == id);
+        }
+        public List<ThongKe> GetAllThongKe()
+        {
+            return _dbContext.ThongKes.ToList();
         }
     }
 }

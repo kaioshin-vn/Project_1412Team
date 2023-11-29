@@ -16,7 +16,7 @@ namespace DAL.Models
         [Required]
         public string? DiaChi { get; set; }
         [Required]
-        DateTime? NgaySinh { get; set; }
+        public DateTime? NgaySinh { get; set; }
         [Required]
         public bool GioiTinh { get; set; }
         public bool? HienThi { get; set; } // ẩn hiện

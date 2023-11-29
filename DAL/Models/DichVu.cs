@@ -15,9 +15,9 @@ namespace DAL.Models
         [Key]
         public Guid IdDichVu { get; set; }
         [Required]
-        public string Ten { get; set; }
+        public string? Ten { get; set; }
         [Required]
-        public string MoTa { get; set; } // mô tả
+        public string? MoTa { get; set; } // mô tả
         [Required]
         public int Gia { get; set; } // giá
 
