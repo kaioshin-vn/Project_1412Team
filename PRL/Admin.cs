@@ -55,35 +55,7 @@ namespace PRL
         CaKham? CaKhamDuocChon = null;
         KhachHang? KhachHangDuocChon = null;
         ///
-        public void PHONG_LoadDataKH(List<KhachHang> data)
-        {
-            KH_GridView.Rows.Clear();
-            int stt = 1;
-            KH_GridView.ColumnCount = 7;
-            KH_GridView.Columns[0].Name = "STT";
-            KH_GridView.Columns[1].Name = "Họ tên";
-            KH_GridView.Columns[2].Name = "Địa chỉ";
-            KH_GridView.Columns[3].Name = "Số điện thoại";
-            KH_GridView.Columns[4].Name = "Giới tính";
-            KH_GridView.Columns[5].Name = "Ngày sinh";
-            KH_GridView.Columns[6].Name = "Id";
-            KH_GridView.Columns[6].Visible = false;
-            foreach (var item in data)
-            {
-                KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, item.GioiTinh, item.NgaySinh, item.IdKhachHang);
-            }
-        }
-        private void KH_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            var selectedKH = KH_GridView.Rows[index];
-            KH_Txt_HoTen.Text = selectedKH.Cells[1].Value.ToString();
-            KH_Txt_DiaChi.Text = selectedKH.Cells[2].Value.ToString();
-            KH_Txt_Sdt.Text = selectedKH.Cells[3].Value.ToString();
-            KH_Combo_GioiTinh.Text = selectedKH.Cells[4].Value.ToString();
-            KH_DateTime_NgaySinh.Text = selectedKH.Cells[5].Value.ToString();
-            var kh = phong_khachhangsv.FindKhachHang(selectedKH.Cells[6].Value.ToString());
-        }
+        
         private void Admin_Load(object sender, EventArgs e)
         {
             // Panel_DV.Visible = false;
@@ -654,15 +626,73 @@ namespace PRL
             }
             MessageBox.Show("Sửa thất bại!", "Thông báo!");
         }
-
+        public void PHONG_LoadDataKH()
+        {
+            KH_GridView.Rows.Clear();
+            int stt = 1;
+            KH_GridView.ColumnCount = 7;
+            KH_GridView.Columns[0].Name = "STT";
+            KH_GridView.Columns[1].Name = "Họ tên";
+            KH_GridView.Columns[2].Name = "Địa chỉ";
+            KH_GridView.Columns[3].Name = "Số điện thoại";
+            KH_GridView.Columns[4].Name = "Giới tính";
+            KH_GridView.Columns[5].Name = "Ngày sinh";
+            KH_GridView.Columns[6].Name = "Id";
+            KH_GridView.Columns[6].Visible = false;
+            foreach (var item in phong_khachhangsv.GetAllKhachHang(null))
+            {
+                KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, item.GioiTinh, item.NgaySinh, item.IdKhachHang);
+            }
+        }
+        private void KH_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 && e.RowIndex > KH_GridView.Rows.Count)
+            {
+                return;
+            }
+            int index = e.RowIndex;
+            var selectedKH = KH_GridView.Rows[index];
+            KH_Txt_HoTen.Text = selectedKH.Cells[1].Value.ToString();
+            KH_Txt_DiaChi.Text = selectedKH.Cells[2].Value.ToString();
+            KH_Txt_Sdt.Text = selectedKH.Cells[3].Value.ToString();
+            KH_Combo_GioiTinh.Text = selectedKH.Cells[4].Value.ToString();
+            KH_DateTime_NgaySinh.Text = selectedKH.Cells[5].Value.ToString();
+            var kh = phong_khachhangsv.FindKhachHang(selectedKH.Cells[6].Value.ToString());
+        }
         private void KH_Btn_Them_Click(object sender, EventArgs e)
         {
-
+            var kh = new KhachHang();
+            kh.Ten = KH_Txt_HoTen.Text;
+            kh.DiaChi = KH_Txt_DiaChi.Text;
+            kh.SoDienThoai = KH_Txt_Sdt.Text;
+            kh.GioiTinh = KH_Combo_GioiTinh.SelectedItem.ToString();
+            kh.NgaySinh = DateTime.Parse(KH_DateTime_NgaySinh.Text);
+            var option = MessageBox.Show("Xác nhận có muốn thêm!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                phong_khachhangsv.AddKhachHang(kh);
+                MessageBox.Show("Thêm thành công!", "Thông báo!");
+                PHONG_LoadDataKH();
+            }
+            MessageBox.Show("Thêm thất bại!", "Thông báo!");
         }
 
         private void KH_Btn_Sua_Click(object sender, EventArgs e)
         {
-
+            var kh = new KhachHang();
+            kh.Ten = KH_Txt_HoTen.Text;
+            kh.DiaChi = KH_Txt_DiaChi.Text;
+            kh.SoDienThoai = KH_Txt_Sdt.Text;
+            kh.GioiTinh = KH_Combo_GioiTinh.SelectedItem.ToString();
+            kh.NgaySinh = DateTime.Parse(KH_DateTime_NgaySinh.Text);
+            var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                phong_khachhangsv.UpdateKhachHang(kh);
+                MessageBox.Show("Sửa thành công!", "Thông báo!");
+                PHONG_LoadDataKH();
+            }
+            MessageBox.Show("Sửa thất bại!", "Thông báo!");
         }
 
         private void KH_Btn_An_Click(object sender, EventArgs e)
