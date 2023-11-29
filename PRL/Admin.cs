@@ -1,4 +1,6 @@
-﻿using DAL.Models;
+﻿using B_BUS.Services;
+using DAL.DBContext;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,17 +9,23 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
 using System.Windows.Forms;
 
 namespace PRL
 {
     public partial class Admin : Form
     {
+        private readonly NhanVienSer Tho_nvService = new NhanVienSer();
+        private readonly MyDbContext _dbcontext;
+        private Guid iWhenClick;
         public Admin(NhanVien staff, Login login)
         {
             FormLogin = login;
             user = staff;
             InitializeComponent();
+            _dbcontext = new MyDbContext();
+            
         }
 
         public Admin()
@@ -30,7 +38,6 @@ namespace PRL
         /// Thuộc tính thêm vào
         NhanVien? user = null;
         Login? FormLogin = null;
-        BacSi? BacSiDuocChon;
         YTa? YTaDuocChon = null;
         NhanVien? NhanVienDuocChon = null;
         HoaDon? HoaDonDuocChon = null;
@@ -159,6 +166,7 @@ namespace PRL
             Content.Controls.Clear();
             Panel_NV.Visible = true;
             Content.Controls.Add(Panel_NV);
+            LoadDataNV();
         }
 
         private void DV_Btn_GiamGia_Click(object sender, EventArgs e)
@@ -183,6 +191,95 @@ namespace PRL
             DV_Range_GiamGia.Visible = false;
             DV_Label_PhanTram.Visible = false;
             DV_GrBox.Visible = true;
+        }
+
+        private void NV_Btn_Them_Click(object sender, EventArgs e)
+        {
+            var nv = new NhanVien();
+            nv.Ten = NV_Text_HoTen.Text;
+            nv.DiaChi = NV_Txt_DiaChi.Text;
+            nv.SoDienThoai = NV_Txt_Sdt.Text;
+            nv.GioiTinh = NV_Combo_GioiTinh.SelectedItem.ToString();
+            nv.ChucVu = NV_combo_ChucVu.SelectedItem.ToString();
+            var option = MessageBox.Show("Xác nhận có muốn thêm!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                Tho_nvService.AddNhanVien(nv);
+                MessageBox.Show("Thêm thành công!", "Thông báo!");
+                LoadDataNV();
+            }
+            MessageBox.Show("Thêm thất bại!", "Thông báo!");
+        }
+        private void LoadDataNV()
+        {
+            int stt = 1;
+            NV_GridView.ColumnCount = 9;
+            NV_GridView.Columns[0].Name = "STT";
+            NV_GridView.Columns[1].Name = "ID";
+            NV_GridView.Columns[2].Name = "Họ Tên";
+            NV_GridView.Columns[3].Name = "Địa Chỉ";
+            NV_GridView.Columns[4].Name = "SDT";
+            NV_GridView.Columns[5].Name = "Giới Tính";
+            NV_GridView.Columns[6].Name = "Chức Vụ";
+            NV_GridView.Columns[7].Name = "Ngày Sinh";
+            NV_GridView.Columns[8].Name = "Password";
+            NV_GridView.Columns[1].Visible = true;
+            NV_GridView.Columns[8].Visible = true;
+            
+            foreach (var item in Tho_nvService.GetAllNhanVien(null))
+            {
+                NV_GridView.Rows.Add(stt++, item.IdNhanVien, item.Ten,item.DiaChi,item.SoDienThoai, item.ChucVu,item.ChucVu, item.NgaySinh,item.MatKhau);
+            }
+            NV_GridView.Rows.Clear();
+        }
+
+        private void NV_Txt_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string search = NV_Txt_TimKiem.Text;
+            Tho_nvService.GetAllNhanVien(search);
+            LoadDataNV();
+        }
+
+        private void NV_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 && e.RowIndex > NV_GridView.Rows.Count)
+            {
+                return;
+            }
+            int rowIndex = e.RowIndex;
+            iWhenClick = Guid.Parse(NV_GridView.Rows[rowIndex].Cells[1].Value.ToString());
+            var clone = Tho_nvService.GetAllNhanVien(null).FirstOrDefault(x => x.IdNhanVien == iWhenClick);
+            NV_Text_HoTen.TextButton = clone.Ten;
+            NV_Txt_DiaChi.TextButton = clone.DiaChi;
+            NV_Sdt.Text = clone.SoDienThoai;
+            NV_Combo_GioiTinh.Text = clone.GioiTinh.ToString();
+            NV_combo_ChucVu.Text = clone.ChucVu.ToString();
+            NV_DateTime_NgaySinh.Text = clone.NgaySinh.ToString();
+
+        }
+
+        //private void ListCombobox()
+        //{
+        //    List<string> lstChucVu = new List<string>() {"Bác Sĩ", "Y Tá"};
+        //    NV_combo_ChucVu.DataSource = lstChucVu;
+        //}
+        private void NV_Btn_Sua_Click(object sender, EventArgs e)
+        {
+            var nv = new NhanVien();
+            nv.IdNhanVien = iWhenClick;
+            nv.Ten = NV_Text_HoTen.Text;
+            nv.DiaChi = NV_Txt_DiaChi.Text;
+            nv.SoDienThoai = NV_Txt_Sdt.Text;
+            nv.GioiTinh = NV_Combo_GioiTinh.SelectedItem.ToString();
+            nv.ChucVu = NV_combo_ChucVu.SelectedItem.ToString();
+            var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                Tho_nvService.UpdateNhanVien(nv);
+                MessageBox.Show("Sửa thành công!","Thông báo!");
+                LoadDataNV();
+            }
+            MessageBox.Show("Sửa thất bại!", "Thông báo!");
         }
     }
 }

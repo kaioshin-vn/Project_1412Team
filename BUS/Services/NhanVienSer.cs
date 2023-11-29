@@ -38,7 +38,18 @@ namespace B_BUS.Services
 
         public bool UpdateNhanVien(NhanVien nv)
         {
-            return _nvRepo.UpdateNhanVien(nv);
+            var clone = _nvRepo.GetAllNhanVien().FirstOrDefault(x => x.IdNhanVien == nv.IdNhanVien);
+            clone.Ten= nv.Ten;
+            clone.DiaChi = nv.DiaChi;
+            clone.SoDienThoai = nv.SoDienThoai;
+            clone.GioiTinh = nv.GioiTinh;
+            clone.ChucVu = nv.ChucVu;
+            clone.NgaySinh = nv.NgaySinh;
+            if (_nvRepo.UpdateNhanVien(clone) == true)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
