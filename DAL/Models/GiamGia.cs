@@ -10,10 +10,10 @@ namespace A_DAL.Models
     public class GiamGia
     {
         [Key]
-        int id { get; set; }
+        public int id { get; set; }
 
-        int? PhanTramGiamGia { get; set; }
+        public int? PhanTramGiamGia { get; set; }
 
-        bool ? TrangThai { get; set; }
+        public bool ? TrangThai { get; set; }
     }
 }
