@@ -42,9 +42,9 @@ namespace PRL
             user = new NhanVien();
             FormLogin = new Login();
             InitializeComponent();
-            //cmbDate();
-            //LoadChiTieu();
-            //LoadDoanhThu();
+            cmbDate();
+            LoadChiTieu();
+            LoadDoanhThu();
         }
 
         /// Thuộc tính thêm vào
@@ -62,7 +62,7 @@ namespace PRL
         CaKham? CaKhamDuocChon = null;
         KhachHang? KhachHangDuocChon = null;
         ///
-        
+
         private void Admin_Load(object sender, EventArgs e)
         {
             // Panel_DV.Visible = false;
@@ -74,7 +74,17 @@ namespace PRL
 
         private void label1_Click(object sender, EventArgs e)
         {
+            var hdctSer = new HoaDonChiTietService();
+            var hdSer = new HoaDonService();
+            var pkSer = new PhieuKhamSer();
 
+            hdctSer.GetAllHDCT().Where(a => a.TrangThai == false).Join(hdSer.GetAllHoaDon().Where(b => b.HienThi == false), x => x.IdHoaDon, y => y.IdHoaDon, (c, d) =>
+            {
+                return new
+                {
+                    idHoaDon = c.i
+                };
+            });
         }
 
 
@@ -90,7 +100,7 @@ namespace PRL
             Content.Controls.Clear();
             Panel_KH.Visible = true;
             Content.Controls.Add(Panel_KH);
-
+            PHONG_LoadDataKH();
         }
 
         private void Admin_VisibleChanged(object sender, EventArgs e)
@@ -621,7 +631,7 @@ namespace PRL
             foreach (var item in Tho_nvService.GetAllNhanVien().Where(a => a.HienThi == true))
             {
                 var ChucVu = "Bác Sĩ";
-                if (item.ChucVu == LoaiNhanVien.BacSi)
+                if (item.ChucVu == LoaiNhanVien.YTa)
                 {
                     ChucVu = "Y Tá";
                 }
@@ -638,7 +648,7 @@ namespace PRL
 
         private void NV_Txt_TimKiem_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void NV_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -710,7 +720,7 @@ namespace PRL
                 {
                     MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (Tho_nvService.GetAllNhanVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton && nv.SoDienThoai != a.SoDienThoai))
+                else if (Tho_nvService.GetAllNhanVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton && nv.IdNhanVien != a.IdNhanVien))
                 {
                     MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -744,61 +754,198 @@ namespace PRL
             KH_GridView.Columns[5].Name = "Ngày sinh";
             KH_GridView.Columns[6].Name = "Id";
             KH_GridView.Columns[6].Visible = false;
-            foreach (var item in phong_khachhangsv.GetAllKhachHang(null))
+            foreach (var item in phong_khachhangsv.GetAllKhachHang().Where(a => a.HienThi == true))
             {
-                KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, item.GioiTinh, item.NgaySinh, item.IdKhachHang);
+                var gioiTinh = "Nam";
+                if (item.GioiTinh == false)
+                {
+                    gioiTinh = "Nữ";
+                }
+
+                KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, gioiTinh, item.NgaySinh.Value.ToString("dd/MM/yyyy"), item.IdKhachHang);
+            }
+            Giap_LoadLSKham();
+        }
+
+
+        public void Giap_LoadLSKham()
+        {
+            var kh = KhachHangDuocChon;
+            if (kh != null)
+            {
+                var phieuKhamSer = new PhieuKhamSer();
+                var lsKhamSer = new LichSuKhamService();
+                var dvSer = new DichVuRepository();
+                var TTcaKhamSer = new TrangThaiNhanVienService();
+                var result = phieuKhamSer.GetAllPhieuKham().Where(a => a.IdKhachHang == kh.IdKhachHang && a.HienThi == true).Join(lsKhamSer.GetAllLichSuKham(), n => n.IdPhieuKham, m => m.IdPhieuKham, (p, q) =>
+                {
+                    return new
+                    {
+                        idNgay = p.IdNgay,
+                        idDichVu = p.IdDichVu,
+                        KetLuan = q.KetQua,
+                        GhiChu = q.GhiChu
+                    };
+                }).Join(dvSer.GetAllDichVu(), t => t.idDichVu, u => u.IdDichVu, (c, d) =>
+                {
+                    return new
+                    {
+                        idNgay = c.idNgay,
+                        DichVu = d.Ten,
+                        KetLuan = c.KetLuan,
+                        GhiChu = c.GhiChu
+                    };
+                }).Join(TTcaKhamSer.GetAllTrangThaiNhanVien(), g => g.idNgay, h => h.IdNgay, (i, k) =>
+                {
+                    return new
+                    {
+                        Ngay = k.Ngay,
+                        DichVu = i.DichVu,
+                        KetLuan = i.KetLuan,
+                        GhiChu = i.GhiChu
+                    };
+                });
+                foreach (var item in result)
+                {
+                    KH_RichTxt_LSKham.Text += $"Ngày khám : {item.Ngay.ToString("dd/MM/yyyy")}\nDịch vụ:{item.DichVu}\nKết quả : {item.KetLuan}\nGhi chú :{item.GhiChu}\n--------------------------------";
+                }
+
+
             }
         }
+
         private void KH_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 && e.RowIndex > KH_GridView.Rows.Count)
+            if (e.RowIndex < 0 || e.RowIndex > KH_GridView.Rows.Count)
             {
                 return;
             }
+
             int index = e.RowIndex;
             var selectedKH = KH_GridView.Rows[index];
-            KH_Txt_HoTen.Text = selectedKH.Cells[1].Value.ToString();
-            KH_Txt_DiaChi.Text = selectedKH.Cells[2].Value.ToString();
-            KH_Txt_Sdt.Text = selectedKH.Cells[3].Value.ToString();
-            KH_Combo_GioiTinh.Text = selectedKH.Cells[4].Value.ToString();
-            KH_DateTime_NgaySinh.Text = selectedKH.Cells[5].Value.ToString();
-            var kh = phong_khachhangsv.FindKhachHang(selectedKH.Cells[6].Value.ToString());
+            if (selectedKH.Cells[6].Value == null)
+            {
+                return;
+            }
+            KhachHangDuocChon = phong_khachhangsv.FindKhachHang(Guid.Parse(selectedKH.Cells[6].Value.ToString()));
+            KH_Txt_HoTen.TextButton = KhachHangDuocChon.Ten;
+            KH_Txt_DiaChi.TextButton = KhachHangDuocChon.DiaChi;
+            KH_Txt_Sdt.TextButton = KhachHangDuocChon.SoDienThoai;
+            var gioiTinh = "Nam";
+            if (KhachHangDuocChon.GioiTinh == false)
+            {
+                gioiTinh = "Nữ";
+            }
+            KH_Combo_GioiTinh.Text = gioiTinh;
+            KH_DateTime_NgaySinh.Value = KhachHangDuocChon.NgaySinh.Value;
         }
         private void KH_Btn_Them_Click(object sender, EventArgs e)
         {
             var kh = new KhachHang();
-            kh.Ten = KH_Txt_HoTen.Text;
-            kh.DiaChi = KH_Txt_DiaChi.Text;
-            kh.SoDienThoai = KH_Txt_Sdt.Text;
-            //kh.GioiTinh = KH_Combo_GioiTinh.SelectedItem.ToString();
-            kh.NgaySinh = DateTime.Parse(KH_DateTime_NgaySinh.Text);
-            var option = MessageBox.Show("Xác nhận có muốn thêm!", "Thông báo!", MessageBoxButtons.YesNoCancel);
-            if (option == DialogResult.Yes)
+            kh.Ten = KH_Txt_HoTen.TextButton;
+            kh.DiaChi = KH_Txt_DiaChi.TextButton;
+            kh.SoDienThoai = KH_Txt_Sdt.TextButton;
+            var gioiTinh = true;
+            if (KH_Combo_GioiTinh.Text == "Nữ")
             {
-                phong_khachhangsv.AddKhachHang(kh);
-                MessageBox.Show("Thêm thành công!", "Thông báo!");
-                PHONG_LoadDataKH();
+                gioiTinh = false;
             }
-            MessageBox.Show("Thêm thất bại!", "Thông báo!");
+            kh.GioiTinh = gioiTinh;
+            kh.NgaySinh = KH_DateTime_NgaySinh.Value;
+            kh.HienThi = true;
+            if (Giap_CheckTrong(KH_Txt_HoTen.TextButton) || Giap_CheckTrong(KH_Txt_DiaChi.TextButton) || Giap_CheckTrong(KH_Txt_Sdt.TextButton))
+            {
+                MessageBox.Show($"Không được bỏ trống các ô thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Regex.IsMatch(KH_Txt_Sdt.TextButton, "^0[0-9]{9}$"))
+            {
+                MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (phong_khachhangsv.GetAllKhachHang().Any(a => a.SoDienThoai == KH_Txt_Sdt.TextButton))
+            {
+                MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var option = MessageBox.Show("Xác nhận có muốn thêm!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+                if (option == DialogResult.Yes)
+                {
+                    phong_khachhangsv.AddKhachHang(kh);
+                    MessageBox.Show("Thêm thành công!", "Thông báo!");
+                    PHONG_LoadDataKH();
+                }
+            }
+
         }
 
         private void KH_Btn_Sua_Click(object sender, EventArgs e)
         {
-            var kh = new KhachHang();
-            kh.Ten = KH_Txt_HoTen.Text;
-            kh.DiaChi = KH_Txt_DiaChi.Text;
-            kh.SoDienThoai = KH_Txt_Sdt.Text;
-            //kh.GioiTinh = KH_Combo_GioiTinh.SelectedItem.ToString();
-            kh.NgaySinh = DateTime.Parse(KH_DateTime_NgaySinh.Text);
-            var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
-            if (option == DialogResult.Yes)
+            var kh = KhachHangDuocChon;
+            if (kh != null)
             {
-                phong_khachhangsv.UpdateKhachHang(kh);
-                MessageBox.Show("Sửa thành công!", "Thông báo!");
-                PHONG_LoadDataKH();
+                kh.Ten = KH_Txt_HoTen.TextButton;
+                kh.DiaChi = KH_Txt_DiaChi.TextButton;
+                kh.SoDienThoai = KH_Txt_Sdt.TextButton;
+                var gioiTinh = false;
+                if (KH_Combo_GioiTinh.SelectedText == "Nam")
+                {
+                    gioiTinh = true;
+                }
+                kh.GioiTinh = gioiTinh;
+                kh.NgaySinh = KH_DateTime_NgaySinh.Value;
+                if (Giap_CheckTrong(KH_Txt_HoTen.TextButton) || Giap_CheckTrong(KH_Txt_DiaChi.TextButton) || Giap_CheckTrong(KH_Txt_Sdt.TextButton))
+                {
+                    MessageBox.Show($"Không được bỏ trống các ô thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!Regex.IsMatch(KH_Txt_Sdt.TextButton, "^0[0-9]{9}$"))
+                {
+                    MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (phong_khachhangsv.GetAllKhachHang().Any(a => a.SoDienThoai == KH_Txt_Sdt.TextButton && kh.IdKhachHang != a.IdKhachHang))
+                {
+                    MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+                    if (option == DialogResult.Yes)
+                    {
+                        phong_khachhangsv.UpdateKhachHang(kh);
+                        MessageBox.Show($"Đã sửa thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadDataNV();
+                    }
+                }
             }
-            MessageBox.Show("Sửa thất bại!", "Thông báo!");
+            else
+            {
+                MessageBox.Show($"Chưa chọn khách hàng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
+
+
+        private void KH_Btn_An_Click(object sender, EventArgs e)
+        {
+            var kh = KhachHangDuocChon;
+            if (kh != null)
+            {
+                kh.HienThi = false;
+                var option = MessageBox.Show("Xác nhận có muốn ẩn!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+                if (option == DialogResult.Yes)
+                {
+                    phong_khachhangsv.UpdateKhachHang(kh);
+                    MessageBox.Show($"Đã ẩn thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataNV();
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Chưa chọn khách hàng !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+
         public void LoadChiTieu()
         {
             int stt = 1;
@@ -846,7 +993,7 @@ namespace PRL
         }
         public void TinhToanLai()
         {
-            
+
         }
 
         private void ThongKe_GrView_ChiTieu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -903,7 +1050,7 @@ namespace PRL
 
             NV_GridView.Rows.Clear();
 
-            foreach (var item in Tho_nvService.GetAllNhanVien().Where(a => a.HienThi == true && a.Ten.ToLower().Contains(NV_Txt_TimKiem.Text.ToLower()))) 
+            foreach (var item in Tho_nvService.GetAllNhanVien().Where(a => a.HienThi == true && a.Ten.ToLower().Contains(NV_Txt_TimKiem.Text.ToLower())))
             {
                 var ChucVu = "Bác Sĩ";
                 if (item.ChucVu == LoaiNhanVien.BacSi)
@@ -916,6 +1063,37 @@ namespace PRL
                     gioiTinh = "Nữ";
                 }
                 NV_GridView.Rows.Add(stt++, item.IdNhanVien, item.Ten, item.DiaChi, item.SoDienThoai, gioiTinh, ChucVu, item.NgaySinh.Value.ToString("dd/MM/yyyy"), item.MatKhau);
+            }
+        }
+
+        private void KH_Txt_TimKiem_Click(object sender, EventArgs e)
+        {
+            KH_Txt_TimKiem.Text = "";
+        }
+
+        private void KH_Btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            int stt = 1;
+            KH_GridView.ColumnCount = 7;
+            KH_GridView.Columns[0].Name = "STT";
+            KH_GridView.Columns[1].Name = "Họ tên";
+            KH_GridView.Columns[2].Name = "Địa chỉ";
+            KH_GridView.Columns[3].Name = "Số điện thoại";
+            KH_GridView.Columns[4].Name = "Giới tính";
+            KH_GridView.Columns[5].Name = "Ngày sinh";
+            KH_GridView.Columns[6].Name = "Id";
+            KH_GridView.Columns[6].Visible = false;
+            KH_GridView.Rows.Clear();
+
+            foreach (var item in phong_khachhangsv.GetAllKhachHang(KH_Txt_TimKiem.Text).Where(a => a.HienThi == true))
+            {
+                var gioiTinh = "Nam";
+                if (item.GioiTinh == false)
+                {
+                    gioiTinh = "Nữ";
+                }
+
+                KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, gioiTinh, item.NgaySinh.Value.ToString("dd/MM/yyyy"), item.IdKhachHang);
             }
         }
     }

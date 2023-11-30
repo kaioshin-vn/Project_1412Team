@@ -64,12 +64,13 @@ namespace PRL
             QL_ThongBao = new Label();
             LoiChao = new Label();
             Panel_KH = new Panel();
+            KH_Btn_Them = new ButtonCustom();
+            KH_Btn_Sua = new ButtonCustom();
+            KH_Btn_An = new ButtonCustom();
             KH_RichTxt_LSKham = new RichTextBox();
             bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             KH_Txt_TimKiem = new ReaLTaiizor.Controls.BigTextBox();
             KH_Btn_TimKiem = new Label();
-            KH_Btn_An = new ButtonCustom();
-            KH_Btn_Them = new ButtonCustom();
             KH_GridView = new ReaLTaiizor.Controls.PoisonDataGridView();
             KH_Grbox = new ReaLTaiizor.Controls.CyberGroupBox();
             KH_DateTime_NgaySinh = new ReaLTaiizor.Controls.PoisonDateTime();
@@ -82,7 +83,6 @@ namespace PRL
             dungeonHeaderLabel7 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             dungeonHeaderLabel8 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             dungeonHeaderLabel9 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            KH_Btn_Sua = new ButtonCustom();
             Panel_NV = new Panel();
             label6 = new Label();
             NV_Btn_Sua = new ButtonCustom();
@@ -473,28 +473,94 @@ namespace PRL
             // Panel_KH
             // 
             Panel_KH.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Panel_KH.Controls.Add(KH_Btn_Them);
+            Panel_KH.Controls.Add(KH_Btn_Sua);
+            Panel_KH.Controls.Add(KH_Btn_An);
             Panel_KH.Controls.Add(KH_RichTxt_LSKham);
             Panel_KH.Controls.Add(bigLabel1);
             Panel_KH.Controls.Add(KH_Txt_TimKiem);
             Panel_KH.Controls.Add(KH_Btn_TimKiem);
-            Panel_KH.Controls.Add(KH_Btn_An);
-            Panel_KH.Controls.Add(KH_Btn_Them);
             Panel_KH.Controls.Add(KH_GridView);
             Panel_KH.Controls.Add(KH_Grbox);
-            Panel_KH.Controls.Add(KH_Btn_Sua);
-            Panel_KH.Location = new Point(22, 6);
+            Panel_KH.Location = new Point(2, 3);
             Panel_KH.Name = "Panel_KH";
-            Panel_KH.Size = new Size(1358, 697);
+            Panel_KH.Size = new Size(1446, 876);
             Panel_KH.TabIndex = 0;
             Panel_KH.Visible = false;
+            // 
+            // KH_Btn_Them
+            // 
+            KH_Btn_Them.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            KH_Btn_Them.BackColor = Color.MediumSpringGreen;
+            KH_Btn_Them.BackgroundColor = Color.MediumSpringGreen;
+            KH_Btn_Them.BorderColor = Color.DeepSkyBlue;
+            KH_Btn_Them.BorderRadius = 20;
+            KH_Btn_Them.BorderSize = 2;
+            KH_Btn_Them.FlatAppearance.BorderSize = 0;
+            KH_Btn_Them.FlatStyle = FlatStyle.Flat;
+            KH_Btn_Them.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            KH_Btn_Them.ForeColor = Color.White;
+            KH_Btn_Them.IDSelected = null;
+            KH_Btn_Them.Location = new Point(51, 619);
+            KH_Btn_Them.Name = "KH_Btn_Them";
+            KH_Btn_Them.Size = new Size(156, 50);
+            KH_Btn_Them.TabIndex = 18;
+            KH_Btn_Them.Text = "Thêm";
+            KH_Btn_Them.TextColor = Color.White;
+            KH_Btn_Them.UseVisualStyleBackColor = false;
+            KH_Btn_Them.Click += KH_Btn_Them_Click;
+            // 
+            // KH_Btn_Sua
+            // 
+            KH_Btn_Sua.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            KH_Btn_Sua.BackColor = Color.DeepSkyBlue;
+            KH_Btn_Sua.BackgroundColor = Color.DeepSkyBlue;
+            KH_Btn_Sua.BorderColor = Color.Green;
+            KH_Btn_Sua.BorderRadius = 20;
+            KH_Btn_Sua.BorderSize = 2;
+            KH_Btn_Sua.FlatAppearance.BorderSize = 0;
+            KH_Btn_Sua.FlatStyle = FlatStyle.Flat;
+            KH_Btn_Sua.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            KH_Btn_Sua.ForeColor = Color.White;
+            KH_Btn_Sua.IDSelected = null;
+            KH_Btn_Sua.Location = new Point(320, 619);
+            KH_Btn_Sua.Name = "KH_Btn_Sua";
+            KH_Btn_Sua.Size = new Size(156, 50);
+            KH_Btn_Sua.TabIndex = 19;
+            KH_Btn_Sua.Text = "Sửa";
+            KH_Btn_Sua.TextColor = Color.White;
+            KH_Btn_Sua.UseVisualStyleBackColor = false;
+            KH_Btn_Sua.Click += KH_Btn_Sua_Click;
+            // 
+            // KH_Btn_An
+            // 
+            KH_Btn_An.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            KH_Btn_An.BackColor = SystemColors.ActiveCaptionText;
+            KH_Btn_An.BackgroundColor = SystemColors.ActiveCaptionText;
+            KH_Btn_An.BorderColor = Color.Crimson;
+            KH_Btn_An.BorderRadius = 20;
+            KH_Btn_An.BorderSize = 2;
+            KH_Btn_An.FlatAppearance.BorderSize = 0;
+            KH_Btn_An.FlatStyle = FlatStyle.Flat;
+            KH_Btn_An.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            KH_Btn_An.ForeColor = Color.Red;
+            KH_Btn_An.IDSelected = null;
+            KH_Btn_An.Location = new Point(571, 618);
+            KH_Btn_An.Name = "KH_Btn_An";
+            KH_Btn_An.Size = new Size(156, 50);
+            KH_Btn_An.TabIndex = 20;
+            KH_Btn_An.Text = "Ẩn";
+            KH_Btn_An.TextColor = Color.Red;
+            KH_Btn_An.UseVisualStyleBackColor = false;
+            KH_Btn_An.Click += KH_Btn_An_Click;
             // 
             // KH_RichTxt_LSKham
             // 
             KH_RichTxt_LSKham.BackColor = SystemColors.Window;
             KH_RichTxt_LSKham.BorderStyle = BorderStyle.FixedSingle;
-            KH_RichTxt_LSKham.Location = new Point(38, 566);
+            KH_RichTxt_LSKham.Location = new Point(50, 567);
             KH_RichTxt_LSKham.Name = "KH_RichTxt_LSKham";
-            KH_RichTxt_LSKham.Size = new Size(684, 331);
+            KH_RichTxt_LSKham.Size = new Size(678, 272);
             KH_RichTxt_LSKham.TabIndex = 25;
             KH_RichTxt_LSKham.Text = "";
             // 
@@ -523,8 +589,10 @@ namespace PRL
             KH_Txt_TimKiem.ReadOnly = false;
             KH_Txt_TimKiem.Size = new Size(628, 46);
             KH_Txt_TimKiem.TabIndex = 11;
+            KH_Txt_TimKiem.Text = "Tìm kiếm bằng tên hoặc số điện thoại";
             KH_Txt_TimKiem.TextAlignment = HorizontalAlignment.Left;
             KH_Txt_TimKiem.UseSystemPasswordChar = false;
+            KH_Txt_TimKiem.Click += KH_Txt_TimKiem_Click;
             // 
             // KH_Btn_TimKiem
             // 
@@ -536,48 +604,7 @@ namespace PRL
             KH_Btn_TimKiem.Size = new Size(73, 38);
             KH_Btn_TimKiem.TabIndex = 23;
             KH_Btn_TimKiem.Text = "       ";
-            // 
-            // KH_Btn_An
-            // 
-            KH_Btn_An.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            KH_Btn_An.BackColor = SystemColors.ActiveCaptionText;
-            KH_Btn_An.BackgroundColor = SystemColors.ActiveCaptionText;
-            KH_Btn_An.BorderColor = Color.Crimson;
-            KH_Btn_An.BorderRadius = 20;
-            KH_Btn_An.BorderSize = 2;
-            KH_Btn_An.FlatAppearance.BorderSize = 0;
-            KH_Btn_An.FlatStyle = FlatStyle.Flat;
-            KH_Btn_An.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            KH_Btn_An.ForeColor = Color.Red;
-            KH_Btn_An.IDSelected = null;
-            KH_Btn_An.Location = new Point(536, 644);
-            KH_Btn_An.Name = "KH_Btn_An";
-            KH_Btn_An.Size = new Size(156, 50);
-            KH_Btn_An.TabIndex = 20;
-            KH_Btn_An.Text = "Ẩn";
-            KH_Btn_An.TextColor = Color.Red;
-            KH_Btn_An.UseVisualStyleBackColor = false;
-            // 
-            // KH_Btn_Them
-            // 
-            KH_Btn_Them.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            KH_Btn_Them.BackColor = Color.MediumSpringGreen;
-            KH_Btn_Them.BackgroundColor = Color.MediumSpringGreen;
-            KH_Btn_Them.BorderColor = Color.DeepSkyBlue;
-            KH_Btn_Them.BorderRadius = 20;
-            KH_Btn_Them.BorderSize = 2;
-            KH_Btn_Them.FlatAppearance.BorderSize = 0;
-            KH_Btn_Them.FlatStyle = FlatStyle.Flat;
-            KH_Btn_Them.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            KH_Btn_Them.ForeColor = Color.White;
-            KH_Btn_Them.IDSelected = null;
-            KH_Btn_Them.Location = new Point(50, 647);
-            KH_Btn_Them.Name = "KH_Btn_Them";
-            KH_Btn_Them.Size = new Size(156, 50);
-            KH_Btn_Them.TabIndex = 18;
-            KH_Btn_Them.Text = "Thêm";
-            KH_Btn_Them.TextColor = Color.White;
-            KH_Btn_Them.UseVisualStyleBackColor = false;
+            KH_Btn_TimKiem.Click += KH_Btn_TimKiem_Click;
             // 
             // KH_GridView
             // 
@@ -597,7 +624,7 @@ namespace PRL
             KH_GridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.FromArgb(136, 136, 136);
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 198, 247);
             dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(17, 17, 17);
@@ -610,10 +637,10 @@ namespace PRL
             KH_GridView.Name = "KH_GridView";
             KH_GridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 255, 192);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(128, 255, 128);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(17, 17, 17);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             KH_GridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -623,6 +650,7 @@ namespace PRL
             KH_GridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             KH_GridView.Size = new Size(691, 431);
             KH_GridView.TabIndex = 17;
+            KH_GridView.CellClick += KH_GridView_CellClick;
             // 
             // KH_Grbox
             // 
@@ -654,13 +682,13 @@ namespace PRL
             KH_Grbox.Lighting = false;
             KH_Grbox.LinearGradient_Background = false;
             KH_Grbox.LinearGradientPen = false;
-            KH_Grbox.Location = new Point(790, 8);
+            KH_Grbox.Location = new Point(798, 8);
             KH_Grbox.Name = "KH_Grbox";
             KH_Grbox.PenWidth = 15;
             KH_Grbox.RGB = false;
             KH_Grbox.Rounding = true;
             KH_Grbox.RoundingInt = 60;
-            KH_Grbox.Size = new Size(531, 680);
+            KH_Grbox.Size = new Size(467, 539);
             KH_Grbox.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             KH_Grbox.TabIndex = 16;
             KH_Grbox.Tag = "Cyber";
@@ -670,10 +698,11 @@ namespace PRL
             // KH_DateTime_NgaySinh
             // 
             KH_DateTime_NgaySinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            KH_DateTime_NgaySinh.Format = DateTimePickerFormat.Short;
             KH_DateTime_NgaySinh.Location = new Point(222, 475);
             KH_DateTime_NgaySinh.MinimumSize = new Size(0, 30);
             KH_DateTime_NgaySinh.Name = "KH_DateTime_NgaySinh";
-            KH_DateTime_NgaySinh.Size = new Size(171, 30);
+            KH_DateTime_NgaySinh.Size = new Size(219, 30);
             KH_DateTime_NgaySinh.TabIndex = 11;
             // 
             // dungeonHeaderLabel26
@@ -690,14 +719,16 @@ namespace PRL
             // 
             // KH_Combo_GioiTinh
             // 
+            KH_Combo_GioiTinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             KH_Combo_GioiTinh.DrawMode = DrawMode.OwnerDrawFixed;
             KH_Combo_GioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
             KH_Combo_GioiTinh.EnabledCalc = true;
             KH_Combo_GioiTinh.FormattingEnabled = true;
             KH_Combo_GioiTinh.ItemHeight = 20;
-            KH_Combo_GioiTinh.Location = new Point(222, 416);
+            KH_Combo_GioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
+            KH_Combo_GioiTinh.Location = new Point(222, 419);
             KH_Combo_GioiTinh.Name = "KH_Combo_GioiTinh";
-            KH_Combo_GioiTinh.Size = new Size(171, 26);
+            KH_Combo_GioiTinh.Size = new Size(219, 26);
             KH_Combo_GioiTinh.TabIndex = 9;
             // 
             // KH_Txt_Sdt
@@ -723,7 +754,7 @@ namespace PRL
             KH_Txt_Sdt.RGB = false;
             KH_Txt_Sdt.Rounding = true;
             KH_Txt_Sdt.RoundingInt = 60;
-            KH_Txt_Sdt.Size = new Size(287, 57);
+            KH_Txt_Sdt.Size = new Size(231, 57);
             KH_Txt_Sdt.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             KH_Txt_Sdt.TabIndex = 8;
             KH_Txt_Sdt.Tag = "Cyber";
@@ -754,7 +785,7 @@ namespace PRL
             KH_Txt_DiaChi.RGB = false;
             KH_Txt_DiaChi.Rounding = true;
             KH_Txt_DiaChi.RoundingInt = 60;
-            KH_Txt_DiaChi.Size = new Size(287, 104);
+            KH_Txt_DiaChi.Size = new Size(231, 104);
             KH_Txt_DiaChi.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             KH_Txt_DiaChi.TabIndex = 7;
             KH_Txt_DiaChi.Tag = "Cyber";
@@ -785,7 +816,7 @@ namespace PRL
             KH_Txt_HoTen.RGB = false;
             KH_Txt_HoTen.Rounding = true;
             KH_Txt_HoTen.RoundingInt = 60;
-            KH_Txt_HoTen.Size = new Size(287, 57);
+            KH_Txt_HoTen.Size = new Size(231, 57);
             KH_Txt_HoTen.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             KH_Txt_HoTen.TabIndex = 6;
             KH_Txt_HoTen.Tag = "Cyber";
@@ -840,27 +871,6 @@ namespace PRL
             dungeonHeaderLabel9.Size = new Size(85, 25);
             dungeonHeaderLabel9.TabIndex = 0;
             dungeonHeaderLabel9.Text = "Họ Tên :";
-            // 
-            // KH_Btn_Sua
-            // 
-            KH_Btn_Sua.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            KH_Btn_Sua.BackColor = Color.DeepSkyBlue;
-            KH_Btn_Sua.BackgroundColor = Color.DeepSkyBlue;
-            KH_Btn_Sua.BorderColor = Color.Green;
-            KH_Btn_Sua.BorderRadius = 20;
-            KH_Btn_Sua.BorderSize = 2;
-            KH_Btn_Sua.FlatAppearance.BorderSize = 0;
-            KH_Btn_Sua.FlatStyle = FlatStyle.Flat;
-            KH_Btn_Sua.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            KH_Btn_Sua.ForeColor = Color.White;
-            KH_Btn_Sua.IDSelected = null;
-            KH_Btn_Sua.Location = new Point(299, 644);
-            KH_Btn_Sua.Name = "KH_Btn_Sua";
-            KH_Btn_Sua.Size = new Size(156, 50);
-            KH_Btn_Sua.TabIndex = 19;
-            KH_Btn_Sua.Text = "Sửa";
-            KH_Btn_Sua.TextColor = Color.White;
-            KH_Btn_Sua.UseVisualStyleBackColor = false;
             // 
             // Panel_NV
             // 
@@ -1018,6 +1028,7 @@ namespace PRL
             // NV_DateTime_NgaySinh
             // 
             NV_DateTime_NgaySinh.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            NV_DateTime_NgaySinh.Format = DateTimePickerFormat.Short;
             NV_DateTime_NgaySinh.Location = new Point(214, 537);
             NV_DateTime_NgaySinh.MinimumSize = new Size(0, 30);
             NV_DateTime_NgaySinh.Name = "NV_DateTime_NgaySinh";
@@ -1434,7 +1445,7 @@ namespace PRL
             QL_ThongKe.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_ThongKe.Image = C_PRL.Properties.Resources.icons8_analyst_64;
             QL_ThongKe.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_ThongKe.Location = new Point(21, 661);
+            QL_ThongKe.Location = new Point(21, 682);
             QL_ThongKe.Name = "QL_ThongKe";
             QL_ThongKe.Size = new Size(184, 36);
             QL_ThongKe.TabIndex = 8;
@@ -1447,7 +1458,7 @@ namespace PRL
             QL_LichKham.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_LichKham.Image = C_PRL.Properties.Resources.icons8_document_42;
             QL_LichKham.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_LichKham.Location = new Point(21, 372);
+            QL_LichKham.Location = new Point(21, 393);
             QL_LichKham.Name = "QL_LichKham";
             QL_LichKham.Size = new Size(239, 36);
             QL_LichKham.TabIndex = 7;
@@ -1460,7 +1471,7 @@ namespace PRL
             QL_DV.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_DV.Image = C_PRL.Properties.Resources.icons8_service_341;
             QL_DV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_DV.Location = new Point(14, 521);
+            QL_DV.Location = new Point(14, 542);
             QL_DV.Name = "QL_DV";
             QL_DV.Size = new Size(216, 36);
             QL_DV.TabIndex = 3;
@@ -1473,7 +1484,7 @@ namespace PRL
             QL_ThanhToan.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_ThanhToan.Image = C_PRL.Properties.Resources.icons8_bill_64;
             QL_ThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_ThanhToan.Location = new Point(18, 809);
+            QL_ThanhToan.Location = new Point(18, 830);
             QL_ThanhToan.Name = "QL_ThanhToan";
             QL_ThanhToan.Size = new Size(221, 36);
             QL_ThanhToan.TabIndex = 2;
@@ -1486,7 +1497,7 @@ namespace PRL
             QL_KH.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_KH.Image = C_PRL.Properties.Resources.icons8_customer_43;
             QL_KH.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_KH.Location = new Point(21, 221);
+            QL_KH.Location = new Point(21, 242);
             QL_KH.Name = "QL_KH";
             QL_KH.Size = new Size(257, 36);
             QL_KH.TabIndex = 1;
@@ -1499,7 +1510,7 @@ namespace PRL
             QL_NV.Font = new Font("Comic Sans MS", 15F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             QL_NV.Image = C_PRL.Properties.Resources.icons8_crowd_34;
             QL_NV.ImageAlign = ContentAlignment.MiddleLeft;
-            QL_NV.Location = new Point(27, 91);
+            QL_NV.Location = new Point(27, 112);
             QL_NV.Name = "QL_NV";
             QL_NV.Size = new Size(235, 36);
             QL_NV.TabIndex = 0;
@@ -1511,7 +1522,7 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_ManHinhCho);
+            Content.Controls.Add(Panel_ThongKe);
             Content.Location = new Point(277, 56);
             Content.Margin = new Padding(3, 4, 3, 4);
             Content.Name = "Content";
@@ -5259,7 +5270,7 @@ namespace PRL
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1722, 783);
+            ClientSize = new Size(1722, 763);
             Controls.Add(name_clinic);
             Controls.Add(Nav_Option);
             Controls.Add(Content);

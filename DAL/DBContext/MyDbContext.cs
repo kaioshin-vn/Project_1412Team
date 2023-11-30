@@ -58,6 +58,11 @@ namespace DAL.DBContext
                 entity.HasIndex(e => e.SoDienThoai).IsUnique();
             });
 
+            modelBuilder.Entity<KhachHang>(entity =>
+            {
+                entity.HasIndex(e => e.SoDienThoai).IsUnique();
+            });
+
         }
     }
 }
