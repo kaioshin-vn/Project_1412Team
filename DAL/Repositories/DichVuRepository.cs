@@ -20,7 +20,7 @@ namespace A_DAL.Repositories
       
         public List<DichVu> GetAllDichVu()
         {
-            return _dbContext.DichVus.ToList();
+            return _dbContext.DichVus.Where( a => a.HienThi == true).ToList();
         }
         public bool AddDichVu(DichVu dv)
         {

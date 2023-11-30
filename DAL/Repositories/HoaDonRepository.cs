@@ -19,7 +19,7 @@ namespace A_DAL.Repositories
 
         public List<HoaDon> GetAllHoaDon()
         {
-            return _dbContext.HoaDons.ToList();
+            return _dbContext.HoaDons.Where(a => a.HienThi == true).ToList();
         }
         public bool AddHoaDon(HoaDon hd)
         {

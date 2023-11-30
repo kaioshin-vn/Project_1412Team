@@ -116,7 +116,6 @@ namespace PRL
             QL_KH = new Label();
             QL_NV = new Label();
             Content = new Panel();
-            Panel_ManHinhCho = new Panel();
             Panel_DV = new Panel();
             DV_Btn_DungGiamGia = new ButtonCustom();
             DV_Btn_OkThem = new ButtonCustom();
@@ -146,6 +145,7 @@ namespace PRL
             DV_TxtMoTa1 = new ReaLTaiizor.Controls.CyberRichTextBox();
             DV_LabelTenDichVu1 = new ReaLTaiizor.Controls.BigLabel();
             DV_LabelGia1 = new ReaLTaiizor.Controls.BigLabel();
+            Panel_ManHinhCho = new Panel();
             Panel_ThongKe = new SplitContainer();
             ThongKe_GrView_DoanhThu = new ReaLTaiizor.Controls.PoisonDataGridView();
             bigLabel23 = new ReaLTaiizor.Controls.BigLabel();
@@ -615,9 +615,9 @@ namespace PRL
             KH_GridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.FromArgb(255, 255, 255);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 198, 247);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 174, 215);
             dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(17, 17, 17);
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             KH_GridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -1529,14 +1529,6 @@ namespace PRL
             Content.Size = new Size(1766, 928);
             Content.TabIndex = 2;
             // 
-            // Panel_ManHinhCho
-            // 
-            Panel_ManHinhCho.BackgroundImage = C_PRL.Properties.Resources._3261126766;
-            Panel_ManHinhCho.Location = new Point(-1, -1);
-            Panel_ManHinhCho.Name = "Panel_ManHinhCho";
-            Panel_ManHinhCho.Size = new Size(1802, 1108);
-            Panel_ManHinhCho.TabIndex = 0;
-            // 
             // Panel_DV
             // 
             Panel_DV.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -1567,13 +1559,14 @@ namespace PRL
             DV_Btn_DungGiamGia.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DV_Btn_DungGiamGia.ForeColor = Color.White;
             DV_Btn_DungGiamGia.IDSelected = null;
-            DV_Btn_DungGiamGia.Location = new Point(75, 23);
+            DV_Btn_DungGiamGia.Location = new Point(279, 23);
             DV_Btn_DungGiamGia.Name = "DV_Btn_DungGiamGia";
-            DV_Btn_DungGiamGia.Size = new Size(185, 69);
+            DV_Btn_DungGiamGia.Size = new Size(172, 69);
             DV_Btn_DungGiamGia.TabIndex = 10;
             DV_Btn_DungGiamGia.Text = "Dừng giảm giá";
             DV_Btn_DungGiamGia.TextColor = Color.White;
             DV_Btn_DungGiamGia.UseVisualStyleBackColor = false;
+            DV_Btn_DungGiamGia.Click += DV_Btn_DungGiamGia_Click;
             // 
             // DV_Btn_OkThem
             // 
@@ -1587,14 +1580,15 @@ namespace PRL
             DV_Btn_OkThem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DV_Btn_OkThem.ForeColor = Color.White;
             DV_Btn_OkThem.IDSelected = null;
-            DV_Btn_OkThem.Location = new Point(104, 170);
+            DV_Btn_OkThem.Location = new Point(279, 182);
             DV_Btn_OkThem.Name = "DV_Btn_OkThem";
-            DV_Btn_OkThem.Size = new Size(154, 56);
+            DV_Btn_OkThem.Size = new Size(172, 66);
             DV_Btn_OkThem.TabIndex = 9;
             DV_Btn_OkThem.Text = "OK";
             DV_Btn_OkThem.TextColor = Color.White;
             DV_Btn_OkThem.UseVisualStyleBackColor = false;
             DV_Btn_OkThem.Visible = false;
+            DV_Btn_OkThem.Click += DV_Btn_OkThem_Click;
             // 
             // DV_Btn_OKSua
             // 
@@ -1608,14 +1602,15 @@ namespace PRL
             DV_Btn_OKSua.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DV_Btn_OKSua.ForeColor = Color.White;
             DV_Btn_OKSua.IDSelected = null;
-            DV_Btn_OKSua.Location = new Point(264, 176);
+            DV_Btn_OKSua.Location = new Point(279, 180);
             DV_Btn_OKSua.Name = "DV_Btn_OKSua";
-            DV_Btn_OKSua.Size = new Size(154, 56);
+            DV_Btn_OKSua.Size = new Size(172, 68);
             DV_Btn_OKSua.TabIndex = 8;
             DV_Btn_OKSua.Text = "OK";
             DV_Btn_OKSua.TextColor = Color.White;
             DV_Btn_OKSua.UseVisualStyleBackColor = false;
             DV_Btn_OKSua.Visible = false;
+            DV_Btn_OKSua.Click += DV_Btn_OKSua_Click;
             // 
             // DV_Label_PhanTram
             // 
@@ -1642,9 +1637,9 @@ namespace PRL
             DV_Btn_Them.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DV_Btn_Them.ForeColor = Color.White;
             DV_Btn_Them.IDSelected = null;
-            DV_Btn_Them.Location = new Point(264, 97);
+            DV_Btn_Them.Location = new Point(277, 101);
             DV_Btn_Them.Name = "DV_Btn_Them";
-            DV_Btn_Them.Size = new Size(154, 56);
+            DV_Btn_Them.Size = new Size(172, 67);
             DV_Btn_Them.TabIndex = 6;
             DV_Btn_Them.Text = "Thêm";
             DV_Btn_Them.TextColor = Color.White;
@@ -1671,6 +1666,7 @@ namespace PRL
             DV_Btn_OKGiamGia.TextColor = Color.White;
             DV_Btn_OKGiamGia.UseVisualStyleBackColor = false;
             DV_Btn_OKGiamGia.Visible = false;
+            DV_Btn_OKGiamGia.Click += DV_Btn_OKGiamGia_Click;
             // 
             // DV_Range_GiamGia
             // 
@@ -1779,9 +1775,9 @@ namespace PRL
             DV_Btn_GiamGia.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             DV_Btn_GiamGia.ForeColor = Color.White;
             DV_Btn_GiamGia.IDSelected = null;
-            DV_Btn_GiamGia.Location = new Point(264, 14);
+            DV_Btn_GiamGia.Location = new Point(277, 25);
             DV_Btn_GiamGia.Name = "DV_Btn_GiamGia";
-            DV_Btn_GiamGia.Size = new Size(154, 56);
+            DV_Btn_GiamGia.Size = new Size(174, 66);
             DV_Btn_GiamGia.TabIndex = 5;
             DV_Btn_GiamGia.Text = "Giảm giá";
             DV_Btn_GiamGia.TextColor = Color.White;
@@ -2024,6 +2020,14 @@ namespace PRL
             DV_LabelGia1.Size = new Size(171, 28);
             DV_LabelGia1.TabIndex = 1;
             DV_LabelGia1.Text = "Giá : 150.000 VNĐ";
+            // 
+            // Panel_ManHinhCho
+            // 
+            Panel_ManHinhCho.BackgroundImage = C_PRL.Properties.Resources._3261126766;
+            Panel_ManHinhCho.Location = new Point(-1, -1);
+            Panel_ManHinhCho.Name = "Panel_ManHinhCho";
+            Panel_ManHinhCho.Size = new Size(1802, 1108);
+            Panel_ManHinhCho.TabIndex = 0;
             // 
             // Panel_ThongKe
             // 

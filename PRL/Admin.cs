@@ -74,17 +74,7 @@ namespace PRL
 
         private void label1_Click(object sender, EventArgs e)
         {
-            var hdctSer = new HoaDonChiTietService();
-            var hdSer = new HoaDonService();
-            var pkSer = new PhieuKhamSer();
-
-            hdctSer.GetAllHDCT().Where(a => a.TrangThai == false).Join(hdSer.GetAllHoaDon().Where(b => b.HienThi == false), x => x.IdHoaDon, y => y.IdHoaDon, (c, d) =>
-            {
-                return new
-                {
-                    idHoaDon = c.i
-                };
-            });
+           
         }
 
 
@@ -130,9 +120,11 @@ namespace PRL
             if (myDbContext.GiamGias.Any(a => a.TrangThai == true))
             {
                 DV_Btn_DungGiamGia.Visible = true;
+                DV_Btn_GiamGia.Visible = false;
             }
             else
             {
+                DV_Btn_GiamGia.Visible = true;
                 DV_Btn_DungGiamGia.Visible = false;
             }
             Giap_LoadDichVu();
@@ -553,6 +545,7 @@ namespace PRL
                     myDbContext.SaveChanges();
                 }
                 MessageBox.Show($"Đã dừng giảm giá", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DV_Btn_DungGiamGia.Visible = false;
                 DV_Btn_GiamGia.Visible = true;
                 Giap_LoadDichVu();
             }
@@ -912,7 +905,7 @@ namespace PRL
                     {
                         phong_khachhangsv.UpdateKhachHang(kh);
                         MessageBox.Show($"Đã sửa thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadDataNV();
+                        PHONG_LoadDataKH();
                     }
                 }
             }
@@ -935,7 +928,7 @@ namespace PRL
                 {
                     phong_khachhangsv.UpdateKhachHang(kh);
                     MessageBox.Show($"Đã ẩn thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDataNV();
+                    PHONG_LoadDataKH();
                 }
             }
             else

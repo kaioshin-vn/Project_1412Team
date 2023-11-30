@@ -30,7 +30,7 @@ namespace A_DAL.Repositories
 
         public List<Admin> GetAdmins()
         {
-            return dbcontext.Admins.ToList();
+            return dbcontext.Admins.Where(a =>a.HienThi == true ).ToList();
         }
 
         public bool Update(Admin adm)

@@ -31,7 +31,7 @@ namespace A_DAL.Repositories
 
         public List<PhieuKham> GetAllPhieuKham()
         {
-            return _dbContext.PhieuKhams.ToList();
+            return _dbContext.PhieuKhams.Where(a => a.HienThi == true).ToList();
         }
 
         public bool UpdatePhieuKham(PhieuKham pk)
