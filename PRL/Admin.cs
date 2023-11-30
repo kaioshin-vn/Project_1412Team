@@ -206,19 +206,13 @@ namespace PRL
             {
                 STT = ++count,
                 TenKH = p.TrangThai,
-                TenDichVu = q.Ten,
                 Gia = q,
                 //id = p.IdKhachHang,
             }).ToList();
 
 
 
-            foreach (var item in data)
-            {
-                TT_poisonDataGridView3.Rows.Add(item.STT, item.TenKH, item.TenDichVu, item.Gia);
-            }
-            TT_poisonDataGridView3.DataSource = data;
-
+            
 
             //TT_poisonDataGridView3.ColumnCount = 6;
             //TT_poisonDataGridView3.Columns[0].Name = "Email";
