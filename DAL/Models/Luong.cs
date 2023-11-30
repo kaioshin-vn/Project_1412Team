@@ -15,7 +15,8 @@ namespace DAL.Models
         public Guid IdLuong { get; set; }
         public bool? TrangThai { get; set; }
         public int? Thuong { get; set; }
-        public int? Thang { get; set; }
+        public DateTime? Thang { get; set; }
+        public DateTime? Nam { get; set; }
         public int? SoCong { get; set; }
         public Guid IdNhanVien { get; set; }
 

@@ -25,10 +25,8 @@ namespace DAL.DBContext
         public DbSet<DichVu> DichVus { get; set; }
         public DbSet<Phong> Phongs { get; set; }
         public DbSet<KhachHang> KhachHangs { get; set; }
-        public DbSet<BacSi> BacSis { get; set; }
         public DbSet<PhieuKham> PhieuKhams { get; set; }
         public DbSet<ThongBao> ThongBaos { get; set; }
-        public DbSet<YTa> YTas { get; set; }
         public DbSet<Luong> Luongs { get; set; }
         public DbSet<CaKham> CaKhams { get; set; }
         public DbSet<NhanVien> NhanViens { get; set; }
@@ -39,8 +37,8 @@ namespace DAL.DBContext
         public DbSet<GiamGia> GiamGias { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1;Integrated Security=True");
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1_C#;Integrated Security=True ; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1_C#;Integrated Security=True;TrustServerCertificate=true");
+            //optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=DuAn1_C#;Integrated Security=True ; TrustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -56,6 +54,11 @@ namespace DAL.DBContext
            .UseIdentityColumn();
 
             modelBuilder.Entity<NhanVien>(entity =>
+            {
+                entity.HasIndex(e => e.SoDienThoai).IsUnique();
+            });
+
+            modelBuilder.Entity<KhachHang>(entity =>
             {
                 entity.HasIndex(e => e.SoDienThoai).IsUnique();
             });

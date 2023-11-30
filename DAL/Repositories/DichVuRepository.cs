@@ -1,5 +1,4 @@
 ﻿using A_DAL.IRepositories;
-using A_DAL.Migrations;
 using DAL.DBContext;
 using DAL.Models;
 using System;
@@ -21,7 +20,7 @@ namespace A_DAL.Repositories
       
         public List<DichVu> GetAllDichVu()
         {
-            return _dbContext.DichVus.ToList();
+            return _dbContext.DichVus.Where( a => a.HienThi == true).ToList();
         }
         public bool AddDichVu(DichVu dv)
         {

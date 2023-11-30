@@ -15,13 +15,19 @@ namespace DAL.Models
         [Key]
         public Guid IdNhanVien { get; set; }
         [Required]
-        [MaxLength(15)]
-        public string? SoDienThoai { get; set;}
-        [Required]
-        public LoaiNhanVien VaiTro { get; set;}
-        [Required]
         public string? Ten { get; set; }
+        public string? DiaChi { get; set; }
+        [Required]
+        [MaxLength(15)]
+        public string? SoDienThoai { get; set; }
 
+        [Required]
+        public DateTime? NgaySinh { get; set; }
+        [Required]
+        public bool? GioiTinh { get; set; }
+        public bool? HienThi { get; set; } // ẩn hiện
+        [Required]
+        public LoaiNhanVien ChucVu { get; set;}
         public bool? TrangThai { get; set;} // trạng thái
 
         [Required]
@@ -32,9 +38,7 @@ namespace DAL.Models
         public virtual Admin? Admin { get; set; }
 
         public virtual ICollection<HoaDon>? HoaDon { get; set; }
-        public virtual ChamCong? ChamCong { get; set; }
-        public virtual BacSi? BacSi { get; set; }
-        public virtual YTa? YTa { get; set; }
+        public virtual ICollection<ChamCong> ChamCong { get; set; }
         public virtual ICollection<ThongBao>? ThongBao { get; set; }
         public virtual ICollection<TrangThaiNhanVien>? TrangThaiNhanVien { get; set; }
     }

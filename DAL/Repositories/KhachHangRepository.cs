@@ -15,7 +15,7 @@ namespace A_DAL.Repositories
         public KhachHangRepository() { _dbContext = new MyDbContext(); }
         public List<KhachHang> GetAllKhachHang()
         {
-            return _dbContext.KhachHangs.ToList();
+            return _dbContext.KhachHangs.Where(a => a.HienThi == true).ToList();
         }
         public bool AddKhachHang(KhachHang kh)
         {

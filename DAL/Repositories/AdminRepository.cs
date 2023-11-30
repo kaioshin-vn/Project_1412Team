@@ -1,5 +1,4 @@
 ﻿using A_DAL.IRepositories;
-using A_DAL.Migrations;
 using DAL.DBContext;
 using DAL.Models;
 using Microsoft.EntityFrameworkCore;
@@ -31,7 +30,7 @@ namespace A_DAL.Repositories
 
         public List<Admin> GetAdmins()
         {
-            return dbcontext.Admins.ToList();
+            return dbcontext.Admins.Where(a =>a.HienThi == true ).ToList();
         }
 
         public bool Update(Admin adm)

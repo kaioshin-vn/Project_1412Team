@@ -20,6 +20,11 @@ namespace B_BUS.Services
             }
             return _repo.GetAllLichSuKham().Where(x => x.KetQua.Contains(search)).ToList();
         }
+
+        public List<LichSuKham> GetAllLichSuKham()
+        {
+                return _repo.GetAllLichSuKham();
+        }
         public LichSuKham FindLichSuKham(Guid id)
         {
             return _repo.GetAllLichSuKham().FirstOrDefault(x => x.IdPhieuKham == id);

@@ -26,10 +26,6 @@ namespace DAL.Models
         public bool? HienThi { get; set; }
 
         // Thọ
-        [ForeignKey("IdBacSi")]
-        public virtual BacSi? BacSi { get; set; }
-        [ForeignKey("IdYTa")]
-        public virtual YTa? YTa { get; set; }
         public virtual ICollection< HoaDonChiTiet>? BillDetail { get; set; }
 
         public virtual LichSuKham? HealtRecord { get; set; }

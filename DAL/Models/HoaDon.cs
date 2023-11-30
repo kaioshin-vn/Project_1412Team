@@ -20,6 +20,9 @@ namespace DAL.Models
         public string? GhiChu { get; set; }
 
         public bool? HienThi {  get; set; }
+
+        public double? PhuPhi { get; set; }
+
         public virtual ICollection<ThongKe>? ThongKe { get; set; }
         public virtual ICollection<HoaDonChiTiet>? HoaDonChiTiet { get; set; }
         [ForeignKey("IdNhanVien")]

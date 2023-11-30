@@ -19,7 +19,7 @@ namespace DAL.Models
         [Required]
         public string? MoTa { get; set; } // mô tả
         [Required]
-        public int Gia { get; set; } // giá
+        public double Gia { get; set; } // giá
 
         public bool? HienThi { get; set; } 
 

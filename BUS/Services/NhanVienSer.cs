@@ -27,14 +27,34 @@ namespace B_BUS.Services
             return _nvRepo.FindNhanVienId(id);
         }
 
+        public List<NhanVien> GetAllNhanVien(string search)
+        {
+            if(search == null)
+            {
+                return _nvRepo.GetAllNhanVien().ToList();
+            }
+            return _nvRepo.GetAllNhanVien().Where(x => x.Ten.Trim().ToLower().Contains(search) || x.SoDienThoai.Trim().Contains(search)).ToList();
+        }
+
         public List<NhanVien> GetAllNhanVien()
         {
-            return _nvRepo.GetAllNhanVien().ToList();
+            return _nvRepo.GetAllNhanVien();
         }
 
         public bool UpdateNhanVien(NhanVien nv)
         {
-            return _nvRepo.UpdateNhanVien(nv);
+            var clone = _nvRepo.GetAllNhanVien().FirstOrDefault(x => x.IdNhanVien == nv.IdNhanVien);
+            clone.Ten= nv.Ten;
+            clone.DiaChi = nv.DiaChi;
+            clone.SoDienThoai = nv.SoDienThoai;
+            clone.GioiTinh = nv.GioiTinh;
+            clone.ChucVu = nv.ChucVu;
+            clone.NgaySinh = nv.NgaySinh;
+            if (_nvRepo.UpdateNhanVien(clone) == true)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
