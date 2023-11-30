@@ -1,4 +1,6 @@
-﻿using DAL.Models;
+﻿using A_DAL.Repositories;
+using B_BUS.Services;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -129,6 +131,7 @@ namespace PRL
             Content.Controls.Clear();
             Panel_TT.Visible = true;
             Content.Controls.Add(Panel_TT);
+            LoadData();
         }
 
 
@@ -183,6 +186,109 @@ namespace PRL
             DV_Range_GiamGia.Visible = false;
             DV_Label_PhanTram.Visible = false;
             DV_GrBox.Visible = true;
+        }
+
+
+        public string text;
+        public double number;
+        public double total = 0;
+        KhachHangRepository Tan_KhachHangRepository = new KhachHangRepository();
+        DichVuRepository Tan_DichVuRepository = new DichVuRepository();
+        PhieuKhamSer Tan_phieuKhamSer = new PhieuKhamSer();
+        HoaDonService Tan_hoaDonService = new HoaDonService();
+        HoaDonChiTietService Tan_HDchiTietService = new HoaDonChiTietService();
+        DichVuService DichVuService = new DichVuService();
+        void LoadData()
+        {
+            var count = 0;
+            var data = Tan_HDchiTietService.GetAllHDCT().Join(Tan_phieuKhamSer.GetAllPhieuKham(),
+            n => n.IdHoaDon, m => m.IdKhachHang, (p, q) => new
+            {
+                STT = ++count,
+                TenKH = p.TrangThai,
+                TenDichVu = q.Ten,
+                Gia = q,
+                //id = p.IdKhachHang,
+            }).ToList();
+
+
+
+            foreach (var item in data)
+            {
+                TT_poisonDataGridView3.Rows.Add(item.STT, item.TenKH, item.TenDichVu, item.Gia);
+            }
+            TT_poisonDataGridView3.DataSource = data;
+
+
+            //TT_poisonDataGridView3.ColumnCount = 6;
+            //TT_poisonDataGridView3.Columns[0].Name = "Email";
+            //TT_poisonDataGridView3.Columns[1].Name = "Tên NV";
+            //TT_poisonDataGridView3.Columns[2].Name = "Địa chỉ";
+            //TT_poisonDataGridView3.Columns[3].Name = "Mật khẩu";
+            //TT_poisonDataGridView3.Columns[4].Name = "Vai trò";
+            //foreach (var item in Tan_KhachHangRepository.GetAllKhachHang())
+            //{
+            //    TT_poisonDataGridView3.Rows.Add(item.Ten);
+            //}
+        }
+
+        private void TT_poisonDataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 || e.RowIndex < TT_poisonDataGridView3.Rows.Count)
+            {
+                var data = TT_poisonDataGridView3.Rows[e.RowIndex];
+                TT_txt_TenKH.Text = data.Cells[1].Value.ToString();
+                TT_Label_DVSD.Text = data.Cells[2].Value.ToString();
+                TT_txt_GiaTien.Text = data.Cells[3].Value.ToString();
+            }
+            
+
+        }
+
+        private void TT_Btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            TT_txt_GhiChu.Text = text;
+            TT_txt_ChiPhiKhac.Text = Convert.ToDouble(number).ToString();
+            if (double.TryParse(TT_txt_GiaTien.Text, out double giaTien) && double.TryParse(TT_txt_ChiPhiKhac.Text, out double chiPhiKhac))
+            {
+                total = giaTien + chiPhiKhac;
+                TT_txt_TongTien.Text = total.ToString();
+            }
+            TT_txt_ThoiGianTT.Text = DateTime.Now.ToString();
+
+
+
+
+        }
+
+        private void TT_Btn_Sua_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn sửa không", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var item = Tan_KhachHangRepository.GetAllKhachHang().FirstOrDefault(KhachHangDuocChon);
+                if (item != null)
+                {
+                    var _hoaDon = new HoaDon();
+                    _hoaDon.GhiChu = TT_txt_GhiChu.Text;
+                    Tan_hoaDonService.UpdateHoaDon(_hoaDon);
+                    MessageBox.Show("Sửa thành công");
+                }
+            }
+            else MessageBox.Show("Sửa thất bại");
+        }
+
+        private void TT_Btn_An_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn ẩn không", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var _hoaDon = new HoaDon();
+                _hoaDon.HienThi = false;
+                Tan_hoaDonService.UpdateHoaDon(_hoaDon);
+                MessageBox.Show("Ẩn thành công");
+            }
+            else MessageBox.Show("Ẩn thất bại");
         }
     }
 }
