@@ -11,7 +11,7 @@ namespace B_BUS.IServices
     {
         bool AddNhanVien(NhanVien nv);
         bool UpdateNhanVien(NhanVien nv);
-        List<NhanVien> GetAllNhanVien();
+        List<NhanVien> GetAllNhanVien(string search);
         NhanVien FindNhanVien(Guid id);
     }
 }
