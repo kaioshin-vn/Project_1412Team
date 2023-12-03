@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,7 +16,7 @@ namespace DAL.Models
         public Guid IdThongBao { get; set; }
         public string? TinNhan { get; set; }
         public bool? TrangThai { get; set; }
-        public bool? ChapNhan { get; set; }
+        public TrangThaiXacNhan TTChapNhan { get; set; }
 
         public Guid IdNguoiGui { get; set; }
 

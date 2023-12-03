@@ -12,16 +12,15 @@ namespace DAL.Models
     public class TrangThaiPhong
     {
         [Key]
-        public int IdNgay { get; set; }
-        public bool? TrangThai { get; set; }
+        public int Id { get; set; }
+        public string TrangThai { get; set; } = "false|false|false|false|false|false|false|false";
 
         public DateTime Ngay { get; set; }
         public Guid IdPhong { get; set; }
-        public Guid IdCaKham { get; set; }
+
         [ForeignKey("IdPhong")]
         public virtual Phong? Phong { get; set; }
-        [ForeignKey("IdCaKham")]
-        public virtual CaKham? CaKham { get; set; }
+
 
     }
 }

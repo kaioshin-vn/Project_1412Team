@@ -16,6 +16,21 @@ namespace DAL.Enums
         Null
     }
 
+    public enum LoaiPhong
+    {
+        P405,
+        P406,
+        P603,
+        P113
+    }
+
+    public enum TrangThaiXacNhan
+    {
+        Cho , 
+        TuChoi,
+        ChapNhan
+    }
+
 
 
 }

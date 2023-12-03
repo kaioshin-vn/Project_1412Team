@@ -219,7 +219,6 @@
             Controls.Add(PhoneNumber);
             Name = "Login";
             Text = "Login";
-            WindowState = FormWindowState.Maximized;
             Load += Login_Load;
             VisibleChanged += Login_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();

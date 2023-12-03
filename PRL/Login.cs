@@ -196,13 +196,7 @@ namespace PRL
 
         private void Forget_Pass_Click(object sender, EventArgs e)
         {
-            Lb_pass.Text = "Nhập họ tên ";
-            Password.PlaceholderText = "Họ và tên";
-            Login_Btn_DangNhap.Text = "Gửi yêu cầu";
-            Password.PasswordChar = '0';
-            Visible_Pass.Visible = false;
-            checkBox1.Visible = false;
-            Forget_Pass.Visible = false;
+           
         }
 
         

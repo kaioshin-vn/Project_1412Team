@@ -16,11 +16,11 @@ namespace DAL.Models
         public Guid IdPhieuKham { get; set; }
         public Guid IdBacSi { get; set; }
         public Guid IdDichVu { get; set; }
-        public Guid IdCaKham { get; set; }
+        public int CaKham { get; set; }
         public Guid IdPhong { get; set; }
         public Guid IdKhachHang { get; set; }
         public Guid? IdYTa{ get; set; }
-        public int? IdNgay { get; set; }
+        public DateTime ngayKham { get; set; }
 
         public bool? TrangThai { get; set; }
         public bool? HienThi { get; set; }
@@ -36,8 +36,6 @@ namespace DAL.Models
         [ForeignKey("IdPhong")]
 
         public virtual Phong? Clinic { get; set; }
-        [ForeignKey("IdCaKham")]
-        public virtual CaKham?  Shifts { get; set; }
         [ForeignKey("IdKhachHang")]
         public virtual KhachHang? Customers { get; set; }
         [ForeignKey("IdNgay")]

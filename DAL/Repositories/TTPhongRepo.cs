@@ -51,14 +51,7 @@ namespace A_DAL.Repositories
         {
             try
             {
-                var updateTTPhong = FindTTPhong(trangThaiPhong.IdNgay);
-                updateTTPhong.TrangThai = trangThaiPhong.TrangThai;
-                updateTTPhong.Ngay = trangThaiPhong.Ngay;
-                updateTTPhong.IdPhong = trangThaiPhong.IdPhong;
-                updateTTPhong.IdCaKham = trangThaiPhong.IdCaKham;
-                updateTTPhong.Phong = trangThaiPhong.Phong;
-                updateTTPhong.CaKham = trangThaiPhong.CaKham;
-                _context.TrangThaiPhongs.Update(updateTTPhong);
+                _context.TrangThaiPhongs.Update(trangThaiPhong);
                 _context.SaveChanges();
                 return true;
             }

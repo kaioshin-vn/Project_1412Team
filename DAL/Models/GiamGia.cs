@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,5 +16,7 @@ namespace A_DAL.Models
         public int? PhanTramGiamGia { get; set; }
 
         public bool ? TrangThai { get; set; }
+
+        public virtual ICollection<HoaDon>? HoaDons { get; set; }
     }
 }
