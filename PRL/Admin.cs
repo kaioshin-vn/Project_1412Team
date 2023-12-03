@@ -5,7 +5,6 @@ using B_BUS.Services;
 using DAL.DBContext;
 using DAL.Enums;
 using DAL.Models;
-using Microsoft.VisualBasic.ApplicationServices;
 using PRL.Tool;
 using ReaLTaiizor.Controls;
 using System;
@@ -29,26 +28,11 @@ namespace PRL
     {
         KhachHangService phong_khachhangsv;
         NhanVienSer Tho_nvService;
-
-        private readonly LuongSer Quan_lSer = new LuongSer();
-        private readonly NhanVienSer Quan_nvSer = new NhanVienSer();
-        private readonly HoaDonService Quan_hdSer = new HoaDonService();
-        private readonly HoaDonChiTietService Quan_hdctSer = new HoaDonChiTietService();
-        private readonly KhachHangService Quan_khSer = new KhachHangService();
-        private readonly PhieuKhamSer Quan_pkSer = new PhieuKhamSer();
         private Guid iWhenClick;
         public Admin(NhanVien staff, Login login)
         {
             FormLogin = login;
-            //user = staff;
-            if (staff != null)
-            {
-                user = staff;
-            }
-            else
-            {
-                user = new NhanVien();
-            }
+            user = staff;
             InitializeComponent();
         }
 
@@ -85,7 +69,6 @@ namespace PRL
             Content.Controls.Clear();
             Panel_ManHinhCho.Visible = true;
             Content.Controls.Add(Panel_ManHinhCho);
-
         }
 
 
@@ -395,7 +378,6 @@ namespace PRL
             Content.Controls.Clear();
             Panel_TK.Visible = true;
             Content.Controls.Add(Panel_TK);
-            ShowThongTin();
         }
 
         private void ThongBao_Click(object sender, EventArgs e)
@@ -811,8 +793,8 @@ namespace PRL
 
         private void NV_Btn_Them_Click(object sender, EventArgs e)
         {
+            Tho_nvService = new NhanVienSer();
             var nv = new NhanVien();
-            var Tho_nvService = new NhanVienSer();
             nv.Ten = NV_Text_HoTen.TextButton;
             nv.DiaChi = NV_Txt_DiaChi.TextButton;
             nv.SoDienThoai = NV_Txt_Sdt.TextButton;
@@ -872,7 +854,6 @@ namespace PRL
         private void LoadDataNV()
         {
             Tho_nvService = new NhanVienSer();
-
             int stt = 1;
             NV_GridView.ColumnCount = 9;
             NV_GridView.Columns[0].Name = "STT";
@@ -915,8 +896,6 @@ namespace PRL
 
         private void NV_GridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var Tho_nvService = new NhanVienSer();
-
             if (e.RowIndex < 0 || e.RowIndex > NV_GridView.Rows.Count)
             {
                 return;
@@ -959,7 +938,6 @@ namespace PRL
         private void NV_Btn_Sua_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
-
             var nv = NhanVienDuocChon;
             if (nv != null)
             {
@@ -1258,7 +1236,6 @@ namespace PRL
         private void NV_Btn_An_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
-
             var nv = Tho_nvService.FindNhanVien(NhanVienDuocChon.IdNhanVien);
             if (nv != null)
             {
@@ -1285,7 +1262,6 @@ namespace PRL
         private void NV_Btn_TimKiem_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
-
             int stt = 1;
             NV_GridView.ColumnCount = 9;
             NV_GridView.Columns[0].Name = "STT";
@@ -3421,18 +3397,18 @@ namespace PRL
         int ft_BS = 0;
         private void SHPK_Combo_BacSi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ft_BS < 4)
+            if (ft_BS<4)
             {
                 ft_BS++;
             }
-            if (ft_BS <= 2)
+            if (ft_BS<=2)
             {
                 return;
             }
             SHPK_LoadCa();
         }
 
-
+       
         private void SHPK_Combo_Kh_SelectedIndexChanged(object sender, EventArgs e)
         {
             //  SHPK_LoadCa();
@@ -3489,118 +3465,11 @@ namespace PRL
         {
             //SHPK_LoadCa();
         }
-
-
-
-
-
-
-
-
-
-        //private void ShowThongTin()
-        //{
-        //    var nvSer = new NhanVienSer();
-        //    var a = nvSer.FindNhanVien(user.IdNhanVien);
-        //    string gt = "Nữ";
-        //    if (user.GioiTinh == true)
-        //    {
-        //        gt = "Nam";
-        //    }
-        //    TKhoan_lbl_ChucVu.Text = user.ChucVu != null ? user.ChucVu.ToString() : "null";
-        //    TKhoan_txt_SDT.Text = user.SoDienThoai != null ? user.SoDienThoai.ToString() : "null";
-        //    TKhoan_txt_DiaChi.Text = user.DiaChi != null ? user.DiaChi.ToString() : "null";
-        //    TKhoan_txt_pwd.Text = user.MatKhau != null ? user.MatKhau.ToString() : "null";
-        //    TKhoan_txt_TenNV.Text = user.Ten != null ? user.Ten.ToString() : "null";
-        //    List<string> GioiTinh = new List<string> { "Nam", "Nữ" };
-        //    var reu = nvSer.GetAllNhanVien().ToList();
-        //    TKhoan_Combo_GT.DataSource = reu;
-        //    TKhoan_Combo_GT.DisplayMember = "GioiTinh"; 
-        //    TKhoan_Combo_GT.ValueMember = "IdNhanVien";
-
-        //    TKhoan_Combo_GT.Text = gt;
-        //}
-
-        private void ShowThongTin()
-        {
-            var nvSer = new NhanVienSer();
-            var a = nvSer.FindNhanVien(user.IdNhanVien);
-
-            string gt = "Nữ";
-            if (user.GioiTinh == true)
-            {
-                gt = "Nam";
-            }
-            user.Ten = a.Ten;
-            user.DiaChi = a.DiaChi;
-            user.GioiTinh = a.GioiTinh;
-            user.MatKhau = a.MatKhau;
-
-            TKhoan_lbl_ChucVu.Text = user.ChucVu != null ? user.ChucVu.ToString() : "null";
-            TKhoan_txt_SDT.Text = user.SoDienThoai != null ? user.SoDienThoai.ToString() : "null";
-            TKhoan_txt_DiaChi.Text = user.DiaChi != null ? user.DiaChi.ToString() : "null";
-            TKhoan_txt_pwd.Text = user.MatKhau != null ? user.MatKhau.ToString() : "null";
-            TKhoan_txt_TenNV.Text = user.Ten != null ? user.Ten.ToString() : "null";
-
-            List<string> gioiTinhList = new List<string> { "Nam", "Nữ" };
-            TKhoan_Combo_GT.DataSource = gioiTinhList;
-
-            TKhoan_Combo_GT.SelectedItem = gt;
-        }
-
-
-        private void TKhoan_Btn_Update_Click(object sender, EventArgs e)
-        {
-            var nvSer = new NhanVienSer();
-            var nv = nvSer.GetAllNhanVien().FirstOrDefault(a => a.SoDienThoai == TKhoan_txt_SDT.Text);
-            if (nv != null)
-            {
-                var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
-                if (option == DialogResult.Yes)
-                {
-                    nv.Ten = TKhoan_txt_TenNV.Text;
-                    nv.DiaChi = TKhoan_txt_DiaChi.Text;
-                    nv.GioiTinh = TKhoan_Combo_GT.Text == "Nam" ? true : false;
-                    nv.MatKhau = TKhoan_txt_pwd.Text;
-                    nvSer.UpdateNhanVien(nv);
-                    MessageBox.Show($"Đã sửa thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                TKhoan_Btn_okkk.Visible = true;
-            }
-
-        }
-
-        private void TKhoan_Btn_okkk_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Để đây cho đỡ trống");
-        }
-
-        private void QL_DangXuat_Click(object sender, EventArgs e)
-        {
-            var option = MessageBox.Show("Xác nhận có muốn đăng xuất không!", "Thông báo!", MessageBoxButtons.YesNoCancel);
-            if (option == DialogResult.Yes)
-            {
-                this.Close();
-                FormLogin.RememberStatus = false;
-                FormLogin.Visible = true;
-                FormLogin.Show();
-                using (var fs = new FileStream("remember_account.txt", FileMode.OpenOrCreate, FileAccess.Write))
-                {
-                    var stream = new StreamWriter(fs);
-                    stream.WriteLine($"{user.SoDienThoai}|{user.MatKhau}|false");
-                    stream.Flush();
-                }
-
-            }
-        }
-
     }
+
+
+
+
 }
- 
-
-
-
-
-
 
 
