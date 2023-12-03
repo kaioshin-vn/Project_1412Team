@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,15 +13,12 @@ namespace DAL.Models
     public class TrangThaiNhanVien
     {
         [Key]
-        public int IdNgay { get; set; }
-        public bool? TrangThai { get; set; }
-        public Guid IdCaKham { get; set; }
+        public int Id { get; set; }
+
+        public string TrangThai { get; set; } = "false|false|false|false|false|false|false|false";
         public Guid IdNhanVien { get; set; }
         public DateTime Ngay { get; set; }
-        public virtual ICollection< PhieuKham>? PhieuKham { get; set; }
         [ForeignKey("IdNhanVien")]
         public virtual NhanVien? NhanVien { get; set; }
-        [ForeignKey("IdCaKham")]
-        public virtual CaKham? Shift { get; set; }
     }
 }

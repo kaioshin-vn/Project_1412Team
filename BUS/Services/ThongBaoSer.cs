@@ -22,11 +22,11 @@ namespace B_BUS.Services
             return _tbRepo.AddThongBao(tb);
         }
 
-        public ThongBao FindThongBao(Guid id)
-        {
-            return _tbRepo.FindThongBaoId(id);
-        }
 
+        public List<ThongBao> GetListThongBaoChuaTH()
+        {
+            return _tbRepo.GetAllThongBao().Where(a => a.TrangThai == false).ToList();
+        }
         public List<ThongBao> GetAllThongBao()
         {
             return _tbRepo.GetAllThongBao().ToList();
@@ -35,6 +35,11 @@ namespace B_BUS.Services
         public bool UpdateThongBao(ThongBao tb)
         {
             return _tbRepo.UpdateThongBao(tb);
+        }
+
+        public ThongBao FindThongBao(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

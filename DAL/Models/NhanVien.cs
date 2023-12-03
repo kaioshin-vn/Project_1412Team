@@ -33,6 +33,8 @@ namespace DAL.Models
         [Required]
         public string? MatKhau { get; set; }
 
+        public string? Mota { get;set; }
+
         // quan hệ
 
         public virtual Admin? Admin { get; set; }

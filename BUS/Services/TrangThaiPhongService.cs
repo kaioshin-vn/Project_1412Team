@@ -17,7 +17,7 @@ namespace B_BUS.Services
             myDbContext.TrangThaiPhongs.Update(TrangThaiPhong);
             return true;
         }
-        public List<TrangThaiPhong> GetAllTrangThaiNhanVien()
+        public List<TrangThaiPhong> GetAllTrangThaiPhong()
         {
             return myDbContext.TrangThaiPhongs.ToList();
         }

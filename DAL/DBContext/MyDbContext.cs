@@ -28,7 +28,6 @@ namespace DAL.DBContext
         public DbSet<PhieuKham> PhieuKhams { get; set; }
         public DbSet<ThongBao> ThongBaos { get; set; }
         public DbSet<Luong> Luongs { get; set; }
-        public DbSet<CaKham> CaKhams { get; set; }
         public DbSet<NhanVien> NhanViens { get; set; }
         public DbSet<ThongKe> ThongKes { get; set; }
         public DbSet<TrangThaiPhong> TrangThaiPhongs { get; set; }
@@ -44,12 +43,12 @@ namespace DAL.DBContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TrangThaiNhanVien>()
-           .Property(p => p.IdNgay)
+           .Property(p => p.Id)
            .ValueGeneratedOnAdd()
            .UseIdentityColumn();
 
             modelBuilder.Entity<TrangThaiPhong>()
-           .Property(p => p.IdNgay)
+           .Property(p => p.Id)
            .ValueGeneratedOnAdd()
            .UseIdentityColumn();
 
@@ -63,6 +62,7 @@ namespace DAL.DBContext
                 entity.HasIndex(e => e.SoDienThoai).IsUnique();
             });
 
+    
         }
     }
 }

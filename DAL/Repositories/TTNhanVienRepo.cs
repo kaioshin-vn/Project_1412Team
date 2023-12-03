@@ -50,15 +50,8 @@ namespace A_DAL.Repositories
         {
             try
             {
-                var updateTTNhanVien = FindTTNhanVien(trangThaiNhanVien.IdNgay);
-                updateTTNhanVien.TrangThai = trangThaiNhanVien.TrangThai;
-                updateTTNhanVien.IdCaKham = trangThaiNhanVien.IdCaKham;
-                updateTTNhanVien.IdNhanVien = trangThaiNhanVien.IdNhanVien;
-                updateTTNhanVien.Ngay = trangThaiNhanVien.Ngay;
-                updateTTNhanVien.PhieuKham = trangThaiNhanVien.PhieuKham;
-                updateTTNhanVien.NhanVien = trangThaiNhanVien.NhanVien;
-                //updateTTNhanVien.CaKham = trangThaiNhanVien.CaKham;
-                _context.TrangThaiNhanViens.Update(updateTTNhanVien);
+      
+                _context.TrangThaiNhanViens.Update(trangThaiNhanVien);
                 _context.SaveChanges();
                 return true;
             }

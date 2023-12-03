@@ -1,4 +1,5 @@
-﻿using System;
+﻿using A_DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,6 +23,10 @@ namespace DAL.Models
         public bool? HienThi {  get; set; }
 
         public double? PhuPhi { get; set; }
+
+        public int? idGiamGia { get; set; }
+        [ForeignKey("idGiamGia")]
+        public virtual GiamGia? GiamGia { get; set; }
 
         public virtual ICollection<ThongKe>? ThongKe { get; set; }
         public virtual ICollection<HoaDonChiTiet>? HoaDonChiTiet { get; set; }
