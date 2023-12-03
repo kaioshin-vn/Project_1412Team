@@ -1563,8 +1563,8 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_KH);
             Content.Controls.Add(Panel_NV);
+            Content.Controls.Add(Panel_KH);
             Content.Controls.Add(Panel_TT);
             Content.Controls.Add(Panel_LK);
             Content.Controls.Add(Panel_ThongKe);

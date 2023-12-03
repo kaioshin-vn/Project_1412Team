@@ -1236,7 +1236,7 @@ namespace PRL
         private void NV_Btn_An_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
-            var nv = NhanVienDuocChon;
+            var nv = Tho_nvService.FindNhanVien(NhanVienDuocChon.IdNhanVien);
             if (nv != null)
             {
                 var option = MessageBox.Show("Xác nhận có muốn ẩn!", "Thông báo!", MessageBoxButtons.YesNoCancel);
