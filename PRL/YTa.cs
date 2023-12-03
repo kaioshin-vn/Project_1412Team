@@ -14,7 +14,7 @@ namespace PRL
 {
     public partial class YTa : Form
     {
-       // private TimekeepingService _timekeepsv;
+        // private TimekeepingService _timekeepsv;
         public YTa(NhanVien staff, Login login)
         {
             FormLogin = login;
@@ -85,5 +85,12 @@ namespace PRL
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

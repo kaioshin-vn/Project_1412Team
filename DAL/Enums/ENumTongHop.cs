@@ -12,7 +12,8 @@ namespace DAL.Enums
     {
         Admin,
         BacSi,
-        YTa
+        YTa,
+        Null
     }
 
 

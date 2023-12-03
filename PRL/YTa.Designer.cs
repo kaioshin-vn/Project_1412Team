@@ -230,6 +230,7 @@ namespace PRL
             label2.Size = new Size(89, 25);
             label2.TabIndex = 3;
             label2.Text = "Tài khoản";
+            label2.Click += label2_Click;
             // 
             // buttonCustom1
             // 
@@ -1224,7 +1225,7 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
-            Content.Controls.Add(Panel_ChamCong);
+            Content.Controls.Add(Panel_NV);
             Content.Location = new Point(277, 56);
             Content.Name = "Content";
             Content.Size = new Size(1307, 993);
