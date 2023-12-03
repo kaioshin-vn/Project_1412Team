@@ -3566,7 +3566,6 @@ namespace PRL
             TKhoan_Btn_okkk.TextColor = Color.White;
             TKhoan_Btn_okkk.UseVisualStyleBackColor = false;
             TKhoan_Btn_okkk.Visible = false;
-            TKhoan_Btn_okkk.Click += TKhoan_Btn_okkk_Click;
             // 
             // TKhoan_Btn_Update
             // 
@@ -3587,7 +3586,6 @@ namespace PRL
             TKhoan_Btn_Update.Text = "Cập Nhật";
             TKhoan_Btn_Update.TextColor = Color.White;
             TKhoan_Btn_Update.UseVisualStyleBackColor = false;
-            TKhoan_Btn_Update.Click += TKhoan_Btn_Update_Click;
             // 
             // TKhoan_lbl_ChucVu
             // 
