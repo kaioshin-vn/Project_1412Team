@@ -938,6 +938,11 @@ namespace PRL
         private void NV_Btn_Sua_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
+            if (NhanVienDuocChon == null)
+            {
+                MessageBox.Show($"Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var nv = NhanVienDuocChon;
             if (nv != null)
             {
@@ -1137,6 +1142,11 @@ namespace PRL
         private void KH_Btn_Sua_Click(object sender, EventArgs e)
         {
             phong_khachhangsv = new KhachHangService();
+            if (KhachHangDuocChon == null)
+            {
+                MessageBox.Show($"Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var kh = phong_khachhangsv.FindKhachHang(KhachHangDuocChon.IdKhachHang);
             if (kh != null)
             {
@@ -1184,6 +1194,11 @@ namespace PRL
         private void KH_Btn_An_Click(object sender, EventArgs e)
         {
             phong_khachhangsv = new KhachHangService();
+            if (KhachHangDuocChon == null)
+            {
+                MessageBox.Show($"Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var kh = KhachHangDuocChon;
             if (kh != null)
             {
@@ -1236,6 +1251,11 @@ namespace PRL
         private void NV_Btn_An_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
+            if (NhanVienDuocChon ==null)
+            {
+                MessageBox.Show($"Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var nv = Tho_nvService.FindNhanVien(NhanVienDuocChon.IdNhanVien);
             if (nv != null)
             {
@@ -2219,6 +2239,10 @@ namespace PRL
 
             ngayDuocChon = DateTime.Parse(LK_TPK_Combo_Ngay.SelectedValue.ToString());
 
+            if (!LK_TPK_Combo_Gio.Enabled)
+            {
+                return;
+            }
             var TTYta = ttNVSer.GetTTNhanVien().FirstOrDefault(a => a.Ngay.ToString("MM/dd/yyyy") == ngayDuocChon.ToString("MM/dd/yyyy") && a.IdNhanVien == Guid.Parse(LK_TPK_Combo_YTa.SelectedValue.ToString()));
 
             List<int> lstcaTrongYTa = new List<int>();
@@ -2378,7 +2402,6 @@ namespace PRL
             {
                 return;
             }
-            Giap_CheckCaHopLe();
 
 
             var idKh = LK_TPK_Combo_KhachHang.SelectedValue.ToString();
@@ -2448,7 +2471,6 @@ namespace PRL
             {
                 return;
             }
-            Giap_CheckCaHopLe();
             if (LK_TPK_Combo_KhachHang.SelectedValue == null)
             {
                 return;
@@ -2460,7 +2482,6 @@ namespace PRL
                 LK_TPK_RichText.Text = "Thông tin\n\n\n" + $"Dịch vụ : {kh.Ten}\n\n\nGiá : {kh.Gia.ToString("0,000")} VNĐ\n\n\nMô tả: {kh.MoTa}";
             }
 
-            Giap_LoadComboCa();
 
         }
         int firttimeTPK_Combo_Gio = 0;

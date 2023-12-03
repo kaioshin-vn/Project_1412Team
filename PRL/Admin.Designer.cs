@@ -1456,7 +1456,7 @@ namespace PRL
             NV_RichTxt_MoTa.RGB = false;
             NV_RichTxt_MoTa.Rounding = true;
             NV_RichTxt_MoTa.RoundingInt = 60;
-            NV_RichTxt_MoTa.Size = new Size(784, 216);
+            NV_RichTxt_MoTa.Size = new Size(784, 190);
             NV_RichTxt_MoTa.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             NV_RichTxt_MoTa.TabIndex = 15;
             NV_RichTxt_MoTa.Tag = "Cyber";
