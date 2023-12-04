@@ -14,6 +14,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.WebSockets;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Speech.Synthesis;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -26,6 +27,8 @@ namespace PRL
 {
     public partial class Admin : Form
     {
+        Label currentSelectedMethod;
+        Label previousSelectedMethod;
         KhachHangService phong_khachhangsv;
         NhanVienSer Tho_nvService;
         private Guid iWhenClick;
@@ -69,12 +72,20 @@ namespace PRL
             Content.Controls.Clear();
             Panel_ManHinhCho.Visible = true;
             Content.Controls.Add(Panel_ManHinhCho);
+            timer1.Start();
+            LoiChao.Text = "Xin chào " + user.Ten + " chúc một ngày làm việc vui vẻ!" + $"                    Hà Nội {DateTime.Now.ToString("dd/MM/yyyy")}";
         }
 
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            Content.Controls.Clear();
+            Panel_ManHinhCho.Visible = true;
+            Content.Controls.Add(Panel_ManHinhCho);
+            if (currentSelectedMethod!= null)
+            {
+                currentSelectedMethod.ForeColor = Color.Black;
+            }
         }
 
 
@@ -89,8 +100,10 @@ namespace PRL
             var ttPhongSer = new TTPhongSer();
             var nvSer = new NhanVienSer();
             var phongSer = new PhongSer();
-            if (DateTime.Parse(ttPhongSer.GetTTPhong().OrderByDescending(a => a.Ngay).FirstOrDefault().Ngay.AddDays(7).ToString("MM/dd/yyyy")) < DateTime.Parse(DateTime.Now.AddDays(7).ToString("MM/dd/yyyy")))
+            var ttphongNgayCN = ttPhongSer.GetTTPhong().OrderByDescending(a => a.Ngay).FirstOrDefault();
+            if (DateTime.Parse(ttphongNgayCN.Ngay.ToString("MM/dd/yyyy")) != DateTime.Parse(DateTime.Now.AddDays(7).ToString("MM/dd/yyyy")))
             {
+                
                 foreach (var item in nvSer.GetAllNhanVien())
                 {
                     var TtNV = new TrangThaiNhanVien();
@@ -106,6 +119,7 @@ namespace PRL
                     ttPhongSer.AddTTPhong(ttPhong);
                 }
             }
+            changeColor(QL_LichKham);
 
         }
 
@@ -115,6 +129,7 @@ namespace PRL
             Panel_KH.Visible = true;
             Content.Controls.Add(Panel_KH);
             PHONG_LoadDataKH();
+            changeColor(QL_KH);
         }
 
         private void Admin_VisibleChanged(object sender, EventArgs e)
@@ -155,7 +170,7 @@ namespace PRL
                     DV_Btn_DungGiamGia.Visible = false;
                 }
             }
-
+            changeColor(QL_DV);
             Giap_LoadDichVu();
         }
 
@@ -189,6 +204,7 @@ namespace PRL
             ThongKe_Label_ThongTinTK.Text = $"Thống Kê Tháng {DateTime.Now.Month} Năm {DateTime.Now.Year}";
             cmbDate();
             Giap_LoadThongKe();
+            changeColor(QL_ThongKe);
         }
 
         void Giap_LoadThongKe()
@@ -205,7 +221,7 @@ namespace PRL
             var luongSer = new LuongSer();
             var count = 1;
 
-            var kqDaThanhToan1 = hoaDonSer.GetAllHoaDon().Where(a => a.ThoiGian!= null).Where(a => a.ThoiGian.Value.Month.ToString() == ThongKe_Combo_LocThang.Text && a.ThoiGian.Value.Year.ToString() == ThongKe_Combo_LocNam.Text).Join(hoaDonCtSer.GetAllHDCT().Where(a => a.TrangThai == true), n => n.IdHoaDon, m => m.IdHoaDon, (q, p) =>
+            var kqDaThanhToan1 = hoaDonSer.GetAllHoaDon().Where(a => a.ThoiGian != null).Where(a => a.ThoiGian.Value.Month.ToString() == ThongKe_Combo_LocThang.Text && a.ThoiGian.Value.Year.ToString() == ThongKe_Combo_LocNam.Text).Join(hoaDonCtSer.GetAllHDCT().Where(a => a.TrangThai == true), n => n.IdHoaDon, m => m.IdHoaDon, (q, p) =>
             {
                 return new
                 {
@@ -406,6 +422,7 @@ namespace PRL
             TT_Btn_An.Visible = false;
             TT_Btn_ThanhToan.Visible = false;
             TT_Btn_Sua.Visible = false;
+            changeColor(QL_ThanhToan);
         }
 
 
@@ -427,16 +444,18 @@ namespace PRL
                 {
                     var nv = new NhanVienSer().FindNhanVien(item.IdNguoiGui);
 
-                    var result = MessageBox.Show($"Cho phép {nv.Ten} đăng nhập?\n-----------\nThông tin :\n" +
-                        $"Số điện thoại : {nv.SoDienThoai}\nSố căn cước :{item.TinNhan}", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    var result = MessageBox.Show($"Cho phép {nv.Ten} đăng nhập?\n--------------\nThông tin :\n" +
+                        $"Số điện thoại : {nv.SoDienThoai}\nSố căn cước : {item.TinNhan}", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
+                        item.TrangThai = true;
                         item.TTChapNhan = TrangThaiXacNhan.ChapNhan;
                         MessageBox.Show("Ok tài khoản đã được cho phép đăng nhập!!");
                         tbSer.UpdateThongBao(item);
                     }
                     else if (result == DialogResult.No)
                     {
+                        item.TrangThai = true;
                         item.TTChapNhan = TrangThaiXacNhan.TuChoi;
                         MessageBox.Show("Tài khoản bị từ chối đăng nhập");
                         tbSer.UpdateThongBao(item);
@@ -466,6 +485,23 @@ namespace PRL
             Panel_NV.Visible = true;
             Content.Controls.Add(Panel_NV);
             LoadDataNV();
+            changeColor(QL_NV);
+        }
+        int timeChange = 0;
+        void changeColor(Label lb)
+        {
+            if (timeChange >= 1)
+            {
+                previousSelectedMethod = currentSelectedMethod;
+                previousSelectedMethod.ForeColor = Color.Black;
+            }
+            if (timeChange == 0)
+            {
+                timeChange++;
+            }
+            
+            currentSelectedMethod = lb;
+            currentSelectedMethod.ForeColor = Color.Crimson;
         }
 
         private void DV_Btn_GiamGia_Click(object sender, EventArgs e)
@@ -866,7 +902,7 @@ namespace PRL
                 if (option == DialogResult.Yes)
                 {
                     Tho_nvService.AddNhanVien(nv);
-                    MessageBox.Show($"Đã thêm thành công dịch vụ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Đã thêm thành công nhân viên!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDataNV();
                     TaoTrangThaiNV(nv);
                     TaoChamCong(nv);
@@ -1052,7 +1088,6 @@ namespace PRL
 
                 KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, gioiTinh, item.NgaySinh.Value.ToString("dd/MM/yyyy"), item.IdKhachHang);
             }
-            Giap_LoadLSKham();
         }
 
 
@@ -1084,12 +1119,13 @@ namespace PRL
                         NgayKham = c.NgayKham,
                     };
                 }).ToList();
+                var kq = "";
                 foreach (var item in result)
                 {
-                    KH_RichTxt_LSKham.Text += $"Ngày khám : {item.NgayKham.ToString("dd/MM/yyyy")}\nDịch vụ:{item.DichVu}\nKết quả : {item.KetLuan}\nGhi chú :{item.GhiChu}\n--------------------------------";
+                     kq += $"\nNgày khám : {item.NgayKham.ToString("dd/MM/yyyy")}\nDịch vụ:{item.DichVu}\nKết quả : {item.KetLuan}\nGhi chú :Trống\n--------------------------------";
                 }
 
-
+                KH_RichTxt_LSKham.Text = kq;
             }
         }
 
@@ -1118,6 +1154,7 @@ namespace PRL
             }
             KH_Combo_GioiTinh.Text = gioiTinh;
             KH_DateTime_NgaySinh.Value = KhachHangDuocChon.NgaySinh.Value;
+            Giap_LoadLSKham();
         }
         private void KH_Btn_Them_Click(object sender, EventArgs e)
         {
@@ -1546,7 +1583,7 @@ namespace PRL
 
 
 
-
+          //  QL_DangXuat.Text = new hoa
 
 
             var kqChuaThanhToan1 = hoaDonSer.GetAllHoaDon().Join(hoaDonCtSer.GetAllHDCT().Where(a => a.TrangThai == false), n => n.IdHoaDon, m => m.IdHoaDon, (q, p) =>
@@ -1911,18 +1948,25 @@ namespace PRL
                 var hdSer = new HoaDonService();
                 if (!Giap_CheckGia(TT_txt_ChiPhiKhac.Text))
                 {
-                    MessageBox.Show($"Hãy nhập số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (TT_txt_ChiPhiKhac.Text == "")
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Hãy nhập số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
 
-                else
-                {
+              
                     var hd = hdSer.FindHoaDon(TT_HoaDonDuocChon.IdHoaDon);
                     hd.PhuPhi = Convert.ToDouble(TT_txt_ChiPhiKhac.Text);
                     hd.GhiChu = TT_txt_GhiChu.Text;
                     hdSer.UpdateHoaDon(hd);
                     MessageBox.Show($"Đã cập nhật thông tin hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Giap_LoadDataGrThanhToan();
-                }
+               
 
             }
         }
@@ -1960,12 +2004,21 @@ namespace PRL
             }
             else
             {
+                //double PhuPhi;
                 if (!Giap_CheckGia(TT_txt_ChiPhiKhac.Text))
                 {
-                    MessageBox.Show($"Hãy nhập số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (TT_txt_ChiPhiKhac.Text == "")
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Hãy nhập số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    
                 }
-                else
-                {
+
                     if (DialogResult.Yes == MessageBox.Show($"Bạn chắc chắn muốn xác nhận thanh toán hóa đơn?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
                         var hdSer = new HoaDonService();
@@ -1991,9 +2044,48 @@ namespace PRL
                             item.TrangThai = true;
                             hdctSer.UpdateHDCT(item);
                         }
-                        MessageBox.Show($"Xác nhận thanh toán thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Giap_LoadDataGrThanhToan();
+                        var kq = MessageBox.Show($"Khách hàng có muốn in hóa đơn không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (kq == DialogResult.Yes)
+                        {
+                            var listHdct = new HoaDonChiTietService().GetAllHDCT().Where(a => a.IdHoaDon == hd.IdHoaDon && a.TrangThai == true);
+                            var pk = new PhieuKhamSer().FindPhieuKham(listHdct.FirstOrDefault().IdPhieuKham);
+                            var kh = new KhachHangService().FindKhachHang(pk.IdKhachHang);
+                            var listDichVu = listHdct.Join(new PhieuKhamSer().GetAllPhieuKham(), a => a.IdPhieuKham, b => b.IdPhieuKham, (c, d) =>
+                            {
+                                return new
+                                {
+                                    idDV = d.IdDichVu
+                                };
+                            }).Join(new DichVuService().GetAllDichVu(), a => a.idDV, b => b.IdDichVu, (c, d) =>
+                            {
+                                return new
+                                {
+                                    TenDv = d.Ten ,
+                                    Gia = d.Gia ,
+                                };
+                            });
+
+                            var stringDV = string.Join("\n", listDichVu.Select(a => $"{a.TenDv} - {a.Gia.ToString("0,000")} VNĐ"));
+                            var giamgia = 100;
+                            if (hd.idGiamGia != null)
+                            {
+                                giamgia = Convert.ToInt32(new GiamGiaSer().FindGiamGia(Convert.ToInt32(hd.idGiamGia)).PhanTramGiamGia);
+                            }
+                            var tongTien = Convert.ToDouble(listDichVu.Sum(a => a.Gia * giamgia) + hd.PhuPhi);
+                            using (var fs = new FileStream($@"C:\\HoaDon\\{hd.ThoiGian.Value.ToString("dd-MM-yyyy")}--{hd.IdHoaDon}Result.txt", FileMode.OpenOrCreate, FileAccess.Write))
+                            {
+                                var stream = new StreamWriter(fs);
+                                stream.WriteLine($"HÓA ĐƠN\r\n\r\nNgày: {hd.ThoiGian.Value.ToString("dd/MM/yyyy hh:mm")}\r\n\nSố hóa đơn: {hd.IdHoaDon}\r\n\n\r\nPhòng phám: 1412 Dental\r\n\nĐịa chỉ: 69 Nguyễn Phong Sắc , quận Cầu Giấy , Hà Nội\r\n\n" +
+                                    $"Điện thoại: 0978040960\r\n\r\n\nThông tin khách hàng:\r\n\nHọ và tên: {kh.Ten}\r\n\nĐịa chỉ: {kh.DiaChi}\r\n\nĐiện thoại: {kh.SoDienThoai}\r\n\r\n\n" +
+                                    $"Dịch vụ sử dụng : {stringDV} \r\n\nPhụ phí: {Convert.ToDouble(hd.PhuPhi).ToString("0,000")} VNĐ\r\n\nTổng cộng: {tongTien.ToString("0,000")} VNĐ\r\n\nNhân viên thanh toán: {new NhanVienSer().FindNhanVien(Guid.Parse(hd.IdNhanVien.ToString())).Ten}");
+                                stream.Flush();
+                            }
+                        MessageBox.Show($"Xác nhận thanh toán và in hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
+                    MessageBox.Show($"Xác nhận thanh toán thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Giap_LoadDataGrThanhToan();
+                    
                 }
             }
 
@@ -2740,7 +2832,8 @@ namespace PRL
                             hdCt.TrangThai = false;
                             hdCtSer.AddHDCT(hdCt);
                         }
-                        MessageBox.Show("Ok hãy tiếp tục đặt lịch cho các khách hàng thân yêu đi nào!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        MessageBox.Show("Ok hãy tiếp tục đặt lịch cho các khách hàng thân yêu đi nào!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lstIdPhieuKham.Clear();
                     }
                 }
             }
@@ -3468,14 +3561,14 @@ namespace PRL
                 {
                     if (L_Txt_thuong.Text == "")
                     {
-                        
+
                     }
                     else
                     {
                         MessageBox.Show("Chỉ được nhập số!!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    
+
                 }
                 thuong = Convert.ToDouble(L_Txt_thuong.Text);
                 L_LuongDuocChon.SoCong = Convert.ToInt32(L_Txt_SoCong.Text);
@@ -3688,9 +3781,9 @@ namespace PRL
                 FormLogin.Show();
                 using (var fs = new FileStream("remember_account.txt", FileMode.OpenOrCreate, FileAccess.Write))
                 {
-                    var stream = new StreamWriter(fs);
-                    stream.WriteLine($"{user.SoDienThoai}|{user.MatKhau}|false");
-                    stream.Flush();
+                    var stringInfo = $"{user.MatKhau}|{user.MatKhau}|false";
+                    var bf = new BinaryFormatter();
+                    bf.Serialize(fs, stringInfo);
                 }
 
             }
@@ -3710,6 +3803,7 @@ namespace PRL
         {
             if (KhachHangDuocChon == null)
             {
+                MessageBox.Show("Chưa chọn khách hàng !");
                 return;
             }
             var khSer = new KhachHangService();
@@ -3723,8 +3817,17 @@ namespace PRL
             var ttPhongSer = new TTPhongSer();
             var nvSer = new NhanVienSer();
             var phongSer = new PhongSer();
-            if (DateTime.Parse(ttPhongSer.GetTTPhong().OrderByDescending(a => a.Ngay).FirstOrDefault().Ngay.AddDays(7).ToString("MM/dd/yyyy")) < DateTime.Parse(DateTime.Now.AddDays(7).ToString("MM/dd/yyyy")))
+            LK_Panel.Controls.Clear();
+            LK_Panel.Controls.Add(LK_Grbox_ThemLichKham);
+            spaceSeparatorHorizontal1.Location = new Point(LK_Btn_ThemLichKham.Location.X, spaceSeparatorHorizontal1.Location.Y);
+            spaceSeparatorHorizontal1.Size = new Size(LK_Btn_ThemLichKham.Width + 1, spaceSeparatorHorizontal1.Height);
+            Giap_LK_LoadComboKhachHangBacSiDichVuNgayPhong();
+            LK_TPK_Combo_KhachHang.SelectedValue = kh.IdKhachHang;
+            LK_TPK_Combo_KhachHang.Enabled = false;
+            var ttphongNgayCN = ttPhongSer.GetTTPhong().OrderByDescending(a => a.Ngay).FirstOrDefault();
+            if (DateTime.Parse(ttphongNgayCN.Ngay.ToString("MM/dd/yyyy")) != DateTime.Parse(DateTime.Now.AddDays(7).ToString("MM/dd/yyyy")))
             {
+
                 foreach (var item in nvSer.GetAllNhanVien())
                 {
                     var TtNV = new TrangThaiNhanVien();
@@ -3740,16 +3843,21 @@ namespace PRL
                     ttPhongSer.AddTTPhong(ttPhong);
                 }
             }
+            changeColor(QL_LichKham);
 
 
-            LK_Panel.Controls.Clear();
-            LK_Panel.Controls.Add(LK_Grbox_ThemLichKham);
-            spaceSeparatorHorizontal1.Location = new Point(LK_Btn_ThemLichKham.Location.X, spaceSeparatorHorizontal1.Location.Y);
-            spaceSeparatorHorizontal1.Size = new Size(LK_Btn_ThemLichKham.Width + 1, spaceSeparatorHorizontal1.Height);
-            Giap_LK_LoadComboKhachHangBacSiDichVuNgayPhong();
-            LK_TPK_Combo_KhachHang.SelectedValue = kh.IdKhachHang;
-            LK_TPK_Combo_KhachHang.Enabled = false;
 
+        }
+
+        private void KH_RichTxt_LSKham_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            var tbSer = new ThongBaoSer();
+            QL_ThongBao.Text = "Thông báo" + $"({tbSer.GetListThongBaoChuaTH().Count})" ;
         }
     }
 }

@@ -53,7 +53,6 @@ namespace PRL
             QL_ChamCong = new Label();
             LoiChao = new Label();
             Panel_KH = new Panel();
-            buttonCustom2 = new ButtonCustom();
             KH_Btn_Them = new ButtonCustom();
             KH_Btn_Sua = new ButtonCustom();
             KH_Btn_An = new ButtonCustom();
@@ -78,6 +77,18 @@ namespace PRL
             QL_LichKham = new Label();
             QL_KH = new Label();
             Content = new Panel();
+            Panel_KQ = new Panel();
+            KQ_Panel_DSCK = new Panel();
+            thunderGroupBox2 = new ReaLTaiizor.Controls.ThunderGroupBox();
+            panel2 = new Panel();
+            buttonCustom3 = new ButtonCustom();
+            label2 = new Label();
+            thunderGroupBox1 = new ReaLTaiizor.Controls.ThunderGroupBox();
+            KQ_panel1_1 = new Panel();
+            KQ_panel1_TraKQ_1 = new ButtonCustom();
+            KQ_panel1_ThongTin_1 = new Label();
+            bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
+            Panel_ManHinhCho = new Panel();
             Panel_L = new Panel();
             L_Txt_TG = new ReaLTaiizor.Controls.BigLabel();
             bigLabel12 = new ReaLTaiizor.Controls.BigLabel();
@@ -138,22 +149,10 @@ namespace PRL
             TKhoan_lbl_Gt = new ReaLTaiizor.Controls.BigLabel();
             TKhoan_lbl_CVu = new ReaLTaiizor.Controls.BigLabel();
             airSeparator4 = new ReaLTaiizor.Controls.AirSeparator();
-            Panel_KQ = new Panel();
-            KQ_Panel_DSCK = new Panel();
-            thunderGroupBox2 = new ReaLTaiizor.Controls.ThunderGroupBox();
-            panel2 = new Panel();
-            buttonCustom3 = new ButtonCustom();
-            label2 = new Label();
-            thunderGroupBox1 = new ReaLTaiizor.Controls.ThunderGroupBox();
             KQ_Panel2_1 = new Panel();
             KQ_Panel2_Huy1 = new ButtonCustom();
             KQ_Panel2_XacNhan1 = new ButtonCustom();
             KQ_Panel2_RichText1 = new ReaLTaiizor.Controls.RichTextBoxEdit();
-            bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
-            Panel_ManHinhCho = new Panel();
-            KQ_panel1_1 = new Panel();
-            KQ_panel1_TraKQ_1 = new ButtonCustom();
-            KQ_panel1_ThongTin_1 = new Label();
             Panel_ThongKe = new SplitContainer();
             Panel_TT = new Panel();
             bigLabel35 = new ReaLTaiizor.Controls.BigLabel();
@@ -242,19 +241,19 @@ namespace PRL
             KH_Grbox.SuspendLayout();
             Nav_Option.SuspendLayout();
             Content.SuspendLayout();
+            Panel_KQ.SuspendLayout();
+            KQ_Panel_DSCK.SuspendLayout();
+            thunderGroupBox2.SuspendLayout();
+            panel2.SuspendLayout();
+            thunderGroupBox1.SuspendLayout();
+            KQ_panel1_1.SuspendLayout();
             Panel_L.SuspendLayout();
             cyberGroupBox3.SuspendLayout();
             Panel_LK.SuspendLayout();
             LK_Panel.SuspendLayout();
             LK_Grbox_ThemLichKham.SuspendLayout();
             Panel_TK.SuspendLayout();
-            Panel_KQ.SuspendLayout();
-            KQ_Panel_DSCK.SuspendLayout();
-            thunderGroupBox2.SuspendLayout();
-            panel2.SuspendLayout();
-            thunderGroupBox1.SuspendLayout();
             KQ_Panel2_1.SuspendLayout();
-            KQ_panel1_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Panel_ThongKe).BeginInit();
             Panel_ThongKe.SuspendLayout();
             Panel_TT.SuspendLayout();
@@ -385,7 +384,7 @@ namespace PRL
             LoiChao.AutoSize = true;
             LoiChao.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LoiChao.ForeColor = Color.Crimson;
-            LoiChao.Location = new Point(264, 21);
+            LoiChao.Location = new Point(53, 20);
             LoiChao.Name = "LoiChao";
             LoiChao.Size = new Size(179, 29);
             LoiChao.TabIndex = 0;
@@ -394,7 +393,6 @@ namespace PRL
             // Panel_KH
             // 
             Panel_KH.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Panel_KH.Controls.Add(buttonCustom2);
             Panel_KH.Controls.Add(KH_Btn_Them);
             Panel_KH.Controls.Add(KH_Btn_Sua);
             Panel_KH.Controls.Add(KH_Btn_An);
@@ -409,28 +407,6 @@ namespace PRL
             Panel_KH.Size = new Size(2881, 876);
             Panel_KH.TabIndex = 0;
             Panel_KH.Visible = false;
-            // 
-            // buttonCustom2
-            // 
-            buttonCustom2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonCustom2.BackColor = Color.FromArgb(192, 255, 255);
-            buttonCustom2.BackgroundColor = Color.FromArgb(192, 255, 255);
-            buttonCustom2.BorderColor = Color.White;
-            buttonCustom2.BorderRadius = 20;
-            buttonCustom2.BorderSize = 0;
-            buttonCustom2.FlatAppearance.BorderSize = 0;
-            buttonCustom2.FlatStyle = FlatStyle.Flat;
-            buttonCustom2.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCustom2.ForeColor = Color.DeepPink;
-            buttonCustom2.IDSelected = null;
-            buttonCustom2.Location = new Point(986, 400);
-            buttonCustom2.Name = "buttonCustom2";
-            buttonCustom2.Size = new Size(309, 50);
-            buttonCustom2.TabIndex = 26;
-            buttonCustom2.Text = "➤  Thêm Phiếu Khám";
-            buttonCustom2.TextColor = Color.DeepPink;
-            buttonCustom2.UseVisualStyleBackColor = false;
-            buttonCustom2.Click += buttonCustom2_Click;
             // 
             // KH_Btn_Them
             // 
@@ -636,7 +612,7 @@ namespace PRL
             KH_Grbox.RGB = false;
             KH_Grbox.Rounding = true;
             KH_Grbox.RoundingInt = 60;
-            KH_Grbox.Size = new Size(498, 530);
+            KH_Grbox.Size = new Size(498, 651);
             KH_Grbox.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             KH_Grbox.TabIndex = 16;
             KH_Grbox.Tag = "Cyber";
@@ -650,7 +626,7 @@ namespace PRL
             KH_DateTime_NgaySinh.Location = new Point(196, 537);
             KH_DateTime_NgaySinh.MinimumSize = new Size(0, 30);
             KH_DateTime_NgaySinh.Name = "KH_DateTime_NgaySinh";
-            KH_DateTime_NgaySinh.Size = new Size(1602, 30);
+            KH_DateTime_NgaySinh.Size = new Size(1491, 30);
             KH_DateTime_NgaySinh.TabIndex = 11;
             // 
             // dungeonHeaderLabel26
@@ -679,7 +655,7 @@ namespace PRL
             KH_Combo_GioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
             KH_Combo_GioiTinh.Location = new Point(192, 476);
             KH_Combo_GioiTinh.Name = "KH_Combo_GioiTinh";
-            KH_Combo_GioiTinh.Size = new Size(1602, 26);
+            KH_Combo_GioiTinh.Size = new Size(1645, 26);
             KH_Combo_GioiTinh.TabIndex = 9;
             // 
             // KH_Txt_Sdt
@@ -881,17 +857,164 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
+            Content.Controls.Add(Panel_KH);
+            Content.Controls.Add(Panel_KQ);
+            Content.Controls.Add(Panel_ManHinhCho);
             Content.Controls.Add(Panel_L);
             Content.Controls.Add(Panel_LK);
             Content.Controls.Add(Panel_TK);
-            Content.Controls.Add(Panel_KQ);
-            Content.Controls.Add(Panel_KH);
-            Content.Controls.Add(Panel_ManHinhCho);
             Content.Location = new Point(277, 56);
             Content.Margin = new Padding(3, 4, 3, 4);
             Content.Name = "Content";
             Content.Size = new Size(3253, 928);
             Content.TabIndex = 2;
+            // 
+            // Panel_KQ
+            // 
+            Panel_KQ.BackColor = Color.LightYellow;
+            Panel_KQ.Controls.Add(KQ_Panel_DSCK);
+            Panel_KQ.Controls.Add(bigLabel4);
+            Panel_KQ.Location = new Point(-1, 0);
+            Panel_KQ.Name = "Panel_KQ";
+            Panel_KQ.Size = new Size(1671, 1122);
+            Panel_KQ.TabIndex = 0;
+            // 
+            // KQ_Panel_DSCK
+            // 
+            KQ_Panel_DSCK.AutoScroll = true;
+            KQ_Panel_DSCK.Controls.Add(thunderGroupBox2);
+            KQ_Panel_DSCK.Controls.Add(thunderGroupBox1);
+            KQ_Panel_DSCK.Location = new Point(296, 133);
+            KQ_Panel_DSCK.Name = "KQ_Panel_DSCK";
+            KQ_Panel_DSCK.Size = new Size(1132, 721);
+            KQ_Panel_DSCK.TabIndex = 1;
+            // 
+            // thunderGroupBox2
+            // 
+            thunderGroupBox2.BackColor = Color.Transparent;
+            thunderGroupBox2.BodyColorA = Color.FromArgb(192, 255, 192);
+            thunderGroupBox2.BodyColorB = Color.Snow;
+            thunderGroupBox2.BodyColorC = Color.DeepSkyBlue;
+            thunderGroupBox2.BodyColorD = Color.FromArgb(192, 255, 255);
+            thunderGroupBox2.Controls.Add(panel2);
+            thunderGroupBox2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            thunderGroupBox2.ForeColor = Color.Black;
+            thunderGroupBox2.Location = new Point(17, 508);
+            thunderGroupBox2.Name = "thunderGroupBox2";
+            thunderGroupBox2.Size = new Size(1031, 385);
+            thunderGroupBox2.TabIndex = 1;
+            thunderGroupBox2.Text = "22/11/2023";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(buttonCustom3);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(13, 38);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(999, 330);
+            panel2.TabIndex = 0;
+            // 
+            // buttonCustom3
+            // 
+            buttonCustom3.BackColor = Color.Pink;
+            buttonCustom3.BackgroundColor = Color.Pink;
+            buttonCustom3.BorderColor = Color.White;
+            buttonCustom3.BorderRadius = 20;
+            buttonCustom3.BorderSize = 2;
+            buttonCustom3.FlatAppearance.BorderSize = 0;
+            buttonCustom3.FlatStyle = FlatStyle.Flat;
+            buttonCustom3.ForeColor = Color.Crimson;
+            buttonCustom3.IDSelected = null;
+            buttonCustom3.Location = new Point(785, 140);
+            buttonCustom3.Name = "buttonCustom3";
+            buttonCustom3.Size = new Size(188, 50);
+            buttonCustom3.TabIndex = 1;
+            buttonCustom3.Text = "Trả kết quả";
+            buttonCustom3.TextColor = Color.Crimson;
+            buttonCustom3.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(26, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 25);
+            label2.TabIndex = 0;
+            label2.Text = "label2";
+            // 
+            // thunderGroupBox1
+            // 
+            thunderGroupBox1.BackColor = Color.Transparent;
+            thunderGroupBox1.BodyColorA = Color.FromArgb(192, 255, 192);
+            thunderGroupBox1.BodyColorB = Color.Snow;
+            thunderGroupBox1.BodyColorC = Color.DeepSkyBlue;
+            thunderGroupBox1.BodyColorD = Color.FromArgb(192, 255, 255);
+            thunderGroupBox1.Controls.Add(KQ_panel1_1);
+            thunderGroupBox1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            thunderGroupBox1.ForeColor = Color.Black;
+            thunderGroupBox1.Location = new Point(17, 23);
+            thunderGroupBox1.Name = "thunderGroupBox1";
+            thunderGroupBox1.Size = new Size(1031, 385);
+            thunderGroupBox1.TabIndex = 0;
+            thunderGroupBox1.Text = "22/11/2023";
+            // 
+            // KQ_panel1_1
+            // 
+            KQ_panel1_1.Controls.Add(KQ_panel1_TraKQ_1);
+            KQ_panel1_1.Controls.Add(KQ_panel1_ThongTin_1);
+            KQ_panel1_1.Location = new Point(13, 38);
+            KQ_panel1_1.Name = "KQ_panel1_1";
+            KQ_panel1_1.Size = new Size(999, 330);
+            KQ_panel1_1.TabIndex = 0;
+            // 
+            // KQ_panel1_TraKQ_1
+            // 
+            KQ_panel1_TraKQ_1.BackColor = Color.Pink;
+            KQ_panel1_TraKQ_1.BackgroundColor = Color.Pink;
+            KQ_panel1_TraKQ_1.BorderColor = Color.White;
+            KQ_panel1_TraKQ_1.BorderRadius = 20;
+            KQ_panel1_TraKQ_1.BorderSize = 2;
+            KQ_panel1_TraKQ_1.FlatAppearance.BorderSize = 0;
+            KQ_panel1_TraKQ_1.FlatStyle = FlatStyle.Flat;
+            KQ_panel1_TraKQ_1.ForeColor = Color.Crimson;
+            KQ_panel1_TraKQ_1.IDSelected = null;
+            KQ_panel1_TraKQ_1.Location = new Point(785, 140);
+            KQ_panel1_TraKQ_1.Name = "KQ_panel1_TraKQ_1";
+            KQ_panel1_TraKQ_1.Size = new Size(188, 50);
+            KQ_panel1_TraKQ_1.TabIndex = 1;
+            KQ_panel1_TraKQ_1.Text = "Trả kết quả";
+            KQ_panel1_TraKQ_1.TextColor = Color.Crimson;
+            KQ_panel1_TraKQ_1.UseVisualStyleBackColor = false;
+            KQ_panel1_TraKQ_1.Click += KQ_panel1_TraKQ_1_Click;
+            // 
+            // KQ_panel1_ThongTin_1
+            // 
+            KQ_panel1_ThongTin_1.AutoSize = true;
+            KQ_panel1_ThongTin_1.Location = new Point(26, 15);
+            KQ_panel1_ThongTin_1.Name = "KQ_panel1_ThongTin_1";
+            KQ_panel1_ThongTin_1.Size = new Size(120, 300);
+            KQ_panel1_ThongTin_1.TabIndex = 0;
+            KQ_panel1_ThongTin_1.Text = "Khách hàng : \n\n\nDịch vụ :\n\n\nY tá :\n\n\nPhòng:\n\nCa : ";
+            // 
+            // bigLabel4
+            // 
+            bigLabel4.AutoSize = true;
+            bigLabel4.BackColor = Color.Transparent;
+            bigLabel4.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            bigLabel4.ForeColor = Color.Black;
+            bigLabel4.Location = new Point(553, 30);
+            bigLabel4.Name = "bigLabel4";
+            bigLabel4.Size = new Size(431, 57);
+            bigLabel4.TabIndex = 0;
+            bigLabel4.Text = "Các Ca Khám Của Bạn";
+            // 
+            // Panel_ManHinhCho
+            // 
+            Panel_ManHinhCho.BackgroundImage = C_PRL.Properties.Resources.logo__1_;
+            Panel_ManHinhCho.Location = new Point(-1, -1);
+            Panel_ManHinhCho.Name = "Panel_ManHinhCho";
+            Panel_ManHinhCho.Size = new Size(1802, 1108);
+            Panel_ManHinhCho.TabIndex = 0;
             // 
             // Panel_L
             // 
@@ -2038,95 +2161,6 @@ namespace PRL
             airSeparator4.Text = "airSeparator4";
             airSeparator4.Transparent = false;
             // 
-            // Panel_KQ
-            // 
-            Panel_KQ.BackColor = Color.LightYellow;
-            Panel_KQ.Controls.Add(KQ_Panel_DSCK);
-            Panel_KQ.Controls.Add(bigLabel4);
-            Panel_KQ.Location = new Point(-1, 0);
-            Panel_KQ.Name = "Panel_KQ";
-            Panel_KQ.Size = new Size(1671, 1122);
-            Panel_KQ.TabIndex = 0;
-            // 
-            // KQ_Panel_DSCK
-            // 
-            KQ_Panel_DSCK.AutoScroll = true;
-            KQ_Panel_DSCK.Controls.Add(thunderGroupBox2);
-            KQ_Panel_DSCK.Controls.Add(thunderGroupBox1);
-            KQ_Panel_DSCK.Location = new Point(296, 133);
-            KQ_Panel_DSCK.Name = "KQ_Panel_DSCK";
-            KQ_Panel_DSCK.Size = new Size(1132, 721);
-            KQ_Panel_DSCK.TabIndex = 1;
-            // 
-            // thunderGroupBox2
-            // 
-            thunderGroupBox2.BackColor = Color.Transparent;
-            thunderGroupBox2.BodyColorA = Color.FromArgb(192, 255, 192);
-            thunderGroupBox2.BodyColorB = Color.Snow;
-            thunderGroupBox2.BodyColorC = Color.DeepSkyBlue;
-            thunderGroupBox2.BodyColorD = Color.FromArgb(192, 255, 255);
-            thunderGroupBox2.Controls.Add(panel2);
-            thunderGroupBox2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            thunderGroupBox2.ForeColor = Color.Black;
-            thunderGroupBox2.Location = new Point(17, 508);
-            thunderGroupBox2.Name = "thunderGroupBox2";
-            thunderGroupBox2.Size = new Size(1031, 385);
-            thunderGroupBox2.TabIndex = 1;
-            thunderGroupBox2.Text = "22/11/2023";
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(buttonCustom3);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(13, 38);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(999, 330);
-            panel2.TabIndex = 0;
-            // 
-            // buttonCustom3
-            // 
-            buttonCustom3.BackColor = Color.Pink;
-            buttonCustom3.BackgroundColor = Color.Pink;
-            buttonCustom3.BorderColor = Color.White;
-            buttonCustom3.BorderRadius = 20;
-            buttonCustom3.BorderSize = 2;
-            buttonCustom3.FlatAppearance.BorderSize = 0;
-            buttonCustom3.FlatStyle = FlatStyle.Flat;
-            buttonCustom3.ForeColor = Color.Crimson;
-            buttonCustom3.IDSelected = null;
-            buttonCustom3.Location = new Point(785, 140);
-            buttonCustom3.Name = "buttonCustom3";
-            buttonCustom3.Size = new Size(188, 50);
-            buttonCustom3.TabIndex = 1;
-            buttonCustom3.Text = "Trả kết quả";
-            buttonCustom3.TextColor = Color.Crimson;
-            buttonCustom3.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(26, 22);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 25);
-            label2.TabIndex = 0;
-            label2.Text = "label2";
-            // 
-            // thunderGroupBox1
-            // 
-            thunderGroupBox1.BackColor = Color.Transparent;
-            thunderGroupBox1.BodyColorA = Color.FromArgb(192, 255, 192);
-            thunderGroupBox1.BodyColorB = Color.Snow;
-            thunderGroupBox1.BodyColorC = Color.DeepSkyBlue;
-            thunderGroupBox1.BodyColorD = Color.FromArgb(192, 255, 255);
-            thunderGroupBox1.Controls.Add(KQ_Panel2_1);
-            thunderGroupBox1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            thunderGroupBox1.ForeColor = Color.Black;
-            thunderGroupBox1.Location = new Point(17, 23);
-            thunderGroupBox1.Name = "thunderGroupBox1";
-            thunderGroupBox1.Size = new Size(1031, 385);
-            thunderGroupBox1.TabIndex = 0;
-            thunderGroupBox1.Text = "22/11/2023";
-            // 
             // KQ_Panel2_1
             // 
             KQ_Panel2_1.Controls.Add(KQ_Panel2_Huy1);
@@ -2197,64 +2231,6 @@ namespace PRL
             KQ_Panel2_RichText1.TextBorderStyle = BorderStyle.None;
             KQ_Panel2_RichText1.TextFont = new Font("Tahoma", 10F, FontStyle.Regular, GraphicsUnit.Point);
             KQ_Panel2_RichText1.WordWrap = true;
-            // 
-            // bigLabel4
-            // 
-            bigLabel4.AutoSize = true;
-            bigLabel4.BackColor = Color.Transparent;
-            bigLabel4.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            bigLabel4.ForeColor = Color.Black;
-            bigLabel4.Location = new Point(484, 30);
-            bigLabel4.Name = "bigLabel4";
-            bigLabel4.Size = new Size(431, 57);
-            bigLabel4.TabIndex = 0;
-            bigLabel4.Text = "Các Ca Khám Của Bạn";
-            // 
-            // Panel_ManHinhCho
-            // 
-            Panel_ManHinhCho.BackgroundImage = C_PRL.Properties.Resources._3261126766;
-            Panel_ManHinhCho.Location = new Point(-1, -1);
-            Panel_ManHinhCho.Name = "Panel_ManHinhCho";
-            Panel_ManHinhCho.Size = new Size(1802, 1108);
-            Panel_ManHinhCho.TabIndex = 0;
-            // 
-            // KQ_panel1_1
-            // 
-            KQ_panel1_1.Controls.Add(KQ_panel1_TraKQ_1);
-            KQ_panel1_1.Controls.Add(KQ_panel1_ThongTin_1);
-            KQ_panel1_1.Location = new Point(13, 38);
-            KQ_panel1_1.Name = "KQ_panel1_1";
-            KQ_panel1_1.Size = new Size(999, 330);
-            KQ_panel1_1.TabIndex = 0;
-            // 
-            // KQ_panel1_TraKQ_1
-            // 
-            KQ_panel1_TraKQ_1.BackColor = Color.Pink;
-            KQ_panel1_TraKQ_1.BackgroundColor = Color.Pink;
-            KQ_panel1_TraKQ_1.BorderColor = Color.White;
-            KQ_panel1_TraKQ_1.BorderRadius = 20;
-            KQ_panel1_TraKQ_1.BorderSize = 2;
-            KQ_panel1_TraKQ_1.FlatAppearance.BorderSize = 0;
-            KQ_panel1_TraKQ_1.FlatStyle = FlatStyle.Flat;
-            KQ_panel1_TraKQ_1.ForeColor = Color.Crimson;
-            KQ_panel1_TraKQ_1.IDSelected = null;
-            KQ_panel1_TraKQ_1.Location = new Point(785, 140);
-            KQ_panel1_TraKQ_1.Name = "KQ_panel1_TraKQ_1";
-            KQ_panel1_TraKQ_1.Size = new Size(188, 50);
-            KQ_panel1_TraKQ_1.TabIndex = 1;
-            KQ_panel1_TraKQ_1.Text = "Trả kết quả";
-            KQ_panel1_TraKQ_1.TextColor = Color.Crimson;
-            KQ_panel1_TraKQ_1.UseVisualStyleBackColor = false;
-            KQ_panel1_TraKQ_1.Click += KQ_panel1_TraKQ_1_Click;
-            // 
-            // KQ_panel1_ThongTin_1
-            // 
-            KQ_panel1_ThongTin_1.AutoSize = true;
-            KQ_panel1_ThongTin_1.Location = new Point(26, 7);
-            KQ_panel1_ThongTin_1.Name = "KQ_panel1_ThongTin_1";
-            KQ_panel1_ThongTin_1.Size = new Size(97, 240);
-            KQ_panel1_ThongTin_1.TabIndex = 0;
-            KQ_panel1_ThongTin_1.Text = "Khách hàng : \n\n\nDịch vụ :\n\n\nY tá :\n\n\nPhòng:\n\nCa : ";
             // 
             // Panel_ThongKe
             // 
@@ -3742,6 +3718,15 @@ namespace PRL
             Nav_Option.ResumeLayout(false);
             Nav_Option.PerformLayout();
             Content.ResumeLayout(false);
+            Panel_KQ.ResumeLayout(false);
+            Panel_KQ.PerformLayout();
+            KQ_Panel_DSCK.ResumeLayout(false);
+            thunderGroupBox2.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            thunderGroupBox1.ResumeLayout(false);
+            KQ_panel1_1.ResumeLayout(false);
+            KQ_panel1_1.PerformLayout();
             Panel_L.ResumeLayout(false);
             Panel_L.PerformLayout();
             cyberGroupBox3.ResumeLayout(false);
@@ -3753,16 +3738,7 @@ namespace PRL
             LK_Grbox_ThemLichKham.PerformLayout();
             Panel_TK.ResumeLayout(false);
             Panel_TK.PerformLayout();
-            Panel_KQ.ResumeLayout(false);
-            Panel_KQ.PerformLayout();
-            KQ_Panel_DSCK.ResumeLayout(false);
-            thunderGroupBox2.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            thunderGroupBox1.ResumeLayout(false);
             KQ_Panel2_1.ResumeLayout(false);
-            KQ_panel1_1.ResumeLayout(false);
-            KQ_panel1_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)Panel_ThongKe).EndInit();
             Panel_ThongKe.ResumeLayout(false);
             Panel_TT.ResumeLayout(false);
@@ -3927,7 +3903,6 @@ namespace PRL
         private Label TT_Txt_TenKH;
         private ReaLTaiizor.Controls.BigLabel TT_Txt_MaHD;
         private ReaLTaiizor.Controls.BigLabel L_Txt_TG;
-        private ButtonCustom buttonCustom2;
         private Label QL_Thoat;
         private TextBox TKhoan_txt_TenNV;
         private ReaLTaiizor.Controls.BigLabel TKhoan_lbl_Pass;

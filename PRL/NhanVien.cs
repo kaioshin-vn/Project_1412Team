@@ -13,8 +13,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Net.WebSockets;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Speech.Synthesis;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -27,6 +29,8 @@ namespace PRL
 {
     public partial class NhanVien : Form
     {
+        Label currentSelectedMethod;
+        Label previousSelectedMethod;
         KhachHangService phong_khachhangsv;
         NhanVienSer Tho_nvService;
         private Guid iWhenClick;
@@ -70,12 +74,35 @@ namespace PRL
             Content.Controls.Clear();
             Panel_ManHinhCho.Visible = true;
             Content.Controls.Add(Panel_ManHinhCho);
+            LoiChao.Text = "Xin chào " + user.Ten + " chúc một ngày làm việc vui vẻ!" + $"                  Hà Nội {DateTime.Now.ToString("dd/MM/yyyy")}";
+
         }
 
+        int timeChange = 0;
+        void changeColor(Label lb)
+        {
+            if (timeChange >= 1)
+            {
+                previousSelectedMethod = currentSelectedMethod;
+                previousSelectedMethod.ForeColor = Color.Black;
+            }
+            if (timeChange == 0)
+            {
+                timeChange++;
+            }
 
+            currentSelectedMethod = lb;
+            currentSelectedMethod.ForeColor = Color.Crimson;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
-
+            Content.Controls.Clear();
+            Panel_ManHinhCho.Visible = true;
+            Content.Controls.Add(Panel_ManHinhCho);
+            if (currentSelectedMethod != null)
+            {
+                currentSelectedMethod.ForeColor = Color.Black;
+            }
         }
         private void QL_KH_Click(object sender, EventArgs e)
         {
@@ -83,6 +110,7 @@ namespace PRL
             Panel_KH.Visible = true;
             Content.Controls.Add(Panel_KH);
             PHONG_LoadDataKH();
+            changeColor(QL_KH);
         }
 
         private void Admin_VisibleChanged(object sender, EventArgs e)
@@ -199,7 +227,7 @@ namespace PRL
                         var gioPhaiLam = 9 - (tgCham.Hour - nv.ThoiGianBatDau.Value.Hour);
 
 
-                        MessageBox.Show($"Chưa làm đủ giờ , bạn cần bị bóc lột {phutPhaiLam.ToString()} phút {gioPhaiLam.ToString()} giờ nữa (T_T) !", "Tin buồn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"Chưa làm đủ giờ , bạn cần bị bóc lột {gioPhaiLam.ToString()} giờ {phutPhaiLam.ToString()} phút  nữa (T_T) !", "Tin buồn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else if (tgCham.Hour - nv.ThoiGianBatDau.Value.Hour == 10)
@@ -304,7 +332,6 @@ namespace PRL
 
                 KH_GridView.Rows.Add(stt++, item.Ten, item.DiaChi, item.SoDienThoai, gioiTinh, item.NgaySinh.Value.ToString("dd/MM/yyyy"), item.IdKhachHang);
             }
-            Giap_LoadLSKham();
         }
 
 
@@ -336,11 +363,13 @@ namespace PRL
                         NgayKham = c.NgayKham,
                     };
                 }).ToList();
+                var kq = "";
                 foreach (var item in result)
                 {
-                    KH_RichTxt_LSKham.Text += $"Ngày khám : {item.NgayKham.ToString("dd/MM/yyyy")}\nDịch vụ:{item.DichVu}\nKết quả : {item.KetLuan}\nGhi chú :{item.GhiChu}\n--------------------------------";
+                    kq += $"\nNgày khám : {item.NgayKham.ToString("dd/MM/yyyy")}\nDịch vụ:{item.DichVu}\nKết quả : {item.KetLuan}\nGhi chú :Trống\n--------------------------------";
                 }
 
+                KH_RichTxt_LSKham.Text = kq;
 
             }
         }
@@ -1153,6 +1182,7 @@ namespace PRL
             Panel_L.Visible = true;
             Content.Controls.Add(Panel_L);
             L_LoadLuong();
+            changeColor(QL_LichKham);
         }
 
 
@@ -1775,8 +1805,11 @@ namespace PRL
                             hdCt.IdPhieuKham = item;
                             hdCt.TrangThai = false;
                             hdCtSer.AddHDCT(hdCt);
+
                         }
                         MessageBox.Show("Ok hãy tiếp tục đặt lịch cho các khách hàng thân yêu đi nào!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        lstIdPhieuKham.Clear();
+
                     }
                 }
             }
@@ -2579,9 +2612,9 @@ namespace PRL
                 FormLogin.Show();
                 using (var fs = new FileStream("remember_account.txt", FileMode.OpenOrCreate, FileAccess.Write))
                 {
-                    var stream = new StreamWriter(fs);
-                    stream.WriteLine($"{user.SoDienThoai}|{user.MatKhau}|false");
-                    stream.Flush();
+                    var stringInfo = $"{user.SoDienThoai}|{user.MatKhau}|false";
+                    var bf = new BinaryFormatter();
+                    bf.Serialize(fs, stringInfo);
                 }
 
             }
@@ -2589,7 +2622,7 @@ namespace PRL
 
         private void QL_Thoat_Click(object sender, EventArgs e)
         {
-            var option = MessageBox.Show("Xác nhận có muốn đăng xuất không!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            var option = MessageBox.Show("Xác nhận có muốn thoát không!", "Thông báo!", MessageBoxButtons.YesNoCancel);
             if (option == DialogResult.Yes)
             {
                 this.Close();
@@ -2615,13 +2648,14 @@ namespace PRL
             Panel_KQ.Visible = true;
             Content.Controls.Add(Panel_KQ);
             LoadCaKhamBS();
+            changeColor(QL_KQ);
         }
 
         void LoadCaKhamBS()
         {
             KQ_Panel_DSCK.Controls.Clear();
             var pkSer = new PhieuKhamSer();
-            var lstPk = pkSer.GetAllPhieuKham().OrderByDescending(a => a.ngayKham).Reverse().Where(a => a.IdBacSi == user.IdNhanVien && a.TrangThai == false && DateTime.Parse(a.ngayKham.ToString("MM/dd/yyyy")) >= DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy")));
+            var lstPk = pkSer.GetAllPhieuKham().OrderByDescending(a => a.ngayKham).Reverse().Where(  a => a.IdBacSi == user.IdNhanVien || a.IdYTa == user.IdNhanVien && a.TrangThai == false && DateTime.Parse(a.ngayKham.ToString("MM/dd/yyyy")) >= DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy")));
             var countGrBoxY = 0;
 
             foreach (var item in lstPk)
@@ -2665,7 +2699,7 @@ namespace PRL
 
                 var KQ_panel1_ThongTin_1 = new Label();
                 KQ_panel1_ThongTin_1.AutoSize = true;
-                KQ_panel1_ThongTin_1.Location = new Point(26, 7);
+                KQ_panel1_ThongTin_1.Location = new Point(26, 19);
                 KQ_panel1_ThongTin_1.Name = "KQ_panel1_ThongTin_1";
                 KQ_panel1_ThongTin_1.Size = new Size(120, 300);
                 KQ_panel1_ThongTin_1.TabIndex = 0;
@@ -2733,7 +2767,7 @@ namespace PRL
                 KQ_Panel2_RichText1.Location = new Point(20, 17);
                 KQ_Panel2_RichText1.Name = "KQ_Panel2_RichText1";
                 KQ_Panel2_RichText1.ReadOnly = false;
-                KQ_Panel2_RichText1.Size = new Size(749, 289);
+                KQ_Panel2_RichText1.Size = new Size(725, 289);
                 KQ_Panel2_RichText1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 KQ_Panel2_RichText1.TabIndex = 0;
                 KQ_Panel2_RichText1.Text = "";

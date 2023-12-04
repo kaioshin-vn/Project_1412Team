@@ -13,7 +13,6 @@ namespace DAL.Enums
         Admin,
         BacSi,
         YTa,
-        Null
     }
 
     public enum LoaiPhong

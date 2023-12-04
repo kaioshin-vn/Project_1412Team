@@ -39,7 +39,7 @@ namespace B_BUS.Services
 
         public ThongBao FindThongBao(Guid id)
         {
-            throw new NotImplementedException();
+            return _tbRepo.FindThongBaoId(id);
         }
     }
 }

@@ -38,9 +38,5 @@ namespace DAL.Models
         public virtual Phong? Clinic { get; set; }
         [ForeignKey("IdKhachHang")]
         public virtual KhachHang? Customers { get; set; }
-        [ForeignKey("IdNgay")]
-        public virtual TrangThaiNhanVien? TrangThaiNhanVien { get; set; }
-
-
     }
 }

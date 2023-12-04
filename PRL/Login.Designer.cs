@@ -42,8 +42,20 @@
             Login_pictureBox1 = new PictureBox();
             Login_Title = new Label();
             Login_Btn_Thoat = new Tool.ButtonCustom();
+            panel1 = new Panel();
+            DN_btn_XacNhan = new Tool.ButtonCustom();
+            DN_btn_huy = new ReaLTaiizor.Controls.DungeonLinkLabel();
+            label2 = new Label();
+            label1 = new Label();
+            DN_Cc = new ReaLTaiizor.Controls.BigTextBox();
+            DN_Sdt = new ReaLTaiizor.Controls.BigTextBox();
+            timer1 = new System.Windows.Forms.Timer(components);
+            panel2 = new Panel();
+            DN_ChoXN = new ReaLTaiizor.Controls.BigLabel();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Login_pictureBox1).BeginInit();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // PhoneNumber
@@ -52,7 +64,7 @@
             PhoneNumber.Location = new Point(312, 354);
             PhoneNumber.Name = "PhoneNumber";
             PhoneNumber.PlaceholderText = "Số điện thoại";
-            PhoneNumber.Size = new Size(402, 27);
+            PhoneNumber.Size = new Size(412, 27);
             PhoneNumber.TabIndex = 0;
             PhoneNumber.TextChanged += textBox1_TextChanged;
             // 
@@ -85,9 +97,9 @@
             Password.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Password.Location = new Point(312, 407);
             Password.Name = "Password";
-            Password.PasswordChar = '☢';
+            Password.PasswordChar = '❤';
             Password.PlaceholderText = "Mật khẩu";
-            Password.Size = new Size(402, 27);
+            Password.Size = new Size(412, 27);
             Password.TabIndex = 3;
             Password.TextChanged += Password_TextChanged;
             // 
@@ -200,12 +212,146 @@
             Login_Btn_Thoat.TextColor = Color.DarkSlateGray;
             Login_Btn_Thoat.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(DN_btn_XacNhan);
+            panel1.Controls.Add(DN_btn_huy);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(DN_Cc);
+            panel1.Controls.Add(DN_Sdt);
+            panel1.Location = new Point(161, 316);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(668, 263);
+            panel1.TabIndex = 11;
+            panel1.Visible = false;
+            // 
+            // DN_btn_XacNhan
+            // 
+            DN_btn_XacNhan.BackColor = Color.DeepSkyBlue;
+            DN_btn_XacNhan.BackgroundColor = Color.DeepSkyBlue;
+            DN_btn_XacNhan.BorderColor = Color.MediumSeaGreen;
+            DN_btn_XacNhan.BorderRadius = 20;
+            DN_btn_XacNhan.BorderSize = 2;
+            DN_btn_XacNhan.FlatAppearance.BorderSize = 0;
+            DN_btn_XacNhan.FlatStyle = FlatStyle.Flat;
+            DN_btn_XacNhan.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            DN_btn_XacNhan.ForeColor = Color.White;
+            DN_btn_XacNhan.IDSelected = null;
+            DN_btn_XacNhan.Location = new Point(236, 192);
+            DN_btn_XacNhan.Name = "DN_btn_XacNhan";
+            DN_btn_XacNhan.Size = new Size(188, 50);
+            DN_btn_XacNhan.TabIndex = 5;
+            DN_btn_XacNhan.Text = "Xác nhận";
+            DN_btn_XacNhan.TextColor = Color.White;
+            DN_btn_XacNhan.UseVisualStyleBackColor = false;
+            DN_btn_XacNhan.Click += DN_btn_XacNhan_Click;
+            // 
+            // DN_btn_huy
+            // 
+            DN_btn_huy.ActiveLinkColor = Color.Red;
+            DN_btn_huy.AutoSize = true;
+            DN_btn_huy.BackColor = Color.Transparent;
+            DN_btn_huy.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Italic, GraphicsUnit.Point);
+            DN_btn_huy.LinkBehavior = LinkBehavior.AlwaysUnderline;
+            DN_btn_huy.LinkColor = Color.Red;
+            DN_btn_huy.Location = new Point(480, 206);
+            DN_btn_huy.Name = "DN_btn_huy";
+            DN_btn_huy.Size = new Size(54, 31);
+            DN_btn_huy.TabIndex = 4;
+            DN_btn_huy.TabStop = true;
+            DN_btn_huy.Text = "Hủy";
+            DN_btn_huy.VisitedLinkColor = Color.FromArgb(240, 119, 70);
+            DN_btn_huy.LinkClicked += DN_btn_huy_LinkClicked;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.MediumTurquoise;
+            label2.Location = new Point(43, 132);
+            label2.Name = "label2";
+            label2.Size = new Size(146, 38);
+            label2.TabIndex = 3;
+            label2.Text = "Căn cước ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = Color.MediumTurquoise;
+            label1.Location = new Point(43, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(192, 38);
+            label1.TabIndex = 2;
+            label1.Text = "Số điện thoại";
+            // 
+            // DN_Cc
+            // 
+            DN_Cc.BackColor = Color.Transparent;
+            DN_Cc.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            DN_Cc.ForeColor = Color.DimGray;
+            DN_Cc.Image = null;
+            DN_Cc.Location = new Point(259, 124);
+            DN_Cc.MaxLength = 32767;
+            DN_Cc.Multiline = false;
+            DN_Cc.Name = "DN_Cc";
+            DN_Cc.ReadOnly = false;
+            DN_Cc.Size = new Size(321, 46);
+            DN_Cc.TabIndex = 1;
+            DN_Cc.TextAlignment = HorizontalAlignment.Left;
+            DN_Cc.UseSystemPasswordChar = false;
+            // 
+            // DN_Sdt
+            // 
+            DN_Sdt.BackColor = Color.Transparent;
+            DN_Sdt.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            DN_Sdt.ForeColor = Color.DimGray;
+            DN_Sdt.Image = null;
+            DN_Sdt.Location = new Point(259, 39);
+            DN_Sdt.MaxLength = 32767;
+            DN_Sdt.Multiline = false;
+            DN_Sdt.Name = "DN_Sdt";
+            DN_Sdt.ReadOnly = false;
+            DN_Sdt.Size = new Size(321, 46);
+            DN_Sdt.TabIndex = 0;
+            DN_Sdt.TextAlignment = HorizontalAlignment.Left;
+            DN_Sdt.UseSystemPasswordChar = false;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(DN_ChoXN);
+            panel2.Location = new Point(95, 316);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(744, 274);
+            panel2.TabIndex = 12;
+            panel2.Visible = false;
+            // 
+            // DN_ChoXN
+            // 
+            DN_ChoXN.AutoSize = true;
+            DN_ChoXN.BackColor = Color.Transparent;
+            DN_ChoXN.Font = new Font("Segoe UI Semibold", 25.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            DN_ChoXN.ForeColor = Color.FromArgb(80, 80, 80);
+            DN_ChoXN.Location = new Point(178, 98);
+            DN_ChoXN.Name = "DN_ChoXN";
+            DN_ChoXN.Size = new Size(422, 57);
+            DN_ChoXN.TabIndex = 0;
+            DN_ChoXN.Text = "Đang chờ xác nhận...";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(963, 656);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(Login_Btn_Thoat);
             Controls.Add(Login_Title);
             Controls.Add(Login_pictureBox1);
@@ -223,6 +369,10 @@
             VisibleChanged += Login_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ((System.ComponentModel.ISupportInitialize)Login_pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,5 +391,15 @@
         private Label Login_Title;
         private PictureBox Login_pictureBox1;
         private Tool.ButtonCustom Login_Btn_Thoat;
+        private Panel panel1;
+        private ReaLTaiizor.Controls.BigTextBox DN_Sdt;
+        private ReaLTaiizor.Controls.DungeonLinkLabel DN_btn_huy;
+        private Label label2;
+        private Label label1;
+        private ReaLTaiizor.Controls.BigTextBox DN_Cc;
+        private Tool.ButtonCustom DN_btn_XacNhan;
+        private System.Windows.Forms.Timer timer1;
+        private Panel panel2;
+        private ReaLTaiizor.Controls.BigLabel DN_ChoXN;
     }
 }
