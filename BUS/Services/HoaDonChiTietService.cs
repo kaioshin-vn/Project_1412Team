@@ -20,7 +20,7 @@ namespace B_BUS.Services
 
         public HoaDonChiTiet FindHoaDonCT(Guid id)
         {
-            return _repo.GetAllHDCT().FirstOrDefault(x => x.IdHoaDon == id);
+            return _repo.GetAllHDCT().FirstOrDefault(x => x.IdPhieuKham == id);
         }
 
         public bool AddHDCT(HoaDonChiTiet hdct)

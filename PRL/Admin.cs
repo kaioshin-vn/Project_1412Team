@@ -29,7 +29,7 @@ namespace PRL
         KhachHangService phong_khachhangsv;
         NhanVienSer Tho_nvService;
         private Guid iWhenClick;
-        public Admin(NhanVien staff, Login login)
+        public Admin(DAL.Models.NhanVien staff, Login login)
         {
             FormLogin = login;
             user = staff;
@@ -38,7 +38,8 @@ namespace PRL
 
         public Admin()
         {
-            user = new NhanVien();
+            var nvSer = new NhanVienSer();
+            user = nvSer.GetAllNhanVien().FirstOrDefault();
             FormLogin = new Login();
             InitializeComponent();
         }
@@ -46,10 +47,9 @@ namespace PRL
         /// Thuộc tính thêm vào <summary>
         /// Thuộc tính thêm vào
         /// </summary>
-        NhanVien? user = null;
+        DAL.Models.NhanVien? user = null;
         Login? FormLogin = null;
-        YTa? YTaDuocChon = null;
-        NhanVien? NhanVienDuocChon = null;
+        DAL.Models.NhanVien? NhanVienDuocChon = null;
         HoaDon? HoaDonDuocChon = null;
         HoaDon? TT_HoaDonDuocChon = null;
         DichVu? DichVuDuocChon = null;
@@ -59,7 +59,7 @@ namespace PRL
         ThongKe? ThongKeDuocChon = null;
         Phong? PhongDuocChon = null;
         KhachHang? KhachHangDuocChon = null;
-        NhanVien? L_NVDuocChon;
+        DAL.Models.NhanVien? L_NVDuocChon;
         Luong? L_LuongDuocChon;
         ///
 
@@ -193,6 +193,8 @@ namespace PRL
 
         void Giap_LoadThongKe()
         {
+            var tongChiTieu = 0;
+            var tongDoanhThu = 0;
             var thongKeSer = new ThongKeService();
             var hoaDonSer = new HoaDonService();
             var hoaDonCtSer = new HoaDonChiTietService();
@@ -202,111 +204,140 @@ namespace PRL
             var nvSer = new NhanVienSer();
             var luongSer = new LuongSer();
             var count = 1;
-            var tongChiTieu = 0;
-            var tongDoanhThu = 0;
 
-            ThongKe_Label_ThongTinTK.Text = $"Thống Kê Tháng {ThongKe_Combo_LocThang.Text} Năm {ThongKe_Combo_LocNam.Text}";
+            var kqDaThanhToan1 = hoaDonSer.GetAllHoaDon().Where(a => a.ThoiGian!= null).Where(a => a.ThoiGian.Value.Month.ToString() == ThongKe_Combo_LocThang.Text && a.ThoiGian.Value.Year.ToString() == ThongKe_Combo_LocNam.Text).Join(hoaDonCtSer.GetAllHDCT().Where(a => a.TrangThai == true), n => n.IdHoaDon, m => m.IdHoaDon, (q, p) =>
+            {
+                return new
+                {
+                    idHD = q.IdHoaDon,
+                    idNv = q.IdNhanVien,
+                    PhuPhi = q.PhuPhi,
+                    idPK = p.IdPhieuKham,
+                    ThoiGian = q.ThoiGian,
+                    idGiamGia = q.idGiamGia,
+                    GhiChu = q.GhiChu
+                };
+            }).Join(phieuKhamSer.GetAllPhieuKham(), n => n.idPK, m => m.IdPhieuKham, (q, p) =>
+            {
+                return new
+                {
+                    idHD = q.idHD,
+                    idNv = q.idNv,
+                    PhuPhi = q.PhuPhi,
+                    ThoiGian = q.ThoiGian,
+                    GhiChu = q.GhiChu,
+                    idGiamGia = q.idGiamGia,
 
-            var kqDoanhThu = thongKeSer.GetAllThongKe().Join(hoaDonSer.GetAllHoaDon().Where(t => t.ThoiGian.Value.Month.ToString() == ThongKe_Combo_LocNam.Text
-            && t.ThoiGian.Value.Year.ToString() == ThongKe_Combo_LocNam.Text), a => a.IdHoaDon, b => b.IdHoaDon, (c, d) =>
-            {
-                return new
-                {
-                    idHD = d.IdHoaDon,
-                    PhuPhi = d.PhuPhi,
-                    idnvThanhToan = d.IdNhanVien,
-                    ngayTT = d.ThoiGian
-                };
-            }).Join(hoaDonCtSer.GetAllHDCT().Where(a => a.TrangThai == true), n => n.idHD, m => m.IdHoaDon, (q, p) =>
-            {
-                return new
-                {
-                    idHd = q.idHD,
-                    PhuPhi = q.PhuPhi,
-                    idPhieuKham = p.IdPhieuKham,
-                    idnvThanhToan = q.idnvThanhToan,
-                    ngayTT = q.ngayTT
-                };
-            }).Join(phieuKhamSer.GetAllPhieuKham(), n => n.idPhieuKham, m => m.IdPhieuKham, (q, p) =>
-            {
-                return new
-                {
-                    idHd = q.idHd,
-                    PhuPhi = q.PhuPhi,
-                    idPhieuKham = p.IdPhieuKham,
+                    idKH = p.IdKhachHang,
+                    idPK = p.IdPhieuKham,
                     idDichVu = p.IdDichVu,
-                    idnvThanhToan = q.idnvThanhToan,
-                    ngayTT = q.ngayTT,
-                    idKH = p.IdKhachHang
                 };
             }).Join(dichVuSer.GetAllDichVu(), n => n.idDichVu, m => m.IdDichVu, (q, p) =>
             {
                 return new
                 {
-                    idHd = q.idHd,
-                    idPhieuKham = q.idPhieuKham,
+                    TenDv = p.Ten,
+                    GiaDV = p.Gia,
                     idDichVu = p.IdDichVu,
-                    Gia = p.Gia + q.PhuPhi,
+                    idHD = q.idHD,
+                    idPhieuKham = q.idPK,
                     idKH = q.idKH,
-                    idnvThanhToan = q.idnvThanhToan,
-                    ngayTT = q.ngayTT
+                    idnvThanhToan = q.idNv,
+                    GhiChu = q.GhiChu,
+                    PhuPhi = q.PhuPhi,
+                    ngayTT = q.ThoiGian,
+                    idGiamGia = q.idGiamGia,
+
                 };
             }).Join(khSer.GetAllKhachHang(), n => n.idKH, m => m.IdKhachHang, (q, p) =>
             {
                 return new
                 {
-                    idHd = q.idHd,
-                    idPhieuKham = q.idPhieuKham,
-                    idDichVu = q.idDichVu,
-                    Gia = q.Gia,
-                    Ten = p.Ten,
+                    idHD = q.idHD,
+                    idKH = q.idKH,
+                    GiaDV = q.GiaDV,
+                    TenDv = q.TenDv,
                     idnvThanhToan = q.idnvThanhToan,
-                    ngayTT = q.ngayTT
+                    ngayTT = q.ngayTT,
+                    GhiChu = q.GhiChu,
+                    PhuPhi = q.PhuPhi,
+                    TenKhachHang = p.Ten,
+                    idGiamGia = q.idGiamGia,
+
                 };
             }).Join(nvSer.GetAllNhanVien(), n => n.idnvThanhToan, m => m.IdNhanVien, (q, p) =>
+            new
+            {
+                idHD = q.idHD,
+                TenKhachHang = q.TenKhachHang,
+                TenDv = q.TenDv,
+                GiaDV = q.GiaDV,
+                PhuPhi = q.PhuPhi,
+                TenNhanVien = p.Ten,
+                GhiChu = q.GhiChu,
+                idGiamGia = q.idGiamGia,
+                ngayTT = q.ngayTT.Value.ToString("dd/MM/yyyy"),
+            }).ToList();
+
+
+
+            var kqDaThanhToanGrouped = kqDaThanhToan1.GroupBy(a =>
             {
                 return new
                 {
-                    STT = count++,
-                    idHd = q.idHd,
-                    Gia = q.Gia,
-                    TenKH = p.Ten,
-                    TenNv = p.Ten,
-                    ngayTT = q.ngayTT.Value.ToString("dd//MM/yyyy")
+                    a.idHD,
+                    a.PhuPhi,
+                    a.GhiChu,
+                    a.idGiamGia
                 };
-            }).ToList();
+            });
 
-            if (kqDoanhThu.Count() == 0)
+            ThongKe_GrView_DoanhThu.Rows.Clear();
+            ThongKe_GrView_DoanhThu.ColumnCount = 10;
+            ThongKe_GrView_DoanhThu.Columns[0].Name = "STT";
+            ThongKe_GrView_DoanhThu.Columns[1].Name = "Mã hóa đơn";
+            ThongKe_GrView_DoanhThu.Columns[2].Name = "Người Thanh Toán";
+            ThongKe_GrView_DoanhThu.Columns[3].Name = "Dịch vụ sử dụng";
+            ThongKe_GrView_DoanhThu.Columns[4].Visible = false;
+            ThongKe_GrView_DoanhThu.Columns[5].Visible = false;
+            ThongKe_GrView_DoanhThu.Columns[6].Name = "Nhân viên Xác Nhận";
+            ThongKe_GrView_DoanhThu.Columns[7].Visible = false;
+            ThongKe_GrView_DoanhThu.Columns[8].Name = "Ngày thanh toán";
+            ThongKe_GrView_DoanhThu.Columns[9].Visible = false;
+
+            foreach (var b in kqDaThanhToanGrouped)
             {
-                ThongKe_GrView_DoanhThu.ColumnCount = 6;
-                ThongKe_GrView_DoanhThu.Columns[0].Name = "STT";
-                ThongKe_GrView_DoanhThu.Columns[1].Name = "Mã hóa đơn";
-                ThongKe_GrView_DoanhThu.Columns[2].Name = "Số tiền";
-                ThongKe_GrView_DoanhThu.Columns[3].Name = "Người thanh toán";
-                ThongKe_GrView_DoanhThu.Columns[4].Name = "NV thanh toán";
-                ThongKe_GrView_DoanhThu.Columns[5].Name = "Ngày thanh toán";
+                double tongGia = 0;
+                var TenDv = new List<string>();
+                foreach (var item in b)
+                {
+                    var Giadv = item.GiaDV;
+                    if (b.Key.idGiamGia != null)
+                    {
+                        var giamGiaSer = new GiamGiaSer();
+                        var TTgiamGia = giamGiaSer.FindGiamGia(Convert.ToInt32(b.Key.idGiamGia));
+                        if (TTgiamGia != null)
+                        {
+                            Giadv = Convert.ToDouble((Giadv / TTgiamGia.PhanTramGiamGia) * 100);
+                        }
+                    }
+                    tongGia += Giadv;
+                    TenDv.Add(item.TenDv);
+                }
+                tongDoanhThu += Convert.ToInt32(tongGia) + Convert.ToInt32(b.Key.PhuPhi);
+                ThongKe_GrView_DoanhThu.Rows.Add(count++, b.Key.idHD, b.FirstOrDefault().TenKhachHang, string.Join(",", TenDv), tongGia.ToString("0,000"), b.Key.PhuPhi, b.FirstOrDefault().TenNhanVien, b.Key.GhiChu, b.FirstOrDefault().ngayTT, b.Key.idGiamGia);
             }
-            else
-            {
-                ThongKe_GrView_DoanhThu.DataSource = kqDoanhThu;
-                ThongKe_GrView_DoanhThu.Columns[0].Name = "STT";
-                ThongKe_GrView_DoanhThu.Columns[1].Name = "Mã hóa đơn";
-                ThongKe_GrView_DoanhThu.Columns[2].Name = "Số tiền";
-                ThongKe_GrView_DoanhThu.Columns[3].Name = "Người thanh toán";
-                ThongKe_GrView_DoanhThu.Columns[4].Name = "NV thanh toán";
-                ThongKe_GrView_DoanhThu.Columns[5].Name = "Ngày thanh toán";
-            }
 
 
 
 
-            tongDoanhThu = Convert.ToInt32(kqDoanhThu.Sum(a => a.Gia));
+            //tongDoanhThu = Convert.ToInt32(kqDaThanhToanGrouped.Sum(a => a.));
             ThongKe_Txt_TongDoanhThu.Text = $"Tổng Thu : {tongDoanhThu.ToString("0,000 VNĐ")}";
 
 
 
             var countCT = 1;
-            var kqChiTieu = luongSer.GetAllLuong().Where(t => t.TrangThai == true && t.ThoiGian.Value.Month.ToString() == ThongKe_Combo_LocNam.Text && t.ThoiGian.Value.Year.ToString() == ThongKe_Combo_LocNam.Text).Join(nvSer.GetAllNhanVien(), v => v.IdNhanVien, n => n.IdNhanVien, (i, k) =>
+            var kqChiTieu = luongSer.GetAllLuong().Where(t => t.TrangThai == true && t.ThoiGian.Value.Month.ToString() == ThongKe_Combo_LocThang.Text && t.ThoiGian.Value.Year.ToString() == ThongKe_Combo_LocNam.Text).Join(nvSer.GetAllNhanVien(), v => v.IdNhanVien, n => n.IdNhanVien, (i, k) =>
             {
                 var luongNgayCong = 300000;
                 if (k.ChucVu == LoaiNhanVien.BacSi)
@@ -319,34 +350,39 @@ namespace PRL
                     TenNV = k.Ten,
                     soCong = i.SoCong,
                     LuongNV = i.SoCong * luongNgayCong + Convert.ToInt32(i.Thuong),
+                    Thue = Thue(Convert.ToDouble(i.SoCong * luongNgayCong + Convert.ToInt32(i.Thuong))),
                     ThoiGian = i.ThoiGian.Value.ToString("MM/yyyy"),
-
                 };
                 return obj;
             }).ToList();
+
             if (kqChiTieu.Count() == 0)
             {
+                ThongKe_GrView_ChiTieu.DataSource = null;
                 ThongKe_GrView_ChiTieu.ColumnCount = 6;
                 ThongKe_GrView_ChiTieu.Columns[0].Name = "STT";
                 ThongKe_GrView_ChiTieu.Columns[1].Name = "Tên nhân viên";
                 ThongKe_GrView_ChiTieu.Columns[2].Name = "Số công";
                 ThongKe_GrView_ChiTieu.Columns[3].Name = "Tổng lương";
                 ThongKe_GrView_ChiTieu.Columns[4].Name = "Thời điểm";
+                ThongKe_GrView_ChiTieu.Columns[5].Name = "Thuế";
             }
             else
             {
+                ThongKe_GrView_ChiTieu.Columns.Clear();
                 ThongKe_GrView_ChiTieu.DataSource = kqChiTieu;
                 ThongKe_GrView_ChiTieu.Columns[0].Name = "STT";
                 ThongKe_GrView_ChiTieu.Columns[1].Name = "Tên nhân viên";
                 ThongKe_GrView_ChiTieu.Columns[2].Name = "Số công";
                 ThongKe_GrView_ChiTieu.Columns[3].Name = "Tổng lương";
                 ThongKe_GrView_ChiTieu.Columns[4].Name = "Thời điểm";
+                ThongKe_GrView_ChiTieu.Columns[5].Name = "Thuế";
             }
 
 
 
 
-            tongChiTieu = Convert.ToInt32(kqChiTieu.Sum(a => a.LuongNV));
+            tongChiTieu = Convert.ToInt32(kqChiTieu.Sum(a => a.LuongNV + Convert.ToInt32(a.Thue)));
             ThongKe_Txt_TongChiTieu.Text = $"Tổng Chi :{tongChiTieu.ToString("0,000 VNĐ")}";
 
             var lai = tongDoanhThu - tongChiTieu;
@@ -378,6 +414,7 @@ namespace PRL
             Content.Controls.Clear();
             Panel_TK.Visible = true;
             Content.Controls.Add(Panel_TK);
+            ShowThongTin();
         }
 
         private void ThongBao_Click(object sender, EventArgs e)
@@ -467,28 +504,30 @@ namespace PRL
 
         private void DV_Btn_OKGiamGia_Click(object sender, EventArgs e)
         {
-            var objgiamGia = new GiamGia();
-            var phanTramGiamGia = 100 - DV_Range_GiamGia.RangeMin;
-            objgiamGia.PhanTramGiamGia = phanTramGiamGia;
-            objgiamGia.TrangThai = true;
-            var ggSer = new GiamGiaSer();
-            ggSer.AddGiamGia(objgiamGia);
-
-            DichVuRepository dichVuService = new DichVuRepository();
-            var allDichVu = dichVuService.GetAllDichVu();
-            foreach (var item in allDichVu)
+            if (DialogResult.Yes == MessageBox.Show($"Bạn chắc chắn muốn giảm giá dịch vụ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
-                item.Gia = Math.Round(item.Gia / 100 * (100 - phanTramGiamGia));
-                dichVuService.UpdateDichVu(item);
 
+                var objgiamGia = new GiamGia();
+                var phanTramGiamGia = 100 - DV_Range_GiamGia.RangeMin;
+                if (phanTramGiamGia == 100)
+                {
+                    MessageBox.Show("Không thể free dịch vụ được , chúng ta là tư bản (T-T)");
+                    return;
+                }
+                objgiamGia.PhanTramGiamGia = phanTramGiamGia;
+                objgiamGia.TrangThai = true;
+                var ggSer = new GiamGiaSer();
+                ggSer.AddGiamGia(objgiamGia);
+
+
+                MessageBox.Show($"Đã giảm giá {phanTramGiamGia.ToString()}% cho mọi loại dịch vụ!  ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DV_Btn_DungGiamGia.Visible = true;
+                DV_Btn_OKGiamGia.Visible = false;
+                DV_Btn_GiamGia.Visible = false;
+                DV_Range_GiamGia.Visible = false;
+                DV_Label_PhanTram.Visible = false;
+                Giap_LoadDichVu();
             }
-            MessageBox.Show($"Đã giảm giá {phanTramGiamGia.ToString()}% cho mọi loại dịch vụ!  ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DV_Btn_DungGiamGia.Visible = true;
-            DV_Btn_OKGiamGia.Visible = false;
-            DV_Btn_GiamGia.Visible = false;
-            DV_Range_GiamGia.Visible = false;
-            DV_Label_PhanTram.Visible = false;
-            Giap_LoadDichVu();
 
         }
 
@@ -504,11 +543,11 @@ namespace PRL
             {
                 MessageBox.Show($"Không được bỏ trống các ô thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (!Giap_CheckGia(DV_Txt_Gia.Text))
+            else if (!Giap_CheckGia(DV_Txt_Gia.Text) || DV_Txt_Gia.Text == "0")
             {
                 MessageBox.Show($"Chỉ được nhập giá", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (new DichVuRepository().GetAllDichVu().Any(a => a.Ten == DV_Txt_TenDichVu.Text))
+            else if (new DichVuRepository().GetTatCaDichVu().Any(a => a.Ten == DV_Txt_TenDichVu.Text))
             {
                 MessageBox.Show($"Dịch vụ đã tồn tại,hãy thêm dịch vụ khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -552,11 +591,11 @@ namespace PRL
                 {
                     MessageBox.Show($"Không được bỏ trống các ô thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (!Giap_CheckGia(DV_Txt_Gia.Text))
+                else if (!Giap_CheckGia(DV_Txt_Gia.Text) || DV_Txt_Gia.Text == "0")
                 {
                     MessageBox.Show($"Chỉ được nhập giá", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (new DichVuRepository().GetAllDichVu().Any(a => a.IdDichVu != dichVu.IdDichVu && a.Ten == DV_Txt_TenDichVu.Text))
+                else if (new DichVuRepository().GetTatCaDichVu().Any(a => a.IdDichVu != dichVu.IdDichVu && a.Ten == DV_Txt_TenDichVu.Text))
                 {
                     MessageBox.Show($"Dịch vụ đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -575,8 +614,6 @@ namespace PRL
                     }
                 }
             }
-
-
         }
 
         private void DV_BtnAn1_Click(object sender, EventArgs e)
@@ -631,7 +668,9 @@ namespace PRL
             var countYMoTa = 0;
             var countYGia = 0;
             var countYTen = 0;
+            var giamGia = new GiamGiaSer().GetGiamGiaGanNhat();
             var dvService = new DichVuRepository();
+
             foreach (var item in dvService.GetAllDichVu().Where(a => a.HienThi == true))
             {
                 var DV_BtnAn1 = new ButtonCustom();
@@ -724,7 +763,12 @@ namespace PRL
                 DV_LabelGia1.Name = "DV_LabelGia1";
                 DV_LabelGia1.Size = new Size(171, 28);
                 DV_LabelGia1.TabIndex = 1;
-                DV_LabelGia1.Text = $"Giá : {item.Gia.ToString("0,000")} VNĐ";
+                var gia = item.Gia;
+                if (giamGia != null && giamGia.TrangThai == true)
+                {
+                    gia = double.Parse(Math.Round(item.Gia / 100 * (100 - Convert.ToDouble(giamGia.PhanTramGiamGia))).ToString());
+                }
+                DV_LabelGia1.Text = $"Giá : {gia.ToString("0,000")} VNĐ";
 
                 var DV_GrBoxDV1 = new HopeGroupBox();
                 DV_GrBoxDV1.BorderColor = Color.FromArgb(220, 223, 230);
@@ -743,7 +787,7 @@ namespace PRL
                 DV_GrBoxDV1.TabIndex = 2;
                 DV_GrBoxDV1.TabStop = false;
                 DV_GrBoxDV1.Text = "hopeGroupBox1";
-                DV_GrBoxDV1.ThemeColor = Color.Cyan;
+                DV_GrBoxDV1.ThemeColor = Color.NavajoWhite;
 
 
 
@@ -770,20 +814,9 @@ namespace PRL
             {
                 var giamGiaSer = new GiamGiaSer();
                 var obj = giamGiaSer.GetGiamGiaGanNhat();
-                var dvSer = new DichVuService();
-                if (obj != null)
-                {
-                    foreach (var item in dvSer.GetAllDichVu().ToList())
-                    {
-                        var phanTram = 100 - obj.PhanTramGiamGia;
-                        item.Gia = Math.Round((item.Gia / Convert.ToDouble(phanTram) * 100));
-                        dvSer.UpdateDichVu(item);
-                    }
-                    obj.TrangThai = false;
-                    giamGiaSer.UpdateGiamGia(obj);
-                    MessageBox.Show($"Đã dừng giảm giá", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
+                obj.TrangThai = false;
+                giamGiaSer.UpdateGiamGia(obj);
+                MessageBox.Show($"Đã dừng giảm giá", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DV_Btn_DungGiamGia.Visible = false;
                 DV_Btn_GiamGia.Visible = true;
                 Giap_LoadDichVu();
@@ -794,7 +827,7 @@ namespace PRL
         private void NV_Btn_Them_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
-            var nv = new NhanVien();
+            var nv = new DAL.Models.NhanVien();
             nv.Ten = NV_Text_HoTen.TextButton;
             nv.DiaChi = NV_Txt_DiaChi.TextButton;
             nv.SoDienThoai = NV_Txt_Sdt.TextButton;
@@ -823,7 +856,7 @@ namespace PRL
             {
                 MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (Tho_nvService.GetAllNhanVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton))
+            else if (Tho_nvService.GetTatCaVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton))
             {
                 MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -841,7 +874,7 @@ namespace PRL
             }
         }
 
-        void TaoChamCong(NhanVien nv)
+        void TaoChamCong(DAL.Models.NhanVien nv)
         {
             var ccSer = new ChamCongService();
             var congMoi = new ChamCong();
@@ -940,10 +973,10 @@ namespace PRL
             Tho_nvService = new NhanVienSer();
             if (NhanVienDuocChon == null)
             {
-                MessageBox.Show($"Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Chưa chọn nhân viên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var nv = NhanVienDuocChon;
+            var nv = Tho_nvService.FindNhanVien(NhanVienDuocChon.IdNhanVien);
             if (nv != null)
             {
                 nv.IdNhanVien = iWhenClick;
@@ -974,7 +1007,7 @@ namespace PRL
                 {
                     MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (Tho_nvService.GetAllNhanVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton && nv.IdNhanVien != a.IdNhanVien))
+                else if (Tho_nvService.GetTatCaVien().Any(a => a.SoDienThoai == NV_Txt_Sdt.TextButton && nv.IdNhanVien != a.IdNhanVien))
                 {
                     MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -1109,7 +1142,7 @@ namespace PRL
             {
                 MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (phong_khachhangsv.GetAllKhachHang().Any(a => a.SoDienThoai == KH_Txt_Sdt.TextButton))
+            else if (phong_khachhangsv.GetTatCaKhachHang().Any(a => a.SoDienThoai == KH_Txt_Sdt.TextButton))
             {
                 MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -1127,7 +1160,7 @@ namespace PRL
 
         }
 
-        void TaoTrangThaiNV(NhanVien nv)
+        void TaoTrangThaiNV(DAL.Models.NhanVien nv)
         {
             for (int i = 0; i < 7; i++)
             {
@@ -1168,7 +1201,7 @@ namespace PRL
                 {
                     MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (phong_khachhangsv.GetAllKhachHang().Any(a => a.SoDienThoai == KH_Txt_Sdt.TextButton && kh.IdKhachHang != a.IdKhachHang))
+                else if (phong_khachhangsv.GetTatCaKhachHang().Any(a => a.SoDienThoai == KH_Txt_Sdt.TextButton && kh.IdKhachHang != a.IdKhachHang))
                 {
                     MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -1199,7 +1232,7 @@ namespace PRL
                 MessageBox.Show($"Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var kh = KhachHangDuocChon;
+            var kh = phong_khachhangsv.FindKhachHang(KhachHangDuocChon.IdKhachHang);
             if (kh != null)
             {
                 kh.HienThi = false;
@@ -1224,7 +1257,7 @@ namespace PRL
         {
             ThongKe_Combo_LocNam.DataSource = new List<string>
             {
-                "2018", "2019", "2020", "2021", "2022", "2023"
+                "2018", "2019", "2020", "2021", "2022", "2023" , "2024"
             };
             ThongKe_Combo_LocNam.Text = DateTime.Now.Year.ToString();
             ThongKe_Combo_LocThang.DataSource = new List<string>
@@ -1251,7 +1284,7 @@ namespace PRL
         private void NV_Btn_An_Click(object sender, EventArgs e)
         {
             Tho_nvService = new NhanVienSer();
-            if (NhanVienDuocChon ==null)
+            if (NhanVienDuocChon == null)
             {
                 MessageBox.Show($"Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -1475,6 +1508,17 @@ namespace PRL
             });
 
             TT_GrView_DaTT.Rows.Clear();
+            TT_GrView_DaTT.ColumnCount = 10;
+            TT_GrView_DaTT.Columns[0].Name = "STT";
+            TT_GrView_DaTT.Columns[1].Name = "Mã hóa đơn";
+            TT_GrView_DaTT.Columns[2].Name = "Người Thanh Toán";
+            TT_GrView_DaTT.Columns[3].Name = "Dịch vụ sử dụng";
+            TT_GrView_DaTT.Columns[4].Visible = false;
+            TT_GrView_DaTT.Columns[5].Visible = false;
+            TT_GrView_DaTT.Columns[6].Name = "Nhân viên Xác Nhận";
+            TT_GrView_DaTT.Columns[7].Name = "Ghi chú";
+            TT_GrView_DaTT.Columns[8].Name = "Ngày thanh toán";
+            TT_GrView_DaTT.Columns[9].Visible = false;
 
             foreach (var b in kqDaThanhToanGrouped)
             {
@@ -1493,26 +1537,16 @@ namespace PRL
                         }
                     }
                     tongGia += Giadv;
-
                     TenDv.Add(item.TenDv);
                 }
+
                 TT_GrView_DaTT.Rows.Add(count++, b.Key.idHD, b.FirstOrDefault().TenKhachHang, string.Join(",", TenDv), tongGia.ToString("0,000"), b.Key.PhuPhi, b.FirstOrDefault().TenNhanVien, b.Key.GhiChu, b.FirstOrDefault().ngayTT, b.Key.idGiamGia);
             }
 
 
 
 
-            TT_GrView_DaTT.ColumnCount = 10;
-            TT_GrView_DaTT.Columns[0].Name = "STT";
-            TT_GrView_DaTT.Columns[1].Name = "Mã hóa đơn";
-            TT_GrView_DaTT.Columns[2].Name = "Người Thanh Toán";
-            TT_GrView_DaTT.Columns[3].Name = "Dịch vụ sử dụng";
-            TT_GrView_DaTT.Columns[4].Visible = false;
-            TT_GrView_DaTT.Columns[5].Visible = false;
-            TT_GrView_DaTT.Columns[6].Name = "Nhân viên Xác Nhận";
-            TT_GrView_DaTT.Columns[7].Name = "Ghi chú";
-            TT_GrView_DaTT.Columns[8].Name = "Ngày thanh toán";
-            TT_GrView_DaTT.Columns[9].Visible = false;
+
 
 
             var kqChuaThanhToan1 = hoaDonSer.GetAllHoaDon().Join(hoaDonCtSer.GetAllHDCT().Where(a => a.TrangThai == false), n => n.IdHoaDon, m => m.IdHoaDon, (q, p) =>
@@ -1521,6 +1555,7 @@ namespace PRL
                 {
                     idHD = q.IdHoaDon,
                     idPK = p.IdPhieuKham,
+                    idGiamGia = q.idGiamGia,
                 };
             }).Join(phieuKhamSer.GetAllPhieuKham(), n => n.idPK, m => m.IdPhieuKham, (q, p) =>
             {
@@ -1529,6 +1564,7 @@ namespace PRL
                     idHD = q.idHD,
                     idKH = p.IdKhachHang,
                     idPK = p.IdPhieuKham,
+                    idGiamGia = q.idGiamGia,
                     idDichVu = p.IdDichVu,
                 };
             }).Join(dichVuSer.GetAllDichVu(), n => n.idDichVu, m => m.IdDichVu, (q, p) =>
@@ -1540,6 +1576,7 @@ namespace PRL
                     idDichVu = p.IdDichVu,
                     idHD = q.idHD,
                     idPhieuKham = q.idPK,
+                    idGiamGia = q.idGiamGia,
                     idKH = q.idKH,
                 };
             }).Join(khSer.GetAllKhachHang(), n => n.idKH, m => m.IdKhachHang, (q, p) =>
@@ -1550,6 +1587,7 @@ namespace PRL
                     idKH = q.idKH,
                     GiaDV = q.GiaDV,
                     TenDv = q.TenDv,
+                    idGiamGia = q.idGiamGia,
                     TenKhachHang = p.Ten,
                 };
             }).ToList();
@@ -1561,33 +1599,37 @@ namespace PRL
                      a.idHD,
                  }
             );
+            var count1 = 1;
             var kqChuaThanhToan = kqChuaThanhToanGrouped.Select(b => new
             {
-                STT = count++,
+                STT = count1++,
                 idHD = b.Key.idHD,
                 TenKh = b.ToList()[0].TenKhachHang,
                 TenDv = string.Join(",", b.Select(a => a.TenDv)),
                 GiaDV = b.ToList().Sum(a => a.GiaDV).ToString("0,000") + "VNĐ"
-            });
+            }).ToList();
 
 
             if (kqChuaThanhToan.Count() == 0)
             {
+                TT_GrView_ChuaTT.DataSource = null;
                 TT_GrView_ChuaTT.ColumnCount = 5;
-                TT_GrView_ChuaTT.Columns[0].Name = "STT";
-                TT_GrView_ChuaTT.Columns[1].Name = "Mã hóa đơn";
-                TT_GrView_ChuaTT.Columns[2].Name = "Người Thanh Toán";
-                TT_GrView_ChuaTT.Columns[3].Name = "Dịch vụ sử dụng";
-                TT_GrView_ChuaTT.Columns[4].Name = "Tổng giá trị hóa đơn";
+                TT_GrView_ChuaTT.Columns[0].HeaderText = "STT";
+                TT_GrView_ChuaTT.Columns[1].HeaderText = "Mã hóa đơn";
+                TT_GrView_ChuaTT.Columns[2].HeaderText = "Người Thanh Toán";
+                TT_GrView_ChuaTT.Columns[3].HeaderText = "Dịch vụ sử dụng";
+                TT_GrView_ChuaTT.Columns[4].HeaderText = "Tổng giá trị hóa đơn";
             }
             else
             {
+                TT_GrView_ChuaTT.Columns.Clear();
                 TT_GrView_ChuaTT.DataSource = kqChuaThanhToan;
-                TT_GrView_ChuaTT.Columns[0].Name = "STT";
-                TT_GrView_ChuaTT.Columns[1].Name = "Mã hóa đơn";
-                TT_GrView_ChuaTT.Columns[2].Name = "Người Thanh Toán";
-                TT_GrView_ChuaTT.Columns[3].Name = "Tên dịch vụ";
-                TT_GrView_ChuaTT.Columns[4].Name = "Tổng giá trị hóa đơn";
+                TT_GrView_ChuaTT.Columns[0].HeaderText = "STT";
+                TT_GrView_ChuaTT.Columns[1].HeaderText = "Mã hóa đơn";
+                TT_GrView_ChuaTT.Columns[2].HeaderText = "Người Thanh Toán";
+                TT_GrView_ChuaTT.Columns[3].HeaderText = "Dịch vụ sử dụng";
+                TT_GrView_ChuaTT.Columns[4].HeaderText = "Tổng giá trị hóa đơn";
+
             }
 
 
@@ -1739,17 +1781,18 @@ namespace PRL
 
 
             var stringText = "";
-            var TongTienDV = 0;
+            double TongTienDV = 0;
             foreach (var item in kqDaThanhToanGrouped)
             {
-                TT_Txt_MaHD.Text = item.Key.idHD.ToString();
+                TT_Txt_MaHD.Text = "Mã hóa đơn : " + item.Key.idHD.ToString().Substring(0, 15);
                 TT_txt_ChiPhiKhac.Text = $"{Convert.ToDouble(item.Key.PhuPhi).ToString("0,000")} VNĐ";
-                TT_txt_GhiChu.Text = item.Key.idHD.ToString();
+                TT_txt_GhiChu.Text = item.Key.GhiChu.ToString();
                 TT_Txt_TenKH.Text = item.FirstOrDefault().TenKhachHang;
                 TT_Txt_NVThanhToan.Text = item.FirstOrDefault().TenNhanVien;
                 TT_txt_ThoiGianTT.Text = item.FirstOrDefault().ngayTT;
-                TongTienDV = Convert.ToInt32(item.Sum(a => a.GiaDV).ToString());
-                stringText = String.Join($"-{item.OrderByDescending(a => a.GiaDV).FirstOrDefault().GiaDV.ToString()}\n", item.OrderByDescending(b => b.GiaDV).Select(a => $"{a.TenDv}"));
+                TongTienDV = Convert.ToDouble(item.Sum(a => a.GiaDV) + item.Key.PhuPhi);
+                stringText = string.Join("\n", item.Select(a => $"{a.TenDv} - {a.GiaDV.ToString("0,000")} VNĐ"));
+
             }
             TT_txt_TongTien.Text = TongTienDV.ToString("0,000") + "VNĐ";
             TT_Label_DVSD.Text = "Dịch vụ sử dụng :\n" + stringText;
@@ -1843,10 +1886,14 @@ namespace PRL
                             Giadv = Convert.ToDouble((Giadv / TTgiamGia.PhanTramGiamGia) * 100);
                         }
                         TongTienDV += Giadv;
-                        stringText = String.Join($"-{Giadv.ToString("0,000")} VNĐ\n", item1.TenDv);
                     }
+                    else
+                    {
+                        TongTienDV += Giadv;
+                    }
+                    stringText += $"{item1.TenDv} - {Giadv.ToString("0,000")} VNĐ\n";
                 }
-                TT_Txt_MaHD.Text = item.Key.idHD.ToString();
+                TT_Txt_MaHD.Text = "Mã hóa đơn : " + item.Key.idHD.ToString().Substring(0, 15);
                 TT_Txt_TenKH.Text = item.FirstOrDefault().TenKhachHang;
             }
             TT_txt_TongTien.Text = TongTienDV.ToString("0,000") + "VNĐ";
@@ -1866,11 +1913,13 @@ namespace PRL
                 {
                     MessageBox.Show($"Hãy nhập số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
                 else
                 {
-                    TT_HoaDonDuocChon.PhuPhi = Convert.ToDouble(TT_Label_ChiPhiKhac.Text);
-                    TT_HoaDonDuocChon.GhiChu = TT_txt_GhiChu.Text;
-                    hdSer.UpdateHoaDon(TT_HoaDonDuocChon);
+                    var hd = hdSer.FindHoaDon(TT_HoaDonDuocChon.IdHoaDon);
+                    hd.PhuPhi = Convert.ToDouble(TT_txt_ChiPhiKhac.Text);
+                    hd.GhiChu = TT_txt_GhiChu.Text;
+                    hdSer.UpdateHoaDon(hd);
                     MessageBox.Show($"Đã cập nhật thông tin hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Giap_LoadDataGrThanhToan();
                 }
@@ -1889,8 +1938,9 @@ namespace PRL
                 if (DialogResult.Yes == MessageBox.Show($"Bạn chắc chắn muốn ẩn hóa đơn?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     var hdSer = new HoaDonService();
-                    TT_HoaDonDuocChon.HienThi = false;
-                    hdSer.UpdateHoaDon(TT_HoaDonDuocChon);
+                    var hd = hdSer.FindHoaDon(TT_HoaDonDuocChon.IdHoaDon);
+                    hd.HienThi = false;
+                    hdSer.UpdateHoaDon(hd);
                     MessageBox.Show($"Đã ẩn hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Giap_LoadDataGrThanhToan();
 
@@ -1918,20 +1968,21 @@ namespace PRL
                 {
                     if (DialogResult.Yes == MessageBox.Show($"Bạn chắc chắn muốn xác nhận thanh toán hóa đơn?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-
-                        if (TT_txt_ChiPhiKhac.Text == "")
+                        var hdSer = new HoaDonService();
+                        var hd = hdSer.FindHoaDon(TT_HoaDonDuocChon.IdHoaDon);
+                        if (TT_txt_ChiPhiKhac.Text.Trim() == "")
                         {
-                            TT_HoaDonDuocChon.PhuPhi = 0;
+                            hd.PhuPhi = 0;
                         }
                         else
                         {
-                            TT_HoaDonDuocChon.PhuPhi = Convert.ToDouble(TT_txt_ChiPhiKhac.Text);
+                            hd.PhuPhi = Convert.ToDouble(TT_txt_ChiPhiKhac.Text);
                         }
-                        TT_HoaDonDuocChon.GhiChu = TT_txt_GhiChu.Text;
-                        TT_HoaDonDuocChon.ThoiGian = DateTime.Now;
-                        TT_HoaDonDuocChon.IdNhanVien = user.IdNhanVien;
-                        var hdSer = new HoaDonService();
-                        hdSer.UpdateHoaDon(TT_HoaDonDuocChon);
+                        hd.GhiChu = TT_txt_GhiChu.Text;
+                        hd.ThoiGian = DateTime.Now;
+                        hd.IdNhanVien = user.IdNhanVien;
+
+                        hdSer.UpdateHoaDon(hd);
 
                         var hdctSer = new HoaDonChiTietService();
                         var listHD = hdctSer.GetAllHDCT().Where(a => a.IdHoaDon == TT_HoaDonDuocChon.IdHoaDon).ToList();
@@ -1942,9 +1993,7 @@ namespace PRL
                         }
                         MessageBox.Show($"Xác nhận thanh toán thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Giap_LoadDataGrThanhToan();
-
                     }
-
                 }
             }
 
@@ -1966,7 +2015,6 @@ namespace PRL
             spaceSeparatorHorizontal1.Location = new Point(LK_Btn_ThemLichKham.Location.X, spaceSeparatorHorizontal1.Location.Y);
             spaceSeparatorHorizontal1.Size = new Size(LK_Btn_ThemLichKham.Width + 1, spaceSeparatorHorizontal1.Height);
             Giap_LK_LoadComboKhachHangBacSiDichVuNgayPhong();
-            LK_TPK_Combo_Ngay.Text = "";
             LK_TPK_Combo_KhachHang.Enabled = true;
         }
 
@@ -2293,73 +2341,82 @@ namespace PRL
             var lstCaTrong = new List<int>();
             lstCaTrong = lstcaTrongYTa.Intersect(lstcaTrongBSi).Intersect(lstcaPhongTrong).ToList();
 
-            if (DateTime.Now.ToString("tt") == "AM")
+
+            if (ngayDuocChon.ToString("MM/dd/yyyy") == DateTime.Now.ToString("MM/dd/yyyy"))
             {
-                if (DateTime.Now.Hour > 8)
+                var gioTrongNgay = Convert.ToInt32(DateTime.Now.ToString("hh"));
+                if (DateTime.Now.ToString("tt") == "AM")
                 {
-                    var obj = lstCaTrong.Any(a => a == 1);
-                    if (obj)
+                    if (gioTrongNgay >= 8)
                     {
-                        lstCaTrong.Remove(1);
+                        var obj = lstCaTrong.Any(a => a == 1);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(1);
+                        }
+                    }
+                    if (gioTrongNgay >= 9)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 2);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(2);
+                        }
+                    }
+                    if (gioTrongNgay >= 10)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 3);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(3);
+                        }
+                    }
+                    if (gioTrongNgay >= 11)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 4);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(4);
+                        }
                     }
                 }
-                else if (DateTime.Now.Hour > 9)
+                if (DateTime.Now.ToString("tt") == "PM")
                 {
-                    var obj = lstCaTrong.Any(a => a == 2);
-                    if (obj)
+                    lstCaTrong.Remove(1);
+                    lstCaTrong.Remove(2);
+                    lstCaTrong.Remove(3);
+                    lstCaTrong.Remove(4);
+                    if (gioTrongNgay >= 2)
                     {
-                        lstCaTrong.Remove(2);
+                        var obj = lstCaTrong.Any(a => a == 5);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(5);
+                        }
                     }
-                }
-                else if (DateTime.Now.Hour > 10)
-                {
-                    var obj = lstCaTrong.Any(a => a == 3);
-                    if (obj)
+                    if (gioTrongNgay >= 3)
                     {
-                        lstCaTrong.Remove(3);
+                        var obj = lstCaTrong.Any(a => a == 6);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(6);
+                        }
                     }
-                }
-                else if (DateTime.Now.Hour > 10)
-                {
-                    var obj = lstCaTrong.Any(a => a == 4);
-                    if (obj)
+                    if (gioTrongNgay >= 4)
                     {
-                        lstCaTrong.Remove(4);
+                        var obj = lstCaTrong.Any(a => a == 7);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(7);
+                        }
                     }
-                }
-            }
-            else
-            {
-                if (DateTime.Now.Hour > 2)
-                {
-                    var obj = lstCaTrong.Any(a => a == 5);
-                    if (obj)
+                    if (gioTrongNgay >= 5)
                     {
-                        lstCaTrong.Remove(5);
-                    }
-                }
-                else if (DateTime.Now.Hour > 3)
-                {
-                    var obj = lstCaTrong.Any(a => a == 6);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(6);
-                    }
-                }
-                else if (DateTime.Now.Hour > 4)
-                {
-                    var obj = lstCaTrong.Any(a => a == 7);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(7);
-                    }
-                }
-                else if (DateTime.Now.Hour > 5)
-                {
-                    var obj = lstCaTrong.Any(a => a == 8);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(8);
+                        var obj = lstCaTrong.Any(a => a == 8);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(8);
+                        }
                     }
                 }
             }
@@ -2383,8 +2440,8 @@ namespace PRL
 
 
         /// var Lịch khám
-        NhanVien LK_BSDuocChon = null;
-        NhanVien LK_YTaDuocChon = null;
+        DAL.Models.NhanVien LK_BSDuocChon = null;
+        DAL.Models.NhanVien LK_YTaDuocChon = null;
         KhachHang LK_KhDuocChon = null;
         Phong LK_PhongDuocChon = null;
         DichVu LK_DVDuocChon = null;
@@ -2521,9 +2578,13 @@ namespace PRL
             {
                 gioKham = "4:00 PM";
             }
-            else
+            else if (LK_TPK_Combo_Gio.Text == "8")
             {
                 gioKham = "5:00 PM";
+            }
+            else
+            {
+                gioKham = "Chưa chọn";
             }
             LK_TPK_RichText.Text = "Thông tin\n\n" + $"Khách hàng : {LK_TPK_Combo_KhachHang.Text}\n\nBác sĩ : {LK_TPK_ComBo_BacSi.Text}\n\nY tá : {LK_TPK_Combo_YTa.Text}\n\n" +
     $"Dịch vụ : {LK_TPK_Combo_DichVu.Text}\n\nPhòng : {LK_TPK_Combo_Phong.Text}\n\nNgày khám {LK_TPK_Combo_Ngay.Text}\n\nGiờ : {gioKham}\n\n\n\nHãy nhớ đừng quên lịch khám nhé ^_^";
@@ -2634,12 +2695,19 @@ namespace PRL
                     TTPhongSer.UpdateTTPhong(TTPhong);
                     Giap_LoadComboCa();
 
+                    var lsKhamSer = new LichSuKhamService();
+                    var lsKham = new LichSuKham();
+                    lsKham.IdPhieuKham = pk.IdPhieuKham;
+                    lsKham.GhiChu = "Wow bạn đã phát hiện 1 kiểu dữ liệu bị thừa :>";
+                    lsKham.KetQua = "";
+                    lsKhamSer.AddlichSuKham(lsKham);
+                    lstIdPhieuKham.Add(pk.IdPhieuKham);
+
 
                     if (DialogResult.Yes == MessageBox.Show($"Đã thêm phiếu khám thành công ! Khách hàng có muốn dùng thêm dịch vụ khác không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
                         ClickAddPK = false;
                         khamThem = true;
-                        lstIdPhieuKham.Add(pk.IdPhieuKham);
                         LK_TPK_Combo_KhachHang.Enabled = false;
                         Giap_AddPhieuKham();
                     }
@@ -2656,6 +2724,12 @@ namespace PRL
                         hd.GhiChu = "";
                         hd.ThoiGian = null;
                         hd.idGiamGia = null;
+                        var ggSer = new GiamGiaSer();
+                        var gg = ggSer.GetGiamGiaGanNhat();
+                        if (gg != null && gg.TrangThai == true)
+                        {
+                            hd.idGiamGia = gg.id;
+                        }
                         hdSer.AddHoaDon(hd);
                         foreach (var item in lstIdPhieuKham)
                         {
@@ -2891,7 +2965,7 @@ namespace PRL
             {
                 return;
             }
-            ngayDuocChon = PhieuKhamDuocChon.ngayKham;
+            ngayDuocChon = DateTime.Parse(SHPK_Combo_Ngay.SelectedValue.ToString());
 
             var TTYta = TTNhanVienSer.GetTTNhanVien().FirstOrDefault(a => a.Ngay.ToString("MM/dd/yyyy") == ngayDuocChon.ToString("MM/dd/yyyy") && a.IdNhanVien == Guid.Parse(SHPK_Combo_Yta.SelectedValue.ToString()));
 
@@ -2945,77 +3019,86 @@ namespace PRL
             var lstCaTrong = new List<int>();
             lstCaTrong = lstcaTrongYTa.Intersect(lstcaTrongBSi).Intersect(lstcaPhongTrong).ToList();
             lstCaTrong.Add(PhieuKhamDuocChon.CaKham);
-            if (DateTime.Now.ToString("tt") == "AM")
-            {
-                if (DateTime.Now.Hour > 8)
-                {
-                    var obj = lstCaTrong.Any(a => a == 1);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(1);
-                    }
-                }
-                else if (DateTime.Now.Hour > 9)
-                {
-                    var obj = lstCaTrong.Any(a => a == 2);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(2);
-                    }
-                }
-                else if (DateTime.Now.Hour > 10)
-                {
-                    var obj = lstCaTrong.Any(a => a == 3);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(3);
-                    }
-                }
-                else if (DateTime.Now.Hour > 10)
-                {
-                    var obj = lstCaTrong.Any(a => a == 4);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(4);
-                    }
-                }
-            }
-            else
-            {
-                if (DateTime.Now.Hour > 2)
-                {
-                    var obj = lstCaTrong.Any(a => a == 5);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(5);
-                    }
-                }
-                else if (DateTime.Now.Hour > 3)
-                {
-                    var obj = lstCaTrong.Any(a => a == 6);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(6);
-                    }
-                }
-                else if (DateTime.Now.Hour > 4)
-                {
-                    var obj = lstCaTrong.Any(a => a == 7);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(7);
-                    }
-                }
-                else if (DateTime.Now.Hour > 5)
-                {
-                    var obj = lstCaTrong.Any(a => a == 8);
-                    if (obj)
-                    {
-                        lstCaTrong.Remove(8);
-                    }
-                }
-            }
 
+            if (ngayDuocChon.ToString("MM/dd/yyyy") == DateTime.Now.ToString("MM/dd/yyyy"))
+            {
+                var gioTrongNgay = Convert.ToInt32(DateTime.Now.ToString("hh"));
+                if (DateTime.Now.ToString("tt") == "AM")
+                {
+                    if (gioTrongNgay >= 8)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 1);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(1);
+                        }
+                    }
+                    if (gioTrongNgay >= 9)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 2);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(2);
+                        }
+                    }
+                    if (gioTrongNgay >= 10)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 3);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(3);
+                        }
+                    }
+                    if (gioTrongNgay >= 11)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 4);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(4);
+                        }
+                    }
+                }
+                if (DateTime.Now.ToString("tt") == "PM")
+                {
+                    lstCaTrong.Remove(1);
+                    lstCaTrong.Remove(2);
+                    lstCaTrong.Remove(3);
+                    lstCaTrong.Remove(4);
+                    if (gioTrongNgay >= 2)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 5);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(5);
+                        }
+                    }
+                    if (gioTrongNgay >= 3)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 6);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(6);
+                        }
+                    }
+                    if (gioTrongNgay >= 4)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 7);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(7);
+                        }
+                    }
+                    if (gioTrongNgay >= 5)
+                    {
+                        var obj = lstCaTrong.Any(a => a == 8);
+                        if (obj)
+                        {
+                            lstCaTrong.Remove(8);
+                        }
+                    }
+                }
+            }
+            lstCaTrong.Sort();
             SHPK_Combo_Ca.DataSource = lstCaTrong;
 
         }
@@ -3137,14 +3220,14 @@ namespace PRL
             var ttBs = TTNhanVienSer.GetTTNhanVien().FirstOrDefault(a => a.IdNhanVien == idbs && a.Ngay.ToString("MM/dd/yyyy") == ngayGoc.ToString("MM/dd/yyyy"));
 
             var arrTTBs = ttBs.TrangThai.Split("|");
-            arrTTBs[caKham - 1] = "true";
+            arrTTBs[caKham - 1] = "false";
             var ttBsMoi = String.Join("|", arrTTBs);
             ttBs.TrangThai = ttBsMoi;
             TTNhanVienSer.UpdateTTNhanVien(ttBs);
 
             var ttYta = TTNhanVienSer.GetTTNhanVien().FirstOrDefault(a => a.IdNhanVien == idyta && a.Ngay.ToString("MM/dd/yyyy") == ngayGoc.ToString("MM/dd/yyyy"));
             var arrTTYTa = ttYta.TrangThai.Split("|");
-            arrTTYTa[caKham - 1] = "true";
+            arrTTYTa[caKham - 1] = "false";
             var ttYTaMoi = String.Join("|", arrTTYTa);
             ttYta.TrangThai = ttYTaMoi;
             TTNhanVienSer.UpdateTTNhanVien(ttYta);
@@ -3152,7 +3235,7 @@ namespace PRL
 
             var TTPhong = TTPhongSer.GetTTPhong().FirstOrDefault(a => a.IdPhong == idphong && a.Ngay.ToString("MM/dd/yyyy") == ngayGoc.ToString("MM/dd/yyyy"));
             var arrTTPhong = TTPhong.TrangThai.Split("|");
-            arrTTPhong[caKham - 1] = "true";
+            arrTTPhong[caKham - 1] = "false";
             var ttPhongMoi = String.Join("|", arrTTPhong);
             TTPhong.TrangThai = ttPhongMoi;
             TTPhongSer.UpdateTTPhong(TTPhong);
@@ -3205,6 +3288,7 @@ namespace PRL
             var result = resultSearch.FirstOrDefault();
             if (result != null)
             {
+                L_Btn_Sua.Visible = true;
                 L_LuongDuocChon = luongSer.FindLuong(result.idLuong);
                 if (result.TrangThai == false)
                 {
@@ -3217,7 +3301,7 @@ namespace PRL
                 L_Txt_Ten.Text = result.Ten;
                 L_Txt_SoCong.Text = result.SoCong.ToString();
                 L_Txt_TG.Text = $"Thống kê tháng {DateTime.Now.Month} năm {DateTime.Now.Year}";
-                L_Txt_thuong.Text = $"{Convert.ToDouble(result.Thuong).ToString("0,000")} VNĐ";
+                L_Txt_thuong.Text = $"{result.Thuong}";
                 //thuế
 
                 double heSoLuong = 300000;
@@ -3237,10 +3321,12 @@ namespace PRL
             {
                 L_Txt_TG.Text = "Nhân viên này chưa thực hiện chấm công tháng này!";
                 L_Txt_Ten.Text = "";
-                L_Txt_SoCong.Text = "";
-                L_txt_Thue.Text = "";
-                L_Txt_Tongluong.Text = "";
+                L_Txt_SoCong.Text = "0";
+                L_txt_Thue.Text = "0 VNĐ";
+                L_Txt_Tongluong.Text = "0 VNĐ";
                 L_Btn_Sua.Visible = false;
+                L_Btn_XacNhan.Visible = false;
+                L_Btn_OKSua.Visible = false;
             }
         }
 
@@ -3331,7 +3417,7 @@ namespace PRL
                 }
                 var luong = heso * Double.Parse(L_Txt_SoCong.Text.ToString()) + thuong;
                 L_txt_Thue.Text = Thue(luong).ToString("0,000") + "VNĐ";
-                L_Txt_Tongluong.Text = luong.ToString();
+                L_Txt_Tongluong.Text = luong.ToString("0,000") + "VNĐ";
             }
         }
 
@@ -3363,7 +3449,7 @@ namespace PRL
                 }
                 var luong = heso * thuong + Convert.ToDouble(L_Txt_thuong.Text);
                 L_txt_Thue.Text = Thue(luong).ToString("0,000") + "VNĐ";
-                L_Txt_Tongluong.Text = luong.ToString();
+                L_Txt_Tongluong.Text = luong.ToString("0,000") + "VNĐ";
             }
         }
 
@@ -3377,20 +3463,28 @@ namespace PRL
                     MessageBox.Show("Chỉ được nhập số!!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                double thuong = 0;
                 if (!Giap_CheckGia(L_Txt_thuong.Text))
                 {
-                    MessageBox.Show("Chỉ được nhập số!!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    if (L_Txt_thuong.Text == "")
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chỉ được nhập số!!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    
                 }
-                double thuong = Convert.ToDouble(L_Txt_thuong.Text);
-                if (L_Txt_thuong.Text == "")
-                {
-                    thuong = 0;
-                }
+                thuong = Convert.ToDouble(L_Txt_thuong.Text);
                 L_LuongDuocChon.SoCong = Convert.ToInt32(L_Txt_SoCong.Text);
                 L_LuongDuocChon.Thuong = thuong;
                 luongSer.UpdateLuong(L_LuongDuocChon);
                 MessageBox.Show($"Đã sửa lương nhân viên thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                L_Txt_SoCong.Enabled = false;
+                L_Txt_thuong.Enabled = false;
+                L_Btn_OKSua.Visible = false;
             }
         }
 
@@ -3418,18 +3512,18 @@ namespace PRL
         int ft_BS = 0;
         private void SHPK_Combo_BacSi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ft_BS<4)
+            if (ft_BS < 4)
             {
                 ft_BS++;
             }
-            if (ft_BS<=2)
+            if (ft_BS <= 2)
             {
                 return;
             }
             SHPK_LoadCa();
         }
 
-       
+
         private void SHPK_Combo_Kh_SelectedIndexChanged(object sender, EventArgs e)
         {
             //  SHPK_LoadCa();
@@ -3486,11 +3580,178 @@ namespace PRL
         {
             //SHPK_LoadCa();
         }
+
+        private void Panel_TK_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TKhoan_Btn_Update_Click(object sender, EventArgs e)
+        {
+            TK_combo.Enabled = true;
+            TK_Sep.Visible = true;
+            TK_txt_Ten.Enabled = true;
+            TK_Sep.Size = new Size(TK_txt_Ten.Width, TK_Sep.Height);
+            TKhoan_txt_DiaChi.Enabled = true;
+            TKhoan_txt_pwd.Enabled = true;
+            TKhoan_txt_SDT.Enabled = true;
+            TKhoan_Btn_ok.Visible = true;
+        }
+
+        private void TKhoan_Btn_ok_Click(object sender, EventArgs e)
+        {
+            var nvSer = new NhanVienSer();
+            var nv = nvSer.FindNhanVien(user.IdNhanVien);
+            if (nv != null)
+            {
+                if (Giap_CheckTrong(TK_txt_Ten.Text) || Giap_CheckTrong(TKhoan_txt_DiaChi.Text) || Giap_CheckTrong(TKhoan_txt_SDT.Text) || Giap_CheckTrong(TKhoan_txt_pwd.Text))
+                {
+                    MessageBox.Show($"Không được bỏ trống các ô thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (!Regex.IsMatch(TKhoan_txt_SDT.Text, "^0[0-9]{9}$"))
+                {
+                    MessageBox.Show($"Nhập đúng định dạng số điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (nvSer.GetTatCaVien().Any(a => a.SoDienThoai == TKhoan_txt_SDT.Text && nv.IdNhanVien != a.IdNhanVien))
+                {
+                    MessageBox.Show($"Số điện thoại đã tồn tại,hãy thêm số điện thoại khác !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    var option = MessageBox.Show("Xác nhận có muốn sửa!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+                    if (option == DialogResult.Yes)
+                    {
+                        nv.Ten = TK_txt_Ten.Text;
+                        nv.DiaChi = TKhoan_txt_DiaChi.Text;
+                        nv.MatKhau = TKhoan_txt_pwd.Text;
+                        nv.SoDienThoai = TKhoan_txt_SDT.Text;
+                        var gioiTinh = true;
+                        if (TK_combo.Text == "Nữ")
+                        {
+                            gioiTinh = false;
+                        }
+                        nv.GioiTinh = gioiTinh;
+                        nvSer.UpdateNhanVien(nv);
+                        MessageBox.Show($"Đã sửa thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TK_combo.Enabled = false;
+                        TK_Sep.Visible = false;
+                        TK_txt_Ten.Enabled = false;
+                        TKhoan_txt_DiaChi.Enabled = false;
+                        TKhoan_txt_pwd.Enabled = false;
+                        TKhoan_txt_SDT.Enabled = false;
+                        TKhoan_Btn_ok.Visible = false;
+                    }
+
+                }
+            }
+        }
+
+        private void ShowThongTin()
+        {
+            var nvSer = new NhanVienSer();
+            var a = nvSer.FindNhanVien(user.IdNhanVien);
+
+            string gt = "Nữ";
+            if (a.GioiTinh == true)
+            {
+                gt = "Nam";
+            }
+
+            var ChucVu = "Bác Sĩ";
+            if (a.ChucVu == LoaiNhanVien.YTa)
+            {
+                ChucVu = "Y Tá";
+            }
+
+            TK_combo.Text = gt;
+
+            TKhoan_lbl_ChucVu.Text = ChucVu;
+            TKhoan_txt_SDT.Text = a.SoDienThoai != null ? user.SoDienThoai.ToString() : "null";
+            TKhoan_txt_DiaChi.Text = a.DiaChi != null ? user.DiaChi.ToString() : "null";
+            TKhoan_txt_pwd.Text = a.MatKhau != null ? user.MatKhau.ToString() : "null";
+            TK_txt_Ten.Text = a.Ten;
+
+
+        }
+
+        private void QL_DangXuat_Click(object sender, EventArgs e)
+        {
+            var option = MessageBox.Show("Xác nhận có muốn đăng xuất không!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                this.Close();
+                FormLogin.RememberStatus = false;
+                FormLogin.Visible = true;
+                FormLogin.Show();
+                using (var fs = new FileStream("remember_account.txt", FileMode.OpenOrCreate, FileAccess.Write))
+                {
+                    var stream = new StreamWriter(fs);
+                    stream.WriteLine($"{user.SoDienThoai}|{user.MatKhau}|false");
+                    stream.Flush();
+                }
+
+            }
+        }
+
+        private void QL_Thoat_Click(object sender, EventArgs e)
+        {
+            var option = MessageBox.Show("Xác nhận có muốn đăng xuất không!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            if (option == DialogResult.Yes)
+            {
+                this.Close();
+                FormLogin.Close();
+            }
+        }
+
+        private void buttonCustom2_Click(object sender, EventArgs e)
+        {
+            if (KhachHangDuocChon == null)
+            {
+                return;
+            }
+            var khSer = new KhachHangService();
+            var kh = khSer.FindKhachHang(KhachHangDuocChon.IdKhachHang);
+
+            Content.Controls.Clear();
+            Panel_LK.Visible = true;
+            Content.Controls.Add(Panel_LK);
+
+            var ttNhanVienSer = new TTNhanVienSer();
+            var ttPhongSer = new TTPhongSer();
+            var nvSer = new NhanVienSer();
+            var phongSer = new PhongSer();
+            if (DateTime.Parse(ttPhongSer.GetTTPhong().OrderByDescending(a => a.Ngay).FirstOrDefault().Ngay.AddDays(7).ToString("MM/dd/yyyy")) < DateTime.Parse(DateTime.Now.AddDays(7).ToString("MM/dd/yyyy")))
+            {
+                foreach (var item in nvSer.GetAllNhanVien())
+                {
+                    var TtNV = new TrangThaiNhanVien();
+                    TtNV.IdNhanVien = item.IdNhanVien;
+                    TtNV.Ngay = DateTime.Now.AddDays(7);
+                    ttNhanVienSer.AddTTNhanVien(TtNV);
+                }
+                foreach (var item in phongSer.GetAllPhong())
+                {
+                    var ttPhong = new TrangThaiPhong();
+                    ttPhong.IdPhong = item.Id;
+                    ttPhong.Ngay = DateTime.Now.AddDays(7);
+                    ttPhongSer.AddTTPhong(ttPhong);
+                }
+            }
+
+
+            LK_Panel.Controls.Clear();
+            LK_Panel.Controls.Add(LK_Grbox_ThemLichKham);
+            spaceSeparatorHorizontal1.Location = new Point(LK_Btn_ThemLichKham.Location.X, spaceSeparatorHorizontal1.Location.Y);
+            spaceSeparatorHorizontal1.Size = new Size(LK_Btn_ThemLichKham.Width + 1, spaceSeparatorHorizontal1.Height);
+            Giap_LK_LoadComboKhachHangBacSiDichVuNgayPhong();
+            LK_TPK_Combo_KhachHang.SelectedValue = kh.IdKhachHang;
+            LK_TPK_Combo_KhachHang.Enabled = false;
+
+        }
     }
-
-
-
-
 }
 
 

@@ -17,6 +17,12 @@ namespace A_DAL.Repositories
         {
             return _dbContext.KhachHangs.Where(a => a.HienThi == true).ToList();
         }
+
+        public List<KhachHang> GetTatCaKhachHang()
+        {
+            return _dbContext.KhachHangs.Where(a => a.HienThi == true).ToList();
+        }
+
         public bool AddKhachHang(KhachHang kh)
         {
             _dbContext.KhachHangs.Add(kh);

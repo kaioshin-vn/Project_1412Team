@@ -8,17 +8,22 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
+using ReaLTaiizor.Controls;
 
 namespace PRL.Tool
 
 {
-    public class ButtonCustom : Button
+    public class ButtonCustom : System.Windows.Forms.Button
     {
         //Fields
         private int borderSize = 0;
         private int borderRadius = 20;
         private Color borderColor = Color.PaleVioletRed;
 
+        public System.Windows.Forms.Panel? panel1 = null;
+        public System.Windows.Forms.Panel? panel2 = null;
+        public ThunderGroupBox? thunderGroup = null;
+        public RichTextBoxEdit? richText = null;
         //Properties
         [Category("Custom Props")]
         public int BorderSize

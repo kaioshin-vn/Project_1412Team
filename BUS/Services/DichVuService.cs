@@ -24,9 +24,15 @@ namespace B_BUS.Services
             return _repo.GetAllDichVu().Where(x => x.Ten.Trim().ToLower().Contains(search)).ToList();
         }
 
+
         public List<DichVu> GetAllDichVu()
         {
                 return _repo.GetAllDichVu();
+        }
+
+        public List<DichVu> GetTatCaDichVu()
+        {
+            return _repo.GetTatCaDichVu();
         }
 
         public bool AddDichVu(DichVu dv)

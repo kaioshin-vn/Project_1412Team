@@ -33,6 +33,11 @@ namespace A_DAL.Repositories
             return _dbContext.NhanViens.Where(a => a.HienThi == true).ToList();
         }
 
+        public List<NhanVien> GetTatCaNhanVien()
+        {
+            return _dbContext.NhanViens.ToList();
+        }
+
         public bool UpdateNhanVien(NhanVien nv)
         {
 

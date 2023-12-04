@@ -22,6 +22,11 @@ namespace B_BUS.Services
             return _repo.GetAllHoaDon().FirstOrDefault(x => x.IdHoaDon == id);
         }
 
+        public List<HoaDon> GetTatCaHoaDon()
+        {
+            return _repo.GetTatCaHoaDon();
+        }
+
         public bool AddHoaDon(HoaDon hd)
         {
             if (_repo.AddHoaDon(hd)==true)

@@ -144,7 +144,7 @@ namespace PRL
                 else if ((checkTK.ChucVu == LoaiNhanVien.YTa))
                 {
                     this.Hide();
-                    new YTa(checkTK, this).Show();
+                    new NhanVien(checkTK, this).Show();
                     return LoaiNhanVien.YTa;
                 }
 

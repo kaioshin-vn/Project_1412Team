@@ -27,6 +27,11 @@ namespace B_BUS.Services
                 return _repo.GetAllKhachHang().ToList();
         }
 
+        public List<KhachHang> GetTatCaKhachHang()
+        {
+            return _repo.GetAllKhachHang().ToList();
+        }
+
         public KhachHang FindKhachHang(dynamic id)
         {
             return _repo.GetAllKhachHang().FirstOrDefault(x => x.IdKhachHang == id);

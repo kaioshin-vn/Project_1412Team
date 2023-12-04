@@ -22,6 +22,12 @@ namespace A_DAL.Repositories
         {
             return _dbContext.DichVus.Where( a => a.HienThi == true).ToList();
         }
+
+        public List<DichVu> GetTatCaDichVu()
+        {
+            return _dbContext.DichVus.ToList();
+        }
+
         public bool AddDichVu(DichVu dv)
         {
             _dbContext.DichVus.Add(dv);

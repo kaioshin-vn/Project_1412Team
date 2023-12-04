@@ -62,7 +62,12 @@ namespace DAL.DBContext
                 entity.HasIndex(e => e.SoDienThoai).IsUnique();
             });
 
-    
+            modelBuilder.Entity<DichVu>(entity =>
+            {
+                entity.HasIndex(e => e.Ten).IsUnique();
+            });
+
+
         }
     }
 }

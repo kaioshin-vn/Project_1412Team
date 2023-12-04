@@ -12,7 +12,7 @@ namespace B_BUS.Services
 {
     public class NhanVienSer : INhanVienSer
     {
-        private readonly INhanVienRepo _nvRepo;
+        private readonly NhanVienRepo _nvRepo;
         public NhanVienSer()
         {
             _nvRepo = new NhanVienRepo();
@@ -41,16 +41,15 @@ namespace B_BUS.Services
             return _nvRepo.GetAllNhanVien();
         }
 
+        public List<NhanVien> GetTatCaVien()
+        {
+            return _nvRepo.GetTatCaNhanVien();
+        }
+
         public bool UpdateNhanVien(NhanVien nv)
         {
-            var clone = _nvRepo.GetAllNhanVien().FirstOrDefault(x => x.IdNhanVien == nv.IdNhanVien);
-            clone.Ten= nv.Ten;
-            clone.DiaChi = nv.DiaChi;
-            clone.SoDienThoai = nv.SoDienThoai;
-            clone.GioiTinh = nv.GioiTinh;
-            clone.ChucVu = nv.ChucVu;
-            clone.NgaySinh = nv.NgaySinh;
-            if (_nvRepo.UpdateNhanVien(clone) == true)
+
+            if (_nvRepo.UpdateNhanVien(nv) == true)
             {
                 return true;
             }

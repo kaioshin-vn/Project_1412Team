@@ -16,12 +16,14 @@ namespace B_BUS.Services
         {
             dbContext = new MyDbContext ();
             dbContext.GiamGias.Add ( giamGia );
+            dbContext.SaveChanges();
         }
 
         public void UpdateGiamGia(GiamGia giamGia)
         {
             dbContext = new MyDbContext();
             dbContext.GiamGias.Update(giamGia);
+            dbContext.SaveChanges();
         }
 
         public GiamGia GetGiamGiaGanNhat()
