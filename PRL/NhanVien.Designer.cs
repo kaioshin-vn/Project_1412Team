@@ -2394,7 +2394,6 @@ namespace PRL
             TT_Btn_ThanhToan.Text = "Xác nhận thanh toán";
             TT_Btn_ThanhToan.TextColor = Color.White;
             TT_Btn_ThanhToan.UseVisualStyleBackColor = false;
-            TT_Btn_ThanhToan.Click += TT_Btn_ThanhToan_Click;
             // 
             // TT_Btn_An
             // 

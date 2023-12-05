@@ -51,7 +51,7 @@ namespace DAL
 
             foreach (var item in db.Phongs.ToList())
             {
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     var ttPhong = new TrangThaiPhong();
                     ttPhong.Ngay = DateTime.Now.AddDays(i);
@@ -59,6 +59,18 @@ namespace DAL
                     ttPhongSer.AddTTPhong(ttPhong);
                 }
             }
+
+            var nv = new NhanVien();
+            nv.ChucVu = LoaiNhanVien.Admin;
+            nv.SoDienThoai = "0978040960";
+            nv.DiaChi = "làng Ngọc Nhuế , xã Tân Phúc , huyện Ân Thi , tỉnh Hưng Yên";
+            nv.GioiTinh = true;
+            nv.Mota = "Là người thân thiện,dễ gần,hài hước";
+            nv.MatKhau = "1234";
+            nv.NgaySinh = DateTime.Parse("04/06/2004");
+            nv.Ten = "Đặng Đình Giáp";
+            db.NhanViens.Add(nv);
+            db.SaveChanges();
 
             Console.WriteLine("Xong"); ;
             Console.ReadKey();

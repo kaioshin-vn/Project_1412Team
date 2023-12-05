@@ -11,19 +11,28 @@ using System.Threading.Tasks;
 namespace DAL.Models
 {
     [Table("HoaDonChiTiet")]
-    [PrimaryKey("IdHoaDon" , new string[] { "IdPhieuKham" })]
+    [PrimaryKey("IdHoaDonCT", new string[] { "IdPhieuKham" })]
     public class HoaDonChiTiet
     {
         // Thọ
         [Key]
-        public Guid IdHoaDon { get; set; }
+        public Guid IdHoaDonCT { get; set; }
         public Guid IdPhieuKham { get; set; }
 
-        public bool? TrangThai { get; set; }
+        public Guid? IdHoaDon { get; set; }
 
+
+        public bool? HienThi { get; set; }
+
+
+
+        public bool? TrangThai { get; set; }
+        
         [ForeignKey("IdHoaDon")]
         public virtual HoaDon? Bill { get; set; }
         [ForeignKey("IdPhieuKham")]
         public virtual PhieuKham? MedicalBills { get; set; }
+
+       
     }
 }

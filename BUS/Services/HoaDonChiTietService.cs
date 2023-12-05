@@ -17,8 +17,12 @@ namespace B_BUS.Services
         {
             return _repo.GetAllHDCT();
         }
+        public HoaDonChiTiet FindHoaHoaDon(Guid id)
+        {
+            return _repo.GetAllHDCT().FirstOrDefault(x => x.IdHoaDon == id);
+        }
 
-        public HoaDonChiTiet FindHoaDonCT(Guid id)
+        public HoaDonChiTiet FindHoaPhieuKham(Guid id)
         {
             return _repo.GetAllHDCT().FirstOrDefault(x => x.IdPhieuKham == id);
         }
@@ -40,6 +44,11 @@ namespace B_BUS.Services
                 return true;
             }
             return false;
+        }
+
+        public HoaDonChiTiet FindHoaDonCT(Guid id)
+        {
+            return _repo.GetAllHDCT().FirstOrDefault(x => x.IdHoaDonCT == id);
         }
     }
  }

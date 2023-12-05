@@ -17,7 +17,7 @@ namespace DAL.DBContext
         public MyDbContext() { }
         public MyDbContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Admin> Admins { get; set; }
+        //public DbSet<Admin> Admins { get; set; }
         public DbSet<HoaDon> HoaDons { get; set; }
         public DbSet<HoaDonChiTiet> HoaDonChiTiets { get; set; }
         public DbSet<DanhGia> DanhGias { get; set; }

@@ -15,22 +15,28 @@ namespace DAL.Models
         // Thọ
         [Key]
         public Guid IdHoaDon { get; set; }
-        public Guid? IdNhanVien { get; set; }
-        public DateTime? ThoiGian {  get; set; } 
 
-        public string? GhiChu { get; set; }
 
-        public bool? HienThi {  get; set; }
+        public int? idGiamGia { get; set; }
+
+        public DateTime? ThoiGian { get; set; }
+
+
+        public bool? HienThi { get; set; }
 
         public double? PhuPhi { get; set; }
 
-        public int? idGiamGia { get; set; }
+        public Guid? IdNhanVien { get; set; }
+        [ForeignKey("IdNhanVien")]
+        public virtual NhanVien? NV { get; set; }
+
+
+
         [ForeignKey("idGiamGia")]
         public virtual GiamGia? GiamGia { get; set; }
 
         public virtual ICollection<ThongKe>? ThongKe { get; set; }
         public virtual ICollection<HoaDonChiTiet>? HoaDonChiTiet { get; set; }
-        [ForeignKey("IdNhanVien")]
-        public virtual NhanVien? NV { get; set; }
+
     }
 }
