@@ -1577,6 +1577,7 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
+            Content.Controls.Add(Panel_TK);
             Content.Controls.Add(Panel_KH);
             Content.Controls.Add(Panel_NV);
             Content.Controls.Add(Panel_TT);
@@ -1585,7 +1586,6 @@ namespace PRL
             Content.Controls.Add(Panel_DV);
             Content.Controls.Add(Panel_ThongKe);
             Content.Controls.Add(Panel_LK);
-            Content.Controls.Add(Panel_TK);
             Content.Location = new Point(277, 56);
             Content.Margin = new Padding(3, 4, 3, 4);
             Content.Name = "Content";
@@ -5340,7 +5340,7 @@ namespace PRL
             Controls.Add(Nav_Option);
             Controls.Add(Content);
             Controls.Add(Navigation);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Admin";
             Text = "1412_Team";
             WindowState = FormWindowState.Maximized;

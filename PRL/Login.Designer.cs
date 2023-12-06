@@ -190,6 +190,7 @@
             Login_Title.Size = new Size(305, 38);
             Login_Title.TabIndex = 9;
             Login_Title.Text = "Đăng Nhập Hệ Thống";
+            //Login_Title.Click += Login_Title_Click;
             // 
             // Login_Btn_Thoat
             // 
@@ -211,6 +212,7 @@
             Login_Btn_Thoat.Text = "Thoát";
             Login_Btn_Thoat.TextColor = Color.DarkSlateGray;
             Login_Btn_Thoat.UseVisualStyleBackColor = false;
+            Login_Btn_Thoat.Click += Login_Title_Click;
             // 
             // panel1
             // 

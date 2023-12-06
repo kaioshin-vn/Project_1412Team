@@ -42,7 +42,7 @@ namespace PRL
         public Admin()
         {
             var nvSer = new NhanVienSer();
-            user = nvSer.GetAllNhanVien().FirstOrDefault();
+            user = nvSer.GetTatCaVien().FirstOrDefault(a => a.SoDienThoai == "0978040960");
             FormLogin = new Login();
             InitializeComponent();
         }
@@ -73,7 +73,7 @@ namespace PRL
             Panel_ManHinhCho.Visible = true;
             Content.Controls.Add(Panel_ManHinhCho);
             timer1.Start();
-           // LoiChao.Text = "Xin chào " + user.Ten + " chúc một ngày làm việc vui vẻ!" + $"                    Hà Nội {DateTime.Now.ToString("dd/MM/yyyy")}";
+           LoiChao.Text = "Xin chào " + user.Ten + " chúc một ngày làm việc vui vẻ!" + $"                    Hà Nội {DateTime.Now.ToString("dd/MM/yyyy")}";
         }
 
 
@@ -3662,14 +3662,14 @@ namespace PRL
             TK_Sep.Size = new Size(TK_txt_Ten.Width, TK_Sep.Height);
             TKhoan_txt_DiaChi.Enabled = true;
             TKhoan_txt_pwd.Enabled = true;
-            TKhoan_txt_SDT.Enabled = true;
+            //TKhoan_txt_SDT.Enabled = true;
             TKhoan_Btn_ok.Visible = true;
         }
 
         private void TKhoan_Btn_ok_Click(object sender, EventArgs e)
         {
             var nvSer = new NhanVienSer();
-            var nv = nvSer.FindNhanVien(user.IdNhanVien);
+            var nv = nvSer.GetTatCaVien().FirstOrDefault(a => a.SoDienThoai == "0978040960");
             if (nv != null)
             {
                 if (Giap_CheckTrong(TK_txt_Ten.Text) || Giap_CheckTrong(TKhoan_txt_DiaChi.Text) || Giap_CheckTrong(TKhoan_txt_SDT.Text) || Giap_CheckTrong(TKhoan_txt_pwd.Text))
@@ -3733,6 +3733,10 @@ namespace PRL
             {
                 ChucVu = "Y Tá";
             }
+            else if (a.ChucVu == LoaiNhanVien.Admin)
+            {
+                ChucVu = "Quản trị viên";
+            }
 
             TK_combo.Text = gt;
 
@@ -3766,7 +3770,7 @@ namespace PRL
 
         private void QL_Thoat_Click(object sender, EventArgs e)
         {
-            var option = MessageBox.Show("Xác nhận có muốn đăng xuất không!", "Thông báo!", MessageBoxButtons.YesNoCancel);
+            var option = MessageBox.Show("Xác nhận có muốn thoát không!", "Thông báo!", MessageBoxButtons.YesNoCancel);
             if (option == DialogResult.Yes)
             {
                 this.Close();

@@ -2320,7 +2320,7 @@ namespace PRL
             }
             else
             {
-                L_Txt_TG.Text = "Nhân viên này chưa thực hiện chấm công tháng này!";
+                L_Txt_TG.Text = "Bạn chưa thực hiện chấm công tháng này!";
                 L_Txt_Ten.Text = "";
                 L_Txt_SoCong.Text = "0";
                // L_txt_Thue.Text = "0 VNĐ";
