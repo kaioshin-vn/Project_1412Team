@@ -2195,7 +2195,7 @@ namespace PRL
             }
             if (minTime != null && maxTime != null)
             {
-                kqLichKham = kqLichKham.Where(a => a.ngayKham >= minTime && a.ngayKham <= maxTime).ToList();
+                kqLichKham = kqLichKham.Where(a => a.ngayKham >= minTime.Value.AddDays(-1) && a.ngayKham <= maxTime).ToList();
             }
 
 
@@ -2979,7 +2979,7 @@ namespace PRL
                     idPhieuKham = c.idPhieuKham,
                     TenKH = c.TenKH,
                     TenBacSi = c.TenBacSi,
-                    tenDV = c.tenDV,
+                    CaKham = c.CaKham,
                     ngayKham = c.ngayKham,
                 };
             }).ToList();
@@ -3003,7 +3003,7 @@ namespace PRL
                 SHPK_GrView.Columns[1].HeaderText = "Mã phiếu khám";
                 SHPK_GrView.Columns[2].HeaderText = "Tên khách hàng";
                 SHPK_GrView.Columns[3].HeaderText = "Tên bác sĩ";
-                SHPK_GrView.Columns[4].HeaderText = "Tên dịch vụ";
+                SHPK_GrView.Columns[4].HeaderText = "Ca Khám";
                 SHPK_GrView.Columns[5].Visible = false;
             }
             else
@@ -3014,7 +3014,7 @@ namespace PRL
                 SHPK_GrView.Columns[1].HeaderText = "Mã phiếu khám";
                 SHPK_GrView.Columns[2].HeaderText = "Tên khách hàng";
                 SHPK_GrView.Columns[3].HeaderText = "Tên dịch vụ";
-                SHPK_GrView.Columns[4].HeaderText = "Tên bác sĩ";
+                SHPK_GrView.Columns[4].HeaderText = "Ca Khám";
                 SHPK_GrView.Columns[5].Visible = false;
             }
         }
