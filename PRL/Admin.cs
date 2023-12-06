@@ -333,7 +333,7 @@ namespace PRL
                         var TTgiamGia = giamGiaSer.FindGiamGia(Convert.ToInt32(b.Key.idGiamGia));
                         if (TTgiamGia != null)
                         {
-                            Giadv = Convert.ToDouble((Giadv / 100 *(100- TTgiamGia.PhanTramGiamGia)));
+                            Giadv = Convert.ToDouble((Giadv / 100 * (100 - TTgiamGia.PhanTramGiamGia)));
                         }
                     }
                     tongGia += Giadv;
@@ -1887,7 +1887,7 @@ namespace PRL
                 giamGia = Convert.ToInt32(ggGN.PhanTramGiamGia);
             }
             TT_txt_GiamGia.Text = giamGia.ToString() + " %";
-        
+
 
             string thongTin = "Dịch vụ sử dụng :\n";
 
@@ -1901,7 +1901,7 @@ namespace PRL
                 var pk = pkSer.FindPhieuKham(Guid.Parse(item));
                 var dvSer = new DichVuService();
                 var dv = dvSer.GetAllDichVu().FirstOrDefault(a => a.IdDichVu == pk.IdDichVu);
-                tongGia += dv.Gia / 100 * (100 -giamGia);
+                tongGia += dv.Gia / 100 * (100 - giamGia);
                 thongTin += $"{dv.Ten} - {dv.Gia.ToString("0,000")} VNĐ\n";
             }
 
@@ -2062,7 +2062,7 @@ namespace PRL
                         {
                             giamgia = Convert.ToInt32(new GiamGiaSer().FindGiamGia(Convert.ToInt32(hd.idGiamGia)).PhanTramGiamGia);
                         }
-                        var tongTien = Convert.ToDouble(listDichVu.Sum(a => a.Gia / 100 *(100- giamgia)) + hd.PhuPhi);
+                        var tongTien = Convert.ToDouble(listDichVu.Sum(a => a.Gia / 100 * (100 - giamgia)) + hd.PhuPhi);
                         using (var fs = new FileStream($@"C:\\HoaDon\\{hd.ThoiGian.Value.ToString("dd-MM-yyyy")}--{hd.IdHoaDon}Result.txt", FileMode.OpenOrCreate, FileAccess.Write))
                         {
                             var stream = new StreamWriter(fs);
@@ -3828,6 +3828,32 @@ namespace PRL
         {
             var tbSer = new ThongBaoSer();
             QL_ThongBao.Text = "Thông báo" + $"({tbSer.GetListThongBaoChuaTH().Count})";
+        }
+
+
+        private void CurSorChangeCome(object sender, EventArgs e)
+        {
+        }
+
+        private void CurSorChangeLave(object sender, EventArgs e)
+        {
+        }
+
+        private void LK_Panel_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+
+        }
+
+        private void QL_ThanhToan_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+
+        }
+
+        private void Admin_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
         }
     }
 }
