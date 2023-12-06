@@ -133,17 +133,8 @@ namespace PRL
                 return;
             }
             var _nhanVienSer = new NhanVienSer();
-            if (PhoneNumber.Text == "0978040960")
-            {
-                if (_nhanVienSer.GetTatCaVien().Any(a => a.MatKhau == Password.Text))
-                {
-                    var admin = _nhanVienSer.GetTatCaVien().FirstOrDefault(a => a.MatKhau == Password.Text);
-                    this.Hide();
-                    new Admin(admin, this).Show();
-                    return;
-                }
-            }
-            var checkTK = _nhanVienSer.GetAllNhanVien()
+            
+            var checkTK = _nhanVienSer.GetTatCaVien()
                 .Where(p => p.SoDienThoai == PhoneNumber.Text && p.MatKhau == Password.Text)
                 .FirstOrDefault();
 
@@ -155,7 +146,7 @@ namespace PRL
                     new Admin(checkTK, this).Show();
                     return;
                 }
-                else
+                else if (checkTK.HienThi == true )
                 {
                     this.Hide();
                     new NhanVien(checkTK, this).Show();

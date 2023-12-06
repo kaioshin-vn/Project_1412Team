@@ -344,7 +344,7 @@ namespace PRL
                 var lsKhamSer = new LichSuKhamService();
                 var dvSer = new DichVuRepository();
                 var TTcaKhamSer = new TrangThaiNhanVienService();
-                var result = phieuKhamSer.GetAllPhieuKham().Where(a => a.IdKhachHang == kh.IdKhachHang && a.HienThi == true).Join(lsKhamSer.GetAllLichSuKham(), n => n.IdPhieuKham, m => m.IdPhieuKham, (p, q) =>
+                var result = phieuKhamSer.GetAllPhieuKham().Where(a => a.IdKhachHang == kh.IdKhachHang && a.HienThi == true &&  a.TrangThai == true).Join(lsKhamSer.GetAllLichSuKham(), n => n.IdPhieuKham, m => m.IdPhieuKham, (p, q) =>
                 {
                     return new
                     {

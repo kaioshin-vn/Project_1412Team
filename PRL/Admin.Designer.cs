@@ -119,6 +119,25 @@ namespace PRL
             QL_KH = new Label();
             QL_NV = new Label();
             Content = new Panel();
+            Panel_TK = new Panel();
+            TK_txt_Ten = new TextBox();
+            TK_Sep = new ReaLTaiizor.Controls.AirSeparator();
+            airSeparator9 = new ReaLTaiizor.Controls.AirSeparator();
+            airSeparator3 = new ReaLTaiizor.Controls.AirSeparator();
+            TK_combo = new ComboBox();
+            airSeparator10 = new ReaLTaiizor.Controls.AirSeparator();
+            TKhoan_txt_pwd = new TextBox();
+            TKhoan_lbl_Pass = new ReaLTaiizor.Controls.BigLabel();
+            TKhoan_Btn_ok = new ButtonCustom();
+            TKhoan_Btn_Update = new ButtonCustom();
+            TKhoan_lbl_ChucVu = new ReaLTaiizor.Controls.BigLabel();
+            TKhoan_txt_DiaChi = new TextBox();
+            TKhoan_txt_SDT = new TextBox();
+            TKhoan_lbl_SDT = new ReaLTaiizor.Controls.BigLabel();
+            TKhoan_lbl_DiaChi = new ReaLTaiizor.Controls.BigLabel();
+            TKhoan_lbl_Gt = new ReaLTaiizor.Controls.BigLabel();
+            TKhoan_lbl_CVu = new ReaLTaiizor.Controls.BigLabel();
+            airSeparator4 = new ReaLTaiizor.Controls.AirSeparator();
             Panel_TT = new Panel();
             bigLabel35 = new ReaLTaiizor.Controls.BigLabel();
             bigLabel33 = new ReaLTaiizor.Controls.BigLabel();
@@ -231,25 +250,6 @@ namespace PRL
             LK_Btn_Sua_HuyLichKham = new ReaLTaiizor.Controls.BigLabel();
             LK_Btn_ThemLichKham = new ReaLTaiizor.Controls.BigLabel();
             LK_Btn_XemLichKham = new ReaLTaiizor.Controls.BigLabel();
-            Panel_TK = new Panel();
-            TK_txt_Ten = new TextBox();
-            TK_Sep = new ReaLTaiizor.Controls.AirSeparator();
-            airSeparator9 = new ReaLTaiizor.Controls.AirSeparator();
-            airSeparator3 = new ReaLTaiizor.Controls.AirSeparator();
-            TK_combo = new ComboBox();
-            airSeparator10 = new ReaLTaiizor.Controls.AirSeparator();
-            TKhoan_txt_pwd = new TextBox();
-            TKhoan_lbl_Pass = new ReaLTaiizor.Controls.BigLabel();
-            TKhoan_Btn_ok = new ButtonCustom();
-            TKhoan_Btn_Update = new ButtonCustom();
-            TKhoan_lbl_ChucVu = new ReaLTaiizor.Controls.BigLabel();
-            TKhoan_txt_DiaChi = new TextBox();
-            TKhoan_txt_SDT = new TextBox();
-            TKhoan_lbl_SDT = new ReaLTaiizor.Controls.BigLabel();
-            TKhoan_lbl_DiaChi = new ReaLTaiizor.Controls.BigLabel();
-            TKhoan_lbl_Gt = new ReaLTaiizor.Controls.BigLabel();
-            TKhoan_lbl_CVu = new ReaLTaiizor.Controls.BigLabel();
-            airSeparator4 = new ReaLTaiizor.Controls.AirSeparator();
             LK_Grbox_ThemLichKham = new ReaLTaiizor.Controls.GroupBox();
             buttonCustom4 = new ButtonCustom();
             LK_TPK_RichText = new ReaLTaiizor.Controls.DungeonRichTextBox();
@@ -339,6 +339,7 @@ namespace PRL
             ((System.ComponentModel.ISupportInitialize)NV_GridView).BeginInit();
             Nav_Option.SuspendLayout();
             Content.SuspendLayout();
+            Panel_TK.SuspendLayout();
             Panel_TT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TT_GrView_DaTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TT_GrView_ChuaTT).BeginInit();
@@ -361,7 +362,6 @@ namespace PRL
             LK_Panel.SuspendLayout();
             LK_GrBox_XemLichKham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LK_XLK_GrView).BeginInit();
-            Panel_TK.SuspendLayout();
             LK_Grbox_ThemLichKham.SuspendLayout();
             groupBox1.SuspendLayout();
             LK_GrBox_Sua_HuyLichKham.SuspendLayout();
@@ -1591,6 +1591,280 @@ namespace PRL
             Content.Name = "Content";
             Content.Size = new Size(1766, 928);
             Content.TabIndex = 2;
+            // 
+            // Panel_TK
+            // 
+            Panel_TK.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            Panel_TK.BackColor = Color.FromArgb(192, 255, 192);
+            Panel_TK.Controls.Add(TK_txt_Ten);
+            Panel_TK.Controls.Add(TK_Sep);
+            Panel_TK.Controls.Add(airSeparator9);
+            Panel_TK.Controls.Add(airSeparator3);
+            Panel_TK.Controls.Add(TK_combo);
+            Panel_TK.Controls.Add(airSeparator10);
+            Panel_TK.Controls.Add(TKhoan_txt_pwd);
+            Panel_TK.Controls.Add(TKhoan_lbl_Pass);
+            Panel_TK.Controls.Add(TKhoan_Btn_ok);
+            Panel_TK.Controls.Add(TKhoan_Btn_Update);
+            Panel_TK.Controls.Add(TKhoan_lbl_ChucVu);
+            Panel_TK.Controls.Add(TKhoan_txt_DiaChi);
+            Panel_TK.Controls.Add(TKhoan_txt_SDT);
+            Panel_TK.Controls.Add(TKhoan_lbl_SDT);
+            Panel_TK.Controls.Add(TKhoan_lbl_DiaChi);
+            Panel_TK.Controls.Add(TKhoan_lbl_Gt);
+            Panel_TK.Controls.Add(TKhoan_lbl_CVu);
+            Panel_TK.Controls.Add(airSeparator4);
+            Panel_TK.Location = new Point(-1, -1);
+            Panel_TK.Name = "Panel_TK";
+            Panel_TK.Size = new Size(1763, 906);
+            Panel_TK.TabIndex = 0;
+            Panel_TK.Visible = false;
+            Panel_TK.Paint += Panel_TK_Paint;
+            // 
+            // TK_txt_Ten
+            // 
+            TK_txt_Ten.BackColor = Color.FromArgb(192, 255, 192);
+            TK_txt_Ten.BorderStyle = BorderStyle.None;
+            TK_txt_Ten.Enabled = false;
+            TK_txt_Ten.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            TK_txt_Ten.ForeColor = Color.Black;
+            TK_txt_Ten.Location = new Point(577, 133);
+            TK_txt_Ten.Name = "TK_txt_Ten";
+            TK_txt_Ten.Size = new Size(370, 40);
+            TK_txt_Ten.TabIndex = 26;
+            TK_txt_Ten.Text = "Đặng Đình Giáp";
+            // 
+            // TK_Sep
+            // 
+            TK_Sep.BackColor = Color.Black;
+            TK_Sep.Customization = "";
+            TK_Sep.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            TK_Sep.Image = null;
+            TK_Sep.Location = new Point(574, 178);
+            TK_Sep.Name = "TK_Sep";
+            TK_Sep.NoRounding = false;
+            TK_Sep.Size = new Size(213, 1);
+            TK_Sep.TabIndex = 25;
+            TK_Sep.Text = "airSeparator11";
+            TK_Sep.Transparent = false;
+            TK_Sep.Visible = false;
+            // 
+            // airSeparator9
+            // 
+            airSeparator9.BackColor = Color.Black;
+            airSeparator9.Customization = "";
+            airSeparator9.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            airSeparator9.Image = null;
+            airSeparator9.Location = new Point(418, 262);
+            airSeparator9.Name = "airSeparator9";
+            airSeparator9.NoRounding = false;
+            airSeparator9.Size = new Size(524, 1);
+            airSeparator9.TabIndex = 24;
+            airSeparator9.Text = "airSeparator9";
+            airSeparator9.Transparent = false;
+            // 
+            // airSeparator3
+            // 
+            airSeparator3.BackColor = Color.Black;
+            airSeparator3.Customization = "";
+            airSeparator3.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            airSeparator3.Image = null;
+            airSeparator3.Location = new Point(486, 322);
+            airSeparator3.Name = "airSeparator3";
+            airSeparator3.NoRounding = false;
+            airSeparator3.Size = new Size(460, 1);
+            airSeparator3.TabIndex = 23;
+            airSeparator3.Text = "airSeparator3";
+            airSeparator3.Transparent = false;
+            // 
+            // TK_combo
+            // 
+            TK_combo.DropDownStyle = ComboBoxStyle.DropDownList;
+            TK_combo.Enabled = false;
+            TK_combo.FormattingEnabled = true;
+            TK_combo.Items.AddRange(new object[] { "Nam", "Nữ" });
+            TK_combo.Location = new Point(429, 424);
+            TK_combo.Name = "TK_combo";
+            TK_combo.Size = new Size(151, 28);
+            TK_combo.TabIndex = 22;
+            // 
+            // airSeparator10
+            // 
+            airSeparator10.BackColor = Color.Black;
+            airSeparator10.Customization = "";
+            airSeparator10.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            airSeparator10.Image = null;
+            airSeparator10.Location = new Point(422, 519);
+            airSeparator10.Name = "airSeparator10";
+            airSeparator10.NoRounding = false;
+            airSeparator10.Size = new Size(532, 1);
+            airSeparator10.TabIndex = 21;
+            airSeparator10.Text = "airSeparator10";
+            airSeparator10.Transparent = false;
+            // 
+            // TKhoan_txt_pwd
+            // 
+            TKhoan_txt_pwd.BackColor = Color.FromArgb(192, 255, 192);
+            TKhoan_txt_pwd.BorderStyle = BorderStyle.None;
+            TKhoan_txt_pwd.Enabled = false;
+            TKhoan_txt_pwd.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            TKhoan_txt_pwd.Location = new Point(426, 482);
+            TKhoan_txt_pwd.Name = "TKhoan_txt_pwd";
+            TKhoan_txt_pwd.Size = new Size(413, 31);
+            TKhoan_txt_pwd.TabIndex = 20;
+            TKhoan_txt_pwd.Text = "giapcunho";
+            // 
+            // TKhoan_lbl_Pass
+            // 
+            TKhoan_lbl_Pass.AutoSize = true;
+            TKhoan_lbl_Pass.BackColor = Color.Transparent;
+            TKhoan_lbl_Pass.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            TKhoan_lbl_Pass.ForeColor = Color.FromArgb(80, 80, 80);
+            TKhoan_lbl_Pass.Location = new Point(289, 486);
+            TKhoan_lbl_Pass.Name = "TKhoan_lbl_Pass";
+            TKhoan_lbl_Pass.Size = new Size(130, 31);
+            TKhoan_lbl_Pass.TabIndex = 19;
+            TKhoan_lbl_Pass.Text = "Mật Khẩu :";
+            // 
+            // TKhoan_Btn_ok
+            // 
+            TKhoan_Btn_ok.BackColor = Color.FromArgb(108, 245, 50);
+            TKhoan_Btn_ok.BackgroundColor = Color.FromArgb(108, 245, 50);
+            TKhoan_Btn_ok.BorderColor = Color.White;
+            TKhoan_Btn_ok.BorderRadius = 20;
+            TKhoan_Btn_ok.BorderSize = 3;
+            TKhoan_Btn_ok.FlatAppearance.BorderSize = 0;
+            TKhoan_Btn_ok.FlatStyle = FlatStyle.Flat;
+            TKhoan_Btn_ok.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            TKhoan_Btn_ok.ForeColor = Color.White;
+            TKhoan_Btn_ok.IDSelected = null;
+            TKhoan_Btn_ok.Location = new Point(582, 594);
+            TKhoan_Btn_ok.Name = "TKhoan_Btn_ok";
+            TKhoan_Btn_ok.Size = new Size(188, 50);
+            TKhoan_Btn_ok.TabIndex = 17;
+            TKhoan_Btn_ok.Text = "OK";
+            TKhoan_Btn_ok.TextColor = Color.White;
+            TKhoan_Btn_ok.UseVisualStyleBackColor = false;
+            TKhoan_Btn_ok.Visible = false;
+            TKhoan_Btn_ok.Click += TKhoan_Btn_ok_Click;
+            // 
+            // TKhoan_Btn_Update
+            // 
+            TKhoan_Btn_Update.BackColor = Color.DeepSkyBlue;
+            TKhoan_Btn_Update.BackgroundColor = Color.DeepSkyBlue;
+            TKhoan_Btn_Update.BorderColor = Color.White;
+            TKhoan_Btn_Update.BorderRadius = 20;
+            TKhoan_Btn_Update.BorderSize = 3;
+            TKhoan_Btn_Update.FlatAppearance.BorderSize = 0;
+            TKhoan_Btn_Update.FlatStyle = FlatStyle.Flat;
+            TKhoan_Btn_Update.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            TKhoan_Btn_Update.ForeColor = Color.White;
+            TKhoan_Btn_Update.IDSelected = null;
+            TKhoan_Btn_Update.Location = new Point(304, 594);
+            TKhoan_Btn_Update.Name = "TKhoan_Btn_Update";
+            TKhoan_Btn_Update.Size = new Size(188, 50);
+            TKhoan_Btn_Update.TabIndex = 16;
+            TKhoan_Btn_Update.Text = "Cập Nhật";
+            TKhoan_Btn_Update.TextColor = Color.White;
+            TKhoan_Btn_Update.UseVisualStyleBackColor = false;
+            TKhoan_Btn_Update.Click += TKhoan_Btn_Update_Click;
+            // 
+            // TKhoan_lbl_ChucVu
+            // 
+            TKhoan_lbl_ChucVu.AutoSize = true;
+            TKhoan_lbl_ChucVu.BackColor = Color.Transparent;
+            TKhoan_lbl_ChucVu.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            TKhoan_lbl_ChucVu.ForeColor = Color.FromArgb(80, 80, 80);
+            TKhoan_lbl_ChucVu.Location = new Point(414, 228);
+            TKhoan_lbl_ChucVu.Name = "TKhoan_lbl_ChucVu";
+            TKhoan_lbl_ChucVu.Size = new Size(82, 31);
+            TKhoan_lbl_ChucVu.TabIndex = 15;
+            TKhoan_lbl_ChucVu.Text = "Admin";
+            // 
+            // TKhoan_txt_DiaChi
+            // 
+            TKhoan_txt_DiaChi.BackColor = Color.FromArgb(192, 255, 192);
+            TKhoan_txt_DiaChi.BorderStyle = BorderStyle.None;
+            TKhoan_txt_DiaChi.Enabled = false;
+            TKhoan_txt_DiaChi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            TKhoan_txt_DiaChi.Location = new Point(409, 355);
+            TKhoan_txt_DiaChi.Name = "TKhoan_txt_DiaChi";
+            TKhoan_txt_DiaChi.Size = new Size(413, 31);
+            TKhoan_txt_DiaChi.TabIndex = 11;
+            TKhoan_txt_DiaChi.Text = "50 Trần Bình , Cầu Giấy";
+            // 
+            // TKhoan_txt_SDT
+            // 
+            TKhoan_txt_SDT.BackColor = Color.FromArgb(192, 255, 192);
+            TKhoan_txt_SDT.BorderStyle = BorderStyle.None;
+            TKhoan_txt_SDT.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            TKhoan_txt_SDT.Location = new Point(488, 293);
+            TKhoan_txt_SDT.Name = "TKhoan_txt_SDT";
+            TKhoan_txt_SDT.Size = new Size(413, 31);
+            TKhoan_txt_SDT.TabIndex = 10;
+            TKhoan_txt_SDT.Text = "0978040960";
+            // 
+            // TKhoan_lbl_SDT
+            // 
+            TKhoan_lbl_SDT.AutoSize = true;
+            TKhoan_lbl_SDT.BackColor = Color.Transparent;
+            TKhoan_lbl_SDT.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            TKhoan_lbl_SDT.ForeColor = Color.FromArgb(80, 80, 80);
+            TKhoan_lbl_SDT.Location = new Point(290, 294);
+            TKhoan_lbl_SDT.Name = "TKhoan_lbl_SDT";
+            TKhoan_lbl_SDT.Size = new Size(175, 31);
+            TKhoan_lbl_SDT.TabIndex = 4;
+            TKhoan_lbl_SDT.Text = "Số Điện Thoại :";
+            // 
+            // TKhoan_lbl_DiaChi
+            // 
+            TKhoan_lbl_DiaChi.AutoSize = true;
+            TKhoan_lbl_DiaChi.BackColor = Color.Transparent;
+            TKhoan_lbl_DiaChi.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            TKhoan_lbl_DiaChi.ForeColor = Color.FromArgb(80, 80, 80);
+            TKhoan_lbl_DiaChi.Location = new Point(290, 356);
+            TKhoan_lbl_DiaChi.Name = "TKhoan_lbl_DiaChi";
+            TKhoan_lbl_DiaChi.Size = new Size(103, 31);
+            TKhoan_lbl_DiaChi.TabIndex = 3;
+            TKhoan_lbl_DiaChi.Text = "Địa Chỉ :";
+            // 
+            // TKhoan_lbl_Gt
+            // 
+            TKhoan_lbl_Gt.AutoSize = true;
+            TKhoan_lbl_Gt.BackColor = Color.Transparent;
+            TKhoan_lbl_Gt.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            TKhoan_lbl_Gt.ForeColor = Color.FromArgb(80, 80, 80);
+            TKhoan_lbl_Gt.Location = new Point(289, 421);
+            TKhoan_lbl_Gt.Name = "TKhoan_lbl_Gt";
+            TKhoan_lbl_Gt.Size = new Size(124, 31);
+            TKhoan_lbl_Gt.TabIndex = 2;
+            TKhoan_lbl_Gt.Text = "Giới Tính :";
+            // 
+            // TKhoan_lbl_CVu
+            // 
+            TKhoan_lbl_CVu.AutoSize = true;
+            TKhoan_lbl_CVu.BackColor = Color.Transparent;
+            TKhoan_lbl_CVu.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            TKhoan_lbl_CVu.ForeColor = Color.FromArgb(80, 80, 80);
+            TKhoan_lbl_CVu.Location = new Point(290, 228);
+            TKhoan_lbl_CVu.Name = "TKhoan_lbl_CVu";
+            TKhoan_lbl_CVu.Size = new Size(115, 31);
+            TKhoan_lbl_CVu.TabIndex = 1;
+            TKhoan_lbl_CVu.Text = "Chức Vụ :";
+            // 
+            // airSeparator4
+            // 
+            airSeparator4.BackColor = Color.Black;
+            airSeparator4.Customization = "";
+            airSeparator4.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            airSeparator4.Image = null;
+            airSeparator4.Location = new Point(410, 389);
+            airSeparator4.Name = "airSeparator4";
+            airSeparator4.NoRounding = false;
+            airSeparator4.Size = new Size(539, 1);
+            airSeparator4.TabIndex = 14;
+            airSeparator4.Text = "airSeparator4";
+            airSeparator4.Transparent = false;
             // 
             // Panel_TT
             // 
@@ -3461,281 +3735,6 @@ namespace PRL
             LK_Btn_XemLichKham.Text = "Xem Lịch Khám";
             LK_Btn_XemLichKham.Click += LK_Btn_XemLichKham_Click;
             // 
-            // Panel_TK
-            // 
-            Panel_TK.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            Panel_TK.BackColor = Color.FromArgb(192, 255, 192);
-            Panel_TK.Controls.Add(TK_txt_Ten);
-            Panel_TK.Controls.Add(TK_Sep);
-            Panel_TK.Controls.Add(airSeparator9);
-            Panel_TK.Controls.Add(airSeparator3);
-            Panel_TK.Controls.Add(TK_combo);
-            Panel_TK.Controls.Add(airSeparator10);
-            Panel_TK.Controls.Add(TKhoan_txt_pwd);
-            Panel_TK.Controls.Add(TKhoan_lbl_Pass);
-            Panel_TK.Controls.Add(TKhoan_Btn_ok);
-            Panel_TK.Controls.Add(TKhoan_Btn_Update);
-            Panel_TK.Controls.Add(TKhoan_lbl_ChucVu);
-            Panel_TK.Controls.Add(TKhoan_txt_DiaChi);
-            Panel_TK.Controls.Add(TKhoan_txt_SDT);
-            Panel_TK.Controls.Add(TKhoan_lbl_SDT);
-            Panel_TK.Controls.Add(TKhoan_lbl_DiaChi);
-            Panel_TK.Controls.Add(TKhoan_lbl_Gt);
-            Panel_TK.Controls.Add(TKhoan_lbl_CVu);
-            Panel_TK.Controls.Add(airSeparator4);
-            Panel_TK.Location = new Point(-1, -1);
-            Panel_TK.Name = "Panel_TK";
-            Panel_TK.Size = new Size(1763, 906);
-            Panel_TK.TabIndex = 0;
-            Panel_TK.Visible = false;
-            Panel_TK.Paint += Panel_TK_Paint;
-            // 
-            // TK_txt_Ten
-            // 
-            TK_txt_Ten.BackColor = Color.FromArgb(192, 255, 192);
-            TK_txt_Ten.BorderStyle = BorderStyle.None;
-            TK_txt_Ten.Enabled = false;
-            TK_txt_Ten.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            TK_txt_Ten.ForeColor = Color.Black;
-            TK_txt_Ten.Location = new Point(577, 133);
-            TK_txt_Ten.Name = "TK_txt_Ten";
-            TK_txt_Ten.Size = new Size(370, 40);
-            TK_txt_Ten.TabIndex = 26;
-            TK_txt_Ten.Text = "Đặng Đình Giáp";
-            // 
-            // TK_Sep
-            // 
-            TK_Sep.BackColor = Color.Black;
-            TK_Sep.Customization = "";
-            TK_Sep.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            TK_Sep.Image = null;
-            TK_Sep.Location = new Point(574, 178);
-            TK_Sep.Name = "TK_Sep";
-            TK_Sep.NoRounding = false;
-            TK_Sep.Size = new Size(213, 1);
-            TK_Sep.TabIndex = 25;
-            TK_Sep.Text = "airSeparator11";
-            TK_Sep.Transparent = false;
-            TK_Sep.Visible = false;
-            // 
-            // airSeparator9
-            // 
-            airSeparator9.BackColor = Color.Black;
-            airSeparator9.Customization = "";
-            airSeparator9.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            airSeparator9.Image = null;
-            airSeparator9.Location = new Point(418, 262);
-            airSeparator9.Name = "airSeparator9";
-            airSeparator9.NoRounding = false;
-            airSeparator9.Size = new Size(524, 1);
-            airSeparator9.TabIndex = 24;
-            airSeparator9.Text = "airSeparator9";
-            airSeparator9.Transparent = false;
-            // 
-            // airSeparator3
-            // 
-            airSeparator3.BackColor = Color.Black;
-            airSeparator3.Customization = "";
-            airSeparator3.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            airSeparator3.Image = null;
-            airSeparator3.Location = new Point(486, 322);
-            airSeparator3.Name = "airSeparator3";
-            airSeparator3.NoRounding = false;
-            airSeparator3.Size = new Size(460, 1);
-            airSeparator3.TabIndex = 23;
-            airSeparator3.Text = "airSeparator3";
-            airSeparator3.Transparent = false;
-            // 
-            // TK_combo
-            // 
-            TK_combo.DropDownStyle = ComboBoxStyle.DropDownList;
-            TK_combo.Enabled = false;
-            TK_combo.FormattingEnabled = true;
-            TK_combo.Items.AddRange(new object[] { "Nam", "Nữ" });
-            TK_combo.Location = new Point(429, 424);
-            TK_combo.Name = "TK_combo";
-            TK_combo.Size = new Size(151, 28);
-            TK_combo.TabIndex = 22;
-            // 
-            // airSeparator10
-            // 
-            airSeparator10.BackColor = Color.Black;
-            airSeparator10.Customization = "";
-            airSeparator10.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            airSeparator10.Image = null;
-            airSeparator10.Location = new Point(422, 519);
-            airSeparator10.Name = "airSeparator10";
-            airSeparator10.NoRounding = false;
-            airSeparator10.Size = new Size(532, 1);
-            airSeparator10.TabIndex = 21;
-            airSeparator10.Text = "airSeparator10";
-            airSeparator10.Transparent = false;
-            // 
-            // TKhoan_txt_pwd
-            // 
-            TKhoan_txt_pwd.BackColor = Color.FromArgb(192, 255, 192);
-            TKhoan_txt_pwd.BorderStyle = BorderStyle.None;
-            TKhoan_txt_pwd.Enabled = false;
-            TKhoan_txt_pwd.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TKhoan_txt_pwd.Location = new Point(426, 482);
-            TKhoan_txt_pwd.Name = "TKhoan_txt_pwd";
-            TKhoan_txt_pwd.Size = new Size(413, 31);
-            TKhoan_txt_pwd.TabIndex = 20;
-            TKhoan_txt_pwd.Text = "giapcunho";
-            // 
-            // TKhoan_lbl_Pass
-            // 
-            TKhoan_lbl_Pass.AutoSize = true;
-            TKhoan_lbl_Pass.BackColor = Color.Transparent;
-            TKhoan_lbl_Pass.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            TKhoan_lbl_Pass.ForeColor = Color.FromArgb(80, 80, 80);
-            TKhoan_lbl_Pass.Location = new Point(289, 486);
-            TKhoan_lbl_Pass.Name = "TKhoan_lbl_Pass";
-            TKhoan_lbl_Pass.Size = new Size(130, 31);
-            TKhoan_lbl_Pass.TabIndex = 19;
-            TKhoan_lbl_Pass.Text = "Mật Khẩu :";
-            // 
-            // TKhoan_Btn_ok
-            // 
-            TKhoan_Btn_ok.BackColor = Color.FromArgb(108, 245, 50);
-            TKhoan_Btn_ok.BackgroundColor = Color.FromArgb(108, 245, 50);
-            TKhoan_Btn_ok.BorderColor = Color.White;
-            TKhoan_Btn_ok.BorderRadius = 20;
-            TKhoan_Btn_ok.BorderSize = 3;
-            TKhoan_Btn_ok.FlatAppearance.BorderSize = 0;
-            TKhoan_Btn_ok.FlatStyle = FlatStyle.Flat;
-            TKhoan_Btn_ok.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            TKhoan_Btn_ok.ForeColor = Color.White;
-            TKhoan_Btn_ok.IDSelected = null;
-            TKhoan_Btn_ok.Location = new Point(582, 594);
-            TKhoan_Btn_ok.Name = "TKhoan_Btn_ok";
-            TKhoan_Btn_ok.Size = new Size(188, 50);
-            TKhoan_Btn_ok.TabIndex = 17;
-            TKhoan_Btn_ok.Text = "OK";
-            TKhoan_Btn_ok.TextColor = Color.White;
-            TKhoan_Btn_ok.UseVisualStyleBackColor = false;
-            TKhoan_Btn_ok.Visible = false;
-            TKhoan_Btn_ok.Click += TKhoan_Btn_ok_Click;
-            // 
-            // TKhoan_Btn_Update
-            // 
-            TKhoan_Btn_Update.BackColor = Color.DeepSkyBlue;
-            TKhoan_Btn_Update.BackgroundColor = Color.DeepSkyBlue;
-            TKhoan_Btn_Update.BorderColor = Color.White;
-            TKhoan_Btn_Update.BorderRadius = 20;
-            TKhoan_Btn_Update.BorderSize = 3;
-            TKhoan_Btn_Update.FlatAppearance.BorderSize = 0;
-            TKhoan_Btn_Update.FlatStyle = FlatStyle.Flat;
-            TKhoan_Btn_Update.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            TKhoan_Btn_Update.ForeColor = Color.White;
-            TKhoan_Btn_Update.IDSelected = null;
-            TKhoan_Btn_Update.Location = new Point(304, 594);
-            TKhoan_Btn_Update.Name = "TKhoan_Btn_Update";
-            TKhoan_Btn_Update.Size = new Size(188, 50);
-            TKhoan_Btn_Update.TabIndex = 16;
-            TKhoan_Btn_Update.Text = "Cập Nhật";
-            TKhoan_Btn_Update.TextColor = Color.White;
-            TKhoan_Btn_Update.UseVisualStyleBackColor = false;
-            TKhoan_Btn_Update.Click += TKhoan_Btn_Update_Click;
-            // 
-            // TKhoan_lbl_ChucVu
-            // 
-            TKhoan_lbl_ChucVu.AutoSize = true;
-            TKhoan_lbl_ChucVu.BackColor = Color.Transparent;
-            TKhoan_lbl_ChucVu.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TKhoan_lbl_ChucVu.ForeColor = Color.FromArgb(80, 80, 80);
-            TKhoan_lbl_ChucVu.Location = new Point(414, 228);
-            TKhoan_lbl_ChucVu.Name = "TKhoan_lbl_ChucVu";
-            TKhoan_lbl_ChucVu.Size = new Size(82, 31);
-            TKhoan_lbl_ChucVu.TabIndex = 15;
-            TKhoan_lbl_ChucVu.Text = "Admin";
-            // 
-            // TKhoan_txt_DiaChi
-            // 
-            TKhoan_txt_DiaChi.BackColor = Color.FromArgb(192, 255, 192);
-            TKhoan_txt_DiaChi.BorderStyle = BorderStyle.None;
-            TKhoan_txt_DiaChi.Enabled = false;
-            TKhoan_txt_DiaChi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TKhoan_txt_DiaChi.Location = new Point(409, 355);
-            TKhoan_txt_DiaChi.Name = "TKhoan_txt_DiaChi";
-            TKhoan_txt_DiaChi.Size = new Size(413, 31);
-            TKhoan_txt_DiaChi.TabIndex = 11;
-            TKhoan_txt_DiaChi.Text = "50 Trần Bình , Cầu Giấy";
-            // 
-            // TKhoan_txt_SDT
-            // 
-            TKhoan_txt_SDT.BackColor = Color.FromArgb(192, 255, 192);
-            TKhoan_txt_SDT.BorderStyle = BorderStyle.None;
-            TKhoan_txt_SDT.Enabled = false;
-            TKhoan_txt_SDT.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            TKhoan_txt_SDT.Location = new Point(488, 293);
-            TKhoan_txt_SDT.Name = "TKhoan_txt_SDT";
-            TKhoan_txt_SDT.Size = new Size(413, 31);
-            TKhoan_txt_SDT.TabIndex = 10;
-            TKhoan_txt_SDT.Text = "0978040960";
-            // 
-            // TKhoan_lbl_SDT
-            // 
-            TKhoan_lbl_SDT.AutoSize = true;
-            TKhoan_lbl_SDT.BackColor = Color.Transparent;
-            TKhoan_lbl_SDT.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            TKhoan_lbl_SDT.ForeColor = Color.FromArgb(80, 80, 80);
-            TKhoan_lbl_SDT.Location = new Point(290, 294);
-            TKhoan_lbl_SDT.Name = "TKhoan_lbl_SDT";
-            TKhoan_lbl_SDT.Size = new Size(175, 31);
-            TKhoan_lbl_SDT.TabIndex = 4;
-            TKhoan_lbl_SDT.Text = "Số Điện Thoại :";
-            // 
-            // TKhoan_lbl_DiaChi
-            // 
-            TKhoan_lbl_DiaChi.AutoSize = true;
-            TKhoan_lbl_DiaChi.BackColor = Color.Transparent;
-            TKhoan_lbl_DiaChi.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            TKhoan_lbl_DiaChi.ForeColor = Color.FromArgb(80, 80, 80);
-            TKhoan_lbl_DiaChi.Location = new Point(290, 356);
-            TKhoan_lbl_DiaChi.Name = "TKhoan_lbl_DiaChi";
-            TKhoan_lbl_DiaChi.Size = new Size(103, 31);
-            TKhoan_lbl_DiaChi.TabIndex = 3;
-            TKhoan_lbl_DiaChi.Text = "Địa Chỉ :";
-            // 
-            // TKhoan_lbl_Gt
-            // 
-            TKhoan_lbl_Gt.AutoSize = true;
-            TKhoan_lbl_Gt.BackColor = Color.Transparent;
-            TKhoan_lbl_Gt.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            TKhoan_lbl_Gt.ForeColor = Color.FromArgb(80, 80, 80);
-            TKhoan_lbl_Gt.Location = new Point(289, 421);
-            TKhoan_lbl_Gt.Name = "TKhoan_lbl_Gt";
-            TKhoan_lbl_Gt.Size = new Size(124, 31);
-            TKhoan_lbl_Gt.TabIndex = 2;
-            TKhoan_lbl_Gt.Text = "Giới Tính :";
-            // 
-            // TKhoan_lbl_CVu
-            // 
-            TKhoan_lbl_CVu.AutoSize = true;
-            TKhoan_lbl_CVu.BackColor = Color.Transparent;
-            TKhoan_lbl_CVu.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            TKhoan_lbl_CVu.ForeColor = Color.FromArgb(80, 80, 80);
-            TKhoan_lbl_CVu.Location = new Point(290, 228);
-            TKhoan_lbl_CVu.Name = "TKhoan_lbl_CVu";
-            TKhoan_lbl_CVu.Size = new Size(115, 31);
-            TKhoan_lbl_CVu.TabIndex = 1;
-            TKhoan_lbl_CVu.Text = "Chức Vụ :";
-            // 
-            // airSeparator4
-            // 
-            airSeparator4.BackColor = Color.Black;
-            airSeparator4.Customization = "";
-            airSeparator4.Font = new Font("Verdana", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            airSeparator4.Image = null;
-            airSeparator4.Location = new Point(410, 389);
-            airSeparator4.Name = "airSeparator4";
-            airSeparator4.NoRounding = false;
-            airSeparator4.Size = new Size(539, 1);
-            airSeparator4.TabIndex = 14;
-            airSeparator4.Text = "airSeparator4";
-            airSeparator4.Transparent = false;
-            // 
             // LK_Grbox_ThemLichKham
             // 
             LK_Grbox_ThemLichKham.BackColor = Color.Transparent;
@@ -5363,6 +5362,8 @@ namespace PRL
             Nav_Option.ResumeLayout(false);
             Nav_Option.PerformLayout();
             Content.ResumeLayout(false);
+            Panel_TK.ResumeLayout(false);
+            Panel_TK.PerformLayout();
             Panel_TT.ResumeLayout(false);
             Panel_TT.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)TT_GrView_DaTT).EndInit();
@@ -5398,8 +5399,6 @@ namespace PRL
             LK_GrBox_XemLichKham.ResumeLayout(false);
             LK_GrBox_XemLichKham.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)LK_XLK_GrView).EndInit();
-            Panel_TK.ResumeLayout(false);
-            Panel_TK.PerformLayout();
             LK_Grbox_ThemLichKham.ResumeLayout(false);
             LK_Grbox_ThemLichKham.PerformLayout();
             groupBox1.ResumeLayout(false);
