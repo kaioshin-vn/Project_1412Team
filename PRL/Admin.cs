@@ -3138,7 +3138,6 @@ namespace PRL
                 }
             }
             lstCaTrong.Sort();
-            QL_DangXuat.Text = string.Join(",", lstCaTrong.Select(a => a.ToString()));
             SHPK_Combo_Ca.DataSource = lstCaTrong;
             //SHPK_Combo_Ca.SelectedValue = PhieuKhamDuocChon.CaKham;
             //if (lstcaPhongTrong.Any(a => a != PhieuKhamDuocChon.CaKham))

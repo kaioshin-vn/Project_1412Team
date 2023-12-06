@@ -2545,9 +2545,9 @@ namespace PRL
             TK_combo.Text = gt;
 
             TKhoan_lbl_ChucVu.Text = ChucVu;
-            TKhoan_txt_SDT.Text = a.SoDienThoai != null ? user.SoDienThoai.ToString() : "null";
-            TKhoan_txt_DiaChi.Text = a.DiaChi != null ? user.DiaChi.ToString() : "null";
-            TKhoan_txt_pwd.Text = a.MatKhau != null ? user.MatKhau.ToString() : "null";
+            TKhoan_txt_SDT.Text = a.SoDienThoai != null ? a.SoDienThoai.ToString() : "null";
+            TKhoan_txt_DiaChi.Text = a.DiaChi != null ? a.DiaChi.ToString() : "null";
+            TKhoan_txt_pwd.Text = a.MatKhau != null ? a.MatKhau.ToString() : "null";
             TK_txt_Ten.Text = a.Ten;
 
 
