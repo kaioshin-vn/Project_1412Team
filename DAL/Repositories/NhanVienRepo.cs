@@ -25,7 +25,7 @@ namespace A_DAL.Repositories
 
         public NhanVien FindNhanVienId(Guid id)
         {
-            return _dbContext.NhanViens.Find(id);
+            return _dbContext.NhanViens.FirstOrDefault( a => a.IdNhanVien == id);
         }
 
         public List<NhanVien> GetAllNhanVien()

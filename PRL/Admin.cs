@@ -93,9 +93,11 @@ namespace PRL
         {
             Content.Controls.Clear();
             Panel_LK.Visible = true;
-            Content.Controls.Add(Panel_LK);
-            Giap_LoadGrViewLK(true, "", DateTime.Now, DateTime.Now.AddDays(7));
+            LK_XLK_DateTime_Min.Value = DateTime.Now.AddDays(-1);
             LK_XLK_DateTime_Max.Value = DateTime.Now.AddDays(6);
+            Content.Controls.Add(Panel_LK);
+            Giap_LoadGrViewLK(true, "", LK_XLK_DateTime_Min.Value, LK_XLK_DateTime_Max.Value);
+            
             var ttNhanVienSer = new TTNhanVienSer();
             var ttPhongSer = new TTPhongSer();
             var nvSer = new NhanVienSer();
@@ -1107,7 +1109,7 @@ namespace PRL
                 var lsKhamSer = new LichSuKhamService();
                 var dvSer = new DichVuRepository();
                 var TTcaKhamSer = new TrangThaiNhanVienService();
-                var result = phieuKhamSer.GetAllPhieuKham().Where(a => a.IdKhachHang == kh.IdKhachHang && a.HienThi == true).Join(lsKhamSer.GetAllLichSuKham(), n => n.IdPhieuKham, m => m.IdPhieuKham, (p, q) =>
+                var result = phieuKhamSer.GetAllPhieuKham().Where(a => a.IdKhachHang == kh.IdKhachHang && a.HienThi == true && a.TrangThai == true).Join(lsKhamSer.GetAllLichSuKham(), n => n.IdPhieuKham, m => m.IdPhieuKham, (p, q) =>
                 {
                     return new
                     {
@@ -1878,7 +1880,7 @@ namespace PRL
 
             var giamGia = 0;
             var ggGN = new GiamGiaSer().GetGiamGiaGanNhat();
-            if (ggGN != null)
+            if (  ggGN != null && ggGN.TrangThai != false)
             {
                 giamGia = Convert.ToInt32(ggGN.PhanTramGiamGia);
             }
@@ -2010,7 +2012,7 @@ namespace PRL
                     hd.IdHoaDon = Guid.Parse(idHoaDon);
                     hd.HienThi = true;
                     var gg = new GiamGiaSer().GetGiamGiaGanNhat();
-                    if ( gg != null)
+                    if (gg != null && gg.TrangThai != false  )
                     {
                         hd.idGiamGia = gg.id;
                     }
@@ -2426,7 +2428,7 @@ namespace PRL
 
             if (ngayDuocChon.ToString("MM/dd/yyyy") == DateTime.Now.ToString("MM/dd/yyyy"))
             {
-                var gioTrongNgay = Convert.ToInt32(DateTime.Now.ToString("hh"));
+                var gioTrongNgay = Convert.ToInt32(DateTime.Now.Hour);
                 if (DateTime.Now.ToString("tt") == "AM")
                 {
                     if (gioTrongNgay >= 8)
@@ -2468,7 +2470,7 @@ namespace PRL
                     lstCaTrong.Remove(2);
                     lstCaTrong.Remove(3);
                     lstCaTrong.Remove(4);
-                    if (gioTrongNgay >= 2)
+                    if (gioTrongNgay >= 14)
                     {
                         var obj = lstCaTrong.Any(a => a == 5);
                         if (obj)
@@ -2476,7 +2478,7 @@ namespace PRL
                             lstCaTrong.Remove(5);
                         }
                     }
-                    if (gioTrongNgay >= 3)
+                    if (gioTrongNgay >= 15)
                     {
                         var obj = lstCaTrong.Any(a => a == 6);
                         if (obj)
@@ -2484,7 +2486,7 @@ namespace PRL
                             lstCaTrong.Remove(6);
                         }
                     }
-                    if (gioTrongNgay >= 4)
+                    if (gioTrongNgay >= 16)
                     {
                         var obj = lstCaTrong.Any(a => a == 7);
                         if (obj)
@@ -2492,7 +2494,7 @@ namespace PRL
                             lstCaTrong.Remove(7);
                         }
                     }
-                    if (gioTrongNgay >= 5)
+                    if (gioTrongNgay >= 17)
                     {
                         var obj = lstCaTrong.Any(a => a == 8);
                         if (obj)
@@ -3013,8 +3015,8 @@ namespace PRL
                 SHPK_GrView.Columns[0].HeaderText = "STT";
                 SHPK_GrView.Columns[1].HeaderText = "Mã phiếu khám";
                 SHPK_GrView.Columns[2].HeaderText = "Tên khách hàng";
-                SHPK_GrView.Columns[3].HeaderText = "Tên dịch vụ";
-                SHPK_GrView.Columns[4].HeaderText = "Tên bác sĩ";
+                SHPK_GrView.Columns[3].HeaderText = "Tên bác sĩ";
+                SHPK_GrView.Columns[4].HeaderText = "Tên dịch vụ";
                 SHPK_GrView.Columns[5].Visible = false;
             }
         }
@@ -3090,7 +3092,7 @@ namespace PRL
 
             if (ngayDuocChon.ToString("MM/dd/yyyy") == DateTime.Now.ToString("MM/dd/yyyy"))
             {
-                var gioTrongNgay = Convert.ToInt32(DateTime.Now.ToString("hh"));
+                var gioTrongNgay = Convert.ToInt32(DateTime.Now.Hour);
                 if (DateTime.Now.ToString("tt") == "AM")
                 {
                     if (gioTrongNgay >= 8)
@@ -3125,6 +3127,7 @@ namespace PRL
                             lstCaTrong.Remove(4);
                         }
                     }
+
                 }
                 if (DateTime.Now.ToString("tt") == "PM")
                 {
@@ -3132,7 +3135,8 @@ namespace PRL
                     lstCaTrong.Remove(2);
                     lstCaTrong.Remove(3);
                     lstCaTrong.Remove(4);
-                    if (gioTrongNgay >= 2)
+
+                    if (gioTrongNgay >= 14)
                     {
                         var obj = lstCaTrong.Any(a => a == 5);
                         if (obj)
@@ -3140,7 +3144,7 @@ namespace PRL
                             lstCaTrong.Remove(5);
                         }
                     }
-                    if (gioTrongNgay >= 3)
+                    if (gioTrongNgay >= 15)
                     {
                         var obj = lstCaTrong.Any(a => a == 6);
                         if (obj)
@@ -3148,7 +3152,7 @@ namespace PRL
                             lstCaTrong.Remove(6);
                         }
                     }
-                    if (gioTrongNgay >= 4)
+                    if (gioTrongNgay >= 16)
                     {
                         var obj = lstCaTrong.Any(a => a == 7);
                         if (obj)
@@ -3156,7 +3160,7 @@ namespace PRL
                             lstCaTrong.Remove(7);
                         }
                     }
-                    if (gioTrongNgay >= 5)
+                    if (gioTrongNgay >= 17)
                     {
                         var obj = lstCaTrong.Any(a => a == 8);
                         if (obj)
@@ -3741,9 +3745,9 @@ namespace PRL
             TK_combo.Text = gt;
 
             TKhoan_lbl_ChucVu.Text = ChucVu;
-            TKhoan_txt_SDT.Text = a.SoDienThoai != null ? user.SoDienThoai.ToString() : "null";
-            TKhoan_txt_DiaChi.Text = a.DiaChi != null ? user.DiaChi.ToString() : "null";
-            TKhoan_txt_pwd.Text = a.MatKhau != null ? user.MatKhau.ToString() : "null";
+            TKhoan_txt_SDT.Text = a.SoDienThoai != null ? a.SoDienThoai.ToString() : "null";
+            TKhoan_txt_DiaChi.Text = a.DiaChi != null ? a.DiaChi.ToString() : "null";
+            TKhoan_txt_pwd.Text = a.MatKhau != null ? a.MatKhau.ToString() : "null";
             TK_txt_Ten.Text = a.Ten;
 
 
