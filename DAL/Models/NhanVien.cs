@@ -38,7 +38,7 @@ namespace DAL.Models
         // quan hệ
 
 
-        public virtual ICollection<HoaDonChiTiet>? HoaDon { get; set; }
+
         public virtual ICollection<ChamCong> ChamCong { get; set; }
         public virtual ICollection<ThongBao>? ThongBao { get; set; }
         public virtual ICollection<TrangThaiNhanVien>? TrangThaiNhanVien { get; set; }

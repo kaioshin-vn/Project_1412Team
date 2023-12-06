@@ -283,7 +283,7 @@ namespace PRL
                     idGiamGia = q.idGiamGia,
 
                 };
-            }).Join(nvSer.GetAllNhanVien(), n => n.idnvThanhToan, m => m.IdNhanVien, (q, p) =>
+            }).Join(nvSer.GetTatCaVien(), n => n.idnvThanhToan, m => m.IdNhanVien, (q, p) =>
             new
             {
                 idHD = q.idHD,
@@ -333,7 +333,7 @@ namespace PRL
                         var TTgiamGia = giamGiaSer.FindGiamGia(Convert.ToInt32(b.Key.idGiamGia));
                         if (TTgiamGia != null)
                         {
-                            Giadv = Convert.ToDouble((Giadv / 100 * TTgiamGia.PhanTramGiamGia));
+                            Giadv = Convert.ToDouble((Giadv / 100 *(100- TTgiamGia.PhanTramGiamGia)));
                         }
                     }
                     tongGia += Giadv;
@@ -1476,6 +1476,8 @@ namespace PRL
             var luongSer = new LuongSer();
             var count = 1;
 
+
+
             var kqDaThanhToan1 = hoaDonSer.GetAllHoaDon().Join(hoaDonCtSer.GetAllHDCT().Where(a => a.TrangThai == true), n => n.IdHoaDon, m => m.IdHoaDon, (q, p) =>
             {
                 return new
@@ -1531,7 +1533,7 @@ namespace PRL
                     idGiamGia = q.idGiamGia,
 
                 };
-            }).Join(nvSer.GetAllNhanVien(), n => n.idnvThanhToan, m => m.IdNhanVien, (q, p) =>
+            }).Join(nvSer.GetTatCaVien(), n => n.idnvThanhToan, m => m.IdNhanVien, (q, p) =>
             new
             {
                 idHD = q.idHD,
@@ -1543,6 +1545,10 @@ namespace PRL
                 idGiamGia = q.idGiamGia,
                 ngayTT = q.ngayTT.Value.ToString("dd/MM/yyyy"),
             }).ToList();
+
+
+
+
 
 
 
@@ -1643,7 +1649,7 @@ namespace PRL
                  }
             );
             var count1 = 1;
-            int giamGia = 100;
+            int giamGia = 0;
             var ggGanNhat = new GiamGiaSer().GetGiamGiaGanNhat();
             if (ggGanNhat != null)
             {
@@ -1655,7 +1661,7 @@ namespace PRL
                 idKH = b.Key.idKH,
                 TenKh = b.ToList()[0].TenKhachHang,
                 TenDv = string.Join(",", b.Select(a => a.TenDv)),
-                TongGiaDV = b.ToList().Sum(a => a.GiaDV / 100 * giamGia).ToString("0,000") + "VNĐ",
+                TongGiaDV = b.ToList().Sum(a => a.GiaDV / 100 * (100 - giamGia)).ToString("0,000") + "VNĐ",
                 lstPk = string.Join("|", b.Select(a => $"{a.idPK}")),
             }).ToList();
 
@@ -1809,7 +1815,7 @@ namespace PRL
                     idGiamGia = q.idGiamGia,
                     TenKhachHang = p.Ten,
                 };
-            }).Join(nvSer.GetAllNhanVien(), n => n.idnvThanhToan, m => m.IdNhanVien, (q, p) =>
+            }).Join(nvSer.GetTatCaVien(), n => n.idnvThanhToan, m => m.IdNhanVien, (q, p) =>
             new
             {
                 idHD = q.idHD,
@@ -1853,11 +1859,7 @@ namespace PRL
                 TT_Txt_TenKH.Text = item.FirstOrDefault().TenKhachHang;
                 TT_Txt_NVThanhToan.Text = item.FirstOrDefault().TenNhanVien;
                 TT_txt_ThoiGianTT.Text = item.FirstOrDefault().ngayTT;
-                if (giamGia == 0)
-                {
-                    giamGia = 100;
-                }
-                TongTienDV = Convert.ToDouble(item.Sum(a => a.GiaDV / 100 * giamGia) + item.Key.PhuPhi);
+                TongTienDV = Convert.ToDouble(item.Sum(a => a.GiaDV / 100 * (100 - giamGia)) + item.Key.PhuPhi);
                 stringText = string.Join("\n", item.Select(a => $"{a.TenDv} - {a.GiaDV.ToString("0,000")} VNĐ"));
 
             }
@@ -1885,10 +1887,7 @@ namespace PRL
                 giamGia = Convert.ToInt32(ggGN.PhanTramGiamGia);
             }
             TT_txt_GiamGia.Text = giamGia.ToString() + " %";
-            if (giamGia == 0)
-            {
-                giamGia = 100;
-            }
+        
 
             string thongTin = "Dịch vụ sử dụng :\n";
 
@@ -1902,7 +1901,7 @@ namespace PRL
                 var pk = pkSer.FindPhieuKham(Guid.Parse(item));
                 var dvSer = new DichVuService();
                 var dv = dvSer.GetAllDichVu().FirstOrDefault(a => a.IdDichVu == pk.IdDichVu);
-                tongGia += dv.Gia / 100 * giamGia;
+                tongGia += dv.Gia / 100 * (100 -giamGia);
                 thongTin += $"{dv.Ten} - {dv.Gia.ToString("0,000")} VNĐ\n";
             }
 
@@ -2058,18 +2057,18 @@ namespace PRL
                         });
                         //var hd = new()
                         var stringDV = string.Join("\n", listDichVu.Select(a => $"{a.TenDv} - {a.Gia.ToString("0,000")} VNĐ"));
-                        var giamgia = 100;
+                        var giamgia = 0;
                         if (hd.idGiamGia != null)
                         {
                             giamgia = Convert.ToInt32(new GiamGiaSer().FindGiamGia(Convert.ToInt32(hd.idGiamGia)).PhanTramGiamGia);
                         }
-                        var tongTien = Convert.ToDouble(listDichVu.Sum(a => a.Gia / 100 * giamgia) + hd.PhuPhi);
+                        var tongTien = Convert.ToDouble(listDichVu.Sum(a => a.Gia / 100 *(100- giamgia)) + hd.PhuPhi);
                         using (var fs = new FileStream($@"C:\\HoaDon\\{hd.ThoiGian.Value.ToString("dd-MM-yyyy")}--{hd.IdHoaDon}Result.txt", FileMode.OpenOrCreate, FileAccess.Write))
                         {
                             var stream = new StreamWriter(fs);
                             stream.WriteLine($"HÓA ĐƠN\r\n\r\nNgày: {hd.ThoiGian.Value.ToString("dd/MM/yyyy hh:mm")}\r\n\nSố hóa đơn: {hd.IdHoaDon}\r\n\n\r\nPhòng phám: 1412 Dental\r\n\nĐịa chỉ: 69 Nguyễn Phong Sắc , quận Cầu Giấy , Hà Nội\r\n\n" +
                                 $"Điện thoại: 0978040960\r\n\r\n\nThông tin khách hàng:\r\n\nHọ và tên: {kh.Ten}\r\n\nĐịa chỉ: {kh.DiaChi}\r\n\nĐiện thoại: {kh.SoDienThoai}\r\n\r\n\n" +
-                                $"Dịch vụ sử dụng : \n{stringDV} \r\n\n\nPhụ phí: {Convert.ToDouble(hd.PhuPhi).ToString("0,000")} VNĐ\r\n\nTổng cộng: {tongTien.ToString("0,000")} VNĐ\r\n\nNhân viên thanh toán: {new NhanVienSer().FindNhanVien(Guid.Parse(hd.IdNhanVien.ToString())).Ten}");
+                                $"Dịch vụ sử dụng : \n{stringDV} \r\n\nPhụ phí: {Convert.ToDouble(hd.PhuPhi).ToString("0,000")} VNĐ\r\n\nGiảm giá: {giamgia} %\r\n\n\nTổng cộng: {tongTien.ToString("0,000")} VNĐ\r\n\nNhân viên thanh toán: {new NhanVienSer().FindNhanVien(Guid.Parse(hd.IdNhanVien.ToString())).Ten}");
                             stream.Flush();
                         }
                         MessageBox.Show($"Xác nhận thanh toán và in hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2100,6 +2099,7 @@ namespace PRL
             spaceSeparatorHorizontal1.Size = new Size(LK_Btn_ThemLichKham.Width + 1, spaceSeparatorHorizontal1.Height);
             Giap_LK_LoadComboKhachHangBacSiDichVuNgayPhong();
             LK_TPK_Combo_KhachHang.Enabled = true;
+            LK_TPK_RichText.Text = "";
         }
 
         private void LK_Btn_Sua_HuyLichKham_Click(object sender, EventArgs e)
@@ -2550,6 +2550,7 @@ namespace PRL
             var kh = new KhachHangService().GetAllKhachHang().FirstOrDefault(a => a.IdKhachHang == Guid.Parse(idKh));
             if (kh != null)
             {
+                Giap_CheckCaHopLe();
                 LK_KhDuocChon = kh;
                 LK_TPK_RichText.Text = "Thông tin\n\n" + $"Họ tên : {kh.Ten}\n\n\nĐịa Chỉ : {kh.DiaChi}\n\n\nSố điện thoại : {kh.SoDienThoai}" +
                     $"\n\n\nNgày sinh {kh.NgaySinh.Value.ToString("dd/MM/yyyy")}";
@@ -2571,12 +2572,13 @@ namespace PRL
             var kh = new NhanVienSer().GetAllNhanVien().FirstOrDefault(a => a.IdNhanVien == Guid.Parse(LK_TPK_ComBo_BacSi.SelectedValue.ToString()));
             if (kh != null)
             {
+                Giap_CheckCaHopLe();
+                Giap_LoadComboCa();
                 LK_BSDuocChon = kh;
                 LK_TPK_RichText.Text = "Thông tin\n\n\n" + $"Bác sĩ : {kh.Ten}\n\n\nĐịa Chỉ : {kh.DiaChi}\n\n\nSố điện thoại : {kh.SoDienThoai}" +
                     $"\n\n\nNgày sinh {kh.NgaySinh.Value.ToString("dd/MM/yyyy")}\n\n\nGiới thiệu : {kh.Mota}";
 
             }
-            Giap_LoadComboCa();
         }
         int firtTime_TPK_YT = 0;
         private void LK_TPK_Combo_YTa_SelectedIndexChanged(object sender, EventArgs e)
@@ -2592,11 +2594,12 @@ namespace PRL
             var kh = new NhanVienSer().GetAllNhanVien().FirstOrDefault(a => a.IdNhanVien == Guid.Parse(LK_TPK_Combo_YTa.SelectedValue.ToString()));
             if (kh != null)
             {
+                Giap_LoadComboCa();
+                Giap_CheckCaHopLe();
                 LK_YTaDuocChon = kh;
                 LK_TPK_RichText.Text = "Thông tin\n\n\n" + $"Y tá : {kh.Ten}\n\n\nĐịa Chỉ : {kh.DiaChi}\n\n\nSố điện thoại : {kh.SoDienThoai}" +
                     $"\n\n\nNgày sinh {kh.NgaySinh.Value.ToString("dd/MM/yyyy")}\n\n\nGiới thiệu : {kh.Mota}";
             }
-            Giap_LoadComboCa();
 
         }
 
@@ -2619,6 +2622,7 @@ namespace PRL
             var kh = new DichVuService().GetAllDichVu().FirstOrDefault(a => a.IdDichVu == Guid.Parse(LK_TPK_Combo_DichVu.SelectedValue.ToString()));
             if (kh != null)
             {
+                Giap_CheckCaHopLe();
                 LK_DVDuocChon = kh;
                 LK_TPK_RichText.Text = "Thông tin\n\n\n" + $"Dịch vụ : {kh.Ten}\n\n\nGiá : {kh.Gia.ToString("0,000")} VNĐ\n\n\nMô tả: {kh.MoTa}";
             }
@@ -2628,7 +2632,19 @@ namespace PRL
         int firttimeTPK_Combo_Gio = 0;
         private void LK_TPK_Combo_Gio_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (firttimeTPK_Combo_Gio < 4)
+            {
+                firttimeTPK_Combo_Gio++;
+            }
+            if (firttimeTPK_Combo_Gio <= 2)
+            {
+                return;
+            }
+            if (LK_TPK_Combo_KhachHang.SelectedValue == null)
+            {
+                return;
+            }
+            LoadThongTinTPK();
         }
 
         void LoadThongTinTPK()
@@ -3088,7 +3104,7 @@ namespace PRL
 
             var lstCaTrong = new List<int>();
             lstCaTrong = lstcaTrongYTa.Intersect(lstcaTrongBSi).Intersect(lstcaPhongTrong).ToList();
-            lstCaTrong.Add( PhieuKhamDuocChon.CaKham);
+            lstCaTrong.Add(PhieuKhamDuocChon.CaKham);
 
             if (ngayDuocChon.ToString("MM/dd/yyyy") == DateTime.Now.ToString("MM/dd/yyyy"))
             {

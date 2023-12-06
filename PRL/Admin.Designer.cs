@@ -1577,6 +1577,7 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
+            Content.Controls.Add(Panel_LK);
             Content.Controls.Add(Panel_TK);
             Content.Controls.Add(Panel_KH);
             Content.Controls.Add(Panel_NV);
@@ -1585,7 +1586,6 @@ namespace PRL
             Content.Controls.Add(Panel_L);
             Content.Controls.Add(Panel_DV);
             Content.Controls.Add(Panel_ThongKe);
-            Content.Controls.Add(Panel_LK);
             Content.Location = new Point(277, 56);
             Content.Margin = new Padding(3, 4, 3, 4);
             Content.Name = "Content";

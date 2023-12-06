@@ -48,6 +48,7 @@ namespace DAL
 
             var ttPhongSer = new TTPhongRepo();
 
+           var tong = 0;
 
             foreach (var item in db.Phongs.ToList())
             {
