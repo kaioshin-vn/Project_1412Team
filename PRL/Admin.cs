@@ -3666,7 +3666,7 @@ namespace PRL
         private void TKhoan_Btn_ok_Click(object sender, EventArgs e)
         {
             var nvSer = new NhanVienSer();
-            var nv = nvSer.GetTatCaVien().FirstOrDefault(a => a.SoDienThoai == "0978040960");
+            var nv = nvSer.GetTatCaVien().FirstOrDefault(a => a.IdNhanVien == user.IdNhanVien);
             if (nv != null)
             {
                 if (Giap_CheckTrong(TK_txt_Ten.Text) || Giap_CheckTrong(TKhoan_txt_DiaChi.Text) || Giap_CheckTrong(TKhoan_txt_SDT.Text) || Giap_CheckTrong(TKhoan_txt_pwd.Text))

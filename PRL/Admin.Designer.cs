@@ -1601,10 +1601,10 @@ namespace PRL
             Content.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             Content.BackColor = Color.LavenderBlush;
             Content.BorderStyle = BorderStyle.FixedSingle;
+            Content.Controls.Add(Panel_TK);
             Content.Controls.Add(Panel_DV);
             Content.Controls.Add(Panel_LK);
             Content.Controls.Add(Panel_L);
-            Content.Controls.Add(Panel_TK);
             Content.Controls.Add(Panel_KH);
             Content.Controls.Add(Panel_NV);
             Content.Controls.Add(Panel_TT);
@@ -5376,7 +5376,7 @@ namespace PRL
             Controls.Add(Nav_Option);
             Controls.Add(Content);
             Controls.Add(Navigation);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "Admin";
             Text = "1412_Team";
             WindowState = FormWindowState.Maximized;
