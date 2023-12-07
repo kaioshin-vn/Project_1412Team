@@ -536,6 +536,7 @@ namespace PRL
             DV_Range_GiamGia.Visible = false;
             DV_Label_PhanTram.Visible = false;
             DV_GrBox.Visible = true;
+            DV_GrBox.Text = "Thêm";
             DV_Btn_OkThem.Visible = true;
             DV_Btn_OKSua.Visible = false;
         }
@@ -546,6 +547,7 @@ namespace PRL
             DV_Range_GiamGia.Visible = false;
             DV_Label_PhanTram.Visible = false;
             DV_GrBox.Visible = true;
+            DV_GrBox.Text = "Sửa";
             DV_Btn_OKSua.Visible = true;
             DV_Btn_OkThem.Visible = false;
             var button = sender as ButtonCustom;
@@ -1670,7 +1672,7 @@ namespace PRL
             var count1 = 1;
             int giamGia = 0;
             var ggGanNhat = new GiamGiaSer().GetGiamGiaGanNhat();
-            if (ggGanNhat != null)
+            if (ggGanNhat != null && ggGanNhat.TrangThai == true)
             {
                 giamGia = Convert.ToInt32(ggGanNhat.PhanTramGiamGia);
             }
@@ -1693,7 +1695,7 @@ namespace PRL
                 TT_GrView_ChuaTT.Columns[1].HeaderText = "Mã Khách Hàng";
                 TT_GrView_ChuaTT.Columns[2].HeaderText = "Tên Khách Hàng";
                 TT_GrView_ChuaTT.Columns[3].HeaderText = "Dịch Vụ Sử Dụng";
-                TT_GrView_ChuaTT.Columns[4].HeaderText = "Tổng Giá Trị Hóa Đơn";
+                TT_GrView_ChuaTT.Columns[4].HeaderText = "Tổng Giá Trị Dịch Vụ";
             }
             else
             {
@@ -1703,7 +1705,7 @@ namespace PRL
                 TT_GrView_ChuaTT.Columns[1].HeaderText = "Mã Khách Hàng";
                 TT_GrView_ChuaTT.Columns[2].HeaderText = "Tên Khách Hàng";
                 TT_GrView_ChuaTT.Columns[3].HeaderText = "Dịch Vụ Sử Dụng";
-                TT_GrView_ChuaTT.Columns[4].HeaderText = "Tổng Giá Trị Hóa Đơn";
+                TT_GrView_ChuaTT.Columns[4].HeaderText = "Tổng Giá Trị Dịch Vụ";
                 TT_GrView_ChuaTT.Columns[5].Visible = false;
 
             }
@@ -2709,12 +2711,9 @@ namespace PRL
     $"Dịch vụ : {LK_TPK_Combo_DichVu.Text}\n\nPhòng : {LK_TPK_Combo_Phong.Text}\n\nNgày khám {LK_TPK_Combo_Ngay.Text}\n\nGiờ : {gioKham}\n\n\n\nHãy nhớ đừng quên lịch khám nhé ^_^";
         }
 
-        bool khamThem = false;
-        bool ClickAddPK = false;
+ 
         private void buttonCustom4_Click(object sender, EventArgs e)
         {
-
-            ClickAddPK = true;
             Giap_AddPhieuKham();
 
         }
@@ -2760,10 +2759,6 @@ namespace PRL
             }
             else
             {
-                if (!ClickAddPK)
-                {
-                    return;
-                }
 
                 if (DialogResult.Yes == MessageBox.Show($"Bạn chắc chắn muốn thêm phiếu khám này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
@@ -2820,35 +2815,18 @@ namespace PRL
                     lsKham.GhiChu = "Wow bạn đã phát hiện 1 kiểu dữ liệu bị thừa :>";
                     lsKham.KetQua = "";
                     lsKhamSer.AddlichSuKham(lsKham);
-                    lstIdPhieuKham.Add(pk.IdPhieuKham);
 
-
-                    if (DialogResult.Yes == MessageBox.Show($"Đã thêm phiếu khám thành công ! Khách hàng có muốn dùng thêm dịch vụ khác không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-                    {
-                        ClickAddPK = false;
-                        khamThem = true;
-                        LK_TPK_Combo_KhachHang.Enabled = false;
-                        Giap_AddPhieuKham();
-                    }
-                    else
-                    {
-                        khamThem = false;
-                        LK_TPK_Combo_KhachHang.Enabled = true;
-
-
-                        foreach (var item in lstIdPhieuKham)
-                        {
                             var hdCt = new HoaDonChiTiet();
                             var hdCtSer = new HoaDonChiTietService();
                             hdCt.IdHoaDon = null;
-                            hdCt.IdPhieuKham = item;
+                            hdCt.IdPhieuKham = pk.IdPhieuKham;
                             hdCt.TrangThai = false;
                             hdCt.HienThi = false;
                             hdCtSer.AddHDCT(hdCt);
-                        }
+
                         MessageBox.Show("Ok hãy tiếp tục đặt lịch cho các khách hàng thân yêu đi nào!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         lstIdPhieuKham.Clear();
-                    }
+                    
                 }
             }
         }

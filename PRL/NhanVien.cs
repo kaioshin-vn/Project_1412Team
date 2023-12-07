@@ -2611,12 +2611,12 @@ namespace PRL
             if (user.ChucVu == LoaiNhanVien.BacSi)
             {
                  lstPk = pkSer.GetAllPhieuKham().OrderBy(a => a.ngayKham).ThenBy(a => a.CaKham).Where(a => a.IdBacSi == user.IdNhanVien && new KhachHangService().GetAllKhachHang().Any(c => c.IdKhachHang == a.IdKhachHang) 
-                 && new NhanVienSer().GetAllNhanVien().Any(b => b.IdNhanVien == a.IdYTa) && a.TrangThai == false && DateTime.Parse(a.ngayKham.ToString("MM/dd/yyyy")) >= DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy")));
+                 && new NhanVienSer().GetAllNhanVien().Any(b => b.IdNhanVien == a.IdYTa) && a.TrangThai == false && a.HienThi == true && DateTime.Parse(a.ngayKham.ToString("MM/dd/yyyy")) >= DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy")));
             }
             else
             {
                  lstPk = pkSer.GetAllPhieuKham().OrderBy(a => a.ngayKham).ThenBy(a => a.CaKham).Where(a => a.IdYTa == user.IdNhanVien && new KhachHangService().GetAllKhachHang().Any(c => c.IdKhachHang == a.IdKhachHang)
-                 && new NhanVienSer().GetAllNhanVien().Any(b => b.IdNhanVien == a.IdBacSi) && a.TrangThai == false && DateTime.Parse(a.ngayKham.ToString("MM/dd/yyyy")) >= DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy")));
+                 && new NhanVienSer().GetAllNhanVien().Any(b => b.IdNhanVien == a.IdBacSi) && a.TrangThai == false && a.HienThi == true && DateTime.Parse(a.ngayKham.ToString("MM/dd/yyyy")) >= DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy")));
 
             }
             var countGrBoxY = 0;
@@ -2805,8 +2805,7 @@ namespace PRL
                 $"khi sử dụng dịch vụ {dv.Ten} như sau:\r\n\r\nThời gian: Ngày {pk.ngayKham.ToString("dd/MM/yyyy")}\r\n\nTại ca khám : {pk.CaKham}\r\n\nĐịa điểm : Tại Phòng 406 Tòa nhà P cơ sở Kiều Mai\r\n\nKết quả : {lsKham.KetQua} \r\n\r\nTrân trọng thông báo!");
                 stream.Flush();
             }
-            pk.TrangThai = true;
-            pkSer.UpdatePhieuKham(pk);
+ 
             LoadCaKhamBS();
         }
 
