@@ -121,6 +121,25 @@ namespace PRL
                     ttPhongSer.AddTTPhong(ttPhong);
                 }
             }
+
+            var dvSer = new DichVuService();
+            var khSer = new KhachHangService();
+
+            var pkSer = new PhieuKhamSer();
+            foreach (var item in pkSer.GetAllPhieuKham())
+            {
+                if (DateTime.Parse(item.ngayKham.ToString("MM/dd/yyyy")) < DateTime.Parse(DateTime.Now.ToString("MM/dd/yyyy")) && item .TrangThai == false)
+                {
+                    item.HienThi = false;
+                    pkSer.UpdatePhieuKham(item);
+                }
+                if (! nvSer.GetAllNhanVien().Any(a => a.IdNhanVien == item.IdBacSi) || !nvSer.GetAllNhanVien().Any(a => a.IdNhanVien == item.IdYTa) || !dvSer.GetAllDichVu().Any(a => a.IdDichVu == item.IdDichVu) && item.TrangThai == false)
+                {
+                    item.HienThi = false;
+                    pkSer.UpdatePhieuKham(item);
+                }
+            }
+            
             changeColor(QL_LichKham);
 
         }
@@ -1109,7 +1128,7 @@ namespace PRL
                 var lsKhamSer = new LichSuKhamService();
                 var dvSer = new DichVuRepository();
                 var TTcaKhamSer = new TrangThaiNhanVienService();
-                var result = phieuKhamSer.GetAllPhieuKham().Where(a => a.IdKhachHang == kh.IdKhachHang && a.HienThi == true && a.TrangThai == true).Join(lsKhamSer.GetAllLichSuKham(), n => n.IdPhieuKham, m => m.IdPhieuKham, (p, q) =>
+                var result = phieuKhamSer.GetAllPhieuKham().Where(a => a.IdKhachHang == kh.IdKhachHang && a.TrangThai == true).Join(lsKhamSer.GetAllLichSuKham(), n => n.IdPhieuKham, m => m.IdPhieuKham, (p, q) =>
                 {
                     return new
                     {
@@ -2109,7 +2128,7 @@ namespace PRL
             spaceSeparatorHorizontal1.Location = new Point(LK_Btn_Sua_HuyLichKham.Location.X, spaceSeparatorHorizontal1.Location.Y);
             spaceSeparatorHorizontal1.Size = new Size(LK_Btn_Sua_HuyLichKham.Width + 1, spaceSeparatorHorizontal1.Height);
             Giap_LoadComboSHPK();
-            SHPK_LoadGRrView(false, "", null, null);
+            SHPK_LoadGRrView(false, "", DateTime.Now.AddDays(-1), DateTime.Now.AddDays(7));
             SHPK_Date_Max.Value = DateTime.Now.AddDays(7);
         }
 
@@ -2123,7 +2142,7 @@ namespace PRL
             var ttNhanVienSer = new TTNhanVienSer();
             var count = 1;
 
-            var kqLichKham = lichKhamSer.GetAllPhieuKham().Where(s => s.TrangThai == trangThaiKham).Join(nhanVienSer.GetAllNhanVien(), a => a.IdBacSi, b => b.IdNhanVien, (c, d) =>
+            var kqLichKham = lichKhamSer.GetAllPhieuKham().Where(s => s.TrangThai == trangThaiKham && s.HienThi == true).Join(nhanVienSer.GetAllNhanVien(), a => a.IdBacSi, b => b.IdNhanVien, (c, d) =>
             {
                 return new
                 {
@@ -2937,7 +2956,7 @@ namespace PRL
             var ttNhanVienSer = new TTNhanVienSer();
             var count = 1;
 
-            var kqLichKham = lichKhamSer.GetAllPhieuKham().Where(s => s.TrangThai == trangThaiKham).Join(nhanVienSer.GetAllNhanVien(), a => a.IdBacSi, b => b.IdNhanVien, (c, d) =>
+            var kqLichKham = lichKhamSer.GetAllPhieuKham().Where(s => s.TrangThai == trangThaiKham && s.HienThi == true).Join(nhanVienSer.GetAllNhanVien(), a => a.IdBacSi, b => b.IdNhanVien, (c, d) =>
             {
                 return new
                 {
@@ -3186,16 +3205,27 @@ namespace PRL
 
             SHPK_Combo_Kh.Enabled = false;
 
+
+
+
             SHPK_Combo_BacSi.SelectedValue = PhieuKhamDuocChon.IdBacSi;
             SHPK_Combo_Yta.SelectedValue = PhieuKhamDuocChon.IdYTa;
             SHPK_Combo_DV.SelectedValue = PhieuKhamDuocChon.IdDichVu;
             SHPK_Combo_Kh.SelectedValue = PhieuKhamDuocChon.IdKhachHang;
             SHPK_Combo_Phong.SelectedValue = PhieuKhamDuocChon.IdPhong;
+
             SHPK_Combo_Ngay.SelectedValue = PhieuKhamDuocChon.ngayKham.ToString("MM/dd/yyyy");
 
             SHPK_LoadCa();
         }
 
+        void AnPhieuKham(PhieuKham phieuKham)
+        {
+            var PkSer = new PhieuKhamSer();
+            var pk = PkSer.FindPhieuKham(phieuKham.IdPhieuKham);
+            pk.HienThi = false;
+            PkSer.UpdatePhieuKham(pk);
+        }
 
         private void SHPK_Btn_Sua_Click(object sender, EventArgs e)
         {
@@ -3457,7 +3487,6 @@ namespace PRL
 
                 if (!Giap_CheckGia(L_Txt_SoCong.Text))
                 {
-                    MessageBox.Show("Chỉ được nhập số!!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 var heso = 300000;
@@ -3489,7 +3518,6 @@ namespace PRL
 
                 if (!Giap_CheckGia(L_Txt_thuong.Text))
                 {
-                    MessageBox.Show("Chỉ được nhập số!!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 var heso = 300000;
